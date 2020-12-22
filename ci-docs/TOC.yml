@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Produkta pārskats
+  href: overview.md
+- name: Piekļuve videi
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Auditorijas ieskati
+  items:
+    - name: Palīdzības centrmezgls
+      href: audience-insights/index.yml
+    - name: Iespēju pārskats
+      href: audience-insights/overview.md
+    - name: Bezmaksas izmēģinājumversija
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Jauni un atjaunināti līdzekļi
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Sākt darbu
+      items:
+        - name: Izveidot jaunu vidi
+          href: audience-insights/home.md
+        - name: Datu uzņemšana
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Vienotais klienta profila izveide
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Darbs ar programmu
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Bagātināt datus un prognozes
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Datu avoti
+      items:
+        - name: Datu avotu pārskats
+          href: audience-insights/data-sources.md
+        - name: 'Datu avotu pievienošana, izmantojot Power Query savienotājus'
+          href: audience-insights/connect-power-query.md
+        - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
+          href: audience-insights/connect-common-data-model.md
+        - name: Pievienojiet Common Data Service pārvaldīto datu ezeru
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Inkrementālā atsvaidzināšana datu avotiem
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Reāllaika datu uzņemšana
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Izprotiet entītijas un datu kopas
+          href: audience-insights/entities.md
+    - name: Datu apvienošana
+      items:
+        - name: Apvienošanas kopsavilkums
+          href: audience-insights/data-unification.md
+        - name: Kartējiet entītijas un atribūtus
+          href: audience-insights/map-entities.md
+        - name: Saskaņojiet entītijas
+          href: audience-insights/match-entities.md
+        - name: Sapludiniet entītijas
+          href: audience-insights/merge-entities.md
+        - name: Pārskatiet vienotos klientu profilus
+          href: audience-insights/customer-profiles.md
+        - name: Filtrējiet vienotos klientu profilus
+          href: audience-insights/search-filter-index.md
+        - name: Attiecību un saistīto entītiju izveide
+          href: audience-insights/relationships.md
+        - name: Uzskaitiet klientu darbības
+          href: audience-insights/activities.md
+    - name: Datu bagātināšana
+      items:
+        - name: Klientu profilu bagātināšana
+          href: audience-insights/enrichment-hub.md
+        - name: Zīmola un interešu radniecība
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Bagātināšana ar HERE Technologies
+          href: audience-insights/enrichment-here.md
+        - name: 'Bagātināt, izmantojot Leadspace'
+          href: audience-insights/enrichment-leadspace.md
+        - name: Bagātināšana ar Experian
+          href: audience-insights/enrichment-experian.md
+        - name: Bagātināšana ar SFTP pielāgoto importu
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Segmenti un mēri
+      items:
+        - name: Veidojiet segmentus un klientu grupas
+          href: audience-insights/segments.md
+        - name: Ieskatu par segmentiem iegūšana
+          href: audience-insights/segment-insights.md
+        - name: Atrast līdzīgus klientus
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Definējiet pasākumus un KPI
+          href: audience-insights/measures.md
+    - name: Prognozes
+      items:
+        - name: 'Pilnīgi dati, izmantojot vērtību prognozes'
+          href: audience-insights/predictions.md
+        - name: Paredzēt abonēšanas mainību
+          href: audience-insights/predict-subscription-churn.md
+        - name: Abonementa zudumu prognozes parauga ceļvedis
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Transakciju zuduma prognoze
+          href: audience-insights/predict-transactional-churn.md
+        - name: Transakciju zudumu prognozes parauga ceļvedis
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Pielāgotu algoritmiskās mācīšanās modeļu ieviešana
+          href: audience-insights/custom-models.md
+        - name: Eksperimenti ar Azure algoritmisko mācīšanos
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Azure algoritmiskās mācīšanās studijas (klasiskais) eksperimenti
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Eksportēšanas opcijas
+      items:
+        - name: Eksportēšana galamērķu atklāšana
+          href: audience-insights/export-destinations.md
+        - name: Azure BLOB krātuve
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: "Dynamics\_365 Customer Service (pievienojumprogramma)"
+          href: audience-insights/customer-card-add-in.md
+        - name: "Dynamics\_365 Marketing"
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Dynamics 365 pāŗdošanas centrmezgls (pievienojumprogramma)
+          href: audience-insights/customer-card-add-in.md
+        - name: Facebook Ads Manager
+          href: audience-insights/export-facebook.md
+        - name: Google Ads ikona
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: MailChimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (robots)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Administrēšana
+      items:
+        - name: Sistēmas konfigurācijas iestatīšana
+          href: audience-insights/system.md
+        - name: Lietotāju atļauju piešķiršana
+          href: audience-insights/permissions.md
+        - name: Vairāku vižu pārvaldība
+          href: audience-insights/manage-environments.md
+        - name: 'Savienojuma izveide ar ADLS krātuvi, izmantojot pakalpojuma primāro nosaukumu'
+          href: audience-insights/connect-service-principal.md
+        - name: Atbalstītās valodas
+          href: audience-insights/supported-languages.md
+    - name: Paplašināšana
+      items:
+        - name: Entītiju shēmu pārskatīšana Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Darbs ar API
+          href: audience-insights/apis.md
+        - name: "API\_atsauces"
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Pakalpojuma ierobežojumi
+      href: audience-insights/service-limits.md
+    - name: DSR pieprasījumi saskaņā ar VDAR
+      href: audience-insights/gdpr.md
+- name: Iesaistes ieskati (priekšskatījums)
+  items:
+    - name: Palīdzības centrmezgls
+      href: engagement-insights/index.yml
+    - name: Iespēju pārskats
+      href: engagement-insights/overview.md
+    - name: Bezmaksas izmēģinājumversija
+      href: 'https://pi.dynamics.com/'
+    - name: Ātrā sākšana
+      items:
+        - name: Quickstart publiskais priekšskatījums
+          href: engagement-insights/quickstart.md
+    - name: Sākt darbu
+      items:
+        - name: Sākt darbu
+          href: engagement-insights/get-started.md
+        - name: Izveidot darbvietu
+          href: engagement-insights/create-workspace.md
+        - name: Aprīkojiet savu tīmekļa vietni
+          href: engagement-insights/instrument-website.md
+        - name: Jēdzieni un terminoloģija
+          href: engagement-insights/glossary.md
+    - name: Notikumi
+      items:
+        - name: Notikumu izveide un modificēšana
+          href: engagement-insights/refined-events.md
+        - name: Gadījumu eksportēšana
+          href: engagement-insights/export-events.md
+    - name: Pārskati
+      items:
+        - name: Skatīt atskaites
+          href: engagement-insights/view-reports.md
+        - name: Pielāgotu atskaišu izveide
+          href: engagement-insights/custom-reports.md
+        - name: Izveidot vienotas profila atskaites
+          href: engagement-insights/profile-reports.md
+    - name: Izstrādātāja resursi
+      items:
+        - name: Pārskats par izstrādātāju resursiem
+          href: engagement-insights/developer-resources.md
+        - name: Web SDK apmācība
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Web SDK paraugs
+          href: engagement-insights/websdk-sample.md
+    - name: Administrēšana
+      items:
+        - name: Lomas un atļaujas
+          href: engagement-insights/user-roles.md
+        - name: Vides un darbvietu pārvaldība
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Savienojumu konfigurēšana
+          href: engagement-insights/configure-connections.md
+        - name: Sīkfailu un lietotāju piekrišanas pārvaldība
+          href: engagement-insights/user-consent-storage.md
+    - name: VDAR
+      items:
+        - name: Personisko datu dzēšana un eksportēšana
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Pakalpojuma ierobežojumi
+      href: engagement-insights/quotas.md
+- name: Sazināties ar atbalsta dienestu
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
