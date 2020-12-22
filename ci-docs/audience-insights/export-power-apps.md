@@ -1,0 +1,74 @@
+---
+title: Power Apps savienotājs
+description: Savienošana ar Power Apps un Power Automate.
+ms.date: 08/21/2020
+ms.reviewer: nikeller
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406322"
+---
+# <a name="microsoft-power-apps-connector-preview"></a><span data-ttu-id="f2a2f-103">Microsoft Power Apps savienotājs (priekšskatījums)</span><span class="sxs-lookup"><span data-stu-id="f2a2f-103">Microsoft Power Apps connector (preview)</span></span>
+
+<span data-ttu-id="f2a2f-104">Ieviesiet vienotos klientu profilus savās personalizētajās programmās, izmantojot risinājumu Power Apps.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-104">Bring unified customer profiles into your personalized apps with Power Apps.</span></span>
+
+## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a><span data-ttu-id="f2a2f-105">Power Apps un Dynamics 365 Customer Insights savienošana</span><span class="sxs-lookup"><span data-stu-id="f2a2f-105">Connect Power Apps and Dynamics 365 Customer Insights</span></span>
+
+<span data-ttu-id="f2a2f-106">Customer Insights ir viens no daudzajiem [pieejamajiem datu avotiem pakalpojumā Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-106">Customer Insights is one of the many [available sources for data in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).</span></span>
+
+<span data-ttu-id="f2a2f-107">Skatiet Power Apps dokumentāciju, lai uzzinātu, kā [programmai pievienot datu savienojumu](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-107">Refer to the Power Apps documentation to learn how to [add a data connection to an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection).</span></span> <span data-ttu-id="f2a2f-108">Ieteicams arī pārskatīt, [kā Power Apps izmanto deleģēšanu, lai apstrādātu lielas datu kopas pamatnes programmās](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-108">We recommend you also review [how Power Apps uses delegation to handle large datasets in Canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).</span></span>
+
+## <a name="available-entities"></a><span data-ttu-id="f2a2f-109">Pieejamās entītijas</span><span class="sxs-lookup"><span data-stu-id="f2a2f-109">Available entities</span></span>
+
+<span data-ttu-id="f2a2f-110">Pēc Customer Insights pievienošanas datu savienojumam varat Power Apps izvēlēties šādas entītijas:</span><span class="sxs-lookup"><span data-stu-id="f2a2f-110">After adding Customer Insights as a data connection, you can choose the following entities in Power Apps:</span></span>
+
+- <span data-ttu-id="f2a2f-111">Klients: lai izmantotu datus no [vienotā klienta profila](customer-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-111">Customer: to use data from the [unified customer profile](customer-profiles.md).</span></span>
+- <span data-ttu-id="f2a2f-112">Vienotā klienta darbība: lai programmā parādītu [darbību laika skalu](activities.md) </span><span class="sxs-lookup"><span data-stu-id="f2a2f-112">Unified Customer Activity: to display the [activity timeline](activities.md) on the app.</span></span>
+
+## <a name="limitations"></a><span data-ttu-id="f2a2f-113">Ierobežojumi</span><span class="sxs-lookup"><span data-stu-id="f2a2f-113">Limitations</span></span>
+
+### <a name="retrievable-entities"></a><span data-ttu-id="f2a2f-114">Izgūstamas entītijas</span><span class="sxs-lookup"><span data-stu-id="f2a2f-114">Retrievable entities</span></span>
+
+<span data-ttu-id="f2a2f-115">Varat izgūt tikai entītijas **Klients**, **Nedefinēta darbība** un **Segmenti**, izmantojot Power Apps savienotāju.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-115">You can only retrieve the **Customer**, **UnifiedActivity**, and **Segments** entities through the Power Apps connector.</span></span> <span data-ttu-id="f2a2f-116">Citas entītijas tiek rādītas, jo pamatā esošais savienotājs tās atbalsta, izmantojot trigerus Power Automate.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-116">Other entities are shown because the underlying connector supports them through triggers in Power Automate.</span></span>  
+
+### <a name="delegation"></a><span data-ttu-id="f2a2f-117">Deleģēšana</span><span class="sxs-lookup"><span data-stu-id="f2a2f-117">Delegation</span></span>
+
+<span data-ttu-id="f2a2f-118">Deleģēšana darbojas entītijai Klients un entītijai Nedefinēta darbība.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-118">Delegation works for the Customer entity and UnifiedActivity entity.</span></span> 
+
+- <span data-ttu-id="f2a2f-119">**Klienta** entītijas deleģēšana: Lai šai entītijai izmantotu deleģēšanu, šie lauki ir jāindeksē, izmantojot [Meklēšanas & filtra indeksu](search-filter-index.md).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-119">Delegation for **Customer** entity: To use delegation for this entity, the fields need to be indexed in [Search & filter index](search-filter-index.md).</span></span>  
+
+- <span data-ttu-id="f2a2f-120">Deleģēšana **Nedefinēta darbība**: Deleģēšana šai entītijai darbojas tikai laukiem **ActivityId** un **CustomerId**.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-120">Delegation for **UnifiedActivity**: Delegation for this entity only works for the fields **ActivityId** and **CustomerId**.</span></span>  
+
+- <span data-ttu-id="f2a2f-121">Papildinformāciju par deleģēšanu skatiet [Power Apps deleģējamās funkcijas un operācijas](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-121">For more information about delegation, see [Power Apps delegable functions and operations](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps).</span></span> 
+
+## <a name="example-gallery-control"></a><span data-ttu-id="f2a2f-122">Galerijas vadīklas piemērs</span><span class="sxs-lookup"><span data-stu-id="f2a2f-122">Example gallery control</span></span>
+
+<span data-ttu-id="f2a2f-123">Piemēram, varat pievienot klientu profilus [galerijas vadīklai](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).</span><span class="sxs-lookup"><span data-stu-id="f2a2f-123">For example, you add customer profiles to a [gallery control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).</span></span>
+
+1. <span data-ttu-id="f2a2f-124">Pievienojiet **Galerijas** vadīklu programmai, ko veidojat.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-124">Add a **Gallery** control to an app you're building.</span></span>
+
+> [!div class="mx-imgBorder"]
+> <span data-ttu-id="f2a2f-125">![Galerijas elementa pievienošana](media/connector-powerapps9.png "Galerijas elementa pievienošana")</span><span class="sxs-lookup"><span data-stu-id="f2a2f-125">![Add a gallery element](media/connector-powerapps9.png "Add a gallery element")</span></span>
+
+1. <span data-ttu-id="f2a2f-126">Atlasiet **Klientu** kā vienumu datu avotu.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-126">Select **Customer** as the data source for items.</span></span>
+
+    > [!div class="mx-imgBorder"]
+    > <span data-ttu-id="f2a2f-127">![Datu avota atlasīšana](media/choose-datasource-powerapps.png "Datu avota atlasīšana")</span><span class="sxs-lookup"><span data-stu-id="f2a2f-127">![Select a data source](media/choose-datasource-powerapps.png "Select a data source")</span></span>
+
+1. <span data-ttu-id="f2a2f-128">Varat mainīt labajā pusē esošo datu paneli, lai atlasītu, kuru entītijas Klients lauku rādīt galerijā.</span><span class="sxs-lookup"><span data-stu-id="f2a2f-128">You can change the data panel on the right to select which field for the Customer entity to show on the gallery.</span></span>
+
+1. <span data-ttu-id="f2a2f-129">Ja vēlaties, lai galerijā tiktu rādīts jebkurš lauks no atlasītā klienta, norādiet etiķetes rekvizītu Teksts: **{Name_of_the_gallery}.Selected.{property_name}**</span><span class="sxs-lookup"><span data-stu-id="f2a2f-129">If you want to show any field from the selected customer on the gallery, fill in the Text property of a label:  **{Name_of_the_gallery}.Selected.{property_name}**</span></span>
+
+    <span data-ttu-id="f2a2f-130">Piemērs: Gallery1.Selected.address1_city</span><span class="sxs-lookup"><span data-stu-id="f2a2f-130">Example: Gallery1.Selected.address1_city</span></span>
+
+1. <span data-ttu-id="f2a2f-131">Lai klientam tiktu parādīta vienota laika skala, pievienojiet elementu Galerija un rekvizītu Vienumi: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**</span><span class="sxs-lookup"><span data-stu-id="f2a2f-131">To display the unified timeline for a customer, add a Gallery element, and add the Items property: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**</span></span>
+
+    <span data-ttu-id="f2a2f-132">Piemērs: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)</span><span class="sxs-lookup"><span data-stu-id="f2a2f-132">Example: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)</span></span>

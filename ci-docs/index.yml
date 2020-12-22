@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Palīdzības centrmezgls programmai Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Atrodiet attiecīgos rakstus, lai sāktu darbu ar palīdzības saturu.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: lv-LV
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406373"
+title: Dynamics 365 Customer Insights dokumentācija
+summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights opcijām un iespējām.
+landingContent:
+- title: Iepazīstieties ar Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pārskats par Customer Insights
+      url: overview.md
+    - text: Nodošanas izpildei plāns
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Piekļuve videi
+      url: https://home.ci.ai.dynamics.com/
+- title: Darba sākšana ar auditorijas ieskatiem
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Reģistrēšanās izmēģinājuma versijai
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Jaunumi
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Auditorijas ieskatu dokumentācija
+      url: audience-insights/index.yml
+- title: Saziņa
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pievienoties Dynamics 365 kopienai
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Dalieties ar idejām
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Ziņot par problēmu
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Auditorijas ieskatu instrukcijas
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Izveidot jaunu vidi
+      url: audience-insights/home.md
+    - text: Vienotais klienta profila izveide
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Darbs ar programmu
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Datu par auditorijas ieskatiem eksportēšana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eksportēšanas galamērķu iestatīšana
+      url: audience-insights/export-destinations.md
+    - text: Klienta kartes Dynamics 365 lietojumprogrammās
+      url: audience-insights/customer-card-add-in.md
+    - text: Power BI savienotājs
+      url: audience-insights/export-power-bi.md
+- title: Auditorijas ieskatu pārvaldīšana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistēmas konfigurēšana
+      url: audience-insights/system.md
+    - text: Lietotāja atļauju definēšana
+      url: audience-insights/permissions.md
+    - text: Vairāku vižu pārvaldība
+      url: audience-insights/manage-environments.md
+- title: Par iesaistes ieskatiem (priekšskatījums)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Iespēju pārskats
+      url: engagement-insights/overview.md
+    - text: Noteikumi un nosacījumi
+      url: engagement-insights/glossary.md
+    - text: Sākt darbu
+      url: engagement-insights/get-started.md
+- title: Iesaistes ieskatu pārskati (priekšskatījums)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Skatīt atskaites
+      url: engagement-insights/view-reports.md
+    - text: Pielāgotu atskaišu izveide
+      url: engagement-insights/custom-reports.md
+    - text: Skatīt vienoto profilu atskaiti
+      url: engagement-insights/profile-reports.md
+- title: Iesaistes ieskatu gadījumi (priekšskatījums)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Izsmalcinātu notikumu izveide
+      url: engagement-insights/refined-events.md
+    - text: Gadījumu eksportēšana
+      url: engagement-insights/export-events.md
+    - text: Personisko datu dzēšana un eksportēšana
+      url: engagement-insights/delete-export-personal-data.md

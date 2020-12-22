@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Auditorijas ieskatu iespējas programmā Dynamics 365 Customer Insights
+summary: Uzņemiet, apvienojiet un sakārtojiet klientu datus no vairākiem avotiem. Klientu profilu un reāllaika segmentācijas izveide un pārvaldība. Klientu datu integrēšana ar citām sistēmām, lai padarītu to vēl pieejamāku.
+metadata:
+  title: Auditorijas ieskatu dokumentācija
+  description: Palīdzības centrmezgls, kam ir galvenās saites uz auditorijas ieskatiem.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: lv-LV
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406356"
+landingContent:
+- title: Par auditorijas ieskatiem
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Produkta pārskats
+      url: overview.md
+    - text: Jauni un atjaunināti līdzekļi
+      url: whats-new-audience-insights.md
+    - text: Kopienas vietne
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Datu avotu uzkrāšana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Pievienot datu avotus
+      url: data-sources.md
+    - text: Inkrementāla atsvaidzināšana
+      url: incremental-refresh-data-sources.md
+    - text: Entītiju izprašana
+      url: entities.md
+- title: Datu apvienošana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kartēt
+      url: map-entities.md
+    - text: Saskaņot
+      url: match-entities.md
+    - text: Sapludināšana
+      url: merge-entities.md
+- title: Klientu profilu precizēšana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Relāciju konfigurēšana
+      url: relationships.md
+    - text: Uzskaitiet klientu darbības
+      url: activities.md
+    - text: Savu algoritmisko mācīšanās modeļu atvešana
+      url: custom-models.md
+- title: Klienta datu eksportēšana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eksportēšanas galamērķu iestatīšana
+      url: export-destinations.md
+    - text: Klienta kartes Dynamics 365 lietojumprogrammās
+      url: customer-card-add-in.md
+    - text: Power BI savienotājs
+      url: export-power-bi.md
+- title: Administrēt programmu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistēmas konfigurēšana
+      url: system.md
+    - text: Lietotāja atļauju definēšana
+      url: permissions.md
+    - text: Vairāku vižu pārvaldība
+      url: manage-environments.md
