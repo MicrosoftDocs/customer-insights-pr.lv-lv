@@ -1,0 +1,79 @@
+---
+title: Datu paņemšana, izmantojot Power Query savienotāju
+description: Savienotāji datu avotiem, pamatojoties uz Power Query.
+ms.date: 09/29/2020
+ms.reviewer: adkuppa
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406344"
+---
+# <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avotu
+
+Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Vairumu no šiem savienotājiem atbalsta Dynamics 365 Customer Insights. Datu avotu pievienošanā, pamatojoties uz Power Query savienotājiem, kopumā tiek izpildītas nākamajā sadaļā izklāstītās darbības. Taču atkarībā no savienotāja, kuru izmantojat, var būt nepieciešama atšķirīga informācija. Lai iegūtu papildinformāciju, skatiet dokumentus par atsevišķiem savienotājiem [Power Query savienotāja atsaucē](https://docs.microsoft.com/power-query/connectors/).
+
+## <a name="create-a-new-data-source"></a>Jauna datu avota izveide
+
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
+
+1. Atlasiet **Pievienot datu avotu**.
+
+1. Atlasiet **Datu importēšanas** metodi, pēc tam atlasiet **Tālāk**.
+
+1. Sniedziet datu avota **Nosaukmu** un atlasiet **Tālāk**, lai izveidotu datu avotu.
+
+1. Izvēlieties vienu no [pieejamiem savienotājiem](#available-power-query-data-sources). Šajā piemērā esam atlasījuši savienotāju **Text/CSV**.
+
+1. Ievadiet nepieciešamo informāciju sadaļā **Savienojuma iestatījumi** attiecībā uz atlasīto savienotāju un atlasiet **Tālāk**, lai skatītu datu priekšskatījumu.
+
+1. Atlasiet **Pārveidot datus**. Šajā darbībā jūs pievienosiet entītijas savam datu avotam. Entitījas ir datu kopas. Ja jums ir datu bāze, kurā ir ietvertas vairākas datu kopas, katra datu kopa ir entītija.
+
+1. Dialoglodziņā **Power Query — rediģēt vaicājumus** ļauj pārskatīt un precizēt datus. Entītijas, kuras sistēma identificēja jūsu atlasītajā datu avotā, tiek rādītas kreisajā rūtī.
+
+   > [!div class="mx-imgBorder"]
+   > ![Vaicājumu rediģēšanas dialoglodziņš](media/data-manager-configure-edit-queries.png "Vaicājumu rediģēšanas dialoglodziņš")
+
+1. Varat arī transformēt savus datus. Atlasiet entītiju, ko vēlaties rediģēt vai transformēt. Izmantojiet Power Query loga opcijas, lai lietotu izmaiņas. Visas izmaiņas ir uzskaitītas sadaļā **Lietotās darbības**. Power Query nodrošina daudzas iepriekš izveidotas izmaiņu opcijas. Papildinformāciju skatiet sadaļā [Power Query izmaiņas](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+
+1. Saviem datu avotiem varat pievienotu papildu entītijas, dialoglodziņā **Vaicājumu rediģēšana** atlasot **Iegūt datus**.
+
+   Ir ieteicams veikt tālāk norādītās transformācijas:
+
+   - Ja uzņemat datus no CSV faila, pirmajā rindā bieži vien ir galvenes. Dodieties uz **Mainīt tabulu** un atlasiet **Izmantot galvenes kā pirmo rindu**.
+   - Pārliecinieties, ka datu veids ir iestatīts atbilstoši.
+
+1. Power Query loga apakšējā labajā stūrī atlasiet **Saglabāt**, lai saglabātu izmaiņas. Pēc saglabāšanas jūsu datu avots atradīsies sadaļā **Dati** > **Datu avoti**.
+
+1. Lapā **Datu avoti** redzēsit, ka jaunā datu avota statuss ir **Atsvaidzina**.
+
+## <a name="available-power-query-data-sources"></a>Pieejamie Power Query datu avoti
+
+Informāciju par jaunākajiem savienotājiem, kurus varat atlasīt datu importēšanai uz Customer Insights skatiet [Power Query savienotāja atsaucē](https://docs.microsoft.com/power-query/connectors/). 
+
+Savienotāji ar atzīmi kolonnā **Customer Insights (Dataflows)** ir pieejami, lai izveidotu jaunus datu avotus, pamatojoties uz Power Query. Pārskatiet konkrētā savienotāja dokumentāciju, lai uzzinātu vairāk par tā priekšnosacījumiem, ierobežojumiem un citu informāciju.
+
+## <a name="edit-power-query-data-sources"></a>Power Query datu avotu rediģēšana
+
+> [!NOTE]
+> Iespējams, nevarēs veikt izmaiņas datu avotos, kuri pašlaik tiek izmantoti kādā no programmas procesiem (piemēram, *segmentēšana*, *atbilstības noteikšana* vai *sapludināšana*). 
+>
+> Izmantojot lapu **Iestatījumi**, varat izsekot katra aktīvā procesa norisei. Kad process ir pabeigts, varat atgriezties lapā **Datu avoti** un veikt vajadzīgās izmaiņas.
+
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
+
+2. Atlasiet vertikālo daudzpunkti blakus maināmajam datu avotam un nolaižamajā izvēlnē atlasiet **Rediģēt**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Rediģēšanas opcija](media/edit-option-data-sources.png "Rediģēšanas opcija")
+
+3. Piemērojiet veiktās izmaiņas un transformācijas dialoglodziņā **Power Query — izmaiņu rediģēšana**, kā aprakstīts sadaļā [Jauna datu avota izveide](#create-a-new-data-source).
+
+4. Lai saglabātu izmaiņas, pēc rediģēšanas pabeigšanas Power Query atlasiet **Saglabāt**.

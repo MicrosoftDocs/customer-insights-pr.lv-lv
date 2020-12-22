@@ -1,0 +1,150 @@
+---
+title: Vižu izveide un pārvaldība
+description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
+ms.date: 11/10/2020
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+ms.reviewer: nimagen
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644142"
+---
+# <a name="manage-environments"></a>Pārvaldīt vides
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+Šajā rakstā ir paskaidrots, kā izveidot jaunu organizāciju un kā nodrošināt vidi.
+
+## <a name="sign-up-and-create-an-organization"></a>Pierakstīšanās un organizācijas izveide
+
+1. Dodieties uz [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) tīmekļa vietni.
+
+2. Atlasiet **Sākt**.
+
+3. Izvēlieties vēlamo reģistrēšanās scenāriju un atlasiet atbilstošo saiti.
+
+4. Piekrītiet noteikumiem un nosacījumiem un atlasiet **Turpināt**, lai sāktu organizācijas izveidi.
+
+5. Pēc vides izveides jūs novirzīs uz [Customer Insights](https://home.ci.ai.dynamics.com).
+
+6. Izmantojiet demonstrācijas vidi, lai iepazītu programmu vai izveidotu jaunu vidi, veicot nākamajā sadaļā norādītās darbības.
+
+7. Pēc vides iestatījumu norādīšanas atlasiet **Izveidot**.
+
+8. Jūs būsit pieteicies pēc vides sekmīgas izveides.
+
+## <a name="create-an-environment-in-an-existing-organization"></a>Vides izveide esošā organizācijā
+
+Pastāv divi veidi, ka izveidot jaunu vidi. Varat norādīt pilnīgi jaunu konfigurāciju vai arī var kopēt dažus konfigurācijas iestatījumus no esošas vides.
+
+Lai izveidotu vidi:
+
+1. Lietotnes galvenē atlasiet simbolu **Iestatījumi**.
+
+1. Atlasiet **Jauna vide**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Vides iestatījumi](media/environment-settings-dialog.png)
+
+1. Dialoglodziņā **Jaunas vides izveide** atlasiet **Jauna vide**.
+
+   Ja vēlaties [kopēt datus no pašreizējās vides](#additional-considerations-for-copy-configuration-preview), atlasiet **Kopēt no esošās vides**. Jūs redzēsiet sarakstu, kurā ir visas jūsu organizācijā pieejamās vides, no kurām varat kopēt datus.
+
+1. Sniedziet šādu informāciju:
+   - **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt.
+   - **Reģions**: Reģions, kurā tiek izvietots un viesots pakalpojums.
+   - **Veids**: Atlasiet, vai vēlaties veidot ražošanas vai smilškastes vidi.
+
+2. Pēc izvēles varat arī atlasīt **Papildu iestatījumus**:
+
+   - **Saglabāt visus datus uz** : Norāda, kur saglabāt no Customer Insights ģenerētos izvades datus. Jums ir divas opcijas: **Customer Insights krātuve** (Azure Data Lake, ko pārvalda Customer Insights darba grupa) un **Azure Data Lake Storage Gen2** (jūsu Azure Data Lake Storage). Pēc noklusējuma tiek atlasīta opcija Customer Insights krātuve.
+
+   > [!NOTE]
+   > Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsūtīti uz un uzglabāti šī Azure krātuves konta atbilstošajā ģeogrāfiskajā atrašanās vietā, kas var atšķirties no vietas, kur dati tiek glabāti programmā Dynamics 365 Customer Insights. [Uzziniet vairāk Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+   >
+   > Pašlaik pārņemtās entītijas vienmēr tiek glabātas Customer Insights pārvaldītajā datu ezerā.
+   > Mēs atbalstām tikai Azure Data Lake Gen2 krātuves kontus tajā pašā Azure reģionā, kas atlasīts, veidojot vidi.
+   > Mēs atbalstām tikai Azure Data Lake Gen2 Hierarchical Name Space (HNS) iespējotos krātuves kontus.
+
+   - Azure Data Lake Storage Gen2 iespējai varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). **Konteinera** nosaukumu nevar mainīt, un tas būs "customerinsights".
+   
+   - Ja vēlaties izmantot [prognozes](predictions.md), ievadiet Common Data Service instances URL **Servera adreses** laukā sadaļā **Lietot prognozes**.
+
+   Palaižot procesus, piemēram, datu uzņemšanas vai segmenta izveidi, tiek izveidotas atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un model.json faili tiks izveidoti un pievienoti attiecīgajām apakšmapēm, pamatojoties uz jūsu palaisto procesu.
+
+   Ja izveidojat vairāku veidu Customer Insights un izvēlaties saglabāt izvades entītijas, izmantojot savas krātuves konta vides, katrai videi, kurai ir ci_ konteinerā, tiks izveidotas atsevišķas mapes <environmentid>.
+
+### <a name="additional-considerations-for-copy-configuration-preview"></a>Papildu apsvērumi kopēšanas konfigurācijai (priekšskatījums)
+
+Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
+
+- Līdzekļu konfigurācija
+- Inegsted/importētie datu avoti
+- Datu apvienošanas (kartējums, atbilstība, sapludināšana) konfigurācija
+- Segmenti
+- Mēri
+- Attiecības
+- Darbības
+- Meklēšanas un filtrēšanas rādītājs
+- Eksportēšanas galamērķi
+- Plānotā atsvaidzināšana
+- Bagātinājumi
+- Modeļu pārvaldība
+- Lomu piešķīrumi
+
+*Netiek* kopēti tālāk norādītie konfigurācijas iestatījumi.
+
+- Klientu profili.
+- Datu avota akreditācijas dati. Jums būs jāsniedz akreditācijas dati katram datu avotam un manuāli jāatsvaidzina datu avoti.
+- Datu avoti no Common Data Model mapes un Common Data Service pārvaldīta datu ezera. Šos datu avotus ir jāizveido manuāli, izmantojot tādu pašu nosaukumu kā avota vidē.
+
+Kopējot vidi, tiks parādīts apstiprinājuma ziņojums par to, ka ir izveidota jauna vide. Atlasiet **Doties uz datu avotiem**, lai skatītu datu avotu sarakstu.
+
+Visiem datu avotiem būs redzams statuss **Nepieciešami akreditācijas dati**. Rediģējiet datu avotus un ievadiet akreditācijas datus, lai tos atsvaidzinātu.
+
+> [!div class="mx-imgBorder"]
+> ![Kopēti datu avoti](media/data-sources-copied.png)
+
+Pēc datu avotu atsvaidzināšanas dodieties uz **Dati** > **Apvienot**. Šeit atradīsit avota vides iestatījumus. Rediģējiet tos pēc nepieciešamības vai atlasiet **Izpildīt**, lai sāktu datu unificēšanas procesu un izveidotu unificētu klienta entītiju.
+
+Kad datu unificēšana ir pabeigta, dodieties uz **Pasākumi** un **Segmenti**, lai atsvaidzinātu arī tos.
+
+## <a name="edit-an-existing-environment"></a>Esošas vides rediģēšana
+
+Jūs varat rediģēt dažas esošās vides detaļas.
+
+1. Dodieties uz **Administrators** > **Sistēma** > **Par**.
+
+2. Atlasiet **Rediģēt**.
+
+3. Varat atjaunināt vides **Parādāmo nosaukumu**, taču **Reģionu** vai **Veidu** mainīt nevar.
+
+4. Ja vide ir konfigurēta saglabāt datus pakalpojumā Azure Data Lake Storage Gen2, jūs varat atjaunināt **Konta atslēgu**. Taču nevar mainīt **Konta nosaukumu** vai **Konteinera** nosaukumu.
+
+5. Ja vēlaties, varat atjaunināt no uzņēmuma atslēgas savienojuma uz resursu vai abonementa bāzes savienojumu. Pēc jaunināšanas jūs nevarat atgriezties pie uzņēmuma atslēgas pēc atjaunināšanas. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Atjauninot savienojumu, nevar mainīt **Konteinera** informāciju.
+
+## <a name="reset-an-existing-environment"></a>Esošās vides atiestatīšana
+
+Vidi var atiestatīt tukšā stāvoklī, ja vēlaties dzēst visas konfigurācijas un noņemt uzņemtos datus.
+
+1.  Dodieties uz **Administrators** > **Sistēma** > **Par**.
+
+2.  Atlasiet **Atiestatīt**. 
+
+3.  Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Atiestatīt**.
+
+
+## <a name="delete-an-existing-environment"></a>Esošas vides dzēšana
+
+1. Dodieties uz **Administrators** > **Sistēma** > **Par**.
+
+1. Atlasiet **Dzēst**.
+
+1. Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Dzēst**.
