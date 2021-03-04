@@ -1,51 +1,57 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Sales
 description: Uzziniet, kā konfigurēt savienojumu ar Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643827"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269017"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="2019f-103">Savienotājs ar Dynamics 365 Sales (priekšskatījums)</span><span class="sxs-lookup"><span data-stu-id="2019f-103">Connector for Dynamics 365 Sales (preview)</span></span>
+# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="af603-103">Savienotājs ar Dynamics 365 Sales (priekšskatījums)</span><span class="sxs-lookup"><span data-stu-id="af603-103">Connector for Dynamics 365 Sales (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="2019f-104">Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas ar Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="2019f-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
+<span data-ttu-id="af603-104">Izmantojiet Dynamics 365 Sales klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas.</span><span class="sxs-lookup"><span data-stu-id="af603-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="2019f-105">Priekšnosacījums</span><span class="sxs-lookup"><span data-stu-id="2019f-105">Prerequisite</span></span>
+## <a name="prerequisite"></a><span data-ttu-id="af603-105">Priekšnosacījums</span><span class="sxs-lookup"><span data-stu-id="af603-105">Prerequisite</span></span>
 
-<span data-ttu-id="2019f-106">Kontaktpersonu ieraksti [no Dynamics 365 Sales, kas uzņemti Common Data Service](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="2019f-106">Contact records [from Dynamics 365 Sales ingested using Common Data Service](connect-power-query.md).</span></span>
+1. <span data-ttu-id="af603-106">Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem.</span><span class="sxs-lookup"><span data-stu-id="af603-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="af603-107">Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Sales, izmantojot Common Data Services](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="af603-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
 
-## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="2019f-107">Savienotāja konfigurēšana pakalpojumam Sales</span><span class="sxs-lookup"><span data-stu-id="2019f-107">Configure the connector for Sales</span></span>
+   > [!NOTE]
+   > <span data-ttu-id="af603-108">Eksportējot segmentus no auditorijas ieskatiem uz programmu Sales, netiek veidoti jauni kontaktpersonu ieraksti.</span><span class="sxs-lookup"><span data-stu-id="af603-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="af603-109">Kontaktpersonu ieraksti no programmas Sales jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam.</span><span class="sxs-lookup"><span data-stu-id="af603-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="af603-110">Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.</span><span class="sxs-lookup"><span data-stu-id="af603-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-1. <span data-ttu-id="2019f-108">Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.</span><span class="sxs-lookup"><span data-stu-id="2019f-108">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="af603-111">Savienotāja konfigurēšana pakalpojumam Sales</span><span class="sxs-lookup"><span data-stu-id="af603-111">Configure the connector for Sales</span></span>
 
-1. <span data-ttu-id="2019f-109">Sadaļā **Dynamics 365 Sales** atlasiet **Iestatīt**.</span><span class="sxs-lookup"><span data-stu-id="2019f-109">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
+1. <span data-ttu-id="af603-112">Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.</span><span class="sxs-lookup"><span data-stu-id="af603-112">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="2019f-110">Piešķiriet eksportēšanas galamērķim atpazīstamu nosaukumu laukā **Parādāmais nosaukums**.</span><span class="sxs-lookup"><span data-stu-id="2019f-110">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="af603-113">Sadaļā **Dynamics 365 Sales** atlasiet **Iestatīt**.</span><span class="sxs-lookup"><span data-stu-id="af603-113">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="2019f-111">Ievadiet jūsu organizācijas Sales URL laukā **Servera adrese**.</span><span class="sxs-lookup"><span data-stu-id="2019f-111">Enter your organization's Sales URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="af603-114">Piešķiriet eksportēšanas galamērķim atpazīstamu nosaukumu laukā **Parādāmais nosaukums**.</span><span class="sxs-lookup"><span data-stu-id="af603-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="2019f-112">Sadaļā **Servera administratora konts** atlasiet **Pieteikties** un izvēlieties Dynamics 365 Sales kontu.</span><span class="sxs-lookup"><span data-stu-id="2019f-112">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
+1. <span data-ttu-id="af603-115">Ievadiet jūsu organizācijas Sales URL laukā **Servera adrese**.</span><span class="sxs-lookup"><span data-stu-id="af603-115">Enter your organization's Sales URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="2019f-113">Kartēt klienta ID lauku uz Dynamics 365 kontaktpersonas ID.</span><span class="sxs-lookup"><span data-stu-id="2019f-113">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="af603-116">Sadaļā **Servera administratora konts** atlasiet **Pieteikties** un izvēlieties Dynamics 365 Sales kontu.</span><span class="sxs-lookup"><span data-stu-id="af603-116">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
 
-1. <span data-ttu-id="2019f-114">Atlasiet **Tālāk**.</span><span class="sxs-lookup"><span data-stu-id="2019f-114">Select **Next**.</span></span>
+1. <span data-ttu-id="af603-117">Kartēt klienta ID lauku uz Dynamics 365 kontaktpersonas ID.</span><span class="sxs-lookup"><span data-stu-id="af603-117">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="2019f-115">Izvēlieties vienu vai vairākus segmentus.</span><span class="sxs-lookup"><span data-stu-id="2019f-115">Choose one or more segments.</span></span>
+1. <span data-ttu-id="af603-118">Atlasiet **Tālāk**.</span><span class="sxs-lookup"><span data-stu-id="af603-118">Select **Next**.</span></span>
 
-1. <span data-ttu-id="2019f-116">Atlasiet vienumu **Saglabāt**.</span><span class="sxs-lookup"><span data-stu-id="2019f-116">Select **Save**.</span></span>
+1. <span data-ttu-id="af603-119">Izvēlieties vienu vai vairākus segmentus.</span><span class="sxs-lookup"><span data-stu-id="af603-119">Choose one or more segments.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="2019f-117">Datu eksportēšana</span><span class="sxs-lookup"><span data-stu-id="2019f-117">Export the data</span></span>
+1. <span data-ttu-id="af603-120">Atlasiet vienumu **Saglabāt**.</span><span class="sxs-lookup"><span data-stu-id="af603-120">Select **Save**.</span></span>
 
-<span data-ttu-id="2019f-118">Datus var [eksportēt pēc pieprasījuma](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="2019f-118">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="2019f-119">Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="2019f-119">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="af603-121">Datu eksportēšana</span><span class="sxs-lookup"><span data-stu-id="af603-121">Export the data</span></span>
+
+<span data-ttu-id="af603-122">Datus var [eksportēt pēc pieprasījuma](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="af603-122">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="af603-123">Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="af603-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
