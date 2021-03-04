@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650013"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270441"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -31,6 +31,77 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="january-2021-updates"></a>2021. gada janvāra atjauninājumi
+
+2021. gada janvāra atjauninājumi ietver vairākus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+#### <a name="extensibility"></a>Paplašināšana
+
+- **Paplašinātā funkcionalitāte un uzlabotā veiktspēja SFTP eksportam** Tagad visas izvades entītijas no Customer Insights varat eksportēt uz SFTP viesošanas servisu. Iepriekš eksportēšana tika veikta tikai uz segmenta entītijām. Turklāt SFTP viesotāja eksportēšana ļauj vairāk datu apjoma mazākā laika posmā atkarībā no SFTP viesotāja veiktspējas.    
+  Papildinformāciju skatiet rakstā [SFTP savienotājs (priekšskatījums)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmenti
+
+- **Algoritmiskās mācīšanās nodrošinātie ieteiktie segmenti, lai uzlabotu metriku** Ir jauns veids, kā atrast un izveidot segmentus. Sistēma izmanto mākslīgā intelekta modeli, lai ieteiktu segmentus, kas var palīdzēt uzlabot KPI (pasākumu), kam jau sekojat. Mēs rādām jūsu atlasītā atribūta ietekmi uz pasākumu vai citu primāro atribūtu. Šī informācija palīdz atrast iespējamos segmentus, kas sniedz iespējas.    
+  Papildinformācijai skatiet [Ieteiktie segmenti (priekšskatījums)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Datu apvienošana
+
+- **Uzlabota atbilstības pieredze** Datu apvienošanas apgabalā tika atjaunināta atbilstības pieredze. Tas ļauj konfigurēt un skatīt atbilstības kārtulas, tostarp detalizētu statistiku, lai izskaidrotu atbilstības noteikšanas darbību. Ir pieejamas opcijas atbilstības kārtulas atspējošanai, lai tā vairs nebūtu aktīva, saglabājot konfigurāciju, vilkšanas un nomešanas atbilstības kārtulas utt.
+  Papildinformāciju skatiet tēmā [Entītiju atbilstība](match-entities.md).
+
+- **Dedublēšanas izvade no atbilstības procesa ir pieejama kā entītija** Dedublēšanas procesa izvade no atbilstības procesa tagad ir ierakstīta atsevišķā entītijā turpmākai analīzei. Šajā entītijā ir lauki, kas tiek izmantoti dedublēšanas procesā, un uzvarētāja ieraksts, kā arī attiecīgie alternatīvie ieraksti, kas tiek sapludināti ar uzvarētāja ierakstu.
+  Papildinformāciju skatiet tēmā [Dedublēšanas kā entītijas izvade](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Sistēmas administrēšana
+
+- **Netraucēti kopīgojiet datus ar Microsoft Dataverse** Tagad Customer Insights izvadi varat koplietot ar Microsoft Dataverse lietojumprogrammām, izmantojot risinājumu Microsoft Dataverse pārvaldīto Data Lake. Kad esat sasaistījis Dataverse vidi ar Customer Insights, varat izmantot opciju datu kopīgošanas iespējošanai.
+  Papildinformācijai skatiet [Vižu pārvaldība](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>2020. gada decembra atjauninājumi
+
+2020.g. decembra atjauninājumi ietver vairākus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Jauni un atjaunināti līdzekļi 2020.g. decembrī
+
+#### <a name="data-enrichment"></a>Datu bagātināšana
+
+- **Uzlaboti zīmola un interešu radniecības bagātinājumi**
+  
+  Mēs vienkāršojām savu interešu rezultātus, lai tos varētu vieglāk izprast un izmantot. Tagad varat ātri identificēt klientus, balstoties uz viņu ieinteresētību attiecībā uz konkrētu zīmolu vai ieinteresētību.
+
+  Turklāt esam pievienojuši jaunas konfigurācijas opcijas, lai labāk kontrolētu, kā vēlaties bagātināt klientu profilus. 
+
+  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft-graph.md).
+
+- **Kontrolējiet, kurus profilus bagātināt**
+
+  Tagad varat bagātināt tikai klientu profilu apakškopu ar opciju atlasīt segmenta entītiju, nevis noklusējuma klienta entītiju. Izveidojiet segmentu ar klientu profiliem, kurus vēlaties bagātināt un atlasīt savas klientu datu kopas bagātināšanas konfigurācijā.
+  Šis līdzeklis pašlaik ir pieejams tikai bagātināšanai, ko nodrošina Experian un HERE Technologies. Mēs šo iespēju iespējojam, lai drīz bagātinātu vairāk.
+
+  Papildinformāciju skatiet sadaļā [Klientu profilu bagātināšana ar demogrāfiskajiem datiem no Experian](enrichment-experian.md) vai [Klientu profilu bagātināšanas, izmantojot HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Paplašināšana
+
+- **Savu segmentu aktivizēšana, lietojot Autopilot**
+
+  Eksportējiet segmentus uz Autopilot un izmantojiet tos mārketinga mērķiem. Papildinformāciju skatiet rakstā [Autopilot savienotājs (priekšskatījums)](export-autopilot.md).
+
+- **Savu segmentu aktivizēšana, lietojot SendGrid**
+
+  Eksportējiet segmentus uz SendGrid un izmantojiet tos mārketinga mērķiem. Papildinformāciju skatiet rakstā [SendGrid savienotājs](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Sistēmas administrēšana
+
+- **Atjaunināta vides pārvaldības pieredze**
+  
+  Tagad vides varat izveidot, rediģēt, dzēst un atiestatīt tieši no vides atlasītāja programmas galvenē. 
+  
+  Turklāt vide, kuru izmantojat, tiks piesprausta vides paneļa augšdaļā, tādēļ jums tā nav jāmeklē.
+
+  Papildinformācijai skatiet [Vižu pārvaldība](manage-environments.md).
+
 ## <a name="november-2020-updates"></a>2020. gada novembra atjauninājumi
 
 2020.g. novembra atjauninājumi ietver vairākus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
@@ -41,7 +112,7 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 - **Ienesiet savus bagātināšanās datus, izmantojot drošo failu pārsūtīšanas protokola (SFTP) pielāgoto importēšanu**
   
-  Faila drošas pārsūtīšanas protokola (SFTP) pielāgotā importēšana ļauj importēt datus, kuriem nav jāiziet datu apvienošanas process. Papildinformācija par SFTP pielāgoto importēšanu
+  Faila drošas pārsūtīšanas protokola (SFTP) pielāgotā importēšana ļauj importēt bagātināšanas datus, kuriem nav jāiziet datu apvienošanas process. Papildinformācija par SFTP pielāgoto importēšanu
 
   Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar pielāgotajiem datiem (priekšskatījums)](enrichment-SFTP-custom-import.md).
  
@@ -165,7 +236,7 @@ Papildinformāciju skatiet šeit: [Klientu profilu bagātināšana ar demogrāfi
 Uzdevuma informācijas rūtī varat apskatīt informāciju par sistēmas palaistajiem uzdevumiem. Tas ir parocīgs veids, kā noteikt konfigurācijas problēmas un meklēt risinājumus.
 Pārskatiet kļūdu ziņojumus un skatiet, kā risināt iespējamās problēmas.
  
-- **Informācijas, kas pievienota papildu lapām, apstrāde**
+- **Papildu lapām pievienotas informācijas apstrāde**
 
 Šis uzlabojums pievieno informāciju par jūsu entītiju statusu lapā **Entītijas** un **Klienti**.
  
@@ -202,9 +273,9 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 #### <a name="enrichment"></a>Bagātināšana
 
-- **Pieejama līdzīgo interešu bagātināšana papildu tirgos**
+- **Interesenšu bagātinātājs, kas pieejams vairākos tirgos**
 
-  Mēs paplašinām līdzīgo interešu bagātināšanas pieejamību ārpus ASV, piecos papildu tirgos: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar papildu interesēm, kas attiecas uz šiem tirgiem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
+  Mēs sniedzam iespēju bagātināt interesi ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar vairākām interesēm, kas attiecas uz šiem tirgiem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
   Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 #### <a name="enrichment"></a>Bagātināšana
 
-- **Zīmola afinitātes bagātināšana pieejama papildu tirgos**
+- **Zīmolu bagātinātājs, kas pieejams vairākos tirgos**
 
-  Mēs paplašinām zīmola afinitātes bagātināšanas pieejamību ārpus ASV, piecos papildu tirgos: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar šo tirgu vietējām zīmoliem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
+  Mēs sniedzam iespēju bagātināt interesi par zīmoliem ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar šo tirgu vietējām zīmoliem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
   Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>2020. gada jūnija atjauninājumi
@@ -238,7 +309,7 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 - **Bagātināšanās ar uzņēmuma datiem no Leadspace**
   
-  Definējiet laukus vienotajos klientu profilos, kas tiek izmantoti, lai uzmeklētu saistītos uzņēmuma datus no Leadspace. Pēc bagātināšanas procesa palaišanas B2B profili tiek bagātināti ar papildu atribūtiem, tostarp uzņēmuma lielumu, atrašanās vietu, nozari un citiem.    
+  Definējiet laukus vienotajos klientu profilos, kas tiek izmantoti, lai uzmeklētu saistītos uzņēmuma datus no Leadspace. Pēc bagātināšanas procesa izpildes B2B profili tiek bagātināti ar vairākiem atribūtiem, tostarp uzņēmuma lielumu, atrašanās vietu, nozari utt.    
   Šī sadarbība ļauj uzlabot jūsu datu kvalitāti, izmantojot trešo pušu pakalpojumu sniegtos datus.  Lai izmantotu šo bagātināšanu, jums ir nepieciešama licence no Leadspace, lai piekļūtu tā B2B uzņēmuma datiem. Sistēma izmantos šo licenci, lai nodrošinātu jūsu datu nepārtrauktu bagātināšanu.    
   Papildinformāciju skatiet rakstā [Uzņēmumu profilu bagātināšana ar Leadspace](enrichment-leadspace.md).
 
@@ -295,12 +366,12 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
   
   Atrodiet līdzīgus klientus savā klientu bāzē, izmantojot mākslīgo intelektu. Binārās klasifikācijas algoritmiskā mācīšanās modelis piešķir klientiem līdzības rezultātu paplašinātajā segmentā. Rezultāts balstās līdzībā klientiem no avota segmenta. Atkarībā no līdzības rezultāta klientu profili tiek pievienoti jaunizveidotam segmentam.
 
-  Digitālajā mārketingā to dažkārt dēvē par līdzīgo modelēšanu; tajā tiek izmantots mākslīgā intelekta modelis, lai palīdzētu atrast klientus, kas ir līdzīgi citu jūsu klientu segmentam, izmantojot sadalīšanu papildu atribūtos. Tas ļauj ne tikai izvēlēties atribūtus, bet arī norādīt maksimālo klientu skaitu, kuriem jābūt šajā jaunajā segmentā. Mākslīgā intelekta modelis aprēķina līdzības rezultātu katram klientam, pamatojoties uz jūsu atlasītajiem atribūtiem, un atrod klientus ar lielāko vidējo līdzības rezultātu. Iegūtais segments iekļaus klientus, kas ir līdzīgi jūsu sākotnējā segmenta klientam.    
+  Dažkārt saukta par līdzīgu modelēšanu ciparu mārketingā, tā izmanto mākslīgā intelekta modeli, lai palīdzētu atrast klientus, kas ir līdzīgi citam klientu segmentam, faktorizējot vairāk atribūtu. Tas ļauj ne tikai izvēlēties atribūtus, bet arī norādīt maksimālo klientu skaitu, kuriem jābūt šajā jaunajā segmentā. Mākslīgā intelekta modelis aprēķina līdzības rezultātu katram klientam, pamatojoties uz jūsu atlasītajiem atribūtiem, un atrod klientus ar lielāko vidējo līdzības rezultātu. Iegūtais segments iekļaus klientus, kas ir līdzīgi jūsu sākotnējā segmenta klientam.    
   Papildinformāciju skatiet rakstā [Līdzīgi klienti](find-similar-customer-segments.md).
 
 - **Segmentu pārklāšanās un diferencētāji**
 
-  Segmentu pārklāšanās ļauj redzēt, cik daudz un kuri klienti ir kopīgi diviem vai vairākiem segmentiem. Piemēram, kā augstu tēriņu klientu segments pārklājas ar augstas apmierinātības klientu segmentu vai kā zūdošo klientu segments pārklājas ar zemas apmierinātības klientu segmentu. Turklāt varat analizēt, kā pārklāšanās mainās, pamatojoties uz jūsu izvēlētu papildu atribūtu.
+  Segmentu pārklāšanās ļauj redzēt, cik daudz un kuri klienti ir kopīgi diviem vai vairākiem segmentiem. Piemēram, kā augstu tēriņu klientu segments pārklājas ar augstas apmierinātības klientu segmentu vai kā zūdošo klientu segments pārklājas ar zemas apmierinātības klientu segmentu. Turklāt varat analizēt, kā mainās pārklāšanās, pamatojoties uz jūsu izvēlēto papildu atribūtu.
 
   Segmenta diferencētāji atklāj, kas atšķir vienu segmentu no pārējiem jūsu klientiem vai no cita segmenta. Jums tikai ir jāidentificē segments, un sistēma identificēs profila atribūtus un mērus, kas izšķir segmentu vērtētu diferencētāju saraksta veidā — no spēcīgākā diferencētāja uz vājāko.    
   Plašāku informāciju skatiet rakstā [Ieskati segmentos (priekšskatījums)](segment-insights.md).
@@ -333,7 +404,7 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 - **Atjaunināta laika skala un lapu numerācija klienta kartes pievienojumprogrammā**
 
-  Klientu karšu pievienojumprogrammas grafiks atbilst darbības laika skalai. Ir uzlabota laika skalas lapu numerācija, kas rāda līdz 50 darbībām vienlaicīgi. Tas ļauj arī ielādēt papildu darbības laika skalā.    
+  Klientu karšu pievienojumprogrammas grafiks atbilst darbības laika skalai. Ir uzlabota laika skalas lapu numerācija, kas rāda līdz 50 darbībām vienlaicīgi. Tas arī ļauj ielādēt vairāk darbību laika grafikā.    
   Papildinformācijai skatiet [Klientu kartes pievienojumprogramma](customer-card-add-in.md).
 
 - **Power Automate segmenta izmaiņu trigeris**
@@ -412,7 +483,7 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 - **Eksportēšana uz LiveRamp**
 
-  Aktivizējiet datus risinājumā LiveRamp®, lai izveidotu savienojumu ar vairāk nekā 500 platformām digitālajās, sociālajās un TV ekosistēmās. Izskatiet datus risinājumā LiveRamp reklāmas kampaņu mērķauditorijas atlasei, izlaišanai un personalizēšanai.    
+  Aktivizējiet datus risinājumā LiveRamp®, lai izveidotu savienojumu ar vairāk nekā 500 platformām digitālajās, sociālajās un TV ekosistēmās. Izmantojiet savus LiveRamp datus kā reklāmas kampaņu mērķauditorijas atlasei, likvidēšanai un personalizēšanai.    
   Papildinformācijai skatiet [LiveRamp&reg; connector](export-liveramp.md).
 
 - **Customer Insights darba grupu pievienojumprogramma**
@@ -433,7 +504,7 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 #### <a name="segments"></a>Segmenti
 
-- **Papildu operators**
+- **Cits operators**
   
   Iestatītais operators atļauj segmentēt klientus pēc vairākām iespējamām virknes vērtībām. Pirms šī operatora pievienošanas, jums bija jāveido šādi segmenti, izmantojot vairākus nosacījumus VAI. Iestatītais operators ļauj to darīt ar vienu nosacījumu.    
   Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
@@ -444,3 +515,6 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
   
   Kopējiet konfigurāciju no vienas vides citā. Veidojot jaunu vidi, varat atlasīt esošu vidi, no kuras vēlaties kopēt konfigurāciju. Pašlaik mēs atbalstām datu avotus, datu apvienošanu, attiecības, mērus un segmentus, kas tiks kopēti. Datu avots akreditācijas dati un faktiskie dati netiek kopēti.    
   Papildinformācijai skatiet [Vižu pārvaldība](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643872"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477142"
 ---
-# <a name="export-destinations-preview"></a>Galamērķu eksportēšana (priekšskatījums)
+# <a name="export-destinations-preview-overview"></a>Galamērķu pārskata eksportēšana (priekšskatījums)
 
 Lapā **Eksportēšanas galamērķi** tiek parādītas visas jūsu iestatītās datu eksportēšanas vietas. Eksportēšanai var pievienot arī jaunus adresātus. Turklāt tajā ir redzama pašlaik pieejamo opciju eksportēšana. Saņemiet īsu pārskatu, aprakstu un uzziniet, ko varat darīt ar katru paplašināmības opciju. Eksportējiet vienotos profilus, mērvienības un segmentus uz atbalstītajām programmām, kas ir saistošas jūsu uzņēmumam.
 
@@ -27,10 +27,13 @@ Dodieties uz **Administrators** > **Eksportēšanas galamērķi**, lai atrastu �
 - [Power Automate savienotājs](export-power-automate.md)
 - [Power Apps savienotājs](export-power-apps.md)
 - [Power BI savienotājs](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob krātuve](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; savienotājs](export-liveramp.md)
 - [Bots pakalpojumam Microsoft Teams](export-teams-bot.md)
 - [MailChimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Lai noņemtu eksportēšanas galamērķi, sāciet no galvenās **eksportēšanas
 2. Atlasiet **Noņemt** nolaižamajā izvēlnē.
 
 3. Apstipriniet noņemšanu, apstiprinājuma ekrānā atlasot pogu **Noņemt**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

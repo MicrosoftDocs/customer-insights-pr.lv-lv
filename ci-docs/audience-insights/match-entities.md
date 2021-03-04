@@ -4,17 +4,17 @@ description: Savienojiet datus, lai izveidotu vienotus klientu profilus.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406361"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267487"
 ---
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
@@ -22,7 +22,7 @@ Pēc kartēšanas posma pabeigšanas varat noteikt atbilstību savām entītijā
 
 ## <a name="specify-the-match-order"></a>Atbilstības noteikšanas secības norādīšana
 
-Pārejiet uz **Apvienošana** > **Atbilstība** un atlasiet **Iestatīt secību**, lai sāktu atbilstības posmu.
+Dodieties uz **Dati** > **Apvienot** > **Savienot** un atlasiet **Iestatīt pasūtījumu**, lai sāktu atbilstības posmu.
 
 Katrā atbilstības noteikšanas gadījumā tiek apvienotas divas vai vairākas entītijas vienā entītijā, saglabājot katru unikālo klienta ierakstu. Nākamajā piemērā ir atlasītas trīs entītijas: **ContactCSV: TestData** kā **primārā** entītija, **WebAccountCSV: TestData** kā **Entītija 2** un **CallRecordSmall: TestData** kā **Entītija 3**. Shēmā virs atlasēm ir parādīts, kā tiks izpildīta atbilstības noteikšanas secība.
 
@@ -136,7 +136,7 @@ Pēc tam, kad ir identificēts nedublēts ieraksts, šis ieraksts tiks izmantots
 
 1. Izpildot atbilstības procesu, tagad tiek grupēti ieraksti, kas balstīti uz nosacījumiem, kas definēti datu dedublēšanas kārtulās. Pēc ierakstu grupēšanas sapludināšanas politika tiek lietota, lai noteiktu uzvarētāju ierakstu.
 
-1. Pēc tam šis uzvarētāja ieraksts tiek nodots pārrobežu entītiju saskaņošanai.
+1. Pēc tam šis uzvarētāja ieraksts tiek nodots entītiju atbilstības noteikšanai kopā ar ierakstiem, kas nav uzvarētāji (piemēram, alternatīvie ID), lai uzlabotu atbilstošo kvalitāti.
 
 1. Visas pielāgotās atbilstības kārtulas, kas definētas, vienmēr atbilst un nekad neatbilst nenoraidītajām dedublēšanas kārtulām. Ja atkārtošanas kārtula identificē atbilstošos ierakstus, un pielāgota atbilstības kārtula ir iestatīta, lai nekad neatbilstu šiem ierakstiem, tad šie divi ieraksti netiek saskaņoti.
 
@@ -156,7 +156,18 @@ Kad saskaņošanas process ir pabeigts, teksts **Atsvaidzina...** tiks nomainīt
 Pēc pirmā atbilstības noteikšanas procesa ir izveidota apvienota galvenā entītija. Visu turpmāko atbilstības noteikšanas gadījumu rezultātā notiks šīs entītijas paplašināšanās.
 
 > [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+
+## <a name="deduplication-output-as-an-entity"></a>Dedublikācijas izvade kā entītija
+Papildus vienotajai galvenajai entītijai, kas izveidota kā daļa no entītiju savstarpējās atbilstības, dedublikācijas process arī katrai entītijai no atbilstības pasūtījuma ģenerē jaunu entītiju, lai identificētu dedublicētos ierakstus. Šīs entītijas var atrast kopā ar **ConflationMatchPairs:CustomerInsights** sadaļā **Sistēma** lapā **Entītijas** ar nosaukumu **Deduplication_Datasource_Entity**.
+
+Dedublikācijas izvades entītija ietver šādu informāciju:
+- ID/ Atslēgas
+  - Primārās atslēgas lauks un tā alternatīvais ID lauks. Alternatīvais ID lauks sastāv no visiem alternatīviem ID, kas identificēti ierakstam.
+  - Deduplication_GroupId lauks rāda grupu vai klasteru, kas identificēts entītijā, kas grupē visus līdzīgos ierakstus, pamatojoties uz norādītajiem dedublikācijas laukiem. To izmanto sistēmas apstrādes nolūkiem. Ja nav norādītas manuālas dedublikācijas kārtulas un tiek lietotas sistēmas definētās dedublikācijas kārtulas, varat neatrast šo lauku dedublikācijas izvades entītijā.
+  - Deduplication_WinnerId: šajā laukā ir norādīts identificēto grupu vai klasteru uzvarētāja ID. Ja Deduplication_WinnerId vērtība ir tāda pati kā ieraksta primārās atslēgas vērtība, tas nozīmē, ka ieraksts ir uzvarētāja ieraksts.
+- Lauki, ko lieto dedublikācijas kārtulu definēšanai.
+- Kārtulu un punktu skaita lauki, lai apzīmētu, kuras no dedublikācijas kārtulām tika lietotas, un punktu skaitu, kas tika atgriezts, veicot atbilstošu aizstāšanu.
 
 ## <a name="review-and-validate-your-matches"></a>Atbilstību pārskatīšana un pārbaudīšana
 
@@ -200,6 +211,11 @@ Palieliniet kvalitāti, pārkonfigurējot dažus no atbilstības parametriem.
   > [!div class="mx-imgBorder"]
   > ![Kārtulas dublicēšana](media/configure-data-duplicate-rule.png "Kārtulas dublicēšana")
 
+- **Deaktivizēt kārtulu**, lai saglabātu atbilstības kārtulu, to izslēdzot no atbilstības noteikšanas procesa.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktivizēt kārtulu](media/configure-data-deactivate-rule.png "Deaktivizēt kārtulu")
+
 - **Rediģējiet kārtulas**, atlasot **rediģēšanas** simbolu. Varat veikt tālāk norādītās izmaiņas.
 
   - Mainiet nosacījuma atribūtus: atlasiet jaunus atribūtus konkrētā nosacījuma rindā.
@@ -229,6 +245,8 @@ Varat norādīt nosacījumus, kuriem ierakstiem ir vienmēr jāatbilst vai nekad
     - Entity2Key: 34567
 
    Viens un tas pats veidnes fails var norādīt pielāgotās atbilstības ierakstus no vairākām entītijām.
+   
+   Ja vēlaties norādīt pielāgotu dedublikācijas atbilstību entītijai, norādiet to pašu entītiju kā Entity1 un Entity2 un iestatiet dažādas primārās atslēgas vērtības.
 
 5. Kad būsiet pievienojis visus vēlamos labojumus, saglabājiet veidnes failu.
 
@@ -250,3 +268,6 @@ Varat norādīt nosacījumus, kuriem ierakstiem ir vienmēr jāatbilst vai nekad
 ## <a name="next-step"></a>Nākamā darbība
 
 Kad būsiet pabeidzis atbilstības noteikšanas procesu vismaz vienam atbilstības pārim, varat atrisināt iespējamās pretrunas savos datos, pārskatot tēmu [**Sapludināšana**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,30 +1,26 @@
 ---
-title: Auditorijas ieskatu iespējas
-description: Pārskats apr Auditorijas ieskatu iespējām programmā Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
+description: Auditorijas ieskatu pārskats Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406354"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477004"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights auditorijas ieskatu iespējas
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 
-Klientu pieredze ir katras organizācijas digitālās transformācijas ambīciju pamatā. Lai konkurētu mūsdienu tirgū, organizācijām ir jāveido jēgpilnas attiecības ar klientiem personiskajā līmenī. Efektīvai un individuālai personalizēšanai ir nepieciešams pilnīgs un vienots klientu pārskats.
+Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet datus no dažādām transakciju, uzvedības un novērojumu avotiem, lai izveidotu 360 grādu klientu skatā. Izmantojiet šos ieskatus, lai virzītu uz klientu centrētu pieredzi un procesus. Apvienojiet un izprotiet klientu datus un izmantojiet tos inteliģentiem ieskatiem un darbībām.
 
-Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet datus no dažādām transakciju, uzvedības un novērojumu avotiem, lai izveidotu 360 grādu klientu skatā. Izmantojiet šos ieskatus, lai virzītu uz klientu centrētu pieredzi un procesus.
-
-**Apvienojiet un izprotiet klientu datus un izmantojiet tos inteliģentiem ieskatiem un darbībām.**
-
-Izmantojot auditorijas ieskatus, organizācijas var:  
+## <a name="main-benefits"></a>Galvenās priekšrocības 
 
 - **Likvidēt datu tvertnes un apvienot klientu datus**
 
@@ -33,15 +29,15 @@ Izmantojot auditorijas ieskatus, organizācijas var:
 
 - **Bagātināt ar auditorijas informāciju, kas iekļauta programmā Microsoft Graph**
 
-  - Veidot bagātīgākus klientu profilus, iekļaujot auditorijas informāciju, kas iekļauta programmā Microsoft Graph.  
+  - Veidot bagātīgākus klientu profilus, [iekļaujot auditorijas informāciju, kas iekļauta programmā Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Piešķirt savam biznesa procesam un personalizētai klientu pieredzei jaudu**
 
   - Virzīt personalizētu iesaisti kanālos - piešķiriet spēku mārketinga, pārdošanas un servisa profesionāļiem ar iekļautiem, kontekstuāliem klientu ieskatiem un pielāgotām klientu profila kartēm, kas iepludinātas uzņēmuma programmās, kuras tie jau lieto ik dienas.
   - Automatizēt uz klientu centrētu pieredzi un procesus, pamatojoties uz pielāgojamiem profiliem, uzņēmējdarbības pasākumiem un segmentiem.
-  - Iespējot un paplašināt biznesa darbības, kas balstās uz Microsoft Power Platform. Ātri izveidojiet lietojumprogrammas ar iegultiem ieskatiem, izmantojot spēcīgu, zemu koda metodi PowerApps.  
+  - Iespējot un paplašināt biznesa darbības, kas balstās uz [Microsoft Power Platform](https://powerplatform.microsoft.com/). Ātri izveidojiet lietojumprogrammas ar iegultiem ieskatiem, izmantojot spēcīgu, zemu koda metodi PowerApps.  
 
-Auditorijas ieskati ietver iespējas šādiem galvenajiem lietotājiem:
+## <a name="key-audiences"></a>Galvenās auditorijas
 
 - **Datu analītiķi/administratori:**
 
@@ -58,5 +54,8 @@ Auditorijas ieskati ietver iespējas šādiem galvenajiem lietotājiem:
 
 - **Biznesa analītiķi:**
 
-  - Veidojiet pielāgojamus profilus, definējiet mērvienības un izveidojiet segmentus, lai iegūtu pilnu pārskatu par savu klientu atbilstoši savas organizācijas specifikai.  
-  - Izmantojiet iebūvētos savienotājus programmai PowerApps vai Microsoft Power BI, vai API, lai iepazītu uzņēmuma lietojumprogrammas vai BI risinājumus.  
+  - Veidojiet pielāgojamus profilus, definējiet mērvienības, izveidojiet segmentus un iegūstiet no prognozējošās analīzes, lai iegūtu pilnu pārskatu par savu klientu atbilstoši savas organizācijas specifikai.  
+  - Vairākām Microsoft un trešo pušu lietojumprogrammām vai API lietojiet iepriekš izveidotos savienotājus, lai tālāk apstrādātu ieskatus.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

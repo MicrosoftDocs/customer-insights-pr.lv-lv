@@ -4,17 +4,17 @@ description: Datu importēšana no Common Data Service pārvaldītā datu ezera.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643407"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267823"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Savienojuma izveide ar datiem Common Data Service pārvaldītā datu ezerā
 
@@ -34,7 +34,10 @@ Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake St
 
 3. Atlasiet opciju **Izveidot savienojumu ar Common Data Service** un atlasiet **Tālāk**.
 
-4. Ievadiet **Nosaukumu** datu avotam un atlasiet **Tālāk**.
+4. Ievadiet **Nosaukumu** datu avotam un atlasiet **Tālāk**. Nosaukuma vadlīnijas: 
+   - Sāciet ar burtu.
+   - Izmantojiet tikai burtus un ciparus. Speciālās rakstzīmes un atstarpes nav atļautas.
+   - Izmantojiet no 3 līdz 64 rakstzīmēm.
 
 5. Norādiet **Servera adrese** jūsu Common Data Service organizācijai un atlasiet **Pierakstīties**.
 
@@ -65,3 +68,6 @@ Lai izveidotu savienojumu ar citu Common Data Service, [izveidojiet jaunu datu a
 3. No saraksta atlasiet opciju **Rediģēt**.
 
 4. Pieejamo entītiju sarakstā atlasiet papildu entītijas un atlasiet **Saglabāt**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

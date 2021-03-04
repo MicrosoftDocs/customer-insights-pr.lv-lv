@@ -3,26 +3,34 @@ title: Produkta pārskats
 author: m-hartmann
 description: Saņemiet pārskatu par Dynamics 365 Customer Insights un tā iespēju klāstu.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406374"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476958"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkta pārskats par Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights ir daļa no korporācijas Microsoft klientu datu platformas (CDP), kas palīdz nodrošināt personalizētu klientu pieredzi. Apvienojiet klientu datus, izmantojot visu avotu klāstu, lai iegūtu vienotu klientu skatu. 
+Dynamics 365 Customer Insights ir daļa no korporācijas Microsoft klientu datu platformas (CDP), kas palīdz nodrošināt personalizētu klientu pieredzi. Platformas iespējas nodrošina ieskatus par to, kas ir jūsu klienti un kā tie sadarbojas ar jūsu platformu. Apvienojiet klientu datus, izmantojot vairākus avotus, lai iegūtu vienotu klientu skatu.
 
-Pārveidojiet par klientu centrētu organizāciju, kurā mārketinga, pārdošanas un servisa profesionāļiem ir ieskati, kas viņiem nepieciešami pieredzes personalizēšanai. Veidojiet dziļāku klientu izpratni. Savienojiet datus no dažādām transakciju, uzvedības un novērojumu avotiem, lai izveidotu 360 grādu klientu skatā. Ātrāk skatīt rezultātus, izmantojot CDP, kas izstrādāta, lai sniegtu ieskatus, ar ko var rīkoties. 
 
-Izsniedziet ieskatus ar ātras sākšanas veidnēm. Ātri izveidojiet, testējiet un izvietojiet pielāgotus AI/ML modeļus, izmantojot analīzes risinājumus pēc skalas. Aktivizējiet reāllaika ieskatus, lai vadītu darbības. Uzturēt pilnu kontroli pār klientu datiem, lai nodrošinātu visaugstāko datu pārvaldības un atbilstības līmeni. 
+- [Auditorijas ieskati](audience-insights/overview.md) palīdz jūsu uzņēmumu pārveidot par uz klientiem vērstu organizāciju. Mārketinga, pārdošanas un apkalpošanas speciālistiem ir ieskati, kas viņiem nepieciešami, lai personalizētu pieredzi. Savienojiet datus no transakciju, uzvedības un novērojumu avotiem, lai izveidotu pilnu klienta skatu. Ātrāk skatīt rezultātus, izmantojot CDP, kas izstrādāta, lai sniegtu ieskatus, ar ko var rīkoties. 
 
-Ir divas galvenās iespējas: 
-
-- [Auditorijas ieskati](audience-insights/overview.md)
-- [Iesaistes ieskati (priekšskatījums)](engagement-insights/index.yml)
+- [Iesaistes ieskati (priekšskatījums)](engagement-insights/index.yml) ļauj jums interaktīvi saprast, kā jūsu klienti izmanto jūsu pakalpojumus un produktus gan atsevišķi, gan kopistiski tīmekļos, mobilajās programmās un pievienotajos produktos. Apvienojiet darbību analīzi ar transakciju, demogrāfisko, aptauju un citiem datu tipiem no Microsoft Dynamics 365 Customer Insights. Uzturēt pilnu kontroli pār klientu datiem, lai nodrošinātu visaugstāko datu pārvaldības un atbilstības līmeni.
  
+## <a name="choose-a-capability"></a>Izvēlieties iespēju
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Customer insights lapa, kas ļauj navigēt uz auditorijas ieskatiem vai iesaistes ieskatiem.":::
+
+Lai izvēlētos iespēju
+
+1. Navigācijas rūtī atlasiet **Visas programmas**, lai atvērtu **Izvēlēties jūsu fokusa** lodziņu.
+1. Atlasiet vienumu **Doties tūlīt**, lai pārietu uz jūsu izvēlēto iespēju.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

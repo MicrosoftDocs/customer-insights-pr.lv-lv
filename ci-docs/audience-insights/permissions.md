@@ -9,24 +9,24 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689229"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268419"
 ---
 # <a name="user-permissions"></a>Lietotāju atļaujas
 
 **Atļauju** lapā varat iestatīt lomas un atļaujas, lai varētu izmantot auditorijas ieskatus.
 
-Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, izmantojot auditorijas ieskatus, apmeklējiet **Administrators** > **Atļauja**.
+Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, izmantojot auditorijas ieskatus, dodieties uz **Administrators** > **Atļauja**.
 
 Pastāv trīs lomu tipi:
 
 ## <a name="viewer"></a>Skatītājs
 
-- Izpētiet ieskatus un segmentus **sākumlapā** un lapā **Segmenti**.
+- Izpētiet ieskatus un segmentus **Sākumlapā** un lapā **Segmenti**.
 - Meklējiet un filtrējiet klientu profilus, izmantojot lapu **Klienti**. Laukiem jābūt meklējamiem.
 - Skatiet un pārlūkojiet lapu **Bagātināšana**.
 - Izpētiet un eksportējiet entītijas, izmantojot lapu **Entītijas**.
@@ -74,3 +74,6 @@ Lai skatītu auditorijas ieskatus, apmeklējiet **Administrators** > **Atļaujas
 - Lomas ir norādītas kolonnā **Loma**.
 - Atlasiet jebkuru kolonnas virsrakstu, lai rezultātus kārtotu pēc šīs kolonnas vērtības.
 - Izmantojiet lapas augšdaļā esošo lauku **Meklēt**, lai atrastu konkrētus lietotājus.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406325"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477097"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI savienotājs (priekšskatījums)
 
@@ -31,7 +31,7 @@ Izveidojiet vizualizācijas saviem datiem, izmantojot līdzekli Power BI Desktop
 
 1. Atlasiet **Skatīt vairāk** un meklējiet **Dynamics 365 Customer Insights**.
 
-1. Atlasiet rezultātu un atlasiet **Savienot**.
+1. Atlasiet **Izveidot savienojumu**.
 
 1. **Pierakstieties**, izmantojot to pašu organizācijas kontu, ko izmantojat Customer Insights, un atlasiet **Savienot**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Customer Insights savienotājs Power BI ir paredzēts darbam ar datu kopām, kur
 ### <a name="work-with-a-subset-of-data"></a>Darbs ar datu apakškopu
 
 Apsveriet iespēju strādāt ar datu apakškopu. Piemēram, varat izveidot [segmentus](segments.md), nevis visu klientu ierakstu eksportēšanu uz Power BI.
+
+## <a name="troubleshooting"></a>Problēmu novēršana
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights vide netiek rādīta programmā Power BI
+
+Vidēs, kurās ir definētas vairāk nekā vienas [attiecības](relationships.md) starp divām vienādām entītijām auditorijas ieskatos, savienotājā Power BI nebūs pieejamas.
+
+Varat identificēt un noņemt dublicētās attiecības.
+
+1. Auditorijas ieskatos dodieties uz **Dati** > **Attiecības** Power BI pazudušajā vidē.
+2. Nosakiet dublicētās attiecības:
+   - Pārbaudiet, vai starp vienām un tām pašām divām entītijām ir definētas vairākas attiecības.
+   - Pārbaudiet, vai ir izveidotas attiecības starp divām entītijām, kas ir iekļautas apvienošanas procesā. Pastāv netiešas attiecības, kas tiek definētas starp visām entītijām, kas ir iekļautas apvienošanas procesā.
+3. Noņemiet visus identificēto attiecību dublikātus.
+
+Pēc dublicēto attiecību noņemšanas mēģiniet vēlreiz konfigurēt Power BI savienotāju. Videi tagad ir jābūt pieejamai.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

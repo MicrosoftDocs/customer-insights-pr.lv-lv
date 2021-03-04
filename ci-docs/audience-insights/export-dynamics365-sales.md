@@ -1,30 +1,33 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Sales
 description: Uzziniet, kā konfigurēt savienojumu ar Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643827"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269017"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Savienotājs ar Dynamics 365 Sales (priekšskatījums)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas ar Dynamics 365 Sales.
+Izmantojiet Dynamics 365 Sales klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas.
 
 ## <a name="prerequisite"></a>Priekšnosacījums
 
-Kontaktpersonu ieraksti [no Dynamics 365 Sales, kas uzņemti Common Data Service](connect-power-query.md).
+1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Sales, izmantojot Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Eksportējot segmentus no auditorijas ieskatiem uz programmu Sales, netiek veidoti jauni kontaktpersonu ieraksti. Kontaktpersonu ieraksti no programmas Sales jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
 
 ## <a name="configure-the-connector-for-sales"></a>Savienotāja konfigurēšana pakalpojumam Sales
 
@@ -49,3 +52,6 @@ Kontaktpersonu ieraksti [no Dynamics 365 Sales, kas uzņemti Common Data Service
 ## <a name="export-the-data"></a>Datu eksportēšana
 
 Datus var [eksportēt pēc pieprasījuma](export-destinations.md). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

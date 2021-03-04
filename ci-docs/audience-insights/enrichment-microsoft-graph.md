@@ -1,20 +1,20 @@
 ---
 title: Klientu profilu bagātināšana ar programmu Microsoft Graph
 description: Izmantojiet īpašnieka datus no Microsoft Graph, lai bagātinātu klientu datus ar zīmolu un interešu radniecību.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406332"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269339"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Bagātiniet klientu profilus ar zīmola un interešu radniecību (priekšskatījums)
 
@@ -35,16 +35,21 @@ Mēs izmantojam tiešsaistes meklēšanas datus no Microsoft Graph, lai atrastu 
 
 [Uzziniet vairāk par Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Radniecības rezultāts un uzticība
+## <a name="affinity-level-and-score"></a>Saistību līmenis un rezultāts
 
-**Radniecības rezultāts** tiek aprēķināts, izmantojot 100 punktu skalu, ar 100 apzīmē segmentu, kam ir visaugstākā radniecība attiecībā pret zīmolu vai interesi.
+Katrā bagātinātā klienta profilā mēs nodrošinām divas saistītās vērtības — saistību līmeni un saistību rezultātu. Šīs vērtības palīdz noteikt, cik spēcīgas ir saistības šī profila demogrāfiskajam segmentam attiecībā uz zīmolu vai interesi salīdzinājumā ar citiem demogrāfiskajiem segmentiem.
 
-**Radniecības ticamība** arī tiek aprēķināta 100 punktu skalā. Tā norāda uz sistēmas ticamības līmeni tam, ka segmentam ir radniecība ar zīmolu vai interesi. Ticamības līmenis ir atkarīgs no segmenta lieluma un segmenta detalizācijas. Segmenta lielumu nosaka jūsu norādītā segmenta datu daudzums. Segmenta detalizāciju nosaka, cik daudzi atribūti (vecums, dzimums, atrašanās vieta) ir pieejami profilā.
+*Saistību līmenis* sastāv no četriem līmeņiem, un *saistību rādītājs* tiek aprēķināts pēc 100 punktu skalas, kura tiek kartēta uz saistību līmeņiem.
 
-Mēs nenormalizējam jūsu datu kopas rezultātus. Līdz ar to var nebūt redzamas visas datu kopas iespējamās radniecības rezultātu vērtības. Piemēram, jūsu datos varētu nebūt neviena bagātināta klienta profila ar radniecības novērtējumu 100. Tas ir iespējams gadījumā, ja demogrāfiskajā segmentā, kas noteiktajam zīmolam vai interesei ir novērtēts ar 100, nav neviena klienta.
 
-> [!TIP]
-> Ja [veidojat segmentus](segments.md), izmantojot radniecības rezultātus, pārskatiet savas datu kopas radniecības rezultātus, pirms pieņemat lēmumu par atbilstošajiem rezultātu sliekšņiem. Piemēram, radniecības rezultātu 10 var uzskatīt par nozīmīgu rezultātu datu kopai ar visaugstāko rezultātu, kas ir tikai 25 attiecībā uz doto zīmolu vai interesi.
+|Saistību līmenis |Saistības rādītājs  |
+|---------|---------|
+|Ļoti augsts     | 85-100       |
+|Augsts     | 70-84        |
+|Vidēja     | 35-69        |
+|Zems     | 1-34        |
+
+Atkarībā no tā, cik detalizēti vēlaties mērīt saistības, varat izmantot vai nu saistību līmeni, vai rezultātu. Saistību rādītājs sniedz precīzāku vadīklu.
 
 ## <a name="supported-countriesregions"></a>Atbalstītās valstis/reģioni
 
@@ -54,17 +59,13 @@ Lai atlasītu valsti, atveriet **Zīmolu papildināšanu** vai **Intereses papil
 
 ### <a name="implications-related-to-country-selection"></a>Ar valsts atlasi saistītās sekas
 
-- Izvēloties [savus zīmolus](#define-your-brands-or-interests), tiks sniegti ieteikumi, balstoties uz atlasīto valsti/reģionu.
+- [Izvēloties savus zīmolus](#define-your-brands-or-interests), sistēma sniedz ieteikumus, kas balstīti uz atlasīto valsti vai reģionu.
 
-- [Izvēloties nozari](#define-your-brands-or-interests), mēs noteiksim visatbilstošākos zīmolus vai intereses, pamatojoties uz atlasīto valsti/reģionu.
+- [Izvēloties nozari](#define-your-brands-or-interests), jūs iegūsiet svarīgākos zīmolus vai intereses, pamatojoties uz atlasīto valsti vai reģionu.
 
-- [Kartējot savus laukus](#map-your-fields), ja lauks Valsts/Reģions nav kartēts, mēs izmantosim Microsoft Graph datus no atlasītā(s) valsts/reģiona, lai bagātinātu klientu profilus. Mēs arī izmantosim šo atlasi, lai bagātinātu klientu profilus, kuriem nav pieejami valsts/reģiona dati.
-
-- [Papildinot profilus](#refresh-enrichment), mēs bagātināsim visus klientu profilus, kuriem ir pieejami Microsoft Graph dati par atlasītajiem zīmoliem un interesēm, ieskaitot profilus, kas nav atlasītajā valstī/reģionā. Piemēram, ja atlasījāt Vāciju, mēs bagātināsim profilus, kas atrodas Amerikas Savienotajās Valstīs, ja ir pieejami Microsoft Graph dati par atlasītajiem zīmoliem un interesēm Amerikas Savienotajās Valstīs (ASV).
+- [Bagātinot profilus](#refresh-enrichment), mēs bagātināsim visus klientu profilus, attiecībā uz kuriem mēs iegūstam datus par atlasītajiem zīmoliem un interesēm. Ieskaitot profilus, kas nav atlasītajā valstī vai reģionā. Piemēram, ja atlasījāt Vāciju, mēs bagātināsim profilus, kas atrodas Amerikas Savienotajās Valstīs, ja ir pieejami Microsoft Graph dati par atlasītajiem zīmoliem un interesēm Amerikas Savienotajās Valstīs (ASV).
 
 ## <a name="configure-enrichment"></a>Konfigurēt bagātināšanu
-
-Konfigurējot zīmolus vai intereses, bagātināšana sastāv no divām darbībām:
 
 ### <a name="define-your-brands-or-interests"></a>Definēt zīmolus vai intereses
 
@@ -75,9 +76,19 @@ Atlasiet kādu no šīm opcijām:
 
 Lai pievienotu zīmolu vai interesi, ievadiet to ievades apgabalā, lai saņemtu ieteikumus, pamatojoties uz atbilstības nosacījumiem. Ja mēs neuzskaitām zīmolu vai interesi, kuru meklējat, nosūtiet mums atsauksmi, izmantojot saiti **Ieteikt**.
 
+### <a name="review-enrichment-preferences"></a>Bagātināšanas preferenču pārskatīšana
+
+Pārskatiet noklusējuma bagātināšanas preferences un atjauniniet tās, kad tas ir nepieciešams.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Bagātinātā preferenču loga ekrānuzņēmums.":::
+
+### <a name="select-entity-to-enrich"></a>Atlasiet bagātināmo entītiju
+
+Atlasiet **Bagātinātā entītija** un izvēlieties datu kopu, ko vēlaties bagātināt ar uzņēmuma datiem no programmas Microsoft Graph. Varat atlasīt entītiju Klients, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+
 ### <a name="map-your-fields"></a>Lauku kartēšana
 
-Kartējiet laukus no savas vienotās klienta entītijas uz vismaz diviem atribūtiem, lai definētu demogrāfisko segmentu, kuru vēlaties, lai izmantojam jūsu klientu datu bagātināšanai. Atlasiet **Rediģēt**, lai definētu lauku kartēšanu, un atlasiet **Piemērot**, kad esat to izdarījis. Atlasiet **Saglabāt**, lai pabeigtu lauka kartēšanu.
+Kartējiet laukus no savas vienotās klienta entītijas, lai definētu demogrāfisko segmentu, kuru sistēma vēlas, lai izmantojat jūsu klientu datu bagātināšanai. Kartējiet valsti/reģionu un vismaz Dzimšanas datu vai Dzimuma atribūtus. Turklāt ir jākartē vismaz viens no atribūtiem — Pilsēta (un novads/rajons) vai pasta indekss. Atlasiet **Rediģēt**, lai definētu lauku kartēšanu, un atlasiet **Piemērot**, kad esat to izdarījis. Atlasiet **Saglabāt**, lai pabeigtu lauka kartēšanu.
 
 Tiek atbalstīti šādi(-as) formāti un vērtības; vērtības nav reģistrjutīgas:
 
@@ -120,3 +131,6 @@ Zīmola un intereses radniecību var apskatīt arī atsevišķās klientu kartī
 ## <a name="next-steps"></a>Nākamās darbības
 
 Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md)un pat [eksportējiet datus](export-destinations.md), lai klientiem sniegtu personalizētas iespējas.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

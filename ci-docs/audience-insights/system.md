@@ -1,7 +1,7 @@
 ---
 title: Sadaļā Auditorijas ieskati skatiet sistēmas konfigurāciju
 description: Informācija par sistēmas iestatījumiem, kas tiek parādīti Dynamics 365 Customer Insights auditorijas ieskatiem.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406364"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267349"
 ---
 # <a name="system-configuration"></a>Sistēmas konfigurācija
 
-Lapā **Sistēmas** ir iekļautas četras cilnes: **Statuss**, **Grafiks**, **Par** un **Vispārīgi**.
+Lapā **Sistēma** ir šādas cilnes:
+- [Statuss](#status-tab)
+- [Plānot](#schedule-tab)
+- [API lietojums](#api-usage-tab)
+- [Par](#about-tab)
+- [VispārīgI](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Sistēmas lapa](media/system-tabs.png "Sistēmas lapa")
 
 ## <a name="status-tab"></a>Cilne Statuss
 
-**Statusa cilnē** var izsekot datu pieņemšanas norisei, datu eksportiem un vairākiem svarīgiem preces procesiem. Šajā cilnē pārskatiet informāciju, lai nodrošinātu aktīvo procesu pilnīgumu.
+Izmantojot **Statusa cilni**, varat izsekot datu iekļaušanas, datu eksportēšanas un vairākus citus svarīgus produktu procesus. Šajā cilnē pārskatiet informāciju, lai nodrošinātu aktīvo procesu pilnīgumu.
 
-Šī cilne ietver statusa tabulas **Datu avotiem**, **Sistēmas procesiem** un **Datu sagatavošanai**. Katrā tabulā tiek izsekots uzdevuma **Nosaukums** un tā atbilstošā entītija, tā pēdējās izpildes **Statuss** un **Pēdējā atjaunināšana**.
+Šajā cilnē ir iekļautas tabulas ar statusu un dažādu procesu apstrādes informāciju. Katrā tabulā tiek izsekots uzdevuma **Nosaukums** un tā atbilstošā entītija, tā pēdējās izpildes **Statuss** un **Pēdējā atjaunināšana**.
 
 Skatīt detalizētu informāciju par pēdējām uzdevuma izpildes reizēm, atlasot tā nosaukumu.
 
@@ -40,7 +45,7 @@ Uzdevumiem/procesiem ir seši statusu tipi. Šie statusa tipi tiek rādīti arī
 - **Izlaistais:** uzdevums tika izlaists. Viens vai vairāki pakārtotie procesi, no kuriem atkarīgs šis uzdevums, neizdodas vai tiek izlaisti.
 - **Kļūme:** Uzdevuma apstrāde neizdevās.
 - **Atcelts:** Lietotājs apstrādi atcēla pirms tās pabeigšanas.
-- **Rindā:** Apstrāde ir rindā un sāksies pēc visu pakārtoto uzdevumu pabeigšanas. Papildinformāciju skatiet rakstā [Atsvaidzināšanas politikas](#refresh-policies).
+- **Rindā:** apstrāde ir iekļauta rindā, un tā tiks sākta, kad būs pabeigti visi augšupstraumēšanas uzdevumi. Papildinformāciju skatiet rakstā [Atsvaidzināšanas politikas](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Atsvaidzināšanas politikas
 
@@ -89,4 +94,17 @@ Atlasiet **Saglabāt**, lai apstiprinātu atlases.
 
 ## <a name="api-usage-tab"></a>API lietošanas cilne
 
-Detalizēta informācija par API reāllaika izmantošanu un informācija par to, kādi notikumi tika parādīti noteiktā laika diapazonā. Papildinformāciju skatiet [Reāllaika darbplūsmu lietošana](real-time-data-ingestion.md).
+Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri notikumi notika konkrētajā laika posmā. Laika periodu varat izvēlēties nolaižamajā izvēlnē **Atlasīt laika posmu**. 
+
+**API lietojumā** ir trīs sadaļas: 
+- **API izsaukumi** — diagramma, kas atlasītajā laika posmā vizualizē apkopoto izsaukumu skaitu uz API.
+
+- **Datu pārsūtīšana** — diagramma, kurā redzams datu daudzums, kas atlasītajā laika posmā tika pārsūtīts, izmantojot API.
+
+-  **Darbības** — tabula ar rindām katrai pieejamai API operācijai un detalizēta informācija par operāciju izmantošanu. Varat atlasīt operācijas nosaukumu, lai pārietu [uz API atsauci](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Darbībās, kurās tiek lietota [reāllaika datu iekļaušana](real-time-data-ingestion.md), ir poga ar binokļa simbolu, lai skatītu reāllaika API lietojumu. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.   
+   Lai izvēlētos, kā vislabāk sniegt reāllaika mijiedarbības, izmantojiet **Grupēt pēc** lodziņu rūtī **Reāllaika API lietojums**. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

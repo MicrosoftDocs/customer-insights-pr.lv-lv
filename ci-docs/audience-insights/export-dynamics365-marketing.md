@@ -1,20 +1,20 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Marketing
 description: Uzziniet, kā konfigurēt savienojumu ar Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643782"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269063"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Savienotājs ar Dynamics 365 Marketing (priekšskatījums)
 
@@ -24,7 +24,10 @@ Izmantojiet [segmentus](segments.md) kampaņu veidošanai un saziņai ar specifi
 
 ## <a name="prerequisite"></a>Priekšnosacījums
 
-Kontaktpersonu ieraksti [no Dynamics 365 Marketing, kas uzņemti Common Data Service](connect-power-query.md).
+- Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Marketing, programmā Dynamics 365 Marketing ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Marketing, izmantojot Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Eksportējot segmentus no auditorijas ieskatiem uz programmu Marketing, netiek veidoti jauni kontaktpersonu ieraksti. Kontaktpersonu ieraksti no programmas Marketing jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
 
 ## <a name="configure-the-connector-for-marketing"></a>Savienotāja konfigurēšana pakalpojumam Marketing
 
@@ -49,3 +52,6 @@ Kontaktpersonu ieraksti [no Dynamics 365 Marketing, kas uzņemti Common Data Ser
 ## <a name="export-the-data"></a>Datu eksportēšana
 
 Datus var [eksportēt pēc pieprasījuma](export-destinations.md). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

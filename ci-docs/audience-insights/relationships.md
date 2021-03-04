@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406366"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269890"
 ---
 # <a name="relationships-between-entities"></a>Relācijas starp entītijām
 
@@ -28,8 +28,8 @@ Atbilstības un sapludināšanas procesu laikā sistēmas relācijas tiek izveid
 > ![Relāciju izveide](media/relationships-entities-merge.png "Relāciju izveide")
 
 - Starp Klienta entītiju un Kontaktpersonas entītiju ir izveidota ***CustomerToContact* relācija**. Klienta entītija iegūst atslēgas lauku **Contact_contactId**, lai to saistītu ar kontaktpersonas entītijas atslēgas lauku **contactId**.
-- Starp Klienta entītiju un Uzņēmuma entītiju ir izveidota **_CustomerToAccount_ relācija**. Klienta entītija iegūst atslēgas lauku **Account_contactId**, lai to saistītu ar Uzņēmuma entītijas atslēgas lauku **accountId**.
-- Starp Klienta entītiju un WebAccount entītiju ir izveidota **_CustomerToWebAccount_ relācija**. Klienta entītija iegūst atslēgas lauku **WebAccount_webaccountId**, lai to saistītu ar WebAccount entītijas atslēgas lauku **webaccountId**.
+- Starp Klienta entītiju un Uzņēmuma entītiju ir izveidota ***CustomerToAccount* relācija**. Klienta entītija iegūst atslēgas lauku **Account_contactId**, lai to saistītu ar Uzņēmuma entītijas atslēgas lauku **accountId**.
+- Starp Klienta entītiju un WebAccount entītiju ir izveidota ***CustomerToWebAccount* relācija**. Klienta entītija iegūst atslēgas lauku **WebAccount_webaccountId**, lai to saistītu ar WebAccount entītijas atslēgas lauku **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Relācijas izveide
 
@@ -69,3 +69,6 @@ Lapā **Relācijas** definējiet pielāgotas relācijas. Katra relācija sastāv
 ## <a name="next-step"></a>Nākamā darbība
 
 Sistēmas un pielāgotas relācijas tiek izmantotas, lai izveidotu segmentus, pamatojoties uz vairākiem datu avotiem, kas vairs nav sadrumstaloti. Papildinformāciju skatiet rakstā [Segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

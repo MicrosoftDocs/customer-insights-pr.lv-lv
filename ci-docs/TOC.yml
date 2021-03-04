@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Jauni un atjaunināti līdzekļi
       href: audience-insights/whats-new-audience-insights.md
-    - name: Sākt darbu
+    - name: Izveidot jaunu vidi
+      href: audience-insights/home.md
+    - name: Lean moduļi
       items:
-        - name: Izveidot jaunu vidi
-          href: audience-insights/home.md
         - name: Datu uzņemšana
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Vienotais klienta profila izveide
@@ -44,7 +44,7 @@
           href: audience-insights/entities.md
     - name: Datu apvienošana
       items:
-        - name: Apvienošanas kopsavilkums
+        - name: Datu apvienošanas pārskats
           href: audience-insights/data-unification.md
         - name: Kartējiet entītijas un atribūtus
           href: audience-insights/map-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Ieskatu par segmentiem iegūšana
           href: audience-insights/segment-insights.md
+        - name: Skatīt ieteiktos segmentus
+          href: audience-insights/suggested-segments.md
         - name: Atrast līdzīgus klientus
           href: audience-insights/find-similar-customer-segments.md
         - name: Definējiet pasākumus un KPI
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Transakciju zudumu prognozes parauga ceļvedis
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Klienta ilgtermiņa vērtības prognozēšana (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Produktu ieteikumu prognoze
+          href: audience-insights/predict-product-recommendation.md
+        - name: Produktu ieteikumu prognozes rokasgrāmatas paraugs
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Pielāgotu algoritmiskās mācīšanās modeļu ieviešana
           href: audience-insights/custom-models.md
         - name: Eksperimenti ar Azure algoritmisko mācīšanos
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Eksportēšanas opcijas
       items:
-        - name: Eksportēšana galamērķu atklāšana
+        - name: Galamērķu eksportēšanas pārskats (priekšskatījums)
           href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
         - name: Azure BLOB krātuve
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: "Dynamics\_365 Customer Service (pievienojumprogramma)"
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Administrēšana
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Paplašināšana
       items:
+        - name: Tīmekļa datu integrēšana no iesaistes ieskatiem
+          href: audience-insights/integrate-engagement-insights.md
         - name: Entītiju shēmu pārskatīšana Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Darbs ar API
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Bezmaksas izmēģinājumversija
       href: 'https://pi.dynamics.com/'
-    - name: Ātrā sākšana
-      items:
-        - name: Quickstart publiskais priekšskatījums
-          href: engagement-insights/quickstart.md
     - name: Sākt darbu
       items:
         - name: Sākt darbu
@@ -223,4 +235,4 @@
     - name: Pakalpojuma ierobežojumi
       href: engagement-insights/quotas.md
 - name: Sazināties ar atbalsta dienestu
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'

@@ -1,7 +1,7 @@
 ---
 title: Sākumlapa rīkā auditorijas ieskati
 description: Sāciet lietotnes izpēti sākumlapā.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406350"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477050"
 ---
 # <a name="create-a-new-environment"></a>Izveidot jaunu vidi
 
@@ -29,6 +29,8 @@ Izmēģinājumam varat pierakstīties [izmēģinājuma pierakstīšanās lapā](
 
 1. Norādiet darba vai mācību e-pasta adresi, pastāstiet vairāk par sevi un atlasiet **Tālāk**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Dialogs, lai reģistrētos izmēģinājuma instancē":::
+
 1. Norādiet savas jaunās vides **nosaukumu**. 
 
 1. Atlasiet izmēģinājuma veidu.
@@ -41,34 +43,34 @@ Izmēģinājumam varat pierakstīties [izmēģinājuma pierakstīšanās lapā](
 
 Pēc vides izveides jūs redzēsit **Demonstrācijas** vidi, kura ļaus izpētīt programmu, izmantojot izdomātus datus. Varat mainīt parauga datus tā, lai tie atbilstu jūsu nozarei. Galvenē atlasiet ikonu **Iestatījumi** un atlasiet **Demonstrācijas iestatījumi**. Turklāt jūs varat arī mainīt vizuālo dizainu. 
 
-Lai strādātu ar saviem datiem, jūs [pārslēdzaties uz vidi](#change-between-environments), kuru izveidojāt pieteikšanās procesa laikā.
+Lai strādātu ar saviem datiem, jūs [pārslēdzaties uz vidi](#switch-environments), kuru izveidojāt pieteikšanās procesa laikā.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Izveidojiet jaunu ražošanas vai smilškastes vidi
 
-Vides galvenē atlasiet **Iestatījumu** ikonu un atlasiet **Jauna vide**.
+Savā vidē atlasiet **Vides** atlasītāju programmas galvene un atlasiet opciju **Jauns**.
 
-[Izmēģinājuma vides izveides laikā](#create-a-trial-environment) izpildies darbības. Atlasot **Papildu iestatījumus** jums piešķirs papildu opciju uzglabāt savus datus pašiem sazā Azure Data Lake. Lai nodibinātu savienojumu ar Azure Data Lake, norādiet uzņēmuma nosaukumu un uzņēmuma atslēgu. Dati pēc noklusējuma tiek glabāti Customer Insights pārvaldītā datu ezerā.
+[Izmēģinājuma vides izveides laikā](#create-a-trial-environment) izpildies darbības. Dati pēc noklusējuma tiek glabāti Customer Insights pārvaldītā datu ezerā. Atlasot **Papildu iestatījumus** jums piešķirs papildu opciju uzglabāt savus datus pašiem sazā Azure Data Lake. Lai nodibinātu savienojumu ar Azure Data Lake, norādiet uzņēmuma nosaukumu un uzņēmuma atslēgu. 
 
 > [!IMPORTANT]
 > Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsūtīti un glabāti attiecīgajam Azure krātuves kontam atbilstošajā ģeogrāfiskās atrašanās vietā, kas var atšķirties no vietas, kurā tiek glabāti Dynamics 365 Customer Insights. [Uzziniet vairāk Microsoft Trust Center.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Sākumlapas izpēte
 
-[Savai Customer Insights videi](https://home.ci.ai.dynamics.com/) varat piekļūt, izmantojot šādu vietrādi URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-**Sākuma** lapā ir sniegts pārskats par jūsu klientu bāzi un galvenajām metrikām, lai izsekotu sava biznesa statusu.
+Jūs varat [piekļūt auditorijas ieskatiem no programmas Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) sekojošajā URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+**Sākumlapa** parāda pārskatu par segmentiem, pasākumiem un bagātināšanas datiem (ja konfigurēts) pēc [kartēšanas](map-entities.md), [saskaņošanas](match-entities.md) un [apvienošanas](merge-entities.md) fāžu pabeigšanas.
 
 > [!div class="mx-imgBorder"] 
 > ![Ieskati sākumlapā](media/home-page-insights.png "Ieskati sākumlapā")
 
-Sadaļā **Nesen izmantotie segmenti** tiek rādītas klientu grupas, pamatojoties uz jūsu definētajiem demogrāfiskajiem, uzvedības vai transakciju atribūtiem. [Segmentu izveide](segments.md) palīdz uzlabot uzņēmuma darbības mērķi.
+Sadaļā **Nesen izmantotie segmenti** tiek rādītas klientu grupas, pamatojoties uz jūsu definētajiem demogrāfiskajiem, uzvedības vai transakciju atribūtiem. [Izveidojot segmentus](segments.md), varat grupēt klientu bāzi un labāk izvēlēties uzņēmējdarbības mērķauditoriju.
 
-**Nesen izmantotie mēri** rāda elementus ar [mēriem](measures.md). Šie mēri ir jūsu definētie izpildes pamatrādītāji (KPI). Piemēram, vidējā iespējamība zaudēt klientu vai klienta vidējais tiešsaistē pavadītais laiks.
+**Pēdējie pasākumi** parāda elementus ar jūsu definētajiem [izpildes pamatrādītājiem (KPI)](measures.md). Piemēram, klienta vidējā iespējamība vai vidējie tiešsaistes izdevumi vienam klientam.
 
-Sadaļā **Nesen izmantotie bagātinājumi** uzskaitīti nesen pabeigtās bagātinājumu izpildes rezultāti. Bagātinājumi pievieno informāciju jūsu klientu bāzei. Piemēram, izprotot intereses un zīmolus, kas viņiem simpatizē. Šo informāciju var atbloķēt, izmantojot [bagātināšanās](enrichment-microsoft-graph.md) iespējas pēc tādu fāžu pabeigšanas kā [kartēšana](map-entities.md)[atbilstība](match-entities.md) un [sapludināšana](merge-entities.md).
+Sadaļā **Nesen izmantotie bagātinājumi** uzskaitīti nesen pabeigtās bagātinājumu izpildes rezultāti. [Bagātinājumi](enrichment-hub.md) pievieno informāciju jūsu klientu bāzei. Piemēram, izprotot intereses un zīmolus, kas viņiem simpatizē.
 
-## <a name="change-between-environments"></a>Maiņa starp vidēm
+## <a name="switch-environments"></a>Pārslēgt vides
 
-Kad ir iestatīti un konfigurēti [datu avoti](data-sources.md), jūs vēlēsieties pārslēgties no demonstrācijas vides uz dzīvo vidi. Izmantojot ražošanas vidi, varat strādāt ar savu klientu datiem. Lai mainītu vides, lapas augšējā labajā stūrī atlasiet vadīklu **Vide**.
+Lai mainītu vides, lapas augšējā labajā stūrī atlasiet vadīklu **Vide**.
 
 > [!div class="mx-imgBorder"] 
 > ![Mainīt vidi](media/home-page-environment-switcher.png "Mainīt vidi")
@@ -78,3 +80,6 @@ Administratori var izveidot un pārvaldīt [vairākas vides](manage-environments
 ## <a name="next-step"></a>Nākamā darbība
 
 Lai skatītu savus ieskatus sākumlapā, vispirms ir [jāpievieno datu avoti](data-sources.md) un [jāapvieno](data-unification.md) jūsu dati, lai izveidotu klientu profilus.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

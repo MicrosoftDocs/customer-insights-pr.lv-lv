@@ -4,17 +4,17 @@ description: Izmantojiet Azure algoritmiskās mācības (klasiskais) modeļus pr
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669027"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270213"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Izmantojiet Azure algoritmiskās mācības studijas (klasiskais) modeļus programmā .
 
@@ -171,3 +171,6 @@ Visam [produkta ieteikuma eksperimentam var piekļūt Azure AI galerijā.](https
 Lai izmantotu šīs prognozes programmā Customer Insights, prognozes ir **jāeksportē** kopā ar klienta ID. [Eksportējiet tos uz to pašu Azure Blob krātuves vietu](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), kurā tiek eksportēti avota dati. Prognozējošo tīmekļa pakalpojumu var ieplānot tā, lai tas darbotos regulāri un atjauninātu rezultātus.
 
 Pielāgotajā modelī ģenerētos datus var izmantot, lai turpinātu klientu datu bagātināšanu. Papildinformācijai skatiet [Pielāgoti algoritmiskās mācīšanās modeļi](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

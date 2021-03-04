@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653989"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269845"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonementa zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
 
@@ -46,10 +46,9 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **DateOfBirth**: Datums
    - **CreatedOn**: Datums/Laiks/Josla
 
-   [!div class="mx-imgBorder"]
-   ![Pārveidot DoB par Datumu](media/ecommerce-dob-date.PNG "Pārveido dzimšanas datumu uz datumu")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pārveidojiet dzimšanas datumu uz datumu.":::
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
 
 1. Saglabājiet datu avotu.
 
@@ -67,7 +66,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **RewardsPoints**: Vesels skaitlis
    - **CreatedOn**: Datums/Laiks
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
 
 1. Saglabājiet datu avotu.
 
@@ -90,7 +89,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **Is_auto_renew**: Patiess/Aplams
    - **RecurringFrequencyInMonths**: Vesels skaitlis
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **SubscriptionHistory**.
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **SubscriptionHistory**.
 
 1. Saglabājiet datu avotu.
 
@@ -230,3 +229,6 @@ Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju
 Tagad jums ir segments, kas tiek dinamiski atjaunināts, kas identificē šā abonēšanas uzņēmuma augsta zudumu riska klientus.
 
 Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

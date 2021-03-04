@@ -1,20 +1,20 @@
 ---
 title: Power Apps savienotājs
 description: Savienošana ar Power Apps un Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406322"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268925"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps savienotājs (priekšskatījums)
 
@@ -31,7 +31,7 @@ Skatiet Power Apps dokumentāciju, lai uzzinātu, kā [programmai pievienot datu
 Pēc Customer Insights pievienošanas datu savienojumam varat Power Apps izvēlēties šādas entītijas:
 
 - Klients: lai izmantotu datus no [vienotā klienta profila](customer-profiles.md).
-- Vienotā klienta darbība: lai programmā parādītu [darbību laika skalu](activities.md) 
+- Vienotā darbība: lai parādītu [darbības laika skalu](activities.md) programmā.
 
 ## <a name="limitations"></a>Ierobežojumi
 
@@ -72,3 +72,6 @@ Piemēram, varat pievienot klientu profilus [galerijas vadīklai](https://docs.m
 1. Lai klientam tiktu parādīta vienota laika skala, pievienojiet elementu Galerija un rekvizītu Vienumi: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Piemērs: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

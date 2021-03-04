@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689184"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270289"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
@@ -83,6 +83,7 @@ Detalizēta informācija par šo API, ieskaitot parametrus un atbildes, ir atrod
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Reāllaika lietojuma izprašana, izmantojot telemetriju
 
-Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat [piekļūt reāllaika telemetrijai](system.md#api-usage-tab), atverot **Administrators** > **Sistēma** > **API lietojums**. Tabulā **Darbības** API darbību rindās, kas izmanto reāllaika metodes, ir poga, lai skatītu reāllaika API izmantošanu. Poga tiek vizualizēta ar tālskati. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.
+Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat piekļūt [reāllaika telemetrijai](system.md#api-usage-tab). 
 
-Lietojiet **Grupēt pēc** atlasītāju, lai izvēlētos, kā vislabāk attēlot reāllaika mijiedarbības laika skalā, sākot no pēdējām 24 stundām līdz pēdējām 30 dienām. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

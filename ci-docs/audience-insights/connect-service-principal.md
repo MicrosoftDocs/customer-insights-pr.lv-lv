@@ -1,20 +1,20 @@
 ---
 title: Savienojuma izveide ar Azure Data Lake Storage Gen2 kontu ar pakalpojuma primāro nosaukumu
-description: Izmantojiet Azure pakalpojuma primāro nosaukumu, lai savienotu auditorijas ieskatus ar savu datu ezeru, pievienojot to auditorijas ieskatiem.
-ms.date: 11/24/2020
+description: Izmantojiet Azure pakalpojuma primāro nosaukumu, lai savienotu auditorijas ieskatus ar savu data lake, pievienojot to auditorijas ieskatiem.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644097"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267731"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Savienojuma izveide ar Azure Data Lake Storage Gen2 kontu ar Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem
 
@@ -22,7 +22,9 @@ Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr 
 
 Varat izmantot pakalpojuma primāro nosaukumu, lai droši [pievienotu vai rediģētu Common Data Model kā datu avotu](connect-common-data-model.md) vai [izveidotu jaunu vai atjauninātu esošu vidi](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Lai izveidotu pakalpojuma primāro nosaukumu, jums ir nepieciešamas administratora atļaujas jūsu Azure abonementam.
+> [!IMPORTANT]
+> - Azure Data Lake Gen2 krātuves kontam, kas plāno izmantot pakalpojuma primāro nosaukumu, ir jābūt [iespējotai Hierarhiskai nosaukuma vietai (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Lai izveidotu pakalpojuma primāro nosaukumu, jums ir nepieciešamas administratora atļaujas jūsu Azure abonementam.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Izveidot Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem
 
@@ -83,7 +85,7 @@ Lai [glabātu datus par izvadiem](manage-environments.md) vai [izmantotu to kā 
 
 Izpildiet tālāk sniegtos norādījumus, lai sniegtu nepieciešamo informāciju par izvēlēto pieeju.
 
-### <a name="resounce-based-storage-account-connection"></a>Uz resursu balstīta krātuves konta savienojuma virkne
+### <a name="resource-based-storage-account-connection"></a>Uz resursu balstīta krātuves konta savienojuma virkne
 
 1. Atveriet [Azure administratora portālu](https://portal.azure.com), piesakieties savā abonementā un atveriet krātuves kontu.
 
@@ -108,7 +110,8 @@ Izpildiet tālāk sniegtos norādījumus, lai sniegtu nepieciešamo informāciju
 1. Pārskatiet **Abonements**, **Resursu grupa** un krātuves konta **Nosaukumu**, lai nodrošinātu, ka auditorijas ieskatos ir atlasītas pareizās vērtības.
 
 1. Izmantojot auditorijas ieskatus, varat izvēlēties vērtības vai atbilstošos laukus, pievienojot krātuves kontu.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Nokopējiet krātuves konta resursa ID vērtību.":::
    
 1. Turpiniet veikt atlikušās darbības auditorijas ieskatos, lai pievienotu krātuves kontu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

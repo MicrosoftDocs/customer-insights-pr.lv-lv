@@ -1,7 +1,7 @@
 ---
 title: Instalējiet un konfigurējiet klienta kartes pievienojumprogrammu
 description: Instalējiet un konfigurējiet klienta kartes pievienojumprogrammu programmai Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644052"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268053"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
@@ -28,7 +28,7 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 - Klientu profili [iegūti programmā Dynamics 365, izmantojot programmu Common Data Service](connect-power-query.md).
 - Klienta kartes pievienojumprogrammas lietotājiem ir jābūt [pievienotam kā lietotājiem](permissions.md) auditorijas ieskatiem.
 - [Konfigurētas meklēšanas un filtrēšanas iespējas](search-filter-index.md).
-- Demogrāfiskā kontrole: demogrāfiskie lauki, piemēram, vecums vai dzimums, ir pieejami vienotajā klienta profilā.
+- Demogrāfiskā kontrole: demogrāfiskie lauki (piemēram, vecums vai dzimums) ir pieejami vienotajā klienta profilā.
 - Bagātināšanas vadīkla: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem.
 - Intelekta kontrolēšana: Nepieciešami dati, kas ģenerēti, izmantojot Azure algoritmisko mācīšanos ([Prognozes](predictions.md) vai [Pielāgotus modeļus](custom-models.md))
 - Mērīt vadīklu: Nepieciešamas [konfigurētās mērvienības](measures.md).
@@ -92,10 +92,26 @@ Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
 
 1. Dialoglodziņā **Lauka rekvizīti** notīriet izvēles rūtiņu **Rādīt etiķeti veidlapā**.
 
-1. Vadīklai atlasiet opciju **Tīmeklis**. Bagātināšanas vadīklai atlasiet, kuru bagātināšanas veidu vēlaties rādīt, konfigurējot lauku **enrichmentType**. Katram bagātināšanas veidam ir jāpievieno atsevišķa bagātināšanas vadīkla.
+1. Vadīklai atlasiet opciju **Tīmeklis**. Bagātināšanas vadīklai atlasiet, kuru bagātināšanas veidu vēlaties rādīt, konfigurējot lauku **enrichmentType**. Katram bagātināšanas tipam pievienojiet atsevišķu bagātināšanas vadīklu.
 
 1. Atlasiet **Saglabāt** un **Publicēt**, lai publicētu atjaunināto kontaktpersonas veidlapu.
 
 1. Atveriet publicēto kontaktpersonas veidlapu. Tiek parādīta tikko pievienotā vadīkla. Iespējams, pirmajā lietošanas reizē būs jāpierakstās.
 
 1. Lai pielāgotu pielāgotajā vadīklā rādāmo informāciju, augšējā labajā stūrī atlasiet rediģēšanas pogu.
+
+## <a name="upgrade-customer-card-add-in"></a>Klienta kartes pievienojumprogrammas jaunināšana
+Klienta kartes pievienojumprogramma netiek automātiski jaunināta. Lai jauninātu uz jaunāko versiju, izpildiet šo procedūru programmā Dynamics 365, kurā ir instalēta pievienojumprogramma.
+
+1. Programmā Dynamics 365 dodieties uz **Iestatījumi** > **Pielāgošana** un atlasiet **Risinājumi**.
+
+1. Pievienojumprogrammu tabulā atrodiet **CustomerInsightsCustomerCard** un atlasiet rindu.
+
+1. Darbību joslā atlasiet **Lietot risinājuma jaunināšanu**.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Risinājuma jaunināšana Dynamics 365 programmu Pielāgošanas apgabalā":::
+
+1. Pēc jaunināšanas procesa sākšanas tiek rādīts ielādes rādītājs, līdz jaunināšana ir pabeigta. Ja tajā nav jaunākas versijas, jaunināšanai tiks rādīts kļūdas ziņojums.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Power Automate savienotājs | Microsoft Docs
 description: Izveidojiet plūsmas Microsoft Power Automate no Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406320"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268833"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate savienotājs (priekšskatījums)
 
@@ -22,7 +22,7 @@ Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā u
 
 ## <a name="power-automate-triggers"></a>Power Automate trigeri
 
-Var izmantot dažādus trigerus, kas ļauj izveidot plūsmas, lai automatizētu atkārtojošos uzdevumus, piemēram, paziņojumus vai papildu darbības. 
+Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana. 
 
 - Trigeris, kad neizdodas atsvaidzināt datu avotu. 
 - Trigeris, kad izdodas atsvaidzināt datu avotu.
@@ -36,14 +36,20 @@ Var izmantot dažādus trigerus, kas ļauj izveidot plūsmas, lai automatizētu 
 ## <a name="power-automate-actions"></a>Power Automate darbības
 Power Automate savienotājs nodrošina citas darbības, izņemot pieejamos trigerus. Papildinformāciju skatiet [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Power Automate plūsmas izveide no auditorijas ieskatiem
+## <a name="create-a-power-automate-flow"></a>Izveidot Power Automate plūsmu
 
-1. Sadaļā Auditorijas ieskati skatiet **Administrators** > **Sistēma**.
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
-1. Lapā **Sistēma** atlasiet cilni **Statuss**.
+1. Elementā **Power Automate** atlasiet **Iestatīt**.
 
-1. Sadaļā **Datu avoti** atlasiet **Plūsmas** un nolaižamajā sarakstā atlasiet **Izveidot plūsmu**.
-   > [!div class="mx-imgBorder"]
-   > ![Power Automate savienotājs, kas rāda plūsmas darbības izveidošanu](media/power-automate-connector-create-flow.png "Power Automate savienotājs, kas rāda plūsmas izveides darbību")
+1. Customer Insights savienotājs (priekšskatījums) atveras programmā Power Automate. **Pierakstieties risinājumā** Power Automate.
 
-1. Sadaļā Power Automate atlasiet vienu no pieejamajiem trigeriem, lai izveidotu vēlamo plūsmu. Ja veidojat savu pirmo plūsmu, vispirms ir jāautentificējas, izmantojot Power Automate savienotāju.
+1. Izvēlieties kādu no pieejamajiem trigeriem un pievienojiet jaunajai plūsmai papildu soļus. Papildinformāciju skatiet [Mākoņa plūsmas izveide programmā Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Tālāk ir parādīts, kā izmantot plūsmas: 
+- Publicē ziņojumu Microsoft Teams kanālā, ja neizdodas datu avota atsvaidzināšana. 
+- Nosūtiet e-pasta ziņojumu datu īpašniekiem, kad tiek pārsvītrota segmenta sliekšņa vērtība.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

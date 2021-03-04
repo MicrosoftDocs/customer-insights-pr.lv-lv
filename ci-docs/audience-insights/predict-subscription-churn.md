@@ -5,16 +5,16 @@ ms.date: 08/19/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 03178fc1bfe611b1b0ced08bbbef876035875825
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c12adab2e4573b1315d74f2111cf13b9f4ee6045
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643737"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268373"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
 
@@ -120,8 +120,8 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
         - **Atsvaidzināšana:** prognoze šobrīd darbojas apstrādes "rezultātu" posmā, lai iegūtu rezultātus, kas ieplūdīs izvades entītijā.
         - **Neizdevās:** prognozēšana nav izdevusies. Lai iegūtu detalizētu informāciju, atlasiet **Žurnāli**.
         - **Izdevās:** prognozēšana ir izdevusies. Lai pārskatītu prognozi, zem vertikālajām elipsēm atlasiet **Skatīt**
-   - **Rediģēts:** datums, kad tika mainīta prognozes konfigurācija.
-   - **Pēdējā atsvaidzināšana:** datums, kad atsvaidzinātais rezultāts ir redzams izvades entītijā.
+   - **Rediģēts:** Datums, kad tika mainīta prognozes konfigurācija.
+   - **Pēdējā atsvaidzināšana:** Datums, kad atsvaidzinātais rezultāts ir redzams izvades entītijā.
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurā vēlaties pārskatīt rezultātus, un atlasiet **Skatīt**.
    > [!div class="mx-imgBorder"]
    > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu](media/subscription-churn-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
@@ -164,3 +164,6 @@ Prognozes tiks automātiski atsvaidzinātas ar vienu un to pašu [grafiku, ko j�
 
 > [!NOTE]
 > Dzēšot prognozi, tiks noņemta tās izvades entītija.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644412"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268327"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -96,6 +96,8 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
 1. Ja vēlaties, atlasiet **Pievienot datus** **Klientu darbībām**. Izvēlieties entītiju, kas sniedz informāciju par klientu darbībām, kā aprakstīts priekšnosacījumos.
 
 1. Kartējiet semantiskos laukus uz atribūtiem jūsu klientu darbības entītijā un atlasiet **Tālāk**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Kartējiet klientu laukus transakciju datiem.":::
 
 1. Atlasiet darbības tipu, kas atbilst konfigurētā klienta darbības tipam. Atlasiet vienumu **Izveidot jaunu** un izvēlieties pieejamu darbības tipu vai izveidojiet jaunu tipu.
 
@@ -185,3 +187,6 @@ Dzēšot prognozi, tiek noņemta arī tās izvades entītija.
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties dzēst.
 
 1. Atlasiet **Dzēst**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

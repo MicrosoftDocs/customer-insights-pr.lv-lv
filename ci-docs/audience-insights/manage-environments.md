@@ -1,20 +1,20 @@
 ---
 title: Vižu izveide un pārvaldība
 description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644142"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270121"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
@@ -46,9 +46,9 @@ Pastāv divi veidi, ka izveidot jaunu vidi. Varat norādīt pilnīgi jaunu konfi
 
 Lai izveidotu vidi:
 
-1. Lietotnes galvenē atlasiet simbolu **Iestatījumi**.
+1. Programmas galvenē atlasiet **Vides** atlasītāju.
 
-1. Atlasiet **Jauna vide**.
+1. Atlasiet **Jauns**.
 
    > [!div class="mx-imgBorder"]
    > ![Vides iestatījumi](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Lai izveidotu vidi:
 
    - Azure Data Lake Storage Gen2 iespējai varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). **Konteinera** nosaukumu nevar mainīt, un tas būs "customerinsights".
    
-   - Ja vēlaties izmantot [prognozes](predictions.md), ievadiet Common Data Service instances URL **Servera adreses** laukā sadaļā **Lietot prognozes**.
+   - Ja vēlaties lietot [prognozes](predictions.md) vai konfigurēt datu kopīgošanu ar lietojumprogrammām un risinājumiem, pamatojoties uz Microsoft Dataverse, nodrošiniet Microsoft Dataverse vides URL sadaļā **Konfigurēt datu kopīgošanu ar Microsoft Dataverse un iespējojiet papildu iespējas**. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - Datu kopīgošana ar Microsoft Dataverse Managed Data Lake pašlaik netiek atbalstīta, saglabājot visus savus datus jūsu Azure Data Lake Storage.
+     > - [Trūkstošo vērtību prognoze entītijā](predictions.md) pašlaik netiek atbalstīta, iespējojot datu kopīgošanu ar Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Palaižot procesus, piemēram, datu uzņemšanas vai segmenta izveidi, tiek izveidotas atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un model.json faili tiks izveidoti un pievienoti attiecīgajām apakšmapēm, pamatojoties uz jūsu palaisto procesu.
 
@@ -86,7 +93,7 @@ Lai izveidotu vidi:
 Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 
 - Līdzekļu konfigurācija
-- Inegsted/importētie datu avoti
+- Ievadītie/importētie datu avoti
 - Datu apvienošanas (kartējums, atbilstība, sapludināšana) konfigurācija
 - Segmenti
 - Mēri
@@ -120,11 +127,11 @@ Kad datu unificēšana ir pabeigta, dodieties uz **Pasākumi** un **Segmenti**, 
 
 Jūs varat rediģēt dažas esošās vides detaļas.
 
-1. Dodieties uz **Administrators** > **Sistēma** > **Par**.
+1.  Programmas galvenē atlasiet **Vides** atlasītāju.
 
-2. Atlasiet **Rediģēt**.
+2.  Atlasiet **Rediģēt** ikonu.
 
-3. Varat atjaunināt vides **Parādāmo nosaukumu**, taču **Reģionu** vai **Veidu** mainīt nevar.
+3. Lodziņā **Rediģēt vidi** var atjaunināt vides **Parādāmo nosaukumu**, taču nevar mainīt lauku **Reģions** vai **Tips**.
 
 4. Ja vide ir konfigurēta saglabāt datus pakalpojumā Azure Data Lake Storage Gen2, jūs varat atjaunināt **Konta atslēgu**. Taču nevar mainīt **Konta nosaukumu** vai **Konteinera** nosaukumu.
 
@@ -132,19 +139,27 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 
 ## <a name="reset-an-existing-environment"></a>Esošās vides atiestatīšana
 
-Vidi var atiestatīt tukšā stāvoklī, ja vēlaties dzēst visas konfigurācijas un noņemt uzņemtos datus.
+Kā administrators jūs varat atiestatīt vidi tukšā stāvoklī, ja vēlaties dzēst visas konfigurācijas un noņemt uzņemtos datus.
 
-1.  Dodieties uz **Administrators** > **Sistēma** > **Par**.
+1.  Programmas galvenē atlasiet **Vides** atlasītāju. 
 
-2.  Atlasiet **Atiestatīt**. 
+2.  Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet daudzpunkti **...**. 
 
-3.  Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Atiestatīt**.
+3. Izvēlieties opciju **Atiestatīt**. 
+
+4.  Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Atiestatīt**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Esošas vides dzēšana (pieejama tikai administratoriem)
+
+Jūs kā administrators varat dzēst jūsu administrētu vidi.
+
+1.  Programmas galvenē atlasiet **Vides** atlasītāju.
+
+2.  Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet daudzpunkti **...**. 
+
+3. Izvēlieties opciju **Dzēst**. 
+
+4.  Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Dzēst**.
 
 
-## <a name="delete-an-existing-environment"></a>Esošas vides dzēšana
-
-1. Dodieties uz **Administrators** > **Sistēma** > **Par**.
-
-1. Atlasiet **Dzēst**.
-
-1. Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Dzēst**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

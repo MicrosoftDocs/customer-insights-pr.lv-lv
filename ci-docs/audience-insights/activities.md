@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667238"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267441"
 ---
 # <a name="customer-activities"></a>Klientu darbības
 
@@ -44,13 +44,13 @@ Datu avoti ietver entītijas ar transakciju un darbību datiem no vairākiem dat
 
 1. Sadaļā **Relācijas iestatīšana** konfigurējiet detalizēto informāciju, lai savienotu savus darbību datus ar atbilstošo klientu.
 
-   > [!div class="mx-imgBorder"]
-   > ![Entītiju relācijas definēšana](media/activities-entities-define.png "Entītiju relācijas definēšana")
-
     - **Darbības entītijas lauks**: Atlasiet lauku savā darbības entītijā, kurš tiks izmantots relācijas izveidei ar citu entītiju.
     - **Klienta entītija**: Atlasiet atbilstošo avota klienta entītiju, ar kuru jūsu darbības entītijai tiks izveidota relācija. Var saistīt tikai tās avota klienta entītijas, kuras tiek izmantotas datu apvienošanas procesā.
     - **Klienta entītijas lauks**: Šajā laukā ir norādīta avota klienta entītijas primārā atslēga, kas atlasīta kartēšanas procesā. Šis primārās atslēgas lauks avota klienta entītijā tiek izmantots, lai izveidotu relāciju ar darbības entītiju.
     - **Nosaukums**: Ja relācija starp šo darbības entītiju un atlasīto avota klienta entītiju jau pastāv, relācijas nosaukums būs tikai lasāmā režīmā. Ja šādas relācijas nav, tiek izveidota jauna relācija ar šeit norādīto nosaukumu.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Entītiju relācijas definēšana](media/activities-entities-define.png "Entītiju relācijas definēšana")
 
 1. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
 
@@ -82,3 +82,6 @@ Datu avoti ietver entītijas ar transakciju un darbību datiem no vairākiem dat
 3. Atlasiet ikonu **Dzēst**.
 
 4. Apstipriniet dzēšanu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643962"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269707"
 ---
-# <a name="overview-about-data-sources"></a>Pārskats par datu avotiem
+# <a name="data-sources-overview"></a>Datu avotu pārskats
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Jūs redzēsit katra uzņemtā datu avota nosaukumu, tā statusu un pēdējo rei
 |Notiek atsvaidzināšana    |Notiek datu uzņemšana. Šo darbību varat atcelt, kolonnā **Darbības** atlasot **Apturēt atsvaidzināšanu**. Apturot datu avota atsvaidzināšanu, tas atkal kļūs tāds pats kā pēdējās atsvaidzināšanas brīdī.       |
 |Neizdevās     |Veicot datu uzņemšanu, radās kļūdas.         |
 
-Atlasiet **Atsvaidzināt statusu**, lai skatītu detalizētāku informāciju par atsvaidzināšanas statusu, ieskaitot kļūdas detaļas un pakārtotā procesa atjauninājumus.
+Atlasiet vērtību jebkura datu avoti kolonnā **Statuss**, lai pārskatītu papildinformāciju. Rūtī **Detalizēta informācija** izvērsiet **Datu avoti**. Atlasiet **Skatīt detalizētu informāciju** papildu informācijai par atsvaidzināšanas statusu, ieskaitot kļūdas detaļas un pakārtotā procesa atjauninājumus.
 
 Datu ielāde var ilgt kādu laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos datus var pārskatīt no lapas **Entītijas**. Papildinformāciju skatiet rakstā [Entītijas](entities.md).
 
@@ -76,3 +76,6 @@ Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 2. Atlasiet vertikālo daudzpunkti blakus noņemamajam datu avotam un nolaižamajā izvēlnē atlasiet **Dzēst**.
 
 3. Apstipriniet dzēšanu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

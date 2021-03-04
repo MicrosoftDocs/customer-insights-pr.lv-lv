@@ -4,17 +4,17 @@ description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data 
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643467"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267869"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 
@@ -38,17 +38,25 @@ ms.locfileid: "4643467"
 
 1. Atlasiet **Pievienot datu avotu**.
 
-1. Atlasiet **Izveidot savienojumu ar Common Data Model mapi**, ievadiet datu avota **Nosaukumu** un pēc tam atlasiet **Tālāk**.
+1. Atlasiet **Izveidot savienojumu ar Common Data Model mapi**, ievadiet datu avota **Nosaukumu** un pēc tam atlasiet **Tālāk**. Nosaukuma vadlīnijas: 
+   - Sāciet ar burtu.
+   - Izmantojiet tikai burtus un ciparus. Speciālās rakstzīmes un atstarpes nav atļautas.
+   - Izmantojiet no 3 līdz 64 rakstzīmēm.
 
 1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Ievadiet informāciju par **Konteineru** un atlasiet **Tālāk**.
    > [!div class="mx-imgBorder"]
-   > ![Dialoglodziņš, lai ievadītu savienojuma detaļas Azure Data Lake](media/enter-new-storage-details.png)
-
-1. **Atlasiet Common Data Model mapi** dialoglodziņā atlasiet model.json failu, no kura importēt datus, un atlasiet **Tālāk**.
+   > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Jebkurš model.json fails, kas saistīts ar citu datu avotu vidē, netiks rādīts sarakstā.
+   > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:
+   >  - Krātuves Blob datu lasītājs
+   >  - Krātuves Blob datu īpašnieks
+   >  - Krātuves Blob datu ieguldītājs
 
-1. Atlasītajā model.json failā tiks parādīts pieejamo entītiju saraksts. Jūs varat apskatīt un atlasīt no pieejamo entītiju saraksta un atlasīt **Saglabāt**. Jaunākie dati no atlasītajām entītijām tiks eksportēti katru dienu.
+1. **Atlasiet Common Data Model mapi** dialoglodziņā atlasiet model.json vai manifest.json failu, no kura importēt datus, un atlasiet **Tālāk**.
+   > [!NOTE]
+   > Jebkurš model.json vai manifest.json fails, kas saistīts ar citu datu avotu vidē, netiks rādīts sarakstā.
+
+1. Atlasītajā model.json vai manifest.json failā tiks parādīts pieejamo entītiju saraksts. Jūs varat apskatīt un atlasīt no pieejamo entītiju saraksta un atlasīt **Saglabāt**. Jaunākie dati no atlasītajām entītijām tiks eksportēti katru dienu.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, kurā redzams entītiju saraksts no model.json faila](media/review-entities.png)
 
@@ -59,11 +67,11 @@ ms.locfileid: "4643467"
 9. Kad esat saglabājis savas atlases, tiek atvērta lapa **Datu avoti**. Tagad jums būtu jāredz mapes Common Data Model savienojums kā datu avots.
 
 > [!NOTE]
-> model.json failu var saistīt tikai ar vienu datu avotu tajā pašā vidē. Tomēr tādu pašu model.json failu var izmantot datu avotiem, kas atrodas vairākās vidēs.
+> model.json vai manifest.json failu var saistīt tikai ar vienu datu avotu tajā pašā vidē. Tomēr tādu pašu model.json vai manifest.json failu var izmantot datu avotiem, kas atrodas vairākās vidēs.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Common Data Model mapes datu avota rediģēšana
 
-Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Common Data Model mape. Varat mainīt arī model.json failu. Lai izveidotu savienojumu ar citu konteineru no krātuves konta vai mainītu konta nosaukumu, [izveidojiet jaunu datu avota savienojumu](#connect-to-a-common-data-model-folder).
+Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Common Data Model mape. Varat mainīt arī model.json vai manifest.json failu. Lai izveidotu savienojumu ar citu konteineru no krātuves konta vai mainītu konta nosaukumu, [izveidojiet jaunu datu avota savienojumu](#connect-to-a-common-data-model-folder).
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
 
@@ -77,13 +85,24 @@ Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Co
 
 5. Ja vēlaties, varat atjaunināt no uzņēmuma atslēgas savienojuma uz resursu vai abonementa bāzes savienojumu. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Atjauninot savienojumu, nevar mainīt **Konteinera** informāciju.
    > [!div class="mx-imgBorder"]
-   > ![Dialoglodziņš, lai ievadītu savienojuma detaļas Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Pēc izvēles izvēlieties citu model.json failu ar citu entītiju kopu no konteinera.
+   > ![Dialoglodziņš, lai ievadītu Azure Data Lake savienojuma informāciju esošā krātuves kontā](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:
+   >  - Krātuves Blob datu lasītājs
+   >  - Krātuves Blob datu īpašnieks
+   >  - Krātuves Blob datu ieguldītājs
+
+
+6. Pēc izvēles izvēlieties citu model.json vai manifest.json failu ar citu entītiju kopu no konteinera.
 
 7. Ja vēlaties, varat atlasīt papildu entītijas, ko iegūt. Ja nav atkarību, varat noņemt arī jau atlasītās entītijas.
 
    > [!IMPORTANT]
-   > Ja esošajā model.json failā un entītiju kopā ir atkarības, tiks parādīts kļūdas ziņojums un nevarēs atlasīt citu model.json failu. Pirms maināt model.json failu, noņemiet šīs atkarības vai izveidojiet jaunu datu avotu ar model.json failu, kuru vēlaties izmantot, lai izvairītos no atkarību noņemšanas.
+   > Ja esošajā model.json vai manifest.json failā un entītiju kopā ir atkarības, tiks parādīts kļūdas ziņojums un nevarēs atlasīt citu model.json vai manifest.json failu. Pirms maināt model.json vai manifest.json failu, noņemiet šīs atkarības vai izveidojiet jaunu datu avotu ar model.json vai manifest.json failu, kuru vēlaties izmantot, lai izvairītos no atkarību noņemšanas.
 
 8. Ja vēlaties, varat atlasīt papildu atribūtus vai entītijas, lai iespējotu datu profilēšanu vai atspējotu jau atlasītos.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643602"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269799"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Transakciju zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
 
@@ -49,7 +49,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    [!div class="mx-imgBorder"]
    ![Pārveidot DoB par Datumu](media/ecommerce-dob-date.PNG "Pārveido dzimšanas datumu uz datumu")
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
 
 1. Saglabājiet datu avotu.
 
@@ -66,7 +66,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **PurchasedOn**: Datums/Laiks
    - **TotalPrice**: Valūta
    
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommercePurchases**.
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommercePurchases**.
 
 1. Saglabājiet datu avotu.
 
@@ -84,7 +84,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **RewardsPoints**: Vesels skaitlis
    - **CreatedOn**: Datums/Laiks
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
+1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
 
 1. Saglabājiet datu avotu.
 
@@ -166,7 +166,7 @@ Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudum
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Atlasiet modeļa sviras Prognozes logs un Zuduma definīcija.":::
 
-1. Atlasiet **Pirkuma vēsturi (obligāti)** un atlasiet **Pievienot datus** abonementu vēsturei.
+1. Atlasiet **Pirkuma vēsturi (obligāti)** un atlasiet **Pievienot datus** pirkumu vēsturei.
 
 1. Pievienojiet **eCommercePurchases : e-komercija** entītiju un kartējiet laukus no e-komercijas uz atbilstošiem modelī vajadzīgajiem laukiem.
 
@@ -204,3 +204,6 @@ Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju
 Tagad jums ir segments, kas tiek dinamiski atjaunināts, kas identificē šā abonēšanas uzņēmuma augsta zudumu riska klientus.
 
 Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
