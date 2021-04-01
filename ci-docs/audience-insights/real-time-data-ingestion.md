@@ -2,19 +2,19 @@
 title: Reāllaika datu uzņemšana un ierobežojumi
 description: Vispārīga informācija par reāllaika iespējām rīkā auditorijas ieskati.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270289"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598578"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
@@ -54,7 +54,7 @@ Reāllaika API ļauj publicēt jaunu darbību no avota sistēmas (atsevišķa av
 
 Ir divi paņēmieni, kā izveidot savienojumu ar reāllaika API.
 
-- [netieši](#connect-via-the-dynamics-365-customer-insights-connector), izmantojot [Dynamics 365 Customer Insights savienotāju](https://docs.microsoft.com/connectors/customerinsights/)
+- [netieši](#connect-via-the-dynamics-365-customer-insights-connector), izmantojot [Dynamics 365 Customer Insights savienotāju](/connectors/customerinsights/)
 - [tieši](#connect-directly-to-the-real-time-api), ar kodu
 
 Abiem veidiem ir šādi priekšnosacījumi:
@@ -66,13 +66,13 @@ Abiem veidiem ir šādi priekšnosacījumi:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Pieslēdzieties, izmantojot Dynamics 365 Customer Insights savienotāju
 
-Reāllaika API var uzņemt datus no īpaša Power Platform savienotāja, [Dynamics 365 Customer Insights savienotāja ](https://docs.microsoft.com/connectors/customerinsights/) bez vajadzības rakstīt un izvietot kodu.    
-Savienotājs var veikt tādas pašas reāllaika darbības kā API. Premium savienotājiem ir nepieciešama derīga licence. Papildinformāciju skatiet sadaļā [Power Apps un Power Automate licencēšanas BUJ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Reāllaika API var uzņemt datus no īpaša Power Platform savienotāja, [Dynamics 365 Customer Insights savienotāja ](/connectors/customerinsights/) bez vajadzības rakstīt un izvietot kodu.    
+Savienotājs var veikt tādas pašas reāllaika darbības kā API. Premium savienotājiem ir nepieciešama derīga licence. Papildinformāciju skatiet sadaļā [Power Apps un Power Automate licencēšanas BUJ](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps un/vai Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps un/vai Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Papildinformāciju par plūsmu izveidi skatiet [Power Automate dokumentācijā](https://docs.microsoft.com/power-automate/).
+Papildinformāciju par plūsmu izveidi skatiet [Power Automate dokumentācijā](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Tieša savienojuma izveide ar reāllaika API
 

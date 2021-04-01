@@ -2,19 +2,19 @@
 title: Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 description: Auditorijas ieskatu pārskats Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477004"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598639"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 
@@ -25,7 +25,7 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
 - **Likvidēt datu tvertnes un apvienot klientu datus**
 
   - Ērti izveidot datu savienojumu un apvienot tos, nodrošinot transakciju, novērojumu un uzvedības datus populāros [datu avotos, izmantojot iebūvētos savienotājus](data-sources.md).
-  - Gudri transformēt klientu datus — izveidojiet vienotus klientu profilus, kas atbilst [Kopējam datu modelim](https://docs.microsoft.com/common-data-model/). Atrisināt klientu identitātes ar AI/ML balstītiem ieteikumiem.
+  - Gudri transformēt klientu datus — izveidojiet vienotus klientu profilus, kas atbilst [Kopējam datu modelim](/common-data-model/). Atrisināt klientu identitātes ar AI/ML balstītiem ieteikumiem.
 
 - **Bagātināt ar auditorijas informāciju, kas iekļauta programmā Microsoft Graph**
 
@@ -42,7 +42,7 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
 - **Datu analītiķi/administratori:**
 
   - Piekļuve bagātīgai savienotāju kolekcijai, lai uzņemtu visus jūsu klientu datus.
-  - Iespēja apvienot klientu datus un pārveidot to par [Kopējā datu modeļa](https://docs.microsoft.com/common-data-model/) formātu.
+  - Iespēja apvienot klientu datus un pārveidot to par [Kopējā datu modeļa](/common-data-model/) formātu.
   - Bagātiniet klientu informāciju ar ieskatiem par auditorijas informāciju, kas iekļauta programmā Microsoft Graph, piemēram, zīmolu saistības un intereses.
   - "Klikšķinot, nevis kodējot" konfigurācija un atkļūdošanas pieredze palīdzēt ērti konfigurēt auditorijas ieskatus un identificēt iespējamās problēmas.
   - Attīriet un standartizējiet klientu datus dažādos avotos, izmantojot ar MI darbinātus ieteikumus.  

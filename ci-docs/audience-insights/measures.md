@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269937"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654741"
 ---
 # <a name="define-and-manage-measures"></a>Definējiet un pārvaldiet mērus
 
@@ -72,8 +72,8 @@ Izmantojiet pasākumu veidotāju, kas tiek plānots biznesa aktivitātēm, vaic�
    1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt pasākumus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa pasākumus*. Ja vēlaties izveidot *uzņēmuma līmeņa pasākumus*, varat noņemt noklusējuma dimensiju.
    1. Atlasiet vienumu **Pabeigts**, lai pasākumam pievienotu dimensijas.
 
-1. Ja starp kartēto datu entītiju un Klienta entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Pasākumu rezultāti var atšķirties atkarībā no atlasītā ceļa.
-   1. Atlasiet **Datu preferences** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai.
+1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Pasākumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
+   1. Atlasiet **Datu preferences** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
    1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Atlasiet entītijas ceļu pasākumam.":::
