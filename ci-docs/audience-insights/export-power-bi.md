@@ -2,19 +2,19 @@
 title: Power BI savienotājs
 description: Uzziniet, kā izmantot Dynamics 365 Customer Insights savienotāju pakalpojumā Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477097"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596048"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI savienotājs (priekšskatījums)
 
@@ -23,7 +23,7 @@ Izveidojiet vizualizācijas saviem datiem, izmantojot līdzekli Power BI Desktop
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Jums ir vienotie klientu profili.
-- Jūsu datorā ir instalēta jaunākā [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) versija. [Papildinformācija par Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Jaunākā [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) versija ir instalēta jūsu datorā. [Papildinformācija par Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Power BI savienotāja konfigurēšana
 
@@ -47,7 +47,7 @@ Izveidojiet vizualizācijas saviem datiem, izmantojot līdzekli Power BI Desktop
 
 ## <a name="large-data-sets"></a>Lielas datu kopas
 
-Customer Insights savienotājs Power BI ir paredzēts darbam ar datu kopām, kurās ir līdz 1 000 000 klientu profilu. Lielāku datu kopu importēšana var strādāt, bet tai ir nepieciešams ilgs laiks. Turklāt process var tikt pārtraukts, jo Power BI pastāv ierobežojumi. Papildinformāciju skatiet [Power BI: ieteikumi lielām datu kopām](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Customer Insights savienotājs Power BI ir paredzēts darbam ar datu kopām, kurās ir līdz 1 000 000 klientu profilu. Lielāku datu kopu importēšana var strādāt, bet tai ir nepieciešams ilgs laiks. Turklāt process var tikt pārtraukts, jo Power BI pastāv ierobežojumi. Papildinformāciju skatiet [Power BI: ieteikumi lielām datu kopām](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Darbs ar datu apakškopu
 
@@ -70,4 +70,3 @@ Varat identificēt un noņemt dublicētās attiecības.
 Pēc dublicēto attiecību noņemšanas mēģiniet vēlreiz konfigurēt Power BI savienotāju. Videi tagad ir jābūt pieejamai.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

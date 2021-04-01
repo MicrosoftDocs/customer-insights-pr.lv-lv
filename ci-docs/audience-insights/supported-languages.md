@@ -1,32 +1,32 @@
 ---
 title: Atbalstītās valodas auditorijas ieskatiem
 description: Izprotiet un konfigurējiet valodas atbalstu.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268189"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595481"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Atbalstītās valodas auditorijas ieskatu iespējām
 
-Dynamics 365 Customer Insights atbalsta vairākas valodas auditorijas ieskatu iespējām. Šajā tēmā ir norādītas pieejamās valodas un sniegts atbalsts to mainīšanai, kā arī nodrošināts pārskats par to, kāds saturs tiek tulkots.
+Auditorijas ieskati programmai Dynamics 365 Customer Insights tiek tulkoti daudzās valodās. Sarakstā zemāk ir pieejamas valodas un informācija par to, kas ir tulkots. Var uzzināt arī papildinformāciju par valodas iestatījumu maiņu. 
 
 ## <a name="languages"></a>Valodas
 
 | Valodas nosaukums (angļu)|  Valodas nosaukums (dzimtā valoda) |
 | ------------- | ------------- |
 | Basku | euskara |
-| Bulgāru | Български |
-| Katalāņu | català |
+| Bulgāru | български |
+| Kataloniešu | català |
 | Ķīniešu (vienkāršotā) | 中文 (简体) |
 | Ķīniešu (tradicionālā) | 中文 (繁體) |
 | Horvātu | hrvatski |
@@ -42,20 +42,20 @@ Dynamics 365 Customer Insights atbalsta vairākas valodas auditorijas ieskatu ie
 | Grieķu | Ελληνικά |
 | Hindi | हिंदी |
 | Ungāru | magyar |
-| Indonēziešu | Bahasa Indonesia |
-| Itāliešu | italiano |
+| Indonēziešu | Indonēzija |
+| Itāļu | italiano |
 | Japāņu | 日本語 |
-| Kazahu | Қазақ |
+| Kazahu | қазақ тілі |
 | Korejiešu | 한국어 |
 | Latviešu | latviešu |
 | Lietuviešu | lietuvių |
-| Malajiešu | Bahasa Melayu |
-| Norvēģu (bukmols) | norsk (bokmål) |
-| Poļu | Polski |
+| Malajiešu | Melayu |
+| Norvēģu (bukmols) | norsk bokmål |
+| Poļu | polski |
 | Portugāļu (Brazīlija) | português |
 | Portugāļu (Portugāle) | português |
 | Rumāņu | română |
-| Krievu | Русский |
+| Krievu | pусский |
 | Serbu (kirilica) | српски |
 | Serbu (latīņu alfabēts) | srpski |
 | Slovāku | slovenčina |

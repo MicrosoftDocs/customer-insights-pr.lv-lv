@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267915"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597428"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Izmantojiet Azure algoritmiskās mācības modeļus.
 
@@ -29,9 +29,9 @@ Vienotie dati Dynamics 365 Customer Insights ir avots, kas paredzēts algoritmis
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Iestatīt Azure algoritmiskās mācīšanās darbvietu
 
-1. Skatiet sadaļu [Azure algoritmiskās mācīšanās darbvietas izveide](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) dažādām darbvietas izveides opcijām. Lai nodrošinātu vislabākos rezultātus, izveidojiet darbvietu Azure reģionā, kas ģeogrāfiski ir vistuvāk jūsu Customer Insights videi.
+1. Skatiet sadaļu [Azure algoritmiskās mācīšanās darbvietas izveide](/azure/machine-learning/concept-workspace#-create-a-workspace) dažādām darbvietas izveides opcijām. Lai nodrošinātu vislabākos rezultātus, izveidojiet darbvietu Azure reģionā, kas ģeogrāfiski ir vistuvāk jūsu Customer Insights videi.
 
-1. Piekļūstiet darbvietai, lietojot [Azure algoritmiskās mācīšanās studiju](https://ml.azure.com/). Pastāv vairāki [veidi, kā mijiedarboties](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) ar darbvietu.
+1. Piekļūstiet darbvietai, lietojot [Azure algoritmiskās mācīšanās studiju](https://ml.azure.com/). Pastāv vairāki [veidi, kā mijiedarboties](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) ar darbvietu.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Darbs ar Azure algoritmiskās mācīšanās noformētāju
 
@@ -39,13 +39,13 @@ Azure algoritmiskās mācīšanās noformētājs nodrošina vizuālu pamatni, ku
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Darbs ar Azure algoritmiskās mācīšanās noformētāju SDK
 
-Datu zinātnieki un AI izstrādātāji izmanto [Azure algoritmiskās mācīšanās SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true), lai būvētu algoritmiskās mācīšanās darbplūsmas. Pašlaik modeļus, kas ir apmācīti, izmantojot SDK, nevar tieši integrēt ar Customer Insights. Paketes izvedumkonveijers, kas patērē konkrēto modeli, ir nepieciešams integrācijai ar Customer Insights.
+Datu zinātnieki un AI izstrādātāji izmanto [Azure algoritmiskās mācīšanās SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py), lai būvētu algoritmiskās mācīšanās darbplūsmas. Pašlaik modeļus, kas ir apmācīti, izmantojot SDK, nevar tieši integrēt ar Customer Insights. Paketes izvedumkonveijers, kas patērē konkrēto modeli, ir nepieciešams integrācijai ar Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Paketes konveijeru prasības integrēšanai ar Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurācijas datu kopa
 
-Jums ir nepieciešams izveidot datu kopas, lai izmantotu entītijas datus no Customer Insights uz jūsu paketes izvedumkonveijeru. Šīm datu kopām ir jābūt reģistrētām darbvietā. Pašlaik tiek atbalstīti tikai [tabulu datu kopas](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formātā. Datu kopām, kas atbilst entītiju datiem, ir jābūt iedalītām pēc parametriem kā konveijera parametram.
+Jums ir nepieciešams izveidot datu kopas, lai izmantotu entītijas datus no Customer Insights uz jūsu paketes izvedumkonveijeru. Šīm datu kopām ir jābūt reģistrētām darbvietā. Pašlaik tiek atbalstīti tikai [tabulu datu kopas](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formātā. Datu kopām, kas atbilst entītiju datiem, ir jābūt iedalītām pēc parametriem kā konveijera parametram.
    
 * Datu kopas parametri noformētājā
    
@@ -76,7 +76,7 @@ Jums ir nepieciešams izveidot datu kopas, lai izmantotu entītijas datus no Cus
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Konveijera datu importēšana Customer Insights
 
-* Noformētājs nodrošina [Datu moduļa eksportēšanu](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data), kas ļauj eksportēt konveijera izvadi uz Azure krātuvi. Pašlaik modulim ir jāizmanto datu uzglabāšanas veidu **Azure BLOB krātuve** un iedalīt pēc parametriem **Datu krātuvi** un relatīvo **Ceļu**. Customer Insights ignorē gan šos parametrus konveijera izpildes laikā ar produktam pieejamo datu krātuvi un ceļu.
+* Noformētājs nodrošina [Datu moduļa eksportēšanu](/azure/machine-learning/algorithm-module-reference/export-data), kas ļauj eksportēt konveijera izvadi uz Azure krātuvi. Pašlaik modulim ir jāizmanto datu uzglabāšanas veidu **Azure BLOB krātuve** un iedalīt pēc parametriem **Datu krātuvi** un relatīvo **Ceļu**. Customer Insights ignorē gan šos parametrus konveijera izpildes laikā ar produktam pieejamo datu krātuvi un ceļu.
    > [!div class="mx-imgBorder"]
    > ![Portāla konfigurācijas datu eksportēšana](media/intelligence-designer-importdata.png "Datu moduļa konfigurācijas eksportēšana")
    

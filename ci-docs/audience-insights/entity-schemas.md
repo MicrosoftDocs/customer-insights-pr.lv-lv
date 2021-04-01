@@ -2,25 +2,25 @@
 title: Customer Insights entītiju shēmas Common Data Model
 description: Darba ar entītijām Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269293"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596370"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entītiju shēmas Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) ir deklaratīva specifikācija, kā arī tādu standarta entītiju definīcija, kas attēlo bieži izmantos konceptus un darbības uzņēmuma un produktivitātes lietojumprogrammās. Šis modelis tiek paplašināts arī uz novērojumu un analītiskiem datiem. Common Data Model nodrošina precīzi definētas, modulāras un paplašināmas biznesa entītijas, piemēram, uzņēmumu, struktūrvienību, pieteikumu, kontaktpersonu, interesentu, iespēju un produktu, kā arī saziņu ar piegādātājiem, darbiniekiem un klientiem, piemēram, darbībām un servisa līmeņa līgumiem. Ikviens var izmantot un paplašināt Common Data Model definīcijas, lai iegūtu darbam raksturīgas papildu idejas.
+[Common Data Model](/common-data-model/) ir deklaratīva specifikācija, kā arī tādu standarta entītiju definīcija, kas attēlo bieži izmantos konceptus un darbības uzņēmuma un produktivitātes lietojumprogrammās. Šis modelis tiek paplašināts arī uz novērojumu un analītiskiem datiem. Common Data Model nodrošina precīzi definētas, modulāras un paplašināmas biznesa entītijas, piemēram, uzņēmumu, struktūrvienību, pieteikumu, kontaktpersonu, interesentu, iespēju un produktu, kā arī saziņu ar piegādātājiem, darbiniekiem un klientiem, piemēram, darbībām un servisa līmeņa līgumiem. Ikviens var izmantot un paplašināt Common Data Model definīcijas, lai iegūtu darbam raksturīgas papildu idejas.
 
 Šis ir koplietojams datu modelis, kas ļauj lietojumprogrammām un datu integrētājiem daudz vieglāk sadarboties, nodrošinot vienotu datu definīciju. Common Data Model ietver bagātīgu metadatu sistēmu ar standarta entītijām, attiecībām, hierarhijām, īpašībām utt. Tas tika radīts no Dynamics 365 lietotnēm un ir atvērts GitHub ar vairāk nekā 260 standarta entītijām. Liela iekšējo un ārējo partneru sistēma sniedz nozarei raksturīgos jēdzienus Common Data Model.
 
@@ -32,13 +32,13 @@ Lai izveidotu pilnīgu skatu uz klientu un padarītu Customer Insights modeļus 
 
 | Entītija | Apraksts |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Lietotāja veikta darbība, kurai ir novērojuma vērtība attiecībā pret darbu. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Persona vai organizācija, kas veica vai kurai ir potenciāls iesaistīties komercdarbībā. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | KPI definīcija, kas sadalīta pa nullēm vai vairākām dimensijām (kā piemēram, mēneša aktīvie lietotāji, kopējie izdevumi pēc klienta, vidējā klienta iegādes cena) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definē dalībnieku grupu ar kopīgām iezīmēm. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Dalībnieki, kas piedalās noteiktā segmentā. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Lietotāja veikta darbība, kurai ir novērojuma vērtība attiecībā pret darbu. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Persona vai organizācija, kas veica vai kurai ir potenciāls iesaistīties komercdarbībā. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | KPI definīcija, kas sadalīta pa nullēm vai vairākām dimensijām (kā piemēram, mēneša aktīvie lietotāji, kopējie izdevumi pēc klienta, vidējā klienta iegādes cena) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definē dalībnieku grupu ar kopīgām iezīmēm. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Dalībnieki, kas piedalās noteiktā segmentā. |
 
-Papildinformāciju skatiet dokumentācijā par [Customer Insights entītiju shēmām Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Papildinformāciju skatiet dokumentācijā par [Customer Insights entītiju shēmām Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Entītiju skatīšana, izmantojot Common Data Model entītiju navigatoru
 

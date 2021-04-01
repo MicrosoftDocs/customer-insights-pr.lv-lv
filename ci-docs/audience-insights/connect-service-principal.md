@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267731"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596508"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Savienojuma izveide ar Azure Data Lake Storage Gen2 kontu ar Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem
 
@@ -23,7 +23,7 @@ Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr 
 Varat izmantot pakalpojuma primāro nosaukumu, lai droši [pievienotu vai rediģētu Common Data Model kā datu avotu](connect-common-data-model.md) vai [izveidotu jaunu vai atjauninātu esošu vidi](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Azure Data Lake Gen2 krātuves kontam, kas plāno izmantot pakalpojuma primāro nosaukumu, ir jābūt [iespējotai Hierarhiskai nosaukuma vietai (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Azure Data Lake Gen2 krātuves kontam, kas plāno izmantot pakalpojuma primāro nosaukumu, ir jābūt [iespējotai Hierarhiskai nosaukuma vietai (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Lai izveidotu pakalpojuma primāro nosaukumu, jums ir nepieciešamas administratora atļaujas jūsu Azure abonementam.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Izveidot Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem
@@ -48,7 +48,7 @@ Pirms izveidot jaunu pakalpojuma primāro nosaukumu auditorijas ieskatiem, pārb
 
 ### <a name="create-a-new-service-principal"></a>Izveidot jaunu pakalpojuma primāro nosaukumu
 
-1. Instalējiet jaunāko **Azure Active Directory PowerShell versiju programmai Graph**. Papildinformāciju skatiet rakstā programmas [PowerShell instalēšana Azure Active Directory programmai Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instalējiet jaunāko **Azure Active Directory PowerShell versiju programmai Graph**. Papildinformāciju skatiet rakstā programmas [PowerShell instalēšana Azure Active Directory programmai Graph](/powershell/azure/active-directory/install-adv2).
    - Datorā atlasiet Windows taustiņu uz jūsu tastatūras un meklējiet **Windows PowerShell** un **Palaist kā administratoram**.
    
    - PowerShell logā, kas tiek atvērts, ievadiet `Install-Module AzureAD`.

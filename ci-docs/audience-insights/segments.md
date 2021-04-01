@@ -1,20 +1,20 @@
 ---
 title: Izveidojiet un pārvaldiet segmentus
 description: Izveidojiet klientiem segmentus, lai tos grupētu, pamatojoties uz dažādiem atribūtiem.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270365"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597061"
 ---
 # <a name="create-and-manage-segments"></a>Izveidojiet un pārvaldiet segmentus
 
@@ -35,19 +35,19 @@ Segmenti tiek pārvaldīti lapā **Segmenti**.
 
 1. Sadaļā Auditorijas ieskati ejiet uz lapu **Segmenti**.
 
-2. Atlasiet **Jauns** > **Tukšs segments**.
+1. Atlasiet **Jauns** > **Tukšs segments**.
 
-3. Rūtī **Jauns segments** izvēlieties segmenta tipu un ievadiet **nosaukumu**.
+1. Rūtī **Jauns segments** izvēlieties segmenta tipu un ievadiet **nosaukumu**.
 
    Ja vēlaties, norādiet parādāmo nosaukumu un aprakstu, kas palīdz identificēt segmentu.
 
-4. Noklikšķiniet uz **Tālāk**, lai piekļūtu lapai **Segmenta veidotājs**, kurā definējat grupu. Grupa ir klientu kopa.
+1. Noklikšķiniet uz **Tālāk**, lai piekļūtu lapai **Segmenta veidotājs**, kurā definējat grupu. Grupa ir klientu kopa.
 
-5. Izvēlieties entītiju, kurā iekļauts atribūts, pēc kura vēlaties segmentēt.
+1. Izvēlieties entītiju, kurā iekļauts atribūts, pēc kura vēlaties segmentēt.
 
-6. Atlasiet atribūtu, pēc kura segmentēt. Šim atribūtam var būt viens no četriem vērtību veidiem: skaitlis, virkne, datums vai Būla vērtība.
+1. Atlasiet atribūtu, pēc kura segmentēt. Šim atribūtam var būt viens no četriem vērtību veidiem: skaitlis, virkne, datums vai Būla vērtība.
 
-7. Izvēlieties operatoru un vērtību atlasītajam atribūtam.
+1. Izvēlieties operatoru un vērtību atlasītajam atribūtam.
 
    > [!div class="mx-imgBorder"]
    > ![Pielāgots grupas filtrs](media/customer-group-numbers.png "Klientu grupas filtrs")
@@ -64,9 +64,14 @@ Segmenti tiek pārvaldīti lapā **Segmenti**.
    > [!div class="mx-imgBorder"]
    > ![Relāciju ceļš segmenta izveides laikā](media/segments-multiple-relationships.png "Relāciju ceļš segmenta izveides laikā")
 
-9. Lai saglabātu segmentu, atlasiet **Saglabāt**. Jūsu segments tiks saglabāts un apstrādāts, ja visas prasības ir validētas. Pretējā gadījumā tas tiks saglabāts kā melnraksts.
+1. Pēc noklusējuma segmenti ģenerē izvades entītiju, kurā ir visi klientu profilu atribūti, kas atbilst definētajiem filtriem. Ja segments ir balstīts uz citām entītijām, nevis entītiju *Klients*, izvades entītijai var pievienot papildu atribūtus no šīm entītijām. Atlasiet **Projekta atribūtus**, lai izvēlētos atribūtus, kas tiks pievienoti izvades entītijai.  
 
-10. Atlasiet **Atgriezties pie segmentiem**, lai atgrieztos pie **Segmentu** lapas.
+   
+   Piemērs. Segments tiek veidots, pamatojoties uz entītiju, kurā ir ietverti ar entītiju *Klients* saistīti klienta darbības dati. Segments meklē visus klientus, kas pēdējo 60 dienu laikā zvanījuši palīdzības dienestam. Varat izvēlēties, vai izvades entītijā pievienot sarunas ilgumu un zvanu skaitu visiem atbilstošajiem klientu ierakstiem. Šī informācija var būt noderīga lai nosūtītu e-pasta ziņojumu ar noderīgām saitēm uz tiešsaistes palīdzības rakstiem un bieži uzdotajiem jautājumiem tiem klientiem, kuri zvanījuši bieži.
+
+1. Lai saglabātu segmentu, atlasiet **Saglabāt**. Jūsu segments tiks saglabāts un apstrādāts, ja visas prasības ir validētas. Pretējā gadījumā tas tiks saglabāts kā melnraksts.
+
+1. Atlasiet **Atgriezties pie segmentiem**, lai atgrieztos pie **Segmentu** lapas.
 
 ## <a name="manage-existing-segments"></a>Esošo segmentu pārvaldība
 
@@ -85,6 +90,7 @@ Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
 
 - **Skatīt** segmenta informāciju, tostarp segmenta dalībnieku skaita tendences priekšskatījumu.
 - **Rediģēt** segmentu, lai mainītu tā rekvizītus.
+- **Izveidot dublikātu** segmentam. Varat izvēlēties rediģēt tā rekvizītus uzreiz vai vienkārši saglabāt dublikātu.
 - **Atsvaidzināt** segmentu, lai iekļautu jaunākos datus.
 - **Aktivizēt** vai **Deaktivizēt** segmentu. Segmentiem ir divi iespējamie statusi — aktīvs vai neaktīvs. Šie statusi ir noderīgi, rediģējot segmentu. Neaktīvajiem segmentiem pastāv segmenta definīcija, taču tajā vēl nav klientu. Aktivizējot segmentu, tā statuss tiek mainīts no “neaktīvs” uz “aktīvs”, un tas sāk meklēt klientus, kas atbilst segmenta definīcijai. Ja ir konfigurēta [plānotā atsvaidzināšana](system.md#schedule-tab), neaktīvajiem segmentiem **Statuss** ir norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana nav pat mēģināta. Ja ir aktivizēts neaktīvs segments, tas tiek atsvaidzināts un iekļauts atsvaidzināšanas grafikā.
   Vai arī varat izmantot funkcionalitāti **Plānot vēlāk** nolaižamajā izvēlnē **Aktivizēt/Deaktivizēt**, lai norādītu nākotnes datumu un laiku noteikta segmenta aktivizēšanai un deaktivizēšanai.

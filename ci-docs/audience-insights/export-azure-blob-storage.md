@@ -2,19 +2,19 @@
 title: Customer Insights datu eksportēšana Azure Blob krātuvē
 description: Uzzinieto, kā konfigurēt savienojumu ar Azure Blob krātuvi.
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269201"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596186"
 ---
 # <a name="connector-for-azure-blob-storage-preview"></a>Savienotājs Azure Blob krātuvei (priekšskatījums)
 
@@ -27,8 +27,8 @@ Uzglabājiet Customer Insights datus Azure Blob krātuvē vai izmantojiet tos da
 1. Sadaļā **Azure Blob krātuve** atlasiet **Iestatīt**.
 
 1. Ievadiet **Konta nosaukums**, **Konta atslēga** un **Konteiners** savam Azure Blob krātuves kontam.
-    - Papildinformāciju, kā atrast Azure Blob krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
-    - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+    - Papildinformāciju, kā atrast Azure Blob krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
+    - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
 

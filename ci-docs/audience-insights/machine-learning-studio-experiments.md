@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270213"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598348"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Izmantojiet Azure algoritmiskās mācības studijas (klasiskais) modeļus programmā .
 
@@ -37,7 +37,7 @@ Vispirms ir jāizveido darbvieta un jāatver algoritmiskās mācīšanās studij
 
 1. Meklējiet **Algoritmiskās mācīšanās studijas darbvieta** un atlasiet **Izveidot**.
 
-1. Ievadiet nepieciešamo informāciju, lai [izveidotu darbvietu](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Izvēlieties **Tīmekļa servisa plāna cenas rindu**, pamatojoties uz importējamo datu apjomu. Lai iegūtu vislabākos rezultātus, atlasiet **Atrašanās vietu**, kas jums ģeogrāfiski ir vistuvāk.
+1. Ievadiet nepieciešamo informāciju, lai [izveidotu darbvietu](/azure/machine-learning/studio/create-workspace). Izvēlieties **Tīmekļa servisa plāna cenas rindu**, pamatojoties uz importējamo datu apjomu. Lai iegūtu vislabākos rezultātus, atlasiet **Atrašanās vietu**, kas jums ģeogrāfiski ir vistuvāk.
 
 1. Pēc resursa izveides tiks parādīts algoritmiskās mācīšanās studijas darbvietas informācijas panelis. Atlasiet **Palaist algoritmiskās mācīšanās studiju**.
 
@@ -65,7 +65,7 @@ Tagad varat izveidot jaunu eksperimentu vai importēt esošu eksperimenta veidni
 
    ![Predikatīvā tīmekļa pakalpojuma iestatīšana](media/predictive-webservice-control.png)
 
-1. Kolīdz predikatīvais tīmekļa pakalpojuma eksperiments ir izdevies, jūs varat to izmantot automātiskai plānošanai. Lai tīmekļa pakalpojums darbotos kopā ar Customer Insights, atlasiet **Izmantot tīmekļa pakalpojumu** > **Izmantot tīmekļa pakalpojuma (jauns) priekšskatījumu**. [Papildinformācija par tīmekļa pakalpojuma izmantošanu](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
+1. Kolīdz predikatīvais tīmekļa pakalpojuma eksperiments ir izdevies, jūs varat to izmantot automātiskai plānošanai. Lai tīmekļa pakalpojums darbotos kopā ar Customer Insights, atlasiet **Izmantot tīmekļa pakalpojumu** > **Izmantot tīmekļa pakalpojuma (jauns) priekšskatījumu**. [Papildinformācija par tīmekļa pakalpojuma izmantošanu](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
    ![Predikatīvā tīmekļa pakalpojuma izmantošana](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Tagad mums ir jāizvēlas optimālais lietojamais algoritms. Šajā gadījumā v
 
 ![Zuduma modelis Azure algoritmiskās mācīšanās studijā](media/azure-machine-learning-model.png)
 
-Mēs arī izmantojam tehniku, ko sauc par **Permutācijas līdzekļa svarīgumu**, kas ir būtisks modeļa optimizācijas aspekts. Iebūvētajiem modeļiem ir mazs vai nekāds ieskats jebkura konkrētā līdzekļa ietekmē uz gala prognozi. Līdzekļa svarīguma kalkulators izmanto pielāgotu algoritmu, lai aprēķinātu atsevišķu līdzekļu ietekmi uz konkrēta modeļa iznākumu. Līdzekļa svarīgums ir normalizēts starp +1 un -1. Negatīva ietekme nozīmē, ka atbilstošajam līdzeklim ir pretēja ietekme uz iznākumu un tas ir jāizņem no modeļa. Pozitīva ietekme norāda uz to, ka līdzeklim ir pamatīgs pienesums prognozei. Šīs vērtības nav korelācijas koeficienti, jo tie ir cita metrika. Papildinformāciju skatiet tēmā [Permutāciju līdzekļa svarīgums](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Mēs arī izmantojam tehniku, ko sauc par **Permutācijas līdzekļa svarīgumu**, kas ir būtisks modeļa optimizācijas aspekts. Iebūvētajiem modeļiem ir mazs vai nekāds ieskats jebkura konkrētā līdzekļa ietekmē uz gala prognozi. Līdzekļa svarīguma kalkulators izmanto pielāgotu algoritmu, lai aprēķinātu atsevišķu līdzekļu ietekmi uz konkrēta modeļa iznākumu. Līdzekļa svarīgums ir normalizēts starp +1 un -1. Negatīva ietekme nozīmē, ka atbilstošajam līdzeklim ir pretēja ietekme uz iznākumu un tas ir jāizņem no modeļa. Pozitīva ietekme norāda uz to, ka līdzeklim ir pamatīgs pienesums prognozei. Šīs vērtības nav korelācijas koeficienti, jo tie ir cita metrika. Papildinformāciju skatiet tēmā [Permutāciju līdzekļa svarīgums](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Viss [zuduma eksperiments ir pieejams Azure AI galerijā](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Visam [produkta ieteikuma eksperimentam var piekļūt Azure AI galerijā.](https
 
 ## <a name="integrate-custom-models"></a>Pielāgoto modeļu integrēšana
 
-Lai izmantotu šīs prognozes programmā Customer Insights, prognozes ir **jāeksportē** kopā ar klienta ID. [Eksportējiet tos uz to pašu Azure Blob krātuves vietu](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), kurā tiek eksportēti avota dati. Prognozējošo tīmekļa pakalpojumu var ieplānot tā, lai tas darbotos regulāri un atjauninātu rezultātus.
+Lai izmantotu šīs prognozes programmā Customer Insights, prognozes ir **jāeksportē** kopā ar klienta ID. [Eksportējiet tos uz to pašu Azure Blob krātuves vietu](/azure/storage/common/storage-import-export-data-from-blobs), kurā tiek eksportēti avota dati. Prognozējošo tīmekļa pakalpojumu var ieplānot tā, lai tas darbotos regulāri un atjauninātu rezultātus.
 
 Pielāgotajā modelī ģenerētos datus var izmantot, lai turpinātu klientu datu bagātināšanu. Papildinformācijai skatiet [Pielāgoti algoritmiskās mācīšanās modeļi](custom-models.md).
 

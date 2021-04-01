@@ -2,19 +2,19 @@
 title: Customer Insights datu eksportēšana uz Azure Data Lake Storage Gen2
 description: Uzziniet, kā konfigurēt savienojumu ar Azure Data Lake Storage Gen2.
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477188"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596647"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Savienotājs ar Azure Data Lake Storage Gen2 (priekšskatījums)
 
@@ -29,8 +29,8 @@ Glabājiet Customer Insights datus pakalpojumā Azure Data Lake Storage Gen2 vai
 1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
 
 1. Ievadiet **Uzņēmuma nosaukumu**, **Uzņēmuma atslēgu** un **Konteineru** jūsu Azure Data Lake Storage Gen2.
-    - Informāciju par to, kā izveidot krātuves kontu, ko izmantot ar Azure Data Lake Storage Gen2, skatiet [Krātuves konta izveide](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Papildinformāciju, kā atrast Azure Data Lake Gen2 krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Informāciju par to, kā izveidot krātuves kontu, ko izmantot ar Azure Data Lake Storage Gen2, skatiet [Krātuves konta izveide](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Papildinformāciju, kā atrast Azure Data Lake Gen2 krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
 
 1. Atlasiet **Tālāk**.
 

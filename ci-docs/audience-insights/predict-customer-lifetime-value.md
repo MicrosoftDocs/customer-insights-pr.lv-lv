@@ -2,19 +2,19 @@
 title: Klienta ilgtermiņa vērtības (CLV) prognoze
 description: Prognozējiet potenciālos ieņēmumus aktīvajiem klientiem nākotnē.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268603"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595817"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Klienta ilgtermiņa vērtības (CLV) prognoze (priekšskatījums)
 
@@ -194,11 +194,11 @@ Rezutātu lapā ir trīs primārās datu sadaļas.
   
   - **Augstas vērtības klientu sekmīgas prognozēšanas rādītājs**
 
-  Skatiet atšķirību, prognozējot augstas vērtības klientus, kuri izmanto mākslīgā intelekta modeli, salīdzinot ar bāzlīnijas modeli. Piemēram, 84% panākumu līmenis nozīmē, ka no visiem vērtīgiem klientiem mācību datos mākslīgā intelekta modelis spēja precīzi tvert 84%. Pēc tam šos sekmīgos panākumus mēs salīdzinām ar bāzlīnijas modeļa sekmīgo likmi, lai ziņotu par relatīvajām izmaiņām. Šī vērtība tiek izmantota, lai modelim piešķirtu kategoriju.
+    Skatiet atšķirību, prognozējot augstas vērtības klientus, kuri izmanto mākslīgā intelekta modeli, salīdzinot ar bāzlīnijas modeli. Piemēram, 84% panākumu līmenis nozīmē, ka no visiem vērtīgiem klientiem mācību datos mākslīgā intelekta modelis spēja precīzi tvert 84%. Pēc tam šos sekmīgos panākumus mēs salīdzinām ar bāzlīnijas modeļa sekmīgo likmi, lai ziņotu par relatīvajām izmaiņām. Šī vērtība tiek izmantota, lai modelim piešķirtu kategoriju.
 
   - **Kļūdu metrikas**
     
-  Cita metrika ļauj pārskatīt modeļa vispārējo veiktspēju attiecībā uz kļūdu nākotnes vērtību prognozēšanas ziņā. Lai novērtētu šo kļūdu, mēs izmantojam kopējo saknes vidējā kvadrāta kļūdas (RMSE) metriku. RMSE ir standarta veids, kā mērīt modeļa kļūdu, prognozējot kvantitatīvus datus. Mākslīgā intelekta modeļa RMSE vērtību salīdzina ar bāzlīnjas modeļa RMSE, un tiek ziņots par relatīvo starpību.
+    Cita metrika ļauj pārskatīt modeļa vispārējo veiktspēju attiecībā uz kļūdu nākotnes vērtību prognozēšanas ziņā. Lai novērtētu šo kļūdu, mēs izmantojam kopējo saknes vidējā kvadrāta kļūdas (RMSE) metriku. RMSE ir standarta veids, kā mērīt modeļa kļūdu, prognozējot kvantitatīvus datus. Mākslīgā intelekta modeļa RMSE vērtību salīdzina ar bāzlīnjas modeļa RMSE, un tiek ziņots par relatīvo starpību.
 
   Mākslīgā intelekta modelis nosaka precīzu klientu rangu pēc vērtības, ko tie sniedz jūsu uzņēmumam. Tātad tikai labākās vērtības klientu prognozēšanas sekmīgais rādītājs tiek izmantots, lai atvasinātu galīgo modeļa kategoriju. RMSE dati ir jutīgi pret novirzēm. Scenārijos, kuros ir mazs procentuālais klientu skaits ar pārāk lielām iegādes vērtībām, kopējā RMSE metrika var nedot pilnīgu priekšstatu par modeļa veiktspēju.   
 
