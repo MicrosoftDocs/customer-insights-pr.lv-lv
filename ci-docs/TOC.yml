@@ -65,7 +65,7 @@
         - name: Klientu profilu bagātināšana
           href: audience-insights/enrichment-hub.md
         - name: Zīmola un interešu radniecība
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: Bagātināšana ar HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: 'Bagātināt, izmantojot Leadspace'
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: Produktu ieteikumu prognozes rokasgrāmatas paraugs
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: 'Segmentu izveide, pamatojoties uz prognozēm'
+          href: audience-insights/prediction-based-segment.md
         - name: Pielāgotu algoritmiskās mācīšanās modeļu ieviešana
           href: audience-insights/custom-models.md
         - name: Eksperimenti ar Azure algoritmisko mācīšanos
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Eksportēšanas opcijas
       items:
-        - name: Galamērķu eksportēšanas pārskats (priekšskatījums)
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: Autopilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure BLOB krātuve
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage Gen2
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: "Dynamics\_365 Customer Service (pievienojumprogramma)"
-          href: audience-insights/customer-card-add-in.md
-        - name: "Dynamics\_365 Marketing"
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: Dynamics 365 Sales
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Dynamics 365 pāŗdošanas centrmezgls (pievienojumprogramma)
-          href: audience-insights/customer-card-add-in.md
-        - name: Facebook Ads Manager
-          href: audience-insights/export-facebook.md
-        - name: Google Ads ikona
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: MailChimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (robots)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: Eksports
+          items:
+            - name: Eksportēšanas (priekšskatījuma) pārskats
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: Autopilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Storage
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage Gen2
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Adobe Experience Platform
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: "Dynamics\_365 Marketing"
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: Dynamics 365 Sales
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Facebook Ads Manager
+              href: audience-insights/export-facebook.md
+            - name: Google Ads ikona
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: MailChimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: Citi lietojumi
+          items:
+            - name: "Dynamics\_365 Customer Service (pievienojumprogramma)"
+              href: audience-insights/customer-card-add-in.md
+            - name: Dynamics 365 pāŗdošanas centrmezgls (pievienojumprogramma)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (robots)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: Administrēšana
       items:
         - name: Sistēmas konfigurācijas iestatīšana
           href: audience-insights/system.md
         - name: Lietotāju atļauju piešķiršana
           href: audience-insights/permissions.md
+        - name: Savienojumu (priekšskatījums) pārskats
+          href: audience-insights/connections.md
         - name: Vairāku vižu pārvaldība
           href: audience-insights/manage-environments.md
         - name: 'Savienojuma izveide ar ADLS krātuvi, izmantojot pakalpojuma primāro nosaukumu'
@@ -212,11 +228,15 @@
       items:
         - name: Skatīt atskaites
           href: engagement-insights/view-reports.md
-        - name: Pielāgotu atskaišu izveide
+        - name: Pielāgotu atskaišu izveidošana
           href: engagement-insights/custom-reports.md
         - name: Izveidot vienotas profila atskaites
           href: engagement-insights/profile-reports.md
-    - name: Izstrādātāja resursi
+    - name: Lietošanas analīze
+      items:
+        - name: Piltuves atskaišu izveide un pārvaldība
+          href: engagement-insights/funnel-reports.md
+    - name: Izstrādātāju resursi
       items:
         - name: Pārskats par izstrādātāju resursiem
           href: engagement-insights/developer-resources.md
