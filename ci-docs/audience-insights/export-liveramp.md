@@ -1,7 +1,7 @@
 ---
 title: LiveRamp savienotājs
-description: Uzziniet, kā eksportēt datus LiveRamp.
-ms.date: 12/02/2020
+description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597566"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760336"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg; savienotājs (priekšskatījums)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmentu eksportēšana uz LiveRamp&reg; (priekšskatījums)
 
-Aktivizējiet datus risinājumā LiveRamp, lai izveidotu savienojumu ar vairāk nekā 500 platformām digitālajās, sociālajās un TV ekosistēmās. Strādājiet ar saviem datiem risinājumā LiveRamp, lai mērķētu, izlaistu un personalizētu reklāmas kampaņas.
+Aktivizējiet savus datus LiveRamp, lai savienotos ar vairāk nekā 500 digitālajām, sociālajām un TV platformām. Strādājiet ar saviem datiem risinājumā LiveRamp, lai mērķētu, izlaistu un personalizētu reklāmas kampaņas.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
 - Lai izmantotu šo savienotāju, ir nepieciešams LiveRamp abonements.
 - Lai iegūtu abonementu, [sazinieties tieši ar LiveRamp](https://liveramp.com/contact/). [Uzzināt vairāk par LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Savienojums ar LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Savienojuma ar LiveRamp iestatīšana
 
-1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
+1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. **LiveRamp** elementā atlasiet **Iestatīt**.
+1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **LiveRamp**, lai konfigurētu savienojumu.
 
-1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
+1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
+
+1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Norādiet **Lietotājvārds** un **Parole** savam LiveRamp Drošajam FTP (SFTP) kontam.
 Šie akreditācijas dati var atšķirties no jūsu LiveRamp Onboarding akreditācijas datiem.
@@ -40,15 +42,25 @@ Aktivizējiet datus risinājumā LiveRamp, lai izveidotu savienojumu ar vairāk 
 
 1. Pēc sekmīgas verifikācijas sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**.
 
-1. Atlasiet **Tālāk**, lai iestatītu LiveRamp savienotāju.
+1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**.
 
-## <a name="configure-the-connector"></a>Savienotāja konfigurēšana
+## <a name="configure-an-export"></a>Eksporta konfigurēšana
+
+Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+
+1. Pārejiet uz **Dati** > **Eksportēšana**.
+
+1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas LiveRamp. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
 1. Laukā **Izvēlēties galveno identifikatoru** atlasiet **E-pasts**, **Vārds un adrese** vai **Tālrunis**, kas tiks nosūtīts uz LiveRamp identitātes atrisināšanai.
+   > [!div class="mx-imgBorder"]
+   > ![LiveRamp savienotājs ar atribūtu kartējumu](media/export-liveramp-segments.png "LiveRamp savienotājs ar atribūtu kartējumu")
 
 1. Kartējiet atbilstošos atribūtus no savas vienotās klienta entītijas atlasītajam galvenajam identifikatoram.
 
-1. Atlasiet **Pievienot atribūtu**, lai kartētu papildu atribūtus nosūtīšanai uz LiveRamp.
+1. Atlasiet **Pievienot atribūtu**, lai kartētu vairāk atribūtu, ko nosūtīt uz LiveRamp.
 
    > [!TIP]
    > Vairāku galveno identifikatora atribūtu nosūtīšana uz LiveRamp, visticamāk, iegūs lielāku atbilstību.
@@ -57,13 +69,10 @@ Aktivizējiet datus risinājumā LiveRamp, lai izveidotu savienojumu ar vairāk 
 
 1. Atlasiet vienumu **Saglabāt**.
 
-> [!div class="mx-imgBorder"]
-> ![LiveRamp savienotājs ar atribūtu kartējumu](media/export-liveramp-segments.png "LiveRamp savienotājs ar atribūtu kartējumu")
+Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-## <a name="export-the-data"></a>Datu eksportēšana
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
-Eksportēšana drīzumā tiks sākta, ja būs pabeigti visi eksportēšanas priekšnosacījumi. Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
-Kad eksportēšana ir sekmīgi pabeigta, varat pieteikties programmā LiveRamp Onboarding, lai aktivizētu un izplatītu savus datus.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

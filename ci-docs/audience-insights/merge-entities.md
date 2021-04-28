@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597842"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896520"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -83,7 +83,7 @@ Ja tā nebija pirmā reize, kad veiksmīgi palaidāt sapludināšanu, visi pakā
 
 ## <a name="next-step"></a>Nākamā darbība
 
-Konfigurējiet opcijas [darbības](activities.md), [bagātināšana](enrichment-microsoft-graph.md) vai [relācijas](relationships.md), lai gūtu plašāku ieskatu par saviem klientiem.
+Konfigurējiet opcijas [darbības](activities.md), [bagātināšana](enrichment-hub.md) vai [relācijas](relationships.md), lai gūtu plašāku ieskatu par saviem klientiem.
 
 Ja jau esat konfigurējis darbības, bagātināšanu vai relācijas vai definējāt segmentus, tie tiek apstrādāti automātiski, lai izmantotu jaunākos klientu datus.
 

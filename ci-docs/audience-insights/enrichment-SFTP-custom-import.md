@@ -1,7 +1,7 @@
 ---
 title: Bagātināšana ar SFTP pielāgoto importu
 description: Vispārīga informācija par SFTP pielāgoto importēšanu.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595864"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896290"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Bagātiniet klientu profilus ar pielāgotiem datiem (priekšskatījums)
 
-Faila drošas pārsūtīšanas protokola (SFTP) pielāgotā importēšana ļauj importēt datus, kuriem nav jāiziet datu apvienošanas process. Tas ir elastīgs, drošs un viegls veids, kā apkopot datus. SFTP pielāgoto importēšanu var izmantot savienojumā ar [SFTP Export](export-sftp.md), kas ļauj eksportēt bagātināšanai nepieciešamos klientu profilu datus. Šos datus var apstrādāt, bagātināt, un SFTP pielāgoto importēšanu var izmantot, lai atgrieztu bagātinātos datus atpakaļ auditorijas ieskatu iespējā Dynamics 365 Customer Insights.
+Drošas failu pārsūtīšanas protokola (SFTP) pielāgotais imports ļauj importēt datus, kuriem nav jāiziet datu apvienošanas process. Tas ir elastīgs, drošs un viegls veids, kā apkopot datus. SFTP pielāgoto importēšanu var izmantot savienojumā ar [SFTP Export](export-sftp.md), kas ļauj eksportēt bagātināšanai nepieciešamos klientu profilu datus. Šos datus var apstrādāt, bagātināt, un SFTP pielāgoto importēšanu var izmantot, lai atgrieztu bagātinātos datus atpakaļ auditorijas ieskatu iespējā Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 Lai konfigurētu SFTP pielāgoto importēšanu, ir jāatbilst šādiem priekšnosacījumiem:
 
-- Jums ir lietotāja akreditācijas dati (lietotājvārds un parole) attiecībā uz SFTP atrašanās vietu, kur tiek iegūti no programmas importējamie dati.
-- Jums ir vietrādis URL un porta numurs (parasti 22) STFP resursdatoram.
-- Jums ir faila nosaukums un atrašanās vieta importējamā faila SFTP resursdatorā.
-- Ir *model.json* fails, kas norāda importējamo datu shēmu. Šim failam ir jābūt tajā pašā direktorijā, kur Importējamais fails.
-- ir nepieciešamas [Administratora](permissions.md#administrator) atļaujas.
+- Jums ir STFP hostā importējamā faila nosaukums un atrašanās vieta (ceļš).
+- Ir *model.json* fails, kurā norādīta importējamo datu [Common Data Model shēma](/common-data-model/). Šim failam ir jābūt tajā pašā direktorijā, kur Importējamais fails.
+- Administrators jau ir konfigurējis SFTP savienojumu *vai* jums ir [administratora](permissions.md#administrator) atļaujas. Jums būs nepieciešami lietotāja akreditācijas dati un STFP atrašanās vietas, no kuras vēlaties importēt datus, URL un porta numurs.
 
-## <a name="configuration"></a>Konfigurācija
+
+## <a name="configure-the-import"></a>Importa konfigurēšana
 
 1. dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
 
-1. Elementā **SFTP pielāgotā importēšana** atlasiet **Bagātināt manus datus**.
+1. **SFTP pielāgotās importēšanas rūtī** atlasiet **Bagātināt manus datus** un pēc tam atlasiet **Sākt darbu**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Elements SFTP pielāgotā importēšana](media/SFTP_Custom_Import_tile.png "Elements SFTP pielāgotā importēšana")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP pielāgotā importa rūts.":::
 
-1. Atlasiet **Sākt darbu** un sniedziet akreditācijas datu un adresi, kas paredzēta SFTP serverim. Piemēram, sftp://mysftpserver.com:22.
+1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un nolaižamajā izvēlnē izvēloties **SFTP pielāgotais imports**.
 
-1. Ievadiet tā faila nosaukumu, kurā ir ietverti dati, un ceļu uz failu SFTP serverī, ja tas nav iekļauts saknes mapē.
+1. Atlasiet **Pieslēgties Custom Import**, lai apstiprinātu atlasīto savienojumu.
 
-1. Apstipriniet visas ievades, atlasot **Izveidot savienojumu ar pielāgoto importēšanu**.
+1.  Atlasiet **Tālāk** un ievadiet datu faila, kuru vēlaties importēt, **Nosaukumu** un **Ceļu**.
 
-   > [!div class="mx-imgBorder"]
-   > ![SFTP pielāgotās importēšanas izlidošana](media/SFTP_Custom_Import_Configuration_flyout.png "SFTP pielāgotās importēšanas izlidošana")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrānuzņēmums, ievadot datu atrašanās vietu.":::
+
+1. Atlasiet **Tālāk** un norādiet bagātināmo datu nosaukumu un izvades entitījas nosaukumu. 
+
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP Custom Import savienojuma konfigurēšana 
+
+Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un Custom Import rūtī atlasiet **Iestatīt**.
+
+1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
+
+1. Ievadiet derīgu lietotājvārdu un paroli un hosta URL STFP serverim, kurā atrodas importējamie dati.
+
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**.
+
+1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
+
+1. Kolīdz pārbaude ir pabeigta, savienojumu var saglabāt, noklikšķinot uz **Saglabāt**.
+
+> [!div class="mx-imgBorder"]
+   > ![Experian savienojuma konfigurācijas lapa](media/enrichment-SFTP-connection.png "Experian savienojuma konfigurācijas lapa.")
+
 
 ## <a name="defining-field-mappings"></a>Notiek lauku kartējumu ģenerēšana 
 
@@ -105,8 +124,5 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 ## <a name="next-steps"></a>Nākamās darbības
 
 Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai sniegtu klientiem personalizētas iespējas.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

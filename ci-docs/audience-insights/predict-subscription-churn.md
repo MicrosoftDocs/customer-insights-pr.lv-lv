@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595665"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906911"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
 
@@ -49,6 +49,12 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
         - **Laikspiedols:** notikuma datums un laiks, ko identificē primārā atslēga.
         - **Notikums:** norādiet notikuma nosaukumu, kuru vēlaties izmantot. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "UserAction" var būt vērtība "Apskatīts".
         - **Detalizēti:** detalizēta informācija par notikumu. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "ShowTitle" var būt tāda videoklipa vērtība, kuru klients ir skatījies.
+- Ieteicamie datu raksturlielumi:
+    - Pietiekami vēsturiskie dati: Abonēšanas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. Vēlams, lai būtu abonēšanas dati par diviem vai trim gadiem.
+    - Abonementa statuss: Dati ietver katra klienta aktīvos un neaktīvos abonementus, tāpēc katram klienta ID ir vairāki ieraksti.
+    - Klientu skaits: Vismaz 10 klientu profilu, vēlams vairāk nekā 1000 unikālo klientu. Ja būs mazāk par 10 klientiem un nepietiks datu, modelis būs kļūmīgs.
+    - Datu pilnīgums: Vairāk nekā 20% trūkstošo vērtību sniegtās entītijas datu laukā.
+   
    > [!NOTE]
    > Jums nepieciešami vismaz divi darbību ieraksti attiecībā uz 50% klientiem, par kuriem vēlaties aprēķināt klientu zudumu.
 
@@ -67,7 +73,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 ### <a name="define-customer-churn"></a>Definēt klientu zudumu
 
 1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Parasti šim periodam patīk biznesa darbības, piemēram, piedāvājumi vai citi mārketinga pasākumi, kas cenšas nepieļaut klientu zudumu.
-1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Klientu zuduma riska prognozēšana par garākiem vai īsākiem periodiem var nozīmēt to, ka būs grūtāk ievērot jūsu klientu zuduma riska profila faktorus, taču tas lielā mērā atkarīgs no jūsu konkrētā uzņēmuma vajadzībām. Atlasiet **Tālāk**, lai turpinātu
+1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām. Atlasiet **Tālāk**, lai turpinātu
    >[!TIP]
    > Lai saglabātu prognozēšanu kā melnrakstu, varat atlasīt **Saglabāt un aizvērt** jebkurā brīdī. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
@@ -113,7 +119,8 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Atlasiet prognozes, kuras vēlaties pārskatīt.
    - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
    - **Prognozes tips:** modeļa tips, ko izmanto prognozēšanai
-   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.
+   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.    
+     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-new-segment) ar vēlamo slieksni.
    - **Prognozējamais lauks:** šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tās netiek izmantotas abonēšanas zuduma prognozēšanā.
    - **Statuss:** prognozes izpildes pašreizējais statuss.
         - **Rindā:** prognoze pašlaik gaida citu procesu palaišanu.

@@ -1,6 +1,6 @@
 ---
-title: Customer Insights datu eksportēšana uz AdRoll
-description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz AdRoll.
+title: Customer Insights datu eksportēšana uz RollWorks
+description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz RollWorks.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895968"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760583"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Segmentu sarakstu eksportēšana uz AdRoll (priekšskatījums)
+# <a name="export-segment-lists-to-rollworks-preview"></a>Segmentu sarakstu eksportēšana uz RollWorks (priekšskatījums)
 
-Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos reklāmai. 
+Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos reklāmā. 
 
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
--   Jums ir [AdRoll konts](https://www.adroll.com/) un atbilstošie administratora akreditācijas dati.
+-   Jums ir [RollWorks konts](https://www.rollworks.com/) un atbilstošie administratora akreditācijas dati.
 -   Jums ir [konfigurēti segmenti](segments.md) auditorijas ieskatos.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Vienam eksportam var eksportēt līdz 250 000 profilu uz AdRoll.
-- Jūs nevarat eksportēt segmentus, kuros ir mazāk par 100 profiliem, uz AdRoll. 
-- Eksportēšana uz AdRoll ir ierobežota līdz segmentiem.
-- Līdz 250 000 profilu eksportēšanai uz AdRoll var paiet 10 minūtes. 
-- To profilu skaits, ko var eksportēt uz AdRoll, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar AdRoll.
+- Jūs varat eksportēt līdz 250 000 profilu uz katru eksportu uz RollWorks.
+- Uz RollWorks nevar eksportēt segmentus, kuriem ir mazāk par 100 profiliem. 
+- Eksportēšana uz RollWorks attiecas tikai uz segmentiem.
+- Līdz 250 000 profilu eksportēšana uz RollWorks var aizņemt līdz 10 minūtēm. 
+- Profilu, kurus varat eksportēt uz RollWorks skaits ir atkarīgs no jūsu līguma ar RollWorks un attiecas vienīgi uz tā tvērumu.
 
-## <a name="set-up-connection-to-adroll"></a>Savienojuma ar AdRoll iestatīšana
+## <a name="set-up-connection-to-rollworks"></a>Savienojuma ar RollWorks iestatīšana
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **AdRoll**, lai konfigurētu savienojumu.
+1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **RollWorks**, lai konfigurētu savienojumu.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
@@ -46,9 +46,9 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu ar AdRoll.
+1. Lai uzsāktu savienojumu ar RollWorks, atlasiet **Savienot**.
 
-1. Atlasiet **Autentificēties ar AdRoll** un sniedziet savus administratora akreditācijas datus AdRoll. 
+1. Atlasiet **Autentificēt ar RollWorks** un norādiet savus RollWorks administratora akreditācijas datus.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -62,11 +62,11 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas AdRoll. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas RollWorks. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
-1. Ievadiet savu **AdRoll Advertiser ID** Papildu informāciju skatiet rakstā [AdRoll Advertiser profili](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Ievadiet savu **RollWorks reklāmdevēja ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir jāeksportē uz AdRoll.
+3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz RollWorks.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Atlasiet segmentu, kurā ir vismaz 100 dalībnieku. Nevar eksportēt mazākus segmentus. Turklāt eksportējamā segmenta maksimālais lielums ir 250 000 dalībnieku vienam eksportam. 
 
@@ -79,6 +79,6 @@ Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
-Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz AdRoll, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai nodrošinātu AdRoll atbilstību konfidencialitātes vai drošības saistībām, kas jums varētu rasties. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
+Iespējojiet Dynamics 365 Customer Insights datu pārnesi uz RollWorks, jūs ļaujat datus pārnest ārpus Dynamics 365 Customer Insights atbilstības robežām, ieskaitot potenciāli sensitīvus datus, tostarp, personas datus. Microsoft šos datus pārvirzīs atbilstoši jūsu norādījumiem, taču jūs atbildat par to, ka RollWorks atbilst jebkādiem jūsu privātuma vai drošības nosacījumiem. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.

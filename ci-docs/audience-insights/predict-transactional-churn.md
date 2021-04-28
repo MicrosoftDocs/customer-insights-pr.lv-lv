@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597198"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906865"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -46,6 +46,14 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
         - **Laikspiedols:** notikuma datums un laiks, ko identificē primārā atslēga.
         - **Notikums:** Norādiet notikuma nosaukumu, kuru vēlaties izmantot. Piemēram, lauks "UserAction" pārtikas preču veikalā varētu būt klientam piemērots kupona lietojums.
         - **Detalizēti:** Detalizēta informācija par notikumu. Piemēram, preču veikala lauks ar nosaukumu "CouponValue" var būt kupona valūtas vērtība.
+- Ieteicamie datu raksturlielumi:
+    - Pietiekami vēsturiskie dati: Transakcijas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. Vēlams, lai būtu abonēšanas dati par diviem vai trim gadiem. 
+    - Vairāki pirkumi katram klientam: Vēlams, vismaz divas transakcijas uz katru klientu.
+    - Klientu skaits: Vismaz 10 klientu profilu, vēlams vairāk nekā 1000 unikālo klientu. Ja būs mazāk par 10 klientiem un nepietiks datu, modelis būs kļūmīgs.
+    - Datu pilnīgums: Vairāk nekā 20% trūkstošo vērtību sniegtās entītijas datu laukā.
+
+> [!NOTE]
+> Uzņēmumiem ar augstu klientu pirkšanas biežumu (reizi dažās nedēļās) ir ieteicams izvēlēties īsāku prognozēšanas logu un zuduma definīciju. Ja pirkšanas biežums ir zems (reizi dažos mēnešos vai reizi gadā), izvēlieties garāku prognozēšanas logu un zuduma definīciju.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Transakciju zuduma prognozes izveide
 
@@ -129,7 +137,9 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
 1. Atlasiet prognozes, kuras vēlaties pārskatīt.
    - **Prognoze nosaukums:** Izveides brīdī paredzētās prognozes nosaukums.
    - **Prognoze tips:** Modeļa tips, kas izmantots prognozei
-   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.
+   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.    
+     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-new-segment) ar vēlamo slieksni.
+     Ne visi klienti ir aktīvi. Iespējams, daži no viņiem nav bijuši aktīvi ilgāku laiku un jau tiek uzskatīti par zudušiem, pamatojoties uz jūsu zuduma definīciju. Zuduma riska prognozēšana klientiem, kuri jau ir zuduši, nav noderīga, jo viņi nav interesējošā auditorija.
    - **Prognozētais lauks:** Šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tos neizmanto zudumu prognozē.
    - **Statuss:** Prognozes izpildes statuss.
         - **Ierindots:** Prognoze gaida citu procesu izpildi.

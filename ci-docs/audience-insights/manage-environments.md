@@ -1,7 +1,7 @@
 ---
 title: Vižu izveide un pārvaldība
 description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598302"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887995"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
@@ -44,6 +44,9 @@ ms.locfileid: "5598302"
 
 Pastāv divi veidi, ka izveidot jaunu vidi. Varat norādīt pilnīgi jaunu konfigurāciju vai arī var kopēt dažus konfigurācijas iestatījumus no esošas vides.
 
+> [!NOTE]
+> Organizācijas katrai Customer Insights licencei var izveidot *divas* vides. Ja jūsu organizācija iegādājas vairāk nekā vienu licenci, [sazinieties ar mūsu atbalsta komandu](https://go.microsoft.com/fwlink/?linkid=2079641), lai tiktu paaugstināts pieejamo vižu skaists. Papildinformāciju par noslodzi un pievienojumprogrammu noslodzi skatiet [Dynamics 365 licencēšanas rokasgrāmatā](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Lai izveidotu vidi:
 
 1. Programmas galvenē atlasiet **Vides** atlasītāju.
@@ -55,14 +58,14 @@ Lai izveidotu vidi:
 
 1. Dialoglodziņā **Jaunas vides izveide** atlasiet **Jauna vide**.
 
-   Ja vēlaties [kopēt datus no pašreizējās vides](#additional-considerations-for-copy-configuration-preview), atlasiet **Kopēt no esošās vides**. Jūs redzēsiet sarakstu, kurā ir visas jūsu organizācijā pieejamās vides, no kurām varat kopēt datus.
+   Ja vēlaties [kopēt datus no pašreizējās vides](#considerations-for-copy-configuration-preview), atlasiet **Kopēt no esošās vides**. Jūs redzēsiet sarakstu, kurā ir visas jūsu organizācijā pieejamās vides, no kurām varat kopēt datus.
 
 1. Sniedziet šādu informāciju:
    - **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt.
    - **Reģions**: Reģions, kurā tiek izvietots un viesots pakalpojums.
    - **Veids**: Atlasiet, vai vēlaties veidot ražošanas vai smilškastes vidi.
 
-2. Pēc izvēles varat arī atlasīt **Papildu iestatījumus**:
+1. Pēc izvēles varat arī atlasīt **Papildu iestatījumus**:
 
    - **Saglabāt visus datus uz** : Norāda, kur saglabāt no Customer Insights ģenerētos izvades datus. Jums ir divas opcijas: **Customer Insights krātuve** (Azure Data Lake, ko pārvalda Customer Insights darba grupa) un **Azure Data Lake Storage Gen2** (jūsu Azure Data Lake Storage). Pēc noklusējuma tiek atlasīta opcija Customer Insights krātuve.
 
@@ -75,20 +78,20 @@ Lai izveidotu vidi:
 
    - Azure Data Lake Storage Gen2 iespējai varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). **Konteinera** nosaukumu nevar mainīt, un tas būs "customerinsights".
    
-   - Ja vēlaties lietot [prognozes](predictions.md) vai konfigurēt datu kopīgošanu ar lietojumprogrammām un risinājumiem, pamatojoties uz Microsoft Dataverse, nodrošiniet Microsoft Dataverse vides URL sadaļā **Konfigurēt datu kopīgošanu ar Microsoft Dataverse un iespējojiet papildu iespējas**. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar Microsoft Dataverse Managed Data Lake.
+   - Ja vēlaties izmantot [prognozes](predictions.md), konfigurējiet datu kopīgošanu ar lietojumprogrammām un risinājumiem, balstoties Microsoft Dataverse, vai iespējojiet datu uzņemšanu no lokāliem datu avotiem, sadaļā **Konfigurēt datu kopīgošanu ar Microsoft Dataverse un iespējojiet papildu iespējas** norādiet Microsoft Dataverse vides URL. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Datu kopīgošana ar Microsoft Dataverse Managed Data Lake pašlaik netiek atbalstīta, saglabājot visus savus datus jūsu Azure Data Lake Storage.
      > - [Trūkstošo vērtību prognoze entītijā](predictions.md) pašlaik netiek atbalstīta, iespējojot datu kopīgošanu ar Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Palaižot procesus, piemēram, datu uzņemšanas vai segmenta izveidi, tiek izveidotas atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un model.json faili tiks izveidoti un pievienoti attiecīgajām apakšmapēm, pamatojoties uz jūsu palaisto procesu.
 
    Ja izveidojat vairāku veidu Customer Insights un izvēlaties saglabāt izvades entītijas, izmantojot savas krātuves konta vides, katrai videi, kurai ir ci_ konteinerā, tiks izveidotas atsevišķas mapes <environmentid>.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Papildu apsvērumi kopēšanas konfigurācijai (priekšskatījums)
+### <a name="considerations-for-copy-configuration-preview"></a>Konfigurēšanas kopēšanas apsvērumi (priekšskatījums)
 
 Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 
@@ -136,6 +139,18 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 4. Ja vide ir konfigurēta saglabāt datus pakalpojumā Azure Data Lake Storage Gen2, jūs varat atjaunināt **Konta atslēgu**. Taču nevar mainīt **Konta nosaukumu** vai **Konteinera** nosaukumu.
 
 5. Ja vēlaties, varat atjaunināt no uzņēmuma atslēgas savienojuma uz resursu vai abonementa bāzes savienojumu. Pēc jaunināšanas jūs nevarat atgriezties pie uzņēmuma atslēgas pēc atjaunināšanas. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Atjauninot savienojumu, nevar mainīt **Konteinera** informāciju.
+
+6. Ja vēlaties, varat sniegt Microsoft Dataverse vides URL sadaļā **Konfigurēt datu kopīgošanu ar Microsoft Dataverse un iespējot papildu iespējas**. Šīs iespējas ietver datu kopīgošanu ar lietojumprogrammām un risinājumiem, balstoties Microsoft Dataverse, datu uzņemšanā no lokālajiem datu avotiem vai [prognožu](predictions.md) lietošanā. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar Microsoft Dataverse Managed Data Lake.
+
+   > [!NOTE]
+   > - Datu kopīgošana ar Microsoft Dataverse Managed Data Lake pašlaik netiek atbalstīta, saglabājot visus savus datus jūsu Azure Data Lake Storage.
+   > - [Entitījā trūkstošo vērtību prognozēšana](predictions.md) pašlaik netiek atbalstīta, ja iespējojat datu kopīgošanu ar Microsoft Dataverse Managed Data Lake.
+
+   Kolīdz ir iespējota datu kopīgošana ar Microsoft Dataverse, tiks aktivizēta pilnā jūsu datu avotu atsvaidzināšana un citi procesi. Ja procesi pašlaik ir palaisti un gaida rindā, jums nebūs redzama opcija iespējot datu kopīgošanu ar Microsoft Dataverse. Lai iespējotu datu kopīgošanu, varat pagaidīt, kamēr šie procesi tiek pabeigti, vai tos atcelt. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
+   
+   Palaižot procesus, piemēram, datu uzņemšanas vai segmenta izveidi, tiek izveidotas atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un model.json faili tiks izveidoti un pievienoti atbilstošajām apakšmapēm atkarībā no procesa, kuru palaižat.
 
 ## <a name="reset-an-existing-environment"></a>Esošās vides atiestatīšana
 

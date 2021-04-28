@@ -1,7 +1,7 @@
 ---
 title: Pasākumu izveide un pārvaldība
 description: Definējiet pasākumus, lai analizētu un atspoguļotu sava uzņēmuma veiktspēju.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654741"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887949"
 ---
 # <a name="define-and-manage-measures"></a>Definējiet un pārvaldiet mērus
 
-Pasākumi palīdz labāk izprast klientu uzvedību un biznesa veiktspēju, izgūstot atbilstošas vērtības no [vienotajiem profiliem](data-unification.md). Piemēram, uzņēmumam jāizprot *katra klienta kopējie tēriņi*, lai izprastu atsevišķa klienta pirkumu vēsturi. Vai izmērīt *uzņēmuma kopējos pārdošanas apjomus*, lai izprastu kopējā līmeņa ieņēmumus visā biznesā.  
+Mērījumi palīdz labāk izprast klientu paradumus un uzņēmuma veiktspēju. Tie aplūko atbilstošās vērtības no [vienotajiem profiliem](data-unification.md). Piemēram, uzņēmums vēlas aplūkot *kopējos tēriņus uz klientu*, lai izprastu katra atsevišķā klienta pirkumu vēsturi vai mērītu *kopējos uzņēmuma pārdošanas rādītājus*, lai izprastu kopīgos visa uzņēmuma ieņēmumus.  
 
 Pasākumi tiek izveidoti, izmantojot pasākumu veidotāju, datu vaicājumu platformu ar dažādiem operatoriem un vienkāršām kartēšanas opcijām. Tas ļauj filtrēt datus, grupēt rezultātus, noteikt [entītiju attiecību ceļus](relationships.md) un priekšskatīt izvadi.
 
 Izmantojiet pasākumu veidotāju, kas tiek plānots biznesa aktivitātēm, vaicājot klientu datus un izvelkot ieskatus. Piemēram, *katra klienta kopējo tēriņu* un *katra klienta kopējo ienākumu* pasākumu izveide palīdz identificēt klientu grupu, kuriem ir augsti tēriņi, bet augsti ieņēmumi. Varat [izveidot segmentu](segments.md), lai vadītu nākamās, vislabāk piemērotās darbības. 
 
-## <a name="create-a-measure"></a>Mēra izveide
+## <a name="build-your-own-measure-from-scratch"></a>Personīgā mērījuma izveide no nulles
 
 Šajā sadaļā ir skatīts, kā izveidot jaunu pasākumu no nulles. Varat izveidot pasākumu ar datu atribūtiem no datu entītijām, kurām ir iestatītas attiecības, lai izveidotu savienojumu ar Klienta entītiju. 
 
 1. Sadaļā Auditorijas ieskati ejiet uz **Mēri**.
 
-1. Atlasiet **Jauns**.
+1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
 
 1. Atlasiet **Rediģēt nosaukumu** un norādiet pasākumam **Nosaukumu**. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Izmantojiet pasākumu veidotāju, kas tiek plānots biznesa aktivitātēm, vaic�
    1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt pasākumus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa pasākumus*. Ja vēlaties izveidot *uzņēmuma līmeņa pasākumus*, varat noņemt noklusējuma dimensiju.
    1. Atlasiet vienumu **Pabeigts**, lai pasākumam pievienotu dimensijas.
 
+1. Ja jūsu datos ir vērtības, kuras ir jāaizstāj ar veselu skaitli, piemēram, aizstājot *nulle* ar *0*, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus.
+
 1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Pasākumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
    1. Atlasiet **Datu preferences** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
    1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
@@ -88,9 +90,57 @@ Izmantojiet pasākumu veidotāju, kas tiek plānots biznesa aktivitātēm, vaic�
 
 1. Dodieties uz **Pasākumi**, lai sarakstā redzētu jaunizveidoto pasākumu.
 
+## <a name="use-a-template-to-build-a-measure"></a>Veidnes izmantošana mērījuma veidošanā
+
+Lai izveidotu bieži izmantotus mērījumus, varat lietot to iepriekš definētās veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
+
+Pieejamās mērījumu veidnes: 
+- Vidējā transakcijas vērtība (ATV)
+- Kopējā transakciju vērtība
+- Vidējie ieņēmumi dienā
+- Gada vidējie ieņēmumi
+- Transakciju skaits
+- Iegūtie lojalitātes punkti
+- Izmantotie lojalitātes punkti
+- Lojalitātes punktu bilance
+- Klienta aktivitātes laika periods
+- Dalības ilgums lojalitātes programmā
+- Laiks kopš pēdējā pirkuma
+
+Šajā procedūrā aprakstītas darbības jauna mērījuma izveidei, izmantojot veidni.
+
+1. Sadaļā Auditorijas ieskati ejiet uz **Mēri**.
+
+1. Atlasiet **Jauns** un atlasiet **Izvēlieties veidni**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Ekrānuzņēmums nolaižamajai izvēlnei laikā, kad tiek izveidots jauns mērījums ar izceltu veidni..":::
+
+1. Atrodiet sev atbilstošo veidni un atlasiet **Izvēlēties veidni**.
+
+1. Pārskatiet prasītos datus un atlasiet **Sākt darbu**, ja visi dati ir pareizi.
+
+1. Rūtī **Rediģēt nosaukumu** ievadiet sava mērījuma vārdu un izvades entitīju. 
+
+1. Atlasiet **Gatavs**.
+
+1. Sadaļā **Iestatīt laikposmu** definējiet lietojamo datu laika periodu. Izvēlieties, vai vēlaties, lai jaunais mērījums ietver visu datu kopu, atlasot **Visu laiku**. Vai, ja vēlaties, lai mērījums koncentrējas uz **Konkrētu laika periodu**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrānuzņēmums, kurā redzama laika perioda sadaļa, kad mērījumu konfigurē no veidnes.":::
+
+1. Nākamajā sadaļā atlasiet **Pievienot datus**, lai izvēlētos darbībs un kartētu atbilstošos datus no savas *Vienotās darbības* entitījas.
+
+    1. 1. darbība no 2: Sadaļā **Darbības veids** izvēlieties entitījas veidu, kuru vēlaties lietot. **Darbībām** atlasiet entitījas, kuras vēlaties kartēt.
+    1. 2. darbība no 2: Atlasiet atribūtu no *Vienotās darbības* entitījas formulas prasītajam komponentam. Piemēram, vidējai transakcijas vērtībai tas ir komponents, kas apzīmē transakcijas vērtību. **Darbības laikspiedolam** atlasiet atribūtu no Vienotās darbības entitījas, kas apzīmē darbības datumu un laiku.
+   
+1. Kad datu kartēšana ir izdevusies, varat redzēt statusu kā **Pabeigts** un kartēto darbību un atribūtu nosaukumu.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Ekrānuzņēmums pabeigtai mērījuma veidnes konfigurēšanai.":::
+
+1. Tagad varat atlasīt **Palaist**, lai aprēķinātu mērījuma rezultātus. Lai to precizētu vēlāk, atlasiet **Saglabāt melnrakstu**.
+
 ## <a name="manage-your-measures"></a>Pārvaldiet savus mērus
 
-Kad esat [izveidojis pasākumu](#create-a-measure), lapā **Mēri** tiks atainots pasākumu saraksts.
+Mērījumu saraksts atrodams lapā **Mērījumi**.
 
 Atradīsiet informāciju par pasākuma tipu, izveidotāju, izveides datumu, statusu un stāvokli. Kad sarakstā atlasāt kādu pasākumu, varat priekšskatīt izvadi un lejupielādēt .CSV failu.
 

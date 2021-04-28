@@ -1,7 +1,7 @@
 ---
 title: Uzņēmumu profilu bagātināšana ar trešās puses bagātināšanas programmu Leadspace
 description: Vispārēja informācija par Leadspace trešās puses bagātināšanu.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597658"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895922"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
 
-Leadspace ir datu zinātnes uzņēmums, kas nodrošina B2B klientu datu platformu. Tā nodrošina klientiem vienotus klientu profilus, lai uzņēmumi bagātinātu datus. Bagātinājumi ietver papildu atribūtus, kā uzņēmuma lielums, atrašanās vieta, nozare utt.
+Leadspace ir datu zinātnes uzņēmums, kas nodrošina B2B klientu datu platformu. Tā nodrošina klientiem vienotus klientu profilus, lai uzņēmumi bagātinātu datus. Bagātinātie dati ietver vairākus atribūtus, piemēram, uzņēmuma izmēru, atrašanās vietu, nozari u.c.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 Lai konfigurētu Leadspace, ir jāizpilda tālāk aprakstītie priekšnosacījumi:
 
-- Jums ir aktīva Leadspace licence un "mūžīgā atslēga" (dēvēta par **Leadspace marķieri**). Lai iegūtu detalizētu informāciju par viņu produktu, sazinieties tieši ar [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/).
-- ir nepieciešamas [Administratora](permissions.md#administrator) atļaujas.
+- Jums ir aktīva Leadspace licence.
 - Jums ir [vienoti klientu profili](customer-profiles.md) uzņēmumiem.
+- Administrators jau ir konfigurējis Leadspace savienojumu vai jums ir [administratora](permissions.md#administrator) atļaujas un “pastāvīgā atslēga” (jeb **Leadspace marķieris**). Tieši sazinieties ar [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/), lai iegūtu informāciju par produktu.
 
-## <a name="configuration"></a>Konfigurācija
+## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
-1. Leadspace rūtī atlasiet **Bagātināt manus datus**.
+1. Leadspace rūtī atlasiet **Bagātināt datus** un atlasiet **Sākt darbu**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace mozaīkas ekrānuzņēmums.":::
 
-1. Atlasiet vienumu **Sākt darbu** un pēc tam ievadiet aktīvu **Leadspace marķieri** (mūžīgo atslēgu). Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**. Apstipriniet abas ievades, atlasot **Izveidot savienojumu ar Leadspace**.
+1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un izvēloties **Leadspace**. 
 
-1. Atlasiet **Kartes datus** un izvēlieties datu kopu, ko vēlaties bagātināt ar uzņēmuma datiem no programmas Leadspace. Varat atlasīt entītiju *Klients*, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+1. Lai apstiprinātu savienojumu, atlasiet **Pieslēgties Leadspace**.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Izvēlieties starp klienta profilu un segmenta bagātināšanu.":::
+1. Atlasiet **Tālāk** un izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar uzņēmuma datiem no Leadspace. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
 
-1. Nospiediet **Tālāk** un definējiet, kuri no vienoto profilu laukiem ir jāizmanto, lai meklētu atbilstošus uzņēmuma datus no Leadspace. Lauks **Uzņēmuma nosaukums** ir obligāts. Lielākai atbilstībai varat pievienot līdz diviem citiem laukiem - **Uzņēmuma tīmekļa vietne** un **Uzņēmuma atrašanās vieta**.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Ekrānuzņēmums, izvēloties klientu datu kopu.":::
+
+1. Atlasiet **Tālāk** un definējiet kuri lauki no jūsu vienotajiem profiliem tiek izmantoti, lai meklētu atbilstošus uzņēmuma datus no Leadspace. Lauks **Uzņēmuma nosaukums** ir obligāts. Lielākai atbilstībai varat pievienot līdz diviem citiem laukiem - **Uzņēmuma tīmekļa vietne** un **Uzņēmuma atrašanās vieta**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace lauku kartējuma rūts.":::
-   
-1. Atlasiet **Piemērot**, lai pabeigtu lauka kartēšanu.
 
-1. Atlasiet **Palaist**, lai bagātinātu uzņēmuma profilus. Bagātināšanas ilgums ir atkarīgs no vienoto klientu profilu skaita.
+1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
+
+1. Norādiet bagātināto datu nosaukumu un pēc izvēles pārskatīšanas atlasiet **Saglabāt bagātinātos datus**.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Leadspace savienojuma konfigurēšana 
+
+Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un Leadspace rūtī atlasiet **Iestatīt**.
+
+1. Atlasiet **Sākt darbu** 
+
+1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
+
+1. Iesniedziet derīgu Leadspace marķieri.
+
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+
+1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
+
+1. Pēc pārbaudes pabeigšanas atlasiet **Saglabāt**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace savienojuma konfigurēšanas lapa.":::
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 

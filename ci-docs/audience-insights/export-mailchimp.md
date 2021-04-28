@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Mailchimp
-description: Uzziniet, kā konfigurēt savienojumu ar Mailchimp.
-ms.date: 10/26/2020
+description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Mailchimp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598210"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759887"
 ---
-# <a name="connector-for-mailchimp-preview"></a>Savienotājs ar Mailchimp (priekšskatījums)
+# <a name="export-segment-lists-to-mailchimp-preview"></a>Segmentu sarakstu eksportēšana uz Mailchimp (priekšskatījums)
 
 Eksportējiet vienotu klientu profilu segmentus uz Mailchimp, lai izveidotu informatīvas vēstules un e-pasta kampaņas.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites-for-connection"></a>Savienojuma priekšnosacījumi
 
 -   Jums ir [Mailchimp konts](https://mailchimp.com/) un atbilstošie administratora akreditācijas dati.
 -   Mailchimp ir esošas auditorijas un attiecīgie ID. Papildinformāciju skatiet rakstā [Mailchimp auditorijas](https://mailchimp.com/help/create-audience/).
 -   Jums ir [konfigurēti segmenti](segments.md)
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
-## <a name="connect-to-mailchimp"></a>Izveidot savienojumu ar Mailchimp
+## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-1. Dodieties uz sadaļu **Administrators** > **Eksportēšanas galamērķi**.
+- Līdz 1 000 000 profilu, eksportējot uz Mailchimp.
+- Eksportēšana uz Mailchimp ir ierobežota līdz segmentiem.
+- Segmentu ar 1 miljonu profilu eksportēšana var aizņemt līdz trim stundām. 
+- To profilu skaits, ko var eksportēt uz Mailchimp, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar Mailchimp.
 
-1. Sadaļā **Mailchimp** atlasiet vienumu **Iestatīt**.
+## <a name="set-up-connection-to-mailchimp"></a>Savienojuma ar Mailchimp iestatīšana
 
-1. Piešķiriet eksportēšanas galamērķim atpazīstamu nosaukumu laukā **Parādāmais nosaukums**.
+1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu privātumu un atbilstību**.
+1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Autopilot**, lai konfigurētu savienojumu.
 
-1. Ievadiet savas **[Mailchimp auditorijas ID](https://mailchimp.com/help/find-audience-id/)** un atlasiet opciju **Izveidot savienojumu**, lai inicializētu savienojumu ar Mailchimp.
+1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
+
+1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
+
+1. Lai uzsāktu savienojumu ar Mailchimp, atlasiet **Savienot**.
 
 1. Atlasiet **Autentificēties ar Mailchimp** un sniedziet savus Mailchimp akreditācijas datus.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Eksportēt ekrānuzņēmumu Mailchimp savienojumā":::
-
-1. Lai konfigurētu eksportēšanu, atlasiet **Tālāk**.
+1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
 
 ## <a name="configure-the-connector"></a>Savienotāja konfigurēšana
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
+Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
 
-1. Ja vēlaties, varat eksportēt **Vārds** un **Uzvārds** kā papildu laukus, lai izveidotu vairāk personalizētu e-pasta ziņojumu. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
+1. Pārejiet uz **Dati**> **Eksportēšana**.
+
+1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Mailchimp. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+
+1. Ievadiet **[Mailchimp auditorijas ID](https://mailchimp.com/help/find-audience-id/)**
+
+3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
+
+1. Ja vēlaties, varat eksportēt **Vārdu** un **Uzvārdu**, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Kopsummā var eksportēt līdz 1 000 000 klientu profilu uz Mailchimp.
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Atlasīt laukus un segmentus eksportēšanai uz Mailchimp":::
-
 1. Atlasiet vienumu **Saglabāt**.
 
-## <a name="export-the-data"></a>Datu eksportēšana
+Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Datus var [eksportēt pēc pieprasījuma](export-destinations.md). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Mailchimp tagad varat atrast jūsu segmentus sadaļā [Mailchimp auditorija](https://mailchimp.com/help/create-audience/).
-
-## <a name="known-limitations"></a>Zināmie ierobežojumi
-
-- Līdz 1 000 000 profilu, eksportējot uz Mailchimp.
-- Eksportēšana uz Mailchimp ir ierobežota līdz segmentiem.
-- Segmentu eksportēšanai kopā ar 1 000 000 profilu var būt nepieciešamas 3 stundas, jo pastāv ierobežojumi no pakalpojuma sniedzēja puses. 
-- To profilu skaits, ko var eksportēt uz Mailchimp, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar Mailchimp.
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
 Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz Mailchimp, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai nodrošinātu Mailchimp atbilstību konfidencialitātes vai drošības saistībām, kas jums varētu rasties. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

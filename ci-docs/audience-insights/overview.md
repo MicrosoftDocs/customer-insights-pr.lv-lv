@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598639"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896474"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 
@@ -27,9 +27,9 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
   - Ērti izveidot datu savienojumu un apvienot tos, nodrošinot transakciju, novērojumu un uzvedības datus populāros [datu avotos, izmantojot iebūvētos savienotājus](data-sources.md).
   - Gudri transformēt klientu datus — izveidojiet vienotus klientu profilus, kas atbilst [Kopējam datu modelim](/common-data-model/). Atrisināt klientu identitātes ar AI/ML balstītiem ieteikumiem.
 
-- **Bagātināt ar auditorijas informāciju, kas iekļauta programmā Microsoft Graph**
+- **Bagātināt ar auditorijas informāciju**
 
-  - Veidot bagātīgākus klientu profilus, [iekļaujot auditorijas informāciju, kas iekļauta programmā Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Veidojiet bagātinātākus klientu profilus, [iekļaujot bagātinātus datus](enrichment-hub.md).  
 
 - **Piešķirt savam biznesa procesam un personalizētai klientu pieredzei jaudu**
 
@@ -43,7 +43,7 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
 
   - Piekļuve bagātīgai savienotāju kolekcijai, lai uzņemtu visus jūsu klientu datus.
   - Iespēja apvienot klientu datus un pārveidot to par [Kopējā datu modeļa](/common-data-model/) formātu.
-  - Bagātiniet klientu informāciju ar ieskatiem par auditorijas informāciju, kas iekļauta programmā Microsoft Graph, piemēram, zīmolu saistības un intereses.
+  - Bagātiniet klientu informāciju ar ieskatiem par auditorijas informāciju, piemēram, zīmolu saistības un intereses.
   - "Klikšķinot, nevis kodējot" konfigurācija un atkļūdošanas pieredze palīdzēt ērti konfigurēt auditorijas ieskatus un identificēt iespējamās problēmas.
   - Attīriet un standartizējiet klientu datus dažādos avotos, izmantojot ar MI darbinātus ieteikumus.  
 

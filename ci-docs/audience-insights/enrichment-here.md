@@ -1,7 +1,7 @@
 ---
 title: Bagātināšana ar trešās puses bagātināšanas programmu HERE Technologies
 description: Vispārēja informācija par HERE Technologies trešās puses bagātināšanu.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597750"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896060"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Klientu profilu bagātināšana ar HERE Technologies (priekšskatījums)
 
@@ -26,35 +26,54 @@ Lai konfigurētu HERE Technologies, ir jāatbilst šādiem priekšnosacījumiem:
 
 - Jums ir jābūt aktīvam HERE Technologies abonementam. Lai saņemtu abonementu, varat [pierakstīties šeit](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) vai [sazinieties ar HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) tieši. [Papildinformācija par HERE Technologies atrašanās vietas bagātināšanu.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Jums ir HERE Technologies API atslēga.
+- Ir pieejams HERE [savienojums](connections.md) *vai* jums ir [administratora](permissions.md#administrator) atļaujas un HERE Technologies API atslēga.
 
-- ir nepieciešamas [Administratora](permissions.md#administrator) atļaujas.
+## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
-## <a name="configuration"></a>Konfigurācija
+1. Dodieties uz **Dati** > **Bagātināšana**. 
 
-1. Dodieties uz **Dati** > **Bagātināšana**.
-
-1. Atlasiet HERE Technologies elementu **Bagātināt manus datus**.
+1. HERE Technologies rūtī atlasiet **Bagātināt datus** un atlasiet **Sākt darbu**.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies elements](media/HERE-tile.png "HERE Technologies elements")
 
-1. Ievadiet aktīvu **HERE Technologies API atslēgu**. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**. 
+1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu**. Nolaižamajā izvēlnē atlasiet **HERE Technologies**. 
 
-1. Apstipriniet abas ievades, atlasot **Izveidot savienojumu ar HERE**.
+1. Atlasiet **Pieslēgties HERE Technologies**, lai apstiprinātu savienojuma atlasi.
 
-1.  Atlasiet **Pievienot datus** un izvēlieties **Klienta datu kopu**, ko vēlaties bagātināt ar atrašanās vietas datiem no programmas HERE Technologies. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+1.  Atlasiet **Tālāk** un izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar atrašanās vietas datiem no HERE Technologies. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Ekrānuzņēmums, izvēloties klientu datu kopu.":::
 
-1. Izvēlieties, vai jākartē lauki primārajai un/vai sekundārajai adresei. Varat norādīt lauka kartējumu abām adresēm (piemēram, mājas un darba adrese), kā arī bagātināt abu adrešu profilus atsevišķi. Atlasiet **Tālāk**.
+1. Izvēlieties, vai jākartē lauki primārajai un/vai sekundārajai adresei. Jūs varat norādīt lauka kartējumu abām adresēm un atsevišķi bagātināt abu adrešu profilus. Piemēram, ja ir mājas un darba adrese. Atlasiet **Tālāk**.
 
 1. Definējiet, kurus vienoto profilu laukus vajadzētu izmantot, lai meklētu atbilstošos HERE Technologies atrašanās vietas datus. Atlasītajai primārajai un/vai sekundārajai adresei ir nepieciešami lauki **1.adrese** un **Pasta indekss**. Lai iegūtu augstāku atbilstību precizitāti, var pievienot vairākus laukus.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies bagātināšanas konfigurācijas lapa](media/enrichment-HERE-configuration.png "HERE Technologies bagātināšanas konfigurācijas lapa")
 
-1. Atlasiet **Piemērot**, lai pabeigtu lauka kartēšanu.
+1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
+
+1. Norādiet bagātināto datu nosaukumu. 
+
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
+
+## <a name="configure-the-connection-for-here-technologies"></a>HERE Technologies savienojuma konfigurēšana 
+
+Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un HERE Technologies rūtī atlasiet **Iestatīt**.
+
+1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
+
+1. Norādiet derīgu HERE Technologies API atslēgu.
+
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+
+1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
+
+1. Pēc pārbaudes pabeigšanas atlasiet **Saglabāt**.
+
+> [!div class="mx-imgBorder"]
+   > ![HERE Technologies savienojuma konfigurēšanas lapa](media/enrichment-HERE-connection.png "HERE Technologies savienojuma konfigurēšanas lapa")
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 

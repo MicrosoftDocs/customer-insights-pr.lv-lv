@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597704"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896014"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -27,8 +27,8 @@ Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrā
 
 Cilnē **Atklāt** atradīsiet šādus bagātinātājus:
 
-- [Zīmoli](enrichment-microsoft-graph.md) nodrošina Microsoft Graph
-- [Intereses](enrichment-microsoft-graph.md) nodrošina Microsoft Graph
+- Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
+- Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - Experian nodrošinātie [demogrāfijas dati](enrichment-experian.md)
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati
@@ -40,7 +40,7 @@ Cilnē **Manas bagātināšanas** varat redzēt jūsu konfigurētos bagātināju
 
 Lai redzētu visus konfigurētos bagātinājumus, dodieties uz **Mani papildinājumi**. Katrs bagātinājums tiek attēlots kā rinda, kurā ir iekļauta papildu informācija par bagātinājumu.
 
-Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Vai arī, lai skatītu opcijas, varat atlasīt daudzpunkti (...) saraksta elementā.
+Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Lai skatītu opcijas, varat arī saraksta elementā atlasīt daudzpunkti (...).
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcijas bagātinājumu pārvaldībai papildinājumu sarakstā":::
 
@@ -52,5 +52,12 @@ Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Vai arī, lai skatītu
 
 Vairākus bagātinājumus var vienlaicīgi palaist vai deaktivizēt, tos atlasot sarakstā. Skatīšanas un rediģēšanas opcijas nav pieejamas kā lielapjoma darbība un vienlaicīgi darbojas tikai vienai veiktajai bagātināšanai.
 
+## <a name="enrichments-and-connections"></a>Bagātināšana un savienojumi
+
+Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connections.md), kurus administrators iestata ar akreditāciju un kuru pārnesei tiek sniegta piekrišana. Administratori un līdzstrādnieki var izmantot savienojumus, lai konfigurētu bagātinātos datus.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
+
+Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai konkrētam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumus un pašreizējo lietojumu var aplūkot lapā **Bagātināšana**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Bagātināšana ar trešās puses bagātināšanas programmu Experian
 description: Vispārēja informācija par Experian trešās puses bagātināšanu.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597796"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896382"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Bagātiniet klientu profilus ar demogrāfijas rādītājiem no Experian (priekšskatījums)
 
@@ -25,10 +25,10 @@ Experian ir pasaules mēroga līderis patērētāju un uzņēmumu kredītatskai�
 Lai konfigurētu Experian, ir jāatbilst šādiem priekšnosacījumiem:
 
 - Ir jābūt aktīvam Experian abonementam. Lai iegūtu abonementu, tieši [sazinieties ar Experian](https://www.experian.com/marketing-services/contact). [Uzziniet vairāk par Experian datu bagātināšanu](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Jums ir lietotāja ID, partijas ID un modeļa numurs jūsu SSH iespējotajam drošās transportēšanas (ST) kontam, kuru Experian jums ir izveidojis.
-- Jums ir [Administratora](permissions.md#administrator) tiesības skatīt auditorijas ieskatus.
 
-## <a name="configuration"></a>Konfigurācija
+- Administrators jau ir konfigurējis Experian savienojumu *vai* jums ir [administratora](permissions.md#administrator) atļaujas. Jums arī ir nepieciešams lietotāja ID, partijas ID un modeļa numurs jūsu SSH iespējotajam drošā transporta (ST) kontam, kuru jums izveidoja Experian.
+
+## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
 1. dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
 
@@ -36,26 +36,46 @@ Lai konfigurētu Experian, ir jāatbilst šādiem priekšnosacījumiem:
 
    > [!div class="mx-imgBorder"]
    > ![Experian elements](media/experian-tile.png "Experian elements")
+   > 
 
-1. Atlasiet **Sākt darbu** un ievadiet lietotāja ID, partijas ID un modeļa numuru jūsu Experian drošās transportēšanas kontam. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**. Apstipriniet visus datus, atlasot **Piemērot**.
+1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un nolaižamajā izvēlnē izvēloties Experian. 
 
-## <a name="map-your-fields"></a>Lauku kartēšana
+1. Atlasiet **Pieslēgties Experian**, lai apstiprinātu savienojuma atlasi.
 
-1.  Atlasiet **Pievienot datus** un izvēlieties **Klienta datu kopu**, ko vēlaties bagātināt ar demogrāfiskajiem datiem no programmas Experian. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+1.  Atlasiet **Tālāk** un izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar demogrāfijas datiem no Experian. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
 
-1. Atlasiet galvenos identifikatorus no laukiem **Vārds un adrese**, **E-pasts** vai **Tālrunis**, lai tos nosūtītu uz Experian identitātes noteikšanai.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Ekrānuzņēmums, izvēloties klientu datu kopu.":::
 
-   > [!TIP]
-   > Jo vairāk galveno identifikatoru atribūtu tiek nosūtīts Experian, jo augstāka iespēja iegūt augstāku atbilstības rādītāju.
+1. Atlasiet **Tālāk** un definējiet kura veida laukus no jūsu vienotajiem profiliem vajadzētu izmantot, meklējot atbilstošus demogrāfijas datus no Experian. Ir obligāti jānorāda vismaz viens no laukiem **Vārds, uzvārds un adrese**, **Tālruņa numurs** vai **E-pasts**. Lai nodrošinātu augstāku atbilstības precizitāti, var pievienot līdz diviem citiem laukiem. Šāda atlase ietekmēs kartēšanas laukus, kuriem jums būs piekļuve nākamajā darbībā.
 
-1. Atlasiet **Nākamais** un kartējiet atbilstošos atribūtus no jūsu vienotās klientu entītijas atlasītajiem galvenajiem identifikatoru laukiem.
+    > [!TIP]
+    > Jo vairāk galveno identifikatoru atribūtu tiek nosūtīts Experian, jo augstāka iespēja iegūt augstāku atbilstības rādītāju.
 
-1. Atlasiet **Pievienot atribūtus**, lai kartētu papildu atribūtus, kurus vēlaties nosūtīt uz Experian.
+1. Lai sāktu lauka kartēšanu, atlasiet **Tālāk**.
 
-1.  Atlasiet **Saglabāt**, lai pabeigtu lauka kartēšanu.
+1. Definējiet, kura veida laukus no jūsu vienotajiem profiliem vajadzētu izmantot, meklējot atbilstošus demogrāfijas datus no Experian. Obligātie lauki ir atzīmēti.
 
-    > [!div class="mx-imgBorder"]
-    > ![Experian lauka kartēšana](media/experian-field-mapping.png "Experian lauka kartēšana")
+1. Norādiet bagātināto datu nosaukumu un izvades entitījas nosaukumu.
+
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
+
+## <a name="configure-the-connection-for-experian"></a>Experian savienojuma konfigurēšana 
+
+Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un Experian rūtī atlasiet **Iestatīt**.
+
+1. Atlasiet **Sākt**.
+
+1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
+
+1. Ievadiet derīgu lietotāja ID, partijas ID un modeļa numuru no sava Experian Secure Transport konta.
+
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+
+1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
+
+1. Pēc pārbaudes pabeigšanas atlasiet **Saglabāt**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian savienojuma konfigurācijas rūts.":::
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 

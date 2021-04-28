@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598447"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896244"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598447"
 
 Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu informāciju par ilgtermiņa plāniem attiecībā uz funkcijām, skatiet [Dynamics 365 un Power Platform laidienu plānus](/dynamics365/release-plans/).
 
-Varat skatīties arī tālāk norādītos video, lai uzzinātu vairāk par pēdējo sešu mēnešu plānotajām iespējām.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģioni var agrāk skatīt funkcijas nekā citi. Ja vien nav norādīts citādi, neveiciet nekādu darbību, un programma automātiski atjauninās programmu bez jebkādas dīkstāves.
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Atjauninājumi 2021. gada martā
+
+2021. gada marta atjauninājumi ietver vairākus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="activities"></a>Darbības
+
+- **Darbību vednis un semantiskie veidi** Esam uzlabojuši un atjaunināšu savu darbību kartēšanu, lai vadītu un vienkāršotu darbību kartēšanas izveidi. Šajā jaunajā iespējā lietotāji var izmantot vadību, kas viņiem palīdzēs izpildīt katru procesa darbību. Darbību kartēšanas darbībā, līdztekus izvēlei no vairākiem darbību veidiem, lietotājs var izvēlēties semantiski kartēt *Abonementa* un/vai *SalesOrderLine* datus, uz nozares standarta shēmām, kuras var izmantot patēriņa lejupstraumei.    
+  Papildinformācijai skatiet [Klientu darbības](activities.md).
+
+### <a name="data-ingestion"></a>Datu pieņemšana
+
+- **Pieslēdzieties lokālajiem datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas** Ar prieku izziņojam priekšskatījumu Power Platform datu plūsmām un lokālo savienojamību Customer Insights vārtejām ar saistīto Power Platform vai Dataverse vidi. Visi jaunie datu avoti, kas izveidoti Customer Insights vidē ar saistīto Dataverse vidi, pēc noklusējuma kļūs par Power Platform datu plūsmām, radot lokālo datu savienojamību un bagātīgu savienotāju un pārveides iespēju klāstu.
+
+### <a name="extensibility"></a>Paplašināšana
+
+- **Savienojumos un eksportos organizētie eksporti** Mēs esam nomainījuši **Eksporta galamērķu** lapas nosaukumu uz **Savienojumi** un **Eksportiem** pievienojuši atsevišķu lapu. Šī atjauninājuma ietvaros mēs pārvirzīsim esošos eksportus uz savienojuma pāriem un eksportēsim, izmantojot šo savienojumu. Tagad administratoriem ir vairāk skaidrības par lapā **Savienojumi** izejošajiem datiem. Visām lietotāju lomām ir piekļuve  **Eksportu** lapai, taču vienīgi administratori var izvēlēties atļaut līdzstrādniekiem rediģēt konkrētus eksportus ar kopīgotiem savienojumiem.     
+  Papildinformāciju skatiet sadaļā [Savienojumu pārskats](connections.md) un [Eksportēšanas pārskats](export-destinations.md).
+
+- **Segmentu eksportēšana uz Campaign Monitor** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver Campaign Monitor. Tagad varat eksportēt segmentus no Customer Insights uz Campaign Monitor sarakstiem un tos izmantot kā bāzlīnijas savās mārketinga kampaņās.    
+   Papildinformāciju skatiet tēmā [Datu eksportēšana uz Campaign Monitor](export-campaign-monitor.md).
+
+- **Segmentu eksportēšana uz Constant Contact** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver Constant Contact. Tagad varat eksportēt segmentus no Customer Insights uz Constant Contact sarakstiem un tos izmantot kā bāzlīnijas savās mārketinga kampaņās.   
+   Papildinformāciju skatiet tēmā [Datu eksportēšana uz Constant Contact](export-constant-contact.md).
+
+- **Segmentu eksportēšana uz RollWorks** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver RollWorks. Tagad varat eksportēt segmentus no Customer Insights uz RollWorks auditorijām un tos izmantot kā bāzlīnijas savās B2B reklāmu aktivitātēs.    
+   Papildinformāciju skatiet tēmā [Eksportēšana uz RollWorks](export-rollworks.md).
+
+- **Segmentu eksportēšana uz Snapchat** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver Snapchat. Tagad varat eksportēt segmentus no Customer Insights uz Snapchat auditorijām un tos izmantot kā bāzlīnijas savās reklāmu aktivitātēs.     
+   Papildinformāciju skatiet tēmā [Eksportēšana uz Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Prognozes
+
+- **Produktu filtru lietošana predikatīvajā produktu ieteikšanā** Esam pievienojuši iespēju izmantot produktu filtrus jūsu produktu ieteikumu modelī. Tagad varat izveidot prognozi, kura izmanto vienīgi jūsu produktu apakškopu.    
+   Papildinformāciju skatiet sadaļā [Produktu filtru konfigurēšana](predict-product-recommendation.md#configure-product-filters).
+
+- **Segmentu izveide no modeļa prognozēm** Esam pievienojuši ātru veidu, kādā varat izveidot segmentus, izmantojot prognozes modeļa rezultātus. No modeļa rezultātu lapas varat viegli izveidot jaunu segmentu, atlasot opciju **Segmenta izveide**.    
+  Papildinformāciju skatiet rakstā [Segmenta izveide, pamatojoties prognozes modelī](prediction-based-segment.md).
+
+- **Produktu ieteikumu skaidrojumi** Esam pievienojuši informāciju, kurā paskaidroti galvenie AI modeļa apgūtie faktori produktu ieteikumu ģenerēšanai un pakāpe, līdz kurai šie faktori var ietekmēt produktu ieteikumus. Šī informācija tiek pievienota modeļa rezultātu ekrānam.    
+   Papildinformāciju skatiet rakstā [Prognozes statusa un rezultātu pārskatīšana](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>2021. gada februāra atjauninājumi
 
@@ -107,7 +144,7 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
   Turklāt esam pievienojuši jaunas konfigurācijas opcijas, lai labāk kontrolētu, kā vēlaties bagātināt klientu profilus. 
 
-  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft-graph.md).
+  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft.md).
 
 - **Kontrolējiet, kurus profilus bagātināt**
 
@@ -309,8 +346,8 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 - **Interesenšu bagātinātājs, kas pieejams vairākos tirgos**
 
-  Mēs sniedzam iespēju bagātināt interesi ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar vairākām interesēm, kas attiecas uz šiem tirgiem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
-  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft-graph.md)
+  Mēs sniedzam iespēju bagātināt interesi ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar vairākām interesēm, kas attiecas uz šiem tirgiem. Mēs arī bagātināsim jūsu klientu profilus, kuri atrodas šajos tirgos, izmantojot vietējos Microsoft patentētos datus.
+  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>2020. gada jūlija atjauninājumi
@@ -330,8 +367,8 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 
 - **Zīmolu bagātinātājs, kas pieejams vairākos tirgos**
 
-  Mēs sniedzam iespēju bagātināt interesi par zīmoliem ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar šo tirgu vietējām zīmoliem. Mēs arī bagātināsim jūsu šajos tirgos esošo klientu profilus, izmantojot Microsoft Graph lokālos patentētos datus.
-  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft-graph.md)
+  Mēs sniedzam iespēju bagātināt interesi par zīmoliem ārpus ASV līdz pieciem citiem tirgiem: Kanādā, Austrālijā, Lielbritānijā, Francijā un Vācijā. Izmantojot šo paplašinājumu, varat bagātināt klientu datus ar šo tirgu vietējām zīmoliem. Mēs arī bagātināsim jūsu klientu profilus, kuri atrodas šajos tirgos, izmantojot vietējos Microsoft patentētos datus.
+  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>2020. gada jūnija atjauninājumi
 
@@ -355,7 +392,7 @@ Kad atceļat uzdevumu, piemēram, saskaņošanas procesā, tas tiek atgriezts p�
 - **Atsevišķa zīmola un interešu afinitātes bagātināšana**
 
   Zīmolu un interešu afinitātes tagad ir pieejamas kā divas neatkarīgas bagātināšanas. Atsevišķas bagātināšanas sniedz elastīgu iespēju konfigurēt un pārvaldīt tās atsevišķi atkarībā no uzņēmuma prasībām vai vajadzībām.    
-  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft-graph.md).
+  Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu afinitātes datiem](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Paplašināmība
 
