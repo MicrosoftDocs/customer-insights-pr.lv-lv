@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759830"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059325"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentu eksportēšana uz Marketo (priekšskatījums)
 
@@ -44,7 +44,7 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Ievadiet savu **[Marketo klienta ID, klienta slepeno vārdu un REST galapunktu resursdatorā](https://developers.marketo.com/rest-api/authentication/)**.
+1. Ievadiet savu **[Marketo klienta ID, klienta slepeno vārdu un REST galapunktu resursdatorā](https://developers.marketo.com/rest-api/authentication/)**. REST galapunkta viesošanas nosaukums ir tikai viesošanas nosaukums bez `https://`. Piemērs: `xyz-abc-123.mktorest.com`. 
 
 1. Atlasiet **Es piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**, un atlasiet opciju **Izveidot savienojumu**, lai inicializētu savienojumu ar Marketo.
 
@@ -62,7 +62,7 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Marketo. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
-1. Ievadiet savu **[Marketo saraksta ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Ievadiet savu **[Marketo saraksta ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Saraksta ID ir tikai skaitliska vērtība. Piemēram, ja Marketo saraksta ID ir ST12345A7, noņemiet rakstzīmi pirms un pēc cipariem un ievadiet `12345`. 
 
 1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
 
@@ -74,7 +74,7 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). Marketo tagad varat atrast jūsu segmentus sadaļā [Marketo saraksti](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). Marketo tagad varat atrast jūsu segmentus sadaļā [Marketo saraksti](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887903"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085539"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -36,11 +36,9 @@ Datu avotu varat pievienot trīs galvenajos veidos:
 
 Datu uzņemšana no lokālajiem datu avotiem Audience Insights tiek atbalstīta, balstoties Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](manage-environments.md#create-an-environment-in-an-existing-organization), kad tiek iestatīta vide.
 
-Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai lietotu lokālās datu vārtejas.
+Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā redzamas saites uz Power Platform vidi, kurā varat skatīt un konfigurēt lokālo datu vārtejas.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text=" Ekrānuzņēmums ar datu avotu lapu, kurā redzamas saites, kuras norāda uz Power Platform vidi.":::
 
 ## <a name="review-ingested-data"></a>Uzņemto datu pārskatīšana
 

@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896520"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085585"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
 Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms. Tā mērķis ir konfliktējošu datu saskaņošana. Konfliktējošo datu piemērs var būt klienta vārds, kas ir atrodams divās datu kopās, taču katrā no tām tas tiek rādīts nedaudz atšķirīgi ("Oto Bērzs" un "Otto Bērzs"), vai tālruņa numurs, kas atšķiras pēc formāta (21-480-309 un 21480309). Šo konfliktējošo datu punktu sapludināšana notiek, pamatojoties uz pieeju “atribūts pēc atribūta”
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
+
 Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā **Apvienošana** atlasot **Sapludināt**.
 
 ## <a name="review-system-recommendations"></a>Sistēmas ieteikumu pārskatīšana
 
-Lapā **Sapludināšana** varat izvēlēties un izslēgt atribūtus sapludināšanai ar vienotā klienta profila entītiju (konfigurācijas procesa rezultāts). Dažus atribūtus sistēma sapludina automātiski.
+Izmantojot **Dati** > **Apvienot** > **Sapludināt**, jūs izvēlaties un izslēdzat atribūtus, kas jāsapludina jūsu vienotajā klienta profila entītijā. Vienotais klienta profils ir datu unificēšanas procesa rezultāts. Dažus atribūtus sistēma sapludina automātiski.
 
-### <a name="view-merged-attributes"></a>Sapludināto atribūtu skatīšana
+Lai skatītu atribūtus, kas iekļauti kādā no automātiski sapludinātajiem atribūtiem, atlasiet šo sapludināto atribūtu entītijas cilnē **Klienta lauki**. Šie divi atribūti, kas veido sapludināto atribūtu, tiks parādīti divās jaunās rindās zem sapludinātā atribūta.
 
-Lai skatītu atribūtus, kas ir iekļauti kādā no jūsu automātiski sapludinātajiem atribūtiem, atlasiet šo sapludināto atribūtu. Šie divi atribūti, kas veido sapludināto atribūtu, tiks parādīti divās jaunās rindās zem sapludinātā atribūta.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Atdalīt, pārdēvēt, izslēgt un rediģēt sapludinātos laukus
 
-> [!div class="mx-imgBorder"]
-> ![Sapludinātā atribūta atlasīšana](media/configure-data-merge-profile-attributes.png "Sapludinātā atribūta atlasīšana")
+Var mainīt, kā sistēma apstrādā sapludinātos atribūtus, lai ģenerētu vienoto klienta profilu. Atlasiet vienumu **Rādīt vairāk** un izvēlieties, ko vēlaties mainīt.
 
-### <a name="separate-merged-attributes"></a>Sapludināto atribūtu atdalīšana
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcijas sapludināto atribūtu pārvaldīšanai nolaižamajā izvēlnē Rādīt vairāk.":::
 
-Lai atdalītu kādu no automātiski sapludinātajiem atribūtiem jeb noņemtu sapludināšanu, atrodiet šo atribūtu tabulā **Profila atribūti**.
+Papildinformāciju skatiet nākamajās sadaļās.
 
-1. Atlasiet daudzpunktes (...) pogu.
+## <a name="separate-merged-fields"></a>Atdalīt sapludinātos laukus
+
+Lai atdalītu sapludinātos laukus, atrodiet atribūtu tabulā. Atsevišķie lauki vienotā klienta profilā tiek rādīti kā atsevišķi datu punkti. 
+
+1. Atlasiet sapludināto lauku.
   
-2. Nolaižamajā sarakstā atlasiet **Atsevišķi lauki**.
+1. Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Atsevišķi lauki**.
+ 
+1. Apstipriniet atdali.
 
-### <a name="remove-merged-attributes"></a>Sapludināto atribūtu noņemšana
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.
 
-Lai izslēgtu kādu atribūtu no galīgās klienta profila entītijas, atrodiet šo atribūtu tabulā **Profila atribūti**.
+## <a name="rename-merged-fields"></a>Sapludināto lauku pārdēvēšana
 
-1. Atlasiet daudzpunktes (...) pogu.
+Mainīt sapludināto atribūtu parādāmo nosaukumu. Izvades entītijas nosaukumu nevar mainīt.
+
+1. Atlasiet sapludināto lauku.
   
-2. Nolaižamajā sarakstā atlasiet **Nesapludināt**.
+1. Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Pārdēvēt**.
 
-   Atribūts tiks pārvietots uz sadaļu **Noņemts no klienta ieraksta**.
+1. Apstipriniet mainīto parādāmo nosaukumu. 
 
-## <a name="manually-add-a-merged-attribute"></a>Sapludināta atribūta manuāla pievienošana
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.
 
-Lai pievienotu sapludinātu atribūtu, dodieties uz lapu **Sapludināšana**.
+## <a name="exclude-merged-fields"></a>Izslēgt sapludinātos laukus
 
-1. Atlasiet **Pievienot sapludināto atribūtu**.
+Neiekļaut atribūtu no vienotā klienta profila. Ja lauks tiek izmantots citos procesos, piemēram, segmentā, pirms lauka izslēgšanas no klienta profila, noņemiet to no šiem procesiem. 
 
-2. Norādiet **nosaukumu**, lai vēlāk to identificētu lapā **Sapludināšana**.
+1. Atlasiet sapludināto lauku.
+  
+1. Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Izslēgt**.
 
-3. Varat arī norādīt **Parādāmo nosaukumu**, kas parādās vienotajā klienta profila entītijā.
+1. Apstipriniet izslēgšanu.
 
-4. Konfigurējiet opciju **Atribūtu dublikātu atlase**, lai atlasītu atribūtus, ko vēlaties sapludināt no atbilstošajām entītijām. Varat arī meklēt atribūtus.
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
 
-5. Iestatiet opciju **Ranžēt pēc svarīguma**, lai noteiktu, ka kādam atribūtam būs augstāka prioritāte nekā citiem atribūtiem. Piemēram, ja entītijā *WebAccountCSV* ir ietverti visprecīzākie dati par atribūtu *Full Names*, atlasot *WebAccountCSV*, varat noteikt, ka šai entītijai būs augstāka prioritāte nekā *ContactCSV*. Tā rezultātā, iegūstot vērtības atribūtam *Full Name*, *WebAccountCSV* tiek pārvietots uz pirmo prioritāti, bet *ContactCSV* — uz otro prioritāti.
+**Sapludināšanas** lapā atlasiet **Neiekļautie lauki**, lai redzētu visu neiekļauto lauku sarakstu. Šajā rūtī varat atkal pievienot neiekļautos laukus.
+
+## <a name="manually-combine-fields"></a>Manuāli apvienot laukus
+
+Manuāli norādiet sapludinātu atribūtu. 
+
+1. **Sapludināšanas** lapā atlasiet **Lauku apvienošana**.
+
+1. Norādiet **Nosaukumu** un **Izvades lauka nosaukumu**.
+
+1. Izvēlieties pievienojamo lauku. Atlasiet **Pievienot laukus**, lai apvienotu vairāk lauku.
+
+1. Apstipriniet izslēgšanu.
+
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
+
+## <a name="change-the-order-of-fields"></a>Lauku secības maiņa
+
+Dažās entītijās ir detalizētāka informācija nekā citās. Ja entītijā ir ietverti jaunākie dati par kādu lauku, sapludinot vērtības, par to var noteikt prioritātes citās entītijās.
+
+1. Atlasiet sapludināto lauku.
+  
+1. Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Rediģēt**.
+
+1. **Lauku apvienošanas** rūtī atlasiet **Pārvietot uz augšu/uz leju**, lai iestatītu secību, vai velciet un nometiet tos vēlamajā pozīcijā.
+
+1. Apstiprināt izmaiņas.
+
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.
 
 ## <a name="run-your-merge"></a>Sapludināšanas izpilde
 
@@ -72,11 +111,11 @@ Neatkarīgi no tā, vai manuāli sapludināt atribūtus vai ļaujat tos sapludin
 > [!div class="mx-imgBorder"]
 > ![Datu sapludināšana: saglabāšana un izpilde](media/configure-data-merge-save-run.png "Datu sapludināšana: saglabāšana un izpilde")
 
-Lai veiktu papildu izmaiņas un atkārtoti palaistu darbību, varat atcelt notiekošu sapludināšanu. Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.
+Izvēlieties **Palaist tikai sapludināšanu**, ja vēlaties redzēt tikai vienotā klienta entītijas izvadi. Lejupstraumes procesi tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
 
-Pēc tam, kad teksts **Atsvaidzina...** tiek nomainīts uz **Izdevās**, sapludināšana ir pabeigta un jūsu datu pretrunas ir atrisinātas atbilstoši jūsu definētajām politikām. Sapludinātie un nesapludinātie atribūti ir iekļauti vienotā profila entītijā. Izslēgtie atribūti netiek iekļauti vienotā profila entitījā.
+Izvēlieties **Palaist sapludināšanu un lejupstraumes procesus**, lai atsvaidzinātu sistēmu ar jūsu izmaiņām. Visi procesi, tostarp bagātināšana, segmenti un pasākumi, tiks automātiski veikti atkārtoti. Kad visi lejupstraumes procesi ir pabeigti, klientu profili atspoguļo jūsu veiktās izmaiņas.
 
-Ja tā nebija pirmā reize, kad veiksmīgi palaidāt sapludināšanu, visi pakārtotie procesi, tostarp bagātināšana, segmentācija un mērīšana, tiks atkārtoti palaista automātiski. Pēc visu pakārtoto procesu atkārtotas palaišanas klientu profili rādīs jebkādas jūsu veiktās izmaiņas.
+Lai veiktu lielākas izmaiņas un veiktu atkārtotu darbību, varat atcelt notiekošu sapludināšanu. Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.
 
 > [!TIP]
 > Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.
@@ -85,9 +124,6 @@ Ja tā nebija pirmā reize, kad veiksmīgi palaidāt sapludināšanu, visi pakā
 
 Konfigurējiet opcijas [darbības](activities.md), [bagātināšana](enrichment-hub.md) vai [relācijas](relationships.md), lai gūtu plašāku ieskatu par saviem klientiem.
 
-Ja jau esat konfigurējis darbības, bagātināšanu vai relācijas vai definējāt segmentus, tie tiek apstrādāti automātiski, lai izmantotu jaunākos klientu datus.
-
-
-
+Ja jau esat konfigurējis darbības, bagātināšanu vai segmentus, tie tiks apstrādāti automātiski, lai izmantotu jaunākos klientu datus.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

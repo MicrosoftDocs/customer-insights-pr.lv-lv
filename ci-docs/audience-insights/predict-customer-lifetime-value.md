@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595817"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954588"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Klienta ilgtermiņa vērtības (CLV) prognoze (priekšskatījums)
 
@@ -38,11 +38,11 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
 - Klienta identifikators: unikālais identifikators, kas savieno konkrētu klientu ar transakcijām
 
 - Transakciju vēsture: vēsturisko transakciju žurnāls ar zemāk norādītu semantisko datu shēmu
-    - Transakcijas ID: Unikāls katras transakcijas identifikators
-    - Transakcijas datums: datums, vēlams, laikspiedols katrai transakcijai
-    - Transakcijas summa: katra transakcijas vērtība naudas izteiksmē (piemēram, ieņēmumi vai peļņas norma)
-    - Atgriešanai piešķirtā etiķete (neobligāti): Būla vērtība, kas norāda, vai transakcija ir atgriešana 
-    - Produkta ID (neobligāti): transakcijā iesaistītā produkta ID
+    - **Transakcijas ID**: Unikāls katras transakcijas identifikators
+    - **Transakcijas datums**: datums, vēlams, laikspiedols katrai transakcijai
+    - **Transakcijas summa**: katra transakcijas vērtība naudas izteiksmē (piemēram, ieņēmumi vai peļņas norma)
+    - **Atgriešanai piešķirtā etiķete** (neobligāti): Būla vērtība, kas norāda, vai transakcija ir atgriešana 
+    - **Produkta ID** (neobligāti): transakcijā iesaistītā produkta ID
 
 - Papildu dati (neobligāti), piemēram
     - Tīmekļa darbības: vietnes apmeklējuma vēsture, e-pasta vēsture
@@ -53,10 +53,20 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
     - Klientu identifikatori darbību kartēšanai jūsu klientiem
     - Darbības informācija, kas ietver darbības nosaukumu un datumu
     - Darbību semantiskās datu shēmas ietver: 
-        - Primārā atslēga: unikāls darbības identifikators
-        - Laikspiedols: notikuma datums un laiks, ko identificē primārā atslēga
-        - Notikums (darbības nosaukums): norādiet izmantojamā notikuma nosaukumu
-        - Detalizēta informācija (summa vai vērtība): detalizēta informācija par klienta darbību
+        - **Primārā atslēga**: unikāls darbības identifikators
+        - **Laikspiedols**: notikuma datums un laiks, ko identificē primārā atslēga
+        - **Notikums (darbības nosaukums)**: norādiet izmantojamā notikuma nosaukumu
+        - **Detalizēta informācija (summa vai vērtība)**: detalizēta informācija par klienta darbību
+
+- Ieteicamie datu raksturlielumi:
+    - Pietiekami vēsturiski dati: vismaz viena gada transakciju dati. 2–3 gadus veci transakciju dati, lai prognozētu CLV uz vienu gadu.
+    - Vairāki pirkumi katram klientam: ideālā gadījumā vismaz divas līdz trīs transakcijas katram klienta ID, vēlams vairākos datumos.
+    - Klientu skaits: Vismaz 100 unikālo klientu, vēlams vairāk nekā 10 000 klientu. Ja būs mazāk par 100 klientiem un nepietiks datu, modelis būs kļūmīgs
+    - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem   
+
+> [!NOTE]
+> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkumu/transakciju entitījas, apvienojiet tās risinājumā Power Query, pirms veicat datu uzņemšanu.
+> - Taču papildu klientu darbības datiem (neobligāti) var pievienot tik klientu darbību entītiju, cik vēlaties, lai tās izskatītu pēc modeļa.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
@@ -76,7 +86,7 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
    Pēc noklusējuma mērvienība tiek iestatīta kā mēneši. To var mainīt uz gadiem, lai turpmāk meklētu plašāku informāciju.
 
    > [!TIP]
-   > Lai precīzi prognozētu CLV jūsu iestatītajā laika periodā, ir nepieciešams salīdzināms vēsturisko datu periods. Piemēram, ja vēlaties paredzēt nākamos 12 mēnešus, ieteicams izmantot vēsturiskos datus vismaz 18–24 mēnešu laikā.
+   > Lai precīzi prognozētu CLV jūsu iestatītajā laika periodā, ir nepieciešams salīdzināms vēsturisko datu periods. Piemēram, ja vēlaties paredzēt CLV nākamajiem 12 mēnešiem, ieteicams izmantot vēsturiskos datus vismaz 18–24 mēnešu laikā.
 
 1. Norādiet, ko **Aktīvie klienti** nozīmē jūsu uzņēmumam. Iestatiet laika periodu, kurā klientam ir jābūt vismaz vienai transakcijai, lai to uzskatītu par aktīvu. Modelis prognozēs CLV tikai aktīvajiem klientiem. 
    - **Ļaujiet modelim aprēķināt iegādes intervālu (ieteicams)**: modelis analizē datus un nosaka laika periodu, pamatojoties uz vēsturiskiem pirkumiem.
@@ -181,14 +191,14 @@ Rezutātu lapā ir trīs primārās datu sadaļas.
   Konfigurējot prognozi, izmantojot augstas vērtības klientu definīciju, sistēma novērtē, kā AI modelis tiek izpildīts, prognozējot augstas vērtības klientus salīdzinājumā ar bāzlīnijas modeli.    
 
   Kategorijas tiek noteiktas, pamatojoties uz šādām kārtulām:
-  - A kad modelis precīzi prognozēja vismaz par 5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
-  - B kad modelis precīzi prognozēja vismaz 0-5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
-  - C kad modelis precīzi prognozēja vismaz vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
+  - **A**, kad modelis precīzi prognozēja vismaz par 5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
+  - **B** kad modelis precīzi prognozēja vismaz 0-5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
+  - **C** kad modelis precīzi prognozēja vismaz vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
 
   Rūtī **Modeļa novērtējums** ir redzama papildinformācija par mākslīgā intelekta modeļa veiktspēju un bāzlīnijas modeli. Bāzlīnijas modelis izmanto pieeju, kuras pamatā nav mākslīgais intelekts, lai aprēķinātu klientu veiktās sākotnējās vērtības, primāri pamatojoties uz klientu veiktajiem iepriekšējiem pirkumiem.     
   Standarta formula, ko izmanto CLV aprēķinam pēc bāzlīnijas modeļa:    
 
-  *CLV katram klientam = klienta veiktais vidējais mēneša pirkums aktīvā klienta logā * Mēnešu skaits CLV prognoze periodā * Kopējais saglabāšanas līmenis visiem klientiem*
+  _**CLV katram klientam** = klienta veiktais vidējais mēneša pirkums aktīvā klienta logā * Mēnešu skaits CLV prognozes periodā * Kopējais saglabāšanas līmenis visiem klientiem*_
 
   Mākslīgā intelekta modelis tiek salīdzināts ar bāzlīnijas modeli, pamatojoties uz diviem modeļa veiktspējas rādītājiem.
   

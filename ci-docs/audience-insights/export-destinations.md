@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896152"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016623"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
 Lapā **Eksportēšana** tiek rādītas visas konfigurētās eksportēšanas. Eksportēšana kopīgo konkrētus datus ar dažādām lietojumprogrammām. Tie var ietvert klientu profilus vai entitījas, shēmas un kartēšanas informāciju. Katrai eksportēšanai ir nepieciešams [administratora iestatīts savienojums, lai pārvaldītu autentifikāciju un piekļuvi](connections.md).
-
-> [!NOTE]
-> Līdz 2021. gada martam eksportēšana automātiski veidoja savienojumu ar atbilstošo pakalpojumu. Tagad eksportēšanai ir nepieciešams [administratora izveidots un kopīgots savienojums](connections.md), pirms varat to izveidot.
 
 Dodieties uz lapu **Dati** > **Eksportēšana**, lai skatītu eksportēšanas lapu. Visām lietotāju lomām ir piekļuve konfigurētajai eksportēšanai. Izmantojiet komandjoslas meklēšanas lauku, lai meklētu eksportus pēc nosaukuma, savienojuma nosaukuma vai savienojuma veida.
 

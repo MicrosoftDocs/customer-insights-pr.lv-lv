@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596416"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049403"
 ---
 # <a name="entities-in-audience-insights"></a>Entītijas auditorijas ieskatiem
 
@@ -35,14 +35,14 @@ Lapā **Entītijas** tiek norādītas entītijas, un tajā ir vairākas kolonnas
 Atlasiet entītiju, lai izpētītu tajā ietvertos dažādos laukus un ierakstus.
 
 > [!div class="mx-imgBorder"]
-> ![Atlasīt entītiju](media/data-manager-entities-data.png "Atlasīt entītiju")
+> ![Entītijas atlase](media/data-manager-entities-data.png "Atlasīt entītiju")
 
-- Cilne **Dati** ir atlasīta pēc noklusējuma, un tajā ir redzama tabula ar detalizētu informāciju par atsevišķiem entītijas ierakstiem.
+- Cilnē **Dati** ir redzama tabulas detalizēta informācija par atsevišķiem entītijas ierakstiem.
 
 > [!div class="mx-imgBorder"]
 > ![Tabula Lauki](media/data-manager-entities-fields.PNG "Tabula Lauki")
 
-- Cilnē **Lauki** ir redzama tabula, kurā varat pārskatīt detalizētu informāciju par atlasīto entītiju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie ir semantiski tipi, kas var atšķirties no atribūtu datu tipiem — piemēram, tālāk redzamajā laukā *Email* ir ietverts datu tips *Text*, bet tā (semantiskais) kopējā datu modeļa tips var būt *Email* vai *EmailAddress*.
+- Pēc noklusējuma ir atlasīta cilne **Atribūti**, un tajā ir redzama tabula, lai pārskatītu atlasītās entītijas detalizēto informāciju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie ir semantiski tipi, kas var atšķirties no atribūtu datu tipiem — piemēram, tālāk redzamajā laukā *Email* ir ietverts datu tips *Text*, bet tā (semantiskais) kopējā datu modeļa tips var būt *Email* vai *EmailAddress*.
 
 > [!NOTE]
 > Abās tabulās ir redzams tikai entītijas datu paraugs. Lai skatītu pilnu datu kopu, atveriet lapu **Datu avoti**, atlasiet entītiju, atlasiet **Rediģēt** un pēc tam skatiet šīs entītijas datus, izmantojot Power Query redaktoru, kā paskaidrots tēmā [Datu avoti](data-sources.md).

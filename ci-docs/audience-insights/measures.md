@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887949"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049259"
 ---
 # <a name="define-and-manage-measures"></a>Definējiet un pārvaldiet mērus
 
@@ -34,7 +34,7 @@ Izmantojiet pasākumu veidotāju, kas tiek plānots biznesa aktivitātēm, vaic�
 
 1. Atlasiet **Rediģēt nosaukumu** un norādiet pasākumam **Nosaukumu**. 
    > [!NOTE]
-   > Ja jaunajā pasākumu konfigurācijā ir tikai divi lauki, piemēram, paplašināmā lauka CustomerID un viens aprēķins, izvade sistēmas ģenerētajā entītijā tiks pievienota kā jauna kolonna ar nosaukumu Customer_Measure. Un pasākuma vērtību varat redzēt vienotā klienta profilā. Citi pasākumi radīs savas entītijas.
+   > Ja jaunajā mērvienību konfigurācijā ir tikai divi lauki, piemēram, CustomerID un viens aprēķins, izvade sistēmas ģenerētajā entītijā tiks pievienota kā jauna kolonna ar nosaukumu Customer_Measure. Un pasākuma vērtību varat redzēt vienotā klienta profilā. Citi pasākumi radīs savas entītijas.
 
 1. Konfigurācijas apgabalā izvēlieties apkopošanas funkciju nolaižamajā izvēlnē **Atlasīt funkciju**. Apkopošanas funkcijas ir šādas: 
    - **Sum**
