@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,85 +9,121 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896520"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085585"
 ---
-# <a name="merge-entities"></a><span data-ttu-id="d07bf-103">Sapludiniet entītijas</span><span class="sxs-lookup"><span data-stu-id="d07bf-103">Merge entities</span></span>
+# <a name="merge-entities"></a><span data-ttu-id="313f8-103">Sapludiniet entītijas</span><span class="sxs-lookup"><span data-stu-id="313f8-103">Merge entities</span></span>
 
-<span data-ttu-id="d07bf-104">Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms.</span><span class="sxs-lookup"><span data-stu-id="d07bf-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="d07bf-105">Tā mērķis ir konfliktējošu datu saskaņošana.</span><span class="sxs-lookup"><span data-stu-id="d07bf-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="d07bf-106">Konfliktējošo datu piemērs var būt klienta vārds, kas ir atrodams divās datu kopās, taču katrā no tām tas tiek rādīts nedaudz atšķirīgi ("Oto Bērzs" un "Otto Bērzs"), vai tālruņa numurs, kas atšķiras pēc formāta (21-480-309 un 21480309).</span><span class="sxs-lookup"><span data-stu-id="d07bf-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="d07bf-107">Šo konfliktējošo datu punktu sapludināšana notiek, pamatojoties uz pieeju “atribūts pēc atribūta”</span><span class="sxs-lookup"><span data-stu-id="d07bf-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
+<span data-ttu-id="313f8-104">Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms.</span><span class="sxs-lookup"><span data-stu-id="313f8-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="313f8-105">Tā mērķis ir konfliktējošu datu saskaņošana.</span><span class="sxs-lookup"><span data-stu-id="313f8-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="313f8-106">Konfliktējošo datu piemērs var būt klienta vārds, kas ir atrodams divās datu kopās, taču katrā no tām tas tiek rādīts nedaudz atšķirīgi ("Oto Bērzs" un "Otto Bērzs"), vai tālruņa numurs, kas atšķiras pēc formāta (21-480-309 un 21480309).</span><span class="sxs-lookup"><span data-stu-id="313f8-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="313f8-107">Šo konfliktējošo datu punktu sapludināšana notiek, pamatojoties uz pieeju “atribūts pēc atribūta”</span><span class="sxs-lookup"><span data-stu-id="313f8-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
 
-<span data-ttu-id="d07bf-108">Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā **Apvienošana** atlasot **Sapludināt**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-108">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
+:::image type="content" source="media/merge-fields-page.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
 
-## <a name="review-system-recommendations"></a><span data-ttu-id="d07bf-109">Sistēmas ieteikumu pārskatīšana</span><span class="sxs-lookup"><span data-stu-id="d07bf-109">Review system recommendations</span></span>
+<span data-ttu-id="313f8-109">Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā **Apvienošana** atlasot **Sapludināt**.</span><span class="sxs-lookup"><span data-stu-id="313f8-109">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
 
-<span data-ttu-id="d07bf-110">Lapā **Sapludināšana** varat izvēlēties un izslēgt atribūtus sapludināšanai ar vienotā klienta profila entītiju (konfigurācijas procesa rezultāts).</span><span class="sxs-lookup"><span data-stu-id="d07bf-110">On the **Merge** page, you choose and exclude attributes to merge within your unified customer profile entity (the result of the configuration process).</span></span> <span data-ttu-id="d07bf-111">Dažus atribūtus sistēma sapludina automātiski.</span><span class="sxs-lookup"><span data-stu-id="d07bf-111">Some attributes are automatically merged by the system.</span></span>
+## <a name="review-system-recommendations"></a><span data-ttu-id="313f8-110">Sistēmas ieteikumu pārskatīšana</span><span class="sxs-lookup"><span data-stu-id="313f8-110">Review system recommendations</span></span>
 
-### <a name="view-merged-attributes"></a><span data-ttu-id="d07bf-112">Sapludināto atribūtu skatīšana</span><span class="sxs-lookup"><span data-stu-id="d07bf-112">View merged attributes</span></span>
+<span data-ttu-id="313f8-111">Izmantojot **Dati** > **Apvienot** > **Sapludināt**, jūs izvēlaties un izslēdzat atribūtus, kas jāsapludina jūsu vienotajā klienta profila entītijā.</span><span class="sxs-lookup"><span data-stu-id="313f8-111">On **Data** > **Unify** > **Merge**, you choose and exclude attributes to merge within your unified customer profile entity.</span></span> <span data-ttu-id="313f8-112">Vienotais klienta profils ir datu unificēšanas procesa rezultāts.</span><span class="sxs-lookup"><span data-stu-id="313f8-112">The unified customer profile is the result of the data unification process.</span></span> <span data-ttu-id="313f8-113">Dažus atribūtus sistēma sapludina automātiski.</span><span class="sxs-lookup"><span data-stu-id="313f8-113">Some attributes are automatically merged by the system.</span></span>
 
-<span data-ttu-id="d07bf-113">Lai skatītu atribūtus, kas ir iekļauti kādā no jūsu automātiski sapludinātajiem atribūtiem, atlasiet šo sapludināto atribūtu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-113">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute.</span></span> <span data-ttu-id="d07bf-114">Šie divi atribūti, kas veido sapludināto atribūtu, tiks parādīti divās jaunās rindās zem sapludinātā atribūta.</span><span class="sxs-lookup"><span data-stu-id="d07bf-114">The two attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+<span data-ttu-id="313f8-114">Lai skatītu atribūtus, kas iekļauti kādā no automātiski sapludinātajiem atribūtiem, atlasiet šo sapludināto atribūtu entītijas cilnē **Klienta lauki**.</span><span class="sxs-lookup"><span data-stu-id="313f8-114">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute in the **Customer fields** tab of the table.</span></span> <span data-ttu-id="313f8-115">Šie divi atribūti, kas veido sapludināto atribūtu, tiks parādīti divās jaunās rindās zem sapludinātā atribūta.</span><span class="sxs-lookup"><span data-stu-id="313f8-115">The attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a><span data-ttu-id="313f8-116">Atdalīt, pārdēvēt, izslēgt un rediģēt sapludinātos laukus</span><span class="sxs-lookup"><span data-stu-id="313f8-116">Separate, rename, exclude, and edit merged fields</span></span>
+
+<span data-ttu-id="313f8-117">Var mainīt, kā sistēma apstrādā sapludinātos atribūtus, lai ģenerētu vienoto klienta profilu.</span><span class="sxs-lookup"><span data-stu-id="313f8-117">You can change how the system processes merged attributes to generate the unified customer profile.</span></span> <span data-ttu-id="313f8-118">Atlasiet vienumu **Rādīt vairāk** un izvēlieties, ko vēlaties mainīt.</span><span class="sxs-lookup"><span data-stu-id="313f8-118">Select **Show more** and choose what you want to change.</span></span>
+
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcijas sapludināto atribūtu pārvaldīšanai nolaižamajā izvēlnē Rādīt vairāk.":::
+
+<span data-ttu-id="313f8-120">Papildinformāciju skatiet nākamajās sadaļās.</span><span class="sxs-lookup"><span data-stu-id="313f8-120">For more information, see the following sections.</span></span>
+
+## <a name="separate-merged-fields"></a><span data-ttu-id="313f8-121">Atdalīt sapludinātos laukus</span><span class="sxs-lookup"><span data-stu-id="313f8-121">Separate merged fields</span></span>
+
+<span data-ttu-id="313f8-122">Lai atdalītu sapludinātos laukus, atrodiet atribūtu tabulā.</span><span class="sxs-lookup"><span data-stu-id="313f8-122">To separate merged fields, find the attribute in the table.</span></span> <span data-ttu-id="313f8-123">Atsevišķie lauki vienotā klienta profilā tiek rādīti kā atsevišķi datu punkti.</span><span class="sxs-lookup"><span data-stu-id="313f8-123">Separated fields show as individual data points on the unified customer profile.</span></span> 
+
+1. <span data-ttu-id="313f8-124">Atlasiet sapludināto lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-124">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="313f8-125">Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Atsevišķi lauki**.</span><span class="sxs-lookup"><span data-stu-id="313f8-125">Select **Show more** and choose **Separate fields**.</span></span>
+ 
+1. <span data-ttu-id="313f8-126">Apstipriniet atdali.</span><span class="sxs-lookup"><span data-stu-id="313f8-126">Confirm the separation.</span></span>
+
+1. <span data-ttu-id="313f8-127">Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.</span><span class="sxs-lookup"><span data-stu-id="313f8-127">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="rename-merged-fields"></a><span data-ttu-id="313f8-128">Sapludināto lauku pārdēvēšana</span><span class="sxs-lookup"><span data-stu-id="313f8-128">Rename merged fields</span></span>
+
+<span data-ttu-id="313f8-129">Mainīt sapludināto atribūtu parādāmo nosaukumu.</span><span class="sxs-lookup"><span data-stu-id="313f8-129">Change the display name of merged attributes.</span></span> <span data-ttu-id="313f8-130">Izvades entītijas nosaukumu nevar mainīt.</span><span class="sxs-lookup"><span data-stu-id="313f8-130">You can't change the name of the output entity.</span></span>
+
+1. <span data-ttu-id="313f8-131">Atlasiet sapludināto lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-131">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="313f8-132">Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Pārdēvēt**.</span><span class="sxs-lookup"><span data-stu-id="313f8-132">Select **Show more** and choose **Rename**.</span></span>
+
+1. <span data-ttu-id="313f8-133">Apstipriniet mainīto parādāmo nosaukumu.</span><span class="sxs-lookup"><span data-stu-id="313f8-133">Confirm the changed display name.</span></span> 
+
+1. <span data-ttu-id="313f8-134">Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.</span><span class="sxs-lookup"><span data-stu-id="313f8-134">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="exclude-merged-fields"></a><span data-ttu-id="313f8-135">Izslēgt sapludinātos laukus</span><span class="sxs-lookup"><span data-stu-id="313f8-135">Exclude merged fields</span></span>
+
+<span data-ttu-id="313f8-136">Neiekļaut atribūtu no vienotā klienta profila.</span><span class="sxs-lookup"><span data-stu-id="313f8-136">Exclude an attribute from the unified customer profile.</span></span> <span data-ttu-id="313f8-137">Ja lauks tiek izmantots citos procesos, piemēram, segmentā, pirms lauka izslēgšanas no klienta profila, noņemiet to no šiem procesiem.</span><span class="sxs-lookup"><span data-stu-id="313f8-137">If the field is used in other processes, for example in a segment, remove it from these processes before excluding it from the customer profile.</span></span> 
+
+1. <span data-ttu-id="313f8-138">Atlasiet sapludināto lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-138">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="313f8-139">Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Izslēgt**.</span><span class="sxs-lookup"><span data-stu-id="313f8-139">Select **Show more** and choose **Exclude**.</span></span>
+
+1. <span data-ttu-id="313f8-140">Apstipriniet izslēgšanu.</span><span class="sxs-lookup"><span data-stu-id="313f8-140">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="313f8-141">Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.</span><span class="sxs-lookup"><span data-stu-id="313f8-141">Select **Save** and **Run** to process the changes.</span></span> 
+
+<span data-ttu-id="313f8-142">**Sapludināšanas** lapā atlasiet **Neiekļautie lauki**, lai redzētu visu neiekļauto lauku sarakstu.</span><span class="sxs-lookup"><span data-stu-id="313f8-142">On the **Merge** page, select **Excluded fields** to see the list of all excluded fields.</span></span> <span data-ttu-id="313f8-143">Šajā rūtī varat atkal pievienot neiekļautos laukus.</span><span class="sxs-lookup"><span data-stu-id="313f8-143">This pane lets you add excluded fields back.</span></span>
+
+## <a name="manually-combine-fields"></a><span data-ttu-id="313f8-144">Manuāli apvienot laukus</span><span class="sxs-lookup"><span data-stu-id="313f8-144">Manually combine fields</span></span>
+
+<span data-ttu-id="313f8-145">Manuāli norādiet sapludinātu atribūtu.</span><span class="sxs-lookup"><span data-stu-id="313f8-145">Specify a merged attribute manually.</span></span> 
+
+1. <span data-ttu-id="313f8-146">**Sapludināšanas** lapā atlasiet **Lauku apvienošana**.</span><span class="sxs-lookup"><span data-stu-id="313f8-146">On the **Merge** page, select **Combine fields**.</span></span>
+
+1. <span data-ttu-id="313f8-147">Norādiet **Nosaukumu** un **Izvades lauka nosaukumu**.</span><span class="sxs-lookup"><span data-stu-id="313f8-147">Provide a **Name** and an **Output field name**.</span></span>
+
+1. <span data-ttu-id="313f8-148">Izvēlieties pievienojamo lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-148">Choose a field to add.</span></span> <span data-ttu-id="313f8-149">Atlasiet **Pievienot laukus**, lai apvienotu vairāk lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-149">Select **Add fields** to combine more fields.</span></span>
+
+1. <span data-ttu-id="313f8-150">Apstipriniet izslēgšanu.</span><span class="sxs-lookup"><span data-stu-id="313f8-150">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="313f8-151">Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.</span><span class="sxs-lookup"><span data-stu-id="313f8-151">Select **Save** and **Run** to process the changes.</span></span> 
+
+## <a name="change-the-order-of-fields"></a><span data-ttu-id="313f8-152">Lauku secības maiņa</span><span class="sxs-lookup"><span data-stu-id="313f8-152">Change the order of fields</span></span>
+
+<span data-ttu-id="313f8-153">Dažās entītijās ir detalizētāka informācija nekā citās.</span><span class="sxs-lookup"><span data-stu-id="313f8-153">Some entities contain more details than others.</span></span> <span data-ttu-id="313f8-154">Ja entītijā ir ietverti jaunākie dati par kādu lauku, sapludinot vērtības, par to var noteikt prioritātes citās entītijās.</span><span class="sxs-lookup"><span data-stu-id="313f8-154">If an entity includes the latest data about a field, you can prioritize it over other entities when merging values.</span></span>
+
+1. <span data-ttu-id="313f8-155">Atlasiet sapludināto lauku.</span><span class="sxs-lookup"><span data-stu-id="313f8-155">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="313f8-156">Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Rediģēt**.</span><span class="sxs-lookup"><span data-stu-id="313f8-156">Select **Show more** and choose **Edit**.</span></span>
+
+1. <span data-ttu-id="313f8-157">**Lauku apvienošanas** rūtī atlasiet **Pārvietot uz augšu/uz leju**, lai iestatītu secību, vai velciet un nometiet tos vēlamajā pozīcijā.</span><span class="sxs-lookup"><span data-stu-id="313f8-157">In the **Combine fields** pane, select **Move up/down** to set the order or drag and drop them in the desired position.</span></span>
+
+1. <span data-ttu-id="313f8-158">Apstiprināt izmaiņas.</span><span class="sxs-lookup"><span data-stu-id="313f8-158">Confirm the change.</span></span>
+
+1. <span data-ttu-id="313f8-159">Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.</span><span class="sxs-lookup"><span data-stu-id="313f8-159">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="run-your-merge"></a><span data-ttu-id="313f8-160">Sapludināšanas izpilde</span><span class="sxs-lookup"><span data-stu-id="313f8-160">Run your merge</span></span>
+
+<span data-ttu-id="313f8-161">Neatkarīgi no tā, vai manuāli sapludināt atribūtus vai ļaujat tos sapludināt sistēmai, jūs jebkurā gadījumā varat izpildīt sapludināšanu.</span><span class="sxs-lookup"><span data-stu-id="313f8-161">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="313f8-162">Lapā **Sapludināšana** atlasiet **Izpildīt**, lai sāktu procesu.</span><span class="sxs-lookup"><span data-stu-id="313f8-162">Select **Run** on the **Merge** page to start the process.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="d07bf-115">![Sapludinātā atribūta atlasīšana](media/configure-data-merge-profile-attributes.png "Sapludinātā atribūta atlasīšana")</span><span class="sxs-lookup"><span data-stu-id="d07bf-115">![Select merged attribute](media/configure-data-merge-profile-attributes.png "Select merged attribute")</span></span>
+> <span data-ttu-id="313f8-163">![Datu sapludināšana: saglabāšana un izpilde](media/configure-data-merge-save-run.png "Datu sapludināšana: saglabāšana un izpilde")</span><span class="sxs-lookup"><span data-stu-id="313f8-163">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
 
-### <a name="separate-merged-attributes"></a><span data-ttu-id="d07bf-116">Sapludināto atribūtu atdalīšana</span><span class="sxs-lookup"><span data-stu-id="d07bf-116">Separate merged attributes</span></span>
+<span data-ttu-id="313f8-164">Izvēlieties **Palaist tikai sapludināšanu**, ja vēlaties redzēt tikai vienotā klienta entītijas izvadi.</span><span class="sxs-lookup"><span data-stu-id="313f8-164">Choose **Run only Merge** if you only want to see the output reflected in the unified customer entity.</span></span> <span data-ttu-id="313f8-165">Lejupstraumes procesi tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="313f8-165">Downstream processes will be refreshed as [defined in the refresh schedule](system.md#schedule-tab).</span></span>
 
-<span data-ttu-id="d07bf-117">Lai atdalītu kādu no automātiski sapludinātajiem atribūtiem jeb noņemtu sapludināšanu, atrodiet šo atribūtu tabulā **Profila atribūti**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-117">To separate or unmerge any of the automatically merged attributes, find the attribute in the **Profile attributes** table.</span></span>
+<span data-ttu-id="313f8-166">Izvēlieties **Palaist sapludināšanu un lejupstraumes procesus**, lai atsvaidzinātu sistēmu ar jūsu izmaiņām.</span><span class="sxs-lookup"><span data-stu-id="313f8-166">Choose **Run Merge and downstream processes** to refresh the system with your changes.</span></span> <span data-ttu-id="313f8-167">Visi procesi, tostarp bagātināšana, segmenti un pasākumi, tiks automātiski veikti atkārtoti.</span><span class="sxs-lookup"><span data-stu-id="313f8-167">All processes, including enrichment, segments, and measures will rerun automatically.</span></span> <span data-ttu-id="313f8-168">Kad visi lejupstraumes procesi ir pabeigti, klientu profili atspoguļo jūsu veiktās izmaiņas.</span><span class="sxs-lookup"><span data-stu-id="313f8-168">After all downstream processes have completed, the customer profiles reflect any changes you made.</span></span>
 
-1. <span data-ttu-id="d07bf-118">Atlasiet daudzpunktes (...) pogu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-118">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="d07bf-119">Nolaižamajā sarakstā atlasiet **Atsevišķi lauki**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-119">In the dropdown list, select **Separate fields**.</span></span>
-
-### <a name="remove-merged-attributes"></a><span data-ttu-id="d07bf-120">Sapludināto atribūtu noņemšana</span><span class="sxs-lookup"><span data-stu-id="d07bf-120">Remove merged attributes</span></span>
-
-<span data-ttu-id="d07bf-121">Lai izslēgtu kādu atribūtu no galīgās klienta profila entītijas, atrodiet šo atribūtu tabulā **Profila atribūti**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-121">To exclude an attribute from the final customer profile entity, find it in the **Profile attributes** table.</span></span>
-
-1. <span data-ttu-id="d07bf-122">Atlasiet daudzpunktes (...) pogu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-122">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="d07bf-123">Nolaižamajā sarakstā atlasiet **Nesapludināt**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-123">In the dropdown list, select **Don't merge**.</span></span>
-
-   <span data-ttu-id="d07bf-124">Atribūts tiks pārvietots uz sadaļu **Noņemts no klienta ieraksta**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-124">The attribute is moved to the **Removed from customer record** section.</span></span>
-
-## <a name="manually-add-a-merged-attribute"></a><span data-ttu-id="d07bf-125">Sapludināta atribūta manuāla pievienošana</span><span class="sxs-lookup"><span data-stu-id="d07bf-125">Manually add a merged attribute</span></span>
-
-<span data-ttu-id="d07bf-126">Lai pievienotu sapludinātu atribūtu, dodieties uz lapu **Sapludināšana**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-126">To add a merged attribute, go to the **Merge** page.</span></span>
-
-1. <span data-ttu-id="d07bf-127">Atlasiet **Pievienot sapludināto atribūtu**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-127">Select **Add merged attribute**.</span></span>
-
-2. <span data-ttu-id="d07bf-128">Norādiet **nosaukumu**, lai vēlāk to identificētu lapā **Sapludināšana**.</span><span class="sxs-lookup"><span data-stu-id="d07bf-128">Provide a **Name** to identify it on the **Merge** page later.</span></span>
-
-3. <span data-ttu-id="d07bf-129">Varat arī norādīt **Parādāmo nosaukumu**, kas parādās vienotajā klienta profila entītijā.</span><span class="sxs-lookup"><span data-stu-id="d07bf-129">Optionally, provide a **Display name** to appear in the unified Customer Profile entity.</span></span>
-
-4. <span data-ttu-id="d07bf-130">Konfigurējiet opciju **Atribūtu dublikātu atlase**, lai atlasītu atribūtus, ko vēlaties sapludināt no atbilstošajām entītijām.</span><span class="sxs-lookup"><span data-stu-id="d07bf-130">Configure **Select duplicate attributes** to select the attributes that you want to merge from the matched entities.</span></span> <span data-ttu-id="d07bf-131">Varat arī meklēt atribūtus.</span><span class="sxs-lookup"><span data-stu-id="d07bf-131">You can also search for attributes.</span></span>
-
-5. <span data-ttu-id="d07bf-132">Iestatiet opciju **Ranžēt pēc svarīguma**, lai noteiktu, ka kādam atribūtam būs augstāka prioritāte nekā citiem atribūtiem.</span><span class="sxs-lookup"><span data-stu-id="d07bf-132">Set the **Rank by importance** to prioritize one attribute above the others.</span></span> <span data-ttu-id="d07bf-133">Piemēram, ja entītijā *WebAccountCSV* ir ietverti visprecīzākie dati par atribūtu *Full Names*, atlasot *WebAccountCSV*, varat noteikt, ka šai entītijai būs augstāka prioritāte nekā *ContactCSV*.</span><span class="sxs-lookup"><span data-stu-id="d07bf-133">For example, if the *WebAccountCSV* entity includes the most accurate data about the *Full Names* attribute, you could prioritize this entity over *ContactCSV* by selecting *WebAccountCSV*.</span></span> <span data-ttu-id="d07bf-134">Tā rezultātā, iegūstot vērtības atribūtam *Full Name*, *WebAccountCSV* tiek pārvietots uz pirmo prioritāti, bet *ContactCSV* — uz otro prioritāti.</span><span class="sxs-lookup"><span data-stu-id="d07bf-134">As a result, *WebAccountCSV* moves to first priority, while *ContactCSV* moves to second priority when pulling values for the *Full Name* attribute.</span></span>
-
-## <a name="run-your-merge"></a><span data-ttu-id="d07bf-135">Sapludināšanas izpilde</span><span class="sxs-lookup"><span data-stu-id="d07bf-135">Run your merge</span></span>
-
-<span data-ttu-id="d07bf-136">Neatkarīgi no tā, vai manuāli sapludināt atribūtus vai ļaujat tos sapludināt sistēmai, jūs jebkurā gadījumā varat izpildīt sapludināšanu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-136">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="d07bf-137">Lapā **Sapludināšana** atlasiet **Izpildīt**, lai sāktu procesu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-137">Select **Run** on the **Merge** page to start the process.</span></span>
-
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="d07bf-138">![Datu sapludināšana: saglabāšana un izpilde](media/configure-data-merge-save-run.png "Datu sapludināšana: saglabāšana un izpilde")</span><span class="sxs-lookup"><span data-stu-id="d07bf-138">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
-
-<span data-ttu-id="d07bf-139">Lai veiktu papildu izmaiņas un atkārtoti palaistu darbību, varat atcelt notiekošu sapludināšanu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-139">To make additional changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="d07bf-140">Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.</span><span class="sxs-lookup"><span data-stu-id="d07bf-140">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
-
-<span data-ttu-id="d07bf-141">Pēc tam, kad teksts **Atsvaidzina...** tiek nomainīts uz **Izdevās**, sapludināšana ir pabeigta un jūsu datu pretrunas ir atrisinātas atbilstoši jūsu definētajām politikām.</span><span class="sxs-lookup"><span data-stu-id="d07bf-141">After the **Refreshing ...** text changes to **Successful**, merge has completed and resolved contradictions in your data according to the policies you defined.</span></span> <span data-ttu-id="d07bf-142">Sapludinātie un nesapludinātie atribūti ir iekļauti vienotā profila entītijā.</span><span class="sxs-lookup"><span data-stu-id="d07bf-142">Merged and unmerged attributes are included in the unified profile entity.</span></span> <span data-ttu-id="d07bf-143">Izslēgtie atribūti netiek iekļauti vienotā profila entitījā.</span><span class="sxs-lookup"><span data-stu-id="d07bf-143">Excluded attributes aren't included in the unified profile entity.</span></span>
-
-<span data-ttu-id="d07bf-144">Ja tā nebija pirmā reize, kad veiksmīgi palaidāt sapludināšanu, visi pakārtotie procesi, tostarp bagātināšana, segmentācija un mērīšana, tiks atkārtoti palaista automātiski.</span><span class="sxs-lookup"><span data-stu-id="d07bf-144">If it wasn't the first time you ran a merge successfully, all downstream processes, including enrichment, segmentation, and measures will rerun automatically.</span></span> <span data-ttu-id="d07bf-145">Pēc visu pakārtoto procesu atkārtotas palaišanas klientu profili rādīs jebkādas jūsu veiktās izmaiņas.</span><span class="sxs-lookup"><span data-stu-id="d07bf-145">After all downstream processes have been rerun, the customer profiles reflect any changes you made.</span></span>
+<span data-ttu-id="313f8-169">Lai veiktu lielākas izmaiņas un veiktu atkārtotu darbību, varat atcelt notiekošu sapludināšanu.</span><span class="sxs-lookup"><span data-stu-id="313f8-169">To make more changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="313f8-170">Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.</span><span class="sxs-lookup"><span data-stu-id="313f8-170">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="d07bf-146">Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types).</span><span class="sxs-lookup"><span data-stu-id="d07bf-146">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="d07bf-147">Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).</span><span class="sxs-lookup"><span data-stu-id="d07bf-147">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="d07bf-148">Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi.</span><span class="sxs-lookup"><span data-stu-id="d07bf-148">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="d07bf-149">Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.</span><span class="sxs-lookup"><span data-stu-id="d07bf-149">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
+> <span data-ttu-id="313f8-171">Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types).</span><span class="sxs-lookup"><span data-stu-id="313f8-171">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="313f8-172">Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).</span><span class="sxs-lookup"><span data-stu-id="313f8-172">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="313f8-173">Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi.</span><span class="sxs-lookup"><span data-stu-id="313f8-173">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="313f8-174">Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.</span><span class="sxs-lookup"><span data-stu-id="313f8-174">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="d07bf-150">Nākamā darbība</span><span class="sxs-lookup"><span data-stu-id="d07bf-150">Next Step</span></span>
+## <a name="next-step"></a><span data-ttu-id="313f8-175">Nākamā darbība</span><span class="sxs-lookup"><span data-stu-id="313f8-175">Next Step</span></span>
 
-<span data-ttu-id="d07bf-151">Konfigurējiet opcijas [darbības](activities.md), [bagātināšana](enrichment-hub.md) vai [relācijas](relationships.md), lai gūtu plašāku ieskatu par saviem klientiem.</span><span class="sxs-lookup"><span data-stu-id="d07bf-151">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
+<span data-ttu-id="313f8-176">Konfigurējiet opcijas [darbības](activities.md), [bagātināšana](enrichment-hub.md) vai [relācijas](relationships.md), lai gūtu plašāku ieskatu par saviem klientiem.</span><span class="sxs-lookup"><span data-stu-id="313f8-176">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
 
-<span data-ttu-id="d07bf-152">Ja jau esat konfigurējis darbības, bagātināšanu vai relācijas vai definējāt segmentus, tie tiek apstrādāti automātiski, lai izmantotu jaunākos klientu datus.</span><span class="sxs-lookup"><span data-stu-id="d07bf-152">If you already configured activities, enrichment, or relationships, or if you defined segments, they'll be processed automatically to use the latest customer data.</span></span>
-
-
-
+<span data-ttu-id="313f8-177">Ja jau esat konfigurējis darbības, bagātināšanu vai segmentus, tie tiks apstrādāti automātiski, lai izmantotu jaunākos klientu datus.</span><span class="sxs-lookup"><span data-stu-id="313f8-177">If you already configured activities, enrichment, or segments, they'll be processed automatically to use the latest customer data.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
