@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034021"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111396"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -32,22 +32,13 @@ Ir vairāki jauna segmenta izveides veidi:
 - AI sekmēti ierosinājumi, kas balstīti uz pasākumiem vai atribūtiem: [ieteiktie segmenti pasākumu uzlabošanai](suggested-segments.md)
 - Uz darbībām balstīti ieteikumi: [ieteiktie segmenti, pamatojoties uz klientu darbību](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Ieskatu iegūšana par esošiem segmentiem
-
-Skatiet papildinformāciju par esošajiem segmentiem, izmantojot [segmenta ieskatus](segment-insights.md). Uzziniet, kas atšķir divus segmentus vai to, kas viņiem ir kopīgs.
-
-## <a name="find-similar-customers"></a>Atrast līdzīgus klientus
-
-Atrodiet klientus, kas ir līdzīgi atlasītā segmenta dalībniekiem, izmantojot mākslīgā intelekta palīdzību. Papildinformāciju skatiet rakstā [Līdzīgi klienti ](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Esošo segmentu pārvaldība
 
 Lai skatītu visus saglabātos segmentus un tos pārvaldītu, atveriet lapu **Segmenti**.
 
 Katru segmentu apzīmē rinda, kurā ir iekļauta papildu informācija par segmentu.
 
-> [!div class="mx-imgBorder"]
-> ![Esoša segmenta pārvaldīšanas opcijas](media/segments-selected-segment.png "Esoša segmenta pārvaldīšanas opcijas")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Atlasīts segments ar nolaižamo sarakstu ar opcijām un pieejamām opcijām.":::
 
 Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
 
@@ -59,7 +50,7 @@ Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
   Vai arī varat izmantot funkcionalitāti **Plānot vēlāk** nolaižamajā izvēlnē **Aktivizēt/Deaktivizēt**, lai norādītu nākotnes datumu un laiku noteikta segmenta aktivizēšanai un deaktivizēšanai.
 - **Pārdēvēt** segmentu.
 - **Lejupielādēt** dalībnieku sarakstu kā .CSV failu.
-- Opcija **Pievienot** nosūta segmenta klientu ID sarakstu apstrādei citā programmā.
+- **Pārvaldīt eksportu**, lai skatītu ar eksportu saistīto segmentu un pārvaldītu to. [Uzzināt vairāk par eksportēšanu.](export-destinations.md)
 - **Dzēst** segmentu.
 
 ## <a name="refresh-segments"></a>Atsvaidzināt segmentus
@@ -68,6 +59,24 @@ Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā 
 
 > [!TIP]
 > Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+
+## <a name="export-segments"></a>Segmentu eksportēšana
+
+Segmentu var eksportēt no segmentu lapas vai [eksportēšanas lapas](export-destinations.md). 
+
+1. Doties uz lapu **Segmenti**.
+
+1. Atlasiet **Parādīt vēl [...]** eksportējamam segmentam.
+
+1. Darbību nolaižamajā sarakstā atlasiet **Pārvaldīt eksportu**.
+
+1. Tiek atvērta lapa **Segmenta eksports (priekšskatījums)**. Var redzēt visas konfigurētās eksportēšanas darbības, kas grupēts pēc eksporta, kurā ir pašreizējais segments vai kurā tas nav iekļauts.
+
+   1. Lai atlasīto segmentu pievienotu eksportēšanai, sarakstā atlasiet eksportēt un atlasiet **Pievienot segmentu**.
+
+   1. Lai izveidotu jaunu eksportu ar atlasīto segmentu, atlasiet **Pievienot eksportēšanu**. Papildinformāciju par eksportēšanas darbību izveidi skatiet rakstā [Jaunas eksportēsanas darbības iestatīšana](export-destinations.md#set-up-a-new-export).
+
+1. Atlasiet **Atpakaļ**, lai atgrieztos segmentu galvenajā lapā.
 
 ## <a name="view-processing-history-and-segment-members"></a>Apstrādes vēstures un segmentu elementu skatīšana
 

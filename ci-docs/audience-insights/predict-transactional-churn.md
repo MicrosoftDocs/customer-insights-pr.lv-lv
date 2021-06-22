@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906865"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095611"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -144,7 +144,7 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
    - **Statuss:** Prognozes izpildes statuss.
         - **Ierindots:** Prognoze gaida citu procesu izpildi.
         - **Atsvaidzināšana:** Prognoze pašlaik darbojas, lai iegūtu rezultātus, kas ieplūst izvades entītijā.
-        - **Neizdevās:** Neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, [skatiet žurnālfailus](#troubleshoot-a-failed-prediction).
+        - **Neizdevās:** Neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, [skatiet žurnālfailus](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Veiksmīgi:** Prognoze ir veiksmīga. Lai pārskatītu prognozi, zem vertikālajām elipsēm atlasiet **Skatīt**
    - **Rediģēts:** Datums, kad tika mainīta prognozes konfigurācija.
    - **Pēdējā atsvaidzināšana:** Datums, kad atsvaidzinātais rezultāts ir redzams izvades entītijā.
@@ -168,35 +168,9 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
        
     1. **Ietekmīgākie faktori:** ir daudzi faktori, kas tiek ņemti vērā, veidojot jūsu prognozi. Katram faktoram ir nozīme, kas aprēķināta modeļa izveidotajos apkopotajās prognozēs. Šos faktorus var izmantot, lai atvieglotu jūsu prognozes rezultātu validēšanu. Šo informāciju var izmantot arī vēlāk, lai [izveidotu segmentus](segments.md), kas varētu palīdzēt ietekmēt zuduma risku attiecībā uz klientiem.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Neizdevušās prognozes problēmas novēršana
+## <a name="manage-predictions"></a>Pārvaldīt prognozes
 
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurai vēlaties skatīt kļūdu žurnālus.
-
-1. Atlasiet **Žurnāli**.
-
-1. Pārskatīt visas kļūdas. Pastāv vairāki kļūdu tipi, kas var rasties, un tie apraksta to, kas izraisīja kļūdu. Piemēram, kļūda, kurā nav pietiekami daudz datu, lai precīzi prognozētu, parasti tiek novērsta, ielādējot papildu datus Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Atsvaidzināt prognozi
-
-Prognozes tiks automātiski atsvaidzinātas ar vienu un to pašu [grafiku, ko jūsu dati atsvaidzina](system.md#schedule-tab) kā konfigurēts iestatījumos. Tos var atsvaidzināt arī manuāli.
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties atsvaidzināt.
-
-1. Atlasiet **Atsvaidzināt**.
-
-## <a name="delete-a-prediction"></a>Dzēst prognozi
-
-Dzēšot prognozi, tiek noņemta arī tās izvades entītija.
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties dzēst.
-
-1. Atlasiet **Dzēst**.
+Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

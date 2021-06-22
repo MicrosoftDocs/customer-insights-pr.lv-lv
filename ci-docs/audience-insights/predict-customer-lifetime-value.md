@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954588"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095519"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Klienta ilgtermiņa vērtības (CLV) prognoze (priekšskatījums)
 
@@ -149,7 +149,6 @@ Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, kli
 
 1. Atlasiet **Tālāk**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Modeļa konfigurācijas pārskatīšana un palaišana
 
 1. Darbībā **Modeļa detalizētās informācijas pārskatīšana** validējiet konfigurācijas prognozi. Jūs varat atgriezties jebkurā prognozēšanas konfigurācijas daļā, zemāk parādītajā vērtībā atlasot **Rediģēt**. No norises indikatora var atlasīt arī konfigurācijas soli.
@@ -170,11 +169,10 @@ Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, kli
 - **Statuss**: Prognozes izpildes statuss.
     - **Ierindots**: prognoze gaida citu procesu izpildi.
     - **Atsvaidzināšana**: prognoze pašlaik darbojas, lai iegūtu rezultātus, kas ieplūst izvades entītijā.
-    - **Neizdevās**: neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, [skatiet žurnālfailus](#troubleshoot-a-failed-prediction).
+    - **Neizdevās**: neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, [skatiet žurnālfailus](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Veiksmīgi**: prognoze ir veiksmīga. Atlasiet **Skats** vertikālās daudzpunktes sadaļā, lai pārskatītu prognozes rezultātus.
 - **Rediģēts**: datums, kad tika mainīta prognozes konfigurācija.
 - **Pēdējā atsvaidzināšana**: datums, kad prognozes atsvaidzinātais rezultāts ir redzams izvades entītijā.
-
 
 ### <a name="review-prediction-results"></a>Prognozes rezultātu pārskatīšana
 
@@ -216,28 +214,8 @@ Rezutātu lapā ir trīs primārās datu sadaļas.
 
 - **Vairums ietekmējošo faktoru**: veidojot savu CLV prognozi, tiek izskatīti dažādi faktori, pamatojoties uz mākslīgā intelekta modelim nodrošinātajiem ievades datiem. Katram no šiem faktoriem ir aprēķinātā nozīme modeļa izveidotajām apkopotajām prognozēm. Šos faktorus var izmantot, lai atvieglotu jūsu prognozes rezultātu validēšanu. Šie faktori sniedz arī plašāku ieskatu par visietekmējošākajiem faktoriem, kas veicina CLV prognozēšanu visos klientos.
 
-## <a name="refresh-a-prediction"></a>Atsvaidzināt prognozi
+## <a name="manage-predictions"></a>Pārvaldīt prognozes
 
-Prognozes automātiski tiek atsvaidzinātas pēc tā paša [grafika, kad dati tiek atsvaidzināti](system.md#schedule-tab), kā tas ir konfigurēts iestatījumos. Tos var atsvaidzināt arī manuāli.
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-2. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties atsvaidzināt.
-3. Atlasiet **Atsvaidzināt**.
-
-## <a name="delete-a-prediction"></a>Dzēst prognozi
-
-Dzēšot prognozi, tiek noņemta arī tās izvades entītija.
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-2. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties dzēst.
-3. Atlasiet **Dzēst**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Neizdevušās prognozes problēmas novēršana
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-2. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurai vēlaties skatīt kļūdu žurnālus.
-3. Atlasiet **Žurnāli**.
-4. Pārskatīt visas kļūdas. Pastāv vairāki kļūdu tipi, kas var rasties, un tie apraksta to, kas izraisīja kļūdu. Piemēram, kļūda, ka nav pietiekami daudz datu, lai precīzi prognozētu, parasti tiek atrisināta, ielādējot papildu datus.
-
+Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988929"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263260"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -26,6 +26,37 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>2021. gada maija atjauninājumi
+
+2021. gada maija atjauninājumi ietver vairākus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="data-ingestion"></a>Datu pieņemšana
+
+- **Metadatu vai entītijas definīcijas skatīšana vai modificēšana, pievienojot datus no jūsu entītijas, tagad varat skatīt un rediģēt metadatus vai entītijas definīciju auditorijas ieskatos, pievienojot datus no jūsu datu modeļa bieži lietotās Azure Data Lake Storage** mapes programmā Azure Data Lake Storage. Šī iespēja nodrošina reāllaika atsauksmes, modeļa validāciju un kļūdu pārbaudi. Tas ļauj jums nemanāmi rediģēt gan model.json, gan .json.
+
+### <a name="extensibility"></a>Paplašināšana
+
+- **Uzlabots segmentu eksports, pielāgots grafiks un dublicēšana** Tagad sarakstā varat skatīt [visas noteikta segmenta eksportēšanas darbības](export-destinations.md#view-exports-and-export-details). Šis jaunais skats palīdz pārvaldīt konkrēta segmenta veidu un pielāgot esošo vai izveidot jaunu eksportu.    
+  [Pielāgotus atsvaidzināšanas grafikus var definēt](export-destinations.md#schedule-and-run-exports) atsevišķam eksportam vai vairākām eksportēšanas darbībām vienlaikus. Līdz šim visas eksportēšanas darbības tika izpildītas ar katru sistēmas atsvaidzināšanu.    
+  Tā vietā, lai izveidotu jaunu eksportēšanu no slāpīt, varat sākt, pamatojoties uz esošu, lai kādu laiku saglabātu.
+
+- **Segmentu eksportēšana uz Constant Contact** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver Constant Contact. Veidojiet atbilstošu klientu auditorijas pakalpojumā Microsoft Advertising, izmantojot vienotā klienta profila datus, un izmantojiet auditorijas reklāmas kampaņām. Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz programmu Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Eksportējiet segmentus uz LinkedIn Ads**, mēs esam paplašināti savus eksportēšanas adresātus, lai iekļautu LinkedIn Ads un iespējotu iespēju atbloķēt kontaktpersonu mērķauditorijas atlasi, kā arī uzņēmuma mērķauditorijas atlasi, izmantojot LinkedIn, eksportējot jūsu vienotā klienta profila datus. Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz programmu LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Segmentu eksportēšana uz Omnisend** Esam paplašinājuši mūsu eksportēšanas galamērķus, un tie ietver Omnisend. Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidošanai, e-pasta mārketinga nodrošināšanai un specifisku klientu grupu atlasei pakalpojumā Omnisend. Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz programmu Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Prognozes
+
+- **Ievades datu lietojamības atskaite** sniedz konsolidētu pārskatu par kļūdām un brīdinājumiem, ko var ģenerēt jūsu pirmās izvēles prognozes. Tajā sniegti arī ieteikumi, kā uzlabot modeļa veiktspēju.    
+  Pārskats ir pieejams pēc tam, kad modelis ir pabeidzis apmācības procesu. Tas ir izveidots katram modelim atsevišķi, neatkarīgi no tā, vai tas ir veiksmīgi pabeigts.
+  Pašlaik šī funkcija darbojas tikai Transaction Churn modelim. Papildinformācija: skatīt [Ievades datu lietojamības atskaite](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Attiecības
+
+- **Relāciju vizualizēšana**: Relāciju vizualizēšanas skats ļauj redzēt visas pastāvošās attiecības starp entītijām un to jucību. Attiecības tagad ir sakārtotas grupās: lietotāju izveidotas, sistēmas un mantotās attiecības. Skatu var arī eksportēt kā attēlu. Papildinformāciju skatiet tēmā [Skatīt relācijas](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>2021. gada aprīļa atjauninājumi
 

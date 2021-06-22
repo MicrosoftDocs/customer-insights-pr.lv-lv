@@ -1,7 +1,7 @@
 ---
 title: Klientu profilu bagātināšana ar Microsoft datiem
 description: Izmantojiet Microsoft īpašumtiesību datus, lai bagātinātu klientu datus ar zīmola un interešu radniecību.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064900"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245716"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Bagātiniet klientu profilus ar zīmola un interešu radniecību (priekšskatījums)
 
@@ -69,12 +69,10 @@ Vadītā pieredze palīdz bagātinājumu konfigurēšanas laikā.
 
 ### <a name="define-your-brands-or-interests"></a>Definēt zīmolus vai intereses
 
-Atlasiet kādu no šīm opcijām:
+Izmantojot vienu vai abas iespējas, izvēlieties līdz pieciem zīmoliem vai interesēm:
 
-- **Nozare**: Sistēma identificē galvenos zīmolus vai intereses, kas attiecas uz jūsu nozari, un bagātina jūsu klientu datus ar tiem.
-- **Izvēlieties paši**: Atlasiet līdz pieciem vienumiem no zīmolu vai interešu saraksta, kuri jūsu organizācijai ir vissaistošākie.
-
-Lai pievienotu zīmolu vai interesi, ievadiet to ievades apgabalā, lai saņemtu ieteikumus, pamatojoties uz atbilstības nosacījumiem. Ja mēs neuzskaitām zīmolu vai interesi, kuru meklējat, nosūtiet mums atsauksmi, izmantojot saiti **Ieteikt**.
+- **Nozare**: nolaižamajā sarakstā atlasiet savu nozari un pēc tam izvēlieties kādu no šīs nozares populārākajām markām vai interesēm.
+- **Izvēlieties savu**: ievadiet ar organizāciju atbilstošu zīmolu vai ieinteresētību un pēc tam izvēlieties kādu no atbilstības noteikšanas ieteikumiem. Ja mēs neuzskaitām zīmolu vai interesi, kuru meklējat, nosūtiet mums atsauksmi, izmantojot saiti **Ieteikt**.
 
 ### <a name="review-enrichment-preferences"></a>Bagātināšanas preferenču pārskatīšana
 

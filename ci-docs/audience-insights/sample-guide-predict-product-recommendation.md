@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595282"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129908"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Produktu ieteikumu prognozes (priekšskatījums) rokasgrāmatas paraugs
 
@@ -22,7 +22,7 @@ Mēs paskaidrosim, kā izbeigt produktu ieteikumu prognozi, izmantojot tālāk s
 
 ## <a name="scenario"></a>Scenārijs
 
-Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. Šo mērķis ir saprast, kādus produktus viņiem ieteikt periodiskajiem klientiem. Zinot, kādi klienti **varētu nopirkt**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz konkrētiem produktiem.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus, kurus viņi pārdod, izmantojot savu Contoso Coffee vietni. Šo mērķis ir saprast, kādus produktus viņiem ieteikt periodiskajiem klientiem. Zinot, kādi klienti **varētu nopirkt**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz konkrētiem produktiem.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -65,7 +65,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommercePurchases**.
 
-1. Saglabājiet datu avotu.
+1. **Saglabājiet** datu avotu.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Klienta datu uzņemšana no lojalitātes shēmas
@@ -83,11 +83,11 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
 
-1. Saglabājiet datu avotu.
+1. **Saglabājiet** datu avotu.
 
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
-Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** procesu, lai izveidotu vienotu klientu profilu. Papildinformāciju skatiet tēmā [Datu apvienošana](data-unification.md).
+Pēc datu ietveršanas mēs sākam datu apvienošanas procesu, lai izveidotu vienotu klientu profilu. Papildinformāciju skatiet tēmā [Datu apvienošana](data-unification.md).
 
 ### <a name="map"></a>Kartēt
 
@@ -156,7 +156,7 @@ Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudum
 
    - **Produktu skaits**: iestatiet šo vērtību uz **5**. Šis iestatījums nosaka, cik daudz produktu klientiem vēlaties ieteikt.
 
-   - **Vai ieteikt produktus, ko klienti nesen ir iegādājušies?** Atlasiet **Jā**, lai norādītu, ka produktus vēlaties iekļaut iepriekš ieteikumu, par klientu iepriekšējiem pirkumiem.
+   - **Atkārtojiet paredzamos pirkumus**: atlasiet **Jā**, lai norādītu, ka vēlaties iekļaut produktus ieteikumā, ko klienti ir iegādājušies iepriekš.
 
    - **Atskata logs**: atlasiet vismaz **365 dienas**. Šis iestatījums nosaka, cik tālu modelis atskatīsies uz klienta darbībām, lai izmantotu tās kā ieteikumu ievadi.
    

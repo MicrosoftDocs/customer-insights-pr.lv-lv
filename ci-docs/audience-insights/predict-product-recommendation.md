@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906773"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095565"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktu ieteikumu prognoze (priekšskatījums)
 
@@ -205,33 +205,9 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
        > [!div class="mx-imgBorder"]
        > ![Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu](media/product-recommendation-highconfidence.PNG "Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu")
 
-## <a name="fix-a-failed-prediction"></a>Neveiksmīgas prognozes labošana
+## <a name="manage-predictions"></a>Pārvaldīt prognozes
 
-1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
-
-1. Atlasiet prognozi, kurai vēlaties skatīt kļūdu žurnālus, un atlasiet **Žurnāli**.
-
-1. Pārskatīt visas kļūdas. Pastāv vairāki kļūdu tipi, kas var rasties, un tie apraksta to, kas izraisīja kļūdu. Piemēram, kļūdu, kura vēsta, ka nepietiek datu, lai veiktu precīzu prognozi, parasti labo, Customer Insights ielādējot papildu datus.
-
-## <a name="refresh-a-prediction"></a>Atsvaidzināt prognozi
-
-Prognozes automātiski tiek atsvaidzinātas pēc tā paša [grafika, kad dati tiek atsvaidzināti](system.md#schedule-tab), kā tas ir konfigurēts iestatījumos.
-
-1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
-
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties atsvaidzināt.
-
-1. Atlasiet **Atsvaidzināt**.
-
-## <a name="delete-a-prediction"></a>Dzēst prognozi
-
-Dzēšot prognozi, tiek noņemta arī tās izvades entītija.
-
-1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
-
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties dzēst.
-
-1. Atlasiet **Dzēst**.
+Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
