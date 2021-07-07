@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: 'Bagātināt, izmantojot Leadspace'
           href: audience-insights/enrichment-leadspace.md
-        - name: Bagātināšana ar Experian
+        - name: Bagātināt ar Experian
           href: audience-insights/enrichment-experian.md
         - name: Bagātināšana ar SFTP pielāgoto importu
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Pārskats par eksportēšanu
               href: audience-insights/export-destinations.md
+            - name: Aktīvās kampaņas
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -238,17 +244,17 @@
       items:
         - name: Sākt darbu
           href: engagement-insights/get-started.md
-        - name: Izveidot darbvietu
+        - name: Darbvietas izveide
           href: engagement-insights/create-workspace.md
-        - name: Aprīkojiet savu tīmekļa vietni
-          href: engagement-insights/instrument-website.md
+        - name: Notikumu tveršana no tīmekļa vietnēm un mobilajām programmām
+          href: engagement-insights/developer-resources.md
         - name: Jēdzieni un terminoloģija
           href: engagement-insights/glossary.md
     - name: Notikumi
       items:
         - name: Notikumu izveide un modificēšana
           href: engagement-insights/refined-events.md
-        - name: Gadījumu eksportēšana
+        - name: Notikumu eksportēšana
           href: engagement-insights/export-events.md
     - name: Pārskati
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Pārskats par izstrādātāju resursiem
           href: engagement-insights/developer-resources.md
-        - name: Web SDK apmācība
+        - name: Tīmekļa SDK ceļvedis
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Web SDK paraugs
           href: engagement-insights/websdk-sample.md
+        - name: Android SDK apmācība
+          href: engagement-insights/get-started-android.md
+        - name: Android SDK paraugs
+          href: engagement-insights/androidsdk-sample.md
+        - name: iOS SDK apmācība
+          href: engagement-insights/get-started-ios.md
+        - name: iOS SDK paraugs
+          href: engagement-insights/iossdk-sample.md
     - name: Administrēšana
       items:
         - name: Lomas un atļaujas
