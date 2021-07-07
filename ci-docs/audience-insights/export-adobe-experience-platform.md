@@ -1,6 +1,6 @@
 ---
 title: Customer Insights datu eksportēšana uz Adobe Experience Platform
-description: Uzziniet, kā auditorijas ieskatu segmentus var izmantot Adobe Experience Platform.
+description: Uzziniet, kā izmantot auditorijas ieskatu segmentus Adobe pieredzes platformā.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760110"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305533"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights segmentu izmantošana Adobe Experience Platform (priekšskatījums)
 
-Kā auditorijas ieskatu lietotājs programmai Dynamics 365 Customer Insights, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, vēršoties pie atbilstošas mērķauditorijas. Lai izmantotu segmentu no auditorijas ieskatiem platformā Adobe Experience Platform un tādās programmās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
+Kā Dynamics 365 Customer Insights auditorijas ieskatu lietotājs, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, izvēloties atbilstošu mērķauditoriju. Lai izmantotu segmentu no auditorijas ieskatiem platformā Adobe Experience Platform un tādās programmās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Šajā rakstā aprakstīto darbību procesa shēma.":::
 
@@ -55,19 +55,19 @@ Identificēto mērķauditoriju izmantojot, mēs varam konfigurēt eksportu no au
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet **Pievienot savienojumu** un atlasiet **Azure Blob krātuve** vai rūtī **Azure Blob krātuve** atlasiet **Iestatīt**:
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **Azure Blob Storage** vai atlasiet **Iestatīt** elementā **Azure Blob Storage**, lai configurētu savienojumu.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfigurācijas elementu Azure Blob krātuvei."::: lai konfigurētu savienojumu.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfigurācijas elementu Azure Blob krātuvei."::: 
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Ievadiet sava Blob krātuves konta, kurā vēlaties eksportēt segmentu, **Konta nosaukumu**, **Konta atslēgu** un **Konteineru**.  
+1. Ievadiet sava Blob krātuves konta **Konta nosaukumu**, **Konta atslēgu** un **Konteineru**, kurā vēlaties eksportēt segmentu.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Krātuves konta konfigurācijas ekrānuzņēmums."::: 
    
-    - Papildinformāciju par Blob glabāšanas konta nosaukuma un konta atslēgas meklēšanu skatiet rakstā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
+    - Papildinformāciju par Blob krātuves konta nosaukuma un konta atslēgas meklēšanu skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
     - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
@@ -80,7 +80,7 @@ Identificēto mērķauditoriju izmantojot, mēs varam konfigurēt eksportu no au
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot eksportu**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Azure Blob Storage. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Azure Blob Storage. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
 1. Izvēlieties segmentu, uz kuru vēlaties eksportēt. Šajā piemērā tas ir **ChurnProneCustomers**.
 
@@ -121,9 +121,10 @@ Pēc avota savienojuma definēšanas [konfigurējiet datu plūsmu](https://exper
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Auditorijas izveide programmā Adobe Campaign Standard
 
-Lai šai kampaņai nosūtītu e-pasta ziņojumu, tiks izmantota programma Adobe Campaign Standard. Pēc datu importēšanas Adobe Experience Platform ir [jāizveido auditorija](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) programmā Adobe Campaign Standard, izmantojot datus Adobe Experience Platform.
+Lai šai kampaņai nosūtītu e-pasta ziņojumu, tiks izmantots Adobe Campaign Standard. Pēc datu importēšanas Adobe Experience Platform ir [jāizveido auditorija](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) programmā Adobe Campaign Standard, izmantojot datus Adobe Experience Platform.
 
-Uzziniet, kā [lietot segmentu veidotāju](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) programmā Adobe Campaign Standard, lai defindētu auditoriju, pamatojoties uz Adobe Experience Platform esošajiem datiem.
+
+Uzziniet, kā [lietot segmentu veidotāju](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) programmā Adobe Campaign Standard, lai defindētu auditoriju, pamatojoties uz Adobe Experience Platform esošajiem datiem.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>E-pasta ziņojuma izveide un nosūtīšana, izmantojot Adobe Campaign Standard
 

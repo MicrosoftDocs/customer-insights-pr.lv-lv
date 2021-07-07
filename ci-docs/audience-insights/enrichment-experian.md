@@ -1,6 +1,6 @@
 ---
-title: Bagātināšana ar trešās puses bagātināšanas programmu Experian
-description: Vispārēja informācija par Experian trešās puses bagātināšanu.
+title: Bagātināšana ar trešās puses bagātināšanas Experian
+description: Vispārīga informācija par Experian trešo pušu bagātināšanu.
 ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,67 +9,71 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
+ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896382"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "6309829"
 ---
-# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Bagātiniet klientu profilus ar demogrāfijas rādītājiem no Experian (priekšskatījums)
+# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientu profilu bagātināšana ar demogrāfiskajiem datiem no Experian (priekšskatījums)
 
-Experian ir pasaules mēroga līderis patērētāju un uzņēmumu kredītatskaišu un mārketinga pakalpojumu nodrošināšanā. Ar Experian datu bagātināšanas pakalpojumiem jūs varat veidot padziļinātāku izpratni par saviem klientiem, bagātinot klientu profilus ar demogrāfijas datiem, piemēram, mājsaimniecības izmēru, ieņēmumiem utt.
+Experian ir globālais līderis patērētāju un uzņēmumu kredītu pārskatu izveides un mārketinga pakalpojumos. Izmantojot Experian datu bagātināšanas pakalpojumus, jūs varat veidot lielāku izpratni par saviem klientiem, bagātinot savu klientu profilus ar tādiem demogrāfiskiem datiem kā mājsaimniecības lielums, ienākumi un daudz kas cits.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
-Lai konfigurētu Experian, ir jāatbilst šādiem priekšnosacījumiem:
+Lai konfigurētu Experian, ir jāizpilda šādi priekšnosacījumi:
 
-- Ir jābūt aktīvam Experian abonementam. Lai iegūtu abonementu, tieši [sazinieties ar Experian](https://www.experian.com/marketing-services/contact). [Uzziniet vairāk par Experian datu bagātināšanu](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+- Jums ir jābūt aktīvam Experian abonementam. Lai iegūtu abonementu, tieši [sazinieties ar Experian](https://www.experian.com/marketing-services/contact). [Papildinformācija par Experian datu bagātināšanu](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Administrators jau ir konfigurējis Experian savienojumu *vai* jums ir [administratora](permissions.md#administrator) atļaujas. Jums arī ir nepieciešams lietotāja ID, partijas ID un modeļa numurs jūsu SSH iespējotajam drošā transporta (ST) kontam, kuru jums izveidoja Experian.
+- Administrators jau ir konfigurējis Experian savienojumu *vai* jums ir [administratora](permissions.md#administrator) atļaujas. Jums ir nepieciešams arī lietotāja ID, puses ID un modeļa numurs jūsu SSH iespējotajam drošajam transporta (ST) kontam, ko Experian izveidoja jums.
+
+## <a name="supported-countriesregions"></a>Atbalstītās valstis/reģioni
+
+Pašlaik tiek atbalstīta klientu profilu bagātināšana tikai Amerikas Savienotajās Valstīs.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
-1. dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
+1. Dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
 
-1. Experian elementā atlasiet **Bagātināt manus datus**.
+1. Atlasiet **Bagātināt manus datus** elementā Experian.
 
    > [!div class="mx-imgBorder"]
    > ![Experian elements](media/experian-tile.png "Experian elements")
    > 
 
-1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un nolaižamajā izvēlnē izvēloties Experian. 
+1. Atlasiet [savienojumu](connections.md) nolaižamajā sarakstā. Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, varat izveidot savienojumu, atlasot **Pievienot savienojumu** un izvēloties Experian nolaižamajā sarakstā. 
 
-1. Atlasiet **Pieslēgties Experian**, lai apstiprinātu savienojuma atlasi.
+1. Atlasiet **Savienot ar Experian**, lai apstiprinātu savienojuma atlasi.
 
-1.  Atlasiet **Tālāk** un izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar demogrāfijas datiem no Experian. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+1.  Atlasiet **Nākamais** un izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar demogrāfiskajiem datiem no Experian. Varat atlasīt entītiju **Klients**, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Ekrānuzņēmums, izvēloties klientu datu kopu.":::
 
-1. Atlasiet **Tālāk** un definējiet kura veida laukus no jūsu vienotajiem profiliem vajadzētu izmantot, meklējot atbilstošus demogrāfijas datus no Experian. Ir obligāti jānorāda vismaz viens no laukiem **Vārds, uzvārds un adrese**, **Tālruņa numurs** vai **E-pasts**. Lai nodrošinātu augstāku atbilstības precizitāti, var pievienot līdz diviem citiem laukiem. Šāda atlase ietekmēs kartēšanas laukus, kuriem jums būs piekļuve nākamajā darbībā.
+1. Atlasiet **Tālāk** un definējiet, kāda tipa lauki no jūsu vienotajiem profiliem ir jāizmanto, lai meklētu atbilstošos demogrāfisko datus no Experian. Ir obligāti jānorāda vismaz viens no laukiem **Vārds, uzvārds un adrese**, **Tālruņa numurs** vai **E-pasts**. Lai nodrošinātu augstāku atbilstības precizitāti, var pievienot līdz diviem citiem laukiem. Šāda atlase ietekmēs kartēšanas laukus, kuriem jums būs piekļuve nākamajā darbībā.
 
     > [!TIP]
-    > Jo vairāk galveno identifikatoru atribūtu tiek nosūtīts Experian, jo augstāka iespēja iegūt augstāku atbilstības rādītāju.
+    > Papildu atslēgas identifikatora atribūti, kas nosūtīti uz Experian, var nodrošināt augstāku atbilstības precizitāti.
 
 1. Lai sāktu lauka kartēšanu, atlasiet **Tālāk**.
 
-1. Definējiet, kura veida laukus no jūsu vienotajiem profiliem vajadzētu izmantot, meklējot atbilstošus demogrāfijas datus no Experian. Obligātie lauki ir atzīmēti.
+1. Definējiet, kāda tipa lauki no jūsu vienotajiem profiliem ir jāizmanto, lai meklētu atbilstošos demogrāfiskos datus no Experian. Obligātie lauki ir atzīmēti.
 
 1. Norādiet bagātināto datu nosaukumu un izvades entitījas nosaukumu.
 
-1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
 
-## <a name="configure-the-connection-for-experian"></a>Experian savienojuma konfigurēšana 
+## <a name="configure-the-connection-for-experian"></a>Savienojuma konfigurēšana Experian 
 
-Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un Experian rūtī atlasiet **Iestatīt**.
+Lai konfigurētu savienojumus, jums ir jābūt administratoram. Atlasiet vienumu **Pievienot savienojumu**, konfigurējot bagātināšanu, *vai* pārejiet uz **Administrators** > **Savienojumi** un atlasiet opciju **Iestatīt** Experian elementā.
 
 1. Atlasiet **Sākt**.
 
 1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
 
-1. Ievadiet derīgu lietotāja ID, partijas ID un modeļa numuru no sava Experian Secure Transport konta.
+1. Ievadiet savam Experian drošajam transporta kontam derīgu lietotāja ID, puses ID un modeļa numuru.
 
-1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atlasot **Es piekrītu**.
 
 1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
 
@@ -79,7 +83,7 @@ Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot ba
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 
-Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat arī ļaut sistēmai palaist bagātināšanu automātiski kā daļu no [plānotās atsvaidzināšanas](system.md#schedule-tab). Apstrādes laiks būs atkarīgs no klientu datu izmēra un bagātināšanas procesiem, kurus jūsu kontam ir uzstādījis Experian.
+Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat arī ļaut sistēmai palaist bagātināšanu automātiski kā daļu no [plānotās atsvaidzināšanas](system.md#schedule-tab). Apstrādes laiks atkarīgs no klientu datu apjoma un bagātināšanas procesiem, ko jūsu kontam iestata Experian.
 
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
@@ -87,12 +91,12 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md)un pat [eksportējiet datus](export-destinations.md), lai klientiem sniegtu personalizētas iespējas.
+Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
-Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz Experian, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai nodrošinātu Experian atbilstību konfidencialitātes vai drošības saistībām, kas jums varētu rasties. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
+Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Experian, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādījuma, bet jūs esat atbildīgs par to, lai Experian atbilstu visām jūsu konfidencialitātes vai drošības saistībām. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
+Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu šīs funkcijas izmantošanu.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

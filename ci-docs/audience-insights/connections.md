@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896106"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304981"
 ---
 # <a name="connections-preview-overview"></a>Savienojumu (priekšskatījums) pārskats
 
@@ -24,7 +24,7 @@ Lai izveidotu un skatītu savienojumus, dodieties uz **Administrators** > **Savi
 
 Cilnē **Savienojumi** ir redzami visi aktīvie savienojumi. Sarakstā redzama katra savienojuma rinda. 
 
-Cilnē **Atklāt** plūkojiet īsu pārskatu un aprakstu un uzziniet, ko varat darīt ar katru paplašināšanas opciju.
+Cilnē **Atklāt** aplūkojiet īsu pārskatu un aprakstu un uzziniet, ko varat darīt ar katru paplašināšanas opciju.
 
 ### <a name="exports"></a>Eksports
 
@@ -42,7 +42,7 @@ Lai pievienotu savienojumu, ir jābūt [administratora atļaujām](permissions.m
 
 1. Doties uz cilni **Savienojumi**.
 
-1. Lai izveidotu jaunu savienojumu, atlasiet **Pievienot savienojumu**. Nolaižamajā izvēlnē atlasiet, kāda veida savienojumu vēlaties izveidot.
+1. Lai izveidotu jaunu savienojumu, atlasiet **Pievienot savienojumu**. Nolaižamajā izvēlnē izvēlieties, kāda veida savienojumu vēlaties izveidot.
 
 1. Rūtī **Iestatīt savienojumu** norādiet nepieciešamo informāciju. 
    1. **Parādāmais nosaukums** un nosaukuma veids raksturo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
@@ -54,7 +54,7 @@ Cilnes elementā **Iestatīt** var atlasīt arī **Atklāt**.
 
 ### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Ļaut līdzstrādniekiem izmantot savienojumu eksportēšanai
 
-Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem lietotājiem ir atļauts izmantot konkrēto savienojumu, lai definētu [eksportēšanu](export-destinations.md). Savienojums pēc noklusējuma ir pieejams lietotājiem ar administratora lomu. Šo iestatījumu varat mainīt sadaļān **Izvēlieties, kas var lietot šo savienojumu** un ļaut šo savienojumu izmantot lietotājiem ar līdzstrādnieka lomu.
+Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem lietotājiem ir atļauts izmantot konkrēto savienojumu, lai definētu [eksportēšanu](export-destinations.md). Savienojums pēc noklusējuma ir pieejams lietotājiem ar administratora lomu. Šo iestatījumu varat mainīt sadaļām **Izvēlieties, kas var lietot šo savienojumu** un ļaut šo savienojumu izmantot lietotājiem ar līdzstrādnieka lomu.
 
 - Līdzstrādnieki nevarēs savienojumu skatīt vai rediģēt. Viņi eksporta izveides laikā redzēs vienīgi parādāmo nosaukumu un veidu.
 - Kopīgojot savienojumu, jūs ļaujat savienojumu izmantot līdzstrādniekiem. Līdzstrādnieki eksportēšanas iestatīšanas laikā redzēs kopīgotos savienojumus. Viņi var pārvaldīt visus eksportus, kuri izmanto konkrēto savienojumu.
@@ -74,7 +74,9 @@ Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem l
 
 ## <a name="remove-a-connection"></a>Savienojuma noņemšana
 
-Ja savienojumu, kuru noņemat, izmanto bagātināšanā vai eksportēšanā, tās vispirms ir jāatvieno vai jāņoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu. Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās aktivizēt no jauna, pievienojot tām citu savienojumu lapā [Bagātināšana](enrichment-hub.md) vai [Eksportēšana](export-destinations.md).
+Ja savienojumu, kuru noņemat, izmanto bagātināšanā vai eksportēšanā, tās vispirms ir jāatvieno vai jāņoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu. 
+
+Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās aktivizēt no jauna, pievienojot tām citu savienojumu lapā [Bagātināšana](enrichment-hub.md) vai [Eksportēšana](export-destinations.md).
 
 1. Dodieties uz **Administrators** > **Savienojumi (priekšskatījums)**.
 

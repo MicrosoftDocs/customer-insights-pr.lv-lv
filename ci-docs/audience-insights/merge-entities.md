@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085585"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305656"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -34,7 +34,7 @@ Lai skatītu atribūtus, kas iekļauti kādā no automātiski sapludinātajiem a
 
 Var mainīt, kā sistēma apstrādā sapludinātos atribūtus, lai ģenerētu vienoto klienta profilu. Atlasiet vienumu **Rādīt vairāk** un izvēlieties, ko vēlaties mainīt.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcijas sapludināto atribūtu pārvaldīšanai nolaižamajā izvēlnē Rādīt vairāk.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Nolaižamās izvēlnes Rādīt vairāk opcijas, lai pārvaldītu sapludinātos atribūtus.":::
 
 Papildinformāciju skatiet nākamajās sadaļās.
 

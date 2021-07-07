@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965587"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305441"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
@@ -22,11 +22,11 @@ Datu adreses var būt nestrukturētas, nepilnīgas vai nepareizas. Izmantojiet M
 
 ## <a name="how-we-enhance-addresses"></a>Adrešu uzlabošana
 
-Mūsu modelis iet cauri divsoļu procesam, lai uzlabotu adresi. Vispirms tiek parsēta adrese, lai identificētu tās komponentus, un tie tiek ievietoti strukturētā formātā. Pēc tam mēs izmantojam intelektu, lai labotu, pabeigtu un standartizētu adreses vērtības.
+Mūsu modelis iet cauri divsoļu procesam, lai uzlabotu adresi. Vispirms tiek parsēta adrese, lai identificētu tās komponentus, un tie tiek ievietoti strukturētā formātā. Pēc tam izmantojam AI, lai labotu, pabeigtu un standartizētu adreses vērtības.
 
 ### <a name="example"></a>Piemērs
 
-Adreses informācija var būt nestandarta formātā un ietvert pareizrakstības kļūdas. Modelis var novērst šīs problēmas un izveidot konsekventas adreses vienotā klientu profilos.
+Adreses informācija var būt nestandarta formātā un var saturēt pareizrakstības kļūdas. Modelis var novērst šīs problēmas un izveidot konsekventas adreses vienotā klientu profilos.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Paplašinātās adreses darbojas tikai ar vērtībām, kas jau ir jūsu nosūtā
 2. nepārbauda, vai ir derīga kāda no vērtībām, piemēram, pasta indeksi vai pasta indeksu nosaukumi.
 3. nemaina neatpazītās vērtības.
 
-Modelis izmanto algoritmiskās mācīšanās metodes, lai uzlabotu adreses. Kamēr mēs izmantojam augstu precizitātes sliekšņa līmeni brīdī, kad modelis maina ievades vērtību, tāpat kā jebkurš modelis, kura pamatā ir AR ARV, netiek garantēta 100% precizitāte.
+Modelis izmanto algoritmiskās mācīšanās metodes, lai uzlabotu adreses. Lai gan mēs piemērojam augstu ticamības slieksni, kad modelis maina ievades vērtību, tāpat kā jebkuram uz algoritmisko mācīšanos balstītam modelim, 100 procentu precizitāte netiek garantēta.
 
 ## <a name="supported-countries-or-regions"></a>Atbalstītās valstis vai reģioni
 
@@ -76,7 +76,7 @@ Adresēs jābūt norādītai valsts/reģiona vērtībai. Netiek apstrādātas ad
 1. Atlasiet adrešu formatēšanas veidu datu kopā. Izvēlieties **Viena atribūta adresi**, ja datu adresēs tiek izmantots viens lauks. Izvēlieties **Vairāku atribūta adresi**, ja datu adresēs tiek izmantots vairāk nekā viens datu lauks.
 
    > [!NOTE]
-   > Gan vienas atribūta, gan vairāku atribūtu adresēs valsts/reģions ir obligāts. Adreses, kurās nav derīgu vai atbalstītu valsts/reģiona vērtību, netiks bagātinātas
+   > Valsts/reģions ir obligāts gan viena atribūta, gan vairāku atribūtu adresēs. Adreses, kurās nav derīgu vai atbalstītu valsts/reģiona vērtību, netiks bagātinātas.
 
 1.  Kartējiet adreses laukus no savas vienotās klienta entītijas.
 
@@ -98,6 +98,6 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md)un pat [eksportējiet datus](export-destinations.md), lai klientiem sniegtu personalizētas iespējas.
+Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

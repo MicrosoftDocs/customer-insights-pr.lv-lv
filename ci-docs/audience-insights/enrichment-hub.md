@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954496"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305257"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -22,7 +22,8 @@ Izmantojiet avotu datus, piemēram, no Microsoft un citiem partneriem, lai bagā
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Bagātināšanas centra lapa":::
 
-Informāciju par auditorijas ieskatiem skatiet sadaļā **Dati** > **Bagātināšana**, lai strādātu ar bagātināšanas iespējām.    
+Informāciju par auditorijas ieskatiem skatiet sadaļā **Dati** > **Bagātināšana**, lai strādātu ar bagātināšanas iespējām.  
+
 Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrādnieka vai Administratora atļaujas. Lai iegūtu papildinformāciju, skatiet [Atļaujas](permissions.md).
 
 Cilnē **Atklāt** atradīsiet šādus bagātinātājus:
@@ -31,7 +32,7 @@ Cilnē **Atklāt** atradīsiet šādus bagātinātājus:
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
-- Experian nodrošinātie [demogrāfijas dati](enrichment-experian.md)
+- [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP)
 
@@ -39,7 +40,7 @@ Cilnē **Manas bagātināšanas** varat redzēt jūsu konfigurētos bagātināju
 
 ## <a name="manage-existing-enrichments"></a>Esošo papildinājumu pārvaldība
 
-Lai redzētu visus konfigurētos bagātinājumus, dodieties uz **Mani papildinājumi**. Katrs bagātinājums tiek attēlots kā rinda, kurā ir iekļauta papildu informācija par bagātinājumu.
+Lai skatītu visus konfigurētos bagātinātos datus, dodieties uz **Manas bagātināšanas** cilni. Katrs bagātinājums tiek attēlots kā rinda, kurā ir iekļauta papildu informācija par bagātinājumu.
 
 Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Lai skatītu opcijas, varat arī saraksta elementā atlasīt daudzpunkti (...).
 
@@ -59,6 +60,6 @@ Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connectio
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
 
-Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai konkrētam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumus un pašreizējo lietojumu var aplūkot lapā **Bagātināšana**.
+Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai noteiktam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumus un pašreizējo lietojumu var aplūkot lapā **Bagātināšana**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895922"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305211"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
 
@@ -36,7 +36,7 @@ Lai konfigurētu Leadspace, ir jāizpilda tālāk aprakstītie priekšnosacījum
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace mozaīkas ekrānuzņēmums.":::
 
-1. Nolaižamajā izvēlnē atlasiet [savienojums](connections.md). Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un izvēloties **Leadspace**. 
+1. Atlasiet [savienojumu](connections.md) nolaižamajā sarakstā. Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu** un izvēloties **Leadspace**. 
 
 1. Lai apstiprinātu savienojumu, atlasiet **Pieslēgties Leadspace**.
 
@@ -57,13 +57,13 @@ Lai konfigurētu Leadspace, ir jāizpilda tālāk aprakstītie priekšnosacījum
 
 Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** *vai* dodieties uz **Administrators** > **Savienojumi** un Leadspace rūtī atlasiet **Iestatīt**.
 
-1. Atlasiet **Sākt darbu** 
+1. Atlasiet **Sākt**. 
 
 1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
 
 1. Iesniedziet derīgu Leadspace marķieri.
 
-1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atlasot **Es piekrītu**.
 
 1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
 
@@ -81,12 +81,12 @@ Papildinformāciju skatiet tēmā [Leadspace API](https://support.leadspace.com/
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md)un pat [eksportējiet datus](export-destinations.md), lai klientiem sniegtu personalizētas iespējas.
+Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
 Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz Leadspace, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai nodrošinātu Leadspace atbilstību konfidencialitātes vai drošības saistībām, kas jums varētu rasties. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
+Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu šīs funkcijas izmantošanu.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245716"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305165"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Bagātiniet klientu profilus ar zīmola un interešu radniecību (priekšskatījums)
 
-Izmantojiet Microsoft īpašumtiesību datus, lai bagātinātu klientu datus ar zīmola un interešu radniecību. Šie apstākļi tiek noteikti, vadoties pēc datiem, kas iegūti no cilvēkiem ar līdzīgiem demogrāfiskajiem datiem līdz jūsu klientiem. Šī informācija palīdz labāk izprast un segmentēt jūsu klientus, ņemot vērā viņu saistību ar noteiktiem zīmoliem un interesēm.
+Izmantojiet Microsoft īpašumtiesību datus, lai bagātinātu klientu datus ar zīmola un interešu radniecību. Šīs radniecības balstās uz datiem, kas iegūti no klientiem, kuru demogrāfiskie dati ir līdzīgi jūsu klientiem. Šī informācija palīdz labāk izprast un segmentēt jūsu klientus, ņemot vērā viņu saistību ar noteiktiem zīmoliem un interesēm.
 
 Rīkā Auditorijas ieskati ejiet uz **Dati** > **Bagātināšana**, lai [konfigurētu un skatītu bagātināšanu](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Lai konfigurētu zīmola saistību bagātināšanu, dodieties uz cilni **Atklāt
 Lai konfigurētu interešu saistību bagātināšanu, dodieties uz cilni **Atklāt** un atlasiet **Bagātināt manus datus** elementā **Intereses**.
 
    > [!div class="mx-imgBorder"]
-   > ![Zīmolu un interešu rūtis](media/BrandsInterest-tile-Hub.png "Zīmolu un interešu rūtis")
+   > ![Zīmolu un interešu elementi](media/BrandsInterest-tile-Hub.png "Zīmolu un interešu elementi")
 
 ## <a name="how-we-determine-affinities"></a>Kā tiek noteikta radniecība
 
@@ -35,7 +35,7 @@ Mēs izmantojat Microsoft tiešsaistes meklēšanas datus, lai atrastu radniecī
 
 ## <a name="affinity-level-and-score"></a>Saistību līmenis un rezultāts
 
-Katrā bagātinātā klienta profilā mēs nodrošinām divas saistītās vērtības — saistību līmeni un saistību rezultātu. Šīs vērtības palīdz noteikt, cik spēcīgas ir saistības šī profila demogrāfiskajam segmentam attiecībā uz zīmolu vai interesi salīdzinājumā ar citiem demogrāfiskajiem segmentiem.
+Katrā bagātinātā klienta profilā mēs nodrošinām divas saistītās vērtības: saistību līmeni un saistību rezultātu. Šīs vērtības palīdz noteikt, cik spēcīgas ir saistības šī profila demogrāfiskajam segmentam attiecībā uz zīmolu vai interesi salīdzinājumā ar citiem demogrāfiskajiem segmentiem.
 
 *Saistību līmenis* sastāv no četriem līmeņiem, un *saistību rādītājs* tiek aprēķināts pēc 100 punktu skalas, kura tiek kartēta uz saistību līmeņiem.
 
@@ -53,7 +53,7 @@ Atkarībā no tā, cik detalizēti vēlaties mērīt saistības, varat izmantot 
 
 Pašlaik tiek atbalstītas šādas valsts/reģiona opcijas: Austrālija, Kanāda (angļu valoda), Francija, Vācija, Apvienotā Karaliste vai Amerikas Savienotās Valstis (angļu valoda).
 
-Lai atlasītu valsti, atveriet **Zīmolu papildināšanu** vai **Intereses papildināšanu** un atlasiet opciju **Mainīt** blakus **Valsts/Reģions**. Rūtī **Valsts/Reģiona iestatījumi** izvēlieties opciju un atlasiet **Piemērot**.
+Lai atlasītu valsti vai reģionu, atveriet sadaļu **Zīmolu bagātināšana** vai **Interešu bagātināšana** un atlasiet **Mainīt** opciju pie **Valsts/Reģiona**. Rūtī **Valsts/Reģiona iestatījumi** izvēlieties opciju un atlasiet **Piemērot**.
 
 ### <a name="implications-related-to-country-selection"></a>Ar valsts atlasi saistītās sekas
 
@@ -61,9 +61,9 @@ Lai atlasītu valsti, atveriet **Zīmolu papildināšanu** vai **Intereses papil
 
 - [Izvēloties nozari](#define-your-brands-or-interests), jūs iegūsiet svarīgākos zīmolus vai intereses, pamatojoties uz atlasīto valsti vai reģionu.
 
-- [Bagātinot profilus](#refresh-enrichment), mēs bagātināsim visus klientu profilus, attiecībā uz kuriem mēs iegūstam datus par atlasītajiem zīmoliem un interesēm. Ieskaitot profilus, kas nav atlasītajā valstī vai reģionā. Piemēram, ja atlasāt Vāciju, mēs bagātināsim profilus, kuri atrodas ASV, ja mums būs pieejami dati par atlasītajiem zīmoliem un interesēm ASV.
+- Ja [bagātināsiet profilus](#refresh-enrichment), mēs bagātināsim visus klientu profilus, no kuriem mēs iegūstam datus par atlasītajiem zīmoliem un interesēm, tostarp profilus, kuri neietilps atlasītajā valstī vai reģionā. Piemēram, ja atlasāt Vāciju, mēs bagātināsim profilus, kuri atrodas ASV, ja mums būs pieejami dati par atlasītajiem zīmoliem un interesēm ASV.
 
-## <a name="configure-enrichment"></a>Konfigurēt bagātināšanu
+## <a name="configure-enrichment"></a>Bagātināšanas konfigurēšana
 
 Vadītā pieredze palīdz bagātinājumu konfigurēšanas laikā. 
 
@@ -71,7 +71,7 @@ Vadītā pieredze palīdz bagātinājumu konfigurēšanas laikā.
 
 Izmantojot vienu vai abas iespējas, izvēlieties līdz pieciem zīmoliem vai interesēm:
 
-- **Nozare**: nolaižamajā sarakstā atlasiet savu nozari un pēc tam izvēlieties kādu no šīs nozares populārākajām markām vai interesēm.
+- **Nozare**: nolaižamajā sarakstā atlasiet savu nozari un pēc tam izvēlieties kādu no šīs nozares populārākajiem zīmoliem vai interesēm.
 - **Izvēlieties savu**: ievadiet ar organizāciju atbilstošu zīmolu vai ieinteresētību un pēc tam izvēlieties kādu no atbilstības noteikšanas ieteikumiem. Ja mēs neuzskaitām zīmolu vai interesi, kuru meklējat, nosūtiet mums atsauksmi, izmantojot saiti **Ieteikt**.
 
 ### <a name="review-enrichment-preferences"></a>Bagātināšanas preferenču pārskatīšana
@@ -88,19 +88,19 @@ Atlasiet **Bagātinātā entitīja** un atlasiet datu kopu, kuru vēlaties bagā
 
 Kartējiet laukus no savas vienotās klienta entītijas, lai definētu demogrāfisko segmentu, kuru sistēma vēlas, lai izmantojat jūsu klientu datu bagātināšanai. Kartējiet valsti/reģionu un vismaz Dzimšanas datu vai Dzimuma atribūtus. Turklāt ir jākartē vismaz viens no atribūtiem — Pilsēta (un novads/rajons) vai pasta indekss. Atlasiet **Rediģēt**, lai definētu lauku kartēšanu, un atlasiet **Piemērot**, kad esat to izdarījis. Atlasiet **Saglabāt**, lai pabeigtu lauka kartēšanu.
 
-Tiek atbalstīti šādi(-as) formāti un vērtības; vērtības nav reģistrjutīgas:
+Tiek atbalstīti šādi(-as) formāti un vērtības (vērtības nav reģistrjutīgas):
 
-- **Dzimšanas datums** : Iesakām, lai datu uzņemšanas laikā dzimšanas datums tiek pārvērsts par DateTime tipu. Vai arī tā var būt virkne [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) “gggg-MM-dd” vai “gggg-MM-ddTHH:mm:ssZ” formātā.
-- **Dzimums**: Vīrietis, sieviete, nezināms
-- **Pasta indekss**: Piecciparu pasta indeksi ASV, standarta pasta indekss citur
-- **Pilsēta** : Pilsētas nosaukums angļu valodā
+- **Dzimšanas datums** : Iesakām, lai datu pievienošanas laikā dzimšanas datums tiek pārvērsts par DateTime tipu. Vai arī tā var būt virkne [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formātā “yyyy-MM-dd” vai “yyyy-MM-ddTHH:mm:ss”.
+- **Dzimums**: Vīrietis, sieviete, nezināms.
+- **Pasta indekss**: Piecciparu pasta indeksi Amerikas Savienotajās Valstīs, standarta pasta indekss, ko izmanto citur.
+- **Pilsēta**: Pilsētas nosaukums angļu valodā.
 - **Štats/Province**: Divu burtu saīsinājums Amerikas Savienotajās Valstīs (ASV) un Kanādā. Divu vai trīs burtu saīsinājums Austrālijā. Nav piemērojams Francijai, Vācijai vai Apvienotajai Karalistei.
 - **Valsts/Reģions**:
 
   - US: Amerikas Savienotās Valstis, ASV, US, Amerika
   - CA: Kanāda, CA
   - GB: Apvienotā Karaliste, AK, Lielbritānija, GB, Lielbritānijas un Ziemeļīrijas Apvienotā Karaliste, Lielbritānijas Apvienotā Karaliste
-  - AU: Austrālija, AU, Austrālijas Savienība
+  - AU: Austrālijā, AU, Austrālijas Savienība
   - FR: Francija, FR, Francijas Republika
   - DE: Vācija, vācu valoda, Deutschland, Allemagne, DE, Vācijas Federatīvā Republika, Vācijas Republika
 
@@ -113,10 +113,11 @@ Visbeidzot, varat pārskatīt informāciju un nodrošināt bagātinājuma nosauk
 ## <a name="refresh-enrichment"></a>Atsvaidzināt bagātināšanu
 
 Pēc zīmolu, interešu un demogrāfijas lauku kartēšanas palaidiet bagātināšanu. Lai sāktu procesu, atlasiet **Palaist** zīmola vai interešu konfigurācijas lapā. Turklāt varat ļaut sistēmai automātiski palaist bagātināšanu kā plānotas atsvaidzināšanas daļu.
+
 Atkarībā no jūsu klientu datu apjoma bagātināšanas izpilde var aizņemt vairākas minūtes.
 
 > [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Atlasot opciju **Skatīt detalizētu informāciju** par kādu no uzdevumiem, jums tiks sniegta papildinformācija: apstrādes laiks, pēdējās apstrādes datums un visas ar uzdevumu saistītās kļūdas un brīdinājumi.
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 
@@ -134,7 +135,7 @@ Zīmola un intereses radniecību var apskatīt arī atsevišķās klientu kartī
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Būvējiet virs saviem bagātinātajiem klientu datiem. Veidojiet [segmentus](segments.md), [mērus](measures.md)un pat [eksportējiet datus](export-destinations.md), lai klientiem sniegtu personalizētas iespējas.
+Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [Segmentus](segments.md) un [Pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

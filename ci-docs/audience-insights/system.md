@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595389"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305719"
 ---
 # <a name="system-configuration"></a>Sistēmas konfigurācija
 
@@ -51,15 +51,15 @@ Uzdevumiem/procesiem ir seši statusu tipi. Šie statusa tipi tiek rādīti arī
 
 Šajā sarakstā ir parādīta atsvaidzināšanas politika attiecībā uz katru no galvenajiem procesiem:
 
-- **Datu avoti:** Darbojas atbilstoši [konfigurētajam grafikam ](#schedule-tab). Esiet neatkarīgi no citiem procesiem. Atbilstība ir atkarīga no šī procesa sekmīgas pabeigšanas.
-- **Atbilstība:** Darbojas atbilstoši [konfigurētajam grafikam ](#schedule-tab). Atkarīga no to datu avotu apstrādes, kuri tiek izmantoti atbilstības definīcijā. Sapludināšana ir atkarīga no šī procesa sekmīgas pabeigšanas.
-- **Sapludināšana**: Darbojas atbilstoši [konfigurētajam grafikam ](#schedule-tab). Atkarīga no atbilstības procesa pabeigšanas. Segmenti, mērījumi, bagātināšana, meklēšana, darbības, prognozes un datu sagatavošana ir atkarīga no sekmīgas šī procesa pabeigšanas.
+- **Datu avoti:** Darbojas atbilstoši [konfigurētajam grafikam](#schedule-tab). Esiet neatkarīgi no citiem procesiem. Atbilstība ir atkarīga no šī procesa sekmīgas pabeigšanas.
+- **Atbilstība:** Darbojas atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīga no to datu avotu apstrādes, kuri tiek izmantoti atbilstības definīcijā. Sapludināšana ir atkarīga no šī procesa sekmīgas pabeigšanas.
+- **Sapludināšana**: Darbojas atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīga no atbilstības procesa pabeigšanas. Segmenti, mērījumi, bagātināšana, meklēšana, darbības, prognozes un datu sagatavošana ir atkarīga no sekmīgas šī procesa pabeigšanas.
 - **Segmenti** : Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas. Ieskati ir atkarīgi no to apstrādes.
 - **Mērījumi**: Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas.
 - **Darbības**: Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas.
 - **Bagātināšana**: Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas.
 - **Meklēšana**: Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas.
-- **Datu sagatavošana**: Darbojas atbilstoši [konfigurētajam grafikam ](#schedule-tab). Atkarīgi no sapludināšanas.
+- **Datu sagatavošana**: Darbojas atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no sapludināšanas.
 - **Ieskati** : Darbojas manuāli (vienreizēja atsvaidzināšana) un atbilstoši [konfigurētajam grafikam](#schedule-tab). Atkarīgi no segmentiem.
 
 Atlasiet uzdevuma statusu, lai redzētu detalizētu informāciju par to, kāda ir norise visam darbam, kurā tas ietilpa. Iepriekš minētās atsvaidzināšanas politikas var palīdzēt izprast, ko varat darīt, atrisinātu uzdevumu, kas ir **Izlaists** vai **Rindā**.
@@ -94,7 +94,7 @@ Atlasiet **Saglabāt**, lai apstiprinātu atlases.
 
 ## <a name="api-usage-tab"></a>API lietošanas cilne
 
-Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri notikumi notika konkrētajā laika posmā. Laika periodu varat izvēlēties nolaižamajā izvēlnē **Atlasīt laika posmu**. 
+Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri notikumi notika konkrētajā laika posmā. Nolaižamajā izvēlnē izvēlieties laika periodu opcijai **Atlasīt laika periodu**. 
 
 **API lietojumā** ir trīs sadaļas: 
 - **API izsaukumi** — diagramma, kas atlasītajā laika posmā vizualizē apkopoto izsaukumu skaitu uz API.

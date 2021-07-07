@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700677"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305650"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
 
@@ -72,7 +72,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
       > [!div class="mx-imgBorder"]
       > ![Modeļa izvades parametra rūts](media/intelligence-screen3-outputparameters.png "Modeļa izvades parametrs rūts")
 
-1. Atlasiet atbilstošo atribūtu nolaižamajā sarakstā **Klienta ID rezultātos**, kas identificē klientus, un atlasiet **Saglabāt**.
+1. Atlasiet atbilstošo atribūtu **Klienta ID rezultātu** nolaižamajā sarakstā, kurā tiek identificēti klienti un atlasiet **Saglabāt**.
 
    > [!div class="mx-imgBorder"]
    > ![Rezultātu saistīšana ar rūti Klienta dati](media/intelligence-screen4-relatetocustomer.png "Rezultātu saistīšana ar rūti Klienta dati")
@@ -100,7 +100,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
       1. Atlasiet **Izvades datu krātuves parametra nosaukumu** savam testa konveijeram.
       1. Atlasiet **Izvades ceļa parametra nosaukumu** savam testa konveijeram.
 
-1. Atlasiet atbilstošo atribūtu nolaižamajā sarakstā **Klienta ID rezultātos**, kas identificē klientus, un atlasiet **Saglabāt**.
+1. Atlasiet atbilstošo atribūtu **Klienta ID rezultātu** nolaižamajā sarakstā, kurā tiek identificēti klienti un atlasiet **Saglabāt**.
    Izvēlieties atribūtu no izvedumapmācību izvades ar vērtībām, kas līdzinās Klienta entītijas kolonnai Klienta ID. Ja datu komplektā nav šādas kolonnas, izvēlieties atribūtu, kas unikāli identificē rindu.
 
 ## <a name="run-a-workflow"></a>Darbplūsmas palaišana

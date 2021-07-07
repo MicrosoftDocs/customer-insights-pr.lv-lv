@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760290"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305395"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights segmentu izmantošana Adobe Campaign Standard (priekšskatījums)
 
-Kā auditorijas ieskatu lietotājs programmai Dynamics 365 Customer Insights, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, vēršoties pie atbilstošas mērķauditorijas. Lai izmantotu segmentu no auditorijas ieskatiem platformā Adobe Experience Platform un tādās programmās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
+Kā Dynamics 365 Customer Insights auditorijas ieskatu lietotājs, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, izvēloties atbilstošu mērķauditoriju. Lai izmantotu segmentu no auditorijas ieskatiem platformā Adobe Experience Platform un tādās programmās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Šajā rakstā aprakstīto darbību procesa shēma.":::
 
@@ -54,7 +54,7 @@ Identificēto mērķauditoriju izmantojot, mēs varam konfigurēt eksportu no au
 
 1. Auditorijas ieskatos dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet **Pievienot savienojumu** un atlasiet **Adobe Campaign**, lai konfigurētu savienojumu, vai rūtī **Adobe Campaign** atlasiet **Iestatīt**
+1. Atlasiet **Pievienot savienojumu** un atlasiet **Adobe Campaign**, lai konfigurētu savienojumu, vai elementā **Adobe Campaign** atlasiet **Iestatīt**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigurācijā elements programmai Adobe Campaign Standard.":::
 
@@ -80,7 +80,7 @@ Identificēto mērķauditoriju izmantojot, mēs varam konfigurēt eksportu no au
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot eksportu**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Adobe Campaign. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Adobe Campaign. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
 1. Izvēlieties segmentu, uz kuru vēlaties eksportēt. Šajā piemērā tas ir **ChurnProneCustomers**.
 
@@ -118,7 +118,7 @@ Ja tiek eksportēts segments no auditorijas ieskatiem, tajā ir ietvertas kolonn
 
 Lai izmantotu segmentu Adobe Campaign Standard, mums ir jāpaplašina profila diagramma programmā Adobe Campaign Standard, ietverot divus papildu laukus. Informācija par to, kā [paplašināt profila resursu](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) ar jauniem laukiem programmā Adobe Campaign Standard.
 
-Mūsu piemērā šie lauki ir *Segmenta nosaukums un Segmenta datums (nav obligāti).*
+Mūsu piemērā šie lauki ir *Segmenta nosaukums un Segmenta datums (nav obligāti)*.
 
 Mēs izmantosim šos laukus, lai identificētu profilus programmā Adobe Campaign Standard, kurus vēlamies sasniegt šīs kampaņas vajadzībām.
 
@@ -128,7 +128,7 @@ Ja Adobe Campaign Standard nav citu ierakstu, izņemot tos, ko plānojat import�
 
 Tagad, kad viss ir izveidots, mums ir jāimportē sagatavotie auditorijas dati no auditorijas ieskatiem uz programmu Adobe Campaign Standard, lai izveidotu profilus. Informācija par to, kā [importēt profilus programmā Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences), izmantojot darbplūsmu.
 
-Tālāk redzamajā attēlā importēšanas darbplūsma ir konfigurēta tā, lai tā darbotos ik pēc 8 stundām, un tā meklē eksportētos auditorijas ieskatu segmentus (.csv fails Azure Blob krātuvē). Darbplūsma izvelk .csv faila saturu noteiktā kolonnu secībā. Šī darbplūsma ir būvēta, lai veiktu pamata kļūdu apstrādi un nodrošinātu, ka katram ierakstam ir e-pasta adrese, pirms dati tiek iepakoti programmā Adobe Campaign Standard. Darbplūsma arī izvelk segmenta nosaukumu no faila nosaukuma, pirms tas tiek augšupievietots ACS profila datos.
+Tālāk redzamajā attēlā ir konfigurēta importēšanas darbplūsma, lai tā darbotos ik pēc astoņām stundām un meklētu eksportētās auditorijas ieskatu segmentus (.csv fails Azure Blob krātuvē). Darbplūsma izvelk .csv faila saturu noteiktā kolonnu secībā. Šī darbplūsma ir būvēta, lai veiktu pamata kļūdu apstrādi un nodrošinātu, ka katram ierakstam ir e-pasta adrese, pirms dati tiek iepakoti programmā Adobe Campaign Standard. Darbplūsma arī izvelk segmenta nosaukumu no faila nosaukuma, pirms tas tiek ievadīts Adobe Campaign Standard profila datos.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Importēšanas darbplūsmas programmas Adobe Campaign Standard lietotāja interfeisā ekrānuzņēmums.":::
 

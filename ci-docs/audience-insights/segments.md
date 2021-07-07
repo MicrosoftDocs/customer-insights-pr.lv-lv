@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111396"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306266"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -38,7 +38,7 @@ Lai skatītu visus saglabātos segmentus un tos pārvaldītu, atveriet lapu **Se
 
 Katru segmentu apzīmē rinda, kurā ir iekļauta papildu informācija par segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Atlasīts segments ar nolaižamo sarakstu ar opcijām un pieejamām opcijām.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Atlasīts segments ar opciju nolaižamo sarakstu un pieejamajām opcijām.":::
 
 Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
 
@@ -68,7 +68,7 @@ Segmentu var eksportēt no segmentu lapas vai [eksportēšanas lapas](export-des
 
 1. Atlasiet **Parādīt vēl [...]** eksportējamam segmentam.
 
-1. Darbību nolaižamajā sarakstā atlasiet **Pārvaldīt eksportu**.
+1. Darbību nolaižamajā sarakstā atlasiet **Pārvaldīt eksportēšanas darbības**.
 
 1. Tiek atvērta lapa **Segmenta eksports (priekšskatījums)**. Var redzēt visas konfigurētās eksportēšanas darbības, kas grupēts pēc eksporta, kurā ir pašreizējais segments vai kurā tas nav iekļauts.
 

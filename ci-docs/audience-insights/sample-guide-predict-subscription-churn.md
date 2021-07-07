@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595527"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306312"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonementa zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
 
@@ -22,7 +22,7 @@ Mēs jums paskaidrosim, kā izbeigt parakstīšanās zudumu prognozi, izmantojot
 
 ## <a name="scenario"></a>Scenārijs
 
-Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. Viņi nesen uzsāka abonēšanas uzņēmumu, lai viņu klienti regulāri saņemtu kafiju. Viņu mērķis ir izprast, kuri abonēšanas klienti tuvāko mēnešu laikā var atcelt savu abonementu. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus, kurus viņi pārdod, izmantojot savu Contoso Coffee vietni. Viņi nesen uzsāka abonēšanas uzņēmumu, lai viņu klienti regulāri saņemtu kafiju. Viņu mērķis ir izprast, kuri abonēšanas klienti tuvāko mēnešu laikā var atcelt savu abonementu. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -128,9 +128,9 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
 
-1. **Primārajā** nolaižamajā sarakstā izvēlieties **eCommerceContacts : e-komercijas** kā primāro avotu un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
 
-1. Nolaižamajā sarakstā **2.entītija** izvēlieties **loyCustomers: LoyaltyScheme** un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Apvienot e-komercijas un lojalitātes atbilstības.":::
 
@@ -138,16 +138,16 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
 
-   * Nolaižamajā sarakstā atlasiet **FullName** eCommerceContacts.
-   * Nolaižamajā sarakstā atlasiet **FullName** loyCustomers.
+   * Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
+   * Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
    * Atlasiet opciju **Normalizēt** nolaižamo sarakstu un izvēlieties **tipu (tālrunis, nosaukums, adrese,...)**.
    * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 
 1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
 
    * Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   * Entītijas eCommerceContacts izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**.
-   * Entītijai loyCustomers izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**. 
+   * Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
+   * Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**. 
    * Atstājiet normalizāciju tukšu. 
    * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129954"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306358"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Debitora darbmūža prognozes (CLV) parauga rokasgrāmata
 
@@ -123,9 +123,9 @@ Pēc datu ietveršanas mēs sākam datu apvienošanas procesu, lai izveidotu vie
 
 1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
 
-1. **Primārajā** nolaižamajā sarakstā izvēlieties **eCommerceContacts : e-komercijas** kā primāro avotu un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
 
-1. Nolaižamajā sarakstā **2.entītija** izvēlieties **loyCustomers: LoyaltyScheme** un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
 
    ![Apvienot e-komercijas un lojalitātes atbilstības.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Pēc datu ietveršanas mēs sākam datu apvienošanas procesu, lai izveidotu vie
 
 1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
 
-   - Nolaižamajā sarakstā atlasiet **FullName** eCommerceContacts.
-   - Nolaižamajā sarakstā atlasiet **FullName** loyCustomers.
-   - Atlasiet opciju **Normalizēt** nolaižamo sarakstu un izvēlieties **Tipu (tālrunis, nosaukums, adrese,...)**.
+   - Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
+   - Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
+   - Atlasiet nolaižamo izvēlni **Normalizēt** un izvēlieties **Tips (Tālrunis, Nosaukums, Adrese, ...)**.
    - Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 
 1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
 
    - Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   - Entītijas eCommerceContacts izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**.
-   - Entītijai loyCustomers izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**.
+   - Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
+   - Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**.
    - Atstājiet normalizāciju tukšu.
    - Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 

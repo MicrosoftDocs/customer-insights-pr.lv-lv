@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085539"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304705"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -30,15 +30,15 @@ Datu avotu varat pievienot trīs galvenajos veidos:
 
 - [Izmantojot daudzos Power Query savienotājus](connect-power-query.md)
 - [No Common Data Model mapes](connect-common-data-model.md)
-- [No sava Common Data Service ezera](connect-common-data-service-lake.md)
+- [No sava Microsoft Dataverse ezera](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Datu pievienošana no lokālajiem datu avotiem
 
-Datu uzņemšana no lokālajiem datu avotiem Audience Insights tiek atbalstīta, balstoties Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](manage-environments.md#create-an-environment-in-an-existing-organization), kad tiek iestatīta vide.
+Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](manage-environments.md#create-an-environment-in-an-existing-organization), kad tiek iestatīta vide.
 
-Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/data-integration/gateway/service-gateway-app.md).
 
-Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā redzamas saites uz Power Platform vidi, kurā varat skatīt un konfigurēt lokālo datu vārtejas.
+Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
 
 ## <a name="review-ingested-data"></a>Uzņemto datu pārskatīšana
 
@@ -56,7 +56,7 @@ Jūs redzēsit katra uzņemtā datu avota nosaukumu, tā statusu un pēdējo rei
 
 Atlasiet vērtību jebkura datu avoti kolonnā **Statuss**, lai pārskatītu papildinformāciju. Rūtī **Detalizēta informācija** izvērsiet **Datu avoti**. Atlasiet **Skatīt detalizētu informāciju** papildu informācijai par atsvaidzināšanas statusu, ieskaitot kļūdas detaļas un pakārtotā procesa atjauninājumus.
 
-Datu ielāde var ilgt kādu laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos datus var pārskatīt no lapas **Entītijas**. Papildinformāciju skatiet rakstā [Entītijas](entities.md).
+Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos datus var pārskatīt no lapas **Entītijas**. Papildinformāciju skatiet rakstā [Entītijas](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Atsvaidzināt datu avotu
 
@@ -66,9 +66,9 @@ Apmeklējiet **Administrators** > **Sistēma** > [**Grafiks**](system.md#schedul
 
 Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
-1. Sadaļā Auditorijas ieskati ejiet uz **Dati** > **Datu avoti**.
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
 
-2. Atlasiet vertikālo daudzpunkti blakus atsvaidzināmajam datu avotam un nolaižamajā izvēlnē atlasiet **Atsvaidzināt**.
+2. Nolaižamajā izvēlnes sarakstā atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties atsvaidzināt un atlasiet **Atsvaidzināt**.
 
 3. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
 
@@ -78,7 +78,7 @@ Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
 
-2. Atlasiet vertikālo daudzpunkti blakus noņemamajam datu avotam un nolaižamajā izvēlnē atlasiet **Dzēst**.
+2. Nolaižamajā izvēlnē atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties noņemt un atlasiet **Dzēst**.
 
 3. Apstipriniet dzēšanu.
 

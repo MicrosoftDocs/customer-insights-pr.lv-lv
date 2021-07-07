@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124374"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304842"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentu eksportēšana uz AdRoll (priekšskatījums)
 
@@ -28,11 +28,11 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Vienam eksportam var eksportēt līdz 250 000 profilu uz AdRoll.
+- Vienlaikus uz AdRoll var eksportēt līdz 250 000 profilu.
 - Jūs nevarat eksportēt segmentus, kuros ir mazāk par 100 profiliem, uz AdRoll. 
 - Eksportēšana uz AdRoll ir ierobežota līdz segmentiem.
-- Līdz 250 000 profilu eksportēšanai uz AdRoll var paiet 10 minūtes. 
-- To profilu skaits, ko var eksportēt uz AdRoll, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar AdRoll.
+- Aptuveni 250 000 profilu eksportēšana uz AdRoll var aizņemt 10 minūtes. 
+- Profilu skaits, ko var eksportēt uz AdRoll ir atkarīgs no jūsu līguma ar AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Savienojuma ar AdRoll iestatīšana
 
@@ -62,9 +62,9 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas AdRoll. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas AdRoll. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
-1. Ievadiet savu **AdRoll Advertiser ID** Papildu informāciju skatiet rakstā [AdRoll Advertiser profili](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Ievadiet savu **AdRoll reklamētāja ID**. Papildinformāciju skatiet sadaļā [AdRoll reklamētāju profili](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir jāeksportē uz AdRoll.
 
@@ -74,7 +74,9 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). 
+
+Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība

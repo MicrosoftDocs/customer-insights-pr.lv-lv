@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866416"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304935"
 ---
 # <a name="customer-activities"></a>Klientu darbības
 
@@ -45,7 +45,7 @@ Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākie
 
    - **Pirmais**: Ārējs darbību entitījas lauks, kuru izmantos, lai izveidotu relāciju ar citu entitīju.
    - **Otrais**: Atbilstošā avota klienta entitīja, ar kuru jūsu entitījai būs relācija. Ir iespējams izveidot relāciju tikai ar avota klientu entitījām, kuras tiek izmantotas datu apvienošanas procesā.
-   - **Trešā**: Ja jau pastāv relācija starp šo darbības entitīju un atlasīto avota klienta entitīju, relācijas nosaukums būs tikai lasāmā režīmā. Ja šādas relācijas nav, tiks izveidota jauna relācija ar nosaukumu, kuru norādīsit lodziņā.
+   - **Trešā**: Ja jau pastāv relācija starp šo darbības entitīju un atlasīto avota klienta entitīju, relācijas nosaukums būs tikai lasāmā režīmā. Ja šāda relācija nepastāv, tiks izveidota jauna relācija ar šajā lodziņā sniegto nosaukumu.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Entītiju relācijas definēšana.":::
 
@@ -53,23 +53,23 @@ Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākie
 
 1. Darbībā **Darbību apvienošana** atlasiet darbības nosaukumu un savas darbības sākuma laiku. 
    - **Obligātie lauki**
-      1. **Notikuma darbība**: Lauks, kas ir šīs darbības notikums.
-      2. **Laikspiedols**: Lauks, kas norāda uz darbības sākuma laiku.
+      - **Notikuma darbība**: Lauks, kas ir šīs darbības notikums.
+      - **Laikspiedols**: Lauks, kas norāda uz darbības sākuma laiku.
 
    - **Neobligātie lauki**
-      1. **Papildu informācija**: Lauks ar atbilstošu informāciju par šo darbību.
-      2. **Ikona**: Ikona, kas vislabāk atbilst šim darbības tipam.
-      3. **Tīmekļa adrese**: Lauks, kurā ir vietrādis URL ar informāciju par šo darbību. Piemēram, transakciju sistēma, kas ģenerē šo darbību. Šis URL var būt jebkurš lauks no datu avota, vai arī to var būvēt kā jaunu lauku, izmantojot Power Query transformāciju. URL dati tiks glabāti entitījā *Apvienotās darbības*, kuru var patērēt lejupstraumē, izmantojot [API](apis.md).
+      - **Papildu informācija**: Lauks ar atbilstošu informāciju par šo darbību.
+      - **Ikona**: Ikona, kas vislabāk atbilst šim darbības tipam.
+      - **Tīmekļa adrese**: Lauks, kurā ir vietrādis URL ar informāciju par šo darbību. Piemēram, transakciju sistēma, kas ģenerē šo darbību. Šis URL var būt jebkurš lauks no datu avota, vai arī to var būvēt kā jaunu lauku, izmantojot Power Query transformāciju. URL dati tiks glabāti entitījā *Apvienotās darbības*, kuru var patērēt lejupstraumē, izmantojot [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Norādiet klienta darbības datus apvienoto darbību entitījā.":::
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. Varat atlasīt **Pabeigt un pārskatīt**, lai saglabātu darbību ar darbības veidu iestatītu uz **Cita**. 
 
-1. Darbībā **Darbības veids** izvēlieties darbības veidu un, ja vēlaties, atlasiet, vai vēlaties semantiski kartēt dažus darbību veidus, kurus izmantot citos Customer Insights apgabalos. Pašreiz darbību veidus *Abonements* & *SalesOrderLine* var semantiski kartēt pēc piekrišanas lauku kartēšanai. Ja jaunajai darbībai nav atbilstoša darbības veida, varat atlasīt *Cita* vai *Izveidot jaunu*, lai izveidotu pielāgotu darbības veidu.
+1. Darbībā **Darbības veids** izvēlieties darbības veidu un, ja vēlaties, atlasiet, vai vēlaties semantiski kartēt dažus darbību veidus, kurus izmantot citos Customer Insights apgabalos. Pašlaik *Abonements* un *SalesOrderLine* darbību veidi var tikt kartēti semantiski pēc tam, kad ir saņemta piekrišana kartēt laukus. Ja jaunajai darbībai nav atbilstoša darbības veida, varat atlasīt *Cita* vai *Izveidot jaunu*, lai izveidotu pielāgotu darbības veidu.
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. 
 
-1. Darbībā **Pārskatīt** pārbaudies savu atlasi. Ja nepieciešams, varat atgriezties jebkurā no iepriekšējām darbībām un atjaunināt informāciju.
+1. Darbībā **Pārskatīt** pārbaudies savu atlasi. Atgriezieties pie iepriekšējām darbībām un, ja nepieciešams, atjauniniet informāciju.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Pārskatiet darbībai norādītos laukus.":::
    
@@ -89,7 +89,7 @@ Atlasot darbību ir pieejamas šādas darbības.
 
 - **Rediģēt**: Priekšstatījuma darbībā atver darbības iestatīšanu. Šajā darbībā varat mainīt jebkuru vai visas konfigurācijas. Pēc konfigurācijas maiņas atlasiet **Saglabāt darbību** un **Palaist**, lai apstrādātu izmaiņas.
 
-- **Pārdēvēt**: Dialoglodziņu, kurā var ievadīt citu atlasītās darbības nosaukumu. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
+- **Pārdēvēt**: Atver dialogu, kurā var ievadīt citu atlasītās darbības nosaukumu. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
 
 - **Dzēst**: Atver dialoglodziņu, kurā var apstriprināt atlasītās darbības dzēšanu. Varat vienlaikus arī dzēst vairāk nekā vienu darbību, atlasot darbības un pēc tam noklikšķinot uz dzēšanas ikonas. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
 

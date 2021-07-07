@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896336"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304613"
 ---
 # <a name="customer-profiles"></a>Klientu profili
 
@@ -57,13 +57,13 @@ Atlasiet jebkuru no klientu elementiem, lai atvērtu **Klientu detalizētās inf
 
 Detalizēta informācija par klientu:
 
--   **Klienta profila elements:** Šis elements rāda dažādas vērtības no vienotā klienta profila entītijas. Šī detalizētā informācija var ietvert e-pasta adresi, nosaukumu, pilsētu un citus datus. 
+-   **Klienta profila elements**: Šis elements rāda dažādas vērtības no vienotā klienta profila entītijas. Šī detalizētā informācija var ietvert e-pasta adresi, nosaukumu, pilsētu un citus datus. 
 
--   **Iespējamās intereses, potenciālie zīmoli:** Rāda, ja esat konfigurējis pirmās puses bagātināšanu. Tas ataino iespējamas intereses un zīmolu radniecību, kāda varētu būt klientam ar šim klientam līdzīgu profilu. Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft.md).
+-   **Iespējamās intereses, potenciālie zīmoli**: Rāda, ja esat konfigurējis pirmās puses bagātināšanu. Tas ataino iespējamas intereses un zīmolu radniecību, kāda varētu būt klientam ar šim klientam līdzīgu profilu. Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft.md).
 
--   **Pasākumi:** Parāda, vai esat konfigurējis vienu vai vairākus noteikta tipa pasākumus: klientu atribūta mērvienības. Tie iekļauj aprēķinātos KPI ap saviem klientiem atsevišķā klientu līmenī. Papildinformāciju skatiet tēmā [Pasākumu definēšana un pārvaldīšana](measures.md).
+-   **Pasākumi**: Parāda, vai esat konfigurējis vienu vai vairākus noteikta tipa pasākumus: klientu atribūta mērvienības. Tie iekļauj aprēķinātos KPI ap saviem klientiem atsevišķā klientu līmenī. Papildinformāciju skatiet tēmā [Pasākumu definēšana un pārvaldīšana](measures.md).
 
--   **Darbības laika skala:** Rāda, vai ir konfigurētas darbības. Laika skalas skats ietver šī klienta hronoloģiski kārtotās darbības, sākot ar pēdējo darbību. Papildinformācijai skatiet [Klientu darbības](activities.md).
+-   **Darbību laika skala**: Rāda, vai ir konfigurētas darbības. Laika skalas skats ietver šī klienta hronoloģiski kārtotās darbības, sākot ar pēdējo darbību. Papildinformācijai skatiet [Klientu darbības](activities.md).
 
 Atlasiet **Atpakaļ pie klientiem**, lai atgrieztos klientu meklēšanas lapā.
 

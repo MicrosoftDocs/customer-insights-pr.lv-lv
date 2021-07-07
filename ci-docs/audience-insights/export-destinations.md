@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253049"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305487"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
 Lapā **Eksportēšana** tiek rādītas visas konfigurētās eksportēšanas. Eksportēšana kopīgo konkrētus datus ar dažādām lietojumprogrammām. Tie var ietvert klientu profilus vai entitījas, shēmas un kartēšanas informāciju. Katrai eksportēšanai ir nepieciešams [administratora iestatīts savienojums, lai pārvaldītu autentifikāciju un piekļuvi](connections.md).
 
-Dodieties uz lapu **Dati** > **Eksportēšana**, lai skatītu eksportēšanas lapu. Visām lietotāju lomām ir piekļuve konfigurētajai eksportēšanai. Izmantojiet komandjoslas meklēšanas lauku, lai meklētu eksportus pēc nosaukuma, savienojuma nosaukuma vai savienojuma veida.
+Dodieties uz lapu **Dati** > **Eksportēšana**, lai skatītu eksportēšanas lapu. Visas lietotāju lomas var skatīt konfigurētās eksportēšanas. Izmantojiet komandjoslā esošo meklēšanas lauku, lai atrastu eksportēšanas pēc to nosaukuma, savienojuma nosaukuma vai savienojuma tipa.
 
 ## <a name="set-up-a-new-export"></a>Jauna eksporta iestatīšana
 
@@ -65,7 +65,7 @@ Pēc eksporta galamērķu izveides tos uzskaita lapā **Dati** > **Eksporti**. V
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Lietotājiem bez rediģēšanas atļaujas ir **Rediģēt** vietā jāizvēlas **Skatīt**, lai redzētu eksportēšanas informāciju.
+1. Ja esat lietotājs bez rediģēšanas atļaujām, atlasiet **Skatīt** nevis **Rediģēt**, lai skatītu eksportēšanas informāciju.
 
 1. Sānu rūtī ir redzama eksportēšanas konfigurācija. Bez rediģēšanas atļaujas vērtības nav iespējams mainīt. Atlasiet **Aizvērt**, lai atgrieztos eksportēšanas lapā.
 
@@ -73,7 +73,7 @@ Pēc eksporta galamērķu izveides tos uzskaita lapā **Dati** > **Eksporti**. V
 
 Katrai konfigurētai eksportēšanai ir atsvaidzināšanas grafiks. Atsvaidzināšanas laikā sistēma meklē jaunus vai atjauninātus datus, ko iekļaut eksportā. Pēc noklusējuma eksportēšana tiek izpildīta kā daļa no katras [plānotās sistēmas atsvaidzināšanas](system.md#schedule-tab). Varat pielāgot atsvaidzināšanas grafiku vai izslēgt to, lai palaistu eksportu manuāli.
 
-Eksportēšanas grafiki ir atkarīgi no vides stāvokļa. Ja ir pieejami [atkarību](system.md#refresh-policies) atjauninājumi laikā, kad jāsāk plānotā eksportēšana, sistēma vispirms pabeigs atkarības un pēc tam palaidīs eksportēšanu. Kolonnā **Atsvaidzināts** varat redzēt, kad eksportēšana tika pēdējo reizi atsvaidzināta.
+Eksportēšanas grafiki ir atkarīgi no vides stāvokļa. Ja laikā, kad būtu jāsāk plānotā atjaunināšana, notiek [atkarību](system.md#refresh-policies) atjaunināšana, sistēma vispirms pabeigs atjaunināšanu un pēc tam veiks eksportēšanu. Kolonnā **Atsvaidzināts** varat redzēt, kad eksportēšana tika pēdējo reizi atsvaidzināta.
 
 ### <a name="schedule-exports"></a>Eksportēšanas grafiks
 

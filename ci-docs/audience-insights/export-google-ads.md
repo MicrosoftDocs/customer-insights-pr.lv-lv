@@ -9,26 +9,25 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976327"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305349"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentu eksportēšana uz Google Ads (priekšskatījums)
 
-Eksportējiet klientu profilu unificētos segmentus uz Google Ads auditorijas sarakstu un izmantojiet tos reklāmām pakalpojumā Google Search, Gmail, YouTube un Google Display Network. 
+Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakstu un izmantojiet tos, lai reklāma tiktu rādīta Google meklēšanā, Gmail, YouTube un Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Savienojuma priekšnosacījumi
 
 -   Jums ir [Google Ads konts](https://ads.google.com/) un atbilstošie administratora akreditācijas dati.
--   Jums ir [apstiprināts Google Ads izstrādātāja marķieris](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Jūs atbilstat [Klientu atbilstības politikas](https://support.google.com/adspolicy/answer/6299717) prasībām
--   Jūs atbilstat [atkārtota mārketinga saraksta izmēru](https://support.google.com/google-ads/answer/7558048) prasībām 
-
+-   Jums ir [apstiprināts Google Ads izstrādātāja marķieris](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Jūs atbilstat [Klientu atbilstības politikas](https://support.google.com/adspolicy/answer/6299717) prasībām.
+-   Jūs atbilstat [atkārtota mārketinga adresātu saraksta izmēru](https://support.google.com/google-ads/answer/7558048) prasībām.
 -   Google Ads ir esošas auditorijas un attiecīgie ID. Papildinformāciju skatiet rakstā [Google Ads auditorijas](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Jums ir [konfigurēti segmenti](segments.md)
+-   Jums ir [konfigurēti segmenti](segments.md).
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauki, kas norāda e-pasta adresi, vārdu un uzvārdu.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
@@ -68,7 +67,7 @@ Eksportējiet klientu profilu unificētos segmentus uz Google Ads auditorijas sa
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Google Ads. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Google Ads. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
 1. Ievadiet savas **[Google reklāmu auditorijas ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** un atlasiet opciju **Izveidot savienojumu**, lai inicializētu savienojumu ar Google Ads.
 
@@ -78,7 +77,9 @@ Eksportējiet klientu profilu unificētos segmentus uz Google Ads auditorijas sa
 
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). 
+
+Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595343"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306083"
 ---
 # <a name="segment-insights-preview"></a>Segmentu ieskati (priekšskatījums)
 
@@ -50,7 +50,7 @@ Atlasiet ieskatu, lai skatītu analīzes rezultātus:
 
 - To dalībnieku skaits, kas pārklājas analīzei atlasītajiem segmentos.
 - Dalībnieku skaits, kas ir iekļauti vienā no segmentiem, bet ne pārējos segmentos.
-- Ja atlasījāt laukus, konfigurējot pārklāšanās analīzi, tie ir atrodami atbilstošajās cilnēs. Varat izmantot filtru nolaižamo sarakstu, lai atlasītu jebkuru interesējošu atribūta līmeni, un apakšā esošajā tabulā tiks parādīti attiecīgie dati.
+- Ja atlasījāt laukus, konfigurējot pārklāšanās analīzi, tie ir atrodami atbilstošajās cilnēs. Filtra nolaižamo izvēlni var izmantot, lai atlasītu jebkuru interesējošo atribūtu līmeni, un tabulā, kas atrodas apakšā, tiks parādīti atbilstošie dati.
 
 ## <a name="segment-differentiators"></a>Segmentu diferencētājposmi
 

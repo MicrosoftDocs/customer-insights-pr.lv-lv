@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595435"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306129"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Transakciju zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
 
-Mēs jums paskaidrosim, kā izbeigt transakciju zudumu prognozi programmā Customer Insights, izmantojot tālāk sniegtos datus. Visi šajā rokasgrāmatā izmantotie dati nav īsti klientu dati, un tie ir daļa no Contoso datu kopas, kas ir atrodama vidē *Demo* jūsu Customer Insights abonementā.
+Mēs jums paskaidrosim, kā izbeigt transakciju zudumu prognozi programmā Customer Insights, izmantojot tālāk sniegtos datus. Visi šajā ceļvedī izmantotie dati nav reāli klientu dati; tie ietilpst Contoso datu kopas *demonstrācijas* vidē, kas atrodas jūsu Customer Insights abonementā.
 
 ## <a name="scenario"></a>Scenārijs
 
-Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus, kurus viņi pārdod, izmantojot savu Contoso Coffee vietni. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -109,9 +109,9 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
 
-1. **Primārajā** nolaižamajā sarakstā izvēlieties **eCommerceContacts : e-komercijas** kā primāro avotu un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
 
-1. Nolaižamajā sarakstā **2.entītija** izvēlieties **loyCustomers: LoyaltyScheme** un iekļaujiet visus ierakstus.
+1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Apvienot e-komercijas un lojalitātes atbilstības.":::
 
@@ -119,16 +119,16 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
 
-   * Nolaižamajā sarakstā atlasiet **FullName** eCommerceContacts.
-   * Nolaižamajā sarakstā atlasiet **FullName** loyCustomers.
+   * Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
+   * Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
    * Atlasiet opciju **Normalizēt** nolaižamo sarakstu un izvēlieties **tipu (tālrunis, nosaukums, adrese,...)**.
    * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 
 1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
 
    * Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   * Entītijas eCommerceContacts izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**.
-   * Entītijai loyCustomers izvēlieties nolaižamajā izvēlnē vienumu **E-pasts**. 
+   * Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
+   * Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**. 
    * Atstājiet normalizāciju tukšu. 
    * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
 

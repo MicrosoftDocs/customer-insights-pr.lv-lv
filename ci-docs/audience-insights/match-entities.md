@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085631"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306037"
 ---
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
@@ -33,7 +33,7 @@ Katra atbilstība apvieno divas vai vairākas entītijas vienā, konsolidētā e
 
 :::image type="content" source="media/match-page.png" alt-text="Datu unificēšanas procesa Saskaņošana lapas apgabala Unify ekrānuzņēmums.":::
   
-Primārā entītija *eCommerce:eCommerceContacts*  tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas tiek iegūta pirmajā atbilstības darbībā, tiek saskaņota ar tālāk norādīto entītiju, ja ir vairāk nekā divas entītijas.
+Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas tiek iegūta pirmajā atbilstības darbībā, tiek saskaņota ar tālāk norādīto entītiju, ja ir vairāk nekā divas entītijas.
 
 > [!IMPORTANT]
 > Entītija, ko izvēlaties kā primāro entītiju, tiks izmantota par pamatu jūsu apvienotajai profilu datu kopai. Citas entītijai, kas tiks atlasītas atbilstības posmā, tiks pievienotas šai entītijai. Tas nozīmē, ka vienotā entītija ietvers *visus* šajā entītijā iekļautos datus.
@@ -211,7 +211,7 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru.
 
 :::image type="content" source="media/match-rules-management.png" alt-text="Nolaižamās izvēlnes ekrānuzņēmums ar atbilstības kārtulas opcijām.":::
 
-- **Mainiet kārtulu secību**, ja definējāt vairākas kārtulas. Varat pārkārtot atbilstības kārtulas, atlasot opcijas **Pārvietot uz augšu** un  **Pārvietot uz leju** vai velkot un nometot.
+- **Mainiet kārtulu secību**, ja definējāt vairākas kārtulas. Varat pārkārtot atbilstības kārtulas, atlasot opcijas **Pārvietot uz augšu** un **Pārvietot uz leju** vai velkot un nometot.
 
 - **Mainiet kārtulas nosacījumus**, atlasot vienumu **Rediģēt**, un izvēlieties citus laukus.
 
