@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049403"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553984"
 ---
 # <a name="entities-in-audience-insights"></a>Entītijas auditorijas ieskatiem
 
@@ -30,19 +30,19 @@ Lapā **Entītijas** tiek norādītas entītijas, un tajā ir vairākas kolonnas
 - **Pēdējā atjaunināšana**: Entītijas pēdējās atjaunināšanas datums un laiks
 - **Pēdējā atsvaidzināšana**: Pēdējās datu atsvaidzināšanas datums un laiks
 
-## <a name="exploring-a-specific-entitys-data"></a>Noteiktu entītijas datu izpēte
+## <a name="explore-a-specific-entitys-data"></a>Noteiktu entītijas datu izpēte
 
 Atlasiet entītiju, lai izpētītu tajā ietvertos dažādos laukus un ierakstus.
 
 > [!div class="mx-imgBorder"]
-> ![Entītijas atlase](media/data-manager-entities-data.png "Atlasīt entītiju")
+> ![Atlasīt entītiju.](media/data-manager-entities-data.png "Entītijas atlase")
 
 - Cilnē **Dati** ir redzama tabulas detalizēta informācija par atsevišķiem entītijas ierakstiem.
 
 > [!div class="mx-imgBorder"]
-> ![Tabula Lauki](media/data-manager-entities-fields.PNG "Tabula Lauki")
+> ![Tabula Lauki.](media/data-manager-entities-fields.PNG "Tabula Lauki")
 
-- Pēc noklusējuma ir atlasīta cilne **Atribūti**, un tajā ir redzama tabula, lai pārskatītu atlasītās entītijas detalizēto informāciju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie ir semantiski tipi, kas var atšķirties no atribūtu datu tipiem — piemēram, tālāk redzamajā laukā *Email* ir ietverts datu tips *Text*, bet tā (semantiskais) kopējā datu modeļa tips var būt *Email* vai *EmailAddress*.
+- Pēc noklusējuma ir atlasīta cilne **Atribūti**, un tajā ir redzama tabula, lai pārskatītu atlasītās entītijas detalizēto informāciju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie tipi ir semantiskie tipi, kas var atšķirties no atribūtu datu tipiem. Piemēram, tālāk redzamajam laukam *E-pasts* ir datu tips *Teksts*, bet tā (semantiskais) Common Data Model tips var būt *E-pasts* vai *E-pasta adrese*.
 
 > [!NOTE]
 > Abās tabulās ir redzams tikai entītijas datu paraugs. Lai skatītu pilnu datu kopu, atveriet lapu **Datu avoti**, atlasiet entītiju, atlasiet **Rediģēt** un pēc tam skatiet šīs entītijas datus, izmantojot Power Query redaktoru, kā paskaidrots tēmā [Datu avoti](data-sources.md).
@@ -52,11 +52,28 @@ Lai uzzinātu vairāk par entītijā pieņemtajiem datiem, kolonnā **Kopsavilku
 Atlasiet diagrammas ikonu, lai skatītu datu kopsavilkumu.
 
 > [!div class="mx-imgBorder"]
-> ![Kopsavilkuma simbols](media/data-manager-entities-summary.png "Tabula Datu kopsavilkums")
+> ![Kopsavilkuma simbols.](media/data-manager-entities-summary.png "Tabula Datu kopsavilkums")
 
-### <a name="next-step"></a>Nākamā darbība
+## <a name="entity-specific-information"></a>Noteiktas entītijas informācija
 
-Skatiet rakstu [Apvienošana](data-unification.md), lai uzzinātu, kā *kartēt*, *noteikt atbilstību* un *sapludināt* pieņemtos datus.
+Nākamajā sadaļā ir sniegta informācija par dažām sistēmas izveidotām entītijām.
+
+### <a name="corrupted-data-sources"></a>Bojāti datu avoti
+
+Uzņemtu datu avotu lauki var saturēt bojātus datus. Ieraksti ar bojātiem laukiem tiek rādīti sistēmas izveidotās entītijās. Pārzināšana par bojātiem ierakstiem palīdz noteikt, kurus datus pārskatīt un atjaunināt avota sistēmā. Pēc nākamās datu avotu atsvaidzināšanas labotie ieraksti tiek lietoti programmā Customer Insights un nodoti lejupstraumes procesiem. 
+
+Piemēram, kolonnas 'dzimšanas diena' datu tips ir iestatīts kā 'datums'. Klienta ieraksta dzimšanas diena ir ievadīta kā '01/01/19777'. Sistēma atzīmēs, ka šis ieraksts ir bojāts. Kāds tagad avota sistēmā var mainīt dzimšanas dienu uz '1977'. Pēc automātiskas datu avotu atsvaidzināšanas šim laukam tagad ir derīgs formāts, un ieraksts tiks noņemts no bojātās entītijas. 
+
+Pārejiet uz **Dati** > **Entītijas** un sadaļā **Sistēma** meklējiet bojātās entītijas. Bojātās entītijas nosaukumu shēma: "DataSourceName_EntityName_corrupt".
+
+Customer Insights joprojām apstrādā bojātos ierakstus. Tomēr, strādājot ar vienotajiem datiem, tie var radīt problēmas.
+
+Šādi ievadītie dati pārbauda, vai tiek rādīti bojāti ieraksti: 
+
+- Lauka vērtība neatbilst tā kolonnas datu tipam.
+- Laukos ir rakstzīmes, kas liek kolonnai neatbilst gaidītajai shēmai. Piemēram: nepareizi formatēti piedāvājumi, nebeidzami piedāvājumi vai jaunas rindas rakstzīmes.
+- Ja ir datuma un laika/datuma/datuma/datuma_laika_kopas kolonnas, to formāts ir jānorāda modelī, ja tas neatbilst standarta ISO formātam.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

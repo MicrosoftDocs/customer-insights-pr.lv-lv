@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305656"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650235"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -109,7 +109,7 @@ Dažās entītijās ir detalizētāka informācija nekā citās. Ja entītijā i
 Neatkarīgi no tā, vai manuāli sapludināt atribūtus vai ļaujat tos sapludināt sistēmai, jūs jebkurā gadījumā varat izpildīt sapludināšanu. Lapā **Sapludināšana** atlasiet **Izpildīt**, lai sāktu procesu.
 
 > [!div class="mx-imgBorder"]
-> ![Datu sapludināšana: saglabāšana un izpilde](media/configure-data-merge-save-run.png "Datu sapludināšana: saglabāšana un izpilde")
+> ![Datu sapludināšana: saglabāšana un izpilde.](media/configure-data-merge-save-run.png "Datu sapludināšana: saglabāšana un izpilde")
 
 Izvēlieties **Palaist tikai sapludināšanu**, ja vēlaties redzēt tikai vienotā klienta entītijas izvadi. Lejupstraumes procesi tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Izvēlieties **Palaist sapludināšanu un lejupstraumes procesus**, lai atsvaidz
 Lai veiktu lielākas izmaiņas un veiktu atkārtotu darbību, varat atcelt notiekošu sapludināšanu. Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.
 
 > [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.
+> Pēc sapludināšanas procesa izpildīšanas atlasiet procesa statusu, lai atvērtu **Uzdevuma detalizētās informācijas** rūti. Tajā sniegts pārskats par apstrādes laiku, pēdējo apstrādes datumu un visām ar uzdevumu saistītajām kļūdām un brīdinājumiem. Atlasiet vienumu **Skatīt informāciju**, lai skatītu, kuras entītijas piedalījās atbilstības procesā, kurās tika lietotas kārtulas, un vai atjauninājumi tika sekmīgi publicēti.  
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Rakšanās ceļš uz procesa informāciju no uzdevuma statusa saites.":::
 
 ## <a name="next-step"></a>Nākamā darbība
 

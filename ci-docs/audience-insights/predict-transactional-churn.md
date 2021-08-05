@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095611"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559414"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -47,7 +47,7 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
         - **Notikums:** Norādiet notikuma nosaukumu, kuru vēlaties izmantot. Piemēram, lauks "UserAction" pārtikas preču veikalā varētu būt klientam piemērots kupona lietojums.
         - **Detalizēti:** Detalizēta informācija par notikumu. Piemēram, preču veikala lauks ar nosaukumu "CouponValue" var būt kupona valūtas vērtība.
 - Ieteicamie datu raksturlielumi:
-    - Pietiekami vēsturiskie dati: Transakcijas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. Vēlams, lai būtu abonēšanas dati par diviem vai trim gadiem. 
+    - Pietiekami vēsturiskie dati: Transakcijas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. 2-3 gadus ilga transakciju vēsture. 
     - Vairāki pirkumi katram klientam: Vēlams, vismaz divas transakcijas uz katru klientu.
     - Klientu skaits: Vismaz 10 klientu profilu, vēlams vairāk nekā 1000 unikālo klientu. Ja būs mazāk par 10 klientiem un nepietiks datu, modelis būs kļūmīgs.
     - Datu pilnīgums: Vairāk nekā 20% trūkstošo vērtību sniegtās entītijas datu laukā.
@@ -162,7 +162,7 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
             
          - **C** Ja modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un ja procentuālā daļa no precīzas prognozes klientiem, kuri ir zuduši, ir mazāki nekā bāzes likme.
                
-         - **Bāzes likme** ņem prognozes laika loga ievadi modelim (piemēram, viens gads), un modelis veido dažādas laika frakcijas, dalot to ar 2, līdz tas sasniedz vienu mēnesi vai mazāk. Šīs frakcijas izmanto, lai izveidotu biznesa kārtulu klientiem, kas nav veikuši pirkumus šajā laika periodā. Šie klienti tiek uzskatīti par zudušiem. Uz laiku balstītā biznesa kārtula ar augstāko iespējamību prognozēt, kurš, visticamāk ir zudis,  ir izvēlēts kā bāzes likmes modelis.
+         - **Bāzes likme** ņem prognozes laika loga ievadi modelim (piemēram, viens gads), un modelis veido dažādas laika frakcijas, dalot to ar 2, līdz tas sasniedz vienu mēnesi vai mazāk. Šīs frakcijas izmanto, lai izveidotu biznesa kārtulu klientiem, kas nav veikuši pirkumus šajā laika periodā. Šie klienti tiek uzskatīti par zudušiem. Uz laiku balstītā biznesa kārtula ar augstāko iespējamību prognozēt, kurš, visticamāk ir zudis, ir izvēlēts kā bāzes likmes modelis.
             
     1. **Zuduma varbūtība (klientu skaits):** klientu grupas, pamatojoties uz to prognozējamo zuduma risku. Šie dati var palīdzēt vēlāk, ja vēlaties izveidot klientu segmentu ar augstu zuduma risku. Šādi segmenti palīdz saprast, kur vajadzētu būt dalībai segmentā.
        

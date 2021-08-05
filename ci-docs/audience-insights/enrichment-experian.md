@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309829"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555362"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientu profilu bagātināšana ar demogrāfiskajiem datiem no Experian (priekšskatījums)
 
@@ -39,7 +39,7 @@ Pašlaik tiek atbalstīta klientu profilu bagātināšana tikai Amerikas Savieno
 1. Atlasiet **Bagātināt manus datus** elementā Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian elements](media/experian-tile.png "Experian elements")
+   > ![Experian elements.](media/experian-tile.png "Experian elements")
    > 
 
 1. Atlasiet [savienojumu](connections.md) nolaižamajā sarakstā. Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, varat izveidot savienojumu, atlasot **Pievienot savienojumu** un izvēloties Experian nolaižamajā sarakstā. 

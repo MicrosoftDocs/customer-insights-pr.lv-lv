@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306083"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554994"
 ---
 # <a name="segment-insights-preview"></a>Segmentu ieskati (priekšskatījums)
 
@@ -44,7 +44,7 @@ Varat arī analizēt pārklāšanās izmaiņas specifiskiem atribūtiem.
 Pēc analīzes pabeigšanas atrodiet detalizētu informāciju par šo ieskatu sadaļā **Segmenti** > **Ieskati (priekšskatījums)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalizētā informācija par segmenta pārklājuma ieskatu":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalizētā informācija par segmenta pārklājuma ieskatu.":::
 
 Atlasiet ieskatu, lai skatītu analīzes rezultātus:
 
@@ -77,7 +77,7 @@ Segmentu diferenciatori palīdz uzzināt, kas atšķir segmentu no pārējiem j�
 Pēc analīzes pabeigšanas atrodiet detalizētu informāciju par šo ieskatu sadaļā **Segmenti** > **Ieskati (priekšskatījums)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalizētā informācija par segmenta diferenciatora ieskatu":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalizētā informācija par segmenta diferenciatora ieskatu.":::
 
 Atlasiet ieskatu, lai skatītu analīzes rezultātus. Diferenciatoru analīze ietver divas cilnes. Cilnē **Atribūti** ir norādīti profila atribūti, kas tiek uzskatīti par diferenciatoriem. Cilnē **Mēri** ir uzskaitīti diferenciatori. Katrā cilnē ir šāda informācija:
 

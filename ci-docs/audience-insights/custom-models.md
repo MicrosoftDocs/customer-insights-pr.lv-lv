@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305650"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554857"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
 
@@ -28,7 +28,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 - Patlaban šis līdzeklis atbalsta tīmekļa pakalpojumus, kas tiek publicēti [algoritmiskās mācīšanās studijā (klasiskais)](https://studio.azureml.net) un [Azure algoritmiskā mācīšanās paketes konveijerā](/azure/machine-learning/concept-ml-pipelines).
 
-- Lai izmantotu šo līdzekli, ir nepieciešams Azure Data Lake Gen2 krātuves konts, kas saistīts ar jūsu Azure Studio instanci. Papildinformāciju skatiet [Azure Data Lake Storage 2. paaudzes krātuves konta izveide](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+- Lai izmantotu šo līdzekli, ir nepieciešams Azure Data Lake Gen2 krātuves konts, kas saistīts ar jūsu Azure Studio instanci. Papildinformāciju skatiet [Azure Data Lake Storage Gen2 krātuves konta izveide](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
 - Lai nodrošinātu algoritmisko mācīšanos darbvietām ar konveijeriem, ir nepieciešamas īpašnieka vai lietotāja piekļuves administratora atļaujas Azure algoritmiskās mācīšanās darbvietai.
 
@@ -42,7 +42,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 1. Piešķiriet jūsu pielāgotajam modelim atpazīstamu nosaukumu laukā **Nosaukums**.
 
    > [!div class="mx-imgBorder"]
-   > ![Jaunās darbplūsmas rūts ekrānuzņēmums](media/new-workflowv2.png "Jaunās darbplūsmas rūts ekrānuzņēmums")
+   > ![Jaunās darbplūsmas rūts ekrānuzņēmums.](media/new-workflowv2.png "Jaunās darbplūsmas rūts ekrānuzņēmums")
 
 1. Atlasiet organizāciju, kurā ir iekļauts tīmekļa pakalpojums opcijā **Nomnieks, kas ietver jūsu tīmekļa servisu**.
 
@@ -59,7 +59,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
    > Pielāgotā modeļa darbplūsma lietos heiristiku, lai tīmekļa pakalpojuma ievades laukus kartētu uz entītijas atribūtiem, pamatojoties uz lauka nosaukumu un datu tipu. Ja tīmekļa pakalpojuma lauku nevar kartēt ar entītiju, tiks parādīts kļūdas ziņojums.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurēt darbplūsmu](media/intelligence-screen2-updated.png "Konfigurēt darbplūsmu")
+   > ![Konfigurēt darbplūsmu.](media/intelligence-screen2-updated.png "Konfigurēt darbplūsmu")
 
 1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
    - Algoritmiskā mācīšanās studija (klasiskais)
@@ -70,12 +70,12 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
       1. Atlasiet nolaižamajā sarakstā jūsu paketes konveijera **Izvades ceļa parametra nosaukumu**.
 
       > [!div class="mx-imgBorder"]
-      > ![Modeļa izvades parametra rūts](media/intelligence-screen3-outputparameters.png "Modeļa izvades parametrs rūts")
+      > ![Modeļa izvades parametra rūts.](media/intelligence-screen3-outputparameters.png "Modeļa izvades parametrs rūts")
 
 1. Atlasiet atbilstošo atribūtu **Klienta ID rezultātu** nolaižamajā sarakstā, kurā tiek identificēti klienti un atlasiet **Saglabāt**.
 
    > [!div class="mx-imgBorder"]
-   > ![Rezultātu saistīšana ar rūti Klienta dati](media/intelligence-screen4-relatetocustomer.png "Rezultātu saistīšana ar rūti Klienta dati")
+   > ![Rezultātu saistīšana ar rūti Klienta dati.](media/intelligence-screen4-relatetocustomer.png "Rezultātu saistīšana ar rūti Klienta dati")
 
 1. Jūs redzēsiet **Darbplūsma saglabāta** ekrānu ar detalizētu informāciju par darbplūsmu.    
    Ja konfigurējāt darbplūsmu Azure algoritmiskās mācīšanās konveijeram, auditorijas ieskati tiks pievienoti darbvietai, kurā ir konveijers. Auditorijas ieskati iegūs **Līdzstrādnieka** lomu Azure darbvietā.

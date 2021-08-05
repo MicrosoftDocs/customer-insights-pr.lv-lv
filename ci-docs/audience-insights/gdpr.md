@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597520"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554340"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -40,7 +40,7 @@ Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, 
    2. Skatiet datu avota statusu sadaļā **Statuss**. Atzīme nozīmē, ka atsvaidzināšana bija veiksmīga. Brīdinājuma trijstūris nozīmē, ka radās problēma. Ja tiek parādīts brīdinājuma trijstūris, sazinieties ar D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Klienta datu VDAR dzēšanas pieprasījumu apstrāde](media/gdpr-data-sources.png "Klienta datu VDAR dzēšanas pieprasījumu apstrāde")
+> ![Klienta datu VDAR dzēšanas pieprasījumu apstrāde.](media/gdpr-data-sources.png "Klienta datu VDAR dzēšanas pieprasījumu apstrāde")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Lietotāju datu dzēšanas pieprasījumu pārvaldīšana
 
@@ -52,7 +52,7 @@ Customer Insights administrators var veikt tālāk norādītās darbības, lai d
 4. Atlasiet **Noņemt**.
 
 > [!div class="mx-imgBorder"]
-> ![Lietotāju VDAR datu dzēšanas pieprasījumu pārvaldīšana](media/gdpr-permissions.png "Lietotāju VDAR datu dzēšanas pieprasījumu pārvaldīšana")
+> ![Lietotāju VDAR datu dzēšanas pieprasījumu pārvaldīšana.](media/gdpr-permissions.png "Lietotāju VDAR datu dzēšanas pieprasījumu pārvaldīšana")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Reaģēšana uz VDAR datu subjekta eksportēšanas pieprasījumiem
 

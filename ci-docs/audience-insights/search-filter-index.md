@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597152"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554030"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientu profili: Meklēšanas un filtrēšanas indekss
 
 Klientu datu apvienošanas rezultāts ir entītija Klientu profils, kas nodrošina vienotu skatu uz visu jūsu klientu bāzi. Lai ātri [atrastu informāciju par konkrētu klientu vai klientu grupu](customer-profiles.md), varat konfigurēt **meklēšanas** un **filtrēšanas** iespējas lapā **Klienti**. Tālāk uzzināsiet, kā administratori var rediģēt atribūtus lapā **Rādītāja meklēšana un filtrēšana**, ko lietotāji var izmantot meklēšanai un filtrēšanai.
 
 > [!div class="mx-imgBorder"]
-> ![Meklēšanas rezultātu filtrs](media/search-filter.png "Meklēšanas rezultātu filtrs")
+> ![Meklēšanas filtrs.](media/search-filter.png "Meklēšanas rezultātu filtrs")
 
 ## <a name="add-fields-and-specify-attributes"></a>Lauku pievienošana un atribūtu norādīšana
 

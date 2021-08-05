@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595910"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692536"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Aizpildiet savus daļējos datus ar prognozēm
 
@@ -23,7 +23,7 @@ ms.locfileid: "5595910"
 Prognozes ļauj viegli izveidot prognozētās vērtības, kas var uzlabot jūsu izpratni par klientu. Lapā **Informācija** > **Prognozes** varat atlasīt **Manas prognozes**, lai skatītu prognozes, ko esat konfigurējis citās auditorijas ieskatu daļās, un ļaut tās papildus pielāgot.
 
 > [!NOTE]
-> Šo līdzekli nevar izmantot, ja jūsu vidē tiek izmantots Azure Data Lake Gen 2 krātuve.
+> Šo līdzekli nevar izmantot, ja jūsu vidē tiek izmantots Azure Data Lake Gen2 krātuve.
 >
 > Līdzeklis Prognozes izmanto automatizētus līdzekļus, lai novērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, un tāpēc tās ir izmantojamas kā profilēšanas metode, jo šis termins ir definēts vispārīgajā datu aizsardzības regulā ("VDAR"). Šī līdzekļa izmantošana klienta datu apstrādei var būt pakļauta VDAR vai citiem likumiem vai noteikumiem. Jūs esat atbildīgs par to, ka jūsu Dynamics 365 Customer Insights lietojums, ieskaitot prognozes, atbilst visiem piemērojamiem likumiem un noteikumiem, ieskaitot likumus, kas attiecas uz privātumu, personas datiem, biometrijas datiem, datu aizsardzību un saziņas konfidencialitāti.
 
@@ -31,11 +31,11 @@ Prognozes ļauj viegli izveidot prognozētās vērtības, kas var uzlabot jūsu 
 
 Lai organizācija varētu izmantot prognožu līdzekli, pārliecinieties, vai ir izpildīti šādi priekšnosacījumi:
 
-1. Jūsu organizācijai ir iestatīts gadījums [Common Data Service](/ai-builder/build-model#prerequisites), un tā ir tāda pati organizācija kā Customer Insights.
+1. Jūsu organizācijai ir iestatīta instance, [kas iestatīta Microsoft Dataverse](/ai-builder/build-model#prerequisites) un tā atrodas tajā pašā organizācijā, kurā atrodas Customer Insights.
 
-2. Jūsu vide ir piesaistīta jūsu Common Data Service instancei.
+2. Jūsu Dataverse instancei ir pievienota auditorijas ieskatu vide.
 
-Ja jūs [veidojat pirmo vidi](manage-environments.md), konfigurējiet to dialoglodziņā **Izveidot vidi** un atlasiet **Detalizētāk**. Ja esat jau izveidojis vidi, atveriet tā iestatījumus un atlasiet **Detalizētāk**. Jebkurā gadījumā sadaļā **Izmantojiet prognozes** ievadiet Common Data Service instances URL, kurai vēlaties pievienot savu vidi.
+Ja jūs [veidojat pirmo vidi](get-started-paid.md), konfigurējiet to dialoglodziņā **Izveidot vidi** un atlasiet **Detalizētāk**. Ja esat jau izveidojis vidi, atveriet tā iestatījumus un atlasiet **Detalizētāk**. Jebkurā gadījumā sadaļā **Izmantojiet prognozes** ievadiet Dataverse instances URL, kurai vēlaties pievienot savu vidi.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognozēšanas izveide klienta entītijā
 
@@ -47,17 +47,17 @@ Ja jūs [veidojat pirmo vidi](manage-environments.md), konfigurējiet to dialogl
 
 4. Atrodiet atribūta nosaukumu, kuram vēlaties prognozēt vērtības, un pēc tam atlasiet ikonu **Pārskats** kolonnā **Kopsavilkums**.
    > [!div class="mx-imgBorder"]
-   > ![Ikona Pārskats](media/intelligence-overviewicon.png "Ikona Pārskats")
+   > ![Ikona Pārskats.](media/intelligence-overviewicon.png "Ikona Pārskats")
 
 5. Ja jūsu atribūtam ir augsts trūkstošo vērtību līmenis, atlasiet **Prognozēt trūkstošās vērtības**, lai turpinātu jūsu prognozēšanu.
    > [!div class="mx-imgBorder"]
-   > ![Tiek parādīts statusa pārskats ar poga Prognozēt trūkstošās vērtības](media/intelligence-overviewpredictmissingvalues.png "Tiek parādīts statusa pārskats ar poga Prognozēt trūkstošās vērtības")
+   > ![Tiek parādīts statusa pārskats ar poga Prognozēt trūkstošās vērtības.](media/intelligence-overviewpredictmissingvalues.png "Tiek parādīts statusa pārskats ar poga Prognozēt trūkstošās vērtības")
 
 6. Norādiet **Parādāmo nosaukumu** un **Izvades entītijas nosaukumu** prognozes rezultātiem.
 
 7. Iepriekš aizpildītu opciju saraksts parāda, kur varat kartēt vērtības uz prognozēto kategoriju. Šajā gadījumā vienīgās kategorijas opcijas ir 0 vai 1, jo tās kartē uz prognozes patieso/kļūdaino vai bināro raksturu. Kolonnā Kategorija kartējiet lauku vērtības, kuras vēlaties klasificēt kā "0" gala prognozē "0", un elementus, ko vēlaties klasificēt kā "1" galējā prognozē "1".
    > [!div class="mx-imgBorder"]
-   > ![Kartēto lauku vērtību rādīšanas piemērs kategorijām](media/intelligence-categorymapping.png "Kartēto lauku vērtību rādīšanas piemērs kategorijām")
+   > ![Kartēto lauku vērtību rādīšanas piemērs kategorijām.](media/intelligence-categorymapping.png "Kartēto lauku vērtību rādīšanas piemērs kategorijām")
 
 8. Atlasiet **Gatavs**, un prognoze tiks apstrādāta. Apstrādei ir vajadzīgs laiks atkarībā no datu lieluma un sarežģītības pakāpes. Rezultāti būs pieejami jaunā entītijā, pamatojoties uz jūsu izveidotās prognozes **Izvades entītijas nosaukumu**.
 
@@ -77,7 +77,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 5. Ja tikko izveidotajam segmentam ir nepilnīgi dati avota laukā, varat izvēlēties prognozēt trūkstošās vērtības.
    > [!div class="mx-imgBorder"]
-   > ![Prognozēšanas poga](media/segments-predictoption.png "Prognozēšanas poga")
+   > ![Prognozēšanas poga.](media/segments-predictoption.png "Prognozēšanas poga")
 
 6. Norādiet **Parādāmo nosaukumu** un **Izvades entītijas nosaukumu** prognozes rezultātiem.
 
@@ -93,7 +93,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 4. Prognozes skatā redzēsit vairākus datu punktus.
    > [!div class="mx-imgBorder"]
-   > ![Prognožu lapa](media/intelligence-predictionsviewpage.png "Prognožu lapa")
+   > ![Prognožu lapa.](media/intelligence-predictionsviewpage.png "Prognožu lapa")
 
    - **Prognozētās vērtības** rāda kartēšanu, ko izveidojāt lauka vērtībā uz kategoriju kartēšanas fāzi. Šīs ir datu kopas vērtības, kas ir kartētas uz noteiktu kategoriju.
    -**Galvenie ietekmētāji** ir jūsu datu kopas faktori, kas, visticamāk, ietekmēja prognozes ticamību tam, ka jūsu lauka vērtība tiek kartēta uz noteiktu kategoriju.
@@ -139,7 +139,7 @@ Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atja
 
 ## <a name="troubleshooting"></a>Problēmu novēršana
 
-Ja nevarat pabeigt Common Data Service pievienošanas procesu kļūdas dēļ, varat mēģināt pabeigt procesu manuāli. Ir zināmas divas problēmas, kas var rasties pievienošanas procesā:
+Ja nevarat pabeigt Dataverse pievienošanas procesu kļūdas dēļ, varat mēģināt pabeigt procesu manuāli. Ir zināmas divas problēmas, kas var rasties pievienošanas procesā:
 
 - Klientu karšu pievienojumprogrammu risinājums nav instalēts.
     1. Izpildiet norādījumus, lai [instalētu un konfigurētu risinājumu](customer-card-add-in.md).

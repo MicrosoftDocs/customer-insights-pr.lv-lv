@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597428"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554444"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Izmantojiet Azure algoritmiskās mācības modeļus.
 
@@ -52,7 +52,7 @@ Jums ir nepieciešams izveidot datu kopas, lai izmantotu entītijas datus no Cus
      Noformētājā atveriet **Atlasīt kolonnas datu kopā** un atlasiet **Iestatīt kā konveijera parametru**, kur norādīsit parametra nosaukumu.
 
      > [!div class="mx-imgBorder"]
-     > ![Datu kopas parametri noformētājā](media/intelligence-designer-dataset-parameters.png "Datu kopas parametri noformētājā")
+     > ![Datu kopas parametri noformētājā.](media/intelligence-designer-dataset-parameters.png "Datu kopas parametri noformētājā")
    
 * Datu kopas parametrs SDK (Python)
    
@@ -78,7 +78,7 @@ Jums ir nepieciešams izveidot datu kopas, lai izmantotu entītijas datus no Cus
 
 * Noformētājs nodrošina [Datu moduļa eksportēšanu](/azure/machine-learning/algorithm-module-reference/export-data), kas ļauj eksportēt konveijera izvadi uz Azure krātuvi. Pašlaik modulim ir jāizmanto datu uzglabāšanas veidu **Azure BLOB krātuve** un iedalīt pēc parametriem **Datu krātuvi** un relatīvo **Ceļu**. Customer Insights ignorē gan šos parametrus konveijera izpildes laikā ar produktam pieejamo datu krātuvi un ceļu.
    > [!div class="mx-imgBorder"]
-   > ![Portāla konfigurācijas datu eksportēšana](media/intelligence-designer-importdata.png "Datu moduļa konfigurācijas eksportēšana")
+   > ![Portāla konfigurācijas datu eksportēšana.](media/intelligence-designer-importdata.png "Datu moduļa konfigurācijas eksportēšana")
    
 * Rakstot slēdzienu par izvadi, izmantojot kodu, varat augšupielādēt izvadi, kas atrodas darbvietā *reģistrētā datu krātuvē*. Ja ceļš un datu krātuve ir iedalīta pēc parametriem konveijerā, Customer Insights varēs lasīt un importēt izvades slēdzienu. Patlaban tiek atbalstīta vienkārša tabulārā izvade CSV formātā. Ceļam ir jāiekļauj direktorija un faila nosaukums.
 

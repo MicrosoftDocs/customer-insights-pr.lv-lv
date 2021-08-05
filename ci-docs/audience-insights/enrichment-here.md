@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305303"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555316"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Klientu profilu bagātināšana ar HERE Technologies (priekšskatījums)
 
@@ -35,7 +35,7 @@ Lai konfigurētu HERE Technologies, ir jāatbilst šādiem priekšnosacījumiem:
 1. HERE Technologies elementā atlasiet **Bagātināt datus** un atlasiet **Sākt darbu**.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies elements](media/HERE-tile.png "HERE Technologies elements")
+   > ![HERE Technologies elements.](media/HERE-tile.png "HERE Technologies elements")
 
 1. Atlasiet [savienojumu](connections.md) nolaižamajā sarakstā. Ja nav pieejamu savienojumu, sazinieties ar administratoru. Ja esat administrators, jūs varat izveidot savienojumu, atlasot **Pievienot savienojumu**. Nolaižamajā sarakstā izvēlieties **HERE Technologies**. 
 
@@ -50,7 +50,7 @@ Lai konfigurētu HERE Technologies, ir jāatbilst šādiem priekšnosacījumiem:
 1. Definējiet, kurus vienoto profilu laukus vajadzētu izmantot, lai meklētu atbilstošos HERE Technologies atrašanās vietas datus. Atlasītajai primārajai un/vai sekundārajai adresei ir nepieciešami lauki **Adreses 1. rinda** un **Pasta indekss**. Lai iegūtu augstāku atbilstību precizitāti, var pievienot vairākus laukus.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies bagātināšanas konfigurācijas lapa](media/enrichment-HERE-configuration.png "HERE Technologies bagātināšanas konfigurācijas lapa")
+   > ![HERE Technologies bagātināšanas konfigurācijas lapa.](media/enrichment-HERE-configuration.png "HERE Technologies bagātināšanas konfigurācijas lapa")
 
 1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
 
@@ -73,7 +73,7 @@ Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot ba
 1. Pēc pārbaudes pabeigšanas atlasiet **Saglabāt**.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies savienojuma konfigurēšanas lapa](media/enrichment-HERE-connection.png "HERE Technologies savienojuma konfigurēšanas lapa")
+   > ![HERE Technologies savienojuma konfigurēšanas lapa.](media/enrichment-HERE-connection.png "HERE Technologies savienojuma konfigurēšanas lapa")
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 

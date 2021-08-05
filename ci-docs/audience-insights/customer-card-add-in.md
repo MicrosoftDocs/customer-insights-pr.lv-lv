@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059597"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692214"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
@@ -25,7 +25,7 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai kartētu Dynamics 365 datus uz auditorijas ieskatu klientu profiliem, kas nepieciešami, lai tos varētu lietot [Dynamics 365 programmā, izmantojot Common Data Service savienotāju](connect-power-query.md).
+- Lai kartētu Dynamics 365 datus uz auditorijas ieskatu klientu profiliem, kas nepieciešami, lai tos varētu lietot [Dynamics 365 programmā, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md).
 - Visi Dynamics 365 lietotāji, kas izmanto klienta kartes pievienojumprogrammu, ir [jāpievieno kā lietotāji](permissions.md) auditorijas ieskatos, lai redzētu datus.
 - Lai darbotos datu uzmeklēšana, ir nepieciešama [konfigurēta meklēšanas un filtrēšanas iespēja](search-filter-index.md) auditorijas ieskatos.
 - Katra pievienojumprogrammas vadīkla ir atkarīga no noteiktiem datiem auditorijas ieskatos:
@@ -50,7 +50,7 @@ Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
 1. Atlasiet saiti **Parādāmais nosaukums** risinājumam **Dynamics 365 Customer Insights klienta kartes pievienojumprogramma (priekšskatījums)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Parādāmā nosaukuma atlasīšana](media/select-display-name.png "Parādāmā nosaukuma atlasīšana")
+   > ![Parādāmā nosaukuma atlasīšana.](media/select-display-name.png "Parādāmā nosaukuma atlasīšana")
 
 1. Atlasiet **Pierakstīties** un ievadiet tā administratora konta akreditācijas datus, ko izmantojat, lai konfigurētu Customer Insights.
 
@@ -64,7 +64,7 @@ Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
    - Lai kartētu ar kontaktpersonu, atlasiet klientu entītijas lauku, kas atbilst jūsu konta entītijas ID.
 
    > [!div class="mx-imgBorder"]
-   > ![Lauks Kontaktpersonas ID](media/contact-id-field.png "Lauks Kontaktpersonas ID")
+   > ![Lauks Kontaktpersonas ID.](media/contact-id-field.png "Lauks Kontaktpersonas ID")
 
 1. Atlasiet **Saglabāt konfigurāciju**, lai saglabātu iestatījumus.
 
@@ -83,7 +83,7 @@ Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
 1. Atlasiet kontaktpersonas veidlapu, kurai vēlaties pievienot klienta kartes vadīklas.
 
     > [!div class="mx-imgBorder"]
-    > ![Kontaktpersonas veidlapas atlase](media/contact-active-forms.png "Kontaktpersonas veidlapas atlase")
+    > ![Kontaktpersonas veidlapas atlase.](media/contact-active-forms.png "Kontaktpersonas veidlapas atlase")
 
 1. Lai pievienotu vadīklu, veidlapu redaktorā velciet jebkuru lauku no **lauku pārlūka** uz vietu, kur vēlaties novietot vadīklu.
 
@@ -110,7 +110,7 @@ Klienta kartes pievienojumprogramma netiek automātiski jaunināta. Lai jauninā
 
 1. Darbību joslā atlasiet **Lietot risinājuma jaunināšanu**.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Risinājuma jaunināšana Dynamics 365 programmu Pielāgošanas apgabalā":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Risinājuma jaunināšana Dynamics 365 programmu Pielāgošanas apgabalā.":::
 
 1. Pēc jaunināšanas procesa sākšanas tiek rādīts ielādes rādītājs, līdz jaunināšana ir pabeigta. Ja tajā nav jaunākas versijas, jaunināšanai tiks rādīts kļūdas ziņojums.
 

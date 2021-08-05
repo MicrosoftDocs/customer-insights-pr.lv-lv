@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263260"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692398"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -26,6 +26,28 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>2021. gada jūnija atjauninājumi
+
+2021. gada jūnija atjauninājumi ietver vairākus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="data-ingestion"></a>Datu pieņemšana
+
+- **Uzlaboti datu apvienošanas procesa atjauninājumi** Tagad datu unificēšanas procesa darbībās varat skatīt lielākus un uzlabotos [dinamisko statusa](data-unification.md) atjauninājumus. Šis līdzeklis ļauj sekot līdzi detalizētā procesa plūsmas izpratnei un veikt darbības, ja jāpievērš uzmanība kādam solim.
+
+### <a name="extensibility"></a>Paplašināšana
+
+- **Eksportējiet segmentus un citus datus uz Salesforce Marketing Cloud** Esam paplašināti mūsu eksportēšanas adresāti, iekļaujot [Salesforce Marketing Cloud](export-salesforce.md). Tagad uz Salesforce Marketing Cloud varat eksportēt segmentus un cita veida datus, izmantojot SFTP eksportu. Datu importēšanu Salesforce sistēmā var pilnībā automatizēt, un to var izmantot, lai veidotu efektīvākas mārketinga kampaņas.  
+ 
+- **Eksportējiet segmentus uz ActiveCampaign** Mēs esam paplašinājuši savus eksportēšanas adresātus, iekļaujot [Aktīvo kampaņu](export-active-campaign.md). Tagad varat eksportēt izveidotos segmentus kampaņu veidošanai, e-pasta mārketinga nodrošināšanai un specifisku klientu grupu atlasei pakalpojumā ActiveCampaign.
+ 
+- **Eksportējiet segmentus uz Sendinblue** Mēs esam paplašinājuši savus eksportēšanas adresātus, iekļaujot [Sendinblue](export-sendinblue.md). Tagad varat eksportēt izveidotos segmentus kampaņu veidošanai, e-pasta mārketinga nodrošināšanai un specifisku klientu grupu atlasei pakalpojumā Sendinblue.
+ 
+### <a name="ux-updates"></a>UX atjauninājumi 
+
+- **Jauno un paplašināto klientu lapa un profila informācijas lapa** Mēs pārveidojām lapu Klienti un profila detalizēto informāciju, lai uzlabotu lietotāju pieredzi un uzlabotu veiktspēju. Izmantojot šīs izmaiņas, varat skatīt, kārtot, meklēt un filtrēt klientus. Tagad filtri ir parādīti vietrādī URL, lai meklēšanas rezultātus koplietotu ar citiem lietotājiem netraucēti. Meklēšanas rezultātus var arī saglabāt kā segmentu.    
+  Klientu profilu detalizētās informācijas lapā tagad dati tiek apgrupēti dažādos nostiedātajos gadījumos, piemēram, demogrāfiskajos datos, ID un citos profila atribūtā, lai uzlabotu lasāmību. Citas sadaļas profila informācijas lapā tagad ir interaktīvas. Piemēram, darbību sadaļa tagad ļauj filtrēt un kārtot.
+
 
 ## <a name="may-2021-updates"></a>2021. gada maija atjauninājumi
 
@@ -170,7 +192,7 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 - **Vides atbalsta kopēšana vairākiem datu avotu veidiem**
 
-  Administratori var kopēt vides konfigurācijas uz jaunu vidi tajā pašā organizācijā. Šis līdzeklis paplašina kopētās vides funkcionalitāti pieteikumiem, kuros tiek izmantoti datu avoti, kas balstīti uz Common Data Service Data Lake vai Common Data Model mapi.
+  Administratori var kopēt vides konfigurācijas uz jaunu vidi tajā pašā organizācijā. Šis līdzeklis paplašinās kopēšanas vides funkcionalitāti gadījumiem, kuros tiek izmantoti datu avoti, kas balstīti uz Microsoft Dataverse pārvaldītu datu ezeru vai Common Data Model mapi.
 
 ## <a name="january-2021-updates"></a>2021. gada janvāra atjauninājumi
 

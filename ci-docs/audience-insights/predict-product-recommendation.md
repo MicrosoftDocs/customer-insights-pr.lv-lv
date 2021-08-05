@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095565"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556133"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktu ieteikumu prognoze (priekšskatījums)
 
@@ -64,7 +64,7 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
 1. Atlasiet elementu **Produktu ieteikumu modelis (priekšskatījums)** un atlasiet opciju **Lietot šo modeli**.
    > [!div class="mx-imgBorder"]
-   > ![Produkta ieteikumu modeļa elements ar pogu Lietot šo modeli](media/product-recommendation-usethismodel.PNG "Produkta ieteikumu modeļa elements ar pogu Lietot šo modeli")
+   > ![Produkta ieteikumu modeļa elements ar pogu Lietot šo modeli.](media/product-recommendation-usethismodel.PNG "Produkta ieteikumu modeļa elements ar pogu Lietot šo modeli")
 
 1. Pārskatiet informāciju par modeļa prasībām. Ja jums ir nepieciešamie dati, atlasiet **Sākt darbu**.
 
@@ -93,7 +93,7 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
 1. Kartējiet semantiskos laukus uz atribūtiem jūsu pirkumu vēstures entītijā un atlasiet **Tālāk**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Entītiju relācijas definēšana](media/product-recommendation-purchasehistorymapping.PNG "Pirkumu vēstures lapa, kurā parādīti semantiskie atribūti, kas ir kartēti ar atlasītās iegādes vēstures entītijas laukiem")
+   > ![Entītiju relācijas definēšana.](media/product-recommendation-purchasehistorymapping.PNG "Pirkumu vēstures lapa, kurā parādīti semantiskie atribūti, kas ir kartēti ar atlasītās iegādes vēstures entītijas laukiem")
 
 1. Ja lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas attiecības ar *Klienta* entītiju.
     1. Atlasiet vienumu **Pirkumu vēstures entītija**.
@@ -101,7 +101,7 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
     1. Atlasiet **Klienta entītiju**, kas atbilst primārajai klienta entītijai.
     1. Ievadiet nosaukumu, kas apraksta attiecību.
        > [!div class="mx-imgBorder"]
-       > ![Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu](media/model-purchase-join.png "Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu")
+       > ![Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu.](media/model-purchase-join.png "Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu")
 
 1. Atlasiet vienumu **Saglabāt**.
 
@@ -145,7 +145,7 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
 
 1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
    > [!div class="mx-imgBorder"]
-   > ![Skats lapā Manas prognozes](media/product-recommendation-mypredictions.PNG "Skats lapā Manas prognozes")
+   > ![Skats lapā Manas prognozes.](media/product-recommendation-mypredictions.PNG "Skats lapā Manas prognozes")
 
 1. Atlasiet prognozes, kuras vēlaties pārskatīt.
    - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
@@ -163,7 +163,7 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
 
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurā vēlaties pārskatīt rezultātus, un atlasiet **Skatīt**.
    > [!div class="mx-imgBorder"]
-   > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu](media/product-recommendation-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
+   > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu.](media/product-recommendation-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
 
 1. Rezultātu lapai ir piecas galvenās datu sadaļas:
     1. **Apmācības modeļa veiktspēja:** iespējamie rezultāti ir A, B vai C. Šis rezultāts norāda uz prognozes izpildi un var palīdzēt pieņemt lēmumu izmantot izvades entītijā glabātos rezultātus.
@@ -173,13 +173,13 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
             - **C** tiek uzskatīts par **C** kvalitātes modeli, ja metrika "Success@K" ir mazāka nekā bāzlīnija.
                
                > [!div class="mx-imgBorder"]
-               > ![Modeļa veiktspējas rezultāta skats](media/product-recommendation-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
+               > ![Modeļa veiktspējas rezultāta skats.](media/product-recommendation-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
             - **Bāzlīnija**: modelī tiek ņemti vērā visbiežāk ieteicamie produkti pēc iegādes skaita visiem klientiem, un šis modelis izmanto modelī identificētās apgūtās kārtulas, lai izveidotu klientiem ieteikumu kopu. Pēc tam šīs prognozes tiek salīdzinātas ar populārākajiem produktiem, ņemot vērā klientu skaitu, kuri iegādājušies šo produktu. Ja klientam ir vismaz viens produkts starp ieteiktajiem produktiem, kas tika redzēti arī populārākajiem iegādātajiem produktiem, šis produkts tiek uzskatīts par daļu no bāzlīnijas. Ja 10 klienti no 100 kopējiem klientiem būtu iegādājušies ieteiktu produktu, bāzlīnijas vērtība būtu 10%.
             - **Sekmīgs@K**: izmantojot transakciju validācijas laika perioda kopu, ieteikumi tiek izveidoti visiem klientiem un salīdzināti ar transakciju validācijas kopu. Piemēram, 12 mēnešu periodā 12. mēnesis var tikt atlikts kā validācijas datu kopa. Ja modelis prognozē vismaz vienu lietu, ko iegādāsies 12. mēnesī, pamatojoties uz to, kas tika gūts no iepriekšējiem 11 mēnešiem, klients palielinās metriku "Success@K".
     
     1. **Visvairāk ieteiktie produkti (ar rēķinu):** Pieci galvenie klientiem prognozētie produkti.
        > [!div class="mx-imgBorder"]
-       > ![Diagramma, kurā parādīti 5 labākie ieteicamie produkti](media/product-recommendation-topproducts.PNG "Diagramma, kurā parādīti 5 labākie ieteicamie produkti")
+       > ![Diagramma, kurā parādīti 5 labākie ieteicamie produkti.](media/product-recommendation-topproducts.PNG "Diagramma, kurā parādīti 5 labākie ieteicamie produkti")
     
     1. **Ieteikšanas galvenie faktori:** Lai sniegtu produktu ieteikumus, modelis pielieto klienta transakciju vēsturi. Tas apgūst modeļus, balstoties iepriekšējos pirkumos, un atrod līdzības starp klientiem un produktiem. Pēc tam šīs līdzības tiek izmantotas, lai ģenerētu produktu ieteikumus.
     Zemāk ir uzskaitīti faktori, kuri var ietekmēt modeļa ģenerēto produkta ieteikumu. 
@@ -190,20 +190,20 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
         Katru produkta ieteikumu ietekmē viens vai vairāki no šiem faktoriem. Ieteikumu procentuālā daļa, kurā nozīme bija katram no faktoriem, ir attēlota diagrammā. Šajā piemērā 100% ieteikumu ietekmēja iepriekšējās transakcijas, 60% — klientu līdzība un 22% — produktu līdzība. Pārvelciet kursoru pāri diagrammas joslām, lai aplūkotu precīzu procentuālo daļu, kurā bijusi nozīme katram no faktoriem.
 
         > [!div class="mx-imgBorder"]
-        > ![Galvenie ieteikumu faktori](media/product-recommendation-keyrecommendationfactors.png "Galvenie modeļa apgūtie ieteikumu faktori produktu rekomendāciju ģenerēšanai")
+        > ![Galvenie ieteikumu faktori.](media/product-recommendation-keyrecommendationfactors.png "Galvenie modeļa apgūtie ieteikumu faktori produktu rekomendāciju ģenerēšanai")
        
      
    1. **Datu statistika** : Sniedz pārskatu par modeļa izmantoto transakciju, klientu un preču skaitu. Tā balstās ievades datos, kuri tika izmantoti, lai apgūtu modeļus un ģenerētu produktu ieteikumus.
 
       > [!div class="mx-imgBorder"]
-      > ![Datu statistika](media/product-recommendation-datastatistics.png "Datu statistika par modeļa izmantotajiem ievades datiem modeļu apgūšanai")
+      > ![Datu statistika.](media/product-recommendation-datastatistics.png "Datu statistika par modeļa izmantotajiem ievades datiem modeļu apgūšanai")
 
       Šajā sadaļā ir redzama statistika par datu punktiem, kurus modelis izmantoja, lai apgūtu modeļus un ģenerētu produktu ieteikumus. Filtrēšana, saskaņā ar modeļa konfigurāciju, tiks piemērota modeļa ģenerētajai izvadei. Taču modeļu apgūšanā modelis izmanto visus pieejamos datus. Tāpēc, ja modeļa konfigurācijā lietojat produkta filtrēšanu, šī sadaļa parādīs kopējo modeļa analizēto produktu skaitu, lai tiktu apgūti modeļi, un šis skaits var atšķirties no to produktu skaita, kuri atbilst definētajiem filtrēšanas kritērijiem.
 
    1. **Ieteikumi par augsta līmeņa produktiem:** klientiem sniegto ieteikumu paraugs, kuru laikā, visticamāk, klients iegādāsies šo modeli.    
       Ja tiek pievienots produktu katalogs, produkta ID nomaina pret produkta nosaukumiem. Produktu nosaukumi sniedz izmantojamāku un intuitīvāku informāciju par prognozēm.
        > [!div class="mx-imgBorder"]
-       > ![Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu](media/product-recommendation-highconfidence.PNG "Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu")
+       > ![Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu.](media/product-recommendation-highconfidence.PNG "Saraksts, kurā parādīti augsta līmeņa ieteikumi par individuālu klientu kopu")
 
 ## <a name="manage-predictions"></a>Pārvaldīt prognozes
 

@@ -2,6 +2,8 @@
   href: index.yml
 - name: Produkta pārskats
   href: overview.md
+- name: Izveidot izmēģinājumversiju
+  href: audience-insights/get-started-trial.md
 - name: Piekļuve videi
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Auditorijas ieskati
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Iespēju pārskats
       href: audience-insights/overview.md
-    - name: Bezmaksas izmēģinājumversija
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Jauni un atjaunināti līdzekļi
       href: audience-insights/whats-new-audience-insights.md
-    - name: Izveidot jaunu vidi
-      href: audience-insights/home.md
+    - name: Jaunas vides izveide
+      href: audience-insights/get-started-paid.md
     - name: Lean moduļi
       items:
         - name: Datu uzņemšana
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
           href: audience-insights/connect-common-data-model.md
-        - name: Pievienojiet Common Data Service pārvaldīto datu ezeru
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Pievienojiet Dataverse pārvaldīto datu ezeru
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Inkrementālā atsvaidzināšana datu avotiem
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Reāllaika datu uzņemšana
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Bagātināšana ar SFTP pielāgoto importu
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmenti un mēri
+    - name: Segmenti
       items:
         - name: Segmentu pārskats
           href: audience-insights/segments.md
-        - name: Veidojiet segmentus un klientu grupas
+        - name: Izveidot segmentus
           href: audience-insights/segment-builder.md
         - name: Uz darbībām balstīti segmenta ieteikumi
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Notikumu izveide un modificēšana
           href: engagement-insights/refined-events.md
+        - name: Atpazīt tīmekļa notikumus no iepriekš autentificētiem viesiem
+          href: engagement-insights/unknown-to-known.md
         - name: Notikumu eksportēšana
           href: engagement-insights/export-events.md
     - name: Pārskati
@@ -304,7 +306,9 @@
       items:
         - name: Personisko datu dzēšana un eksportēšana
           href: engagement-insights/delete-export-personal-data.md
+    - name: Reģionālā pieejamība
+      href: engagement-insights/regional-availability.md
     - name: Pakalpojuma ierobežojumi
       href: engagement-insights/quotas.md
-- name: Sazināties ar atbalsta dienestu
+- name: Sazināties ar atbalstu
   href: 'https://admin.powerplatform.microsoft.com/support'

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598348"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555178"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Izmantojiet Azure algoritmiskās mācības studijas (klasiskais) modeļus programmā .
 
@@ -41,7 +41,7 @@ Vispirms ir jāizveido darbvieta un jāatver algoritmiskās mācīšanās studij
 
 1. Pēc resursa izveides tiks parādīts algoritmiskās mācīšanās studijas darbvietas informācijas panelis. Atlasiet **Palaist algoritmiskās mācīšanās studiju**.
 
-   ![Azure algoritmiskās mācīšanās studijas lietotāja interfeiss](media/azure-machine-learning-studio.png)
+   ![Azure algoritmiskās mācīšanās studijas lietotāja interfeiss.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Darbs ar Azure algoritmiskās mācīšanās studiju
 
@@ -55,7 +55,7 @@ Tagad varat izveidot jaunu eksperimentu vai importēt esošu eksperimenta veidni
 
 1. Ja izveidojat jaunu eksperimentu vai izmantojat eksperimenta veidni no galerijas, jums ir jākonfigurē **Datu importēšanas** rekvizīti. Izmantojiet vadīto pieredzi vai tieši sniedziet detalizētu informāciju, lai piekļūtu Azure BLOB krātuvei, kurā ir jūsu dati.  
 
-   ![Azure algoritmiskās mācīšanās studijas eksperiments](media/azure-machine-learning-studio-experiment.png)
+   ![Azure algoritmiskās mācīšanās studijas eksperiments.](media/azure-machine-learning-studio-experiment.png)
 
 1. Tagad varat izveidot pielāgotu apstrādes konveijeru, lai notīrītu un pirmsapstrādātu datus, izvilktu līdzekļus un apmācītu piemēroto modeli.
 
@@ -63,15 +63,15 @@ Tagad varat izveidot jaunu eksperimentu vai importēt esošu eksperimenta veidni
 
 1. Kad jūs apmierina modeļa kvalitāte, atlasiet **Iestatīt tīmekļa pakalpojumu** > **Predikatīvais tīmekļa pakalpojums**. Šī opcija importē apmācīto modeli un līdzekļu konveijeru no apmācību eksperimenta uz predikatīvo pakalpojumu. Predikatīvais pakalpojums var izmantot citu ievades datu kopu ar sistēmu, kas izmantota eksperimenta apmācībā prognožu veikšanai.
 
-   ![Predikatīvā tīmekļa pakalpojuma iestatīšana](media/predictive-webservice-control.png)
+   ![Prognozējošā tīmekļa pakalpojuma iestatīšana.](media/predictive-webservice-control.png)
 
 1. Kolīdz predikatīvais tīmekļa pakalpojuma eksperiments ir izdevies, jūs varat to izmantot automātiskai plānošanai. Lai tīmekļa pakalpojums darbotos kopā ar Customer Insights, atlasiet **Izmantot tīmekļa pakalpojumu** > **Izmantot tīmekļa pakalpojuma (jauns) priekšskatījumu**. [Papildinformācija par tīmekļa pakalpojuma izmantošanu](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
-   ![Predikatīvā tīmekļa pakalpojuma izmantošana](media/predictive-webservice-deploy.png)
+   ![Prognozējošā tīmekļa pakalpojuma izmantošana.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Paraugu modeļi no galerijas
 
-Šī raksta modeļiem izmantosim fiktīvu Contoso Hotel scenāriju. Contoso Hotel apkopo šādus datus:
+Šajā rakstā modeļiem mēs izmantosim izdomātu Contoso viesnīcas scenāriju. Contoso viesnīca apkopo tālāk norādītos datus:
 
 - CRM dati, kas sastāv no viesnīcas uzturēšanās darbības. Datu kopa ietver informāciju par uzturēšanās datiem katram reģistrētajam klientam. Tajā arī ietverta informācija par rezervējumu, numuru veidiem, tēriņu informācija un tā tālāk. Dati aptver četrus gadus — no 2014. gada janvāra līdz 2018. gada janvārim.
 - Viesnīcas viesu klientu profili. Šie profili satur informāciju par katru klientu, tostarp viņu vārdu un uzvārdu, dzimšanas datumu, pasta adresi, dzimumu un tālruņa numuru.
@@ -87,13 +87,13 @@ Zuduma definīcija var atšķirties atkarībā no scenārija. Piemēram, viesi, 
 
 Eksperimenta veidni var importēt no galerijas. Vispirms nodrošiniet, ka no Azure Blob krātuves importējat datus **Viesnīcas uzturēšanas darbībai**, **Klientu datiem** un **Pakalpojuma lietojuma datiem**.
 
-   ![Datu importēšana zuduma modelim](media/import-data-azure-blob-storage.png)
+   ![Importēt datus zuduma modelim.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Līdzekļu izmantošana
 
 Pamatojoties uz zuduma definīciju, mēs vispirms identificējam neapstrādātos līdzekļus, kuri ietekmēs etiķeti. Pēc tam mēs apstrādāsim šos neapstrādātos līdzekļus, lai veidotu skaitliskus līdzekļus, kurus var izmantot algoritmiskās mācīšanās modeļos. Datu integrācija notiek ar Customer Insights, lai šīs tabulas varētu pievienot, izmantojot *Klienta ID*.
 
-   ![Importēto datu apvienošana](media/join-imported-data.png)
+   ![Importēto datu apvienošana.](media/join-imported-data.png)
 
 Līdzekļu izveide modeļa veidošanai zuduma analīzei var būt nedaudz sarežģīta. Dati ir laika funkcija ar jaunu viesnīcas darbību, kas tiek fiksēta katru dienu. Līdzekļu izveides laikā mēs vēlamies ģenerēt statiskus līdzekļus no dinamiskiem datiem. Šajā gadījumā mēs ģenerējam vairākus līdzekļus no viesnīcas darbības ar viena gada slīdošo logu. Mēs arī izvēršam kategorijas līdzekļus, piemēram, numura veidu vai rezervācijas veidu atsevišķos līdzekļos, izmantojot viena karsto kodēšanu.  
 
@@ -114,7 +114,7 @@ Tagad mums ir jāizvēlas optimālais lietojamais algoritms. Šajā gadījumā v
 
 Šajā attēlā parādīts modeļa apmācības un novērtēšanas konveijers Azure algoritmiskās mācīšanās studijai:
 
-![Zuduma modelis Azure algoritmiskās mācīšanās studijā](media/azure-machine-learning-model.png)
+![Zuduma modelis Azure algoritmiskās mācīšanās studijā.](media/azure-machine-learning-model.png)
 
 Mēs arī izmantojam tehniku, ko sauc par **Permutācijas līdzekļa svarīgumu**, kas ir būtisks modeļa optimizācijas aspekts. Iebūvētajiem modeļiem ir mazs vai nekāds ieskats jebkura konkrētā līdzekļa ietekmē uz gala prognozi. Līdzekļa svarīguma kalkulators izmanto pielāgotu algoritmu, lai aprēķinātu atsevišķu līdzekļu ietekmi uz konkrēta modeļa iznākumu. Līdzekļa svarīgums ir normalizēts starp +1 un -1. Negatīva ietekme nozīmē, ka atbilstošajam līdzeklim ir pretēja ietekme uz iznākumu un tas ir jāizņem no modeļa. Pozitīva ietekme norāda uz to, ka līdzeklim ir pamatīgs pienesums prognozei. Šīs vērtības nav korelācijas koeficienti, jo tie ir cita metrika. Papildinformāciju skatiet tēmā [Permutāciju līdzekļa svarīgums](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Mēs definējam mērķi kā pakalpojuma lietošanas dolāra summas maksimizēša
 
 Tāpat kā zuduma modelī, mēs apvienojam viesnīcas ServiceCustomerID ar CustomerID, lai veidotu konsekventus ieteikumus katram CustomerID.
 
-![Ieteikumu modeļa līdzekļu izmantošana](media/azure-machine-learning-model-featurization.png)
+![Ieteikumu modeļa līdzekļu izmantošana.](media/azure-machine-learning-model-featurization.png)
 
 Dati tiek iegūti no trim dažādām entītijām, un līdzekļi tiek atvasināti no tām. Ieteikuma problēmas līdzekļu izveidošana atšķiras no zuduma vai CLTV scenārijiem. Ieteikumu modelim ir nepieciešami ievades dati trīs līdzekļu kopu veidā.
 
@@ -156,13 +156,13 @@ Dati tiek iegūti no trim dažādām entītijām, un līdzekļi tiek atvasināti
 
 Mēs prognozējam produktus vai pakalpojumus, izmantojot algoritmu, ko sauc par **Apmācības Matchbox ieteicēju**, lai apmācītu ieteikumu modeli.
 
-![Produkta ieteikuma algoritms](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Produkta ieteikuma algoritms.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Trīs ievades porti **Apmācības Matchbox ieteicēja** modelī izmanto apmācību pakalpojuma izmantošanas datus, klienta aprakstu (neobligāti) un pakalpojuma aprakstu. Ir trīs dažādi veidi, kā novērtēt modeli. Viens ir modeļa novērtējums, kurā Normalizētā kumulatīvais pieaugums ar atlaidi (NDCG) tiek aprēķināts, lai sarindotu novērtētos elementus. Šajā eksperimentā NDCG rezultāts ir 0,97. Pārējās divas opcijas ir novērtēt modeli visā ieteicamā pakalpojuma katalogā vai novērtēt tikai elementus, kurus lietotāji pirms tam nav izmantojuši.
 
 Raugoties tālāk ieteikumu izplatīšanā visā pakalpojuma katalogā, mēs pamanām, ka tālrunis, WiFi un kurjers ir galvenie pakalpojumi, kurus ieteikt. Tas atbilst tam, ko mēs atklājām pakalpojuma patēriņa datu sadalījumā:
 
-![Ieteikumu modeļa izvade](media/azure-machine-learning-model-output.png)
+![Ieteikumu modeļa izvade.](media/azure-machine-learning-model-output.png)
 
 Visam [produkta ieteikuma eksperimentam var piekļūt Azure AI galerijā.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

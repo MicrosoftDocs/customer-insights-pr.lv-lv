@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305165"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555500"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Bagātiniet klientu profilus ar zīmola un interešu radniecību (priekšskatījums)
 
@@ -27,7 +27,7 @@ Lai konfigurētu zīmola saistību bagātināšanu, dodieties uz cilni **Atklāt
 Lai konfigurētu interešu saistību bagātināšanu, dodieties uz cilni **Atklāt** un atlasiet **Bagātināt manus datus** elementā **Intereses**.
 
    > [!div class="mx-imgBorder"]
-   > ![Zīmolu un interešu elementi](media/BrandsInterest-tile-Hub.png "Zīmolu un interešu elementi")
+   > ![Zīmolu un interešu elementi.](media/BrandsInterest-tile-Hub.png "Zīmolu un interešu elementi")
 
 ## <a name="how-we-determine-affinities"></a>Kā tiek noteikta radniecība
 
@@ -123,7 +123,7 @@ Atkarībā no jūsu klientu datu apjoma bagātināšanas izpilde var aizņemt va
 
 Pēc bagātināšanas procesa palaišanas dodieties uz **Manas bagātināšanas**, lai pārskatītu kopējo bagātināto klientu skaitu un zīmolu vai interešu sadalījumu bagātināto klientu profilos.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Rezultātu priekšskatījums pēc bagātināšanas procesa izpildes":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Rezultātu priekšskatījums pēc bagātināšanas procesa izpildes.":::
 
 Pārskatiet bagātinātos datus, diagrammā atlasot **Skatīt bagātinātos datus**. Zīmolu bagātinātie dati dodas uz entītiju **BrandAffinityFromMicrosoft**. Interešu dati atrodas entītijā **InterestAffinityFromMicrosoft**. Šīs entītijas ir uzskaitītas arī grupā **Bagātināšana** sadaļā **Dati** > **Entītijas**.
 
@@ -131,7 +131,7 @@ Pārskatiet bagātinātos datus, diagrammā atlasot **Skatīt bagātinātos datu
 
 Zīmola un intereses radniecību var apskatīt arī atsevišķās klientu kartītēs. Atveriet sadaļu **Klienti** un atlasiet klienta profilu. Klienta kartē ir atrodamas to zīmolu vai interešu diagrammas, kuras ir saistītas ar šī klienta demogrāfiskā profila lietotājiem.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klienta kartīte ar bagātinātiem datiem":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klienta kartīte ar bagātinātiem datiem.":::
 
 ## <a name="next-steps"></a>Nākamās darbības
 

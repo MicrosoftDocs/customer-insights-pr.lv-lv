@@ -1,6 +1,6 @@
 ---
 title: Savienojuma izveide ar Azure Data Lake Storage Gen2 kontu ar pakalpojuma primāro nosaukumu
-description: Izmantojiet Azure pakalpojuma primāro nosaukumu, lai savienotu auditorijas ieskatus ar savu data lake, pievienojot to auditorijas ieskatiem.
+description: Izmantojiet Azure pakalpojuma primāro nosaukumu, lai savienotu auditorijas ieskatus ar savu datu ezeru, pievienojot to auditorijas ieskatiem.
 ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596508"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692122"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Savienojuma izveide ar Azure Data Lake Storage Gen2 kontu ar Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem
 
 Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr jābūt ierobežotām atļaujām. Tā vietā, lai lietojumprogrammās pieteiktos kā pilnībā priviliģēts lietotājs, Azure piedāvā pakalpojuma primāros nosaukumus. Lasiet tālāk, lai uzzinātu, kā savienot auditorijas ieskatus ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu, nevis krātuves konta atslēgas. 
 
-Varat izmantot pakalpojuma primāro nosaukumu, lai droši [pievienotu vai rediģētu Common Data Model kā datu avotu](connect-common-data-model.md) vai [izveidotu jaunu vai atjauninātu esošu vidi](manage-environments.md#create-an-environment-in-an-existing-organization).
+Varat izmantot pakalpojuma primāro nosaukumu, lai droši [pievienotu vai rediģētu Common Data Model kā datu avotu](connect-common-data-model.md) vai [izveidotu jaunu vai atjauninātu esošu vidi](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Azure Data Lake Gen2 krātuves kontam, kas plāno izmantot pakalpojuma primāro nosaukumu, ir jābūt [iespējotai Hierarhiskai nosaukuma vietai (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Lai ieviestu izmaiņas, var paiet 15 minūtes.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Ievadiet Azure resursa ID vai Azure abonementa informāciju krātuves konta pielikumā Audience Insights.
 
-Lai [glabātu datus par izvadiem](manage-environments.md) vai [izmantotu to kā datu avotu, pievienojiet Azure Data Lake storage kontu](connect-common-data-service-lake.md). Ja ir izvēlēta funkcija Azure Data Lake, varat izvēlēties starp uz resursiem balstītu vai uz abonementu balstītu pieeju.
+Lai [glabātu datus par izvadiem](manage-environments.md) vai [izmantotu to kā datu avotu, pievienojiet Azure Data Lake storage kontu](connect-dataverse-managed-lake.md). Ja ir izvēlēta funkcija Azure Data Lake, varat izvēlēties starp uz resursiem balstītu vai uz abonementu balstītu pieeju.
 
 Izpildiet tālāk sniegtos norādījumus, lai sniegtu nepieciešamo informāciju par izvēlēto pieeju.
 

@@ -1,7 +1,7 @@
 ---
 title: Izveidojiet un pārvaldiet segmentus
 description: Izveidojiet klientiem segmentus, lai tos grupētu, pamatojoties uz dažādiem atribūtiem.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064946"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685471"
 ---
 # <a name="create-and-manage-segments"></a>Izveidojiet un pārvaldiet segmentus
+
+> [!IMPORTANT]
+> Ir vairākas izmaiņas, kas tiek pārnestas uz segmentu izveides pieredzi 2021. gada septembra skatā: 
+> - Segmenta būvētājs izskatīsies nedaudz citādi ar pārveidotiem elementiem un uzlabotu lietotāja plūsmu.
+> - Jauni datuma un laika operatori, kā arī uzlabotais datuma atlasītājs ir iespējoti segmenta būvētājā.
+> - Segmentiem varat pievienot vai noņemt nosacījumus un kārtulas. 
+> - Ligzdotas kārtulas, kas sākas ar nosacījumu VAI, kļūst pieejamas. Jums vairs nav nepieciešams nosacījums UN pie slāņa.
+> - Sānu rūts atribūtu atlasei būs pastāvīgi pieejama.
+> - Entītiju attiecību ceļu atlases opcija.
+> Lai izmēģinātu jauno segmenta būvētāju, sūtiet e-pasta ziņojumu ar tēmu "Pieprasīt iespējot jauno segmenta būvētāju" uz cihelp [at] microsoft.com. Iekļaujiet savas organizācijas nosaukumu un jūsu smilškastes vides ID.
 
 Definēt sarežģītus filtrus vienotā klienta entītijā unsaistītajās entītijās. Katrs segments pēc apstrādes izveido klientu ierakstu kopu, ko var eksportēt un ar kurām veikt darbības. Segmenti tiek pārvaldīti lapā **Segmenti**. 
 
@@ -50,7 +60,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Tas tiks saglabāts kā neaktīvs s
 1. Izvēlieties operatoru un vērtību atlasītajam atribūtam.
 
    > [!div class="mx-imgBorder"]
-   > ![Pielāgots grupas filtrs](media/customer-group-numbers.png "Klientu grupas filtrs")
+   > ![Pielāgots grupas filtrs.](media/customer-group-numbers.png "Klientu grupas filtrs")
 
    |Skaitlis |Definīcija  |
    |---------|---------|
@@ -66,7 +76,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Tas tiks saglabāts kā neaktīvs s
       - **Vai** operators: Viens vai otrs no nosacījumiem ir jāizpilda kā segmentācijas procesa daļa. Šī opcija ir visnoderīgākā, kad definējat vairākus nosacījumus vienai entītijai.
 
       > [!div class="mx-imgBorder"]
-      > ![VAI operators, ja kāds no nosacījumiem ir jāizpilda](media/segmentation-either-condition.png "VAI operators, ja kāds no nosacījumiem ir jāizpilda")
+      > ![VAI operators, ja kāds no nosacījumiem ir jāizpilda.](media/segmentation-either-condition.png "VAI operators, ja kāds no nosacījumiem ir jāizpilda")
 
       Pašlaik ir iespējams ligzdot **VAI** operatoru, izmantojot operatoru **UN**, bet ne otrādi.
 
@@ -74,12 +84,12 @@ Veidojot segmentu, var saglabāt melnrakstu. Tas tiks saglabāts kā neaktīvs s
    Atlasiet **Pievienot grupu**.
 
       > [!div class="mx-imgBorder"]
-      > ![Klientu grupu pievienošanas grupa](media/customer-group-add-group.png "Klientu grupu pievienošanas grupa")
+      > ![Klientu grupu pievienošanas grupa.](media/customer-group-add-group.png "Klientu grupu pievienošanas grupa")
 
    1. Atlasiet kādu no iestatītajiem operatoriem: **Apvienošana**, **Krustpunkts** vai **Izņemot**.
 
    > [!div class="mx-imgBorder"]
-   > ![Klientu grupu pievienošanas apvienošana](media/customer-group-union.png "Klientu grupu pievienošanas apvienošana")
+   > ![Klientu grupu pievienošanas apvienošana.](media/customer-group-union.png "Klientu grupu pievienošanas apvienošana")
 
    - **Apvienot** apvieno divas grupas.
 
@@ -90,7 +100,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Tas tiks saglabāts kā neaktīvs s
 1. Ja entītija ir savienota ar vienotā klienta entītiju, izmantojot [relācijas](relationships.md), ir jādefinē relāciju ceļš, lai izveidotu derīgu segmentu. Pievienojiet entītijas no attiecību ceļa, līdz varat nolaižamajā sarakstā atlasīt entitīju **Klients: CustomerInsights**. Pēc tam katrai darbībai izvēlieties **Visi ieraksti**.
 
    > [!div class="mx-imgBorder"]
-   > ![Relāciju ceļš segmenta izveides laikā](media/segments-multiple-relationships.png "Relāciju ceļš segmenta izveides laikā")
+   > ![Relāciju ceļš segmenta izveides laikā.](media/segments-multiple-relationships.png "Relāciju ceļš segmenta izveides laikā")
 
 1. Pēc noklusējuma segmenti ģenerē izvades entītiju, kurā ir visi klientu profilu atribūti, kas atbilst definētajiem filtriem. Ja segments ir balstīts uz citām entītijām, nevis entītiju *Klients*, izvades entītijai var pievienot papildu atribūtus no šīm entītijām. Atlasiet **Projekta atribūtus**, lai izvēlētos atribūtus, kas tiks pievienoti izvades entītijai.  
   
@@ -127,7 +137,7 @@ Izmantojot ātros segmentus, varat ātri izveidot vienkāršus segmentus, izmant
 4. Sistēma nodrošinās jūs ar **Aptuveniem segmenta izmēriem**. Varat izvēlēties, vai ģenerēt definēto segmentu, vai arī to vispirms pārskatīt, lai iegūtu citu segmenta lielumu.
 
     > [!div class="mx-imgBorder"]
-    > ![Ātrā segmenta nosaukums un novērtējums](media/quick-segment-name.png "Ātrā segmenta nosaukums un novērtējums")
+    > ![Ātrā segmenta nosaukums un novērtējums.](media/quick-segment-name.png "Ātrā segmenta nosaukums un novērtējums")
 
 5. Norādiet segmenta **Nosaukumu**. Vai ari norādiet **Parādāmo vārdu**.
 

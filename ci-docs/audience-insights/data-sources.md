@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304705"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692444"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -30,13 +31,13 @@ Datu avotu varat pievienot trīs galvenajos veidos:
 
 - [Izmantojot daudzos Power Query savienotājus](connect-power-query.md)
 - [No Common Data Model mapes](connect-common-data-model.md)
-- [No sava Microsoft Dataverse ezera](connect-common-data-service-lake.md)
+- [No sava Microsoft Dataverse ezera](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Datu pievienošana no lokālajiem datu avotiem
 
-Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](manage-environments.md#create-an-environment-in-an-existing-organization), kad tiek iestatīta vide.
+Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](get-started-paid.md), kad tiek iestatīta vide.
 
-Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/data-integration/gateway/service-gateway-app.md).
+Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/data-integration/gateway/service-gateway-app).
 
 Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
 
@@ -45,11 +46,11 @@ Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to var
 Jūs redzēsit katra uzņemtā datu avota nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti no šī avota. Datu avotu sarakstu var kārtot pēc katras kolonnas.
 
 > [!div class="mx-imgBorder"]
-> ![Pievienotie datu avoti](media/configure-data-datasource-added.png "Pievienotie datu avoti")
+> ![Pievienotie datu avoti.](media/configure-data-datasource-added.png "Pievienotie datu avoti")
 
 |Statuss  |Apraksts  |
 |---------|---------|
-|Veiksmīgi   |Datu avots tika veiksmīgi paņemts, ja ir minēts laiks kolonnā **Atsvaidzināts**.
+|Sekmīgs   |Datu avots tika veiksmīgi paņemts, ja ir minēts laiks kolonnā **Atsvaidzināts**.
 |Nav sākts   |Datu avots nesatur datus, kas ir uzņemti vai vēl ir melnraksta režīmā.         |
 |Notiek atsvaidzināšana    |Notiek datu uzņemšana. Šo darbību varat atcelt, kolonnā **Darbības** atlasot **Apturēt atsvaidzināšanu**. Apturot datu avota atsvaidzināšanu, tas atkal kļūs tāds pats kā pēdējās atsvaidzināšanas brīdī.       |
 |Neizdevās     |Veicot datu uzņemšanu, radās kļūdas.         |

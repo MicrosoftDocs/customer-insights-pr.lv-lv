@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305900"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554692"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avotu
 
@@ -42,7 +42,7 @@ Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Vairumu no ši
 1. Dialoglodziņā **Power Query — rediģēt vaicājumus** ļauj pārskatīt un precizēt datus. Entītijas, kuras sistēma identificēja jūsu atlasītajā datu avotā, tiek rādītas kreisajā rūtī.
 
    > [!div class="mx-imgBorder"]
-   > ![Vaicājumu rediģēšanas dialoglodziņš](media/data-manager-configure-edit-queries.png "Vaicājumu rediģēšanas dialoglodziņš")
+   > ![Vaicājumu rediģēšanas dialoglodziņš.](media/data-manager-configure-edit-queries.png "Vaicājumu rediģēšanas dialoglodziņš")
 
 1. Varat arī transformēt savus datus. Atlasiet entītiju, ko vēlaties rediģēt vai transformēt. Izmantojiet Power Query loga opcijas, lai lietotu izmaiņas. Visas izmaiņas ir uzskaitītas sadaļā **Lietotās darbības**. Power Query nodrošina daudzas iepriekš izveidotas izmaiņu opcijas. Papildinformāciju skatiet sadaļā [Power Query izmaiņas](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Savienotāji ar atzīmi kolonnā **Customer Insights (Dataflows)** ir pieejami, 
 2. Nolaižamajā izvēlnē atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties mainīt un atlasiet **Rediģēt**.
 
    > [!div class="mx-imgBorder"]
-   > ![Rediģēšanas opcija](media/edit-option-data-sources.png "Rediģēšanas opcija")
+   > ![Rediģēšanas opcija.](media/edit-option-data-sources.png "Rediģēšanas opcija")
 
 3. Piemērojiet veiktās izmaiņas un transformācijas dialoglodziņā **Power Query — izmaiņu rediģēšana**, kā aprakstīts sadaļā [Jauna datu avota izveide](#create-a-new-data-source).
 

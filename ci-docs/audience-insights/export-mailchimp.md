@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124236"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362518"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentu eksportēšana uz Mailchimp (priekšskatījums)
 
@@ -38,7 +38,7 @@ Eksportējiet vienotu klientu profilu segmentus uz Mailchimp, lai izveidotu info
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Autopilot**, lai konfigurētu savienojumu.
+1. Atlasiet vienumu **Pievienot savienojumu** un izvēlieties **Mailchimp**, lai konfigurētu savienojumu.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 

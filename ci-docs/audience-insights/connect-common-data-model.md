@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596554"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554903"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 
@@ -28,7 +28,7 @@ ms.locfileid: "5596554"
 
 - Lai veiktu autentifikāciju ar Azure pakalpojuma primāro nosaukumu, pārliecinieties, vai tas ir konfigurēts jūsu nomniekā. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md).
 
-- Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no Data Lake citā Azure reģionā netiek atbalstīti. Lai iepazītu konkrētās vides Azure reģionu, apmeklējiet **Administrators** > **Sistēma** > **Par** sadaļā par auditorijas ieskatiem.
+- Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no datu ezera citā Azure reģionā netiek atbalstīti. Lai iepazītu konkrētās vides Azure reģionu, apmeklējiet **Administrators** > **Sistēma** > **Par** sadaļā par auditorijas ieskatiem.
 
 - Pakalpojumā tiešsaistes pakalpojumos glabātie dati var tikt glabāti citā ietā, nevis tajā, kur tiek apstrādāti vai glabāti dati Dynamics 365 Customer Insights. Importējot vai savienojot ar tiešsaistes pakalpojumos glabātajiem datiem, jūs piekrītat, ka datus var pārnest uz Dynamics 365 Customer Insights un glabāt tajā. [Papildinformāciju skatiet Microsoft drošības kontroles centrā.](https://www.microsoft.com/trust-center)
 
@@ -45,7 +45,7 @@ ms.locfileid: "5596554"
 
 1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Ievadiet informāciju par **Konteineru** un atlasiet **Tālāk**.
    > [!div class="mx-imgBorder"]
-   > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:
    >  - Krātuves Blob datu lasītājs
@@ -58,11 +58,11 @@ ms.locfileid: "5596554"
 
 1. Atlasītajā model.json vai manifest.json failā tiks parādīts pieejamo entītiju saraksts. Jūs varat apskatīt un atlasīt no pieejamo entītiju saraksta un atlasīt **Saglabāt**. Jaunākie dati no atlasītajām entītijām tiks eksportēti katru dienu.
    > [!div class="mx-imgBorder"]
-   > ![Dialoglodziņš, kurā redzams entītiju saraksts no model.json faila](media/review-entities.png)
+   > ![Dialoglodziņš, kurā redzams entītiju saraksts no model.json faila.](media/review-entities.png)
 
 8. Norādiet, kurām datu entītijām vēlaties iespējot datu profilēšanu, un atlasiet **Saglabāt**. Datu profilēšana iespējo analīzi un citas iespējas. Varat atlasīt visu entītiju, kas atlasa visus entītijas atribūtus, vai atlasiet noteiktus atribūtus pēc jūsu izvēles. Pēc noklusējuma neviena entītija nav iespējota datu profilēšanai.
    > [!div class="mx-imgBorder"]
-   > ![Dialoglodziņš, kurā redzama datu profilēšana](media/dataprofiling-entities.png)
+   > ![Dialoglodziņš, kurā redzama datu profilēšana.](media/dataprofiling-entities.png)
 
 9. Kad esat saglabājis savas atlases, tiek atvērta lapa **Datu avoti**. Tagad jums būtu jāredz mapes Common Data Model savienojums kā datu avots.
 
@@ -81,12 +81,12 @@ Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Co
 
 4. Pēc izvēles atjauniniet **Piekļuves atslēgu** un atlasiet **Tālāk**.
 
-   ![Dialoglodziņš, lai rediģētu un atjauninātu esoša datu avota piekļuves atslēgu](media/edit-access-key.png)
+   ![Dialoglodziņš, lai rediģētu un atjauninātu esoša datu avota piekļuves atslēgu.](media/edit-access-key.png)
 
 5. Ja vēlaties, varat atjaunināt no uzņēmuma atslēgas savienojuma uz resursu vai abonementa bāzes savienojumu. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Atjauninot savienojumu, nevar mainīt **Konteinera** informāciju.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialoglodziņš, lai ievadītu Azure Data Lake savienojuma informāciju esošā krātuves kontā](media/enter-existing-storage-details.png)
+   > ![Dialoglodziņš, lai ievadītu Azure Data Lake savienojuma informāciju esošā krātuves kontā.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:

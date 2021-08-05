@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306037"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650327"
 ---
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
@@ -138,7 +138,7 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
    - **Visvecākais** : Nosaka uzvarētāju, balstoties uz visvecāko augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
  
    > [!div class="mx-imgBorder"]
-   > ![Dublikātu noteikšanas kārtulas pirmā darbība](media/match-selfconflation.png "Dedublēšanas kārtulu pirmā darbība")
+   > ![Dublikātu noteikšanas kārtulas 1. darbība.](media/match-selfconflation.png "Dedublēšanas kārtulu pirmā darbība")
  
 1. Kad entītijas ir atlasītas un ir iestatītas to sapludināšanas preferences, atlasiet vienumu **Pievienot kārtulu**, lai entītiju līmenī definētu dedublikācijas kārtulas.
    - **Atlasīt laukus** uzskaita visus no šīs entītijas pieejamos laukus. Izvēlieties lauku, kura dublikātus vēlaties pārbaudīt. Izvēlieties laukus, kas, visticamāk, ir unikāli katram atsevišķam klientam. Piemēram, e-pasta adrese vai vārda, pilsētas un tālruņa numura kombinācija.
@@ -146,7 +146,7 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
    - Definējiet vairāk nosacījumu, atlasot **Pievienot nosacījumu**.
  
    > [!div class="mx-imgBorder"]
-   > ![Dublikātu noteikšanas kārtulas otrā darbība](media/match-selfconflation-rules.png "Dedublēšanas kārtulu otrā darbība")
+   > ![Dublikātu noteikšanas kārtulas 2. darbība.](media/match-selfconflation-rules.png "Dedublēšanas kārtulu otrā darbība")
 
   Varat izveidot vairākas dedublēšanas kārtulas vienai entītijai. 
 
@@ -179,7 +179,9 @@ Pārejiet uz sadaļu **Dati** > **Unify** > **Saskaņot** un atlasiet **Palaist*
 Sekmīgas izpildes rezultāts ir vienotā klienta profila entītija, kas atrodas lapā **Entītijas**. Jūsu apvienotā klientu entītija tiek saukta par **Klientiem** sadaļā **Profili** section. Pirmajā sekmīgās atbilstības izpildes laikā tiek izveidota vienotā entītija *Klients*. Visas nākamās saskaņošanas izpildes izvērš šo entītiju.
 
 > [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+> Pēc atbilstības procesa izpildīšanas atlasiet procesa statusu, lai atvērtu **Uzdevuma detalizētās informācijas** rūti. Tajā sniegts pārskats par apstrādes laiku, pēdējo apstrādes datumu un visām ar uzdevumu saistītajām kļūdām un brīdinājumiem. Atlasiet vienumu **Skatīt informāciju**, lai skatītu, kuras entītijas piedalījās atbilstības procesā, kurās tika lietotas kārtulas, un vai atjauninājumi tika sekmīgi publicēti.  
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Rakšanās ceļš uz procesa informāciju no uzdevuma statusa saites.":::
 
 ## <a name="review-and-validate-your-matches"></a>Atbilstību pārskatīšana un pārbaudīšana
 

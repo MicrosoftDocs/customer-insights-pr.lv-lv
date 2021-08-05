@@ -1,7 +1,7 @@
 ---
 title: Power BI savienotājs
 description: Uzziniet, kā izmantot Dynamics 365 Customer Insights savienotāju pakalpojumā Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596048"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661111"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI savienotājs (priekšskatījums)
 
@@ -39,7 +39,7 @@ Izveidojiet vizualizācijas saviem datiem, izmantojot līdzekli Power BI Desktop
 
 1. Dialoglodziņā **Navigators**. Jūs redzēsiet sarakstu ar visām vidēm, kurām Jums ir piekļuve. Izvērsiet vidi un atveriet jebkuru no mapēm (entītijas, mērvienības, segmenti, bagātinājumi). Piemēram, atveriet mapi **Entītijas**, lai skatītu visas entītijas, ko varat importēt.
 
-   ![Power BI savienotāja navigators](media/power-bi-navigator.png "Power BI savienotāja navigators")
+   ![Power BI savienotāja navigators.](media/power-bi-navigator.png "Power BI savienotāja navigators")
 
 1. Atzīmējiet izvēles rūtiņas, kas atrodas blakus iekļaujamajām entītijām, un atlasiet **Ielādēt**. Varat atlasīt vairākas entītijas no vairākām vidēm.
 
@@ -68,5 +68,11 @@ Varat identificēt un noņemt dublicētās attiecības.
 3. Noņemiet visus identificēto attiecību dublikātus.
 
 Pēc dublicēto attiecību noņemšanas mēģiniet vēlreiz konfigurēt Power BI savienotāju. Videi tagad ir jābūt pieejamai.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Kļūdas datuma laukos, ielādējot entītijas programmā Power BI Desktop
+
+Ielādējot entītijas, kas ietver laukus ar datuma formātu, piemēram, MM/DD/YYYY, var rasties kļūdas nesaderīgu lokalizācijas formātu dēļ. Šī neatbilstība rodas, ja Power BI Desktop failā ir iestatīta cita lokalizācija, nevis angļu valoda (ASV), jo datuma lauki auditorijas ieskatos tiek saglabāti ASV formātā.
+
+Power BI Desktop failam ir viens lokalizācijas iestatījums, kas tiek lietots, izgūstot datus. Lai šos datuma laukus interpretētu pareizi, iestatiet šī lauka .BPI faila lokalizāciju angļu valodā (ASV). [Informācija par to, kā mainīt Power BI desktop faila lokalizāciju](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

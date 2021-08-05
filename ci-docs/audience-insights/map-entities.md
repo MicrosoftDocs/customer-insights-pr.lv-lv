@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596002"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555132"
 ---
 # <a name="map-entities-and-attributes"></a>Kartējiet entītijas un atribūtus
 
@@ -35,14 +35,14 @@ Papildinformāciju par datu apvienošanās vispārīgo plūsmu skatiet rakstā [
 3. Atlasiet entītijas un atribūtus, ko vēlaties izmantot posmos *saskaņot* un *sapludināt*. No entītijas varat atlasīt nepieciešamos atribūtus pa vienam vai iekļaut visus, entītijas līmenī atlasot izvēles rūtiņu **Iekļaut visus laukus**. Lai gūtu labumu no datu apvienošanas procesa, ieteicams atlasīt vismaz divas entītijas.
 
    > [!div class="mx-imgBorder"]
-   > ![Entītiju pievienošanas piemērs](media/data-manager-configure-map-add-entities-example.png "Entītiju pievienošanas piemērs")
+   > ![Entītiju pievienošanas piemērs.](media/data-manager-configure-map-add-entities-example.png "Entītiju pievienošanas piemērs")
 
    Šajā piemērā mēs pievienojam entītijas **eCommerceContacts** un **loyCustomers**. Izvēloties šīs entītijas, varat gūt ieskatu par to, kuri tiešsaistes biznesa klienti ir lojalitātes programmas dalībnieki.
    
    Visos atribūtos un entītijās varat meklēt atslēgvārdus, lai atlasītu nepieciešamos atribūtus, ko vēlaties kartēt.
    
      > [!div class="mx-imgBorder"]
-   > ![Meklēšanas lauku piemērs](media/data-manager-configure-map-search-fields-example.png "Meklēšanas lauku piemērs")
+   > ![Meklēšanas lauku piemērs.](media/data-manager-configure-map-search-fields-example.png "Meklēšanas lauku piemērs")
 
 4. Atlasiet **Lietot**, lai apstiprinātu atlasi.
 
@@ -55,7 +55,7 @@ Pēc entītiju atlasīšanas lapā **Kartēšana** pārbaudei ir uzskaitītas at
 - **Atribūta semantiskais tips**: Jūsu atribūtu kategorijas, piemēram, e-pasta adrese vai nosaukums. Lai semantikas viedajai prognozēšanai izmantotu mākslīgā intelekta modeļus, ietaupītu laiku un uzlabotu precizitāti, iestatiet **Inteliģento kartēšanu** uz pozīciju **ON**. Inteliģentā kartēšana izceļ mākslīgā intelekta semantikas ieteikumu laukā **Veids**. Ja to iestatāt uz pozīciju **OFF**, jūs redzēsit regulāros kartēšanas ieteikumus. No pieejamā opciju saraksta varat atlasīt jebkuru semantisko veidu un pārlabot esošo atlasi.
 
 > [!div class="mx-imgBorder"]
-> ![Atribūta veids un semantiskā prognoze](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribūta veids un semantiskā prognoze")
+> ![Atribūta veids un semantiskā prognoze.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribūta veids un semantiskā prognoze")
 
 Ir iespējams pievienot arī pielāgotu semantisko tipu. Atlasiet atribūta lauka tipu un ierakstiet pielāgotā semantiskā atribūta tipa nosaukumu. Tādējādi varat arī mainīt sistēmas noteiktos atribūtu tipus.
 
@@ -64,7 +64,7 @@ Visi atribūti, kam automātiski tiek noteikts semantiskais tips, tiek grupēti 
 Atribūti, kas netiek automātiski kartēti uz semantisko tipu, tiek grupēti sadaļā **Definēt datus nekartētajos laukos**. Atlasiet nekartēto atribūtu semantisko tipu lauku vai ievadiet savu pielāgoto atribūta tipa nosaukumu.
 
 > [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips](media/data-manager-configure-map-add-attributes.png "Primārā atslēga un atribūta tips")
+> ![Primārā atslēga un atribūta tips.](media/data-manager-configure-map-add-attributes.png "Primārā atslēga un atribūta tips")
 
 > [!NOTE]
 > Viens lauks ir jākartē uz semantisko tipu Person.FullName, lai klienta kartē aizpildītu klienta vārdu. Pretējā gadījumā klientu kartes tiks rādītas kā anonīmas. 
@@ -76,7 +76,7 @@ Atribūti, kas netiek automātiski kartēti uz semantisko tipu, tiek grupēti sa
 2. Rūtī **Rediģēt laukus** pievienojiet vai noņemiet atribūtus un entītijas. Izmantojiet meklēšanu vai ritiniet, lai atrastu un atlasītu interesējošos atribūtus un entītijas. Nevar noņemt atribūtu vai entītiju, ja tie jau ir saskaņoti.
 
    > [!div class="mx-imgBorder"]
-   > ![Atribūtu pievienošana vai noņemšana](media/configure-data-map-edit.png "Atribūtu pievienošana vai noņemšana")
+   > ![Atribūtu pievienošana vai noņemšana.](media/configure-data-map-edit.png "Atribūtu pievienošana vai noņemšana")
 
 3. Atlasiet vienumu **Piemērot**.
 

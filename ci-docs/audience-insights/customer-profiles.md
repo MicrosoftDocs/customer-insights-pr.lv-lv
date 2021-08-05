@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304613"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554627"
 ---
 # <a name="customer-profiles"></a>Klientu profili
 
@@ -23,11 +23,11 @@ Lapā **Klienti** tiek parādīts apvienots klientu skatījums, pamatojoties uz 
 Klienti var būt personas vai organizācijas (priekšskatījums). Katram klientam vai organizācijas profilam tiek piešķirts elements. Atlasiet elementu, lai skatītu papildinformāciju par noteiktu klientu vai organizāciju. Lapas apakšdaļā izmantojiet lappušu numerācijas vadīklas, lai skatītu papildu ierakstus.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C klienta profils](media/profiles-customers.png "B2C klienta profili")
+> ![B2C klientu profili.](media/profiles-customers.png "B2C klienta profili")
 
 Organizācijas (priekšskatījums)
 > [!div class="mx-imgBorder"] 
-> ![B2B klienta profils](media/profile-customers-b2b.png "B2B klienta profili")
+> ![B2B klientu profili.](media/profile-customers-b2b.png "B2B klienta profili")
 
 > [!NOTE]
 > Ja, navigācijas rūtī atlasot **Klienti**, neredzat rūtis, jūsu administratoram ir [jādefinē vismaz viens meklējams atribūts](search-filter-index.md) **Meklēšanas un filtrēšanas indeksā**.
@@ -47,7 +47,7 @@ Klientus var filtrēt pēc Klienta profila entītijas laukiem. Līdzīgi meklē�
 2. Atzīmējiet lodziņus blakus atribūtiem, pēc kuriem vēlaties filtrēt klientus.
 
    > [!div class="mx-imgBorder"] 
-   > ![Klientu profili](media/profiles-customers3.png "Klientu profili")
+   > ![Klientu profili.](media/profiles-customers3.png "Klientu profili")
 
 3. Noņemiet filtrus, atlasot lapā **Klienti** **Notīrīt filtrus**.
 

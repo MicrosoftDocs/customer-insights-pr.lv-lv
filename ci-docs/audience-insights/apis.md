@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304751"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554490"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbs ar API Customer Insights
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights nodrošina API, lai būvētu savas lietojumprogra
  
    Iespējojot API, tiek izveidota primārā un sekundārā abonēšanas atslēga jūsu instancei, kas tiek izmantota API pieprasījumos. Varat atkārtoti ģenerēt atslēgas, atlasot opciju **Atjaunot primāro** vai **Atjaunot sekundāro** sadaļā **Administrators** > **Atļaujas** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Iespējot API Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Iespējot Customer Insights API.":::
 
 1. Atlasiet **Izpētīt mūsu API**, lai [izmēģinātu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Uzziniet, kā sākt lietot C# klienta bibliotēkas no NuGet.org. Papildinformāc
  
    Vai arī izpildiet šo komandu, kas atrodas **NuGet pakotņu pārvaldnieka konsolē**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pievienot NuGet pakotni projektam Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pievienot NuGet pakotni projektam Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Izmantojiet C# klienta bibliotēku
 
@@ -141,7 +141,7 @@ Uzziniet, kā sākt lietot C# klienta bibliotēkas no NuGet.org. Papildinformāc
 
 1. Nododiet to `HttpClient`, veidojot `CustomerInsights` klientu.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpclient paraugs":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpclient paraugs.":::
 
 1. Piemēram, veiciet zvanus ar klientu uz “paplašinājuma metodēm” – `GetAllInstancesAsync`. Ja ir vēlama piekļuve pamatdatiem `Microsoft.Rest.HttpOperationResponse`, izmantojiet, piemēram, “http ziņojumu metodes” – `GetAllInstancesWithHttpMessagesAsync`.
 

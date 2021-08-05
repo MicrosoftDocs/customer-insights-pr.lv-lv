@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana Azure Blob krātuvē
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Blob krātuvi.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976190"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318308"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
 
 Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, lai pārsūtītu datus uz citām programmām.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Savienojuma ar Blob krātuvi iestatīšana
+## <a name="set-up-the-connection-to-blob-storage"></a>Savienojuma ar Blob Storage iestatīšana
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
@@ -30,8 +30,8 @@ Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, l
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Ievadiet sava Blob krātuves konta **Konta nosaukumu**, **Konta atslēgu** un **Konteineru**.
-    - Papildinformāciju par Blob glabāšanas konta nosaukuma un konta atslēgas meklēšanu skatiet rakstā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
+1. Ievadiet sava Blob Storage konta **Konta nosaukumu**, **Konta atslēgu** un **Konteineru**.
+    - Papildinformāciju par Blob krātuves konta nosaukuma un konta atslēgas meklēšanu skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
     - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
@@ -40,11 +40,14 @@ Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, l
 
 Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Ja ieslēgsit nevajadzīgās dzēšanas iestatījumu Azure Blob Storage kontam, eksportēšana neizdosies. Izslēdziet nevajadzīgo dzēšanu, lai eksportētu datus uz BLOB. Papildinformāciju skatiet sadaļā [Iespējot Blob nevajadzīgo dzēšanu](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Azure Blob Storage. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Azure Blob Storage. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
 1. Atzīmējiet lodziņu blakus visām entītijām, ko vēlaties eksportēt šajā galamērķī.
 
@@ -53,13 +56,16 @@ Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, l
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
 Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).     
+
 Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
-Eksportētie dati tiek glabāti jūsu konfigurētajā Blob krātuves konteinerā. Konteinerā automātiski tiek izveidoti šādi mapju ceļi:
+Eksportētie dati tiek glabāti jūsu konfigurētajā Blob Storage konteinerā. Konteinerā automātiski tiek izveidoti šādi mapju ceļi:
 
-- Avota entītijām un sistēmas ģenerētajām entītijām: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Avota entītijām un sistēmas ģenerētajām entītijām:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Eksportēto entītiju model.json būs līmenī %ExportDestinationName%
+ 
+- Eksportēto entītiju model.json būs %ExportDestinationName% līmenī.  
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

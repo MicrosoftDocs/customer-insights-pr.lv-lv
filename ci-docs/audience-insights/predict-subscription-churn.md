@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095657"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556316"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
 
@@ -63,7 +63,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Sadaļā Auditorijas ieskati ejiet uz **Informācija** > **Prognozes**.
 1. Atlasiet elementu **Abonementa zuduma modelis (priekšskatījums)** un atlasiet opciju **Lietot šo modeli**.
    > [!div class="mx-imgBorder"]
-   > ![Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli](media/subscription-churn-usethismodel.PNG "Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli")
+   > ![Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli.](media/subscription-churn-usethismodel.PNG "Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli")
 
 ### <a name="name-model"></a>Nosaukuma piešķiršana modelim
 
@@ -86,11 +86,11 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
     1. Atlasiet **Klienta entītiju**, kas atbilst primārajai klienta entītijai.
     1. Ievadiet nosaukumu, kas apraksta attiecību.
        > [!div class="mx-imgBorder"]
-       > ![Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu](media/subscription-churn-subscriptionhistoryrelationship.PNG "Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu")
+       > ![Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu")
 1. Atlasiet **Tālāk**.
 1. Kartējiet semantiskos laukus uz atribūtiem jūsu abonementa vēstures entītijā un atlasiet **Saglabāt**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem](media/subscription-churn-subscriptionhistorymapping.PNG "Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem")
+   > ![Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem.](media/subscription-churn-subscriptionhistorymapping.PNG "Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem")
 1. Atlasiet **Pievienot datus** **Klientu darbībām** un izvēlieties entītiju, kas nodrošina klientu darbības informāciju, kā aprakstīts priekšnosacījumos.
 1. Atlasiet darbības tipu, kas atbilst konfigurētā klienta darbības tipam.  Atlasiet **Izveidot jaunu** un norādiet nosaukumu, ja nav redzama opcija, kas atbilst nepieciešamajam darbības tipam.
 1. Jums ir jākonfigurē attiecības no klienta darbības entītijas uz Klienta entītiju.
@@ -101,7 +101,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Kartējiet semantiskos laukus uz atribūtiem jūsu klientu darbības entītijā un atlasiet **Saglabāt**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
 1. (Izvēles) Ja jums ir citas klientu darbības, ko vēlaties iekļaut, atkārtojiet iepriekš aprakstītās darbības.
    > [!div class="mx-imgBorder"]
-   > ![Entītiju relācijas definēšana](media/subscription-churn-customeractivitiesmapping.PNG "Klientu darbību lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās klientu darbību entītijas laukiem")
+   > ![Entītiju relācijas definēšana.](media/subscription-churn-customeractivitiesmapping.PNG "Klientu darbību lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās klientu darbību entītijas laukiem")
 1. Atlasiet **Tālāk**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Iestatiet grafiku un pārskatiet konfigurāciju
@@ -115,7 +115,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 
 1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
    > [!div class="mx-imgBorder"]
-   > ![Skats lapā Manas prognozes](media/subscription-churn-mypredictions.PNG "Skats lapā Manas prognozes")
+   > ![Skats lapā Manas prognozes.](media/subscription-churn-mypredictions.PNG "Skats lapā Manas prognozes")
 1. Atlasiet prognozes, kuras vēlaties pārskatīt.
    - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
    - **Prognozes tips:** modeļa tips, ko izmanto prognozēšanai
@@ -131,7 +131,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
    - **Pēdējā atsvaidzināšana:** Datums, kad atsvaidzinātais rezultāts ir redzams izvades entītijā.
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurā vēlaties pārskatīt rezultātus, un atlasiet **Skatīt**.
    > [!div class="mx-imgBorder"]
-   > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu](media/subscription-churn-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
+   > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu.](media/subscription-churn-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
 1. Rezultātu lapā ir trīs primāro sadaļu dati:
     1. **Apmācības modeļa veiktspēja:** iespējamie rezultāti ir A, B vai C. Šis rezultāts norāda uz prognozes izpildi un var palīdzēt pieņemt lēmumu izmantot izvades entītijā glabātos rezultātus.
         - Rezultātus nosaka, par pamatu izmantojot tālāk norādītās kārtulas:
@@ -139,13 +139,13 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
             - **B** Ja modelis precīzi prognozēja vismaz 50% no visām prognozēm, un ja precīzo prognožu īpatsvars zudušajiem klientiem ir lielāks par vēsturisko vidējo zušanas rādītāju līdz 10% no vēsturiskā zuduma rādītāja.
             - **C** Ja modelis precīzi prognozēja mazāk nekā 50% no kopējām prognozēm vai ja precīzo prognožu īpatsvars zaudētajiem klientiem ir mazāks nekā vēsturiskais vidējais zuduma rādītājs.
                > [!div class="mx-imgBorder"]
-               > ![Modeļa veiktspējas rezultāta skats](media/subscription-churn-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
+               > ![Modeļa veiktspējas rezultāta skats.](media/subscription-churn-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
     1. **Zuduma varbūtība (klientu skaits):** klientu grupas, pamatojoties uz to prognozējamo zuduma risku. Šie dati var palīdzēt vēlāk, ja vēlaties izveidot klientu segmentu ar augstu zuduma risku. Šādi segmenti palīdz saprast, kur vajadzētu būt dalībai segmentā.
        > [!div class="mx-imgBorder"]
-       > ![Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%](media/subscription-churn-resultdistribution.PNG "Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%")
+       > ![Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%")
     1. **Ietekmīgākie faktori:** ir daudzi faktori, kas tiek ņemti vērā, veidojot jūsu prognozi. Katram no šiem faktoriem ir aprēķinātā nozīme modeļa izveidotajām apkopotajām prognozēm. Šos faktorus var izmantot, lai atvieglotu jūsu prognozes rezultātu validēšanu. Šo informāciju var izmantot arī vēlāk, lai [izveidotu segmentus](segments.md), kas varētu palīdzēt ietekmēt zuduma risku attiecībā uz klientiem.
        > [!div class="mx-imgBorder"]
-       > ![Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus](media/subscription-churn-influentialfactors.PNG "Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus")
+       > ![Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus.](media/subscription-churn-influentialfactors.PNG "Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus")
 
 ## <a name="manage-predictions"></a>Pārvaldīt prognozes
 

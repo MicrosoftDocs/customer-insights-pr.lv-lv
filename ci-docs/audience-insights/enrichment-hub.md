@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305257"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555270"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
 Izmantojiet avotu datus, piemēram, no Microsoft un citiem partneriem, lai bagātinātu klientu datus.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Bagātināšanas centra lapa":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Bagātināšanas centra lapa.":::
 
 Informāciju par auditorijas ieskatiem skatiet sadaļā **Dati** > **Bagātināšana**, lai strādātu ar bagātināšanas iespējām.  
 
@@ -42,9 +43,9 @@ Cilnē **Manas bagātināšanas** varat redzēt jūsu konfigurētos bagātināju
 
 Lai skatītu visus konfigurētos bagātinātos datus, dodieties uz **Manas bagātināšanas** cilni. Katrs bagātinājums tiek attēlots kā rinda, kurā ir iekļauta papildu informācija par bagātinājumu.
 
-Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Lai skatītu opcijas, varat arī saraksta elementā atlasīt daudzpunkti (...).
+Atlasiet bagātināšanu, lai redzētu pieejamās opcijas. Lai skatītu opcijas, varat arī saraksta elementā atlasīt daudzpunkti (...). Ja konfigurējāt vairākus bagātinātus uzlabojumus, varat izmantot meklēšanas lodziņu, lai to ātri atrastu.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcijas bagātinājumu pārvaldībai papildinājumu sarakstā":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcijas bagātinājumu pārvaldībai papildinājumu sarakstā.":::
 
 - **Skatiet** detalizēto informāciju par bagātināšanu ar bagātināto klientu profilu skaitu.
 - **Rediģējiet** bagātināšanas konfigurāciju.
@@ -52,7 +53,7 @@ Atlasiet bagātinājumu, lai skatītu pieejamās opcijas. Lai skatītu opcijas, 
 - **Deaktivizējiet** esošu bagātinājumu, lai neļautu tam automātiski atsvaidzināties ar katru plānoto atsvaidzināšanu. Dati no pēdējās sekmīgās atsvaidzināšanas joprojām būs pieejami. **Aktivizējiet** neaktīvu bagātināšanu, lai restartētu automātisko atsvaidzināšanu ar katru plānoto atsvaidzināšanu.
 - **Dzēst** bagātināšanu.
 
-Vairākus bagātinājumus var vienlaicīgi palaist vai deaktivizēt, tos atlasot sarakstā. Skatīšanas un rediģēšanas opcijas nav pieejamas kā lielapjoma darbība un vienlaicīgi darbojas tikai vienai veiktajai bagātināšanai.
+Vienlaicīgi izpildiet vai deaktivizējiet vairākus bagātinātos bagātinātos laukus, atlasot tos sarakstā. Skatīšanas un rediģēšanas opcijas nav pieejamas kā lielapjoma darbība. Viņi vienā reizē strādā tikai uz vienu bagātināšanu.
 
 ## <a name="enrichments-and-connections"></a>Bagātināšana un savienojumi
 

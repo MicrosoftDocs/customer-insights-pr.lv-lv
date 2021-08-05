@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596370"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692314"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entītiju shēmas Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596370"
 
 Šis ir koplietojams datu modelis, kas ļauj lietojumprogrammām un datu integrētājiem daudz vieglāk sadarboties, nodrošinot vienotu datu definīciju. Common Data Model ietver bagātīgu metadatu sistēmu ar standarta entītijām, attiecībām, hierarhijām, īpašībām utt. Tas tika radīts no Dynamics 365 lietotnēm un ir atvērts GitHub ar vairāk nekā 260 standarta entītijām. Liela iekšējo un ārējo partneru sistēma sniedz nozarei raksturīgos jēdzienus Common Data Model.
 
-Vairākas sistēmas un platformas ievieš Common Data Model šodien, tostarp Power BI datplūsmas un Azure Data Services. Tas jau tiek atbalstīts Common Data Service, Dynamics 365, Power Apps, Power BI un gaidāmajos Azure Data pakalpojumos, tieši uzkrājot vērtību [Atvērtajai datu iniciatīvai](https://www.microsoft.com/open-data-initiative).
+Vairākas sistēmas un platformas pašlaik ievieš kopējo datu modeli, tostarp Power BI datu plūsmas un Azure datu pakalpojums. Tas jau tiek atbalstīts programmā Microsoft Dataverse, Dynamics 365, Power Apps, Power BI un gaidāmajos Azure datu pakalpojumos, tieši uzkrāšanas vērtība attiecībā pret [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights entītiju shēmas
 
@@ -44,7 +44,7 @@ Papildinformāciju skatiet dokumentācijā par [Customer Insights entītiju shē
 
 Varat skatīt entītijas [Common Data Model entītiju navigatorā](https://microsoft.github.io/CDM/). Atlasiet **Ielādēt no GitHub!** pogu un pārejiet uz **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, kur atradīsit Customer Insights entītiju sarakstu un to definīcijas.
 > [!div class="mx-imgBorder"]
-> ![CDM entītiju navigators rāda CustomerActivity entītiju](media/CDM-entity-navigator.png "CDM entītiju navigators rāda CustomerActivity entītiju")
+> ![CDM entītiju navigators rāda CustomerActivity entītiju.](media/CDM-entity-navigator.png "CDM entītiju navigators rāda CustomerActivity entītiju")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
