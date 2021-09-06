@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554030"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029408"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientu profili: Meklēšanas un filtrēšanas indekss
 
@@ -60,7 +60,7 @@ Lapas **Klienti** izvēlnē **Filtrēt** var būt ietverts atšķirīgs atribūt
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Dodieties uz lapu **Klienti**, lai meklētu klientu profilus vai izmantotu indeksētos laukus, lai skatītu visu klientu profilu apakškopu.
+Pārskatiet [vienoto profilu lapu](customer-profiles.md), lai meklētu profilus vai izmantotu indeksētos laukus, lai redzētu visu vienoto profilu apakškopu.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

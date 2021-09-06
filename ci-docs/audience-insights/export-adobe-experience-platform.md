@@ -1,6 +1,6 @@
 ---
 title: Customer Insights datu eksportēšana uz Adobe Experience Platform
-description: Uzziniet, kā izmantot auditorijas ieskatu segmentus Adobe pieredzes platformā.
+description: Informācija par to, kā Adobe Experience Platform tiek lietoti auditorijas ieskatu segmenti.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305533"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032126"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights segmentu izmantošana Adobe Experience Platform (priekšskatījums)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights segmentu izmantošana programmā Adobe Experience Platform (priekšskatījums)
 
-Kā Dynamics 365 Customer Insights auditorijas ieskatu lietotājs, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, izvēloties atbilstošu mērķauditoriju. Lai izmantotu segmentu no auditorijas ieskatiem platformā Adobe Experience Platform un tādās programmās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
+Kā Dynamics 365 Customer Insights auditorijas ieskatu lietotājs, iespējams, esat izveidojis segmentus, lai mārketinga kampaņas padarītu efektīvākas, izvēloties atbilstošu mērķauditoriju. Lai izmantotu segmentu no auditorijas ieskatiem programmā Adobe Experience Platform un tadās lietojumprogrammās kā Adobe Campaign Standard, ir jāveic dažas šajā rakstā norādītās darbības.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Šajā rakstā aprakstīto darbību procesa shēma.":::
 
@@ -31,7 +31,7 @@ Kā Dynamics 365 Customer Insights auditorijas ieskatu lietotājs, iespējams, e
 
 ## <a name="campaign-overview"></a>Kampaņas pārskats
 
-Lai labāk saprastu, kā var izmantot segmentus no auditorijas ieskatiem Adobe Experience Platform, apskatīsim izdomātu kampaņas paraugu.
+Lai labāk saprastu, kā var izmantot segmentus no auditorijas ieskatiem programmā Adobe Experience Platform, apskatīsim fiktīvu paraugkampaņu.
 
 Pieņemsim, ka jūsu uzņēmums saviem klientiem ASV piedāvā mēneša abonementa servisu. Jūs vēlaties identificēt klientus, kuru abonementi ir jāatjauno nākamajās astoņās dienās, bet kuri vēl nav atjaunojušas savu abonementu. Lai saglabātu šos klientus, jūs vēlaties viņiem nosūtīt reklāmas piedāvājumu pa e-pastu, izmantojot Adobe Experience Platform.
 
@@ -93,7 +93,7 @@ Pēc eksportēšanas mērķa saglabāšanas, tas būs pieejams lapā **Dati** > 
 Tagad varat [eksportēt segmentu pēc pieprasījuma](export-destinations.md#run-exports-on-demand). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md).
 
 > [!NOTE]
-> Nodrošiniet, lai eksportētajā segmentā ierakstu skaits iekļautos jūsu Adobe Campaign Standard licencei atļautajā ierobežojumā.
+> Pārliecinieties, vai eksportētā segmentā ierakstu skaits atbilst jūsu Adobe Campaign Standard licences atļautajiem ierobežojumiem.
 
 Eksportētie dati tiek glabāti iepriekš konfigurētajā Azure Blob krātuves konteinerā. Konteinerā tiek automātiski izveidots šāds mapes ceļš:
 
@@ -105,26 +105,26 @@ Eksportēto entītiju *model.json* atrodas *%ExportDestinationName%* līmenī.
 
 Piemērs: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Define Experience Data Model (XDM) definēšana programmā Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Pieredzes datu modeļa (Experience Data Model - XDM) definēšana programmā Adobe Experience Platform
 
-Lai no auditorijas ieskatiem eksportētos datus varētu izmantot Adobe Experience Platform, ir jādefinē Experience Data Model shēma un [jākonfigurē reāllaika klienta profila dati](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Lai no auditorijas ieskatiem eksportētos datus varētu izmantot programmā Adobe Experience Platform, mums ir jādefinē pieredzes datu modeļa shēma un [jākonfigurē reāllaika klienta profila dati](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Uzziniet, [kas ir XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) un izprotiet [shēmas veidošanas pamatus](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Datu importēšana Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Datu importēšana uz Adobe Experience Platform
 
-Tagad, kad viss ir izveidots, mums ir jāimportē sagatavotie auditorijas dati no auditorijas ieskatiem uz programmu Adobe Experience Platform.
+Tagad, kad viss ir izveidots, mums ir jāimportē sagatavotie auditorijas dati no auditorijas ieskatiem programmā Adobe Experience Platform.
 
 Vispirms [izveidojiet Azure Blob krātuves avota savienojumu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Pēc avota savienojuma definēšanas [konfigurējiet datu plūsmu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) mākoņkrātuves pakešu savienojumam, lai importētu segmenta izvadi no auditorijas ieskatiem Adobe Experience Platform.
+Pēc avota savienojuma definēšanas [konfigurējiet datu plūsmu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) mākoņkrātuves pakešu savienojumam, lai importētu segmenta izvadi no mērķauditoriju ieskatiem programmā Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Auditorijas izveide programmā Adobe Campaign Standard
 
-Lai šai kampaņai nosūtītu e-pasta ziņojumu, tiks izmantots Adobe Campaign Standard. Pēc datu importēšanas Adobe Experience Platform ir [jāizveido auditorija](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) programmā Adobe Campaign Standard, izmantojot datus Adobe Experience Platform.
+Lai šai kampaņai nosūtītu e-pasta ziņojumu, tiks izmantots Adobe Campaign Standard. Pēc datu importēšanas programmā Adobe Experience Platform, mums ir [jāizveido auditorija](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) programmā Adobe Campaign Standard, izmantojot datus programmā Adobe Experience Platform.
 
 
-Uzziniet, kā [lietot segmentu veidotāju](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) programmā Adobe Campaign Standard, lai defindētu auditoriju, pamatojoties uz Adobe Experience Platform esošajiem datiem.
+Informācija par to, kā Adobe Campaign Standard [lietot segmenta veidotāju](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html), lai definētu auditoriju, pamatojoties uz datiem programmā Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>E-pasta ziņojuma izveide un nosūtīšana, izmantojot Adobe Campaign Standard
 
