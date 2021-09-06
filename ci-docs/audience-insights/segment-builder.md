@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685471"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377797"
 ---
 # <a name="create-and-manage-segments"></a>Izveidojiet un pārvaldiet segmentus
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685471"
 > - Sānu rūts atribūtu atlasei būs pastāvīgi pieejama.
 > - Entītiju attiecību ceļu atlases opcija.
 > Lai izmēģinātu jauno segmenta būvētāju, sūtiet e-pasta ziņojumu ar tēmu "Pieprasīt iespējot jauno segmenta būvētāju" uz cihelp [at] microsoft.com. Iekļaujiet savas organizācijas nosaukumu un jūsu smilškastes vides ID.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmentu veidotāja fragmenti." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - organizējiet segmentu, izmantojot kārtulas un apakškārtulas. Katra kārtula vai apakškārtula sastāv no nosacījumiem. Nosacījumu apvienošana ar loģiskajiem operatoriem
+>
+> 2 - izvēlieties [attiecību ceļu](relationships.md) starp entītijām, kas attiecas uz kārtulu. Attiecību ceļš nosaka, kādus atribūtus var izmantot nosacījumā.
+>
+> 3 - pārvaldiet kārtulas un apakškārtulas. Mainīt kārtulas pozīciju vai dzēst to.
+>
+> 4 - pievienojiet nosacījumus un izveidojiet pareizo ligzdošanas līmeni, izmantojot apakškārtulas.
+>
+> 5 - lietot iestatītās operācijas pievienotajām kārtulām.
+>
+> 6 - izmantojiet atribūtu rūti, lai pievienotu pieejamos entītijas atribūtus vai izveidotu nosacījumus, pamatojoties uz atribūtiem. Šajā rūtī tiek parādīts entītiju un atribūtu saraksts, pamatojoties uz atlasīto attiecību ceļu, kas pieejams atlasītajai kārtulai.
+>
+> 7 - pievienojiet nosacījumus, kas balstīti uz esošu kārtulu un apakškārtulu atribūtiem, vai pievienojiet to jaunai kārtulai.
+>
+> 8 - atsauciet un atceliet izmaiņas, veidojot segmentu.
 
 Definēt sarežģītus filtrus vienotā klienta entītijā unsaistītajās entītijās. Katrs segments pēc apstrādes izveido klientu ierakstu kopu, ko var eksportēt un ar kurām veikt darbības. Segmenti tiek pārvaldīti lapā **Segmenti**. 
 
@@ -147,6 +164,6 @@ Izmantojot ātros segmentus, varat ātri izveidot vienkāršus segmentus, izmant
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-[Eksportējiet segmentu](export-destinations.md) un izpētiet [Klienta karti](customer-card-add-in.md) un [Savienotājus](export-power-bi.md), lai gūtu ieskatu klientu līmenī.
+[Eksportējiet segmentu](export-destinations.md) un izpētiet [Klienta kartes integrāciju](customer-card-add-in.md), lai izmantotu segmentus citās lietojumprogrammās.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

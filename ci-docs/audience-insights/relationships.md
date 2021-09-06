@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171173"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035240"
 ---
 # <a name="relationships-between-entities"></a>Relācijas starp entītijām
 
@@ -82,7 +82,7 @@ Lapā Attiecības ir uzskaitītas visas izveidotās relācijas. Katra rinda ir a
 
 ### <a name="explore-the-relationship-visualizer"></a>Izpētīt relāciju visualatoru
 
-Relāciju vizualizētājs parāda esošo attiecību tīkla diagrammu starp savienotajām entītijām un to kardinalitāti.
+Relāciju vizualizētājs parāda esošo attiecību tīkla diagrammu starp savienotajām entītijām un to kardinalitāti. Tā arī vizualizē attiecību ceļu.
 
 Lai pielāgotu skatu, lodziņu atrašanās vietu var mainīt, velkot tos uz pamatnes.
 
@@ -92,6 +92,20 @@ Pieejamās opcijas:
 - **Eksportēt kā attēlu**: saglabāt pašreizējo skatu kā attēla failu.
 - **Mainīt uz horizontālo/vertikālo izkārtojumu**: mainiet entītiju un attiecību līdzinājumu.
 - **Rediģēšana**: atjauniniet pielāgotu attiecību rekvizītus rediģēšanas rūtī un saglabājiet izmaiņas.
+
+### <a name="relationship-path"></a>Relācijas ceļš
+
+Attiecību ceļš apraksta entītijas, kas saistītas ar avota entītijas un mērķa entītijas attiecībām. Tas tiek izmantots, izveidojot segmentu vai pasākumu, kurā ir ietvertas citas entītijas, nevis vienotā profila entītija, un ir vairākas iespējas, kā sasniegt vienotā profila entītiju.
+
+Attiecību ceļš informē sistēmu, kurai ir attiecības piekļūt vienotā profila entītijai. Dažādi attiecību ceļi var iegūt atšķirīgus rezultātus.
+
+Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar vienoto profila entītiju *Klients*:
+
+- eCommerce_eCommercePurchases > Klients
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klients
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klients 
+
+Attiecību ceļš nosaka, kuras entītijas var izmantot, izveidojot kārtulas pasākumiem vai segmentiem. Izvēloties opciju ar garāko attiecību ceļu, iespējams, tiks iegūts mazāk rezultātu, jo atbilstības noteikšanas ierakstiem ir jābūt daļai no visām entītijām. Šajā piemērā klientam ir jāiegādājas preces, izmantojot e-tirdzniecības (eCommerce_eCommercePurchases), pārdošanas punktu (POS_posPurchases), un jāpiedalās mūsu lojalitātes programmā (loyaltyScheme_loyCustomers). Izvēloties pirmo opciju, iespējams, saņemsiet vairāk rezultātu, jo klientiem ir nepieciešama tikai viena papildu entītija.
 
 ## <a name="manage-existing-relationships"></a>Pārvaldīt esošās relācijas 
 
@@ -105,6 +119,6 @@ Atlasiet relāciju un izvēlieties vienu no šīm opcijām:
 
 ## <a name="next-step"></a>Nākamā darbība
 
-Sistēmas un pielāgotas relācijas tiek izmantotas, lai [izveidotu segmentus](segments.md), pamatojoties uz vairākiem datu avotiem, kas vairs nav sadrumstaloti.
+Sistēmas un pielāgotas attiecības tiek izmantotas, lai [izveidotu segmentus](segments.md) un [pasākumus](measures.md), pamatojoties uz vairākiem datu avotiem, kas vairs nav pielāgoti.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

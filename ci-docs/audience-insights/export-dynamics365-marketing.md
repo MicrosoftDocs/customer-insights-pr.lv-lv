@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Marketing
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692490"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417214"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmentu lietošana Dynamics 365 Marketing (priekšskatījums)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Izmantojiet [segmentus](segments.md) kampaņu veidošanai un saziņai ar specifisku klientu grupu pakalpojumā Dynamics 365 Marketing. Papildinformāciju skatiet tēmā [Segmentu izmantošana no Dynamics 365 Customer Insights ar Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Izmantojiet [segmentus](segments.md) kampaņu veidošanai un saziņai ar specifisku klientu grupu pakalpojumā Dynamics 365 Marketing. Papildinformāciju skatiet tēmā [Segmentu izmantošana no Dynamics 365 Customer Insights ar Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Ja izmantojat jaunās iespējas Dynamics 365 Marketing reāllaika automatizētas kampaņas orķestrācijai Dataverse org, nav nepieciešams izveidot standarta eksportēšanu uz Dynamics 365 Marketing. Kontaktpersonas un segmenti no auditorijas ieskatiem ir pieejami tieši programmā Dynamics 365 Marketing pēc Marketing un Customer Insights pievienošanas. Pirms dzēšat esošu eksportēšanu, pārskatiet dokumentāciju par to, [kā auditorijas ieskatus savienot ar Dynamics 365 Marketing automatizētas kampaņas orķestrāciju](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Savienojuma priekšnosacījums
 

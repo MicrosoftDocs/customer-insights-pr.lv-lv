@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
-ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
+ms.openlocfilehash: b159f87276581f68e07bb73ffd257080eb3cb56422997b09a613bd7afa4e3980
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6318308"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034737"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
 
@@ -61,7 +61,7 @@ Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-expo
 
 Eksportētie dati tiek glabāti jūsu konfigurētajā Blob Storage konteinerā. Konteinerā automātiski tiek izveidoti šādi mapju ceļi:
 
-- Avota entītijām un sistēmas ģenerētajām entītijām:   
+- Avota entītijām un sistēmas ģenerētajām entītijām:  
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
  

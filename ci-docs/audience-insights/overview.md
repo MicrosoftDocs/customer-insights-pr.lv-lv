@@ -1,7 +1,7 @@
 ---
 title: Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 description: Auditorijas ieskatu pārskats Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539124"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034369"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 
-Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet datus no dažādām transakciju, uzvedības un novērojumu avotiem, lai izveidotu 360 grādu klientu skatā. Izmantojiet šos ieskatus, lai virzītu uz klientu centrētu pieredzi un procesus. Apvienojiet un izprotiet klientu datus un izmantojiet tos inteliģentiem ieskatiem un darbībām.
+[Auditorijas ieskati ir iespēja Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) palīdz jums veidot dziļāku izpratni par klientiem. Savienojiet datus no dažādām transakciju, uzvedības un novērojumu avotiem, lai izveidotu 360 grādu klientu skatā. Izmantojiet šos ieskatus, lai virzītu uz klientu centrētu pieredzi un procesus. Apvienojiet un izprotiet klientu datus un izmantojiet tos inteliģentiem ieskatiem un darbībām.
 
 ## <a name="main-benefits"></a>Galvenās priekšrocības 
 
@@ -34,9 +34,9 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
 
 - **Piešķirt savam biznesa procesam un personalizētai klientu pieredzei jaudu**
 
-  - Virzīt personalizētu iesaisti kanālos - piešķiriet spēku mārketinga, pārdošanas un servisa profesionāļiem ar iekļautiem, kontekstuāliem klientu ieskatiem un pielāgotām klientu profila kartēm, kas iepludinātas uzņēmuma programmās, kuras tie jau lieto ik dienas.
-  - Automatizēt uz klientu centrētu pieredzi un procesus, pamatojoties uz pielāgojamiem profiliem, uzņēmējdarbības pasākumiem un segmentiem.
-  - Iespējot un paplašināt biznesa darbības, kas balstās uz [Microsoft Power Platform](https://powerplatform.microsoft.com/). Ātri izveidojiet lietojumprogrammas ar iegultiem ieskatiem, izmantojot spēcīgu, zemu koda metodi PowerApps.  
+  - Izmantojiet personalizētu piesaisti dažādos kanālos — sniedziet iespējas mārketinga, pārdošanas un apkalpošanas speciālistiem. Izmantojiet oriģinālās iespējas, ieskatus un pielāgotas klientu profila kartes, kas integrējas jau lietotās biznesa lietojumprogrammās.
+  - Automatizēt pieredzi un procesus, pamatojoties uz pielāgojamiem profiliem, uzņēmējdarbības pasākumiem un segmentiem.
+  - Iespējot un paplašināt biznesa darbības, kas balstās uz [Microsoft Power Platform](https://powerplatform.microsoft.com/). Ātri izveidojiet lietojumprogrammas ar iegultiem ieskatiem, izmantojot spēcīgu, zemu koda metodi Power Apps.  
 
 ## <a name="key-audiences"></a>Galvenās auditorijas
 
@@ -50,13 +50,18 @@ Auditorijas ieskati palīdz veidot dziļāku izpratni par klientiem. Savienojiet
 
 - **Biznesa lietotāji:**
 
-  - Ieskats 360 grādu klientu profilos un automatizētās kampaņas vispārīgi skati.
+  - Ieskats 360 grādu klientu profilos un automatizētās kampaņās.
   - Skatiet 360 grādu klientu datus Dynamics 365 biznesa procesos, izmantojot iepriekš izveidotas pakotnes.
 
 - **Biznesa analītiķi:**
 
   - Veidojiet pielāgojamus profilus, definējiet mērvienības, izveidojiet segmentus un iegūstiet no prognozējošās analīzes, lai iegūtu pilnu pārskatu par savu klientu atbilstoši savas organizācijas specifikai.  
-  - Vairākām Microsoft un trešo pušu lietojumprogrammām vai API lietojiet iepriekš izveidotos savienotājus, lai tālāk apstrādātu ieskatus.
+  - Lai apstrādātu ieskatus, vairākām Microsoft un trešo pušu lietojumprogrammām vai API izmantojiet oriģinālos savienotājus.
 
+## <a name="pricing-and-licensing"></a>Cenas un licencēšana
+
+Customer Insights ir licencēts katram nomniekam, un tajā ir ietvertas vairākas iespējas. Tiesībspējas ietver profilu kopu, ikdienas sistēmas atsvaidzināšanu, Power Platform pieprasījumus un divas vides. Varat iegādāties papildu noslodzi un licenci, lai palielinātu noklusējuma kvotu. 
+- Detalizēta noslodze un tiesības: [Dynamics 365 licencēšanas rokasgrāmata](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Cenu noteikšanas pārskats: [Dynamics 365 cenu noteikšana](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

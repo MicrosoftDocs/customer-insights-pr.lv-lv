@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554168"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377843"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementālā atsvaidzināšana Power Query bāzes datu avotiem
 
@@ -44,8 +44,7 @@ Auditorijas ieskati ļauj inkrementāli atsvaidzināt datus, kuri ir importēti,
 
 1. Sadaļā **Inkrementālās atsvaidzināšanas iestatījumi** jūs konfigurēsiet inkrementālo atsvaidzināšanu visām entītijām, ko atlasījāt, veidojot datu avotu.
 
-   > [!div class="mx-imgBorder"]
-   > ![Entītiju konfigurēšana datu avotā inkrementālajai atsvaidzināšanai.](media/incremental-refresh-settings.png "Entītiju konfigurēšana datu avotā inkrementālajai atsvaidzināšanai")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Entītiju konfigurēšana datu avotā inkrementālajai atsvaidzināšanai.":::
 
 1. Atlasiet entītiju un norādiet šādu informāciju:
 
