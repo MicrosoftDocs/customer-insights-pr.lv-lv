@@ -4,17 +4,17 @@ description: Uzziniet, kā personalizēt un palaist iOS SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036882"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494239"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Darba sākšana ar iOS SDK
 
@@ -45,11 +45,36 @@ Sāciet procesu, atlasot darbvietu, kurā strādāt, atlasot iOS mobilo platform
 
 - Ja jums nav esošas darbvietas, atlasiet **Jauna darbvieta** un izpildiet tālāk norādītās darbības, lai izveidotu [jaunu darbvietu](create-workspace.md).
 
+- Pēc darbvietas izveides dodieties uz **Administrators** > **Darbvieta** un pēc tam atlasiet **Instalēšanas rokasgrāmata**.
+
 ## <a name="configure-the-sdk"></a>SDK konfigurēšana
 
-Pēc SDK lejupielādes ar to var strādāt, izmantojot Xcode, lai iespējotu un definētu notikumus.
+Pēc SDK lejupielādes ar to var strādāt, izmantojot Xcode, lai iespējotu un definētu notikumus. Pastāv divi meklēšanas veidi
 
-1. Pēc darbvietas izveides dodieties uz **Administrators** > **Darbvieta** un pēc tam atlasiet **Instalēšanas rokasgrāmata**.
+### <a name="option-1-using-cocoapods-recommended"></a>1. opcija. CocoaPods izmantošana (ieteicams)
+CocoaPods ir Swift un Objective-C Cocoa projektu atkarību pārvaldnieks. Izmantojot to, būs vienkāršāk integrēt iesaistes ieskatus SDK darbam ar iOS. CocoaPods jums arī ļauj jaunināt uz jaunāko iesaistes ieskatu SDK versiju. Lūk, kā izmantot CocoaPods, lai integrētu iesaistes ieskatu SDK savā Xcode projektā. 
+
+1. Instalējiet CocoaPods. 
+
+1. Izveidojiet jaunu failu ar nosaukumu Podfile projekta saknes direktorijā un pievienojiet tam tālāk norādītos priekšrakstus.Aizstājiet YOUR_TARGET_PROJECT_NAME ar sava Xcode projekta nosaukumu. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Iepriekš minētajā pod konfigurācijā ir ietvertas gan SDK atkļūdotāja, gan laidiena versijas. Izvēlieties, kurš no tiem ir vislabākais jūsu projektam.
+
+1. Instalējiet šo atjauninājumu, izpildot šādu komandu: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>2. opcija. Lejupielādes saites izmantošana
 
 1. Lejupielādējiet [iesaistes ieskatus iOS SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) un ievietojiet `EIObjC.xcframework` failu `Frameworks` mapē.
 

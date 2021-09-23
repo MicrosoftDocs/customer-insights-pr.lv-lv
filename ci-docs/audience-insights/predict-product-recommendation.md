@@ -1,20 +1,20 @@
 ---
 title: Produktu ieteikumu prognoze
 description: Prognozējiet produktus, kurus klients, visticamāk, iegādāsies vai ar kuriem mijiedarbosies.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034965"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494548"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktu ieteikumu prognoze (priekšskatījums)
 
@@ -89,23 +89,24 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
 ### <a name="add-required-data"></a>Pievienot nepieciešamos datus
 
-1. Atlasiet opciju **Pievienot datus** **Pirkumu vēsturei** un izvēlieties entītiju, kas nodrošina transakciju/pirkumu vēstures informāciju, kā aprakstīts [priekšnosacījumos](#prerequisites).
+1. Atlasiet vienumu **Pievienot datus** un izvēlieties darbības tipu sānu rūtij, kurā ir nepieciešamā informācija par transakciju vai pirkumu vēsturi.
 
-1. Kartējiet semantiskos laukus uz atribūtiem jūsu pirkumu vēstures entītijā un atlasiet **Tālāk**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Entītiju relācijas definēšana.](media/product-recommendation-purchasehistorymapping.PNG "Pirkumu vēstures lapa, kurā parādīti semantiskie atribūti, kas ir kartēti ar atlasītās iegādes vēstures entītijas laukiem")
+1. Sadaļā **Izvēlieties darbības** izvēlieties noteiktas darbības no atlasītās darbības, uz kuru vēlaties fokusēties aprēķinos.
 
-1. Ja lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas attiecības ar *Klienta* entītiju.
-    1. Atlasiet vienumu **Pirkumu vēstures entītija**.
-    1. Atlasiet vienumu **Lauks**, kas ir identificējis klientu pirkumu vēstures entītijā. Tam ir jāattiecas uz jūsu *Klienta* entītijas primāro klienta ID.
-    1. Atlasiet **Klienta entītiju**, kas atbilst primārajai klienta entītijai.
-    1. Ievadiet nosaukumu, kas apraksta attiecību.
-       > [!div class="mx-imgBorder"]
-       > ![Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu.](media/model-purchase-join.png "Pirkumu vēstures lapa, kurā parādīta attiecību izveide ar klientu")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Sānu rūts, kurā redzama noteiktu darbību izvēle zem semantiskā tipa.":::
+
+1. Ja vēl neesat kartējis darbību uz semantiskās darbības tipu, atlasiet **Rediģēt**, lai to izdarītu. Tiek atvērta vadītā pieredze semantiskās darbības kartēšanas laikā. Tagad kartējiet datus uz darbības tipa saistītajiem laukiem.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Lapas iestatīšanas darbības tips.":::
+
+1. Pēc darbības kartēšanas uz atbilstošo semantisko tipu atlasiet **Tālāk**, lai turpinātu 
+ 
+1. Kartējiet semantiskos atribūtus uz laukiem, kas nepieciešami modeļa palaišanai.
 
 1. Atlasiet vienumu **Saglabāt**.
 
 1. Atlasiet **Tālāk**.
+
 
 ### <a name="configure-product-filters"></a>Produktu filtru konfigurēšana
 

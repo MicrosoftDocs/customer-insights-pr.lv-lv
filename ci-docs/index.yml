@@ -7,12 +7,12 @@ metadata:
   ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
+  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
   ms.translationtype: HT
   ms.contentlocale: lv-LV
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036566"
+  ms.lasthandoff: 09/17/2021
+  ms.locfileid: "7498606"
 title: Dynamics 365 Customer Insights dokumentācija
 summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights līdzekļiem un iespējām.
 landingContent:
@@ -26,16 +26,16 @@ landingContent:
       url: /dynamics365-release-plan/
     - text: CDP atklāšana
       url: https://dynamics.microsoft.com/ai/customer-insights/
-- title: Darba sākšana ar auditorijas ieskatiem
+- title: Darba sākšana ar pakalpojumu Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Reģistrēšanās izmēģinājuma versijai
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Jaunumi
+    - text: Kas jauns auditorijas ieskatos
       url: audience-insights/whats-new-audience-insights.md
-    - text: Auditorijas ieskatu dokumentācija
-      url: audience-insights/index.yml
+    - text: Kas jauns iesaistes ieskatos
+      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Saziņa
   linkLists:
   - linkListType: overview
@@ -46,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Ziņot par problēmu
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Auditorijas ieskatu instrukcijas
+- title: Datu kopīgošana starp iespējām
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
-    - text: Izveidot jaunu vidi
-      url: audience-insights/home.md
-    - text: Vienotais klienta profila izveide
-      url: /learn/modules/unified-customer-profile/
-    - text: Darbs ar programmu
-      url: /learn/modules/working-with-customer-insights/
+    - text: Izveidot saiti starp iespējām
+      url: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - text: Izveidot segmentus izmantošanai atskaitēs
+      url: engagement-insights/integrate-audience-insights-segments.md
+    - text: Profila rekvizītu izmantošana interaktīvai analīzei
+      url: engagement-insights/curate-dimensions.md
 - title: Datu par auditorijas ieskatiem eksportēšana
   linkLists:
   - linkListType: how-to-guide

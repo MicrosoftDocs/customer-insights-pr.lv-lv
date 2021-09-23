@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032537"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470003"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -29,6 +29,7 @@ Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrā
 
 Cilnē **Atklāt** atradīsiet šādus bagātinātājus:
 
+- [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
 - Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft
@@ -62,5 +63,17 @@ Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connectio
 ## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
 
 Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai noteiktam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumus un pašreizējo lietojumu var aplūkot lapā **Bagātināšana**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
+
+Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
+
+Lai redzētu bagātināšanas statusu
+
+1. Dodieties uz **Dati** > **Bagātināšana**. 
+1. Cilnē **Mani bagātinājumi** atlasiet bagātinājuma statusu, lai atvērtu sānu rūti. 
+1. Detalizētas informācijas rūtī **Norise** izvērsiet sadaļu **Bagātinātjumi**. 
+1. Sadaļā Bagātināšana, kuras norisi vēlaties redzēt, atlasiet **Skatīt informāciju**. 
+1. **Uzdevumu detalizētās informācijas** rūtī atlasiet **Rādīt detalizētu informāciju**, lai skatītu procesus, kas saistīti ar bagātināšanas atjaunināšanu un to statusu. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

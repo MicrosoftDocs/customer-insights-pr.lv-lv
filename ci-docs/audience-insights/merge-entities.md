@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035011"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494328"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -66,7 +66,7 @@ Mainīt sapludināto atribūtu parādāmo nosaukumu. Izvades entītijas nosaukum
 
 Neiekļaut atribūtu no vienotā klienta profila. Ja lauks tiek izmantots citos procesos, piemēram, segmentā, pirms lauka izslēgšanas no klienta profila, noņemiet to no šiem procesiem. 
 
-1. Atlasiet sapludināto lauku.
+1. Atlasiet sapludinātu lauku.
   
 1. Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Izslēgt**.
 
@@ -76,17 +76,40 @@ Neiekļaut atribūtu no vienotā klienta profila. Ja lauks tiek izmantots citos 
 
 **Sapludināšanas** lapā atlasiet **Neiekļautie lauki**, lai redzētu visu neiekļauto lauku sarakstu. Šajā rūtī varat atkal pievienot neiekļautos laukus.
 
+## <a name="edit-a-merged-field"></a>Rediģējiet sapludinātu lauku
+
+1.  Atlasiet sapludinātu lauku.
+
+1.  Atlasiet vienumu **Rādīt vairāk** un izvēlieties **Rediģēt**.
+
+1.  Norādiet, kā laukus apvienot vai sapludināt no vienas no trim opcijām:
+    - **Nozīme**: Norāda kā uzvarētāja vērtību, pamatojoties uz iesaistītajā laukā norādīto rangu. Tā ir noklusējuma sapludināšanas opcija. Atlasiet **Pārvietot uz augšu/uz leju**, lai iestatītu svarīguma reitingu.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Svarīguma opcija sapludināšanas lauku dialoglodziņā."::: 
+    - **Jaunākais** : identificē uzvarētāja vērtību, pamatojoties uz visizplatītāko resnību. Lai definētu rekvizītus, nepieciešama katras sapludināšanas lauku tvērumā iesaistītās entītijas datums vai skaitlisks lauks.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Svarīguma opcija sapludināšanas lauku dialoglodziņā.":::
+    - **Jaunākais** : identificē uzvarētāja vērtību, pamatojoties uz visizplatītāko resnību. Lai definētu rekvizītus, nepieciešama katras sapludināšanas lauku tvērumā iesaistītās entītijas datums vai skaitlisks lauks.
+
+1.  Sapludināšanas procesā var pievienot papildu laukus.
+
+1.  Sapludināto lauku var pārdēvēt.
+
+1. Atlasiet **Labi**, lai piemērotu izmaiņas.
+
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
+
 ## <a name="manually-combine-fields"></a>Manuāli apvienot laukus
 
 Manuāli norādiet sapludinātu atribūtu. 
 
 1. **Sapludināšanas** lapā atlasiet **Lauku apvienošana**.
 
-1. Norādiet **Nosaukumu** un **Izvades lauka nosaukumu**.
+1. Nolaižamajā izvēlnē **Lauku apvienošana** norādiet sapludināšanas uzvarētāja politiku.
 
 1. Izvēlieties pievienojamo lauku. Atlasiet **Pievienot laukus**, lai apvienotu vairāk lauku.
 
-1. Apstipriniet izslēgšanu.
+1. Norādiet **Nosaukumu** un **Izvades lauka nosaukumu**.
+
+1. Atlasiet **Labi**, lai piemērotu izmaiņas.
 
 1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
 
@@ -103,6 +126,27 @@ Dažās entītijās ir detalizētāka informācija nekā citās. Ja entītijā i
 1. Apstiprināt izmaiņas.
 
 1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.
+
+## <a name="configure-customer-id-generation"></a>Klienta ID ģenerēšanas konfigurēšana 
+
+Pēc lauku sapludināšanas konfigurēšanas varat definēt, kā ģenerēt CustomerId vērtības, unikālos klienta profila identifikatorus. Sapludināšanas darbība datu unificēšanas procesā ģenerē unikālu klienta profila identifikatoru. Identifikators ir *Klienta* entītijas CustomerId, kas rodas datu apvienošanas procesa rezultātā. 
+
+Klienta entītijas CustomerId pamatā ir primārās atslēgas, kas nav Null, pirmās vērtības jaukšana. Šos taustiņus nodrošina atbilstības spēlē un sapludināšanā izmantotās entītijas, un tos nosaka atbilstības pasūtījums.Tāpēc ģenerētais CustomerID var tikt mainīts, kad primārās atslēgas vērtība mainās atbilstības pasūtījuma primārajā entītijā. Primārais kritērijs ir primārās atslēgas vērtība, iespējams, ne vienmēr apzīmē vienu un to pašu klientu.
+
+Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
+
+**Unikālā klienta ID konfigurēšana**
+
+1. Dodieties uz **Apvienot** > **Sapludināt**.
+
+1. **Sapludināšanas** lapā atlasiet cilni **Taustiņi**. 
+
+1. Norādiet uz **CustomerId** rindu un atlasiet opciju **Konfigurēt**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Vadīklu, lai pielāgotu ID ģenerēšanu.":::
+
+1. Atlasiet līdz pieciem laukiem, kuros būs unikāls klienta ID un kuri ir ar daudz lielāku stabilitāti. Ieraksti, kas neatbilst jūsu konfigurācijai, tā vietā izmanto sistēmas konfigurētu ID.  
+
+1. Atlasiet **Pabeigts** un palaidiet sapludināšanas procesu, lai lietotu veiktās izmaiņas.
 
 ## <a name="run-your-merge"></a>Sapludināšanas izpilde
 

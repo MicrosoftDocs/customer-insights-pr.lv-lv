@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Jauni un atjaunināti līdzekļi
       href: audience-insights/whats-new-audience-insights.md
-    - name: Jaunas vides izveide
-      href: audience-insights/get-started-paid.md
+    - name: Sākt darbu
+      items:
+        - name: Īsā pamācība
+          href: audience-insights/get-started.md
+        - name: Jaunas vides izveide
+          href: audience-insights/get-started-paid.md
+        - name: Auditorijas ieskatu izpēte
+          href: audience-insights/home.md
     - name: Lean moduļi
       items:
         - name: Datu uzņemšana
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Uzlabotas adreses
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Bagātināt ar Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Bagātināšana ar HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: 'Bagātināt, izmantojot Leadspace'
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: "API\_atsauces"
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Pakalpojuma ierobežojumi
-      href: audience-insights/service-limits.md
-    - name: DSR pieprasījumi saskaņā ar VDAR
-      href: audience-insights/gdpr.md
 - name: Iesaistes ieskati (priekšskatījums)
   items:
     - name: Palīdzības centrmezgls
       href: engagement-insights/index.yml
     - name: Iespēju pārskats
       href: engagement-insights/overview.md
-    - name: Bezmaksas izmēģinājumversija
-      href: 'https://pi.dynamics.com/'
     - name: Sākt darbu
       items:
-        - name: Sākt darbu
+        - name: Īsā pamācība
           href: engagement-insights/get-started.md
         - name: Darbvietas izveide
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Vides un darbvietu pārvaldība
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Savienojumu konfigurēšana
-          href: engagement-insights/configure-connections.md
         - name: Sīkfailu un lietotāju piekrišanas pārvaldība
           href: engagement-insights/user-consent-storage.md
-    - name: VDAR
-      items:
-        - name: Personisko datu dzēšana un eksportēšana
-          href: engagement-insights/delete-export-personal-data.md
     - name: Reģionālā pieejamība
       href: engagement-insights/regional-availability.md
-    - name: Pakalpojuma ierobežojumi
-      href: engagement-insights/quotas.md
 - name: Auditorijas un iesaistes ieskatu integrācija
   items:
     - name: Saistiet auditorijas ieskatus un iesaistes ieskatus
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Uzvedības datu sadalīšanai izmantojiet demogrāfiskās dimensijas
       href: engagement-insights/curate-dimensions.md
+- name: Pakalpojuma ierobežojumi
+  href: service-limits.md
+- name: DSR tiesības un pieprasījumi
+  href: dsr-rights-requests.md
 - name: Saņemt atbalstu
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

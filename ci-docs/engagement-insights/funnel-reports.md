@@ -4,17 +4,17 @@ description: Kā izmantot piltuves atskaites, lai saprastu, kā auditorija pieņ
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032264"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498651"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Piltuves atskaišu izveide un pārvaldība
 
@@ -158,4 +158,21 @@ Varat mainīt piltuves atskaites nosaukumu, dzēst to vai modificēt atskaitē n
 1. Atlasiet nosaukumu, lai atvērtu atskaiti.
 
 1. Atlasiet darbību, kuru noņemt, un atlasiet **Dzēst**.
+
+## <a name="funnel-insights"></a>Piltuves ieskati 
+
+Iesaistes ieskati tagad piedāvā piltuves ieskatus klientiem. Izmantojiet piltuves ieskatus, lai gūtu dziļāku ieskatu par klientu uzvedību attiecībā uz piltuves atskaites darbībām. Izveidojot un saglabājot jaunu piltuves atskaiti, atskaitei tiek automātiski ģenerēti piltuves ieskati. 
+
+Piltuves ieskatus no šīm kategorijām var skatīt gan galvenajā, gan darbību līmenī: 
+
+ - Konvertēšanas koeficients 
+ - Pārejas laiks 
+ - Pabeigšanas laiks 
+
+Izmantojiet šos ieskatus, lai dziļāk izpētītu klientu uzvedību un labāk izprastu piltuves atskaites nolaižamos punktus un pārvēršanus. 
+
+Piltuves ieskati tiek pārrēķināti ik pēc 24 stundām vai kad **Saglabājat** piltuves atskaiti. 
+
+> [!NOTE]
+> Lai skatītu piltuves ieskatus, atskaite ir jāsaglabā ikreiz, kad veicat izmaiņas. 
 

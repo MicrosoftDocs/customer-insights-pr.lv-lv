@@ -1,19 +1,19 @@
 ---
 title: Izveidot saiti starp auditorijas ieskatiem un iesaistes ieskatiem
 description: Izveidot aktīvu saiti starp auditorijas ieskatiem un iesaistes ieskatiem, lai iespējotu datu abpusēju kopīgošanu.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461022"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487116"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Izveidot saiti starp auditorijas ieskatiem un iesaistes ieskatiem
 
@@ -26,14 +26,14 @@ Izmantojiet vienotos profilus un segmentus no auditorijas ieskatiem, lai iesaist
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Auditorijas ieskatu profili ir jāsaglabā jums piederošajā Azure Data Lake Storage kontā vai [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;pārvaldītā datu ezerā. 
-
+- Arī auditorijas ieskatu videi ir jābūt saistītai Dataverse videi. Un, ja šī vide datu krātuvei izmanto arī Dataverse, nodrošiniet, lai auditorijas ieskatos būtu pieejama opcija **Iespējot datu kopīgošanu**. Papildinformācija: [Izveidot un konfigurēt apmaksātu vidi auditorijas ieskatiem un iesaistes ieskatos](../audience-insights/get-started-paid.md).
 - Administratora atļaujas ir nepieciešamas gan iesaistes ieskatu, gan auditorijas ieskatu vidē.
-
 - Saistītajām vidēm ir jābūt vienā un tajā pašā ģeogrāfiskā reģionā.
 
 > [!NOTE]
 > - Ja jūsu auditorijas ieskatu abonements ir izmēģinājumversija, kurā tiek izmantoti auditorijas ieskati iekšēji pārvaldītajā Data Lake, sazinieties ar [pirequest@microsoft.com](mailto:pirequest@microsoft.com), lai saņemtu palīdzību. 
-> - Ja jūsu auditorijas ieskatu vide izmanto Azure Data Lake Storage datu glabāšanai, jums krātuves kontam ir jāpievieno iesaistes ieskatu Azure pakalpojuma primāro nosaukumu jūsu krātuves kontam. Lai iegūtu detalizētu informāciju, skatiet [Savienojuma izveide ar Azure Data Lake Storage kontu ar Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem](../audience-insights/connect-service-principal.md). Arī auditorijas ieskatu videi ir jābūt saistītai [Dataverse videi](../audience-insights/get-started-paid.md). 
+> - Ja jūsu auditorijas ieskatu vide izmanto Azure Data Lake Storage datu glabāšanai, jums krātuves kontam ir jāpievieno iesaistes ieskatu Azure pakalpojuma primāro nosaukumu jūsu krātuves kontam. Lai iegūtu detalizētu informāciju, skatiet [Savienojuma izveide ar Azure Data Lake Storage kontu ar Azure pakalpojuma primāro nosaukumu auditorijas ieskatiem](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Vides saites izveide
 
@@ -75,6 +75,7 @@ Pēc saites izveides starp vidēm, saistītajā vidē varat atlasīt neobligāto
 
    > [!IMPORTANT]
    > Ja šajā darbībā tieši nevēlaties pievienot lietotājus, piesaistes ieskatos dati lietotājiem tiks slēpti.
+   > Lai auditorijas ieskatu segmenti tiktu rādīti iesaistes ieskatos, vispirms ir [jāveic sapludināšana un lejupstraumes procesi](../audience-insights/merge-entities.md). Lejupstraumes procesi ir svarīgi, jo tie ģenerē unikālu tabulu, kas sagatavo auditorijas ieskatu segmentus, lai tos kopīgotu ar iesaistes ieskatiem. (Ja ir ieplānota sistēmas atsvaidzināšana, tajā automātiski tiks iekļauti lejupstraumes procesi.)
 
 1. Pārskatiet atlasi un pēc tam atlasiet **Pabeigt**.
 

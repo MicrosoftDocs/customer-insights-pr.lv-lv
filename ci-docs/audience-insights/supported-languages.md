@@ -1,24 +1,23 @@
 ---
-title: Atbalstītās valodas auditorijas ieskatiem
+title: Dynamics 365 Customer Insights atbalstītās valodas
 description: Izprotiet un konfigurējiet valodas atbalstu.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035148"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483351"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Atbalstītās valodas auditorijas ieskatu iespējām
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights atbalstītās valodas
 
-Auditorijas ieskati programmai Dynamics 365 Customer Insights tiek tulkoti daudzās valodās. Sarakstā zemāk ir pieejamas valodas un informācija par to, kas ir tulkots. Var uzzināt arī papildinformāciju par valodas iestatījumu maiņu. 
+Dynamics 365 Customer Insights tiek tulkots vairākās valodās. Sarakstā zemāk ir pieejamas valodas un informācija par to, kas ir tulkots. Var uzzināt arī papildinformāciju par valodas iestatījumu maiņu. 
 
 ## <a name="languages"></a>Valodas
 
@@ -69,7 +68,7 @@ Auditorijas ieskati programmai Dynamics 365 Customer Insights tiek tulkoti daudz
 
 ## <a name="whats-translated"></a>Kas tiek tulkots
 
-Lietotne izmanto Jūsu valodas preferenci, lai rādītu elementus, piemēram, izvēlni, informācijas paneļa apzīmējumu tekstu un ziņojumus vēlamajā valodā.
+Customer Insights izmantos Jūsu valodas preferenci, lai rādītu elementus, piemēram, izvēlni, informācijas paneļa apzīmējumu tekstu un ziņojumus vēlamajā valodā.
 
 Tā kā vairākums līdzekļu tiek pamatoti uz jūsu datiem, daži elementi tiek saglabāti to sākotnējā valodā. Piemērs.
 

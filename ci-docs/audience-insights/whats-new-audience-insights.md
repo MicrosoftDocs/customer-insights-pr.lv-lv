@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035972"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465214"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -26,6 +26,15 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>2021. gada augusta atjauninājumi
+
+2021. gada jūlija un augusta atjauninājumos ir iekļauts jauns līdzeklis, veiktspējas uzlabojumi un kļūdu labojumi.
+
+### <a name="extensibility"></a>Paplašināšana
+
+- **Eksportējiet segmentus uz Klaviyo** Mēs esam paplašinājuši savus [eksportēšanas adresātus, iekļaujot Klaviyo](export-klaviyo.md). Tagad varat eksportēt izveidotos segmentus kampaņu veidošanai, e-pasta mārketinga nodrošināšanai un specifisku klientu grupu atlasei pakalpojumā Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>2021. gada jūnija atjauninājumi
 
