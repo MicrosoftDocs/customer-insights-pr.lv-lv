@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Google Ads
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031666"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558981"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentu eksportēšana uz Google Ads (priekšskatījums)
 
 Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakstu un izmantojiet tos, lai reklāma tiktu rādīta Google meklēšanā, Gmail, YouTube un Google Display Network. 
+
+> [!IMPORTANT]
+> Pašlaik jūs varat izveidot jaunu savienojumu un eksportēt datus uz Google Ads tikai tad, ja jums jau ir apstiprināts Google Ads izstrādātāja marķieris. Politikas izmaiņu dēļ mēs drīz atjaunināsim Google Ads eksportēšanu un nodrošināsim eksportēšanas opciju, kurai nebūs nepieciešams izstrādātāja marķieris, lai nodrošinātu jūsu pieredzes turpināšanu un vienkāršotu eksportēšanu uz Google Ads. Lai atvieglotu pāreju uz jauno eksportēšanas opciju, ieteicams neiestatīt vairāk savienojumu ar Google Ads.
 
 ## <a name="prerequisites-for-connection"></a>Savienojuma priekšnosacījumi
 

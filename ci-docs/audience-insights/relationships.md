@@ -1,20 +1,20 @@
 ---
 title: Attiecību izveide starp entītijām un entītiju ceļiem
 description: Vairāku datu avotu entītiju relāciju izveide un pārvaldība.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035240"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557361"
 ---
 # <a name="relationships-between-entities"></a>Relācijas starp entītijām
 
@@ -93,11 +93,11 @@ Pieejamās opcijas:
 - **Mainīt uz horizontālo/vertikālo izkārtojumu**: mainiet entītiju un attiecību līdzinājumu.
 - **Rediģēšana**: atjauniniet pielāgotu attiecību rekvizītus rediģēšanas rūtī un saglabājiet izmaiņas.
 
-### <a name="relationship-path"></a>Relācijas ceļš
+## <a name="relationship-paths"></a>Attiecību ceļi
 
-Attiecību ceļš apraksta entītijas, kas saistītas ar avota entītijas un mērķa entītijas attiecībām. Tas tiek izmantots, izveidojot segmentu vai pasākumu, kurā ir ietvertas citas entītijas, nevis vienotā profila entītija, un ir vairākas iespējas, kā sasniegt vienotā profila entītiju.
+Attiecību ceļš apraksta entītijas, kas saistītas ar avota entītijas un mērķa entītijas attiecībām. Tas tiek izmantots, izveidojot segmentu vai pasākumu, kurā ir ietvertas citas entītijas, nevis vienotā profila entītija, un ir vairākas iespējas, kā sasniegt vienotā profila entītiju. 
 
-Attiecību ceļš informē sistēmu, kurai ir attiecības piekļūt vienotā profila entītijai. Dažādi attiecību ceļi var iegūt atšķirīgus rezultātus.
+Attiecību ceļš informē sistēmu, pār kurām attiecībām piekļūt vienotā profila entītijai. Dažādi attiecību ceļi var iegūt atšķirīgus rezultātus.
 
 Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar vienoto profila entītiju *Klients*:
 
@@ -105,7 +105,43 @@ Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar v
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klients
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klients 
 
-Attiecību ceļš nosaka, kuras entītijas var izmantot, izveidojot kārtulas pasākumiem vai segmentiem. Izvēloties opciju ar garāko attiecību ceļu, iespējams, tiks iegūts mazāk rezultātu, jo atbilstības noteikšanas ierakstiem ir jābūt daļai no visām entītijām. Šajā piemērā klientam ir jāiegādājas preces, izmantojot e-tirdzniecības (eCommerce_eCommercePurchases), pārdošanas punktu (POS_posPurchases), un jāpiedalās mūsu lojalitātes programmā (loyaltyScheme_loyCustomers). Izvēloties pirmo opciju, iespējams, saņemsiet vairāk rezultātu, jo klientiem ir nepieciešama tikai viena papildu entītija.
+Attiecību ceļš nosaka, kuras entītijas var izmantot, izveidojot kārtulas mērījumiem vai segmentiem. Izvēloties opciju ar garāko attiecību ceļu, iespējams, tiks iegūts mazāk rezultātu, jo atbilstības noteikšanas ierakstiem ir jābūt daļai no visām entītijām. Šajā piemērā klientam ir jāiegādājas preces, izmantojot e-tirdzniecības (eCommerce_eCommercePurchases), pārdošanas punktu (POS_posPurchases), un jāpiedalās mūsu lojalitātes programmā (loyaltyScheme_loyCustomers). Izvēloties pirmo opciju, iespējams, saņemsiet vairāk rezultātu, jo klientiem ir nepieciešama tikai viena papildu entītija.
+
+### <a name="direct-relationship"></a>Tiešās attiecības
+
+Attiecības tiek klasificētas kā **tiešas attiecības**, ja avota entītija ir saistīta ar mērķa entītiju ar tikai vienu attiecību.
+
+Piemēram, ja darbības entītija, kas saukta par *eCommerce_eCommercePurchases*, tiek pievienota mērķa entītijai *eCommerce_eCommerceContacts* tikai ar *ContactId*, tā ir tieša attiecība,
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Avota entītija izveido tiešu savienojumu ar mērķa entītiju.":::
+
+#### <a name="multi-path-relationship"></a>Vairākceļu attiecības
+
+**Vairākceļu attiecības** ir īpašs tiešo attiecību tips, kas avota entītiju savieno ar vairākām mērķa entītijām.
+
+Piemēram, ja darbības entītija, saukta par *eCommerce_eCommercePurchases*, ir saistīta ar divām mērķa entītijām, gan *eCommerce_eCommerceContacts*, gan *loyaltyScheme_loyCustomers*, tā ir vairākceļu attiecība.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Izmantojot attiecības ar vairākām entītijām, avota entītija izveido tiešu savienojumu ar vairākām mērķa entītijām.":::
+
+### <a name="indirect-relationship"></a>Netiešās attiecības
+
+Attiecības tiek klasificētas kā **netiešas attiecības**, ja avota entītija ir saistīta ar vienu vai vairākām papildu entītijām, pirms tiek saistīta ar mērķa entītiju.
+
+#### <a name="multi-hop-relationship"></a>Vairāklēcienu attiecības
+
+*Vairāklēcienu attiecības* ir *netiešas attiecības*, kas ļauj izveidot avota entītijas savienojumu ar mērķa entītiju, izmantojot vienu vai vairākas citas starpnieka entītijas.
+
+Piemēram, ja darbības entītija, saukta par *eCommerce_eCommercePurchasesWest*, izveido savienojumu ar entītiju *eCommerce_eCommercePurchasesEast* un pēc tam izveido savienojumu ar mērķa entītiju *eCommerce_eCommerceContacts*, tā ir vairāklēcienu attiecība.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Avota entītija izveido tiešu savienojumu ar mērķa entītiju, izmantojot starpnieka entītiju.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Vairāklēcienu, vairākceļu attiecība
+
+Vairāklēcienu un vairākceļu attiecības var izmantot kopā, lai izveidotu **vairāklēcienu, vairākceļu attiecības**. Šis īpašais tips apvieno **vairāklēcienu** un **vairākceļu attiecību** funkcijas. Tās ļauj izveidot savienojumu ar vairākām mērķa entītijām, izmantojot starpnieka entītijas.
+
+Piemēram, ja darbības entītija, saukta par *eCommerce_eCommercePurchasesWest*, izveido savienojumu ar entītiju *eCommerce_eCommercePurchasesEast* un pēc tam izveido savienojumu ar divām mērķa entītijām, gan *eCommerce_eCommerceContacts*, gan *loyaltyScheme_loyCustomers*, tā ir vairāklēcienu, vairākceļu attiecība.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Avota entītija izveido tiešu savienojumu ar vienu mērķa entītiju un izveido savienojumu ar citu mērķa entītiju, izmantojot starpnieka entītiju.":::
 
 ## <a name="manage-existing-relationships"></a>Pārvaldīt esošās relācijas 
 

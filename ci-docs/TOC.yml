@@ -242,7 +242,7 @@
   items:
     - name: Palīdzības centrmezgls
       href: engagement-insights/index.yml
-    - name: Iespēju pārskats
+    - name: Par iesaistes ieskatiem
       href: engagement-insights/overview.md
     - name: Sākt darbu
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Reģionālā pieejamība
       href: engagement-insights/regional-availability.md
-- name: Auditorijas un iesaistes ieskatu integrācija
+- name: Datu kopīgošana starp iespējām
   items:
     - name: Saistiet auditorijas ieskatus un iesaistes ieskatus
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR tiesības un pieprasījumi
   href: dsr-rights-requests.md
-- name: Saņemt atbalstu
-  href: 'https://dynamics.microsoft.com/support/'

@@ -1,40 +1,49 @@
 ---
-title: Iesaistes ieskatu iespējas pārskats
+title: Par Dynamics 365 Customer Insights iesaistes ieskatu iespēju
 description: Iepazīšanās ar iesaistes ieskatu iespēju līdzekļiem un priekšrocībām.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 07/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b7bb1e5aa1adc5893dd0118bc7a3653913bfdc874a589f366c8c37152bbfef4d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d6d40d41fc79a34c04f86146fe902a766b71e74d
+ms.sourcegitcommit: cf139b37ea1ab62c48a1713bcf6b3a6e01f578bf
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033365"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "7507727"
 ---
 # <a name="about-dynamics-365-customer-insights-engagement-insights-capability"></a>Par Dynamics 365 Customer Insights iesaistes ieskatu iespēju 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-[Iesaistes ieskati, iespēja Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/) ļauj interaktīvi saprast, kā jūsu klienti izmanto jūsu pakalpojumus un produktus — gan individuāli, gan holistiski — tīmekļa vietnēs, mobilajās lietotnēs un savienotajos produktos.
+[Iesaistes ieskati, Dynamics 365 Customer Insights iespēja](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/) ļauj jums izprast, kā klienti izmanto jūsu pakalpojumus un produktus, izmantojot interaktīvos rādītājus. To var izdarīt gan atsevišķi, gan visaptveroši, izmantojot tīmekļa vietnes, mobilās programmas un pievienotos produktus.
 
-Darbības analīzi var kombinēt ar transakciju, demogrāfiskajiem, aptauju un citiem datu tipiem no Microsoft Dynamics 365 Customer Insights. Šī kombinācija izveido bagātīgus ieskatus, kas palīdz uzlabot labākās darbības un personalizētu pieredzi.
+Izmantojot iesaistes ieskatus, varat apvienot uzvedības analīzi ar transakciju, demogrāfisko, aptauju un citiem Microsoft Dynamics 365 Customer Insights datu tipiem. Šī iespēja nodrošina bagātīgus ieskatus, kas palīdz uzlabot nākamās labākās darbības un personalizētu pieredzi.
 
 ## <a name="features-and-benefits"></a>Līdzekļi un priekšrocības
 
+Izmantojot iesaistes ieskatu iespējas, varat:
+
 - Savāciet, novērtējiet un izprotiet klientu darbības jūsu tīmekļu vietnē.
 
-- Izmantojiet iepriekš sagatavotās atskaites, lai interaktīvi piekļūtu vietnes rādītājiem un redzētu auditorijas apjomu. Uzziniet detalizētu informāciju par apmeklējumiem, lapu skatījumiem, detalizētu datplūsmu un nosakiet lapas ar vislabāko veiktspēju.
+- Datu koplietošana ar iesaistes ieskatiem un auditorijas ieskatiem. Varat saistīt vides no abām iespējām, kā arī iespējot datu apmaiņu starp tām divvirzienu veidā.
 
-- Izmantojiet pielāgotu atskaišu veidotāju, lai būvētu savas vizualizācijas, pamatojoties uz atlasītajiem [rādītājiem](glossary.md) un [dimensijām](glossary.md). Vizualizācijas izveido skatus, kas nepieciešami, lai atbildētu uz biznesa jautājumiem.
+- Izmantojiet vienotos profilus un segmentus no auditorijas ieskatiem, lai iesaistes ieskatos izmantotu citas analīzes opcijas. Eksportējiet notikumus, kuriem ir augsta biznesa vērtība, izmantojot iesaistes ieskatus. Izmantojiet šos notikumus, lai vienotiem auditorijas ieskatu profiliem pievienotu datus.
+
+- Izveidojiet demogrāfiskas dimensijas, lai sadalītu uzvedības datus. Pēc tam izmantojiet profila rekvizītus, kas nodrošina uzvedības datu interaktīvu novērtējumu, tostarp datus, kas ir tverti, izmantojot iesaistes ieskatus jūsu vietnē vai mobilajā programmā.
+
+- Izveidojiet piltuves ieskatus, kas nodrošina datus un atskaites, lai informētu par lēmumiem un identificētu jomas, kurās jāveic optimizācija un procesa uzlabojumi, lai identificētu ceļu, ko klienti izmanto pirms iegādes. 
+
+-  Izmantojiet iepriekš sagatavotās atskaites, lai interaktīvi piekļūtu vietnes metrikai un jūsu vietnei atklātu īsto apmeklētāju skaitu. Uzziniet detalizētu informāciju par apmeklējumiem, lapu skatījumiem, detalizētu datplūsmu un nosakiet lapas ar vislabāko veiktspēju.
+
+- Izmantojiet pielāgotu atskaišu veidotāju, lai izveidotu savas vizualizācijas, pamatojoties uz atlasītajiem [rādītājiem](glossary.md) un [dimensijām](glossary.md). Šīs vizualizācijas veido skatus, kas nepieciešami, lai atbildētu uz biznesa jautājumiem.
 
 - Ievadiet datus no vairākiem kanāliem. Piemēram, izmantojiet uzvedības datus no tīmekļa vietnes mijiedarbības ar transakciju un demogrāfiskajiem datiem par klientiem. Izmantojiet datus, lai izveidotu un apskatītu interaktīvas atskaites, kurās ir iekļautas tīmekļa darbības un klientu profili bagātinātai analīzei. Precizētu notikumu izveide un eksportēšana. Skatiet tīmekļa darbības, izmantojot klientu profilus, darbības un segmentus programmā Customer Insights, lai pilnībā izprastu jūsu klientus.
-
 
 ## <a name="next-steps"></a>Nākamās darbības
 

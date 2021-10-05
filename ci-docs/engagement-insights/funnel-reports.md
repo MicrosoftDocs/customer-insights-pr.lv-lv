@@ -4,17 +4,17 @@ description: Kā izmantot piltuves atskaites, lai saprastu, kā auditorija pieņ
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498651"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558929"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Piltuves atskaišu izveide un pārvaldība
 
@@ -163,13 +163,23 @@ Varat mainīt piltuves atskaites nosaukumu, dzēst to vai modificēt atskaitē n
 
 Iesaistes ieskati tagad piedāvā piltuves ieskatus klientiem. Izmantojiet piltuves ieskatus, lai gūtu dziļāku ieskatu par klientu uzvedību attiecībā uz piltuves atskaites darbībām. Izveidojot un saglabājot jaunu piltuves atskaiti, atskaitei tiek automātiski ģenerēti piltuves ieskati. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Piltuves ieskati.":::
+
+> [!NOTE]
+> Piltuves ieskatus var ģenerēt tikai piltuves darbībām, kas **neietver** pielāgotas dimensijas. Lai ģenerētu piltuves ieskatus visām piltuves darbībām, izmantojiet iesaistes ieskatu dimensijas, lai izveidotu jūsu piltuves darbības. 
+
 Piltuves ieskatus no šīm kategorijām var skatīt gan galvenajā, gan darbību līmenī: 
 
- - Konvertēšanas koeficients 
+ - Konvertēšanas koeficients
+ -    Vidējais reklāmguvumu līmenis, no Norēķina darbības līdz Pirkumam ir 22%.
  - Pārejas laiks 
+ -    Vidējais pārejas laiks starp Groza darbību un Norēķinu ir 23 minūtes. 
  - Pabeigšanas laiks 
+ -    Vidējais laiks, kas nepieciešams klientiem piltuves pabeigšanai, ir 47 minūtes. 
 
 Izmantojiet šos ieskatus, lai dziļāk izpētītu klientu uzvedību un labāk izprastu piltuves atskaites nolaižamos punktus un pārvēršanus. 
+
+Lai salīdzinātu ieskatus dažādos soļos, atzīmējiet izvēles rūtiņu **Skatīt darbību** vai **Salīdzināt ar citām darbībām**, izmantojot ieskatu kartītes. Tiek rādīts joslu grafiks, kurā tiek salīdzināta katras piltuves darbības metrika. 
 
 Piltuves ieskati tiek pārrēķināti ik pēc 24 stundām vai kad **Saglabājat** piltuves atskaiti. 
 
