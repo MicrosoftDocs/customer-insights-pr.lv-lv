@@ -4,17 +4,17 @@ description: Kā izveidot, pārdēvēt un dzēst darbvietas un vides.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486044"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645455"
 ---
 # <a name="manage-environments-and-workspaces"></a>Vides un darbvietu pārvaldība
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486044"
 
 ## <a name="overview"></a>Pārskats
 
-Darbvieta ir notikumu un atskaišu glabāšanas un pārvaldīšanas vieta. Tā ir vieta, kur varat skatīt lietotāja darbību reāllaikā. Veidojot darbvietu, atlasiet to datu tipu, kuru sūtīt uz darbvietu. Pašlaik tiek atbalstīti tīmekļa dati un mobilās programmas.
+Šajā tēmā apspriests, kā pārvaldīt darbvietas un vides, kad tās jau ir izveidotas. 
 
-Vide ir vieta, kurā pārvaldīt darbvietas un savienojumus. Vides izmantošanas veids ir atkarīgs no uzņēmuma un lietošanas gadījuma. Piemēram, varat izveidot:
+- *Darbvieta* ir notikumu un atskaišu glabāšanas un pārvaldīšanas vieta. Tā ir vieta, kur varat skatīt lietotāja darbību reāllaikā. Veidojot darbvietu, atlasiet to datu tipu, kuru sūtīt uz darbvietu. Pašlaik tiek atbalstīti tīmekļa dati un mobilās programmas. Papildinformāciju skatiet rakstā [Darbvietas izveide un dalībnieku pievienošana ](create-workspace.md).
 
--   Vienu vidi.
--   Atsevišķas vides testēšanai un ražošanai.
--   Atsevišķas vides noteiktām organizācijas darba grupām vai departamentiem, kuros ir ietverti katrai auditorijai atbilstoši notikumi.
--   Atsevišķas vides dažādiem jūsu uzņēmuma globālajām filiālēm.
--   Savienojumi ar Customer Insights auditorijas ieskatu iespējām.
+- *Vide* ir vieta, kurā pārvaldīt darbvietas un savienojumus. Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Izvēlieties vidi un izveidojiet darbvietu 
-
-Katrai darbvietai ir jābūt vidē. Izveidojot darbvietu, var atlasīt iepriekš esošu vidi vai izveidot jaunu. Pēc tam varat pievienot darbvietas dalībniekus un sākt datu apkopošanu.
-
-**Lai izveidotu savu pirmo darbvietu**
-
-1. Iesaistes ieskatos no darbvietas pārslēdzēja atlasiet **Jauns**. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Customer Insights lapas darbvietas atlasītājs.":::
-
-1. Sarakstā izvēlieties vidi vai atlasiet **Izveidot jaunu vidi**.
-
-1. Ievadiet nosaukumu laukā **Darbvietas nosaukums**. 
-
-1. Atlasiet vides tipu, kuru vēlaties izveidot, atkarībā no tā, vai vēlaties izmērīt, kas notiek tīmekļa vietnē vai mobilajā programmā. 
-
-1. Varat pievienot dalībniekus un piešķirt viņu atļauju līmeni sarakstā **Loma**. Pēc tam atlasiet **Pabeigt**, lai izveidotu darbvietu, vai atlasiet **Tālāk**, lai instalētu kodu. 
-
-1. Instalējiet datu koda fragmentu, lai sāktu saņemt datus, un pēc tam atlasiet **Gatavs**. 
-
-## <a name="manage-a-workspace"></a>Darbvietas pārvaldīšana
+## <a name="manage-an-existing-workspace"></a>Pārvaldīt esošu darbvietu
 
 Vidē varat uzturēt vairākas darbvietas. Jūsu [loma](user-roles.md) nosaka, kā tajās varat strādāt. 
 
  - Lai pārvaldītu darbvietu, jums ir jābūt vides vai darbvietas administratoram.
  - Kā darbvietas administrators varat pārdēvēt vai dzēst esošās darbvietas. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Darbvietas administratoru centrs.":::
 
 ### <a name="edit-a-workspace-name"></a>Rediģēt darbvietas nosaukumu
 
@@ -75,7 +53,7 @@ Dzēšot darbvietu, tiks neatgriezeniski noņemts viss tās saturs, dati, iestat
 
 1. Atlasiet **Dzēst darbvietu**. 
 
-1. Dialoglodziņā **Dzēst darbvietu** ievadiet **APSTIPRINĀT DZĒŠANU**. 
+1. Dialoglodziņā **Dzēst darbvietu** ievadiet ar lielajiem burtiem **APSTIPRINĀT DZĒŠANU**. 
 
 1. Lai neatgriezeniski dzēstu darbvietu, atlasiet **Dzēst**.
 
@@ -87,27 +65,11 @@ Dzēšot darbvietu, tiks neatgriezeniski noņemts viss tās saturs, dati, iestat
 
 1. Atlasiet vienumu **Pievienot dalībniekus**, lai tos pievienotu darbvietai.
 
-## <a name="manage-an-environment"></a>Pārvaldīt vidi
+## <a name="manage-an-existing-environment"></a>Pārvaldīt esošu vidi
 
 Kā vides administrators varat piekļūt videi kreisajā navigācijas rūtī. Varat konfigurēt vides iestatījumus, citus vides administratorus un darbvietas. Atlasiet cilnes, lai pārvietotos starp dažādiem administrēšanas centra apgabaliem.
 
-:::image type="content" source="media/New-environment.png" alt-text="Vides administrēšanas centrs.":::
-
-### <a name="create-an-environment"></a>Vides izveide
-
-1. Darbvietas atlasītājā atlasiet **+Jauns**.
-
-1. Vadītajā darbā atveriet nolaižamo izvēlni **Vide** un atlasiet **Izveidot jaunu vidi**. 
-
-1. Norādiet **Vides nosaukumu**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Solis vadītajā darbā, lai norādītu detalizētu informāciju par vidi.":::
-
-1. Izvēlieties **Reģionu** un atlasiet **Tālāk**. 
-
-1. Norādiet darbvietas nosaukumu un izvēlieties, kāda tipa darbvietu vēlaties izveidot. 
-
-1.  Ja vēlaties, pievienojiet dalībniekus un kopējiet koda fragmentu izveides procesa pabeigšanai.
+:::image type="content" source="media/environment-edit.png" alt-text="Vides administrēšanas centrs.":::
 
 ### <a name="rename-an-environment"></a>Vides pārdēvēšana
 
@@ -131,7 +93,7 @@ Vides administratori var dzēst vides. Lai varētu dzēst vidi, ir jānoņem vis
 
 1. Atlasiet **Dzēst vidi**. 
 
-1. Dialoglodziņā **Dzēst darbvietu** ievadiet **APSTIPRINĀT DZĒŠANU**. 
+1. Dialoglodziņā **Dzēst darbvietu** ievadiet ar lielajiem burtiem **APSTIPRINĀT DZĒŠANU**. 
 
 1. Lai neatgriezeniski dzēstu vidi, atlasiet **Dzēst**.
 

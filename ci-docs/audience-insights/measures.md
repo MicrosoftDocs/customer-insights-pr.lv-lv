@@ -1,7 +1,7 @@
 ---
 title: Mēru izveide un pārvaldība
 description: Definējiet mērus, lai analizētu un atspoguļotu sava uzņēmuma veiktspēju.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037017"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622979"
 ---
 # <a name="define-and-manage-measures"></a>Mēru definēšana un pārvaldība
 
@@ -26,15 +26,15 @@ Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicāj
 
 ## <a name="build-your-own-measure-from-scratch"></a>Personīgā mērījuma izveide no nulles
 
-Šajā sadaļā ir paskaidrots, kā izveidot jaunu mērījumu no nulles. Varat izveidot mērījumu ar datu atribūtiem no datu entītijām, kurām ir iestatītas attiecības, lai izveidotu savienojumu ar Klienta entītiju. 
+Šajā sadaļā ir paskaidrots, kā izveidot jaunu mērījumu no nulles. Varat izveidot pasākumu ar datu atribūtiem no datu entītijām, kurām ir iestatītas attiecības, lai izveidotu savienojumu ar vienotā klienta profila entītiju.
+
+# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
 
 1. Auditorijas ieskatu sadaļā ejiet uz **Mēri**.
 
 1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
 
 1. Atlasiet **Rediģēt nosaukumu** un norādiet mēra **Nosaukumu**. 
-   > [!NOTE]
-   > Ja jaunajā mērījuma konfigurācijā ir tikai divi lauki – CustomerID un viens aprēķins – izvade sistēmas ģenerētajā entītijā tiks pievienota kā jauna kolonna ar nosaukumu Customer_Measure. Un mēra vērtību varēsit redzēt vienotā klienta profilā. Citi mērījumi ģenerēs savas entītijas.
 
 1. Konfigurācijas apgabalā izvēlieties apkopošanas funkciju no **Atlasīt funkciju** nolaižamās izvēlnes. Apkopošanas funkcijas ir šādas: 
    - **Sum**
@@ -73,11 +73,11 @@ Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicāj
    1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa mērījumus*. Ja vēlaties izveidot *uzņēmuma līmeņa mērījumus*, varat noņemt noklusējuma dimensiju.
    1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
 
-1. Ja jūsu datos ir vērtības, kuras ir jāaizstāj ar veselu skaitli, piemēram, aizstājot *nulle* ar *0*, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus.
+1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
 
 1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Mērījumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
    
-   1. Atlasiet **Datu preferences** un izvēlieties entītijas ceļu, kas jāizmanto mēra identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
+   1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
    1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Atlasiet entītijas ceļu mēram.":::
@@ -92,7 +92,79 @@ Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicāj
 
 1. Dodieties uz **Mērījumi**, lai sarakstā redzētu jaunizveidoto mērījumu.
 
+# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+
+1. Auditorijas ieskatu sadaļā ejiet uz **Mēri**.
+
+1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
+
+1. Atlasiet **Rediģēt nosaukumu** un norādiet mēra **Nosaukumu**. 
+
+1. Konfigurācijas apgabalā izvēlieties apkopošanas funkciju no **Atlasīt funkciju** nolaižamās izvēlnes. Apkopošanas funkcijas ir šādas: 
+   - **Sum**
+   - **Vidējais**
+   - **Skaits**
+   - **Skaitīt unikālos vienumus**
+   - **Maksimums**
+   - **Minimums**
+   - **Pirmā**: tiek ņemta pirmā datu ieraksta vērtība
+   - **Pēdējā**: tiek ņemta pēdējā vērtība, kas tika pievienota datu ierakstam
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Mēru aprēķinu operatori.":::
+
+1. Atlasiet vienumu **Pievienot atribūtu**, lai atlasītu datus, kas nepieciešami šī mēra izveidei.
+   
+   1. Atlasiet cilni **Atribūti**. 
+   1. Datu entītija: izvēlieties entītiju, kurā iekļauts mēra atribūts, ko vēlaties aprēķināt. 
+   1. Datu atribūts: izvēlieties atribūtu, ko vēlaties izmantot apkopošanas funkcijai, lai aprēķinātu mēru. Vienlaikus vienā reizē var atlasīt tikai vienu atribūtu.
+   1. Atlasiet arī esoša mēra datu atribūtu, atlasot **Mērījumi** cilni. Varat arī meklēt entītijas vai mēra nosaukumu. 
+   1. Atlasiet vienumu **Pievienot**, lai mēram pievienotu atlasīto atribūtu.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Atlasiet atribūtu, ko izmantot mērījumā.":::
+
+1. Lai izveidotu sarežģītākus mērījumus, to funkcijai var pievienot papildu atribūtus vai lietot matemātikas operatorus.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Sarežģītu mērījumu izveide, izmantojot matemātikas operatorus.":::
+
+1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. 
+  
+   1. Sadaļā **Pievienot atribūtu**, kas atrodas **Filtru** rūtī, atlasiet atribūtu, ko vēlaties izmantot, lai izveidotu filtru.
+   1. Iestatiet filtra operatorus, lai definētu filtru katram atlasītajam atribūtam.
+   1. Atlasiet vienumu **Lietot**, lai mērījumam pievienotu filtrus.
+
+1. Lai pievienotu dimensijas, konfigurācijas apgabalā atlasiet **Dimensija**. Dimensijas tiek rādītas kā kolonnas mērījuma izvades entītijā.
+ 
+   1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa mērījumus*. Ja vēlaties izveidot *uzņēmuma līmeņa mērījumus*, varat noņemt noklusējuma dimensiju.
+   1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
+
+1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
+
+1. Jūs varat izmantot slēdzi **Apkopot pakārtotos uzņēmumus**, ja [izmantojat uzņēmumus ar hierarhijām](relationships.md#set-up-account-hierarchies).
+   - Ja iestatījums ir **Izslēgts**, mērījums tiek aprēķināts katram kontam. Katrs konts tiek iegūts no rezultātiem.
+   - Ja iestatījums ir **Ieslēgts**, atlasiet **Rediģēt**, lai izvēlētos uzņēmumu hierarhiju atbilstoši noingestajām hierarhijām. Šis pasākums dos tikai vienu rezultātu, jo tas tiek apkopots ar apakškontiem.
+
+1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Mērījumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
+   
+   1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
+   1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Atlasiet entītijas ceļu mēram.":::
+
+1. Aprēķinā atlasiet **...**, lai **Dublētu**, **Pārdēvētu** vai **Noņemtu** aprēķinu no mērījuma.
+
+1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
+
+1. Atlasiet opciju **Izpildīt**, lai aprēķinātu konfigurētā mērījuma rezultātus. Atlasiet **Saglabāt un aizvērt**, ja vēlaties saglabāt pašreizējo konfigurāciju un izpildīt mērījumu vēlāk.
+
+1. Dodieties uz **Mērījumi**, lai sarakstā redzētu jaunizveidoto mērījumu.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Veidnes izmantošana mērījuma veidošanā
+
+Lai izveidotu bieži izmantotus mērījumus, varat lietot to iepriekš definētās veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
+
+# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
 
 Lai izveidotu bieži izmantotus mērījumus, varat lietot to iepriekš definētās veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
 
@@ -140,6 +212,12 @@ Pieejamās mērījumu veidnes:
 
 1. Tagad varat atlasīt **Palaist**, lai aprēķinātu mērījuma rezultātus. Lai to precizētu vēlāk, atlasiet **Saglabāt melnrakstu**.
 
+# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+
+Šis līdzeklis ir pieejams tikai pasākumiem, kas izveidoti vidē, kurā kā primāro mērķauditoriju ir individuālie klienti.
+
+---
+
 ## <a name="manage-your-measures"></a>Pārvaldiet savus mērus
 
 Mērījumu saraksts atrodams lapā **Mērījumi**.
@@ -166,6 +244,5 @@ Sarakstā atlasiet mēru, lai izvēlētos kādu no šīm opcijām:
 ## <a name="next-step"></a>Nākamā darbība
 
 Esošus mērus var izmantot, lai izveidotu [klientu segmentu](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

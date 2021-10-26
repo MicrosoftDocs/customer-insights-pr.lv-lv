@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Marketo
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033502"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619174"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentu eksportēšana uz Marketo (priekšskatījums)
 
@@ -29,10 +29,10 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 000 000 profilu, eksportējot uz Marketo.
+- Līdz 1 miljoniem klientu profilu vienai eksportēšanai uz Marketo.
 - Eksportēšana uz Marketo ir ierobežota līdz segmentiem.
-- Eksportējot segmentus kopā ar 1 000 000 profiliem, var būt nepieciešamas 3 stundas. 
-- To profilu skaits, ko var eksportēt uz Marketo, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar Marketo.
+- 1 miljona klientu profilu segmentu eksports var ilgt līdz 3 minūtēm. 
+- To klientu profilu skaits, kurus varat eksportēt uz Marketo, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Savienojuma ar Marketo iestatīšana
 
@@ -64,7 +64,7 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 1. Ievadiet savu **[Marketo saraksta ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Saraksta ID ir tikai skaitliska vērtība. Piemēram, ja Marketo saraksta ID ir ST12345A7, noņemiet rakstzīmi pirms un pēc cipariem un ievadiet `12345`. 
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. 
 
 1. Ja vēlaties, varat eksportēt **Vārdu**, **Uzvārdu**, **Pilsētu**, **Pavalsti** un **Valsti/reģionu**, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 

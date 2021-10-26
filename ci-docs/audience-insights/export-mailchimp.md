@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Mailchimp
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033548"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618622"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentu eksportēšana uz Mailchimp (priekšskatījums)
 
@@ -29,10 +29,10 @@ Eksportējiet vienotu klientu profilu segmentus uz Mailchimp, lai izveidotu info
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 000 000 profilu, eksportējot uz Mailchimp.
+- Līdz 1 miljonam klientu profilu vienai eksportēšanai uz Mailchimp.
 - Eksportēšana uz Mailchimp ir ierobežota līdz segmentiem.
-- Segmentu ar 1 miljonu profilu eksportēšana var aizņemt līdz trim stundām. 
-- To profilu skaits, ko var eksportēt uz Mailchimp, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar Mailchimp.
+- 1 miljona klientu profilu segmentu eksports var ilgt līdz 3 stundām. 
+- To klientu profilu skaits, kurus varat eksportēt uz Mailchimp, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Savienojuma ar Mailchimp iestatīšana
 
@@ -66,7 +66,7 @@ Eksportējiet vienotu klientu profilu segmentus uz Mailchimp, lai izveidotu info
 
 1. Ievadiet **[Mailchimp auditorijas ID](https://mailchimp.com/help/find-audience-id/)**
 
-3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. 
 
 1. Ja vēlaties, varat eksportēt **Vārdu** un **Uzvārdu**, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 

@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494328"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648263"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -89,7 +91,7 @@ Neiekļaut atribūtu no vienotā klienta profila. Ja lauks tiek izmantots citos 
     :::image type="content" source="media/recency-merge-option.png" alt-text="Svarīguma opcija sapludināšanas lauku dialoglodziņā.":::
     - **Jaunākais** : identificē uzvarētāja vērtību, pamatojoties uz visizplatītāko resnību. Lai definētu rekvizītus, nepieciešama katras sapludināšanas lauku tvērumā iesaistītās entītijas datums vai skaitlisks lauks.
 
-1.  Sapludināšanas procesā var pievienot papildu laukus.
+1.  Sapludināšanas procesā varat pievienot papildu laukus.
 
 1.  Sapludināto lauku var pārdēvēt.
 
@@ -131,7 +133,7 @@ Dažās entītijās ir detalizētāka informācija nekā citās. Ja entītijā i
 
 Pēc lauku sapludināšanas konfigurēšanas varat definēt, kā ģenerēt CustomerId vērtības, unikālos klienta profila identifikatorus. Sapludināšanas darbība datu unificēšanas procesā ģenerē unikālu klienta profila identifikatoru. Identifikators ir *Klienta* entītijas CustomerId, kas rodas datu apvienošanas procesa rezultātā. 
 
-Klienta entītijas CustomerId pamatā ir primārās atslēgas, kas nav Null, pirmās vērtības jaukšana. Šos taustiņus nodrošina atbilstības spēlē un sapludināšanā izmantotās entītijas, un tos nosaka atbilstības pasūtījums.Tāpēc ģenerētais CustomerID var tikt mainīts, kad primārās atslēgas vērtība mainās atbilstības pasūtījuma primārajā entītijā. Primārais kritērijs ir primārās atslēgas vērtība, iespējams, ne vienmēr apzīmē vienu un to pašu klientu.
+Klienta entītijas CustomerId pamatā ir primārās atslēgas, kas nav Null, pirmās vērtības jaukšana. Šos taustiņus nodrošina atbilstības spēlē un sapludināšanā izmantotās entītijas, un tos nosaka atbilstības pasūtījums.Tāpēc ģenerētais CustomerID var tikt mainīts, kad primārās atslēgas vērtība mainās atbilstības pasūtījuma primārajā entītijā. Tāpēc primārās atslēgas vērtība var ne vienmēr būt viens un tas pats klients.
 
 Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 
@@ -139,7 +141,7 @@ Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 
 1. Dodieties uz **Apvienot** > **Sapludināt**.
 
-1. **Sapludināšanas** lapā atlasiet cilni **Taustiņi**. 
+1. Atlasiet cilni **Atslēgas**. 
 
 1. Norādiet uz **CustomerId** rindu un atlasiet opciju **Konfigurēt**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Vadīklu, lai pielāgotu ID ģenerēšanu.":::
@@ -147,6 +149,30 @@ Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 1. Atlasiet līdz pieciem laukiem, kuros būs unikāls klienta ID un kuri ir ar daudz lielāku stabilitāti. Ieraksti, kas neatbilst jūsu konfigurācijai, tā vietā izmanto sistēmas konfigurētu ID.  
 
 1. Atlasiet **Pabeigts** un palaidiet sapludināšanas procesu, lai lietotu veiktās izmaiņas.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Grupējiet profilus mājsaimniecībās vai klasteros
+
+Kā daļu no klienta profila ģenerēšanas konfigurācijas procesa varat definēt kārtulas, lai saistītus profilus grupētu klasterā. Pašlaik ir pieejami divu veidu klasteri — mājsaimniecības un pielāgoti klasteri. Sistēma automātiski izvēlas barību ar iepriekš definētām kārtulām, ja *Klienta* entītija ietver semantiskos laukus *Person.LastName* un *Location.Address*. Klasteru var izveidot arī ar savām kārtulām un nosacījumiem, kas līdzīgi [atbilstības kārtulām](match-entities.md#define-rules-for-match-pairs).
+
+**Definējiet mājsaimniecību vai klasteru**
+
+1. Dodieties uz **Apvienot** > **Sapludināt**.
+
+1. Cilnē **Sapludināt** atlasiet **Papildus** > **Izveidot klasteru**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Vadīkla, lai izveidotu jaunu klasteru.":::
+
+1. Izvēlieties kādu no **Mājsaimniecībām** vai **Pielāgotu klasteru**. Ja semantiskie lauki *Person.LastName* un *Location.Address* ir *Klienta* entītijā, tiek automātiski atlasīta mājsaimniecība.
+
+1. Norādiet klastera nosaukumu un atlasiet **Gatavs**.
+
+1. Atlasiet cilni **Klasteri**, lai atrastu izveidoto klasteru.
+
+1. Norādiet kārtulas un nosacījumus, lai definētu klasteru.
+
+1. Atlasiet **Palaist**, lai palaistu sapludināšanas procesu un izveidotu klasteru.
+
+Pēc sapludināšanas procesa izpilde klastera identifikatori tiek pievienoti kā jauni lauki *Klienta* entītijai.
 
 ## <a name="run-your-merge"></a>Sapludināšanas izpilde
 

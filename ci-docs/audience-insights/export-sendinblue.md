@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Sendinblue
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036064"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617794"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentu eksportēšana uz Sendinblue (priekšskatījums)
 
@@ -29,10 +29,10 @@ Eksportējiet vienotos klienta profila segmentus, lai ģenerētu kampaņas, nodr
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Vienā eksportēšanas reizē uz Sendinblue var eksportēt līdz 1 miljonam profilu.
+- Līdz 1 miljoniem klientu profilu vienai eksportēšanai uz Sendinblue.
 - Eksportēšana uz Sendinblue attiecas tikai uz segmentiem.
-- Segmentu eksportēšana, kur kopējais profilu skaits ir 1 miljons, var ilgt līdz 90 minūtēm. 
-- Profilu skaits, ko var eksportēt uz Sendinblue ir atkarīgs un to ierobežo jūsu līgums ar Sendinblue.
+- 1 miljona klientu profilu segmentu eksports var ilgt līdz 90 minūtēm. 
+- To klientu profilu skaits, kurus varat eksportēt uz Sendinblue, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Savienojuma ar Sendinblue iestatīšana
 
@@ -64,7 +64,7 @@ Eksportējiet vienotos klienta profila segmentus, lai ģenerētu kampaņas, nodr
 
 1. Ievadiet savu **Sendinblue saraksta ID** 
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. 
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. 
 
 1. Pēc izvēles, varat eksportēt **vārdu**, **uzvārdu** un **tālruņa numuru**, lai izveidotu personalizētākus e-pasta ziņojumus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 

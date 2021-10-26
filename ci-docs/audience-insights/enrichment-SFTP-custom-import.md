@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032721"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618714"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Bagātiniet klientu profilus ar pielāgotiem datiem (priekšskatījums)
 
@@ -44,6 +44,8 @@ Lai konfigurētu SFTP pielāgoto importēšanu, ir jāatbilst šādiem priekšno
 1.  Atlasiet **Tālāk** un ievadiet **Ceļu** un **Faila nosaukumu** datu failam, kuru vēlaties importēt.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrānuzņēmums, ievadot datu atrašanās vietu.":::
+
+1. Atlasiet vienumu **Tālāk** un izvēlieties klientu datu kopu. Tas var būt vai nu visi klientu profili, vai segments.
 
 1. Atlasiet **Tālāk** un norādiet bagātināmo datu nosaukumu un izvades entitījas nosaukumu. 
 
@@ -123,6 +125,6 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

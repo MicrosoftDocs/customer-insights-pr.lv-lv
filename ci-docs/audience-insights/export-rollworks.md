@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz RollWorks
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034599"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617453"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentu eksportēšana uz RollWorks (priekšskatījums)
 
@@ -28,11 +28,11 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūs varat eksportēt līdz 250 000 profilu uz katru eksportu uz RollWorks.
-- Uz RollWorks nevar eksportēt segmentus, kuriem ir mazāk par 100 profiliem. 
+- Programmā RollWorks viena eksporta laikā var eksportēt līdz pat 250000 klientu profilu.
+- Jūs nevarat eksportēt segmentus, kuros ir mazāk par 100 klientu profiliem, uz RollWorks. 
 - Eksportēšana uz RollWorks attiecas tikai uz segmentiem.
-- Līdz 250 000 profilu eksportēšana uz RollWorks var aizņemt līdz 10 minūtēm. 
-- Profilu, kurus varat eksportēt uz RollWorks skaits ir atkarīgs no jūsu līguma ar RollWorks un attiecas vienīgi uz tā tvērumu.
+- Līdz pat 250000 klientu profilu eksportēšana uz RollWorks var paiet līdz 10 minūtēm. 
+- To klientu profilu skaits, kurus varat eksportēt uz RollWorks, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Savienojuma ar RollWorks iestatīšana
 
@@ -66,7 +66,7 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 
 1. Ievadiet savu **RollWorks reklāmdevēja ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz RollWorks.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz RollWorks.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Atlasiet segmentu, kurā ir vismaz 100 dalībnieku. Nevar eksportēt mazākus segmentus. Turklāt eksportējamā segmenta maksimālais lielums ir 250 000 dalībnieku vienam eksportam. 
 

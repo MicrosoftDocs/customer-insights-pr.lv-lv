@@ -1,7 +1,7 @@
 ---
 title: Klienta darbības
 description: Definējiet klientu darbības un apskatiet tās laika skalā pēc klientu profiliem.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494420"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617978"
 ---
 # <a name="customer-activities"></a>Klienta darbības
 
@@ -24,8 +24,7 @@ Apvienojiet klientu darbības no [dažādiem datu avotiem](data-sources.md) risi
 
 Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākiem datu avotiem. Identificējiet šīs entītijas un atlasiet darbības, kuras vēlaties skatīt klienta laika skalā. Izvēlieties entītiju, kurā ir jūsu mērķa darbība vai darbības.
 
-> [!NOTE]
-> Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut klienta laika skalā, un entītijas bez **Datuma** laukiem nevar pievienot. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
+Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut klienta laika skalā, un entītijas bez **Datuma** laukiem nevar pievienot. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
@@ -41,13 +40,16 @@ Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākie
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**.
 
-1. Darbībā **Attiecības** konfigurējiet informāciju, lai savienotu savas aktivitātes datus ar tai atbilstošo klientu. Šajā darbībā tiek vizualizēts entitīju savienojums.  
+1. Solī **Attiecības** konfigurējiet detalizētu informāciju, lai darbības datus savienotu ar atbilstošo klienta ierakstu. Šajā darbībā tiek vizualizēts entītiju savienojums.  
 
    - **Pirmais**: Ārējs darbību entitījas lauks, kuru izmantos, lai izveidotu relāciju ar citu entitīju.
    - **Otrais**: Atbilstošā avota klienta entitīja, ar kuru jūsu entitījai būs relācija. Ir iespējams izveidot relāciju tikai ar avota klientu entitījām, kuras tiek izmantotas datu apvienošanas procesā.
    - **Trešā**: Ja jau pastāv relācija starp šo darbības entitīju un atlasīto avota klienta entitīju, relācijas nosaukums būs tikai lasāmā režīmā. Ja šāda relācija nepastāv, tiks izveidota jauna relācija ar šajā lodziņā sniegto nosaukumu.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Entītiju relācijas definēšana.":::
+
+   > [!TIP]
+   > B2B vidēs varat atlasīt starp uzņēmuma entītijām un citām entītijām. Atlasot uzņēmuma entītiju, tiek automātiski iestatīts attiecību ceļš. Citām entītijām attiecību ceļš jādefinē pāri vienai vai vairākām entītijām ar aizstācību, līdz tiek sasniegta uzņēmuma entītija.
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. 
 
@@ -95,5 +97,34 @@ Atlasot darbību ir pieejamas šādas darbības.
 - **Pārdēvēt**: Atver dialogu, kurā var ievadīt citu atlasītās darbības nosaukumu. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
 
 - **Dzēst**: Atver dialoglodziņu, kurā var apstriprināt atlasītās darbības dzēšanu. Varat vienlaikus arī dzēst vairāk nekā vienu darbību, atlasot darbības un pēc tam noklikšķinot uz dzēšanas ikonas. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Darbību laika grafiku skatīšana klientu profilos
+
+Pēc klientu darbību konfigurēšanas atlasiet vienumu **Rādīt darbību laika skalā** darbību konfigurācijā, lai atrastu visas klienta darbības savā klienta profilā.
+
+Lai atvērtu klienta laika skalu, dodieties uz **Klienti** un izvēlieties klienta profilu, kuru vēlaties skatīt.
+
+Ja klients ir piedalījies jūsu konfigurētajā darbībā, tā būs sadaļā **Darbības laika grafiks**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Skatiet konfigurētās darbības klientu profilos.":::
+
+Ir vairāki veidi, kā darbību filtrēt darbību laika skalā:
+
+- Varat atlasīt vienu vai vairākas darbību ikonas, lai uzlabotu rezultātus un iekļautu tikai atlasītos tipus.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrējiet darbības pēc tipa, izmantojot ikonas.":::
+
+- Varat atlasīt **Filtrēt**, lai atvērtu filtrēšanas paneli laika skalas filtru konfigurēšanai.
+
+   1. Varat filtrēt pēc *ActivityType* un *Datuma*
+   1. Atlasiet **Lietot**, lai darbību laika skalā izmantotu filtrus.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtrēšanas nosacījumu konfigurēšanai izmantojiet filtrēšanas paneli.":::
+
+Lai noņemtu filtrus, atlasiet blakus katram laika skalai lietotajiem filtriem **x** vai atlasiet vienumu **Notīrīt filtrus**.
+
+
+> [!NOTE]
+> Darbību filtri tiek noņemti, kad atstājat klienta profilu. Tie ir jālieto ikreiz, kad atverat klienta profilu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz LinkedIn Ads
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034232"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618300"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentu eksportēšana uz LinkedIn Ads (priekšskatījums)
 
@@ -28,9 +28,9 @@ Eksportēt vienoto klientu profilu segmentus uz LinkedIn Ads, lai izveidotu Matc
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūs varat eksportēt līdz 100 000 profilu uz katru eksportu uz LinkedIn Ads.
+- Programmā LinkedIn Ads viena eksporta laikā var eksportēt līdz pat 100000 klientu profilu.
 - Eksportēšana uz LinkedIn Ads attiecas tikai uz segmentiem.
-- Līdz 100 000 profilu eksportēšana uz LinkedIn Ads var aizņemt līdz 10 minūtēm. 
+- Līdz pat 100000 klientu profilu eksportēšana uz LinkedIn Ads var aizņemt līdz 10 minūtēm. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Savienojuma ar LinkedIn Ads krātuvi iestatīšana
 
@@ -66,7 +66,7 @@ Eksportēt vienoto klientu profilu segmentus uz LinkedIn Ads, lai izveidotu Matc
 
 1. Izvēlieties, vai vēlaties eksportēt datus, lai sazinātos [ar mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting), [vai uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) LinkedIn. 
 
-1. Sadaļā **Datu salīdzināšana** atlasiet lauku vienotajā klienta profilā, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz LinkedIn Ads.
+1. Sadaļā **Datu atbilstība**, lai atlasītu kontaktpersonu, atlasiet vismaz vienu lauku, kurā ir norādīta klienta e-pasta adrese, Apple Ad ID, Google Ad ID, Google User ID vai vārds un uzvārds. Ja izvēlaties uzņēmuma mērķauditorijas atlasi, atlasiet vismaz vienu lauku, kas apzīmē uzņēmuma nosaukumu, e-pasta domēnu, LinkedIn lapas vietrādi URL, krājumu simbolu vai vietni. Papildu laukus var atlasīt, lai tālāk definētu eksportēšanu. 
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Matched Audiences programmā LinkedIn Campaign Manager tiks automātiski izveidotas ar eksportējamo segmentu nosaukumu. Katrs segments radīs atsevišķu Matched Audience. 
 

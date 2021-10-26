@@ -1,7 +1,7 @@
 ---
 title: Auditorijas ieskatu segmenti
 description: Segmentu pārskats un to izveide un pārvaldība.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036382"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617384"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -26,11 +26,19 @@ Klientu profili, kas atbilst segmenta definīcijas filtriem, tiek saukti par seg
 
 Ir vairāki jauna segmenta izveides veidi: 
 
-- Sarežģīts segments ar segmenta būvētāju [Tukšs segments](segment-builder.md#create-a-new-segment)
-- Vienkārši segmenti ar vienu operatoru: [ātrais segments](segment-builder.md#quick-segments)
-- AI veids, kā atrast līdzīgus klientus: [līdzīgi klienti](find-similar-customer-segments.md)
-- AI sekmēti ierosinājumi, kas balstīti uz pasākumiem vai atribūtiem: [ieteiktie segmenti pasākumu uzlabošanai](suggested-segments.md)
-- Uz darbībām balstīti ieteikumi: [ieteiktie segmenti, pamatojoties uz klientu darbību](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
+
+- Sarežģīts segments ar segmentu veidotāju: [Izveidojiet savu](segment-builder.md#create-a-new-segment) 
+- Vienkārši segmenti ar vienu operatoru: [ātrais segments](segment-builder.md#quick-segments) 
+- AI veids, kā atrast līdzīgus klientus: [līdzīgi klienti](find-similar-customer-segments.md) 
+- AI sekmēti ierosinājumi, kas balstīti uz pasākumiem vai atribūtiem: [ieteiktie segmenti pasākumu uzlabošanai](suggested-segments.md) 
+- Uz darbībām balstīti ieteikumi: [ieteiktie segmenti, pamatojoties uz klientu darbību](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+
+- Sarežģīts segments ar segmentu veidotāju: [Izveidojiet savu](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Esošo segmentu pārvaldība
 
@@ -70,9 +78,9 @@ Segmentu var eksportēt no segmentu lapas vai [eksportēšanas lapas](export-des
 
 1. Darbību nolaižamajā sarakstā atlasiet **Pārvaldīt eksportēšanas darbības**.
 
-1. Tiek atvērta lapa **Segmenta eksports (priekšskatījums)**. Var redzēt visas konfigurētās eksportēšanas darbības, kas grupēts pēc eksporta, kurā ir pašreizējais segments vai kurā tas nav iekļauts.
+1. Tiek atvērta lapa **Segmenta eksports (priekšskatījums)**. Varat skatīt visus konfigurētos eksportus, sagrupētus pēc tā, vai tajos ir iekļauts pašreizējais segments.
 
-   1. Lai atlasīto segmentu pievienotu eksportēšanai, sarakstā atlasiet eksportēt un atlasiet **Pievienot segmentu**.
+   1. Lai pievienotu atlasīto segmentu eksportēšanai, **Rediģējiet** attiecīgo eksportu, lai atlasītu atbilstošo segmentu, un pēc tam saglabājiet. Tā vietā individuālo klientu vidēs varat atlasīt eksportēšanu sarakstā un atlasīt opciju **Pievienot segmentu**, lai sasniegtu tādu pašu rezultātu.
 
    1. Lai izveidotu jaunu eksportu ar atlasīto segmentu, atlasiet **Pievienot eksportēšanu**. Papildinformāciju par eksportēšanas darbību izveidi skatiet rakstā [Jaunas eksportēsanas darbības iestatīšana](export-destinations.md#set-up-a-new-export).
 

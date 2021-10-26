@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Campaign Monitor
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031896"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618990"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentu eksportēšana uz Campaign Monitor (priekšskatījums)
 
@@ -28,10 +28,10 @@ Eksportējiet vienoto klientu profilu segmentus uz Campaign Monitor un izmantoji
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūs varat eksportēt līdz 1 miljonam profilu uz katru eksportu uz Campaign Monitor.
+- Vienā eksportā uz Kampaņas pārraudzīšanu var eksportēt līdz pat 1 miljoniem klientu profilu.
 - Eksportēšana uz Campaign Monitor attiecas tikai uz segmentiem.
-- Līdz 1 miljona profilu eksportēšana uz Campaign Monitor var aizņemt līdz 20 minūtēm. 
-- Profilu, kurus varat eksportēt uz Campaign Monitor skaits ir atkarīgs no jūsu līguma ar Campaign Monitor un attiecas vienīgi uz tā tvērumu.
+- Līdz pat 1 miljoniem klientu profilu eksportēšanai uz Kampaņas pārraudzīšanu var paiet līdz 20 minūtēm. 
+- To klientu profilu skaits, kurus varat eksportēt uz Kampaņas pārraudzīšanu, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Kampaņas pārraudzīšanu.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Savienojuma ar Campaign Monitor iestatīšana
 
@@ -66,7 +66,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Campaign Monitor un izmantoji
 1. Ievadiet savu [**Campaign Monitor saraksta ID**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    Vispirms [Ģenerējiet API atslēgu](https://www.campaignmonitor.com/api/getting-started/) no Campaign Monitor **Konta iestatījumiem**, lai skatītu API saraksta ID.  
 
-3. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Campaign Monitor.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Campaign Monitor.
 
 1. Atlasiet vienumu **Saglabāt**.
 

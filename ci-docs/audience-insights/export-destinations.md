@@ -1,7 +1,7 @@
 ---
 title: Datu eksportēšana no Customer Insights
 description: Pārvaldiet eksportēšanu, lai kopīgotu datus.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034691"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623125"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
-Lapā **Eksportēšana** tiek rādītas visas konfigurētās eksportēšanas. Eksportēšana kopīgo konkrētus datus ar dažādām lietojumprogrammām. Tie var ietvert klientu profilus vai entitījas, shēmas un kartēšanas informāciju. Katrai eksportēšanai ir nepieciešams [administratora iestatīts savienojums, lai pārvaldītu autentifikāciju un piekļuvi](connections.md).
+Lapā **Eksportēšana** tiek rādītas visas konfigurētās eksportēšanas. Eksportēšana kopīgo konkrētus datus ar dažādām lietojumprogrammām. Tajos var būt iekļauti klientu profili, entītijas, shēmas un detalizēta kartēšana. Katrai eksportēšanai ir nepieciešams [administratora iestatīts savienojums, lai pārvaldītu autentifikāciju un piekļuvi](connections.md).
 
 Dodieties uz lapu **Dati** > **Eksportēšana**, lai skatītu eksportēšanas lapu. Visas lietotāju lomas var skatīt konfigurētās eksportēšanas. Izmantojiet komandjoslā esošo meklēšanas lauku, lai atrastu eksportēšanas pēc to nosaukuma, savienojuma nosaukuma vai savienojuma tipa.
 
-## <a name="set-up-a-new-export"></a>Jauna eksporta iestatīšana
+## <a name="export-types"></a>Eksporta veidi
 
+Ir divi galvenie eksporta veidi:  
+
+- Izmantojot **Datu eksportēšanu**, varat eksportēt jebkāda veida entītijas, kas ir pieejamas auditorijas ieskatos. Eksportēšanai atlasītās entītijas tiek eksportētas, izmantojot visus datu laukus, metadatus, shēmas un detalizētu kartēšanas informāciju. 
+- **Segmenta eksports** ļauj eksportēt segmenta entītijas no auditorijas ieskatiem. Segmenti apzīmē klientu profilu sarakstu. Konfigurējot eksportēšanu, jūs atlasāt iekļautos datu laukus atkarībā no mērķa sistēmas, uz kuru eksportējat datus. 
+
+### <a name="export-segments"></a>Segmentu eksportēšana
+
+**Uzņēmējdarbības uzņēmumu (B2B) vai atsevišķu klientu (B2C) segmentu eksportēšana vidēs**  
+Vairākums eksportēšanas opciju atbalsta abus vides tipus. Segmentu eksportēšanai uz dažādām mērķa sistēmām ir noteiktas prasības. Parasti šī informācija, segmenta elements klienta profils, satur kontaktinformāciju. Lai gan parasti tas attiecas uz segmentiem, kas būvēti uz atsevišķiem klientiem (B2C), tas ne vienmēr attiecas uz segmentiem, kuru pamatā ir uzņēmuma uzņēmumi (B2B). 
+
+**Segments eksportē vidi uzņēmuma uzņēmumiem (B2B)**  
+- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties **uzņēmuma** opciju.
+- Visām pārējām mērķa sistēmām nepieciešami kontaktpersonas entītijas lauki. Lai nodrošinātu, ka uzņēmuma segmenti var izgūt datus no saistītajām kontaktpersonām, segmenta definīcijai ir jāmācās ar kontaktpersonas entītijas atribūtiem. Papildinformācija par [segmentu un projekta atribūtu konfigurēšanu](segment-builder.md).
+
+**Segmenta eksportēšana vidē atsevišķiem klientiem (B2C)**  
+- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *vienotā klientu profila* entītijas. Katrs segments, kas atbilst mērķa sistēmu prasībām (piemēram, e-pasta adrese), var tikt eksportēts.
+
+**Segmenta eksportēšanas ierobežojumi**  
+- Trešo pušu mērķa sistēmas var ierobežot eksportējamā klientu profilu skaitu. 
+- Kad atlasāt eksportēšanai segmentu, atsevišķiem klientiem tiek parādīts faktiskais segmenta dalībnieku skaits. Ja segments ir pārāk liels, tiks parādīts brīdinājums. 
+- Attiecībā uz biznesa uzņēmumiem segmentā tiek parādīts uzņēmumu skaits; tomēr netiek rādīts, cik kontaktpersonas, iespējams, tiks prognozētas. Dažos gadījumos tas var novest pie eksportētā segmenta, kurā faktiski ir vairāk klientu profilu, nekā to pieņem mērķa sistēma. Pārsniedzot mērķa sistēmu ierobežojumus, eksportēšana tiks izlaista. 
+
+## <a name="set-up-a-new-export"></a>Jauna eksporta iestatīšana  
 Lai iestatītu vai rediģētu eksportu, ir jābūt pieejamiem savienojumiem. Savienojumi ir atkarīgi no jūsu [lietotāja lomas](permissions.md):
-- Administratoriem ir piekļuve visiem savienojumiem. Viņi var arī eksportēšanas iestatīšanas laikā izveidot jaunus savienojumus.
-- Līdzstrādniekiem nav piekļuves konkrētiem savienojumiem. Viņi ir atkarīgi no administratoriem, kuri konfigurē un kopīgo savienojumus. Eksportēšanas sarakstā tiek rādīti dalībnieki, vai viņi var rediģēt vai tikai skatīt eksportēšanu kolonnā **Jūsu atļaujas**. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Skatītāji var tikai skatīt esošos eksportus, bet nevar tos izveidot.
+- **Administratoriem** ir piekļuve visiem savienojumiem. Viņi var arī eksportēšanas iestatīšanas laikā izveidot jaunus savienojumus.
+- **Līdzstrādniekiem** nav piekļuves konkrētiem savienojumiem. Viņi ir atkarīgi no administratoriem, kuri konfigurē un kopīgo savienojumus. Eksportēšanas sarakstā tiek rādīti dalībnieki, vai viņi var rediģēt vai tikai skatīt eksportēšanu kolonnā **Jūsu atļaujas**. Lai iegūtu papildinformāciju, dodieties uz [Atļaut līdzdalībķiem izmantot savienojumu eksportēšanai](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Skatītāji** var skatīt tikai esošu eksportu — nevis to izveidot.
 
 ### <a name="define-a-new-export"></a>Jauna eksporta iestatīšana
 

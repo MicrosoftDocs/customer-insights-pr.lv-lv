@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470003"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617564"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -27,16 +27,26 @@ Informāciju par auditorijas ieskatiem skatiet sadaļā **Dati** > **Bagātinā�
 
 Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrādnieka vai Administratora atļaujas. Lai iegūtu papildinformāciju, skatiet [Atļaujas](permissions.md).
 
-Cilnē **Atklāt** atradīsiet šādus bagātinātājus:
+Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 
-- [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
+
 - Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
-- [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft
-- Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
+- [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
 - [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
-- [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati
-- [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP)
+- [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+
+# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+
+- Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
+- [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
+- [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
+- [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+
+---
 
 Cilnē **Manas bagātināšanas** varat redzēt jūsu konfigurētos bagātinājumus un rediģēt to rekvizītus.
 
@@ -58,7 +68,7 @@ Vienlaicīgi izpildiet vai deaktivizējiet vairākus bagātinātos bagātinātos
 
 ## <a name="enrichments-and-connections"></a>Bagātināšana un savienojumi
 
-Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connections.md), kurus administrators iestata ar akreditāciju un kuru pārnesei tiek sniegta piekrišana. Administratori un līdzstrādnieki var izmantot savienojumus, lai konfigurētu bagātinātos datus.  
+Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connections.md), kurus administrators iestata ar akreditāciju un kuru pārnesei tiek sniegta piekrišana. Šos savienojumus bagātinājumu konfigurēšanai var izmantot administratori un līdzstrādnieki.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
 

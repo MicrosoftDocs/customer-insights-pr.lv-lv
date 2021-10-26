@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031437"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619220"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentu saraksta eksportēšana uz Facebook Ads Manager (priekšskatījums)
 
@@ -30,7 +30,7 @@ Eksportējiet vienotu klientu profilu segmentus uz Facebook Ads Manager, lai izv
 - Vienā reizē uz Facebook reklāmu pārvaldnieku var eksportēt līdz 10 miljoniem klientu profilu.
 - Eksportēšana uz Facebook Ads Manager ir atļauta tikai segmentiem.
 - Izveidojiet vai atjauniniet pielāgoto auditoriju Facebook no veida tikai *klientu saraksts*.
-- Eksportējot segmentus kopā ar 10 000 000 profiliem, var būt nepieciešamas 90 minūtes.
+- 10 miljona klientu profilu segmentu eksports var ilgt līdz 90 minūtēm.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Savienojuma ar Facebook Ads Manager izveidošana
 

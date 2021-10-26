@@ -1,7 +1,7 @@
 ---
 title: Vižu izveide un pārvaldība
 description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034186"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645135"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
@@ -26,7 +26,7 @@ Lai mainītu vides, lapas augšējā labajā stūrī atlasiet vadīklu **Vide**.
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Vadīklas ekrānuzņēmums, lai pārslēgtu vides.":::
 
-Administratori var [izveidot](get-started-paid.md) un pārvaldīt vides.
+Administratori var [izveidot](create-environment.md) un pārvaldīt vides.
 
 ## <a name="edit-an-existing-environment"></a>Esošas vides rediģēšana
 
@@ -36,23 +36,9 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 
 2.  Atlasiet **Rediģēt** ikonu.
 
-3. Lodziņā **Rediģēt vidi** var atjaunināt vides **Parādāmo nosaukumu**, taču nevar mainīt lauku **Reģions** vai **Tips**.
+3. Lodziņā **Rediģēt vidi** varat atjaunināt vides iestatījumus.
 
-4. Ja vide ir konfigurēta datu glabāšanai programmā Azure Data Lake Storage, varat atjaunināt **Konta atslēgu**. Taču nevar mainīt **Konta nosaukumu** vai **Konteinera** nosaukumu.
-
-5. Ja vēlaties, varat atjaunināt no uzņēmuma atslēgas savienojuma uz resursu vai abonementa bāzes savienojumu. Pēc jaunināšanas jūs nevarat atgriezties pie uzņēmuma atslēgas pēc atjaunināšanas. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Atjauninot savienojumu, nevar mainīt **Konteinera** informāciju.
-
-6. Ja vēlaties, varat sniegt Microsoft Dataverse vides URL sadaļā **Konfigurēt datu kopīgošanu ar Microsoft Dataverse un iespējot papildu iespējas**. Šīs iespējas ietver datu kopīgošanu ar lietojumprogrammām un risinājumiem, balstoties Microsoft Dataverse, datu uzņemšanā no lokālajiem datu avotiem vai [prognožu](predictions.md) lietošanā. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar programmas Microsoft Dataverse pārvaldīto Data Lake.
-
-   > [!NOTE]
-   > - Datu kopīgošana ar programmas Microsoft Dataverse pārvaldīto Data Lake pašlaik netiek atbalstīta, saglabājot visus savus datus jūsu Azure Data Lake Storage.
-   > - [Trūkstošo vērtību prognozēšana entītijā](predictions.md) un PowerBI Embedded atskaitēs auditorijas ieskatos (ja tā ir iespējota jūsu vidē) patlaban nav atbalstīta, ja iespējojat datu kopīgošanu ar Microsoft Dataverse pārvaldīto datu ezeru.
-
-   Kolīdz ir iespējota datu kopīgošana ar Microsoft Dataverse, tiks aktivizēta pilnā jūsu datu avotu atsvaidzināšana un citi procesi. Ja procesi pašlaik ir palaisti un gaida rindā, jums nebūs redzama opcija iespējot datu kopīgošanu ar Microsoft Dataverse. Lai iespējotu datu kopīgošanu, varat pagaidīt, kamēr šie procesi tiek pabeigti, vai tos atcelt. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
-   
-   Palaižot procesus, piemēram, datu uzņemšanas vai segmenta izveidi, tiek izveidotas atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un model.json faili tiks izveidoti un pievienoti atbilstošajām apakšmapēm atkarībā no procesa, kuru palaižat.
+Papildinformāciju par vides iestatījumiem skatiet sadaļā [Jaunas vides izveide](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Izveidojiet vides konfigurācijas kopiju
 

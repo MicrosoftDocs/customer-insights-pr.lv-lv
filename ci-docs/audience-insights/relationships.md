@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557361"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623020"
 ---
 # <a name="relationships-between-entities"></a>Relācijas starp entītijām
 
@@ -67,6 +67,20 @@ Attiecības sastāv no *avota entītijas*, kurā ir iekļaujošā atslēga un *m
    - **Mērķa atslēgas lauks**: Šis lauks norāda mērķa entītijas atslēgas lauku. Piemēram, klients var izmantot atslēgas lauku **CustomerID**.
 
 4. Lai izveidotu pielāgotu relāciju, atlasiet **Saglabāt**.
+
+## <a name="set-up-account-hierarchies"></a>Iestatīt konta hierarhijas
+
+Vides, kas ir konfigurētas, lai uzņēmumu kontus izmantotu kā primāro mērķa auditoriju, var konfigurēt kontu hierarhijas attiecīgajiem uzņēmumiem. Piemēram, uzņēmums, kam ir atsevišķas struktūrvienības. 
+
+Organizācijas veido uzņēmumu hierarhijas, lai labāk pārvaldītu uzņēmumus un to attiecības citam ar citu. Auditorijas ieskatu iespēja atbalsta galveno un pakārtoto uzņēmumu hierarhijas, kas jau pastāv, izmantojot iztvertos klientu datus. Piemēram, uzņēmumi no Dynamics 365 Sales. Šīs hierarhijas var konfigurēt auditorijas ieskatu lapā **Attiecības** zem uzņēmumu hierarhijas cilnes.
+
+1. Dodieties uz **Dati** > **Attiecības**.
+1. Atlasiet cilni **Uzņēmuma hierarhija**.
+1. Atlasiet **Jauna uzņēmuma hierarhija**. 
+1. **Uzņēmumu hierarhijas** rūtī norādiet hierarhijas nosaukumu. Sistēma izveido izvades entītijas nosaukumu. Varat mainīt izvades nosaukuma entītijas nosaukumu.
+1. Atlasiet entītiju, kurā ir iekļauta jūsu uzņēmumu hierarhija. Parasti tā atrodas tajā pašā entītijā, kurā ir uzņēmumi.
+1. Atlasiet no atlasītās entītijas **Uzņēmuma ID** un **Galvenā uzņēmuma ID** 
+1. Atlasiet **Saglabāt**, lai lietotu iestatījumus un pabeigtu uzņēmumu hierarhiju.
 
 ## <a name="view-relationships"></a>Skatīt relācijas
 

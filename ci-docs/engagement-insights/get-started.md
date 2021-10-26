@@ -4,18 +4,18 @@ description: Kopsavilkums par palīdzības resursiem, lai ātri uzsāktu darbu.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494603"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623686"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Darba sākšana ar Dynamics 365 Customer Insights iesaistes ieskatu iespēju (publiskais priekšskatījums)
 
@@ -39,33 +39,47 @@ Pirmoreiz apmeklējot iesaistes ieskatus, varat konfigurēt iestatījumus, pārs
 
 1. Atlasiet savu reģionu un atzīmējiet izvēles rūtiņu, ja vēlaties saņemt atjauninājumus un piedāvājumus e-pastā.
 
-1. Pārskatiet **iesaistes ieskatu (priekšskatījuma) Lietošanas noteikumus** un **Paziņojumu par konfidencialitāti** un pēc tam atlasiet **Izpētīt demonstrāciju**, lai akceptētu šos iestatījumus.
+1. Pārskatiet iesaistes ieskatu (priekšskatījuma) **Lietošanas noteikumus** un **Paziņojumu par konfidencialitāti** un pēc tam atlasiet **Izpētīt demonstrāciju**, lai akceptētu šos iestatījumus.
 
 1. Izpētiet produktu, izmantojot datu paraugu kopu.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>3. darbība. Iestatīt darbvietu un pievienot kodu tīmekļa vietnei
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>3. darbība. Darbvietas iestatīšana un atskaišu izveide
 
 Darbvieta ir vieta, kurā lietotāja darbību varat skatīt reāllaikā un glabāt un pārvaldīt atskaites. Pievienojiet tīmekļa vietnei kodu, lai sāktu apkopot *notikumus*, darbības datus, kas nāk no lietotājiem.
 
 1. [Izveidot darbvietu](create-workspace.md) un pievienot dalībniekus.
 
-1. [Pievienojiet kodu vietnei](instrument-website.md) vai [mobilajai programmai](developer-resources.md#capture-events-from-mobile-apps), lai savā darbvietā skatītu lietotāja darbības.
+1. [Pievienojiet kodu tīmekļa vietnei](instrument-website.md) vai [mobilajai programmai](developer-resources.md#capture-events-from-mobile-apps), lai savā darbvietā skatītu lietotāja darbības.
 
 1. Skatiet [reāllaika atskaiti](view-reports.md), kurā aktīvie lietotāji tiek rādīti pēc pārlūkprogrammas, ierīces, operētājsistēmas, atrašanās vietas un valodas. Varat arī izveidot [pielāgotas atskaites](custom-reports.md), lai izveidotu savas vizualizācijas.
+
+1. Izveidojiet [dimensijas](dimensions.md), lai šķirotu palīgus pēc jauniem un lietotājiem, kas atgriežas, [metrikas](metrics.md), kas palīdz labāk izprast lietotāja uzvedību, un [segmentus](segments.md), lai identificētu bardošanas apakškopas, pamatojoties uz rādītājiem vai mijiedarbību ar vietni.
     
 ## <a name="step-4-export-data-to-other-channels"></a>4. darbība. Eksportēt datus citos kanālos
 
-Varat izveidot *precizētus notikumus* (virtuālu skatu) no jūsu tīmekļa vietnes analīzes datiem. Pēc tam filtrējiet un eksportējiet datus uz Azure Data Lake Storage. Eksportētos datus var lietot kā datu avotu. Papildinformācija: [Izveidot saiti starp auditorijas ieskatiem un iesaistes ieskatiem](integrate-audience-insights-engagement-insights.md).
+Varat izveidot *precizētus notikumus* (virtuālu skatu) no jūsu tīmekļa vietnes analīzes datiem. Pēc tam filtrējiet un eksportējiet datus uz Azure Data Lake Storage. Eksportētos datus var lietot kā datu avotu.
 
 1. [Izveidojiet precizētus notikumus](refined-events.md) eksportēšanai.
 
-1. [Eksportējiet datus](export-events.md) uz Data Lake Storage.
+1. [Datu eksportēšana](export-events.md) uz Azure Data Lake Storage.
 
 1. [Izveidojiet saiti starp auditorijas ieskatiem un iesaistes ieskatiem](integrate-audience-insights-engagement-insights.md), lai kopīgotu datus starp abām iespējām.
 
+1. [Atpazīstiet tīmekļa notikumus no iepriekš autentificētiem lietotājiem](unknown-to-known.md) ar līdzekli **nav zināms**.
+
 1. Uzziniet, kā [dzēst un eksportēt notikumu datus, kuros ir ietverta personiskā informācija](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>5. darbība. Piltuves atskaišu izveide un pārvaldība
+
+Piltuves atskaitē tiek apkopota informācija par darbībām, kas tiek veiktas automatizētas kampaņas laikā jūsu tīmekļa vietnē vai mobilajā programmā. Papildus standarta profila atskaišu un pielāgotu atskaišu veidošanai varat izveidot piltuves atskaiti, lai identificētu klientu ceļus pirms iegādes. 
+
+1. [Izveidojiet piltuves atskaiti, ](funnel-reports.md), lai informētu lēmumus un identificētu jomas, kurās jāveic optimizācijas un procesa uzlabojumi.
+
+1. Izveidojiet starpkanālu piltuves atskaites, kad mobilā programma ir pielāgota, izmantojot iesaistes ieskatus [Android SDK](get-started-android.md) vai [iOS SDK](get-started-ios.md).
+
+1. Izmantojiet [piltuves ieskatus](funnel-reports.md#funnel-insights), lai gūtu dziļāku ieskatu par klientu uzvedību attiecībā uz piltuves atskaites darbībām.
  
-## <a name="step-5-stay-connected"></a>5. darbība. Palikt savienotam
+## <a name="step-6-stay-connected"></a>6. darbība. Palikt savienotam
 
 Mēs novērtējam jūsu aktīvo dalību un izvērtējam visas attiecīgās atsauksmes, izstrādājot turpmākus laidienus. Dalieties ar savām atsauksmēm un ziņojiet par problēmām kādā no šiem kanāliem:
 - [Kopiena](https://go.microsoft.com/fwlink/?linkid=2141648)

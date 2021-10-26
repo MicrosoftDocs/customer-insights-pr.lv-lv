@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465214"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606101"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -26,6 +26,20 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>2021. gada septembra atjauninājumi
+
+2021. gada septembra atjauninājumos ir ietverti jauni līdzekļi, veiktspējas uzlabojumi un kļūdu labojumi.
+
+### <a name="activities"></a>Darbības
+
+- **Darbības laika grafika uzlabojumi** Mēs esam paplašināti darbību laika skalas filtrus klientu profiliem. Turklāt varat lietot jauno filtru, lai filtrētu pēc darbības tipa un datuma. Datumus var filtrēt, izmantojot dažādus nosacījumus. Papildinformāciju skatiet sadaļā [Darbību laika grafiku skatīšana klientu profilos](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Attiecības
+
+- **Vairāku ierakstu attiecību atbalsts**: konfigurējot darbības un definējot entītiju attiecības, izmantojiet attiecības ar vairākiem uzņēmumiem. Attiecības ar vairākiem uzņēmumiem izmanto sekundāro entītiju, lai savienotu divas entītijas. Konfigurējot darbību, varat izmantot attiecības, kas veido vairāku darbību attiecības, lai darbības entītiju savienotu ar entītiju, kas veido sekundāro darbību, un pēc tam ar klienta entītiju. Vairāku darbību attiecības var apvienot ar vairāku ceļu attiecībām. Papildinformāciju skatiet [Vairāku darbību attiecības](relationships.md#multi-hop-relationship).
+
+- **Vairāku ceļu attiecību atbalsts** Konfigurējot darbības un definējot entītiju attiecības, izmantojiet vairāku ceļu attiecības. Vairāku ceļu attiecības avota entītiju saista ar vairākām entītijām. Konfigurējot darbību, varat izmantot attiecības, kas veido vairāku ceļu attiecības, lai darbības entītiju savienotu ar entītiju, kas veido sekundāro darbību, un pēc tam ar vairāk nekā vienu klienta entītiju. Vairāku darbību attiecības var apvienot ar vairāku ceļu attiecībām. Papildinformāciju skatiet [Vairāku ceļu attiecības](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>2021. gada augusta atjauninājumi
 

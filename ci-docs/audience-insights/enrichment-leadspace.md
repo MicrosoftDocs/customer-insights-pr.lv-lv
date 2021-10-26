@@ -1,32 +1,32 @@
 ---
 title: Uzņēmumu profilu bagātināšana ar trešās puses bagātināšanas programmu Leadspace
 description: Vispārēja informācija par Leadspace trešās puses bagātināšanu.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031712"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617410"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
 
-Leadspace ir datu zinātnes uzņēmums, kas nodrošina B2B klientu datu platformu. Tā nodrošina klientiem vienotus klientu profilus, lai uzņēmumi bagātinātu datus. Bagātinātie dati ietver vairākus atribūtus, piemēram, uzņēmuma izmēru, atrašanās vietu, nozari u.c.
+Leadspace ir datu zinātnes uzņēmums, kas nodrošina B2B klientu datu platformu. Tas ļauj vidēm ar vienotiem klientu profiliem, kuru pamatā ir uzņēmumi, bagātināt viņu datus. Bagātināt *klientu profilus* ar atribūtiem, piemēram, uzņēmuma lielumu, atrašanās vietu vai nozari. Bagātināt *kontaktpersonu profilus* ar atribūtiem, piemēram, amatu, personu vai e-pasta pārbaudi.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 Lai konfigurētu Leadspace, ir jāizpilda tālāk aprakstītie priekšnosacījumi:
 
 - Jums ir aktīva Leadspace licence.
-- Jums ir [vienoti klientu profili](customer-profiles.md) uzņēmumiem.
-- Administrators jau ir konfigurējis Leadspace savienojumu vai jums ir [administratora](permissions.md#administrator) atļaujas un “pastāvīgā atslēga” (jeb **Leadspace marķieris**). Tieši sazinieties ar [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/), lai iegūtu informāciju par produktu.
+- Jums ir [vienoti klientu profili](customer-profiles.md), kuru pamatā ir uzņēmumi.
+- Administrators jau ir konfigurējis Leadspace savienojumu vai jums ir [administratora](permissions.md#administrator) atļaujas un “pastāvīgā atslēga” (jeb **Leadspace marķieris**). Tieši sazinieties ar [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/), lai iegūtu informāciju par produktu.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
@@ -50,6 +50,10 @@ Lai konfigurētu Leadspace, ir jāizpilda tālāk aprakstītie priekšnosacījum
 
 1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
 
+1. Atzīmējiet izvēles rūtiņu, ja jums ir *Kontaktpersonu profili*, ko vēlaties bagātināt. Auditorijas ieskati automātiski kartē nepieciešamos laukus.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Leadspace vietas kontaktpersonu ierakstu bagātināšana.":::
+ 
 1. Norādiet bagātināto datu nosaukumu un pēc izvēles pārskatīšanas atlasiet **Saglabāt bagātinātos datus**.
 
 
@@ -81,7 +85,8 @@ Papildinformāciju skatiet tēmā [Leadspace API](https://support.leadspace.com/
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

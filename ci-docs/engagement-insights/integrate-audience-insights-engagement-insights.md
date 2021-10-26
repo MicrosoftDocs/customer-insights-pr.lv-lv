@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559027"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645591"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Izveidot saiti starp auditorijas ieskatiem un iesaistes ieskatiem
 
@@ -26,7 +26,7 @@ Izmantojiet vienotos profilus un segmentus no auditorijas ieskatiem, lai iesaist
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Auditorijas ieskatu profili ir jāsaglabā jums piederošajā Azure Data Lake Storage kontā vai [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;pārvaldītā datu ezerā. 
-- Arī auditorijas ieskatu videi ir jābūt saistītai Dataverse videi. Un, ja šī vide datu krātuvei izmanto arī Dataverse, nodrošiniet, lai auditorijas ieskatos būtu pieejama opcija **Iespējot datu kopīgošanu**. Papildinformācija: [Izveidot un konfigurēt apmaksātu vidi auditorijas ieskatiem un iesaistes ieskatos](../audience-insights/get-started-paid.md).
+- Arī auditorijas ieskatu videi ir jābūt saistītai Dataverse videi. Un, ja šī vide datu krātuvei izmanto arī Dataverse, nodrošiniet, lai auditorijas ieskatos būtu pieejama opcija **Iespējot datu kopīgošanu**. Papildinformāciju skatiet sadaļā [Vides izveide un konfigurēšana auditorijas ieskatos](../audience-insights/create-environment.md).
 - Administratora atļaujas ir nepieciešamas gan iesaistes ieskatu, gan auditorijas ieskatu vidē.
 - Saistītajām vidēm ir jābūt vienā un tajā pašā ģeogrāfiskā reģionā.
 

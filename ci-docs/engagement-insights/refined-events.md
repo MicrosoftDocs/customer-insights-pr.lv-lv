@@ -1,72 +1,97 @@
 ---
-title: Precizētu notikumu izveide un modificēšana
-description: Kā izveidot un modificēt precizētus notikumus.
+title: Notikumu izveide un modificēšana
+description: Kā izveidot un modificēt notikumus.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034783"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606238"
 ---
-# <a name="create-and-modify-refined-events"></a>Precizētu notikumu izveide un modificēšana
+# <a name="create-and-modify-events"></a>Notikumu izveide un modificēšana
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Notikums ir dati, kas norāda lietotāja uzvedību, piemēram, darbību tīmekļa vietnē.
 
 - *Pamata* notikums ieraksta, kad lietotājs skata lapu (skata notikumu) vai mijiedarbojas ar saturu (darbības notikums).
 - *Precizēts* notikums ir pamata notikuma virtuāls skats. Noņemot un pievienojot rekvizītus vai filtrējot notikumus, kas balstīti uz rekvizītu vērtībām, definējat notikumus.
 
+## <a name="prerequisites"></a>Priekšnosacījumi
+
+Lai iegūtu notikumus, tīmekļa vietnes dati ir jāsavieno ar iesaistes ieskatiem, izmantojot vienkāršu koda fragmentu. Papildinformāciju skatiet [vietnes tīmekļa SDK instalēšana](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Vispirms savienojiet datus.":::
+
+## <a name="create-refined-events"></a>Precizētu notikumu izveide
+
 Izmantojiet rakstos esošos notikumus, lai samazinātu pamata notikumu tvērumu [eksportēšanai](export-events.md) vai rekvizītu noņemšanai, kas nav nepieciešams vēlamajā notikumā.
 
-## <a name="create-refined-events"></a>Izsmalcinātu notikumu izveide
+> [!NOTE]
+> Kad vietnei pievienosit tīmekļa SDK, varat apskatīt pamata notikumus un izveidot rakstos notikumus. 
 
-Ir trīs veidi, kā no pamata notikuma izveidot precizētu notikumu. 
+Lai skatītu pamata notikumus:
 
-1. Dodieties uz **Dati**> **Notikumi** un izvēlieties kādu no šīm opcijām:
-    - Atlasiet **Jauni notikumi** un pēc tam atlasiet **Izveidot precizētus notikumus**.
-    - Atlasiet pamata notikumu, lai atvērtu detalizētu skatu un augšējā izvēlnē atlasiet vienumu **Izveidot precizētus notikumus**.
-    - Atlasiet **Vairāk [...]**, lai atvērtu pamata notikuma īsinājumizvēlni. Pēc tam atlasiet opciju **Izveidot precizētus notikumus**.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="Iespējas, lai izveidotu precizētus notikumus.":::
+1. Kreisās puses navigācijas rūtī dodieties uz **Dati**.
 
-1. Dialoglodziņā **Izveidot precizētus notikumus** ievadiet tālāk minēto informāciju.
+1. Atlasiet **Notikumi**, lai skatītu visu darbvietas notikumu sarakstu.
 
-- Ja veidojat jaunu notikumu, nolaižamajā izvēlnē **Pamata notikumi** atlasiet notikumu.
-- Lodziņā **Precizēto notikumu parādāmais nosaukums** ievadiet nosaukumu.
-- Ja vēlaties, atjauniniet ieteikto **Faktisko nosaukumu**, neizmantojot atstarpes.
+    :::image type="content" source="media/data-events.png" alt-text="Skatīt notikumus.":::
 
-3. Lai lietotu iestatījumus, atlasiet vienumu **Izveidot**.
+Lai izveidotu precizētu notikumu no pamata notikuma: 
 
-1. Detalizētajā skatā par precizētajiem notikumiem, atlasiet vienumu **Pievienot un noņemt rekvizītus**, lai atvērtu rūti **Rediģēt rekvizītus**. 
+1. Dodieties uz **Dati** > **Notikumi** un ekrāna augšdaļā atlasiet **+ Jauni notikumi**.
 
-1. Atzīmējiet izvēles rūtiņas, lai atlasītu rekvizītus, ko vēlaties rādīt, un tos, ko vēlaties paslēpt. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Rediģēt rekvizītus precizētiem notikumiem.":::
+1. Dialoglodziņā **Jauni notikumi** atlasiet **Izveidot precizētus notikumus** un pēc tam atlasiet **Tālāk**.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Jaunu notikumu vednis.":::
+     
+1. Dialoglodziņā **Jauni notikumi** ievadiet šādu informāciju:
 
-1. Atlasiet vienumu **Apstiprināt**, lai lietotu jūsu izvēli.
+   - Nolaižamajā izvēlnē **Pamata notikumi** atlasiet notikumu.
+   - Lodziņā **Precizēto notikumu parādāmais nosaukums** ievadiet nosaukumu.
+   - Ja vēlaties, atjauniniet ieteikto **Faktisko nosaukumu**, neizmantojot atstarpes.
 
-1. Atlasiet **Saglabāt**, lai saglabātu konfigurāciju.
+1. Lai lietotu iestatījumus, atlasiet vienumu **Izveidot**.
 
-## <a name="edit-refined-events"></a>Precizētu notikumu rediģēšana
-
-Varat mainīt precizētā notikuma nosaukumu un rekvizītus.
+Tagad precizētais notikums tiek parādīts **Notikumu** sarakstā.
 
 ### <a name="edit-event-name"></a>Rediģēt notikuma nosaukumu
 
-1. Doties uz **Dati** > **Notikumi**. 
-1. Atlasiet **Vairāk [...]** notikumam un atlasiet **Rediģēt nosaukumu**.
-1. Atjauniniet notikuma nosaukumu un atlasiet **Pārdēvēt**.
+Varat mainīt pamata vai precizētā notikuma nosaukumu un rekvizītus.
 
-### <a name="edit-selected-properties"></a>Rediģēt atlasītos rekvizītus
+1. Doties uz **Dati** > **Notikumi**. 
+
+1. Atlasiet **Vairāk [...]** notikumam un atlasiet **Rediģēt nosaukumu**.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="Iespējas, lai izveidotu precizētus notikumus.":::
+
+3. Atjauniniet notikuma nosaukumu un atlasiet **Pārdēvēt**.
+
+### <a name="view-the-details-of-a-refined-event"></a>Skatiet detalizētu informāciju par precizētu notikumu:
+
+1. **Notikumu** sarakstā atlasiet savu pamata vai precizēto notikumu. 
+
+1. Lai atvērtu rūti **Rediģēt rekvizītus**, ekrāna augšdaļā atlasiet **Pievienot un noņemt rekvizītus**. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Rekvizītu pievienošana un noņemšana.":::
+
+1. Atzīmējiet izvēles rūtiņas, lai atlasītu rekvizītus, ko vēlaties rādīt, un tos, ko vēlaties paslēpt. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Rediģēt rekvizītus precizētiem notikumiem.":::
+
+1. Atlasiet **Apstiprināt**, lai lietotu atlasi, un pēc tam atlasiet **Saglabāt**.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Rediģēt atlasītos precizētā notikuma rekvizītus
 
 1. Dodieties uz **Dati** > **Notikumi** un atlasiet precizētos notikumus, lai atvērtu detalizēto skatu.
 1. Atlasiet vienumu **Pievienot un noņemt rekvizītus**. 

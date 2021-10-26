@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Omnisend
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031775"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619037"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentu eksportēšana uz Omnisend (priekšskatījums)
 
@@ -28,9 +28,9 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Uz Omnisend var eksportēt līdz pat 1 miljonam profilu, un tas var ilgt līdz 4 stundām.
+- Uz programmu Omnisend var eksportēt līdz pat 1 miljonam klientu profilu, un tas var ilgt līdz 4 stundām.
 - Eksportēšana uz Omnisend attiecas tikai uz segmentiem.
-- Uz Omnisend var eksportēt profilus, kas ir atkarīgi no jūsu līguma ar Omnisend.
+- To klientu profilu skaits, ko var eksportēt uz Omnisend, ir atkarīgs no jūsu līguma ar Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Savienojuma ar Omnisend iestatīšana
 
@@ -62,7 +62,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Omnisend. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Omnisend. Ja vēlaties, varat eksportēt Vārdu, Uzvārdu, Pilsētu, Pavalsti un Valsti/reģionu, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Omnisend. Ja vēlaties, varat eksportēt Vārdu, Uzvārdu, Pilsētu, Pavalsti un Valsti/reģionu, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 
 1. Atlasiet vienumu **Saglabāt**.
 

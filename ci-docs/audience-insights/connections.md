@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033227"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605958"
 ---
 # <a name="connections-preview-overview"></a>Savienojumu (priekšskatījums) pārskats
 
@@ -47,6 +47,7 @@ Lai pievienotu savienojumu, ir jābūt [administratora atļaujām](permissions.m
 1. Rūtī **Iestatīt savienojumu** norādiet nepieciešamo informāciju. 
    1. **Parādāmais nosaukums** un nosaukuma veids raksturo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
    1. Precīzie lauki ir atkarīgi no tā, kādam pakalpojuma pieslēdzaties. Varat sīkāk uzzināt par konkrēto savienojuma veidu rakstā par mērķa pakalpojumu.
+   1. Ja jūs [izmantojat savu Key Vault](use-azure-key-vault.md), lai glabātu slepenu informāciju, aktivizējiet **Izmantot Key Vault** un sarakstā izvēlieties slepeno informāciju.
 
 1. Lai izveidotu savienojumu, atlasiet **Saglabāt**.
 
@@ -93,3 +94,6 @@ Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās a
 
 1. Lai apstiprinātu dzēšanu, atlasiet **Noņemt**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Savienojumu izveide ar slepeno informāciju, ko pārvalda jūsu Key Vault
+
+Dažiem savienojumiem ir nepieciešama slepenas informācijas lietošana, piemēram, API atslēgas vai paroles. Daži savienojumi atbalsta slepeno informāciju, kas tiek glabāta jūsu Key Vault krātuvē. Uzziniet vairāk par atbalstītajiem savienojumiem un to, kā iestatīt [savu Key Vault auditorijas ieskatiem](use-azure-key-vault.md).

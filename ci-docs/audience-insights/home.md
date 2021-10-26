@@ -1,7 +1,7 @@
 ---
 title: Sākumlapa rīkā auditorijas ieskati
 description: Sāciet lietotnes izpēti sākumlapā.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470002"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617703"
 ---
 # <a name="explore-audience-insights"></a>Auditorijas ieskatu izpēte
 
@@ -23,7 +23,7 @@ Jūs varat [piekļūt auditorijas ieskatiem no programmas Dynamics 365 Customer 
 
 :::image type="content" source="media/home-page.png" alt-text="Sākuma ekrāna ekrāns, kurā parādīti ieskatu paraugi.":::
 
-1 — pārslēdzieties starp Customer Insights iespējām 2 — izmantojiet kreiso rūti, lai naviģētu starp dažādiem apgabaliem 3 — informācija par to, kurā vidē strādājat un kuru vidi pārvaldāt kā administrators 4 — personisko iestatījumu norādīšana programmas Customer Insights vajadzībām
+1 — pārslēdzieties starp Customer Insights 2 iespējām — izmantojiet kreiso rūti, lai naviģētu starp dažādiem apgabaliem un izvēlētos primāro mērķa auditoriju 3 — uzziniet, kurā vidē strādājat un kuru vidi pārvaldāt kā administratoru 4 — Customer Insights personisko iestatījumu norādīšana
 
 Sadaļā **Nesen izmantotie segmenti** tiek rādītas klientu grupas, pamatojoties uz jūsu definētajiem demogrāfiskajiem, uzvedības vai transakciju atribūtiem. [Izveidojot segmentus](segments.md), varat grupēt klientu bāzi un labāk izvēlēties uzņēmējdarbības mērķauditoriju.
 

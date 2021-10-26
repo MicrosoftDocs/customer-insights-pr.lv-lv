@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz DotDigital
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034645"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618392"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentu eksportēšana uz DotDigital (priekšskatījums)
 
@@ -22,17 +22,17 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
--   Jums ir [DotDigital konts](https://dotdigital.com/) un atbilstošie administratora akreditācijas dati.
+-   Jums ir [DotDigital konts](https://dotdigital.com/) un esat izveidojis [API lietotāju](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Lai izveidotu savienojumu, jums ir jāizmanto API lietotāja akreditācijas dati
 -   DotDigital ir esošas adrešu grāmatas un attiecīgie ID. ID var atrast URL, kad atlasāt un atverat adrešu grāmatu. Papildinformāciju skatiet vietnē [DotDigital adrešu grāmatas](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Jums ir [konfigurēti segmenti](segments.md) auditorijas ieskatos.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 000 000 profilu, eksportējot uz DotDigital.
+- Līdz 1 miljoniem klientu profilu vienai eksportēšanai uz DotDigital.
 - Eksportēšana uz DotDigital ir ierobežota līdz segmentiem.
-- Segmentu eksportēšanai kopā ar 1 000 000 profilu var būt nepieciešamas 3 stundas, jo pastāv ierobežojumi no pakalpojuma sniedzēja puses. 
-- To profilu skaits, ko var eksportēt uz DotDigital, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar DotDigital.
+- Eksportējot segmentus, kuru kopējais klientu profilu skaits ir 1 miljonus klientu, pakalpojumu sniedzēju puses ierobežojumu dēļ var ilgt 3 stundas. 
+- To klientu profilu skaits, kurus varat eksportēt uz DotDigital, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Savienojuma ar DotDigital iestatīšana
 
@@ -44,7 +44,7 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Ievadiet savu **DotDigital lietotājvārdu un paroli**.
+1. Ievadiet savu **DotDigital API lietotājvārdu un paroli**. 
 
 1. Ievadiet savu **[DotDigital adrešu grāmatas ID](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas DotDigital. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**, **Pilns vārds**, **Dzimums** un **Pasta indekss**.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**, **Pilns vārds**, **Dzimums** un **Pasta indekss**.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Kopsummā var eksportēt līdz 1 000 000 klientu profilu uz DotDigital.
 

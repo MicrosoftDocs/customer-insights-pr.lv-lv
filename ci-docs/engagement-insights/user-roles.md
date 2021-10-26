@@ -4,27 +4,33 @@ description: Darbvietas dalībniekiem pieejamo lomu un atļauju pārskats.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036702"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645546"
 ---
 # <a name="roles-and-permissions"></a>Lomas un atļaujas
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Darbvieta ir notikumu un atskaišu glabāšanas un pārvaldīšanas veids. Dalībnieks ir lietotājs, kas var piekļūt darbvietai. Jūsu darbvietai varat piešķirt dalībniekus un definēt to lomas un atļaujas. Administratora lomas pārvalda darbvietas un vides, konfigurējot ieskatus par piesaistīšanu citiem lietotājiem. Līdzdalībnieku lomas ir pielāgotas analītiķiem, kuriem nav nepieciešams konfigurēt iesaistes ieskatus, bet vēlas izveidot savas atskaites, piltuves vai segmentus.
+Darbvieta ir notikumu un atskaišu glabāšanas un pārvaldīšanas vieta. Papildinformāciju skatiet rakstā [Darbvietas izveide un dalībnieku pievienošana ](create-workspace.md). 
+
+Darbvietā var būt iekļautas šādas lomas un atļaujas:
+
+- *Dalībnieku* lomas ir lietotāji, kas var piekļūt darbvietai. Jūsu darbvietai varat piešķirt dalībniekus un definēt to lomas un atļaujas. 
+- *Administratora* lomas pārvalda darbvietas un vides, konfigurējot ieskatus par piesaistīšanu citiem lietotājiem. 
+- *Līdzdalībnieku* lomas ir pielāgotas analītiķiem, kuriem nav nepieciešams konfigurēt iesaistes ieskatus, bet vēlas izveidot savas atskaites, piltuves vai segmentus.
 
 ## <a name="permissions"></a>Atļaujas
   
-Tālāk sniegtā diagramma identificē katras lomas atļaujas. 
+Tālāk sniegtajā tabulā ir identificētas katras lomas atļaujas. 
 
 | Atļauja | Vides administrators | Darbvietas administrators | Vides līdzstrādnieks | Darbvietas līdzstrādnieks | 
 |--|--|--|--|--|
