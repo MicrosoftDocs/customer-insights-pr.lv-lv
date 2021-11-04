@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645708"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673400"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Izveidot vidi auditorijas ieskatos
 
@@ -46,7 +46,7 @@ Vadītā pieredze palīdz veikt darbības, kas jāveic, lai apkopotu visu nepiec
 
 Sniedziet šādu informāciju:
    - **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt.
-   - **Izvēlieties savu biznesu**: izvēlieties jaunās vides primāro mērķauditoriju. Varat strādāt ar atsevišķiem klientiem (B2C) vai [biznesa uzņēmumiem](work-with-business-accounts.md) (B2B).
+   - **Izvēlieties savu biznesu**: izvēlieties jaunās vides primāro auditoriju. Jūs varat strādāt ar individuāliem klientiem (B2C) vai [biznesa uzņēmumiem](work-with-business-accounts.md) (B2B).
    - **Veids**: Atlasiet, vai vēlaties veidot ražošanas vai smilškastes vidi. Smilškastes vidēs nevar veikt plānotu datu atsvaidzināšanu, un tās ir paredzētas iepriekšējai ieviešanai un testēšanai. Smilškastes vides izmanto to pašu primāro mērķauditoriju, kas ir pašlaik atlasītā ražošanas vide.
    - **Reģions**: Reģions, kurā tiek izvietots un viesots pakalpojums.
 
@@ -54,7 +54,7 @@ Sniedziet šādu informāciju:
 
 **Datu krātuves** solī izvēlieties, kur glabāt datus, izmantojot auditorijas ieskatus.
 
-Jums ir divas iespējas: **Customer Insights krātuve** (Azure Data Lake, ko pārvalda Customer Insights darba grupa) un **Azure Data Lake Storage** (jūsu pārvaldīta Azure Data Lake Storage). Pēc noklusējuma tiek atlasīta opcija Customer Insights krātuve.
+Jums ir divas iespējas: **Customer Insights krātuve** (Azure Data Lake, ko pārvalda Customer Insights darba grupa) un **Azure Data Lake Storage** (jūsu pašu Azure Data Lake Storage). Pēc noklusējuma tiek atlasīta opcija Customer Insights krātuve.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Izvēlieties, kurā Azure Data Lake Storage glabāt auditorijas ieskatu datus.":::
 
@@ -66,7 +66,7 @@ Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsū
 > - Azure Data Lake Storage konti no tā paša Azure reģiona, kas tika atlasīts vides izveides laikā.
 > - Azure Data Lake Storage uzņēmumi, kuriem ir iespējota *hierarhiska nosaukumvieta*.
 
-Programmas Azure Data Lake Storage opcijai varat izvēlēties uz resursiem balstītu opciju un uz abonēšanu balstītu autentifikācijas opciju. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). **Konteinera** nosaukums būs `customerinsights`, un to nevar mainīt.
+Programmas Azure Data Lake Storage opcijai varat izvēlēties uz resursiem balstītu opciju un uz abonēšanu balstītu autentifikācijas opciju. Papildinformāciju skatiet sadaļā [Savienojuma izveide Azure Data Lake Storage ar uzņēmumu, izmantojot Azure pakalpojuma vadītāju](connect-service-principal.md). **Konteinera** nosaukums būs `customerinsights`, un to nevar mainīt.
 
 Kad sistēmas procesi, piemēram, datu induel izpildīšana, sistēma izveido atbilstošas mapes jūsu norādītajā krātuves kontā. Datu faili un *model.json* faili tiek izveidoti un pievienoti mapēm, pamatojoties uz procesa nosaukumu.
 
@@ -82,8 +82,8 @@ Lai izmantotu [standarta prognožu modeļus](predictions-overview.md#out-of-box-
 
 > [!NOTE]
 > Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:
-> - Ja saglabāsit visus datus pats savā Azure Data Lake Storage, jūs nevarēsit iespējot datu kopīgošanu ar Microsoft Dataverse Managed Data Lake.
-> - Ja iespējosit datu kopīgošanu ar Microsoft Dataverse Managed Data Lake, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
+> - Ja saglabāsit visus datus pats savā Azure Data Lake Storage, jūs nevarēsit iespējot datu kopīgošanu ar Dataverse pārvaldīto Data Lake.
+> - Ja iespējosit datu kopīgošanu ar Dataverse, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. darbība. Iestatījumu pabeigšana
 
@@ -93,7 +93,7 @@ Lielāko daļu iestatījumu varat mainīt arī vēlāk. Papildinformācijai skat
 
 ## <a name="work-with-your-new-environment"></a>Darbs ar jauno vidi
 
-Lai palīdzētu sākt Customer Insights konfigurēšanu, pārskatiet tālāk norādītos rakstus. 
+Lai palīdzētu sākt Customer Insights konfigurēšanu, pārskatiet šos rakstus: 
 
 - [Pievienojiet vairāk lietotāju un piešķiriet atļaujas](permissions.md).
 - [Izgūstiet savus datu avotus](data-sources.md) un palaidiet tos [datu unificēšanas procesā](data-unification.md), lai iegūtu [vienotos klientu profilus](customer-profiles.md).

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617564"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673008"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -29,7 +29,7 @@ Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrā
 
 Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 
-# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
 - Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
@@ -38,7 +38,7 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
 
-# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 

@@ -1,7 +1,7 @@
 ---
 title: Darba sākšana ar uzņēmuma uzņēmumiem kā primārā mērķa auditorija
 description: Darba sākšana ar uzņēmuma uzņēmumiem kā primārā mērķa auditorija programmā Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644997"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673696"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Darbs ar biznesa uzņēmumiem auditorijas ieskatos
 
-Izmantojot auditorijas ieskatu iespējas programmā Dynamics 365 Customer Insights, varat konfigurēt vidi dažādām primārajām mērķa auditorijām: atsevišķiem klientiem (B2C) un uzņēmuma kontiem (B2B). B2C scenārijos dati tiek centrēti uz atsevišķiem indivīdiem. B2B vajadzībām primārā mērķa auditorija ir uzņēmumi — organizācijas vai uzņēmumi — un kontaktpersonas. Šis raksts palīdz sākt darbu ar uzņēmumu kontu vidi. Atkarībā no vides jomas tajā ir uzskaitītas atšķirības auditorijas ieskatos līdzekļu apgabalos. Lai iegūtu papildinformāciju par atšķirībām, pārskatiet līdzekļu apgabalu dokumentus. 
+Izmantojot auditorijas ieskatu iespējas programmā Dynamics 365 Customer Insights, varat konfigurēt vidi dažādām primārajām mērķa auditorijām: atsevišķiem klientiem (B2C) un uzņēmuma kontiem (B2B). B2C scenārijos dati tiek centrēti uz atsevišķiem indivīdiem. B2B vajadzībām primārā mērķa auditorija ir uzņēmumi - organizācijas vai uzņēmumi - un kontaktpersonas. Šis raksts palīdz sākt darbu ar uzņēmumu kontu vidi. Atkarībā no vides jomas tajā ir uzskaitītas atšķirības auditorijas ieskatos līdzekļu apgabalos. Lai iegūtu papildinformāciju par atšķirībām, pārskatiet līdzekļu apgabalu dokumentus. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Vides izveide uzņēmuma kontiem
 
@@ -32,7 +32,7 @@ Pēc datu vienošanas [norādiet uzņēmumu hierarhijas](relationships.md#set-up
 
 Ja jūsu organizācija uztur vidi atsevišķiem klientiem un biznesa uzņēmumiem, varat kreisajā rūtī lietot pārslēdzēju, lai izvēlētos primāro mērķa mērķauditoriju.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Pārslēdzējs, lai mainītu primāro mērķa auditoriju starp atsevišķiem klientiem un biznesa uzņēmumiem.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Pārslēdzējs, lai mainītu primāro mērķa auditoriju starp atsevišķiem klientiem un biznesa uzņēmumiem.":::
 
 ## <a name="supported-feature-areas"></a>Atbalstīto līdzekļu reģioni
 

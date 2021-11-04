@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648171"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673272"
 ---
 # <a name="map-entities-and-attributes"></a>Kartējiet entītijas un atribūtus
 
@@ -96,7 +96,7 @@ Turpiniet ar apvienošanās darbībām un nodrošiniet, ka darbībā [Sapludinā
 
 Organizācijām (priekšskatījums) atribūta tipam ir jābūt kartētam uz “Organization.Name”.
 > [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips B2B](media/configure-data-map-edit-b2b.png "Primārā atslēga un atribūta tips B2B")
+> ![Primārā atslēga un atribūta tips B2B.](media/configure-data-map-edit-b2b.png "Primārā atslēga un atribūta tips B2B")
 
 ## <a name="next-step"></a>Nākamā darbība
 

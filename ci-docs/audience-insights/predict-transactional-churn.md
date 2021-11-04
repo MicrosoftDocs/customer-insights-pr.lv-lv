@@ -1,7 +1,7 @@
 ---
 title: Transakciju zuduma prognoze
 description: Prognozējiet, vai pastāv risks, ka klients vairs neiegādāsies jūsu uzņēmuma produktus vai pakalpojumus.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643420"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673054"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -28,6 +28,32 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 > Izmēģiniet Pretskatīšanas pamācību, kas tiek izmantota prognoze izmantojot datu paraugu: [Transakciju zuduma prognozes (priekšskatījums) parauga rokasgrāmata](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
+
+# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
+
+- Vismaz [Līdzautora atļaujas](permissions.md) Customer Insights.
+- Biznesa zināšanas, lai saprastu, ko zudums nozīmē jūsu uzņēmumam. Mēs atbalstām uz laiku balstītu zudumu definīcijas, kas nozīmē, ka klients ir uzskatāms par zudušu pēc perioda bez pirkumiem.
+- Dati par jūsu transakcijām/pirkumiem un to vēsturi:
+    - Transakciju identifikatori, lai atšķirtu pirkumus/transakcijas.
+    - Klientu identifikatori, lai saskaņotu transakcijas ar klientiem.
+    - Darbības notikuma datumi, kuros definēti transakcijas datumi.
+    - Attiecībā uz pirkumu/transakciju semantisko datu shēmu ir nepieciešama šāda informācija:
+        - **Transakcijas ID**: Unikāls pirkšanas vai transakcijas identifikators.
+        - **Transakcijas datums**: Pirkšanas vai transakcijas datums.
+        - **Transakcijas vērtība**: Transakcijas/krājuma valūtas/skaitliskās vērtības summa.
+        - (Neobligāti) **Unikāls produkta ID**: Produkta vai servisa ID, kas iegādāts, ja dati ir rindas elementu līmenī.
+        - (Neobligāti) **Vai šī transakcija ir atgriezta**: Patiess/aplams lauks, kas norāda, vai transakcija ir atgriezta vai ne. Ja **Transakcijas vērtība** ir negatīva, mēs arī izmantosim šo informāciju, lai secinātu par peļņu.
+- (Neobligāti) Dati par klientu darbībām:
+    - Darbības identifikatori, lai nodalītu tāda paša tipa darbības.
+    - Klientu identifikatori darbību kartēšanai jūsu klientiem.
+    - Darbības informācija, kas ietver darbības nosaukumu un datumu.
+    - Klienta darbību semantisko datu shēma ietver:
+        - **Primārā atslēga:** unikāls darbības identifikators. Piemēram, vietnes apmeklējums vai lietojuma ieraksts, kas norāda, ka klients ir izmēģinājis jūsu produkta paraugu.
+        - **Laikspiedols:** notikuma datums un laiks, ko identificē primārā atslēga.
+        - **Notikums:** Norādiet notikuma nosaukumu, kuru vēlaties izmantot. Piemēram, lauks "UserAction" pārtikas preču veikalā varētu būt klientam piemērots kupona lietojums.
+        - **Detalizēti:** Detalizēta informācija par notikumu. Piemēram, preču veikala lauks ar nosaukumu "CouponValue" var būt kupona valūtas vērtība.
+
+# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
 - Vismaz [Līdzautora atļaujas](permissions.md) Customer Insights.
 - Biznesa zināšanas, lai saprastu, ko zudums nozīmē jūsu uzņēmumam. Mēs atbalstām uz laiku balstītu zudumu definīcijas, kas nozīmē, ka klients ir uzskatāms par zudušu pēc perioda bez pirkumiem.
@@ -59,6 +85,9 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
         - **Valsts:** klienta valsts.
         - **Nozare:** klienta nozares tips. Piemēram, lauks ar nosaukumu "Nozare" kafijas grauzdēšanā var norādīt, vai klients ir mazumtirdzniecībā.
         - **Klasifikācija:** klienta kategorizēšana jūsu uzņēmumam. Piemēram, lauks ar nosaukumu "ValueSegment" kafijas grauzdēšanā var būt klientu līmenis, uz kura balstās klientu lielums.
+
+---
+
 - Ieteicamie datu raksturlielumi:
     - Pietiekami vēsturiskie dati: Transakcijas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. 2-3 gadus ilga transakciju vēsture. 
     - Vairāki pirkumi katram klientam: Vēlams, vismaz divas transakcijas uz katru klientu.
@@ -114,6 +143,32 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Atlasiet **Tālāk**.
 
+# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Pievienot papildu datus (neobligāti)
+
+Konfigurējiet klienta darbības entītijas attiecības ar *Klienta* entītiju.
+
+1. Atlasiet vienumu Lauks, kas ir identificējis klientu pirkumu vēstures tabulā. To var tieši saistīt ar *Klienta* entītijas primāro klienta ID.
+
+1. Atlasiet entītiju, kas ir jūsu primārā *Klienta* entītija.
+
+1. Ievadiet nosaukumu, kas apraksta attiecību.
+
+#### <a name="customer-activities"></a>Klienta darbības
+
+1. Ja vēlaties, atlasiet **Pievienot datus** **Klientu darbībām**.
+
+1. Atlasiet semantiskās darbības tipu, kurā ir dati, ko vēlaties izmantot, un sadaļā **Darbības** atlasiet vienu vai vairākas darbības.
+
+1. Atlasiet darbības tipu, kas atbilst konfigurētā klienta darbības tipam. Atlasiet vienumu **Izveidot jaunu** un izvēlieties pieejamu darbības tipu vai izveidojiet jaunu tipu.
+
+1. Atlasiet **Tālāk**, tad **Saglabāt**.
+
+1. Ja jums ir citas klientu darbības, ko vēlaties iekļaut, atkārtojiet iepriekš aprakstītās darbības.
+
+# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Atlasīt prognozes līmenis
 
 Vairums prognožu ir izveidotas klientu līmenī. Dažās situācijās, iespējams, tās nav pietiekoši detalizētas, lai atbilstu jūsu uzņēmuma vajadzībām. Šo līdzekli var izmantot, lai prognozētu zudumu klienta zaram, piemēram, nevis klientam kā tādam.
@@ -122,9 +177,9 @@ Vairums prognožu ir izveidotas klientu līmenī. Dažās situācijās, iespēja
 
 1. Izvērsiet entītijas, no kurām vēlaties izvēlēties sekundāro līmeni, vai izmantojiet meklēšanas filtra lodziņu, lai filtrētu atlasītās opcijas.
 
-1. Izvēlieties atribūtu, ko vēlaties izmantot kā sekundāro līmeni, un pēc tam atlasiet vienumu **Pievienot**
+1. Izvēlieties atribūtu, ko vēlaties izmantot kā sekundāro līmeni, un pēc tam atlasiet vienumu **Pievienot**.
 
-1. Atlasiet **Tālāk**
+1. Atlasiet **Tālāk**.
 
 > [!NOTE]
 > Šajā sadaļā pieejamās entītijas tiek parādītas, jo tām ir attiecības ar entītiju, ko izvēlējāties iepriekšējā sadaļā. Ja neredzat entītiju, kuru vēlaties pievienot, pārliecinieties, vai tai ir spēkā esošas attiecības sadaļā **Attiecības**. Šai konfigurācijai ir derīgas tikai attiecības viens pret vienu un daudzi pret vienu.
@@ -159,7 +214,7 @@ Konfigurējiet klienta darbības entītijas attiecības ar *Klienta* entītiju.
 
 1. Atlasiet **Tālāk**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Norādiet neobligātu sarakstu ar procesu mērījumu uzņēmumiem, kas sniedz atbalstu (tikai biznesa uzņēmumiem)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Norādiet neobligātu sarakstu ar procesu mērījumu uzņēmumiem
 
 Pievienojiet biznesa klientu un uzņēmumu sarakstu, kurus vēlaties izmantot kā procesu mērījumus. Jūs saņemsit [detalizētu informāciju par šiem procesu mērījumu kontiem](#review-a-prediction-status-and-results), tostarp to gūsiet punktu skaitu un iespaidīgākajiem līdzekļiem, kas ietekmēja viņu zuduma prognozi.
 
@@ -168,6 +223,8 @@ Pievienojiet biznesa klientu un uzņēmumu sarakstu, kurus vēlaties izmantot k�
 1. Izvēlieties klientus, kas darbojas kā procesu mērījumi.
 
 1. Atlasiet **Tālāk**, lai turpinātu.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Iestatiet grafiku un pārskatiet konfigurāciju
 
@@ -201,6 +258,25 @@ Pievienojiet biznesa klientu un uzņēmumu sarakstu, kurus vēlaties izmantot k�
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurā vēlaties pārskatīt rezultātus, un atlasiet **Skatīt**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Skatīt vadīklu, lai redzētu prognozes rezultātus.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
+
+1. Rezultātu lapā ir trīs primāro sadaļu dati:
+   - **Apmācības modeļa veiktspēja**: iespējamie rezultāti ir A, B vai C. Šis rezultāts norāda uz prognozes izpildi un var palīdzēt pieņemt lēmumu izmantot izvades entītijā glabātos rezultātus. Rezultātus nosaka, par pamatu izmantojot tālāk norādītās kārtulas: 
+        - **A** Ja modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un ja procentuālā daļa no precīzas prognozes klientiem, kuri ir zuduši, pārsniedz bāzes likmi vismaz par 10%.
+            
+        - **B** Ja modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un ja procentuālā daļa no precīzas prognozes klientiem, kuri ir zuduši, ir līdz 10% lielāki nekā bāzes likme.
+            
+        - **C** Ja modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un ja procentuālā daļa no precīzas prognozes klientiem, kuri ir zuduši, ir mazāki nekā bāzes likme.
+               
+        - **Bāze** ņem prognozes laika loga ievadi modelim (piemēram, viens gads), un modelis veido dažādas laika frakcijas, dalot to ar 2, līdz tas sasniedz vienu mēnesi vai mazāk. Šīs frakcijas izmanto, lai izveidotu biznesa kārtulu klientiem, kas nav veikuši pirkumus šajā laika periodā. Šie klienti tiek uzskatīti par zudušiem. Uz laiku balstītā biznesa kārtula ar augstāko iespējamību prognozēt, kurš, visticamāk ir zudis, ir izvēlēts kā bāzes likmes modelis.
+            
+    - **Zuduma varbūtība (klientu skaits)**: klientu grupas, pamatojoties uz to prognozējamo zuduma risku. Šie dati var palīdzēt vēlāk, ja vēlaties izveidot klientu segmentu ar augstu zuduma risku. Šādi segmenti palīdz saprast, kur vajadzētu būt dalībai segmentā.
+       
+    - **Ietekmīgākie faktori**: ir daudzi faktori, kas tiek ņemti vērā, veidojot jūsu prognozi. Katram faktoram ir nozīme, kas aprēķināta modeļa izveidotajos apkopotajās prognozēs. Šos faktorus var izmantot, lai apstiprinātu prognozes rezultātus, vai arī šo informāciju var izmantot vēlāk, lai [izveidotu segmentus](segments.md), kas var palīdzēt ietekmēt klientu zuduma risku.
+
+
+# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
 1. Rezultātu lapā ir trīs primāro sadaļu dati:
    - **Apmācības modeļa veiktspēja**: iespējamie rezultāti ir A, B vai C. Šis rezultāts norāda uz prognozes izpildi un var palīdzēt pieņemt lēmumu izmantot izvades entītijā glabātos rezultātus. Rezultātus nosaka, par pamatu izmantojot tālāk norādītās kārtulas: 
@@ -237,6 +313,11 @@ Pievienojiet biznesa klientu un uzņēmumu sarakstu, kurus vēlaties izmantot k�
        Kad jūs prognozējat zudumu uzņēmuma līmenī, visi uzņēmumi tiek ņemti vērā, atvasinot vidējās līdzekļu vērtības zuduma segmentiem. Katra uzņēmuma sekundārā līmeņa zuduma prognozēm zuduma segmentu atvasināšana ir atkarīga no atlasītā sānu rūts elementa sekoundārā līmeņa. Piemēram, ja elementam ir sekundārais produktu kategorijas līmenis = biroja preces, tad tikai tādi elementi, kam kā produktu kategorija ir biroja palīgs, tiek izskatīti, kad tiek dena šādi izlīdzinātas vidējām līdzekļa vērtībām segmentos. Šī loģika tiek pielietota, lai nodrošinātu elementa līdzekļu vērtību taisnīgu salīdzinājumu ar vidējām vērtībām maziem, vidējiem un augstiem segmentiem.
 
        Dažos gadījumos zema, vidēja vai augsta segmenta vidējā vērtība ir tukša vai nav pieejama, jo nav elementu, kas pieder atbilstošajiem zuduma segmentiem, pamatojoties uz iepriekš minēto definīciju.
+       
+       > [!NOTE]
+       > Vērtībām, kuru vērtība ir vidējam zemam, vidējam un augstam, ir atšķirīgas attiecībā uz iedarboju funkcijām, piemēram, valsti vai nozari. Tā kā līdzekļa "vidējā" vērtība neattiecas uz kategoriju līdzekļiem, šajās kolonnās vērtībām ir tādu klientu proporcija, kuru segmenti ir mazi, vidēji vai augsti, un tiem ir tāda pati līdzekļa vērtība kā sānu panelī atlasītajam elementam.
+
+---
 
 ## <a name="manage-predictions"></a>Pārvaldīt prognozes
 

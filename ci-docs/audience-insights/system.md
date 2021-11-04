@@ -1,7 +1,7 @@
 ---
 title: Sadaļā Auditorijas ieskati skatiet sistēmas konfigurāciju
 description: Informācija par sistēmas iestatījumiem, kas tiek parādīti Dynamics 365 Customer Insights auditorijas ieskatiem.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035922"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651849"
 ---
 # <a name="system-configuration"></a>Sistēmas konfigurācija
 
@@ -24,9 +24,9 @@ Lapā **Sistēma** ir šādas cilnes:
 - [API lietojums](#api-usage-tab)
 - [Par](#about-tab)
 - [VispārīgI](#general-tab)
+- [Drošība](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Sistēmas lapa.](media/system-tabs.png "Sistēmas lapa")
+:::image type="content" source="media/system-tabs.png" alt-text="Iestatījumu cilnes sistēmas lapā.":::
 
 ## <a name="status-tab"></a>Cilne Statuss
 
@@ -84,9 +84,15 @@ Cilnē **Par** ir norādīts jūsu organizācijas **Parādāmais nosaukums**, ak
 
 ## <a name="general-tab"></a>Cilne Vispārīgi
 
-Cilnē **Vispārīgi** ir divas opcijas — **Valoda** un **Valsts/reģiona formāts**.
+Cilnē **Vispārīgi** varat mainīt valodu un valsts/reģiona formātu.
 
-Programma [atbalsta vairākas valodas](supported-languages.md). Lai mainītu vēlamo valodu, nolaižamajā izvēlnē izvēlieties **Valodu**.
+Customer Insights [atbalsta vairākas valodas ](/dynamics365/get-started/availability). Lietotne izmanto Jūsu valodas preferenci, lai rādītu elementus, piemēram, izvēlni, informācijas paneļa apzīmējumu tekstu un ziņojumus vēlamajā valodā.
+
+Manuāli ievadītie importētie dati un informācija netiek tulkota.
+
+### <a name="update-the-settings"></a>Atjaunināt iestatījumus
+
+Lai mainītu vēlamo valodu, nolaižamajā izvēlnē izvēlieties **Valodu**.
 
 Lai mainītu datumu, laika un skaitļu vēlamo formatējumu, izmantojiet nolaižamo izvēlni **Valsts/reģiona formāts**. Šajā laukā tiek rādīts formatēšanas priekšskatījums. Ja izvēlēsities jaunu valodu, sistēma automātiski piedāvās atlasi.
 
@@ -105,6 +111,13 @@ Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri 
 
    Darbībās, kurās tiek lietota [reāllaika datu iekļaušana](real-time-data-ingestion.md), ir poga ar binokļa simbolu, lai skatītu reāllaika API lietojumu. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.   
    Lai izvēlētos, kā vislabāk sniegt reāllaika mijiedarbības, izmantojiet **Grupēt pēc** lodziņu rūtī **Reāllaika API lietojums**. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
+
+## <a name="security-tab"></a>Drošības cilne
+
+Izmantojot cilni **Drošība**, varat saistīt un pārvaldīt savu [Azure atslēgas akreditācijas datu komplektu](/azure/key-vault/general/basic-concepts) ar vidi.
+Īpašo atslēgas akreditācijas datu glabātuvi var izmantot, lai izveidotu un izmantotu slepeno informāciju organizācijas ierobežojošajā robežu ietvaros. Auditorijas ieskati var izmantot slepeno informāciju Azure Key Vault, lai [iestatītu savienojumus](connections.md) ar trešo pušu sistēmām.
+
+Papildinformāciju skatiet [Ievadiet savu Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

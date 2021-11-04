@@ -1,7 +1,7 @@
 ---
 title: Algoritmiskā mācīšanās nodrošinātie ieteiktie segmenti
 description: Ļaujiet algoritmiskajai mācīšanās palīdzēt atrast jaunus un aizraujošus segmentus, balstoties uz klientu atribūtiem.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028369"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673192"
 ---
 # <a name="suggested-segments-preview"></a>Ieteicamie segmenti (priekšskatījums)
 
@@ -23,7 +23,7 @@ Ar mākslīgā intelekta modeļa palīdzību izpētiet jūsu klientu aizraujošo
 > [!NOTE]
 > Ieteikto segmentu līdzeklis izmanto automatizētus līdzekļus, lai novērtētu datus un uz šo datu bāzes padarītu aizsācošus, tādēļ šis līdzeklis var tikt izmantots kā profilēšanas metode, jo šo terminu definē Vispārējā datu aizsardzības regula (VDAR). Šī līdzekļa izmantošana datu apstrādāšanai var būt pakļauta VDAR vai citiem tiesību aktiem un noteikumiem. Jūs esat atbildīgs par to, ka jūsu Dynamics 365 Customer Insights lietojums, ieskaitot prognozes, atbilst visiem piemērojamiem likumiem un noteikumiem, ieskaitot likumus, kas attiecas uz privātumu, personas datiem, biometrijas datiem, datu aizsardzību un saziņas konfidencialitāti.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Vietnes Customer Insights lapā Ieteicamie segmenti, kurā redzama detalizēta informācija par ierosinājumu sānu rūtī.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Ieteicamo segmentu lapa, kurā ir redzama detalizēta informācija par ierosinājumu sānu rūtī.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Ieteicamie segmenti savu KPI uzlabošanai
 
@@ -49,7 +49,7 @@ Segmenta ieteikumi atšķiras, ja kā primāro atribūtu izvēlaties skaitlisku 
 
 Ja kā primārais atribūts ir skaitlisks atribūts, piemēram, *gada ienākumi* vai *dalības periods*, sistēma iesaka segmentus, kuru skaitliskā atribūta vidējā vērtība ir augstāka vai mazāka salīdzinājumā ar visiem klientiem.
 
-Ja kā primārais atribūts ieteiktajos segmentos ir kategorijas atribūts, piemēram, *klientu apmierinājums*, kam ir noteiktai kategorijai piederošu klientu procentuāla vērtība vai lielāka procentuālā vērtība, salīdzinot ar visu ar šo kategoriju piederošo klientu procentuālo vērtību. Piemēram, kā primārais atribūts tiek izvēlēta *klientu apmierinātība*, un tas sastāv no trim kategorijām (*Zems*, *Vidējs* un *Augsts*). Attiecībā uz katru kategoriju tiek ieteikti segmenti, ka attiecībā uz katru kategoriju segmentiem ir būtiski lielāks vai zemāks ar šo kategoriju piederošo klientu procentuālais daudzums salīdzinājumā ar visu vienas kategorijas klientu procentuālo attiecību. Ja 22% no visiem klientiem ir *Augsta* apmierinātība, šajā kategorijā tiks piedāvāti tikai segmenti, kuru klientu skaits ir būtiski lielāks vai zemāks ar *Augstu* apmierinātību, salīdzinājumā ar 22%, kas tiks ieteikti konkrētajā kategorijā. Līdzīgi arī segmenti tiek ieteikti katrai citai kategorijai (*Zems* un *Vidējs*), ja tie ir statistiski svarīgi.
+Ja kā primārais atribūts ieteiktajos segmentos ir kategorijas atribūts, piemēram, *klientu apmierinājums*, kam ir noteiktai kategorijai piederošu klientu procentuāla vērtība vai lielāka procentuālā vērtība, salīdzinot ar visu ar šo kategoriju piederošo klientu procentuālo vērtību. Piemēram, kā primārais atribūts tiek izvēlēta *klientu apmierinātība*, un tas sastāv no trim kategorijām (*Zems*, *Vidējs* un *Augsts*). Attiecībā uz katru kategoriju tiks ieteikti segmenti ar lielāku vai zemāku šai kategorijai piederošo klientu procentuālo daudzumu salīdzinājumā ar visu vienas kategorijas klientu procentuālo attiecību. Ja 22% no visiem klientiem ir *Augsts* apmierinātības līmenis, šajā kategorijā tiks piedāvāti tikai segmenti, kuros ir lielāka vai mazāka klientu daļa ar *Augstu* apmierinātību salīdzinājumā ar 22%. Līdzīgi arī segmenti tiek ieteikti katrai citai kategorijai (*Zems* un *Vidējs*), ja tie ir statistiski svarīgi.
 
 > [!NOTE]
 > Pašlaik mēs sniedzam atbalstu tikai primārajiem kategorijas atribūtiem, kuriem ir līdz 10 kategorijām. Ja vēlaties skatīt segmenta ieteikumus, pamatojoties uz primāro atribūtu, kam ir vairāk nekā 10 kategorijas, ieteicams grupēt dažas kategorijas, lai samazinātu kategoriju skaitu līdz 10 vai mazāk. Šis ierobežojums attiecas tikai uz primārajiem atribūtiem. Pašlaik mēs sniedzam atbalstu ne vairāk kā 100 kategorijām, lai ietekmētu kategorijas atribūtus.
@@ -77,7 +77,7 @@ Ja kā primārais atribūts ieteiktajos segmentos ir kategorijas atribūts, piem
 
 Kad mākslīgā intelekta modelis ir ģenerējis ieteikumus, atradīsiet tos uzskaitītus sadaļā **Segmenti** > **Ieteikumi (priekšskatījums)**.
  
-Atlasiet ieteikto segmentu, lai apskatītu detalizētu informāciju par šo ierosinājumu, tostarp salīdzinājumu ar vidējo vērtību un segmenta dalībnieku skaitu. Varat arī pārskatīt atribūtu vērtības vai kārtulas, kuras mākslīgā intelekta modelis apguva, lai ieteiktu atlasīto segmentu.
+Atlasiet ieteikto segmentu, lai skatītu detalizētu informāciju par šo ierosinājumu. Varat arī pārskatīt atribūtu vērtības vai kārtulas, kuras mākslīgā intelekta modelis apguva, lai ieteiktu atlasīto segmentu.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Ieteikuma saglabāšana par segmentu
 
