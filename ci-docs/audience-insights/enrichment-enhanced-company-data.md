@@ -1,7 +1,7 @@
 ---
 title: Uzņēmuma datu uzlabošana
 description: Bagātiniet un normalizējiet uzņēmuma datus ar Microsoft modeļiem.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770179"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813927"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Uzņēmuma profilu bagātināšana ar uzlabotiem uzņēmuma datiem
 
@@ -51,13 +51,14 @@ Uzlabotajiem datiem ir daži ierobežojumi. Modelis neatbalsta vienumus zemāk r
 
 1.  Apstipriniet uzņēmuma identitāti. Mēs nepārbaudām, vai ievade ir esoša organizācija vai vai uzņēmums izmanto izvadi kā savu standarta nosaukumu.
 2.  Visaptveroši aptver uzņēmumus visā pasaulē. Microsoft apkopotajiem uzņēmuma datiem ir globāls pārklājums, bet tie piedāvā lielāko pārklājumu Austrālijā, Kanādā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
-3.  Garantēt datu precizitāti vai svaigumu. Tā kā biznesa informācija bieži mainās, mēs nevaram garantēt, ka sniegtie uzlabotie uzņēmuma dati vienmēr ir precīzi vai atjaunināti.
+3.  Standartizēt uzņēmuma adreses globāli. Pašlaik mēs atbalstām adrešu standartizāciju šajās valstīs vai reģionos: Austrālijā, Kanādā, Francijā, Vācijā, Itālijā, Japānā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
+4.  Garantēt datu precizitāti vai svaigumu. Tā kā biznesa informācija bieži mainās, mēs nevaram garantēt, ka sniegtie uzlabotie uzņēmuma dati vienmēr ir precīzi vai atjaunināti.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
 1. Dodieties uz **Dati** > **Bagātināšana**.
 
-1. Elementā Uzlabotie uzņēmuma dati atlasiet **Bagātināt** **·** manus datus.
+1. Elementā Uzlabotie uzņēmuma dati atlasiet **Bagātināt** **manus** datus.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Bagātināšanas flīzes bagātināšanas mezglā uzņēmuma datiem.":::
 

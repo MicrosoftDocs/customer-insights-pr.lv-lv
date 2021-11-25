@@ -1,7 +1,7 @@
 ---
 title: Klientu profilu bagātināšana ar Microsoft datiem
-description: Izmantojiet Microsoft īpašumtiesību datus, lai bagātinātu klientu datus ar zīmola un interešu radniecību.
-ms.date: 11/01/2021
+description: Izmantojiet Microsoft patentētos datus, lai bagātinātu klientu datus ar radniecību un balss koplietojumu.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732551"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793713"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Bagātiniet klientu profilus ar zīmola un interešu radniecību (priekšskatījums)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Bagātināt klientu profilus ar radniecību un balss daļu (priekšskatījums)
 
-Izmantojiet Microsoft īpašumtiesību datus, lai bagātinātu klientu datus ar zīmola un interešu radniecību. Šīs radniecības balstās uz datiem, kas iegūti no klientiem, kuru demogrāfiskie dati ir līdzīgi jūsu klientiem. Šī informācija palīdz labāk izprast un segmentēt jūsu klientus, ņemot vērā viņu saistību ar noteiktiem zīmoliem un interesēm.
+Izmantojiet Microsoft patentētos datus, lai bagātinātu klientu datus ar zīmola radniecību, interešu radniecību un balss koplietojumu (SoV). Šīs radniecības un SoV pamatā ir dati no cilvēkiem ar demogrāfisko situāciju, kas ir līdzīga jūsu klientiem. Šī informācija palīdz jums labāk izprast un segmentēt klientus, pamatojoties uz viņu radniecību vai SoV, konkrētiem zīmoliem un interesēm.
 
 Rīkā Auditorijas ieskati ejiet uz **Dati** > **Bagātināšana**, lai [konfigurētu un skatītu bagātināšanu](enrichment-hub.md).
 
-Lai konfigurētu zīmola saistību bagātināšanu, dodieties uz cilni **Atklāt** un atlasiet **Bagātināt manus datus** elementā **Zīmoli**.
+Lai konfigurētu zīmola radniecības un SoV bagātināšanu, dodieties uz **cilni Atklāšana** un elementā Brands atlasiet **Bagātināt** **manus** datus.
 
-Lai konfigurētu interešu saistību bagātināšanu, dodieties uz cilni **Atklāt** un atlasiet **Bagātināt manus datus** elementā **Intereses**.
+Lai konfigurētu interešu radniecības un SoV bagātināšanu, dodieties uz **cilni Atklāt** un elementā Intereses atlasiet **Bagātināt** **manus** datus.
 
    > [!div class="mx-imgBorder"]
    > ![Zīmolu un interešu elementi.](media/BrandsInterest-tile-Hub.png "Zīmolu un interešu elementi")
 
-## <a name="how-we-determine-affinities"></a>Kā tiek noteikta radniecība
+## <a name="how-we-determine-affinities-and-sov"></a>Kā mēs nosakām radniecību un SoV
 
-Mēs izmantojat Microsoft tiešsaistes meklēšanas datus, lai atrastu radniecību un intereses dažādos demogrāfijas segmentos (kurus nosaka pēc vecuma, dzimuma vai atrašanās vietas). Zīmola vai intereses tiešsaistes meklēšanas apjoms nosaka, cik daudz radniecības demogrāfiskajam segmentam ir ar šo zīmolu vai interesi, salīdzinot ar citiem segmentiem.
+Mēs izmantojam Microsoft tiešsaistes meklēšanas datus, lai atrastu radniecību un SoV zīmoliem un interesēm dažādos demogrāfiskos segmentos (ko nosaka vecums, dzimums vai atrašanās vieta). Zīmola vai interešu tiešsaistes meklēšanas apjoms veido pamatu radniecības vai SoV noteikšanai. Tomēr katrs no tiem sniedz atšķirīgu perspektīvu, lai izprastu savus klientus.
+
+- Radniecība ir salīdzinošs demogrāfisko segmentu singšā. Šo informāciju var izmantot, lai identificētu demogrāfiskos segmentus, kuriem ir vislielākā radniecība ar konkrētu zīmolu vai interesēm, salīdzinot ar citiem segmentiem.
+
+- Balss daļa ir salīdzinošs starp jūsu izvēlētajiem zīmoliem vai interesēm. Šo informāciju var izmantot, lai noteiktu, kuram zīmolam vai interesei ir vislielākais balss īpatsvars attiecīgajā demogrāfiskajā segmentā salīdzinājumā ar citiem jūsu izvēlētajiem zīmoliem vai interesēm.
 
 ## <a name="affinity-level-and-score"></a>Saistību līmenis un rezultāts
 
@@ -48,6 +52,10 @@ Katrā bagātinātā klienta profilā mēs nodrošinām divas saistītās vērt�
 |Zems     | 1-34        |
 
 Atkarībā no tā, cik detalizēti vēlaties mērīt saistības, varat izmantot vai nu saistību līmeni, vai rezultātu. Saistību rādītājs sniedz precīzāku vadīklu.
+
+## <a name="share-of-voice-sov"></a>Balss daļa (SoV)
+
+Mēs aprēķinām SoV 100 punktu skalā. Kopējais SoV visos zīmolos vai interesēs katram bagātinātajam klienta profilam veido līdz pat 100. Atšķirībā no radniecības SoV ir relatīvs attiecībā pret jūsu izvēlētajiem zīmoliem un interesēm. Piemēram, "Microsoft" SoV vērtības var atšķirties, ja atlasītie zīmoli ir ("Microsoft", "GitHub") salīdzinājumā ar ("Microsoft", "LinkedIn").
 
 ## <a name="supported-countriesregions"></a>Atbalstītās valstis/reģioni
 
@@ -82,7 +90,7 @@ Pārskatiet noklusējuma bagātināšanas preferences un atjauniniet tās, kad t
 
 ### <a name="select-entity-to-enrich"></a>Atlasiet bagātināmo entītiju
 
-Atlasiet **Bagātinātā entitīja** un atlasiet datu kopu, kuru vēlaties bagātināt ar uzņēmuma datiem no Microsoft. Varat atlasīt entītiju Klients, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
+Atlasiet **Bagātināta entītija** un izvēlieties datu kopu, kuru vēlaties bagātināt ar Microsoft datiem. Varat atlasīt entītiju Klients, lai bagātinātu visus klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
 
 ### <a name="map-your-fields"></a>Lauku kartēšana
 
@@ -124,13 +132,11 @@ Pēc bagātināšanas procesa palaišanas dodieties uz **Manas bagātināšanas*
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Rezultātu priekšskatījums pēc bagātināšanas procesa izpildes.":::
 
-Pārskatiet bagātinātos datus, diagrammā atlasot **Skatīt bagātinātos datus**. Zīmolu bagātinātie dati dodas uz entītiju **BrandAffinityFromMicrosoft**. Interešu dati atrodas entītijā **InterestAffinityFromMicrosoft**. Šīs entītijas ir uzskaitītas arī grupā **Bagātināšana** sadaļā **Dati** > **Entītijas**.
-
-Laikā būs redzama diagramma ar bagātināto klientu profilu skaitu un bagātinātās entītijas priekšskatījumu. Lai atvērtu bagātināto entītiju, priekšskatījuma elementā atlasiet **Rādīt vairāk**.
+Jūs atradīsiet diagrammu ar bagātināto klientu profilu skaitu laika gaitā un bagātināto entītiju priekšskatījumus. Pārskatiet bagātinātos datus, atlasot **Skatīt vairāk** **radniecības līmenī** vai Balss **kopsavilcībā**. Bagātināti dati par zīmoliem nonāk **BrandAffinityFromMicrosoft** un **BrandShareOfVoiceFromMicrosoft** uzņēmumiem. Interešu dati ir **InterestAffinityFromMicrosoft** un **InterestShareOfVoiceFromMicrosoft** struktūrvienībās. Šīs entītijas ir uzskaitītas arī grupā **Bagātināšana** sadaļā **Dati** > **Entītijas**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Skatiet informāciju par produkta bagātināšanu klienta kartītē
 
-Zīmola un intereses radniecību var apskatīt arī atsevišķās klientu kartītēs. Atveriet sadaļu **Klienti** un atlasiet klienta profilu. Klienta kartē ir atrodamas to zīmolu vai interešu diagrammas, kuras ir saistītas ar šī klienta demogrāfiskā profila lietotājiem.
+Zīmolu un interesi SoV var apskatīt arī atsevišķu klientu kartēs. Atveriet sadaļu **Klienti** un atlasiet klienta profilu. Klienta kartē atradīsit zīmola vai interešu SoV diagrammas, pamatojoties uz šī klienta demogrāfiskā profila personām.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Klienta kartīte ar bagātinātiem datiem.":::
 
