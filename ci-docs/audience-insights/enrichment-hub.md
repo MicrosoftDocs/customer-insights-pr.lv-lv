@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673008"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770133"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -34,7 +34,7 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
-- [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
+- Experian nodrošinātie [demogrāfijas dati](enrichment-experian.md)
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
 
@@ -42,6 +42,7 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
+- [Microsoft nodrošinātie uzlabotie uzņēmuma dati](enrichment-enhanced-company-data.md)
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
@@ -76,7 +77,7 @@ Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļa
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 
-Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
+Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts Experian, Leadspace, HERE Technologies, SFTP Import un Azure Maps.
 
 Lai redzētu bagātināšanas statusu
 

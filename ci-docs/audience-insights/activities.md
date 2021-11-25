@@ -1,7 +1,7 @@
 ---
 title: Klienta darbības
 description: Definējiet klientu darbības un apskatiet tās laika skalā pēc klientu profiliem.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673147"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732469"
 ---
 # <a name="customer-activities"></a>Klienta darbības
 
-Apvienojiet klientu darbības no [dažādiem datu avotiem](data-sources.md) risinājumā Dynamics 365 Customer Insights, lai izveidotu laika skalu, kurā hronoloǵiski uzskaitītas darbības. Iekļaujiet laika skalu Dynamics 365 programmās, izmantojot risinājumu [Klienta kartes pievienojumprogramma](customer-card-add-in.md) vai Power BI informācijas panelī.
+Apvienojiet klientu aktivitātes no [dažādiem datu avotiem](data-sources.md) Dynamics 365 Customer Insights, lai izveidotu laika grafiku, kurā aktivitātes uzskaitītas hronoloģiski. Iekļaujiet laika grafiku Dynamics 365 programmās ar [klienta kartes pievienojumprogrammu](customer-card-add-in.md) risinājumu vai Power BI informācijas panelī.
 
 ## <a name="define-an-activity"></a>Darbības definēšana
 
@@ -82,9 +82,7 @@ Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut
 
 1. Lapā **Darbības** atlasiet **Palaist**, lai apstrādātu darbību. 
 
-> [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Esošo darbību pārvaldība
 

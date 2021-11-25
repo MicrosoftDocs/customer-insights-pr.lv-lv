@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033594"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732273"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbs ar API Customer Insights
 
-Dynamics 365 Customer Insights nodrošina API, lai būvētu savas lietojumprogrammas, pamatojoties uz jūsu datiem programmā Customer Insights.
+Dynamics 365 Customer Insights nodrošina API, lai izveidotu savas lietojumprogrammas, pamatojoties uz jūsu datiem customer insights.
 
 > [!IMPORTANT]
 > Detalizēta informācija par šiem API ir iekļauta [atsaucē API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Tajos ir iekļauta papildinformācija par operācijām, parametriem un atbildēm.
@@ -117,25 +117,25 @@ Sadaļa [Lietojumprogrammas reģistrācijas](#create-a-new-app-registration-in-t
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Uzziniet, kā sākt lietot C# klienta bibliotēkas no NuGet.org. Papildinformāciju par NuGet pakotni skatiet [Microsoft.Dynamics.CustomerInsights.API](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Pašlaik šī pakotne tiek aptver uz netstandard 2.0 un netcoreapp 2.0 ietvarus.
+Uzziniet, kā sākt izmantot C# klientu bibliotēkas no NuGet.org. Papildinformāciju par NuGet pakotni skatiet [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Pašlaik šī pakotne tiek aptver uz netstandard 2.0 un netcoreapp 2.0 ietvarus.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Pievienot C# klienta bibliotēku C# projektam
 
-1. Rīkā Visual Studio atveriet jūsu projekta **NuGet pakotņu pārvaldnieku**.
+1. Programmā Visual Studio atveriet **NuGet** pakotnes pārvaldnieku savam projektam.
 
 1. Meklējiet **Microsoft.Dynamics.CustomerInsights.API**.
 
 1. Atlasiet **Instalēt**, lai projektam pievienotu pakotni.
  
-   Vai arī izpildiet šo komandu, kas atrodas **NuGet pakotņu pārvaldnieka konsolē**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Vai arī palaidiet šo komandu **NuGet pakotņu pārvaldnieka konsolē** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pievienot NuGet pakotni projektam Visual Studio.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Visual Studio projektam pievienot pakotni NuGet.":::
 
 #### <a name="use-the-c-client-library"></a>Izmantojiet C# klienta bibliotēku
 
 1. Izmantojiet [Microsoft autentifikācijas bibliotēku (MSAL)](/azure/active-directory/develop/msal-overview), lai iegūtu `AccessToken`, izmantojot esošo [Azure programmu reģistrāciju](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Pēc sekmīgas autentificēšanās un marķiera iegādes izbūvējiet jaunu vai izmantojiet esošu `HttpClient` ar papildu **DefaultRequestHeaders "Autorizāciju"**, kas iestatīta kā **<access token>nesējs** un **Ocp-Apim-abonementa atslēga**, kas iestatīta uz [**abonementa atslēgu** no vides Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Pēc veiksmīgas pilnvaru autentificēšanas un iegūšanas izveidojiet jaunu vai izmantojiet esošu `HttpClient` ar papildu **DefaultRequestHeaders "Authorization"** **iestatīto Bearer "piekļuves marķieri"** un **Ocp-Apim-Subscription-Key,** kas iestatīta uz [**abonēšanas atslēgu no jūsu Customer** Insights vides](#get-started-trying-the-customer-insights-apis).   
  
    Ja nepieciešams, atiestatiet galveni **Autorizācija**. Piemēram, ja ir izbeidzies marķieris.
 

@@ -1,7 +1,7 @@
 ---
 title: Semantiskie kartējumi (Priekšskatījums)
 description: Pārskats par semantiskajiem kartējumiem un to lietošanu.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622944"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731952"
 ---
 # <a name="semantic-mappings"></a>Semantiskie kartējumi
 
-Semantiskie kartējumi ļauj kartēt datus, kas nav darbības dati, uz iepriekšdefinētām shēmām. Šīs shēmas palīdz auditorijas ieskatiem labāk izprast datu atribūtus. Semantiskā kartēšana un nodrošinātie dati ļauj gūt jaunus ieskatus un līdzekļus auditorijas ieskatos. Lai darbības datus kartētu uz shēmām, pārskatiet [darbību ](activities.md) dokumentāciju.
+Semantiskie kartējumi ļauj kartēt datus, kas nav darbības dati, uz iepriekšdefinētām shēmām. Šīs shēmas palīdz auditorijas ieskatiem labāk izprast datu atribūtus. Semantiskā kartēšana un nodrošinātie dati ļauj gūt jaunus ieskatus un līdzekļus auditorijas ieskatos. Lai darbības datus kartētu uz shēmām, pārskatiet [darbību](activities.md) dokumentāciju.
 
 **Semantiski kartējumi pašlaik ir iespējoti vidēm, kuru pamatā ir biznesa uzņēmumi**. *ContactProfile* ir vienīgais semantisko kartējumu veids, kas pašlaik ir pieejams auditorijas ieskatos.
 
@@ -75,8 +75,7 @@ Semantiskie kartējumi ļauj kartēt datus, kas nav darbības dati, uz iepriekš
 
 1. Lai palaistu semantisko kartējumu vēlāk, atlasiet semantisko kartējumu opciju un atlasiet **Atsvaidzināt**.
 
-> [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Pārvaldīt esošos semantiskos kartējumus
 
@@ -91,5 +90,6 @@ Sadaļā **Dati** > **Semantiskie kartējumi (priekšskatījums)** varat skatīt
 - **Pārdēvēt**: atver dialogu, kurā var ievadīt citu atlasītā semantiskā kartējuma nosaukumu. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
 
 - **Dzēst**: atver dialogu, lai apstiprinātu atlasītā semantiskā kartējuma dzēšanu. Atlasot semantiskos kartējumus un dzēšanas ikonu, vienlaicīgi var izdzēst arī vairākus semantiskos kartējumus. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

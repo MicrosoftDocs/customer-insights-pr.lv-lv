@@ -1,7 +1,7 @@
 ---
 title: Datu eksportēšana no Customer Insights
 description: Pārvaldiet eksportēšanu, lai kopīgotu datus.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673332"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732159"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
@@ -36,7 +36,7 @@ Ir divi galvenie eksporta veidi:
 Vairākums eksportēšanas opciju atbalsta abus vides tipus. Segmentu eksportēšanai uz dažādām mērķa sistēmām ir noteiktas prasības. Parasti šī informācija, segmenta elements klienta profils, satur kontaktinformāciju. Lai gan parasti tas attiecas uz segmentiem, kas būvēti uz atsevišķiem klientiem (B2C), tas ne vienmēr attiecas uz segmentiem, kuru pamatā ir uzņēmuma uzņēmumi (B2B). 
 
 **Segments eksportē vidi uzņēmuma uzņēmumiem (B2B)**  
-- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties **uzņēmuma** opciju.
+- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties [uzņēmuma](export-linkedin-ads.md) opciju.
 - Visām pārējām mērķa sistēmām nepieciešami kontaktpersonas entītijas lauki. Lai nodrošinātu, ka uzņēmuma segmenti var izgūt datus no saistītajām kontaktpersonām, segmenta definīcijai ir jāmācās ar kontaktpersonas entītijas atribūtiem. Papildinformācija par [segmentu un projekta atribūtu konfigurēšanu](segment-builder.md).
 
 **Segmenta eksportēšana vidē atsevišķiem klientiem (B2C)**  
@@ -97,7 +97,9 @@ Pēc eksporta galamērķu izveides tos uzskaita lapā **Dati** > **Eksporti**. V
 
 Katrai konfigurētai eksportēšanai ir atsvaidzināšanas grafiks. Atsvaidzināšanas laikā sistēma meklē jaunus vai atjauninātus datus, ko iekļaut eksportā. Pēc noklusējuma eksportēšana tiek izpildīta kā daļa no katras [plānotās sistēmas atsvaidzināšanas](system.md#schedule-tab). Varat pielāgot atsvaidzināšanas grafiku vai izslēgt to, lai palaistu eksportu manuāli.
 
-Eksportēšanas grafiki ir atkarīgi no vides stāvokļa. Ja laikā, kad būtu jāsāk plānotā atjaunināšana, notiek [atkarību](system.md#refresh-policies) atjaunināšana, sistēma vispirms pabeigs atjaunināšanu un pēc tam veiks eksportēšanu. Kolonnā **Atsvaidzināts** varat redzēt, kad eksportēšana tika pēdējo reizi atsvaidzināta.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Eksportēšanas grafiki ir atkarīgi no vides stāvokļa. Ja laikā, kad būtu jāsāk plānotā atjaunināšana, notiek [atkarību](system.md#refresh-processes) atjaunināšana, sistēma vispirms pabeigs atjaunināšanu un pēc tam veiks eksportēšanu. Kolonnā **Atsvaidzināts** varat redzēt, kad eksportēšana tika pēdējo reizi atsvaidzināta.
 
 ### <a name="schedule-exports"></a>Eksportēšanas grafiks
 

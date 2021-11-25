@@ -4,7 +4,7 @@
   href: overview.md
 - name: Bezmaksas izmēģinājumversija
   items:
-    - name: Reģistrēšanās bezmaksas izmēģinājumversijai
+    - name: Reģistrēšanās bezmaksas izmēģinājuma versijai
       href: trial-signup.md
     - name: Izmēģinājumversijas BUJ
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
           href: audience-insights/connect-common-data-model.md
-        - name: Pievienojiet Dataverse pārvaldīto datu ezeru
+        - name: Dataverse pārvaldīto datu ezera pievienošana
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Inkrementālā atsvaidzināšana datu avotiem
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Uzlabotas adreses
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Uzņēmuma datu uzlabošana
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Bagātināt ar Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Bagātināšana ar HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: 'Bagātināt, izmantojot Leadspace'
           href: audience-insights/enrichment-leadspace.md
-        - name: Bagātināt ar Experian
+        - name: Bagātināšana ar Experian
           href: audience-insights/enrichment-experian.md
         - name: Bagātināšana ar SFTP pielāgoto importu
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Ads Manager
+            - name: Facebook reklāmu pārvaldnieks
               href: audience-insights/export-facebook.md
             - name: Google Ads ikona
               href: audience-insights/export-google-ads.md
@@ -214,9 +216,9 @@
           items:
             - name: Dynamics 365 Apps klienta kartes pievienojumprogramma
               href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (robots)
+            - name: Microsoft Teams (bots)
               href: audience-insights/export-teams-bot.md
-            - name: Power Apps
+            - name: "Power\_Apps"
               href: audience-insights/export-power-apps.md
             - name: Power Automate
               href: audience-insights/export-power-automate.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Entītiju shēmu pārskatīšana Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Customer Insights dati programmā Dataverse
+        - name: Customer Insights dati Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Darbs ar API
           href: audience-insights/apis.md
         - name: "API\_atsauces"
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Piekrišanas pārvaldība (priekšskatījums)
+  items:
+    - name: Palīdzības centrmezgls
+      href: consent-management/index.yml
+    - name: Iespēju pārskats
+      href: consent-management/overview.md
+    - name: Sākt darbu
+      items:
+        - name: Sākt darbu
+          href: consent-management/get-started.md
+        - name: Jēdzieni un terminoloģija
+          href: consent-management/glossary.md
+    - name: Piekrišanu datu importēšana
+      items:
+        - name: Piekrišanu datu importēšana
+          href: consent-management/import-consent-data.md
+        - name: Piekrišanas datu iestatīšana un piekrišanas preferenču lietošana
+          href: consent-management/set-consent-rules.md
+    - name: Piekrišanas datu pārvaldība
+      items:
+        - name: Piekrišanas kārtulu iespējošana auditorijas ieskatos
+          href: audience-insights/activate-consent.md
+        - name: Noklusējuma piekrišanas kārtulu pārvaldība auditorijas ieskatu segmentos
+          href: audience-insights/change-default-consent-rules.md
+    - name: Iestatījumu un lietotāju pārvaldība
+      items:
+        - name: Sistēmas iestatījumu konfigurēšana
+          href: consent-management/system-settings.md
+        - name: Lietotāju un atļauju pārvaldība
+          href: consent-management/manage-users.md
+    - name: Piekrišanas datu izmantošana
+      items:
+        - name: Prognožu izveide ar piekrišanas datiem
+          href: consent-management/predictions-consent-data.md
 - name: Iesaistes ieskati (priekšskatījums)
   items:
     - name: Palīdzības centrmezgls

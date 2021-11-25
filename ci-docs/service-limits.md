@@ -1,5 +1,5 @@
 ---
-title: Servisa ierobežojumi programmā Dynamics 365 Customer Insights
+title: Pakalpojumu ierobežojumi Dynamics 365 Customer Insights
 description: Izprotiet ierobežojumus un aizliegumus.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483687"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791990"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Pakalpojumu ierobežojumi Customer Insights iespējām
 
@@ -22,11 +22,11 @@ ms.locfileid: "7483687"
 
 ## <a name="audience-insights"></a>Auditorijas ieskati
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Pakalpojuma ierobežojumi Dynamics 365 Customer Insights auditorijas ieskatu iespējas
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Pakalpojumu ierobežojumi Dynamics 365 Customer Insights auditorijas ieskatu iespēja
 
 | Laukuma  | Ierobežojumi  | Piezīmes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti un mēri | 100 segmenti vai mēri. | Kopējais aktīvo [segmentu skaits](audience-insights/segments.md) un [pasākumi](audience-insights/measures.md) kopā nedrīkst pārsniegt 100.  |
+| Segmenti, mēri un prognozes | 300  | Kopējais segmentu, pasākumu un prognožu skaits [kopā nedrīkst pārsniegt](audience-insights/segments.md)[...](audience-insights/measures.md)[...](audience-insights/predictions.md) 300.  |
 | Attiecības | 20 līmeņi ar padziļinātu informāciju par attiecībām entītiju ceļā. | Veidojot [segmentus](audience-insights/segments.md) vai [pasākumus](audience-insights/measures.md), izmantojot būvētāja interfeisu, entītiju ceļiem starp sākuma entītiju un mērķa entītiju var būt līdz 20 attiecībām.  |
 
 

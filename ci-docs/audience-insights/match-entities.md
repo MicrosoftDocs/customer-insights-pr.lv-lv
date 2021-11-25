@@ -1,7 +1,7 @@
 ---
 title: Savienot entītijas datu apvienošanai
 description: Saskaņošana ar entītijām, lai apvienotu datu kopas un izveidotu vienotos klientu profilus.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648217"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732643"
 ---
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
@@ -180,10 +180,7 @@ Pārejiet uz sadaļu **Dati** > **Unify** > **Saskaņot** un atlasiet **Palaist*
 
 Sekmīgas izpildes rezultāts ir vienotā klienta profila entītija, kas atrodas lapā **Entītijas**. Jūsu apvienotā klientu entītija tiek saukta par **Klientiem** sadaļā **Profili** section. Pirmajā sekmīgās atbilstības izpildes laikā tiek izveidota vienotā entītija *Klients*. Visas nākamās saskaņošanas izpildes izvērš šo entītiju.
 
-> [!TIP]
-> Pēc atbilstības procesa izpildīšanas atlasiet procesa statusu, lai atvērtu **Uzdevuma detalizētās informācijas** rūti. Tajā sniegts pārskats par apstrādes laiku, pēdējo apstrādes datumu un visām ar uzdevumu saistītajām kļūdām un brīdinājumiem. Atlasiet vienumu **Skatīt informāciju**, lai skatītu, kuras entītijas piedalījās atbilstības procesā, kurās tika lietotas kārtulas, un vai atjauninājumi tika sekmīgi publicēti.  
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Rakšanās ceļš uz procesa informāciju no uzdevuma statusa saites.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Atbilstību pārskatīšana un pārbaudīšana
 

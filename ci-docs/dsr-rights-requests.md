@@ -1,6 +1,6 @@
 ---
 title: Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR | Microsoft Docs
-description: Atbilde uz datu subjektu prasībām saistībā ar Dynamics 365 Customer Insights auditorijas ieskatiem.
+description: Atbildēt uz datu tēmu pieprasījumiem Dynamics 365 Customer Insights auditorijas ieskatu iespējām.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483686"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732689"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -24,7 +24,7 @@ Mēs gribam palīdzēt mūsu klientiem varētu izpildīt savas VDAR prasības. T
 
 ## <a name="audience-insights"></a>Auditorijas ieskati
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Atbilde uz VDAR datu subjektu dzēšanas prasībām saistībā ar Dynamics 365 Customer Insights auditorijas ieskatiem.
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Atbildot uz GDPR datu subjekta dzēšanas pieprasījumiem Dynamics 365 Customer Insights auditorijas ieskatu iespējām
 
 “Tiesības dzēst”, veicot personas datu noņemšanu no organizācijas klientu datiem, ir galvenā aizsardzība saskaņā ar Vispārīgo datu aizsardzības regulu (VDAR). Personas datu dzēšana ietver visu personas datu un sistēmas radītu ierakstu, izņemot audita ierakstu informācijas, dzēšanu.
 
@@ -39,7 +39,7 @@ Auditorijas ieskati piedāvā tālāk norādītās produkta lietošanas iespēja
 
 Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, kas bija dzēsti klientu datos:
 
-1. Pierakstieties programmā Dynamics 365 Customer Insights.
+1. Piesakieties Dynamics 365 Customer Insights.
 2. Sadaļā Auditorijas ieskati ejiet uz **Dati** > **Datu avoti**.
 3. Katram sarakstā iekļautajam datu avotam, kurā ir izdzēsti klienta dati:
    1. Atlasiet (...) un pēc tam atlasiet **Atsvaidzināt**.
@@ -52,7 +52,7 @@ Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, 
 
 Customer Insights administrators var veikt tālāk norādītās darbības, lai dzēstu Customer Insights lietotāja datus:
 
-1. Pierakstieties programmā Dynamics 365 Customer Insights.
+1. Piesakieties Dynamics 365 Customer Insights.
 2. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Atļaujas**.
 3. Atzīmējiet tā lietotāja izvēles rūtiņu, kuru vēlaties dzēst.
 4. Atlasiet **Noņemt**.
@@ -79,7 +79,14 @@ Lai eksportētu datus, nomnieka administrators var veikt tālāk norādītas dar
 2. Atzīstiet apstiprinājumu eksportēt pieprasītā lietotāja datus.
 3. Saņemiet eksportētos datus, izmantojot nomnieka administratora e-pasta adresi.
 
-## <a name="engagement-insights"></a>Iesaistes ieskati
+## <a name="consent-management-preview"></a>Piekrišanas pārvaldība (priekšskatījums)
+
+Piekrišanas pārvaldības iespēja tieši neapkopo lietotāju datus. Tā importē un apstrādā tikai tos piekrišanas datus, ko lietotāji sniedz citās lietojumprogrammās.
+
+Lai noņemtu piekrišanas datus par konkrētiem lietotājiem, noņemiet tos datu avotos, kas uzņemti piekrišanas pārvaldības iespējās. Pēc datu avots atsvaidzināšanas noņemtie dati tiks dzēsti arī piekrišanas centrā. Lietojumprogrammas, kas izmanto piekrišanas entītiju, arī dzēsīs datus, kas pēc atsvaidzināšanas tika noņemti [avotā](audience-insights/system.md#refresh-processes). Mēs iesakām ātri atsvaidzināt datu avotus pēc tam, kad esat atbildējusi uz datu subjekta pieprasījumu, lai noņemtu lietotāja datus no visiem citiem procesiem un lietojumprogrammām.
+
+
+## <a name="engagement-insights-preview"></a>Iesaistes ieskati (priekšskatījums)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Notikuma datu, kas ietver lietotāja identificējamu informāciju, dzēšana un eksportēšana
 

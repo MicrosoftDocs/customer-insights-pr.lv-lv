@@ -1,7 +1,7 @@
 ---
 title: Izmantojiet datu avotus datu uzņemšanai
 description: Uzziniet, kā importēt datus no dažādiem avotiem.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645364"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732164"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Auditorijas ieskatus Dynamics 365 Customer Insights var savienot ar datiem no plašas avotu kopas. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat tos [apvienot](data-unification.md) un veikt ar tiem darbības.
+Auditorijas ieskatu iespējas Dynamics 365 Customer Insights ir savienotas ar datiem no plašas avotu kopas. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat tos [apvienot](data-unification.md) un veikt ar tiem darbības.
 
 ## <a name="add-a-data-source"></a>Pievienot datu avotu
 
@@ -35,11 +35,11 @@ Datu avotu varat pievienot trīs galvenajos veidos:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Datu pievienošana no lokālajiem datu avotiem
 
-Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas var iespējot risinājumā Customer Insights, [nodrošinot Microsoft Dataverse vides URL](create-environment.md), kad tiek iestatīta vide.
+Datu uzzīšana no lokāls datu avotiem auditorijas ieskatos tiek atbalstīta, pamatojoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas var iespējot customer insights, [iestatot vidi, norādot Microsoft Dataverse vides](create-environment.md) URL.
 
-Datu avoti, kuri tiek izveidoti pēc saistīšanas ar Dataverse vidi ar Customer Insights, pēc noklusējuma izmantos [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un no jauna izveidojiet datu avotus, kuri pastāvēja, pirms Dataverse vide tika saistīta, lai [lietotu lokālās datu vārtejas](/data-integration/gateway/service-gateway-app).
+Datu avoti, kas izveidoti pēc Dataverse vides saistīšanas ar Customer Insights, [pēc noklusējuma izmantos Power Platform datu plūsmas.](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Noņemiet un atkārtoti izveidojiet datu avotus, kas pastāvēja pirms Dataverse vides saisti ar [lokāls datu vārteju izmantošanu](/data-integration/gateway/service-gateway-app).
 
-Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
+Būs redzamas datu vārtejas no esošas Power BI vai Power Apps vides, un jūs varat atkārtoti izmantot programmā Customer Insights. Datu avotu lapā ir redzamas saites, lai dotos uz Microsoft Power Platform vidi, kurā var skatīt un konfigurēt lokāls datu vārtejas.
 
 ## <a name="review-ingested-data"></a>Uzņemto datu pārskatīšana
 
@@ -48,14 +48,7 @@ Jūs redzēsit katra uzņemtā datu avota nosaukumu, tā statusu un pēdējo rei
 > [!div class="mx-imgBorder"]
 > ![Pievienotie datu avoti.](media/configure-data-datasource-added.png "Pievienotie datu avoti")
 
-|Statuss  |Apraksts  |
-|---------|---------|
-|Sekmīgs   |Datu avots tika veiksmīgi paņemts, ja ir minēts laiks kolonnā **Atsvaidzināts**.
-|Nav sākts   |Datu avots nesatur datus, kas ir uzņemti vai vēl ir melnraksta režīmā.         |
-|Notiek atsvaidzināšana    |Notiek datu uzņemšana. Šo darbību varat atcelt, kolonnā **Darbības** atlasot **Apturēt atsvaidzināšanu**. Apturot datu avota atsvaidzināšanu, tas atkal kļūs tāds pats kā pēdējās atsvaidzināšanas brīdī.       |
-|Neizdevās     |Veicot datu uzņemšanu, radās kļūdas.         |
-
-Atlasiet vērtību jebkura datu avoti kolonnā **Statuss**, lai pārskatītu papildinformāciju. Rūtī **Detalizēta informācija** izvērsiet **Datu avoti**. Atlasiet **Skatīt detalizētu informāciju** papildu informācijai par atsvaidzināšanas statusu, ieskaitot kļūdas detaļas un pakārtotā procesa atjauninājumus.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos datus var pārskatīt no lapas **Entītijas**. Papildinformāciju skatiet rakstā [Entītijas](entities.md).
 

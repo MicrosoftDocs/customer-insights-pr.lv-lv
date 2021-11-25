@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648126"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673651"
 ---
 # <a name="create-a-new-environment"></a>Jaunas vides izveide 
 
@@ -40,13 +40,13 @@ Vide ir vieta, kurā pārvaldīt darbvietas un savienojumus. Vides izmantošanas
 
 1. Izvēlieties **Reģionu** un atlasiet **Tālāk**. 
 
-1. Ierakstiet **Darbvietas nosaukumu**, kas ļauj apkopot datus par noteiktu vietni vai programmām. Papildinformāciju skatiet tēmā [Izveidot darbvietu](create-workspace.md).
+1. Ierakstiet **darbvietas nosaukumu**, kas ļauj apkopot datus par konkrētām vietnēm vai programmām. Papildinformāciju skatiet tēmā [Izveidot darbvietu](create-workspace.md).
 
-1. Izvēlieties **Darbvietas veidu** (tīmeklis vai mobilā versija), kuru vēlaties izveidot. 
+1. Izvēlieties **izveidojamo darbvietas tipu** (tīmeklis vai mobilais). 
 
 1. Atlasiet vienumu **Rādīt papildu iestatījumus**, lai iespējotu vai atspējotu šos neobligātos iestatījumus:
 
-   - Pārslēgt **Nav zināms, ka tas ir** uz "iespējots", lai saistītu tīmekļa notikumus ar lietotājiem, kas iepriekš autentificēti. Papildinformāciju skatiet sadaļā [Tīmekļa notikumu atpazīšana no iepriekš autentificētiem apmeklētājiem](unknown-to-known.md)
+   - Pārslēgt **Nav zināms, ka tas ir** uz "iespējots", lai saistītu tīmekļa notikumus ar lietotājiem, kas iepriekš autentificēti. Papildinformāciju skatiet rakstā [Iepriekš autentificētu apmeklētāju tīmekļa notikumu atpazīšana](unknown-to-known.md).
    - Pārslēdziet **Filtrēt botu datplūsmu** uz "iespējota", lai noņemtu botu tīmekļa datplūsmu šai darbvietai. 
 
 1. Kad esat beidzis, atlasiet **Pabeigt**. 

@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648263"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732781"
 ---
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
@@ -24,7 +24,7 @@ Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms. Tā mēr�
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
 
-Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā **Apvienošana** atlasot **Sapludināt**.
+Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā [Apvienošana](match-entities.md) atlasot [Sapludināt](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Sistēmas ieteikumu pārskatīšana
 
@@ -187,10 +187,9 @@ Izvēlieties **Palaist sapludināšanu un lejupstraumes procesus**, lai atsvaidz
 
 Lai veiktu lielākas izmaiņas un veiktu atkārtotu darbību, varat atcelt notiekošu sapludināšanu. Atlasiet **Atsvaidzina...** un atlasiet **Atcelt uzdevumu** blakus rūtī, kas tiek parādīta.
 
-> [!TIP]
-> Pēc sapludināšanas procesa izpildīšanas atlasiet procesa statusu, lai atvērtu **Uzdevuma detalizētās informācijas** rūti. Tajā sniegts pārskats par apstrādes laiku, pēdējo apstrādes datumu un visām ar uzdevumu saistītajām kļūdām un brīdinājumiem. Atlasiet vienumu **Skatīt informāciju**, lai skatītu, kuras entītijas piedalījās atbilstības procesā, kurās tika lietotas kārtulas, un vai atjauninājumi tika sekmīgi publicēti.  
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Rakšanās ceļš uz procesa informāciju no uzdevuma statusa saites.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Rakšanās ceļš uz procesa informāciju no uzdevuma statusa saites.":::
 
 ## <a name="next-step"></a>Nākamā darbība
 

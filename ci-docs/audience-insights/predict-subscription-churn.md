@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035332"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799737"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
 
 Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus. Jūs varat izveidot jaunas abonēšanas zuduma prognozes lapā **Informācija** > **Prognozes**. Atlasiet **Manas prognozes**, lai skatītu citas jūsu izveidotās prognozes.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Izmēģiniet pamācību par abonēšanas zudumu prognozi, izmantojot datu paraugu: [Abonēšanas zudumu prognožu parauga rokasgrāmata](sample-guide-predict-subscription-churn.md).

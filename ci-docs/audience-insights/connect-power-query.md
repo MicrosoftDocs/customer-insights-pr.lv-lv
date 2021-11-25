@@ -1,7 +1,7 @@
 ---
 title: Datu paņemšana, izmantojot Power Query savienotāju
 description: Savienotāji datu avotiem, pamatojoties uz Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643503"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732227"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avotu
 
-Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Vairumu no šiem savienotājiem atbalsta Dynamics 365 Customer Insights. Datu avotu pievienošanā, pamatojoties uz Power Query savienotājiem, kopumā tiek izpildītas nākamajā sadaļā izklāstītās darbības. Taču atkarībā no savienotāja, kuru izmantojat, var būt nepieciešama atšķirīga informācija. Lai iegūtu papildinformāciju, skatiet dokumentus par atsevišķiem savienotājiem [Power Query savienotāja atsaucē](/power-query/connectors/).
+Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Lielāko daļu šo savienotāju atbalsta Dynamics 365 Customer Insights. Datu avotu pievienošanā, pamatojoties uz Power Query savienotājiem, kopumā tiek izpildītas nākamajā sadaļā izklāstītās darbības. Taču atkarībā no savienotāja, kuru izmantojat, var būt nepieciešama atšķirīga informācija. Lai iegūtu papildinformāciju, skatiet dokumentus par atsevišķiem savienotājiem [Power Query savienotāja atsaucē](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Savienotāji ar atzīmi kolonnā **Customer Insights (Dataflows)** ir pieejami, 
    > [!div class="mx-imgBorder"]
    > ![Rediģēšanas opcija.](media/edit-option-data-sources.png "Rediģēšanas opcija")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Piemērojiet veiktās izmaiņas un transformācijas dialoglodziņā **Power Query — izmaiņu rediģēšana**, kā aprakstīts sadaļā [Jauna datu avota izveide](#create-a-new-data-source).
 
 4. Lai saglabātu izmaiņas, pēc rediģēšanas pabeigšanas Power Query atlasiet **Saglabāt**.

@@ -1,7 +1,7 @@
 ---
 title: Koplietojamie uzdevumi prognožu scenārijiem
 description: Uzziniet, kā pārvaldīt, novērst problēmas un precizēt prognozes.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036474"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731997"
 ---
 # <a name="manage-predictions"></a>Pārvaldīt prognozes
 
@@ -50,12 +50,12 @@ Kad pirmās izvēles modelis ir pabeidzis apmācības darbību, skatiet atskaiti
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ievades datu lietojamības atskaites piemērs, kurā redzama tabula ar kļūdām, brīdinājumiem un ieteikumiem.":::
 
-- Nosaukums: aprakstošs kļūdas, brīdinājuma vai ieteikuma nosaukums.
-- Solis: Modeļa fāze, apmācība vai rezultāts, uz ko attiecas informācija.
-- Stāvoklis: informācijas nopietnība (kļūda, brīdinājums, ieteikums).
-- Kolonnas nosaukums: kolonna entītijā, kas jāmodificē, lai uzlabotu modeļa veiktspēju.
-- Kolonnas nosaukums: kolonna entītijā, kas jāmodificē, lai uzlabotu modeļa veiktspēju.
-- Detalizēta informācija: detalizēta informācija par kļūdu, brīdinājumu vai ieteikumu.
+- **Nosaukums:** kļūdas, brīdinājuma vai ieteikuma aprakstošais nosaukums.
+- **Solis:** Modeļa fāze, vilciens vai rezultāts, informācija attiecas.
+- **Stāvoklis:** informācijas nopietnība (kļūda, brīdinājums, ieteikums).
+- **Kolonnas nosaukums:** kolonna entītijā, kas ir jāgroza, lai uzlabotu modeļa veiktspēju.
+- **Entītijas nosaukums:** tās entītijas nosaukums, kura jāgroza, lai uzlabotu modeļa veiktspēju.
+- **Detalizēta informācija:** detalizēta informācija par kļūdu, brīdinājumu vai ieteikumu.
 
 ## <a name="refresh-a-prediction"></a>Atsvaidzināt prognozi
 
@@ -66,6 +66,8 @@ Prognozes tiks automātiski atsvaidzinātas ar vienu un to pašu [grafiku, ko j�
 1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kuru vēlaties atsvaidzināt.
 
 1. Atlasiet **Atsvaidzināt**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Dzēst prognozi
 
