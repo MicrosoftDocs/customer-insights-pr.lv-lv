@@ -1,7 +1,7 @@
 ---
 title: Programmā Customer Insights izveidotie segmenti
 description: Darbības, kas jāveic, lai izveidotu vidi, izmantojot licencētu Dynamics 365 Customer Insights abonementu.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673400"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892347"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Izveidot vidi auditorijas ieskatos
 
@@ -77,6 +77,9 @@ Ja izveidojat vairākas Customer Insights vides un vēlaties saglabāt izvades e
 Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi.
 
 Lai izmantotu [standarta prognožu modeļus](predictions-overview.md#out-of-box-models), konfigurējiet datu kopīgošanu ar Dataverse. Varat arī iespējot datu inaktivizēšanu no lokāls avotiem, norādot Microsoft Dataverse jūsu organizācijas administrējamo vides URL. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar programmas Dataverse pārvaldīto Data Lake.
+
+> [!IMPORTANT]
+> Customer Insights un Dataverse tiem jābūt vienā reģionā, lai iespējotu datu koplietošanu.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
 

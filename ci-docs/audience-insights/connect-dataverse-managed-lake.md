@@ -1,7 +1,7 @@
 ---
 title: Izveidot savienojumu ar tabulām programmā Microsoft Dataverse
 description: Datu importēšana no Microsoft Dataverse pārvaldītā datu ezera.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033089"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900160"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar to analītiskajām entītijām Dataverse pārvaldītā entītijā. Lai turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, ir jābūt Dataverse organizācijas administratoram.
+Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām vienībām Microsoft Dataverse apsaimniekotā ezerā. 
+
+> [!NOTE]
+> Lai Dataverse turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, jums jābūt organizācijas administratoram.
 
 ## <a name="important-considerations"></a>Svarīgi ieteikumi
 
-Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights. Importējot vai savienojot ar tiešsaistes pakalpojumos glabātajiem datiem, jūs piekrītat, ka datus var pārnest uz Dynamics 365 Customer Insights un glabāt tajā. [Papildinformāciju skatiet Microsoft drošības kontroles centrā.](https://www.microsoft.com/trust-center)
+Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar tiem, jūs piekrītat, ka datus var pārsūtīt uz Dynamics 365 Customer Insights .  [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Savienojuma izveide ar Dataverse pārvaldīto datu ezeru
 
@@ -32,12 +35,9 @@ Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake St
 
 2. Atlasiet **Pievienot datu avotu**.
 
-3. Atlasiet **Savienot ar Microsoft Dataverse pārvaldīto entītiju** un atlasiet **Tālāk**.
+3. Atlasiet **Microsoft Dataverse** un atlasiet **Tālāk**.
 
-4. Ievadiet **Nosaukumu** datu avotam un atlasiet **Tālāk**. Nosaukuma vadlīnijas: 
-   - Sāciet ar burtu.
-   - Izmantojiet tikai burtus un ciparus. Speciālās rakstzīmes un atstarpes nav atļautas.
-   - Izmantojiet no 3 līdz 64 rakstzīmēm.
+4. Ievadiet **Nosaukumu** datu avotam un atlasiet **Tālāk**. 
 
 5. Norādiet **Servera adresi** Dataverse organizācijai un atlasiet **Pieteikties**.
 

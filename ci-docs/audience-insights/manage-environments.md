@@ -1,7 +1,7 @@
 ---
 title: Vižu izveide un pārvaldība
 description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799645"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892393"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
@@ -40,18 +40,21 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 
 Papildinformāciju par vides iestatījumiem skatiet sadaļā [Jaunas vides izveide](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Savienojuma izveide ar Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Izveidot savienojumu ar Microsoft Dataverse
    
-**Microsoft Dataverse solis ļauj savienot Customer** Insights ar Dataverse vidi.
+Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi.
 
-Lai izmantotu [gatavus prognoze modeļus](predictions-overview.md#out-of-box-models), konfigurējiet datu koplietošanu ar Dataverse. Varat arī iespējot datu uzņemšanu no lokāls datu avotiem, norādot Microsoft Dataverse vides URL, ko administrē jūsu organizācija. Atlasiet **Iespējot datu** koplietošanu, lai koplietotu Customer Insights izvades datus ar Dataverse pārvaldīto datu ezeru.
+Lai izmantotu [standarta prognožu modeļus](predictions-overview.md#out-of-box-models), konfigurējiet datu kopīgošanu ar Dataverse. Varat arī iespējot datu inaktivizēšanu no lokāls avotiem, norādot Microsoft Dataverse jūsu organizācijas administrējamo vides URL. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar programmas Dataverse pārvaldīto Data Lake.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigurācijas opcijas, lai iespējotu datu koplietošanu ar Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Customer Insights un Dataverse tiem jābūt vienā reģionā, lai iespējotu datu koplietošanu.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:
-> - Ja saglabāsit visus datus savā Azure Data Lake Storage, nevarēsit iespējot datu koplietošanu ar Dataverse pārvaldītu datu ezeru.
-> - Ja iespējojat datu koplietošanu ar Dataverse, entītijā nevarēsit [izveidot prognozētas vai trūkstošas vērtības](predictions.md).
+> - Ja saglabāsit visus datus pats savā Azure Data Lake Storage, jūs nevarēsit iespējot datu kopīgošanu ar Dataverse pārvaldīto Data Lake.
+> - Ja iespējosit datu kopīgošanu ar Dataverse, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Izveidojiet vides konfigurācijas kopiju
 
@@ -81,7 +84,7 @@ Nākamie *dati* nav kopēti:
 - Klientu profili.
 - Datu avota akreditācijas dati. Jums būs jāsniedz akreditācijas dati katram datu avotam un manuāli jāatsvaidzina datu avoti.
 
-- Datu avoti no mapes Common Data Model un Dataverse pārvaldīto datu ezeru. Šos datu avotus ir jāizveido manuāli, izmantojot tādu pašu nosaukumu kā avota vidē.
+- Datu avoti no mapes Common Data Model un Dataverse pārvaldītā data lake. Šos datu avotus ir jāizveido manuāli, izmantojot tādu pašu nosaukumu kā avota vidē.
 
 Kopējot vidi, tiks parādīts apstiprinājuma ziņojums par to, ka ir izveidota jauna vide. Atlasiet **Doties uz datu avotiem**, lai skatītu datu avotu sarakstu.
 

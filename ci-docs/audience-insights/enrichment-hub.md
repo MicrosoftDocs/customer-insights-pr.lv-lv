@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770133"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884225"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -34,7 +34,7 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - Microsoft nodrošinātie [Zīmoli](enrichment-microsoft.md)
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
-- Experian nodrošinātie [demogrāfijas dati](enrichment-experian.md)
+- [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
 
@@ -46,6 +46,7 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+- [Microsoft nodrošinātie konta](enrichment-office.md) iesaistes dati
 
 ---
 
@@ -77,7 +78,7 @@ Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļa
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 
-Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts Experian, Leadspace, HERE Technologies, SFTP Import un Azure Maps.
+Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
 
 Lai redzētu bagātināšanas statusu
 

@@ -1,7 +1,7 @@
 ---
 title: Pielāgoti algoritmiskās mācīšanās modeļi | Microsoft Docs
 description: Darbs ar pielāgotiem modeļiem no Azure algoritmiskās mācīšanās pakalpojumā Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032951"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881793"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
+
+> [!NOTE]
+> Atbalsts algoritmiskā mācīšanās Studio (klasika) noslēgsies 2024. gada 31. augustā. Ieteicams pāriet uz [Azure algoritmiskā mācīšanās](/azure/machine-learning/overview-what-is-azure-machine-learning) līdz šim datumam.
+>
+> Sākot ar 2021. gada 1. decembri, jūs nevarēsiet izveidot jaunus algoritmiskā mācīšanās Studio (klasiskos) resursus. Līdz 2024. gada 31. augustam jūs varat turpināt izmantot esošos algoritmiskā mācīšanās Studio (klasiskos) resursus. Papildinformāciju skatiet rakstā [Migrēšana uz Azure algoritmiskā mācīšanās](/azure/machine-learning/migrate-overview).
+
 
 **Informācija** > **Pielāgotie modeļi** ļauj pārvaldīt darbplūsmas, pamatojoties uz Azure algoritmiskās mācīšanās modeļiem. Darbplūsmas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartēt rezultātus vienotajos klientu datos. Papildinformāciju par pielāgotu algoritmiskās mācīšanās modeļu būvēšanu skatiet tēmā [Azure algoritmiskās mācīšanās modeļu izmantošana](azure-machine-learning-experiments.md).
 
@@ -24,9 +30,9 @@ ms.locfileid: "7032951"
 
 Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, uzlabot biznesa iespējas un ieņēmumu plūsmas. Stingri ieteicams sabalansēt prognoze vērtību pret tās ietekmi un aizspriedumiem, ko var ieviest ētiskā veidā. Uzziniet vairāk par to, kā Microsoft [aplūko atbildīgu AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Jūs varat uzzināt arī par [attiecīgo algoritmiskās mācīšanās tehniku un procesiem](/azure/machine-learning/concept-responsible-ml), kas ir raksturīgi Azure algoritmiskajai mācīšanās.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Patlaban šis līdzeklis atbalsta tīmekļa pakalpojumus, kas tiek publicēti [algoritmiskās mācīšanās studijā (klasiskais)](https://studio.azureml.net) un [Azure algoritmiskā mācīšanās paketes konveijerā](/azure/machine-learning/concept-ml-pipelines).
+- Šis līdzeklis atbalsta tīmekļa pakalpojumus, kas publicēti, izmantojot [Azure algoritmiskā mācīšanās pakešu konveijerus](/azure/machine-learning/concept-ml-pipelines).
 
 - Lai izmantotu šo līdzekli, ir nepieciešams Azure Data Lake Gen2 krātuves konts, kas saistīts ar jūsu Azure Studio instanci. Papildinformāciju skatiet [Azure Data Lake Storage Gen2 krātuves konta izveide](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 1. Ja jūsu Azure algoritmiskās mācīšanās abonements ir citā nomnieka, nekā Customer Insights, atlasiet **Pieteikties** ar saviem akreditācijas datiem atlasītajai organizācijai.
 
-1. Atlasiet **Darbvietas**, kas saistītas ar jūsu tīmekļa pakalpojumu. Ir uzskaitītas divas sadaļas — viena Azure algoritmiskā mācīšanās v1 (algoritmiskā mācīšanās studija (klasiskais)) un Azure algoritmiskā mācīšanās v2 (Azure algoritmiskā mācīšanās). Ja neesat pārliecināts, kura ir īstā darbvieta jūsu algoritmiskās mācīšanās studijai (klasisks) tīmekļa pakalpojumam, atlasiet **Jebkurš**.
+1. Atlasiet **Darbvietas**, kas saistītas ar jūsu tīmekļa pakalpojumu. 
 
-1. Izvēlieties algoritmiskās mācīšanās studija (klasisks) tīmekļa pakalpojumu vai Azure algoritmiskā mācīšanās konveijeru nolaižamajā sarakstā **Tīmekļa pakalpojums, kurā ir jūsu modelis**. Pēc tam atlasiet **Tālāk**.
-   - Papildinformācija par [tīmekļa pakalpojuma publicēšanu algoritmiskā mācīšanās studijā (klasiskais)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Informācija, kā [publicēt konveijeru Azure algoritmiskajās mācībās, izmantojot noformētāju](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) vai [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsu konveijers ir jāpublicē zem [konveijera galapunkta](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Izvēlieties Azure algoritmiskā mācīšanās konveijeru **tīmekļa pakalpojumā, kurā ir jūsu modeļa** nolaižamais izvēlne. Pēc tam atlasiet **Tālāk**.    
+   Informācija, kā [publicēt konveijeru Azure algoritmiskajās mācībās, izmantojot noformētāju](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) vai [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsu konveijers ir jāpublicē zem [konveijera galapunkta](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Katrai **Tīmekļa pakalpojuma ievadei** atlasiet atbilstošo **Entītiju** no auditorijas ieskatiem un atlasiet **Tālāk**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
    > ![Konfigurēt darbplūsmu.](media/intelligence-screen2-updated.png "Konfigurēt darbplūsmu")
 
 1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
-   - Algoritmiskā mācīšanās studija (klasiskais)
-      1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto tīmekļa pakalpojuma izvades rezultāti.
-   - Azure algoritmiskā mācīšanās
       1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto konveijera izvades rezultāti.
       1. Atlasiet nolaižamajā sarakstā jūsu paketes konveijera **Izvades datu krātuves parametra nosaukumu**.
       1. Atlasiet nolaižamajā sarakstā jūsu paketes konveijera **Izvades ceļa parametra nosaukumu**.
@@ -93,9 +95,6 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 1. Katrai **Tīmekļa pakalpojuma ievadei** atjauniniet atbilstošo **Entītiju** no auditorijas ieskatiem. Pēc tam atlasiet **Tālāk**.
 
 1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
-   - Algoritmiskā mācīšanās studija (klasiskais)
-      1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto tīmekļa pakalpojuma izvades rezultāti.
-   - Azure algoritmiskā mācīšanās
       1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto konveijera izvades rezultāti.
       1. Atlasiet **Izvades datu krātuves parametra nosaukumu** savam testa konveijeram.
       1. Atlasiet **Izvades ceļa parametra nosaukumu** savam testa konveijeram.

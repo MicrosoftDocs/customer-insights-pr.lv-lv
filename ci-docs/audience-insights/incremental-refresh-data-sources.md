@@ -1,7 +1,7 @@
 ---
 title: Power Query esošu datu avotu inkrementālā atsvaidzināšana.
 description: Atsvaidziniet jaunus un atjauninātus datus lieliem datu avotiem, kas balstīti Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377843"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900277"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementālā atsvaidzināšana Power Query bāzes datu avotiem
+
+Šajā rakstā ir aprakstīts, kā konfigurēt inkrementālo atsvaidzināšanu datu avotiem, pamatojoties uz Power Query.
 
 Inkrementālajai datu avotu atsvaidzināšanai ir šādas priekšrocības:
 
@@ -30,9 +32,9 @@ Auditorijas ieskati ļauj inkrementāli atsvaidzināt datus, kuri ir importēti,
 
 1. [Jauna Power Query bāzes datu avota izveide](connect-power-query.md).
 
-1. Ierakstiet datu avota nosaukumu.
+1. Norādiet **datu** avots nosaukumu.
 
-1. Atlasiet datu avotu, kas atbalsta inkrementālo atsvaidzināšanu, piemēram, Azure SQL datu bāzi.
+1. Atlasiet datu avots, kas atbalsta inkrementālo atsvaidzināšanu, piemēram, [Azure SQL datu bāzi](/power-query/connectors/azuresqldatabase).
 
 1. Atlasiet uzņemamās entitījas vai tabulas.
 

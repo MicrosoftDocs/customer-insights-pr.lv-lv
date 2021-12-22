@@ -1,7 +1,7 @@
 ---
 title: Entītijas un datu kopas.
 description: Datu skatīšana Entītiju lapā.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732089"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900436"
 ---
 # <a name="entities-in-audience-insights"></a>Entītijas auditorijas ieskatiem
 
-Pēc [datu avotu konfigurēšanas](data-sources.md) pārejiet uz lapu [Entītijas](data-sources.md), lai novērtētu uzņemto datu kvalitāti. Entītijas tiek uzskatītas par datu kopām. Ap šīm entītijām ir veidotas vairākas Dynamics 365 Customer Insights iespējas. Rūpīga to pārskatīšana var palīdzēt pārbaudīt šo iespēju rezultātus.
+Pēc [datu avotu konfigurēšanas](data-sources.md) pārejiet uz lapu **Entītijas**, lai novērtētu uzņemto datu kvalitāti. Entītijas tiek uzskatītas par datu kopām. Dynamics 365 Customer Insights daudzās iespējas ir veidotas ap šīm entītijām. Rūpīga to pārskatīšana var palīdzēt pārbaudīt šo iespēju rezultātus.
 
-Lapā **Entītijas** tiek norādītas entītijas, un tajā ir vairākas kolonnas.
+Lapā Entītijas ir **uzskaitītas** entītijas un iekļautas šīs kolonnas:
 
-- **Nosaukums**: Datu entītijas nosaukums. Ja blakus entītijas nosaukumam tiek rādīts brīdinājuma simbols, tas nozīmē, ka šīs entītijas dati netika veiksmīgi ielādēti.
-- **Avots**: Tas datu avota veids, kas uzņēma entītiju
-- **Izveidoja**: Tās personas vārds, kura izveidoja šo entītiju
-- **Izveidots**: Entītijas izveides datums un laiks
-- **Atjaunināts** : tās personas vārds, kura atjaunināja entītiju
-- **Statuss** : detalizēta informācija par entītijas pēdējo atjauninājumu
+- **Nosaukums** : datu entītijas nosaukums. Ja blakus entītijas nosaukumam tiek rādīts brīdinājuma simbols, tas nozīmē, ka šīs entītijas dati netika veiksmīgi ielādēti.
+- **Avots** : datu avots tips, kas uztrīja entītiju.
+- **Atjaunināts** : entītijas pēdējās atjaunināšanas laiks.
+- **Statuss** : detalizēta informācija par entītijas pēdējo atjauninājumu.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Noteiktu entītijas datu izpēte
 
-Atlasiet entītiju, lai izpētītu tajā ietvertos dažādos laukus un ierakstus.
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Entītijas**.
+1. Lapā **Entītijas** atlasiet entītiju, lai atvērtu detalizētas informācijas lapu.  
+1. Izpētiet dažādus šai entītijai iekļautos laukus un ierakstus.
 
-> [!div class="mx-imgBorder"]
-> ![Atlasīt entītiju.](media/data-manager-entities-data.png "Entītijas atlase")
-
-- Cilnē **Dati** ir redzama tabulas detalizēta informācija par atsevišķiem entītijas ierakstiem.
+- Pēc noklusējuma ir atlasīta cilne **Atribūti**, un tajā ir redzama tabula, lai pārskatītu atlasītās entītijas detalizēto informāciju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie tipi ir semantiskie tipi, kas var atšķirties no atribūtu datu tipiem. Piemēram, tālāk redzamajam laukam *E-pasts* ir datu tips *Teksts*, bet tā (semantiskais) Common Data Model tips var būt *E-pasts* vai *E-pasta adrese*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabula Lauki.](media/data-manager-entities-fields.PNG "Tabula Lauki")
 
-- Pēc noklusējuma ir atlasīta cilne **Atribūti**, un tajā ir redzama tabula, lai pārskatītu atlasītās entītijas detalizēto informāciju, piemēram, lauku nosaukumus, datu tipus un tipus. Kolonnā **Tips** ir redzami kopējā datu modeļa saistītie tipi, ko ir automātiski identificējusi sistēma vai [manuāli kartējuši](map-entities.md) lietotāji. Šie tipi ir semantiskie tipi, kas var atšķirties no atribūtu datu tipiem. Piemēram, tālāk redzamajam laukam *E-pasts* ir datu tips *Teksts*, bet tā (semantiskais) Common Data Model tips var būt *E-pasts* vai *E-pasta adrese*.
-
 > [!NOTE]
-> Abās tabulās ir redzams tikai entītijas datu paraugs. Lai skatītu pilnu datu kopu, atveriet lapu **Datu avoti**, atlasiet entītiju, atlasiet **Rediģēt** un pēc tam skatiet šīs entītijas datus, izmantojot Power Query redaktoru, kā paskaidrots tēmā [Datu avoti](data-sources.md).
+> Šajā lapā tiek rādīts tikai jūsu entītijas datu paraugs. Lai skatītu pilnu datu kopu, atveriet lapu **Datu avoti**, atlasiet entītiju, atlasiet **Rediģēt** un pēc tam skatiet šīs entītijas datus, izmantojot Power Query redaktoru, kā paskaidrots tēmā [Datu avoti](data-sources.md).
 
-Lai uzzinātu vairāk par entītijā pieņemtajiem datiem, kolonnā **Kopsavilkums** ir norādītas svarīgas datu īpašības, piemēram, vērtības Null, trūkstošās vērtības, unikālās vērtības, skaits un izplatīšanas reižu skaits attiecībā uz jūsu datiem.
-
-Atlasiet diagrammas ikonu, lai skatītu datu kopsavilkumu.
+Lai uzzinātu vairāk par entītijā pieņemtajiem datiem, kolonnā **Kopsavilkums** ir norādītas svarīgas datu īpašības, piemēram, vērtības Null, trūkstošās vērtības, unikālās vērtības, skaits un izplatīšanas reižu skaits attiecībā uz jūsu datiem. Atlasiet diagrammas ikonu, lai skatītu datu kopsavilkumu.
 
 > [!div class="mx-imgBorder"]
 > ![Kopsavilkuma simbols.](media/data-manager-entities-summary.png "Tabula Datu kopsavilkums")
+
+- Cilnē **Dati** ir redzama tabulas detalizēta informācija par atsevišķiem entītijas ierakstiem. Norādītā informācija ir atkarīga no entītijas datu tipa.
+
+> [!div class="mx-imgBorder"]
+> ![Atlasīt entītiju.](media/data-manager-entities-data.png "Entītijas atlase")
+
+- **Cilne Atskaites** (pieejama dažām entītijām) ļauj vizualizēt datus, izveidojot atskaiti, un ietver šīs kolonnas:
+
+  - **Atskaites nosaukums** : atskaites nosaukums.
+  - **Izveidoja** : tās personas vārds, kura izveidoja entītiju.
+  - **Izveidots** : entītijas izveides datums un laiks.
+  - **Rediģējis** : tās personas vārds, kura modificēja entītiju.
+  - **Rediģēts** : entītijas modificēšanas datums un laiks. 
 
 ## <a name="entity-specific-information"></a>Noteiktas entītijas informācija
 
@@ -73,8 +79,7 @@ Customer Insights joprojām apstrādā bojātos ierakstus. Tomēr, strādājot a
 
 - Lauka vērtība neatbilst tā kolonnas datu tipam.
 - Laukos ir rakstzīmes, kas liek kolonnai neatbilst gaidītajai shēmai. Piemēram: nepareizi formatēti piedāvājumi, nebeidzami piedāvājumi vai jaunas rindas rakstzīmes.
-- Ja ir datuma un laika/datuma/datuma/datuma_laika_kopas kolonnas, to formāts ir jānorāda modelī, ja tas neatbilst standarta ISO formātam.
-
+- Ja ir datuma/datuma/datuma un datuma izslēgšanas kolonnas, to formāts ir jānorāda modelī, ja tas neatbilst standarta ISO formātam.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Semantiskie kartējumi (Priekšskatījums)
 description: Pārskats par semantiskajiem kartējumiem un to lietošanu.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731952"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881839"
 ---
-# <a name="semantic-mappings"></a>Semantiskie kartējumi
+# <a name="semantic-mappings-preview"></a>Semantiskie kartējumi (Priekšskatījums)
 
-Semantiskie kartējumi ļauj kartēt datus, kas nav darbības dati, uz iepriekšdefinētām shēmām. Šīs shēmas palīdz auditorijas ieskatiem labāk izprast datu atribūtus. Semantiskā kartēšana un nodrošinātie dati ļauj gūt jaunus ieskatus un līdzekļus auditorijas ieskatos. Lai darbības datus kartētu uz shēmām, pārskatiet [darbību](activities.md) dokumentāciju.
+Semantiskie kartējumi ļauj kartēt datus, kas nav darbības dati, uz iepriekšdefinētām shēmām. Šīs shēmas palīdz auditorijas ieskatiem labāk izprast datu atribūtus. Semantiskā kartēšana un nodrošinātie dati ļauj gūt jaunus ieskatus un līdzekļus auditorijas ieskatos. Lai darbības datus kartētu uz shēmām, pārskatiet [darbību ](activities.md) dokumentāciju.
 
 **Semantiski kartējumi pašlaik ir iespējoti vidēm, kuru pamatā ir biznesa uzņēmumi**. *ContactProfile* ir vienīgais semantisko kartējumu veids, kas pašlaik ir pieejams auditorijas ieskatos.
 
@@ -91,5 +91,40 @@ Sadaļā **Dati** > **Semantiskie kartējumi (priekšskatījums)** varat skatīt
 
 - **Dzēst**: atver dialogu, lai apstiprinātu atlasītā semantiskā kartējuma dzēšanu. Atlasot semantiskos kartējumus un dzēšanas ikonu, vienlaicīgi var izdzēst arī vairākus semantiskos kartējumus. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Izmantojiet ContactProfile semantisko entītiju kartējumu, lai izveidotu kontaktu līmeņa aktivitātes
+
+Pēc *ContactProfile* semantisko entītiju kartējuma izveides varat tvert kontaktpersonu darbības. Tas ļauj jums redzēt darbības laika grafikā kontam, kurš kontaktpersona bija atbildīgs par katru darbību. Lielākā daļa darbību atbilst tipiskajai darbību kartēšanas konfigurācijai.
+
+   > [!NOTE]
+   > Lai kontaktpersonas līmeņa aktivitātes darbotos, katram darbības datu ierakstam ir jābūt **atribūtiem Gan** AccountID, gan **ContactID**.
+
+1. [Definējiet *ContactProfile* semantisko entītiju kartējumu.](#define-a-contactprofile-semantic-entity-mapping) Un palaidiet semutisko kartēšanu.
+
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
+
+1. Atlasiet **Pievienot** aktivitāti, lai izveidotu jaunu aktivitāti.
+
+1. Piešķiriet aktivitātei nosaukumu, atlasiet avota aktivitātes entītiju un atlasiet aktivitātes entītijas primāro atslēgu.
+
+1. Sadaļā **Relācijas** izveidojiet netiešu saistību starp darbību avota datiem ar kontiem, izmantojot savus kontaktinformāciju kā starpniekuzņēmību. Plašāku informāciju skatiet [direct and indirect relationship paths](relationships.md#relationship-paths).
+   - Attiecību piemērs aktivitātei ar nosaukumu *Iepirkumi*:
+      - **Pirkšanas avota darbības dati** > **Kontaktpersonas dati** atribūtā **ContactID**
+      - **Kontaktpersonas datu** > **konta dati** atribūtā **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Attiecību iestatījumu piemērs.":::
+
+1. Pēc relāciju iestatīšanas atlasiet **Tālāk** un pabeidziet darbību kartēšanas konfigurāciju. Detalizētus darbības izveides soļus skatiet [define a activity](activities.md).
+
+1. Palaidiet darbību kartējumus.
+
+1. Jūsu kontaktu līmeņa aktivitātes tagad būs redzamas jūsu klientu laika skalā.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Gala rezultāts pēc kontaktpersonu darbību konfigurēšanas":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Kontaktu līmeņa aktivitāšu laika grafika filtrēšana
+
+Pēc kontaktpersonu līmeņa aktivitāšu kartēšanas konfigurēšanas un tās palaišanas jūsu klientu aktivitāšu laika grafiks tiks atjaunināts. Tas ietver viņu identifikācijas vai vārdus atkarībā no *Jūsu ContactProfile* konfigurācijas darbībām, ar kuriem viņi rīkojās. Laika skalā varat filtrēt darbības pēc kontaktpersonām, lai skatītu konkrētas jūs interesējošās kontaktpersonas. Turklāt visas darbības, kas nav piešķirtas noteiktai kontaktpersonai, var skatīt, atlasot Darbības, kas **nav kartētas uz kontaktpersonu**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Kontakta līmeņa aktivitātēm pieejamās filtrēšanas opcijas.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
-title: Dynamics 365 Apps klienta kartes pievienojumprogramma
+title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (video)
 description: Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: MT
+ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
+ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792036"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "7921874"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
@@ -27,20 +27,20 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, tie ir [jāuzņemiet no Dynamics 365 programmas, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md).
+- Lai kartētu Dynamics 365 datus uz auditorijas ieskatu klientu profiliem, tiem jābūt [iztvertiem no Dynamics 365 programmas, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md).
 - Visi Dynamics 365 lietotāji, kas izmanto klienta kartes pievienojumprogrammu, ir [jāpievieno kā lietotāji](permissions.md) auditorijas ieskatos, lai redzētu datus.
 - Lai darbotos datu uzmeklēšana, ir nepieciešama [konfigurēta meklēšanas un filtrēšanas iespēja](search-filter-index.md) auditorijas ieskatos.
 - Katra pievienojumprogrammas vadīkla ir atkarīga no noteiktiem datiem auditorijas ieskatos. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija jūs informēs, ja atlasītā vides tipa dēļ vadīkla nav pieejama. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
   - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
-  - **Informācijas vadīkla**: nepieciešami dati, kas ģenerēti, lietojot [prognozes](predictions.md) vai [pielāgotus modeļus](custom-models.md).
+  - **Informācijas kontrole** : pieprasa datus, kas [ģenerēti, izmantojot prognozes vai pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
-  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šos bagātināšanas failus: [...](enrichment-microsoft.md) Microsoft nodrošinātie zīmoli, [Microsoft](enrichment-microsoft.md) nodrošinātie intereses.
+  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šīs bagātināšanas: [Korporācijas](enrichment-microsoft.md) Microsoft nodrošinātie zīmoli, [Microsoft nodrošinātās intereses](enrichment-microsoft.md) un Microsoft [nodrošinātie Office iesaistes](enrichment-office.md) dati.
   - **Kontaktpersonu vadīkla**: nepieciešama kontaktpersonu tipa semantiskās entītijas definīcija.
   - **Laika skalas vadīkla**: Nepieciešamas [konfigurētās darbības](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Klienta kartes pievienojumprogrammas instalēšana
 
-Klienta kartes pievienojumprogramma ir risinājums klientu iesaistes programmām pakalpojumā Dynamics 365. Lai instalētu risinājumu, dodieties uz AppSource un meklējiet **Dynamics klienta karti**. Atlasiet [klienta kartes pievienojumprogrammu AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) un atlasiet **Iegūt tūlīt**.
+Klienta kartes pievienojumprogramma ir risinājums klientu iesaistes programmām pakalpojumā Dynamics 365. Lai instalētu šo risinājumu, dodieties uz AppSource un meklējiet **Dynamics Customer Card**. Atlasiet [Klienta kartes pievienojumprogramma pakalpojumā AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) un atlasiet **Iegūt to tūlīt**.
 
 Lai Dynamics 365 programma instalētu risinājumu, jums, iespējams, vajadzēs pieteikties ar saviem administratora akreditācijas datiem. Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
 
@@ -48,7 +48,7 @@ Lai Dynamics 365 programma instalētu risinājumu, jums, iespējams, vajadzēs p
 
 1. Kā administrators atveriet sadaļu **Iestatījumi** pakalpojumā Dynamics 365 un atlasiet **Risinājumi**.
 
-1. Atlasiet **Dynamics 365 Customer Insights klienta kartes** **pievienojumprogrammas (priekšskatījuma) risinājuma saiti Parādāmais** nosaukums.
+1. Atlasiet saiti **Parādāmais nosaukums** risinājumam **Dynamics 365 Customer Insights klienta kartes pievienojumprogramma (priekšskatījums)**.
 
    > [!div class="mx-imgBorder"]
    > ![Parādāmā nosaukuma atlasīšana.](media/select-display-name.png "Parādāmā nosaukuma atlasīšana.")

@@ -1,7 +1,7 @@
 ---
 title: Azure algoritmiskās mācīšanās eksperimenti
 description: Izmantojiet Azure algoritmiskās mācības modeļus programmā Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033181"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881747"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Izmantojiet Azure algoritmiskās mācības modeļus.
 
-Vienotie dati Dynamics 365 Customer Insights ir avots, kas paredzēts algoritmiskās mācīšanās modeļu izveidei, kas var radīt papildu biznesa ieskatus. Customer Insights integrējas ar algoritmiskās mācīšanās studiju (klasiskais) un Azure algoritmisko mācīšanos, lai izmantotu savus pielāgotos modeļus. Skatiet [Algoritmiskās mācīšanās studijas (klasiskais) eksperimentus](machine-learning-studio-experiments.md), kas attiecas uz algoritmiskās mācīšanās studijā būvētajiem eksperimentiem (klasiskie). 
+Vienotie dati Dynamics 365 Customer Insights ir avots, kas paredzēts algoritmiskās mācīšanās modeļu izveidei, kas var radīt papildu biznesa ieskatus. Customer Insights integrējas ar Azure algoritmisko mācīšanos, lai jūs izmantotu paši savus pielāgotos modeļus.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -35,7 +35,7 @@ Vienotie dati Dynamics 365 Customer Insights ir avots, kas paredzēts algoritmis
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Darbs ar Azure algoritmiskās mācīšanās noformētāju
 
-Azure algoritmiskās mācīšanās noformētājs nodrošina vizuālu pamatni, kurā var aizvilkt un nomest datu kopas un moduļus, līdzīgi kā algoritmiskā mācīšanās studijā (klasiskais). No noformētāja izveidotu paketes konveijeru var integrēt Customer Insights, ja tie ir attiecīgi konfigurēti. 
+Azure algoritmiskā mācīšanās noformētājs nodrošina vizuālu kanvu, kurā var vilkt un nomest datu kopas un moduļus. No noformētāja izveidotu paketes konveijeru var integrēt Customer Insights, ja tie ir attiecīgi konfigurēti. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Darbs ar Azure algoritmiskās mācīšanās noformētāju SDK
 

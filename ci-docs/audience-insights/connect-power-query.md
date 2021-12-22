@@ -1,7 +1,7 @@
 ---
-title: Datu paņemšana, izmantojot Power Query savienotāju
+title: Datu uzdošana, izmantojot Power Query savienotāju (video)
 description: Savienotāji datu avotiem, pamatojoties uz Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732227"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903849"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avotu
 
-Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Lielāko daļu šo savienotāju atbalsta Dynamics 365 Customer Insights. Datu avotu pievienošanā, pamatojoties uz Power Query savienotājiem, kopumā tiek izpildītas nākamajā sadaļā izklāstītās darbības. Taču atkarībā no savienotāja, kuru izmantojat, var būt nepieciešama atšķirīga informācija. Lai iegūtu papildinformāciju, skatiet dokumentus par atsevišķiem savienotājiem [Power Query savienotāja atsaucē](/power-query/connectors/).
+Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Vairumu no šiem savienotājiem atbalsta Dynamics 365 Customer Insights. 
+
+Pievienojot datu avotus, kuru pamatā ir Power Query savienotāji, parasti tiek ievērotas šajā sadaļā izklāstītās darbības. Taču atkarībā no savienotāja, kuru izmantojat, var būt nepieciešama atšķirīga informācija. Papildinformāciju skatiet Power Query [savienotāja atsaucē](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Lielāko daļu
 
 1. Atlasiet **Pievienot datu avotu**.
 
-1. Atlasiet **Datu importēšanas** metodi, pēc tam atlasiet **Tālāk**.
+1. Atlasiet **Microsoft Power Query, pēc tam** atlasiet **Tālāk**.
 
-1. Sniedziet datu avota **Nosaukmu** un atlasiet **Tālāk**, lai izveidotu datu avotu. Nosaukuma vadlīnijas: 
-   - Sāciet ar burtu.
-   - Izmantojiet tikai burtus un ciparus. Speciālās rakstzīmes un atstarpes nav atļautas.
-   - Izmantojiet no 3 līdz 64 rakstzīmēm.
+1. Sniedziet datu avota **Nosaukmu** un atlasiet **Tālāk**, lai izveidotu datu avotu.
 
-1. Izvēlieties vienu no [pieejamiem savienotājiem](#available-power-query-data-sources). Šajā piemērā esam atlasījuši savienotāju **Text/CSV**.
+1. Izvēlieties vienu no [pieejamiem savienotājiem](#available-power-query-data-sources). Šajā piemērā mēs izvēlamies **teksta/CSV** savienotāju.
 
 1. Ievadiet nepieciešamo informāciju sadaļā **Savienojuma iestatījumi** attiecībā uz atlasīto savienotāju un atlasiet **Tālāk**, lai skatītu datu priekšskatījumu.
 
@@ -50,7 +49,7 @@ Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Lielāko daļu
 
 1. Saviem datu avotiem varat pievienotu papildu entītijas, dialoglodziņā **Vaicājumu rediģēšana** atlasot **Iegūt datus**.
 
-   Ir ieteicams veikt tālāk norādītās transformācijas:
+   Ieteicams izmantot šādas transformācijas:
 
    - Ja uzņemat datus no CSV faila, pirmajā rindā bieži vien ir galvenes. Dodieties uz **Mainīt tabulu** un atlasiet **Izmantot galvenes kā pirmo rindu**.
    - Pārliecinieties, ka datu veids ir iestatīts atbilstoši.
@@ -61,7 +60,7 @@ Power Query piedāvā plašu savienotāju kopu datu uzņemšanai. Lielāko daļu
 
 ## <a name="available-power-query-data-sources"></a>Pieejamie Power Query datu avoti
 
-Informāciju par jaunākajiem savienotājiem, kurus varat atlasīt datu importēšanai uz Customer Insights skatiet [Power Query savienotāja atsaucē](/power-query/connectors/). 
+[Savienotāju](/power-query/connectors/) sarakstu, ko var izmantot datu importēšanai customer insights, skatiet Power Query savienotāja atsauci. 
 
 Savienotāji ar atzīmi kolonnā **Customer Insights (Dataflows)** ir pieejami, lai izveidotu jaunus datu avotus, pamatojoties uz Power Query. Pārskatiet konkrētā savienotāja dokumentāciju, lai uzzinātu vairāk par tā priekšnosacījumiem, ierobežojumiem un citu informāciju.
 
@@ -70,7 +69,7 @@ Savienotāji ar atzīmi kolonnā **Customer Insights (Dataflows)** ir pieejami, 
 > [!NOTE]
 > Iespējams, nevarēs veikt izmaiņas datu avotos, kuri pašlaik tiek izmantoti kādā no programmas procesiem (piemēram, *segmentēšana*, *atbilstības noteikšana* vai *sapludināšana*). 
 >
-> Izmantojot lapu **Iestatījumi**, varat izsekot katra aktīvā procesa norisei. Kad process ir pabeigts, varat atgriezties lapā **Datu avoti** un veikt vajadzīgās izmaiņas.
+> Lapā **Iestatījumi** varat izsekot katra aktīvā procesa norisei. Kad process ir pabeigts, varat atgriezties lapā **Datu avoti** un veikt vajadzīgās izmaiņas.
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Datu avoti**.
 

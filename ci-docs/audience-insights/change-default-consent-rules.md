@@ -1,25 +1,27 @@
 ---
 title: Noklusējuma piekrišanas kārtulu pārvaldība segmentos
 description: Izmantojot piekrišanas pārvaldības iespēju, varat atspējot vai mainīt noklusējuma piekrišanas kārtulas, ja ir iespējota ignorēšana.
-ms.date: 10/30/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790731"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884179"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Noklusējuma piekrišanas kārtulu atspējošana vai mainīšana
 
 Ja jūsu organizācijas izmanto [piekrišanas pārvaldības iespēju](../consent-management/overview.md) apvienojumā ar auditorijas [ieskatiem, administratori var ieviest piekrišanas kārtulas](activate-consent.md) segmentiem. 
 
-Izmantojot piespiedu piekrišanas kārtulas segmenta apgabalā, katrs segments informē par piekrišanas pārbaudes stāvokli un noteikumiem. Ja ignorēšana ir atļauta, noklusējuma piekrišanas kārtulas ir izslēgtas noteiktiem segmentiem. Katrs segmenta veidotājs šim segmentam var pievienot vairāk piekrišanas kārtulu. 
+Izmantojot piespiedu piekrišanas kārtulas segmenta apgabalā, katrs segments informē par piekrišanas pārbaudes stāvokli un noteikumiem. Ja ignorēšana ir atļauta, noklusējuma piekrišanas kārtulas ir izslēgtas noteiktiem segmentiem. Katrs segmenta veidotājs segmentam var pievienot papildu piekrišanas kārtulas papildus noklusējuma kārtulām. 
+
+## <a name="for-administrators"></a>Administratoriem
 
 :::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Segmentu veidotājs ar piekrišanas kārtulu opcijām.":::
 
@@ -27,14 +29,27 @@ Izmantojot piespiedu piekrišanas kārtulas segmenta apgabalā, katrs segments i
 
 1. Paziņojumā **Par vienošanos par kārtulām** atlasiet **Skatīt detalizētu informāciju**. 
 
-1. Iestatiet **noklusējuma piekrišanas** kārtulu pārslēgšanu uz **·** Izslēgts.
+1. Iestatiet **noklusējuma piekrišanas** kārtulu pārslēgšanu uz **Izslēgts**.
 
 **Lai pievienotu papildu piekrišanas kārtulas:**
 
 1. Paziņojumā **Par vienošanos par kārtulām** atlasiet **Skatīt detalizētu informāciju**. 
 
-1. **Nolaižamajā izvēlnē Atlasīt piekrišanas datu tipu atlasiet Pievienot piekrišanas kārtulas un** izvēlieties piekrišanas **·** kārtulu.
+1. **Nolaižamajā izvēlnē Atlasīt piekrišanas datu tipu atlasiet Pievienot piekrišanas kārtulas un** izvēlieties piekrišanas **kārtulu**.
 
-1. Atlasiet **·** Saglabāt, lai segmentam lietotu jauno kārtulu.
+1. Atlasiet **Saglabāt**, lai segmentam lietotu jauno kārtulu.
+
+## <a name="for-contributors"></a>Līdzstrādniekiem
+
+Lai izveidotu segmentu bez piespiedu piekrišanas kārtulām, jums ir jāsadarbojas ar administratoru, lai tos atspējotu segmentā. Tomēr varat pievienot savas piekrišanas kārtulas segmentiem, kas jums pieder un ko pārvaldāt.
+
+Tas ir trīs soļu process: 
+1. [Izveidojiet segmentu](segments.md) auditorijas ieskatos un saglabājiet to. 
+
+1. Koplietojiet segmenta nosaukumu ar administratoru un lūdziet, lai tas [iespējo segmenta](activate-consent.md) ignorēšanu. 
+
+1. Atveriet savus segmentus vēlreiz. Paziņojumā **Par piekrišanas noteikumiem** atlasiet **Skatīt detalizētu informāciju un pievienojiet piekrišanas** noteikumus, kurus vēlaties lietot. Pēc tam **saglabājiet** un **palaidiet** savu segmentu.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

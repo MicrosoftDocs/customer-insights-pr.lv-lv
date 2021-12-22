@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753126"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884271"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas jauns auditorijas ieskatu spējā Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu ilgtermiņa līdzekļu plānus, apskatiet [Dynamics 365 un Power Platform izlaišanas plānus](/dynamics365/release-plans/).
+Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu informāciju par ilgtermiņa plāniem attiecībā uz funkcijām, skatiet [Dynamics 365 un Power Platform laidienu plānus](/dynamics365/release-plans/).
 
 Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģioni var agrāk skatīt funkcijas nekā citi. Ja vien nav norādīts citādi, neveiciet nekādu darbību, un programma automātiski atjauninās programmu bez jebkādas dīkstāves.
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>2021. gada novembra atjauninājumi
+
+Atjauninājumi 2021. gada novembrī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Dalība segmentā tagad ir pieejama Dataverse
+
+Segmenta dalības informācija klientu profiliem tagad ir pieejama Dataverse kopā ar klientu profiliem un ieskatiem. Dynamics 365 darbību programmas un modeļa vadītas programmas var izmantot šos datus, lai uzmeklētu segmenta dalības informāciju konkrētam klientam.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Darbības atbalsta biznesa kontu kontaktlīmeņa informāciju
+
+Tagad varat konfigurēt, parādīt un filtrēt darbības kontaktpersonām uzņēmuma konta darbību laika skalā, lai labāk izprastu, kuras uzņēmuma kontaktpersonas piedalījās konkrētās darbībās.
 
 ## <a name="october-2021-updates"></a>2021. gada oktobra atjauninājumi
 
@@ -39,7 +51,7 @@ Turpmākajās iedaļās ir uzsvērtas dažas no galvenajām jomām, kas tika pie
 
 #### <a name="export-segments-based-on-business-accounts"></a>Eksportēt segmentus, pamatojoties uz biznesa kontiem
 
-Visi segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [...](segment-builder.md#create-a-new-segment) kontaktinformācija, kas prognozēta pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
+Visi segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [kontaktinformācija](segment-builder.md#create-a-new-segment), kas prognozēta pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Ads eksportēšanas izmantošana ar biznesa kontiem
 
@@ -113,7 +125,7 @@ Ja biznesa konti ir kartēti uz saistītiem kontiem, programma Customer Insights
 
 ### <a name="data-ingestion"></a>Datu pieņemšana
 
-- **Skatiet vai modificējiet metadatus vai entītijas definīciju, pievienojot datus no Azure Data Lake Storage** Tagad varat skatīt un rediģēt metadatus vai entītijas definīciju auditorijas ieskatos, pievienojot datus no mapes Common Data Model Azure Data Lake Storage. Šī iespēja nodrošina reāllaika atsauksmes, modeļa validāciju un kļūdu pārbaudi. Tas ļauj jums nemanāmi rediģēt gan model.json, gan .json.
+- **Metadatu vai entītijas definīcijas skatīšana vai modificēšana, pievienojot datus no jūsu entītijas, tagad varat skatīt un rediģēt metadatus vai entītijas definīciju auditorijas ieskatos, pievienojot datus no jūsu datu modeļa bieži lietotās Azure Data Lake Storage** mapes programmā Azure Data Lake Storage. Šī iespēja nodrošina reāllaika atsauksmes, modeļa validāciju un kļūdu pārbaudi. Tas ļauj jums nemanāmi rediģēt gan model.json, gan .json.
 
 ### <a name="extensibility"></a>Paplašināšana
 
@@ -188,7 +200,7 @@ Ja biznesa konti ir kartēti uz saistītiem kontiem, programma Customer Insights
 
 ### <a name="data-ingestion"></a>Datu pieņemšana
 
-- **Savienojuma izveide ar lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas** Mēs ar prieku paziņojam par Power Platform datu plūsmu un lokāls savienojamības priekšskatījumu, izmantojot gateways programmā Customer Insights ar saistītu Power Platform vai Dataverse vide. Visi jaunie datu avoti, kas izveidoti Customer Insights vidē ar saistītu Dataverse vidi, pēc noklusējuma Power Platform datu plūsmas, kas ievieš lokāls datu savienojamību un bagātīgu savienotāju un transformācijas iespēju kopu.
+- **Pieslēdzieties lokālajiem datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas** Ar prieku izziņojam priekšskatījumu Power Platform datu plūsmām un lokālo savienojamību Customer Insights vārtejām ar saistīto Power Platform vai Dataverse vidi. Visi jaunie datu avoti, kas izveidoti Customer Insights vidē ar saistīto Dataverse vidi, pēc noklusējuma kļūs par Power Platform datu plūsmām, radot lokālo datu savienojamību un bagātīgu savienotāju un pārveides iespēju klāstu.
 
 ### <a name="extensibility"></a>Paplašināšana
 
@@ -250,7 +262,7 @@ Ja biznesa konti ir kartēti uz saistītiem kontiem, programma Customer Insights
 
 - **Vides atbalsta kopēšana vairākiem datu avotu veidiem**
 
-  Administratori var kopēt vides konfigurācijas uz jaunu vidi tajā pašā organizācijā. Šis līdzeklis paplašina kopēšanas vides funkcionalitāti gadījumos, kad tiek izmantoti datu avoti, kuru pamatā ir Microsoft Dataverse pārvaldīts datu ezers vai mape Common Data Model.
+  Administratori var kopēt vides konfigurācijas uz jaunu vidi tajā pašā organizācijā. Šis līdzeklis paplašinās kopēšanas vides funkcionalitāti gadījumiem, kuros tiek izmantoti datu avoti, kas balstīti uz Microsoft Dataverse pārvaldītu datu ezeru vai Common Data Model mapi.
 
 ## <a name="january-2021-updates"></a>2021. gada janvāra atjauninājumi
 
@@ -276,7 +288,7 @@ Ja biznesa konti ir kartēti uz saistītiem kontiem, programma Customer Insights
 
 #### <a name="system-administration"></a>Sistēmas administrēšana
 
-- **Nemanāmi koplietojiet datus, lai Microsoft Dataverse** Tagad varat koplietot Customer Insights izvadi ar Microsoft Dataverse lietojumprogrammām, izmantojot Microsoft Dataverse pārvaldīto datu ezeru. Kad Dataverse vide ir saistīta ar Customer Insights, tiek piedāvāta opcija iespējot datu koplietošanu.
+- **Netraucēti kopīgojiet datus ar Microsoft Dataverse** Tagad Customer Insights izvadi varat koplietot ar Microsoft Dataverse lietojumprogrammām, izmantojot risinājumu Microsoft Dataverse pārvaldīto Data Lake. Kad esat sasaistījis Dataverse vidi ar Customer Insights, varat izmantot opciju datu kopīgošanas iespējošanai.
   Papildinformācijai skatiet [Vižu pārvaldība](manage-environments.md).
 
 

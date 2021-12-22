@@ -1,7 +1,7 @@
 ---
-title: Adreses uzlabošanas bagātināšana
+title: Adreses uzlabošanas bagātināšana (video)
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643405"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927520"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
@@ -101,6 +101,16 @@ Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat ar
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
 Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opciju **Skatīt bagātinātos datus**.
+
+### <a name="overview-card"></a>Pārskata karte
+
+Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas aptvērumu. 
+
+* **Klienti apstrādāja un mainīja** : veiksmīgi bagātināto klientu profilu skaits.
+
+* **Klienti apstrādāti un nav** mainīti : atpazīto, bet nemainīto klientu profilu skaits. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
+
+* **Klienti nav apstrādāti un nav** mainīti : neatpazītu profilu skaits. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

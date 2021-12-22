@@ -1,7 +1,7 @@
 ---
 title: Common Data Model datu savienošana ar Azure Data Lake kontu
 description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033135"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900206"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 
@@ -30,7 +30,7 @@ ms.locfileid: "7033135"
 
 - Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no datu ezera citā Azure reģionā netiek atbalstīti. Lai iepazītu konkrētās vides Azure reģionu, apmeklējiet **Administrators** > **Sistēma** > **Par** sadaļā par auditorijas ieskatiem.
 
-- Pakalpojumā tiešsaistes pakalpojumos glabātie dati var tikt glabāti citā ietā, nevis tajā, kur tiek apstrādāti vai glabāti dati Dynamics 365 Customer Insights. Importējot vai savienojot ar tiešsaistes pakalpojumos glabātajiem datiem, jūs piekrītat, ka datus var pārnest uz Dynamics 365 Customer Insights un glabāt tajā. [Papildinformāciju skatiet Microsoft drošības kontroles centrā.](https://www.microsoft.com/trust-center)
+- Tiešsaistes pakalpojumos glabātos datus var glabāt citā vietā, nevis vietā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar tiem, jūs piekrītat, ka datus var pārsūtīt uz Dynamics 365 Customer Insights .  [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Izveidot savienojumu ar mapi Common Data Model
 
@@ -38,12 +38,11 @@ ms.locfileid: "7033135"
 
 1. Atlasiet **Pievienot datu avotu**.
 
-1. Atlasiet **Izveidot savienojumu ar Common Data Model mapi**, ievadiet datu avota **Nosaukumu** un pēc tam atlasiet **Tālāk**. Nosaukuma vadlīnijas: 
-   - Sāciet ar burtu.
-   - Izmantojiet tikai burtus un ciparus. Speciālās rakstzīmes un atstarpes nav atļautas.
-   - Izmantojiet no 3 līdz 64 rakstzīmēm.
+1. Atlasiet **Azure datu ezera krātuve**, ievadiet datu avots nosaukumu un pēc **tam** atlasiet **Tālāk**.
 
-1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Ievadiet informāciju par **Konteineru** un atlasiet **Tālāk**.
+   - Ja tiek prasīts, atlasiet kādu no datu kopu paraugiem, kas attiecas uz jūsu nozari, un pēc tam atlasiet **Tālāk**. 
+
+1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Ievadiet **servera adresi,** atlasiet **Pieteikties un pēc tam** atlasiet **Tālāk**.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ ms.locfileid: "7033135"
    > [!NOTE]
    > Jebkurš model.json vai manifest.json fails, kas saistīts ar citu datu avotu vidē, netiks rādīts sarakstā.
 
-1. Atlasītajā model.json vai manifest.json failā tiks parādīts pieejamo entītiju saraksts. Jūs varat apskatīt un atlasīt no pieejamo entītiju saraksta un atlasīt **Saglabāt**. Jaunākie dati no atlasītajām entītijām tiks eksportēti katru dienu.
+1. Atlasītajā failā model.json vai manifest.json tiks parādīts pieejamo entītiju saraksts. Pārskatiet un atlasiet pieejamo entītiju sarakstā un pēc tam atlasiet **Saglabāt**. Jaunākie dati no atlasītajām entītijām tiks eksportēti katru dienu.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, kurā redzams entītiju saraksts no model.json faila.](media/review-entities.png)
 
-8. Norādiet, kurām datu entītijām vēlaties iespējot datu profilēšanu, un atlasiet **Saglabāt**. Datu profilēšana iespējo analīzi un citas iespējas. Varat atlasīt visu entītiju, kas atlasa visus entītijas atribūtus, vai atlasiet noteiktus atribūtus pēc jūsu izvēles. Pēc noklusējuma neviena entītija nav iespējota datu profilēšanai.
+8. Norādiet, kuras datu entītijas vēlaties iespējot datu profilēšanu, pēc tam atlasiet **Saglabāt**. Datu profilēšana iespējo analīzi un citas iespējas. Varat atlasīt visu entītiju, kas atlasa visus entītijas atribūtus, vai atlasiet noteiktus atribūtus pēc jūsu izvēles. Pēc noklusējuma neviena entītija nav iespējota datu profilēšanai.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, kurā redzama datu profilēšana.](media/dataprofiling-entities.png)
 

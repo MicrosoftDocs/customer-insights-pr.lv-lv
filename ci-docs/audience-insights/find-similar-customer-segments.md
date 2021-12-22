@@ -1,5 +1,5 @@
 ---
-title: Atrast AI līdzīgus klientus
+title: Atrast līdzīgus klientus ar AI (Video)
 description: Atrodiet līdzīgu klientu segmentus, izmantojot mākslīgo intelektu
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: MT
+ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799691"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903899"
 ---
 # <a name="similar-customers-preview"></a>Līdzīgi klienti (priekšskatījums)
 
@@ -23,7 +23,7 @@ ms.locfileid: "7799691"
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Atrast līdzīgus klientus* izmanto automatizētus līdzekļus, lai izvērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, un tādējādi šo līdzekli var izmantot kā profilēšanas metodi, saskaņā ar šī jēdziena definīciju Vispārīgajā datu aizsardzības regulā ("VDAR"). Šī līdzekļa izmantošana klienta datu apstrādei var būt pakļauta VDAR vai citiem likumiem vai noteikumiem. Jūs esat atbildīgs par to, lai nodrošinātu, ka Dynamics 365 Customer Insights, tostarp prognozes, izmantošana atbilst visiem piemērojamajiem normatīvajiem aktiem, tostarp tiesību aktiem, kas saistīti ar privātumu, personas datiem, biometriskajiem datiem, datu aizsardzību un saziņas konfidencialitāti.
+> *Atrast līdzīgus klientus* izmanto automatizētus līdzekļus, lai izvērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, un tādējādi šo līdzekli var izmantot kā profilēšanas metodi, saskaņā ar šī jēdziena definīciju Vispārīgajā datu aizsardzības regulā ("VDAR"). Šī līdzekļa izmantošana klienta datu apstrādei var būt pakļauta VDAR vai citiem likumiem vai noteikumiem. Jūs esat atbildīgs par to, ka jūsu Dynamics 365 Customer Insights lietojums, ieskaitot prognozes, atbilst visiem piemērojamiem likumiem un noteikumiem, ieskaitot likumus, kas attiecas uz privātumu, personas datiem, biometrijas datiem, datu aizsardzību un saziņas konfidencialitāti.
 
 ## <a name="finding-similar-customers"></a>Līdzīgu klientu atrašana
 
