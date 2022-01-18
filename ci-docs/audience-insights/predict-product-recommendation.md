@@ -1,7 +1,7 @@
 ---
 title: Produktu ieteikumu prognoze
 description: Prognozējiet produktus, kurus klients, visticamāk, iegādāsies vai ar kuriem mijiedarbosies.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494548"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967848"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktu ieteikumu prognoze (priekšskatījums)
 
@@ -54,7 +54,7 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
 > [!NOTE]
 > - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Transakcijas definīcija ir diezgan elastīga. Jebkuri dati, kuri raksturo lietotāja-produkta mijiedarbību, var darboties kā ievade. Piemēram, produkta iegāde, nodarbību apmeklējums, pasākuma apmeklējums.
-> - Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkumu entitījas, apvienojiet tās risinājumā Power Query, pirms veicat datu uzņemšanu.
+> - Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas entītijas, apvienojiet tās Power Query pirms datu uzņemšanas.
 > - Ja pasūtījums un pasūtījuma informācija ir atšķirīgas entitījas, pirms lietošanas modelī tās apvienojiet. Modelis nedarbojas tikai ar entitījas pasūtījuma ID vai kvīts ID.
 
 
@@ -79,11 +79,11 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 1. Iestatiet to **Produktu skaitu**, ko vēlaties ieteikt klientam. Šī vērtība ir atkarīga no tā, kā piegādes metode aizpilda datus. Ja varat ieteikt trīs produktus, iestatiet šo vērtību atbilstoši.
    
    >[!TIP]
-   > Lai saglabātu prognozēšanu kā melnrakstu, varat atlasīt **Saglabāt un aizvērt** jebkurā brīdī. Prognozes melnraksts ir atrodams cilnē **Manas prognozes**.
+   > Jebkurā laikā varat atlasīt **Saglabāt** melnrakstu, lai saglabātu prognoze kā melnrakstu. Prognozes melnraksts ir atrodams cilnē **Manas prognozes**.
 
-1. Izvēlieties, vai vēlaties **Ieteikt produktus, ko klienti nesen ir iegādājušies**.
+1. Izvēlieties, vai vēlaties iekļaut produktus, ko klienti nesen iegādājušies **laukā Atkārtot paredzamos** iepirkumus.
 
-1. Ja esat atlasījis *ne* ieteikt nesen iegādātus produktus, iestatiet logu **Atskats**. Šajā iestatījumā ir norādīts laika posms, kādu modelis apsver pirms produkta atkal ieteikšanas lietotājam. Piemēram, norādiet, ka klients reizi divos gados iegādājas klēpjdatoru. Šis logs aplūkos pirkumu vēsturi pēdējos divos gados, un, ja tiks atrasts produkts, tas tiks filtrēts no ieteikumiem.
+1. Iestatiet **logu Atskats**. Šajā iestatījumā ir norādīts laika posms, kādu modelis apsver pirms produkta atkal ieteikšanas lietotājam. Piemēram, norādiet, ka klients reizi divos gados iegādājas klēpjdatoru. Šis logs aplūkos pirkumu vēsturi pēdējos divos gados, un, ja tiks atrasts produkts, tas tiks filtrēts no ieteikumiem.
 
 1. Atlasiet **Tālāk**
 

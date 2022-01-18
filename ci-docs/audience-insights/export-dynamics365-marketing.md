@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
-ms.translationtype: HT
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417214"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975133"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmentu lietošana Dynamics 365 Marketing (priekšskatījums)
 
@@ -45,7 +45,7 @@ Ja izmantojat jaunās iespējas Dynamics 365 Marketing reāllaika automatizētas
 
 1. Sadaļā **Servera administratora konts** atlasiet **Pieteikties** un izvēlieties Dynamics 365 Marketing kontu.
 
-1. Kartēt klienta ID lauku uz Dynamics 365 kontaktpersonas ID.
+1. Kartēt kontaktpersonas ID entītijā uz Dynamics 365 Kontaktpersonas ID.
 
 1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
 

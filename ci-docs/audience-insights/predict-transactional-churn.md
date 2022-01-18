@@ -1,7 +1,7 @@
 ---
-title: Transakcijas čupināt prognoze (Video)
+title: Transakcijas čup prognoze (satur video)
 description: Prognozējiet, vai pastāv risks, ka klients vairs neiegādāsies jūsu uzņēmuma produktus vai pakalpojumus.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904081"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967756"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Transakciju zuduma prognoze (priekšskatījums)
 
@@ -103,10 +103,10 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Atlasiet elementu **Klientu zuduma modeli (priekšskatījums)** un atlasiet opciju **Lietot šo modeli**.
 
-1. Rūtī **Klientu zuduma modelis** izvēlieties **Transakcija** un atlasiet **Sākt darbu**.
+1. Rūtī **Klientu čuršana modelis** (priekšskatījums) izvēlieties **Darbība** un atlasiet Sākt **darbu**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Ekrānuzņēmums ar atlasītu transakcijas opciju Klientu zuduma modeļa rūtī.":::
-
+ 
 ### <a name="name-model"></a>Nosaukuma piešķiršana modelim
 
 1. Norādiet modeļa nosaukumu, kas atšķir to no citiem modeļiem.
@@ -117,11 +117,11 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 ### <a name="define-customer-churn"></a>Definēt klientu zudumu
 
-1. Iestatiet dienu logu, lai paredzētu zudumu, lai **Identificētu tos klientus, kas var zust nākošajā laukā**. Piemēram, prognozētu kannas risku saviem klientiem nākamo 90 dienu laikā, lai pielīdzinātos jūsu mārketinga saglabāšanas pūliņiem. Prognozējot zudumu risku ilgākā vai īsākā laika periodā var apgrūtināt, lai risinātu faktorus jūsu zudumu riska profilu, bet tas ir atkarīgs no jūsu uzņēmuma specifiskajām prasībām.
+1. Iestatiet **logu prognoze**. Piemēram, prognozētu kannas risku saviem klientiem nākamo 90 dienu laikā, lai pielīdzinātos jūsu mārketinga saglabāšanas pūliņiem. Prognozējot zudumu risku ilgākā vai īsākā laika periodā var apgrūtināt, lai risinātu faktorus jūsu zudumu riska profilu, bet tas ir atkarīgs no jūsu uzņēmuma specifiskajām prasībām.
    >[!TIP]
-   > Lai saglabātu prognozēšanu kā melnrakstu, varat atlasīt **Saglabāt un aizvērt** jebkurā brīdī. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+   > Jebkurā laikā varat atlasīt **Saglabāt** melnrakstu, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
-1. Ievadiet dienu skaitu, lai definētu zudumu laukā **Klients ir zudis, ja tas nav veicis pirkumus:** laukā. Piemēram, ja klients nav veicis pirkumus pēdējo 30 dienu laikā, tie var tikt uzskatīti par zudušiem jūsu uzņēmumam. 
+1. Ievadiet dienu skaitu, lai definētu **čupli laukā Churn** definition. Piemēram, ja klients nav veicis pirkumus pēdējo 30 dienu laikā, tie var tikt uzskatīti par zudušiem jūsu uzņēmumam. 
 
 1. Atlasiet **Tālāk**, lai turpinātu.
 
@@ -129,19 +129,16 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Atlasiet vienumu **Pievienot datus** un izvēlieties darbības tipu sānu rūtij, kurā ir nepieciešamā informācija par transakciju vai pirkumu vēsturi.
 
-1. Sadaļā **Izvēlieties darbības** izvēlieties noteiktas darbības no atlasītās darbības, uz kuru vēlaties fokusēties aprēķinos.
+1. Sadaļā **Darbību atlase** izvēlieties noteiktas aktivitātes no atlasītā aktivitātes tipa, uz kuru vēlaties, lai aprēķins būtu fokuss.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Sānu rūts, kurā redzama noteiktu darbību izvēle zem semantiskā tipa.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Sānu rūts, kurā redzama noteiktu darbību izvēle zem semantiskā tipa.":::
 
-1. Ja vēl neesat kartējis darbību uz semantiskās darbības tipu, atlasiet **Rediģēt**, lai to izdarītu. Tiek atvērta vadītā pieredze semantiskās darbības kartēšanas laikā. Tagad kartējiet datus uz darbības tipa saistītajiem laukiem.
+   Ja vēl neesat kartējis darbību uz semantiskās darbības tipu, atlasiet **Rediģēt**, lai to izdarītu. Tiek atvērta vadītā pieredze semantiskās darbības kartēšanas laikā. Tagad kartējiet datus uz darbības tipa saistītajiem laukiem.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Lapas iestatīšanas darbības tips.":::
+1. Kartējiet semantiskos atribūtus uz laukiem, kas nepieciešami modeļa palaišanai. Ja tālāk norādītie lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas attiecības ar *Klienta* entītiju. Atlasiet **Saglabāt**.
 
-1. Pēc darbības kartēšanas uz atbilstošo semantisko tipu atlasiet **Tālāk**, lai turpinātu
+1. Solī **Pievienot nepieciešamos datus** atlasiet **Tālāk,** lai turpinātu, ja nevēlaties pievienot papildu darbības.
 
-1. Kartējiet semantiskos atribūtus uz laukiem, kas nepieciešami modeļa palaišanai. Ja tālāk norādītie lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas attiecības ar *Klienta* entītiju.
-
-1. Atlasiet **Tālāk**.
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 

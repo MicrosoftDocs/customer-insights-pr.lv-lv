@@ -80,7 +80,7 @@
       items:
         - name: Klientu profilu bagātināšana
           href: audience-insights/enrichment-hub.md
-        - name: Zīmola un interešu radniecība
+        - name: Zīmoli un intereses
           href: audience-insights/enrichment-microsoft.md
         - name: Uzlabotas adreses
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Prognozējiet transakcijas zudumu
               href: audience-insights/predict-transactional-churn.md
+            - name: Analizēt noskaņojumu klientu atsauksmēs
+              href: audience-insights/sentiment-analysis.md
             - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
               href: audience-insights/custom-models.md
             - name: Daļēji trūkstošu datu pabeigšana

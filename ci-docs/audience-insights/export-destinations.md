@@ -5,17 +5,16 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732159"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977976"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
@@ -36,7 +35,7 @@ Ir divi galvenie eksporta veidi:
 Vairākums eksportēšanas opciju atbalsta abus vides tipus. Segmentu eksportēšanai uz dažādām mērķa sistēmām ir noteiktas prasības. Parasti šī informācija, segmenta elements klienta profils, satur kontaktinformāciju. Lai gan parasti tas attiecas uz segmentiem, kas būvēti uz atsevišķiem klientiem (B2C), tas ne vienmēr attiecas uz segmentiem, kuru pamatā ir uzņēmuma uzņēmumi (B2B). 
 
 **Segments eksportē vidi uzņēmuma uzņēmumiem (B2B)**  
-- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties [uzņēmuma](export-linkedin-ads.md) opciju.
+- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties **uzņēmuma** opciju.
 - Visām pārējām mērķa sistēmām nepieciešami kontaktpersonas entītijas lauki. Lai nodrošinātu, ka uzņēmuma segmenti var izgūt datus no saistītajām kontaktpersonām, segmenta definīcijai ir jāmācās ar kontaktpersonas entītijas atribūtiem. Papildinformācija par [segmentu un projekta atribūtu konfigurēšanu](segment-builder.md).
 
 **Segmenta eksportēšana vidē atsevišķiem klientiem (B2C)**  

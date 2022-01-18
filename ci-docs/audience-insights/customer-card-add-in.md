@@ -1,7 +1,7 @@
 ---
-title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (video)
+title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (satur video)
 description: Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921874"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945436"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
@@ -27,12 +27,12 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai kartētu Dynamics 365 datus uz auditorijas ieskatu klientu profiliem, tiem jābūt [iztvertiem no Dynamics 365 programmas, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md).
+- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai uzņēmumus), jums `contactid` jāpārliecinās, vai lauks (vai ) ir `accountid` iestatīts kā šīs datu avots primārā [atslēga datu apvienošanas procesa kartes posmā](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Visi Dynamics 365 lietotāji, kas izmanto klienta kartes pievienojumprogrammu, ir [jāpievieno kā lietotāji](permissions.md) auditorijas ieskatos, lai redzētu datus.
 - Lai darbotos datu uzmeklēšana, ir nepieciešama [konfigurēta meklēšanas un filtrēšanas iespēja](search-filter-index.md) auditorijas ieskatos.
 - Katra pievienojumprogrammas vadīkla ir atkarīga no noteiktiem datiem auditorijas ieskatos. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija jūs informēs, ja atlasītā vides tipa dēļ vadīkla nav pieejama. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
   - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
-  - **Informācijas kontrole** : pieprasa datus, kas [ģenerēti, izmantojot prognozes vai pielāgotus modeļus](predictions-overview.md).
+  - **Informācijas kontrole** : pieprasa datus, kas ģenerēti, izmantojot prognozes vai [pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
   - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šīs bagātināšanas: [Korporācijas](enrichment-microsoft.md) Microsoft nodrošinātie zīmoli, [Microsoft nodrošinātās intereses](enrichment-microsoft.md) un Microsoft [nodrošinātie Office iesaistes](enrichment-office.md) dati.
   - **Kontaktpersonu vadīkla**: nepieciešama kontaktpersonu tipa semantiskās entītijas definīcija.

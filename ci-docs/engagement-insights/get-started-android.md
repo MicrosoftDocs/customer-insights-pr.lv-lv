@@ -3,24 +3,25 @@ title: Darba sākšana ar Android SDK
 description: Uzziniet, kā personalizēt un palaist Android SDK
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655351"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977584"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Darba sākšana ar Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Šī apmācība palīdz jums instrumentēt Android lietojumprogrammu ar Dynamics 365 Customer Insights iesaistes ieskatu SDK. Notikumus savā portālā varēsit skatīt pēc piecām minūtēm vai ātrāk.
+Šajā ceļvedī ir sniegtas norādes par instrumentācijas procesu jūsu Android programmā ar Dynamics 365 Customer Insights iesaistes ieskatu SDK. Notikumus savā portālā varēsit skatīt pēc piecām minūtēm vai ātrāk.
 
 ## <a name="configuration-options"></a>Konfigurācijas opcijas
 Tālāk uzskaitītās konfigurācijas opcijas ir iespējams nodot SDK:
@@ -31,7 +32,7 @@ Tālāk uzskaitītās konfigurācijas opcijas ir iespējams nodot SDK:
 
 - Android Studio
 
-- Minimālais Android API līmenis: 16 (Želejas pupiņas)
+- Minimālais Android API līmenis: 16 (Jelly Bean)
 
 - Pieņemšanas atslēga (lai iegūtu, skatiet tālāk sniegtos norādījumus)
 
@@ -46,7 +47,7 @@ Sāciet procesu, atlasot darbvietu, atlasot Android mobilo platformu un lejupiel
 
 ## <a name="configure-the-sdk"></a>SDK konfigurēšana
 
-Kad sdk ir lejupielādēts, varat strādāt ar to Android Studio, lai iespējotu un definētu notikumus. Ir divi veidi:
+Pēc SDK lejupielādes ar to var strādāt, izmantojot Android Studio, lai iespējotu un definētu notikumus. Ir divi veidi:
 ### <a name="option-1-use-jitpack-recommended"></a>1. iespēja: izmantojiet JitPack (ieteicams)
 1. Pievienojiet JitPack krātuvi saknes `build.gradle`:
     ```gradle
@@ -67,7 +68,7 @@ Kad sdk ir lejupielādēts, varat strādāt ar to Android Studio, lai iespējotu
     ```
 
 ### <a name="option-2-use-download-link"></a>2. iespēja: izmantojiet lejupielādes saiti
-1. Lejupielādējiet [iesaistes ieskatus Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) un ievietojiet failu `eiandroidsdk-debug.aar``libs` mapē.
+1. Lejupielādējiet [iesaistes ieskatus Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) un ievietojiet `eiandroidsdk-debug.aar` failu `libs` mapē.
 
 1. Atveriet projekta līmeņa `build.gradle` failu un pievienojiet norādītos fragmentus:
     ```gradle

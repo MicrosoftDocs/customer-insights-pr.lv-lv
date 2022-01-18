@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Facebook reklāmu pārvaldnieku (video)
+title: Customer Insights datu eksportēšana uz Facebook Ads Manager (satur video)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Facebook Ads Manager.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4b2dc2ff8e5286209bd2ec94df42e82f0944715c
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: ce1e63f7b20b757780f05895b725003e286f9dac
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904173"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7935033"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentu saraksta eksportēšana uz Facebook Ads Manager (priekšskatījums)
 

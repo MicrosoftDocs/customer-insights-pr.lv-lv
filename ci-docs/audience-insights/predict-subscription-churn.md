@@ -1,5 +1,5 @@
 ---
-title: Abonementa čupēšana prognoze (Video)
+title: Abonementa čupēšana prognoze (satur video)
 description: Paredziet, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903998"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967710"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
 
@@ -77,7 +77,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Parasti šim periodam patīk biznesa darbības, piemēram, piedāvājumi vai citi mārketinga pasākumi, kas cenšas nepieļaut klientu zudumu.
 1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām. Atlasiet **Tālāk**, lai turpinātu
    >[!TIP]
-   > Lai saglabātu prognozēšanu kā melnrakstu, varat atlasīt **Saglabāt un aizvērt** jebkurā brīdī. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+   > Jebkurā laikā varat atlasīt **Saglabāt** melnrakstu, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
 ### <a name="add-required-data"></a>Nepieciešamo datu pievienošana
 

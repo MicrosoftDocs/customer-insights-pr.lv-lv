@@ -1,5 +1,5 @@
 ---
-title: Adreses uzlabošanas bagātināšana (video)
+title: Adreses uzlabošanas bagātināšana (satur video)
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
 ms.date: 12/16/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927520"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934932"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 

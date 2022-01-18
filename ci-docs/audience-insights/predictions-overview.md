@@ -1,21 +1,20 @@
 ---
 title: Pārskats par atbalstītajiem prognožu scenārijiem
 description: Prognoze scenārijiem un iespējām, uz kurām attiecas Dynamics 365 Customer Insights pieteikums.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673971"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978022"
 ---
 # <a name="predictions-overview"></a>Prognožu pārskats
 
@@ -31,6 +30,7 @@ Visvienkāršākais veids, kā sākt ar datu prognozēšanu, ir iepriekš defin�
 - [Produkta ieteikums](predict-product-recommendation.md): iesaka prognozēšanas produktu ieteikumu kopas, pamatojoties uz pirkumu uzvedību un klientiem ar līdzīgiem pirkšanas modeļiem.
 - [Abonementu zudums](predict-subscription-churn.md): Prognozē, vai pastāv risks, ka klients var pārtraukt izmantot jūsu uzņēmuma abonējamos produktus vai pakalpojumus.
 - [Transakciju zudums](predict-transactional-churn.md): Prognozē, vai klients vairs nepirks jūsu produktus vai pakalpojumus noteiktā laika periodā.
+- [Sentimenta analīze](sentiment-analysis.md) : Analizējiet klientu atsauksmju noskaņojumu un nosakiet bieži minētos biznesa aspektus.
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
@@ -43,6 +43,6 @@ Visvienkāršākais veids, kā sākt ar datu prognozēšanu, ir iepriekš defin�
 
 Ja organizācija jau izmanto algoritmiskās mācīšanās scenārijus, kuru pamatā algoritmiskā mācīšanās Azure eksperimenti, pielāgoto modeļu līdzeklis programmā Customer Insights palīdz savienot punktus. Izveidojiet darbplūsmas, kas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartējiet rezultātus uz vienotajiem klientu profiliem. Papildinformācijai skatiet [Pielāgoti algoritmiskās mācīšanās modeļi](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder prognoze
+## <a name="ai-builder-prediction"></a>AI Builder prognoze
 
 Dažreiz datu kopas ir nepilnīgas un trūkst dažu vērtību. Customer Insights var palīdzēt prognozēt trūkstošās vērtības klienta entītijai un segmentiem. Papildinformāciju skatiet rakstā [Daļējo datu pabeigšana ar prognozēm](predictions.md).
