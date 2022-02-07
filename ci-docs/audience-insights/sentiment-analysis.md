@@ -1,6 +1,6 @@
 ---
-title: Semantiskā analīze klientu atsauksmēm
-description: Uzziniet, kā izmantot noskaņojuma analīzes modeli klientu atsauksmēm programmā Dynamics 365 Customer Insights.
+title: Sentimenta analīze klientu atsauksmēm
+description: 'Uzziniet, kā izmantot noskaņojuma analīzes modeli klientu atsauksmēm programmā Dynamics 365 Customer Insights.'
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951112"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizēt noskaņojumu klientu atsauksmēs (Priekšskatījums)
 
 Klienti mūsdienās sagaida augstas kvalitātes produktus, pakalpojumus un pieredzi. Īpaši klienti, kuri dalās ar savām atsauksmēm. Organizācijām ir ļoti grūti analizēt pieaugošo datu apjomu, nesamazinot precizitāti un augstākas darbaspēka izmaksas. Dynamics 365 Customer Insights piedāvā sentimenta analīzes modeli klientu atsauksmēm, kas ļauj organizācijām precīzāk un ar zemākām izmaksām analizēt savus datus.
@@ -36,9 +31,9 @@ Sentimenta analīzes līdzeklis ģenerē divus atvasinātus ieskatus katram debi
 
 Lai nodrošinātu, ka jūs varat uzticēties modeļu rezultātiem, mēs sniedzam pārredzamu informāciju par to, kā modeļi pieņem lēmumus. Jūs saņemsiet sarakstu ar vārdiem, kas ietekmēja modeļu lēmumu piešķirt konkrētu noskaņojuma rezultātu vai biznesa aspektu atsauksmju komentāriem.  
 
-Mēs izmantojam divus **dabiskās valodas apstrādes (NLP) modeļus** : Pirmais piešķir katram atsauksmju komentāram sentimenta rezultātu. Otrais modelis saista katru atgriezenisko saiti ar visiem piemērojamajiem uzņēmējdarbības aspektiem. Modeļi ir apmācīti par publiskiem datiem no avotiem sociālajos plašsaziņas līdzekļos, mazumtirdzniecībā, restorānos, patēriņa produktos un automobiļu rūpniecībā.    
+Mēs izmantojam divus **dabiskās valodas apstrādes (NLP) modeļus**: Pirmais piešķir katram atsauksmju komentāram sentimenta rezultātu. Otrais modelis saista katru atgriezenisko saiti ar visiem piemērojamajiem uzņēmējdarbības aspektiem. Modeļi ir apmācīti par publiskiem datiem no avotiem sociālajos plašsaziņas līdzekļos, mazumtirdzniecībā, restorānos, patēriņa produktos un automobiļu rūpniecībā.    
   
-- Iepriekš definētie biznesa aspekti modelim, kas saistāms ar atgriezeniskās saites datiem, ir šādi:
+Iepriekš definētie biznesa aspekti modelim, kas saistāms ar atgriezeniskās saites datiem, ir šādi:
 -   Uzņēmumu pārvaldība
 -   Norēķināšanās un maksājums
 -   Klientu atbalsts
@@ -58,16 +53,16 @@ Mēs izmantojam divus **dabiskās valodas apstrādes (NLP) modeļus** : Pirmais 
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-Sentimenta analīze ir balstīta uz teksta atgriezeniskās saites datiem, kas ir izgājuši [datu apvienošanas procesu](data-unification.md). Ieteicams [iepriekš konfigurēt atsauksmju datu entītijas kā semantiskā tipa darbību entītijas](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (atsauksmju tips). 
+Sentimenta analīze ir balstīta uz teksta atgriezeniskās saites datiem, kas ir izgājuši datu apvienošanas [procesu](data-unification.md). [Ieteicams iepriekš konfigurēt atsauksmju datu entītijas kā semantiskā tipa darbību entītijas](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (atsauksmju tips). 
 
-Lai konfigurētu sentimenta analīzes modeli, ir nepieciešamas vismaz [Līdzstrādnieka atļaujas](permissions.md).
+Lai konfigurētu sentimenta analīzes modeli, jums ir nepieciešamas vismaz [Līdzstrādnieka atļaujas](permissions.md).
 
 Customer Insights var apstrādāt līdz pat 10 miljoniem atsauksmju ierakstu viena modeļa palaišanai. Modelis var analizēt atgriezeniskās saites komentārus līdz 128 vārdiem. Ja atsauksmju komentārs ir garāks, analīzē ņemti vērā tikai pirmie 128 vārdi.
 
 ### <a name="data-requirements"></a>Datu prasības
   
 Ir nepieciešami šādi datu atribūti:
-- Vienotais klienta ID (UCID), lai saskaņotu teksta atsauksmju datu ierakstus ar atsevišķu klientu. Šis ID ir datu apvienošanas procesa [rezultāts](data-unification.md).
+- Vienotais klienta ID (UCID), lai saskaņotu teksta atsauksmju datu ierakstus ar atsevišķu klientu. Šis ID ir datu apvienošanas [procesa](data-unification.md) rezultāts.
 - Atsauksmju ID
 - Atsauksmju laikspiedols
 - Atsauksmju teksts   
@@ -79,29 +74,29 @@ Ir nepieciešami šādi datu atribūti:
 
 1. Sadaļā Customer Insights dodieties uz **Informācija** > **Prognozes**.
 
-1. **Elementā Klientu noskaņojuma analīze** atlasiet **Izmantot modeli**.
+1. Elementā **Klientu noskaņojuma analīze** atlasiet **Izmantot modeli**.
 
-1. Rūtī **Klientu noskaņojuma analīze** (priekšskatījums) atlasiet **Sākt darbu**.
+1. **Rūtī Klientu noskaņojuma analīze (priekšskatījums)** atlasiet **Sākt darbu**.
 
-1. Solī **Modeļa nosaukums** norādiet **analīzes** nosaukumu. 
+1. **Solī Modeļa nosaukums** norādiet **analīzes nosaukumu**. 
 
-1. Norādiet **biznesa aspekta izvades entītijas nosaukumu un** **Sentimenta rādītāja izvades entītijas nosaukumu**, pēc tam atlasiet **Tālāk**.
+1. Norādiet **biznesa aspekta izvades entītijas nosaukumu** un **Sentimenta rādītāja izvades entītijas nosaukumu** un pēc tam atlasiet **Tālāk**.
 
-1. Solī **Obligātie dati** atlasiet **Pievienot datus**.
+1. **Solī Obligātie dati** atlasiet **Pievienot datus**.
 
    :::image type="content" source="media/sentiment-add-data.png" alt-text="Pievienojiet datu plūsmu sentimenta analīzes modelī.":::
 
-1. Rūtī **Datu pievienošana** sarakstā izvēlieties semantisko tipu **Atsauksmes**.
+1. **Rūtī Datu** pievienošana sarakstā izvēlieties semantisko tipu **Atsauksmes**.
 
    :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Konfigurācijas darbība, lai atlasītu atgriezeniskās saites darbības sentimenta analīzei.":::
 
-1. Atlasiet šai sentimenta analīzei izmantojamās darbības un pēc tam atlasiet **Tālāk**.
+1. Atlasiet aktivitātes, ko izmantot šai sentimenta analīzei, un pēc tam atlasiet **Tālāk**.
  
 1. Kartējiet datu atribūtus uz modeļa atribūtiem. Atlasiet **Saglabāt**, lai lietotu atlasi. 
 
 1. Tiek parādīts datu kartējuma statuss. Atlasiet **Tālāk**, lai turpinātu. 
 
-1. Solī **Pārskatiet detalizētu informāciju par modeli** pārbaudiet sava noskaņojuma analīzes konfigurāciju. Varat atgriezties jebkurā prognoze konfigurācijas daļā. Atlasiet **Saglabāt un** palaist, lai sāktu analīzi. 
+1. **Solī Pārskatiet detalizētu informāciju par** modeli pārbaudiet sava noskaņojuma analīzes konfigurāciju. Varat atgriezties jebkurā prognoze konfigurācijas daļā. Atlasiet **Saglabāt un palaist**, lai sāktu analīzi. 
 
    :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Pārskatīt sentimenta modeļa darbību, kurā parādīti visi konfigurētie vienumi.":::
 
@@ -112,7 +107,7 @@ Ir nepieciešami šādi datu atribūti:
 1.  Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
 2.  Atlasiet prognozes, kuras vēlaties pārskatīt.
 - **Prognoze nosaukums**: izveides brīdī paredzētās prognozes nosaukums.
-- **prognoze tips** : prognoze izmantotā modeļa tips.
+- **prognoze tips**: prognoze izmantotā modeļa tips.
 - **Izvades entītija**: entītijas nosaukums, kurā saglabāt prognozes izvadi. Dodieties uz **Dati** > **Entītijas**, lai atrastu entītiju ar šo nosaukumu.
 - **Prognozētais lauks**: šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tos neizmanto klienta ilgtermiņa vērtības prognozē.
 - **Statuss**: Prognozes izpildes statuss.
@@ -121,7 +116,7 @@ Ir nepieciešami šādi datu atribūti:
   - **Neizdevās**: neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, skatiet žurnālfailus.
   - **Veiksmīgi**: prognoze ir veiksmīga. Atlasiet Skats vertikālās daudzpunktes sadaļā, lai pārskatītu prognozes rezultātus.
 - **Rediģēts**: datums, kad tika mainīta prognozes konfigurācija.
-- **Pēdējo reizi atsvaidzināts** : datums, kad prognoze bija atsvaidzinājusi rezultātus izvades entītijā.
+- **Pēdējo reizi atsvaidzināts**: datums, kad prognoze bija atsvaidzinājusi rezultātus izvades entītijā.
 
 ## <a name="manage-sentiment-analysis"></a>Pārvaldīt sentimenta analīzi
 
@@ -136,51 +131,51 @@ Varat optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārs
 
 Rezultātu lapā ir četras primārās datu sadaļas. 
 
-- **Vidējais noskaņojuma vērtējums** : Palīdz izprast kopējo noskaņojumu visiem klientiem. Sentimenta rādītāji ir sagrupēti trīs kategorijās: 
+- **Vidējais noskaņojuma vērtējums**: Palīdz izprast kopējo noskaņojumu visiem klientiem. Sentimenta rādītāji ir sagrupēti trīs kategorijās: 
   1.    Negatīvs (-5 > 2)
   2.    Neitrāls (-1 > 1)
   3.    Pozitīvs (2 > 5) 
   
   :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Kopējā klientu noskaņojuma vizuālais attēlojums.":::
 
-- **Klientu sadalījums pēc sentimenta vērtējuma** : Klienti tiek iedalīti negatīvās, neitrālās un pozitīvās grupās, pamatojoties uz viņu noskaņojuma rādītājiem. Novietojiet kursoru virs histogrammas stieņiem, lai redzētu klientu skaitu un vidējo noskaņojuma rādītāju katrā grupā. Šie dati var palīdzēt [izveidot klientu segmentus,](segments.md) pamatojoties uz viņu noskaņojuma rādītājiem.  
+- **Klientu sadalījums pēc sentimenta vērtējuma**: Klienti tiek iedalīti negatīvās, neitrālās un pozitīvās grupās, pamatojoties uz viņu noskaņojuma rādītājiem. Novietojiet kursoru virs histogrammas stieņiem, lai redzētu klientu skaitu un vidējo noskaņojuma rādītāju katrā grupā. Šie dati var palīdzēt izveidot [klientu](segments.md) segmentus, pamatojoties uz viņu noskaņojuma rādītājiem.  
 
   :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Joslu diagramma, kurā redzams klientu noskaņojums visās trijās sentimenta grupās.":::
 
-- **Vidējais sentimenta rādītājs laika gaitā** : klientu noskaņojums laika gaitā var mainīties. Mēs piedāvājam jūsu klientu noskaņojuma tendences jūsu datu laika diapazonā. Šis skats var palīdzēt novērtēt sezonālo akciju, produktu laišanas tirgū vai citu laika intervenču ietekmi uz klientu noskaņojumu. Skatiet grafiku, nolaižamajā izvēlnē atlasot interesējošo gadu. 
+- **Vidējais sentimenta rādītājs laika** gaitā: klientu noskaņojums laika gaitā var mainīties. Mēs piedāvājam jūsu klientu noskaņojuma tendences jūsu datu laika diapazonā. Šis skats var palīdzēt novērtēt sezonālo akciju, produktu laišanas tirgū vai citu laika intervenču ietekmi uz klientu noskaņojumu. Skatiet grafiku, nolaižamajā izvēlnē atlasot interesējošo gadu. 
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Vēstures diagramma ar sentimenta rādītāju laika gaitā, kas attēlots kā līnija.":::
  
-- **Noskaņojums par biznesa aspektiem** : Šajā tabulā ir uzskaitītas vidējais noskaņojums visos biznesa aspektos. Tas var palīdzēt jums novērtēt, kuri jūsu uzņēmuma aspekti jau apmierina klientus vai aspektus, kuriem nepieciešama lielāka uzmanība. Atsauksmju ieraksti, kas neatbilst nevienam no atbalstītajiem biznesa aspektiem, tiek iedalīti sadaļā **Cits**. Tabula pēc noklusējuma ir sakārtota alfabētiskā secībā. Kārtošanu var modificēt, atlasot tabulas galveni.
+- **Noskaņojums par biznesa aspektiem**: Šajā tabulā ir uzskaitītas vidējais noskaņojums visos uzņēmējdarbības aspektos. Tas var palīdzēt jums novērtēt, kuri jūsu uzņēmuma aspekti jau apmierina klientus vai aspektus, kuriem nepieciešama lielāka uzmanība. Atsauksmju ieraksti, kas neatbilst nevienam no atbalstītajiem biznesa aspektiem, tiek iedalīti sadaļā **Citi**. Tabula pēc noklusējuma ir sakārtota alfabētiskā secībā. Kārtošanu var modificēt, atlasot tabulas galveni.
 
   :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Biznesa aspektu saraksts ar saistīto sentimenta vērtību un klientu skaitu, kas to min.":::
  
   Atlasiet biznesa aspekta nosaukumu, lai skatītu papildinformāciju par to, kā modelis identificē biznesa aspektu. Šajā rūtī ir divas daļas: 
 
-  - **Ietekmīgi vārdi** : parāda labākos vārdus, kas ietekmēja AI modeļa biznesa aspekta identifikāciju klientu atsauksmēs. 
-    **Rādīt aizvainojošus** vārdus : ļauj sarakstā iekļaut aizvainojošus vārdus no sākotnējiem klientu atsauksmju datiem. Pēc noklusējuma tas ir izslēgts.  Aizvainojošu vārdu maskēšanu darbina MI modelis, un tas var neatklāj visus aizvainojošos vārdus. Mēs turpinām atkārtot un apmācīt klasifikatoru optimālam sniegumam. Ja atklājat aizvainojošu vārdu, kas netika filtrēts, kā paredzēts, informējiet mūs. 
+  - **Ietekmīgi vārdi**: parāda labākos vārdus, kas ietekmēja AI modeļa biznesa aspekta identificēšanu klientu atsauksmēs. 
+    **Rādīt aizvainojošus vārdus**: ļauj sarakstā iekļaut aizvainojošus vārdus no sākotnējiem klientu atsauksmju datiem. Pēc noklusējuma tas ir izslēgts.  Aizvainojošu vārdu maskēšanu darbina MI modelis, un tas var neatklāj visus aizvainojošos vārdus. Mēs turpinām atkārtot un apmācīt klasifikatoru optimālam sniegumam. Ja atklājat aizvainojošu vārdu, kas netika filtrēts, kā paredzēts, informējiet mūs. 
     
     :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Ietekmīgu vārdu saraksts ar pārslēgu, lai parādītu vai paslēptu aizvainojošus vārdus.":::
  
-  - **Atsauksmju paraugi** : parāda faktiskos atsauksmju ierakstus jūsu datos. Vārdi ir kodēti ar krāsu atbilstoši to ietekmei uz biznesa aspekta identificēšanu. 
+  - **Atsauksmju paraugi**: parāda faktiskos atsauksmju ierakstus jūsu datos. Vārdi ir kodēti ar krāsu atbilstoši to ietekmei uz biznesa aspekta identificēšanu. 
 
 
 ### <a name="influential-words-analysis-tab"></a>Ietekmīga vārdu analīzes cilne
 
 Ir trīs papildu informācijas sadaļas, kas izskaidro, kā darbojas sentimenta modelis.
   
-1. **Populārākie vārdi, kas veicina pozitīvu noskaņojumu** : Parāda labākos vārdus, kas ietekmēja AI modeļa pozitīvā noskaņojuma identificēšanu klientu atsauksmēs.  
-2. **Populārākie vārdi, kas veicina negatīvu noskaņojumu** : Parāda labākos vārdus, kas ietekmēja AI modeļa negatīvā noskaņojuma identificēšanu klientu atsauksmēs.  
-3. **Atsauksmju paraugi** : Parāda faktiskos atgriezeniskās saites ierakstus, vienu ar negatīvu noskaņojumu un tādu, kam ir pozitīvs noskaņojums. Vārdi atsauksmju ierakstos tiek izcelti atbilstoši to ieguldījumam piešķirtajā sentimenta vērtējumā. Vārdi, kas veicina pozitīvu noskaņojuma rezultātu, ir izcelti zaļā krāsā. Vārdi, kas veicina negatīvu rezultātu, ir iezīmēti sarkanā krāsā.
-   Atlasiet **Skatīt** vairāk, lai ielādētu vairāk atsauksmju paraugu, kas sniedz papildinformāciju un kontekstu par sentimenta modeļa darbību.
+1. **Populārākie vārdi, kas veicina pozitīvu noskaņojumu**: Parāda labākos vārdus, kas ietekmēja AI modeļa pozitīvā noskaņojuma identificēšanu klientu atsauksmēs.  
+2. **Populārākie vārdi, kas veicina negatīvu noskaņojumu**: parāda labākos vārdus, kas ietekmēja AI modeļa negatīvā noskaņojuma identificēšanu klientu atsauksmēs.  
+3. **Atsauksmju paraugi**: Parāda faktiskos atgriezeniskās saites ierakstus, vienu ar negatīvu noskaņojumu un tādu, kam ir pozitīvs noskaņojums. Vārdi atsauksmju ierakstos tiek izcelti atbilstoši to ieguldījumam piešķirtajā sentimenta vērtējumā. Vārdi, kas veicina pozitīvu noskaņojuma rezultātu, ir izcelti zaļā krāsā. Vārdi, kas veicina negatīvu rezultātu, ir iezīmēti sarkanā krāsā.
+   Atlasiet **Skatīt vairāk**, lai ielādētu vairāk atsauksmju paraugu, kas sniedz papildinformāciju un kontekstu par sentimenta modeļa darbību.
    
    :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Noskaņojuma analīzes piemēri par klientu atsauksmēm.":::
  
-**Rādīt aizvainojošus** vārdus : ļauj sarakstā iekļaut aizvainojošus vārdus no sākotnējiem klientu atsauksmju datiem. Pēc noklusējuma tas ir izslēgts.  Aizvainojošu vārdu maskēšanu darbina MI modelis, un tas var neatklāj visus aizvainojošos vārdus. Mēs turpinām atkārtot un apmācīt klasifikatoru optimālam sniegumam. Ja atklājat aizvainojošu vārdu, kas netika filtrēts, kā paredzēts, informējiet mūs. 
+**Rādīt aizvainojošus vārdus**: ļauj sarakstā iekļaut aizvainojošus vārdus no sākotnējiem klientu atsauksmju datiem. Pēc noklusējuma tas ir izslēgts.  Aizvainojošu vārdu maskēšanu darbina MI modelis, un tas var neatklāj visus aizvainojošos vārdus. Mēs turpinām atkārtot un apmācīt klasifikatoru optimālam sniegumam. Ja atklājat aizvainojošu vārdu, kas netika filtrēts, kā paredzēts, informējiet mūs. 
 
 ## <a name="act-on-analysis-results"></a>Akts par analīžu rezultātiem
 
-Varat viegli sākt veidot jaunus klientu segmentus no sentimenta analīzes rezultātu lapas, modeļa rezultātu lapas augšdaļā atlasot **Izveidot** segmentus.
+Varat viegli sākt veidot jaunus klientu segmentus no sentimenta analīzes rezultātu lapas, modeļa rezultātu lapas augšdaļā atlasot **Izveidot segmentus**.
 
 :::image type="content" source="media/create-segment-model.png" alt-text="Komandjosla ar opcijām prognoze modeļos.":::
  
@@ -188,7 +183,7 @@ Varat viegli sākt veidot jaunus klientu segmentus no sentimenta analīzes rezul
 
 Tāpat kā ar jebkuru funkciju, kas izmanto prognozējošu mākslīgo intelektu, jums jāapzinās iespējamie aizspriedumus datos, kurus izmantojat, lai prognozētu klientu noskaņojumu. Piemēram, ja atsauksmes apkopojat tikai digitāli, varat palaist garām atsauksmes no klientiem, kuri galvenokārt veic darījumus ar jums klātienē, kas var ietekmēt līdzekļa izvadi.
 
-Tā kā šī funkcija izmanto automatizētus līdzekļus, lai novērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, to var izmantot kā profilēšanas metodi, kā to definē Vispārīgā datu aizsardzības regula ("VDAR"). Šī līdzekļa izmantošana datu apstrādāšanai var būt pakļauta VDAR vai citiem tiesību aktiem un noteikumiem. Jūs esat atbildīgs par to, lai nodrošinātu, ka jūsu, Dynamics 365 Customer Insights tostarp sentimenta analīzes, izmantošana atbilst visiem piemērojamajiem normatīvajiem aktiem, tostarp tiesību aktiem, kas saistīti ar privātumu, personas datiem, biometriskajiem datiem, datu aizsardzību un saziņas konfidencialitāti.
+Tā kā šī funkcija izmanto automatizētus līdzekļus, lai novērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, to var izmantot kā profilēšanas metodi, kā to definē Vispārīgā datu aizsardzības regula ("VDAR"). Šī līdzekļa izmantošana datu apstrādāšanai var būt pakļauta VDAR vai citiem tiesību aktiem un noteikumiem. Jūs esat atbildīgs par to, lai nodrošinātu, ka jūsu, tostarp sentimenta Dynamics 365 Customer Insights analīzes, izmantošana atbilst visiem piemērojamajiem normatīvajiem aktiem, tostarp tiesību aktiem, kas saistīti ar privātumu, personas datiem, biometriskajiem datiem, datu aizsardzību un saziņas konfidencialitāti.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
 

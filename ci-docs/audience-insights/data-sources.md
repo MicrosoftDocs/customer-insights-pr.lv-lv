@@ -1,6 +1,6 @@
 ---
 title: Izmantojiet datu avotus datu uzņemšanai
-description: Uzziniet, kā importēt datus no dažādiem avotiem.
+description: 'Uzziniet, kā importēt datus no dažādiem avotiem.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977838"
 ---
+
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Auditorijas ieskatus Dynamics 365 Customer Insights var savienot ar datiem no plašas avotu kopas. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat tos [apvienot](data-unification.md) un veikt ar tiem darbības.
 
@@ -33,13 +28,13 @@ Varat pievienot šādus datu avotus:
 - [Microsoft Dataverse ezers](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Ja izmantojat izmēģinājuma versiju, importēšanas metožu sadaļā ir iekļauta **Customer Insights datu bibliotēkas** opcija. Izvēlieties šo opciju, lai atlasītu datu kopas paraugu, kas pieejams dažādām nozarēm. Papildinformāciju skatiet [Dynamics 365 Customer Insights izmēģinājumversijā](../trial-signup.md).
+> Ja izmantojat izmēģinājuma versiju, importēšanas metožu sadaļā ir **iekļauta Customer Insights datu bibliotēkas** opcija. Izvēlieties šo opciju, lai atlasītu datu kopas paraugu, kas pieejams dažādām nozarēm. Papildinformāciju skatiet [Dynamics 365 Customer Insights izmēģinājumversijā](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Datu pievienošana no lokālajiem datu avotiem
 
-Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas programmā Customer Insights var [iespējot, Microsoft Dataverse iestatot vidi, norādot vides](create-environment.md) URL.
+Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas programmā Customer Insights var iespējot, iestatot [vidi, norādot vides URL Microsoft Dataverse.](create-environment.md)
 
-Datu avoti, kas izveidoti pēc vides saistīšanas Dataverse ar Customer Insights, pēc noklusējuma izmanto [Power Platform datu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) plūsmas. Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Varat noņemt un atkārtoti izveidot datu avotus, kas pastāvēja pirms Dataverse vides saisti, [izmantojot lokāls datu vārtejas](/data-integration/gateway/service-gateway-app).
+Datu avoti, kas izveidoti pēc vides saistīšanas Dataverse ar Customer Insights, pēc noklusējuma izmanto [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Varat noņemt un atkārtoti izveidot datu avotus, kas pastāvēja pirms Dataverse vides saisti, [izmantojot lokāls datu vārtejas](/data-integration/gateway/service-gateway-app).
 
 Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
 

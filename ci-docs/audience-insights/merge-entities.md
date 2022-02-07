@@ -1,7 +1,7 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
-description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
-ms.date: 11/01/2021
+description: 'Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732781"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
 Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms. Tā mērķis ir konfliktējošu datu saskaņošana. Konfliktējošo datu piemērs var būt klienta vārds, kas ir atrodams divās datu kopās, taču katrā no tām tas tiek rādīts nedaudz atšķirīgi ("Oto Bērzs" un "Otto Bērzs"), vai tālruņa numurs, kas atšķiras pēc formāta (21-480-309 un 21480309). Šo konfliktējošo datu punktu sapludināšana notiek, pamatojoties uz pieeju “atribūts pēc atribūta”
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
 
-Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā [Apvienošana](match-entities.md) atlasot [Sapludināt](match-entities.md).
+Pēc [atbilstības posma](match-entities.md) pabeigšanas varat sākt sapludināšanas posmu, lapā **Apvienošana** atlasot **Sapludināt**.
 
 ## <a name="review-system-recommendations"></a>Sistēmas ieteikumu pārskatīšana
 
@@ -99,11 +94,13 @@ Neiekļaut atribūtu no vienotā klienta profila. Ja lauks tiek izmantots citos 
 
 1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
 
-## <a name="manually-combine-fields"></a>Manuāli apvienot laukus
+## <a name="combine-fields-manually"></a>Lauku manuāla apvienošana
 
-Manuāli norādiet sapludinātu atribūtu. 
+Manuāli norādiet sapludinātu atribūtu.
 
-1. **Sapludināšanas** lapā atlasiet **Lauku apvienošana**.
+1. **Lapā Sapludināšana** atlasiet **Apvienot**.
+
+1. Izvēlieties opciju **Lauki**.
 
 1. Nolaižamajā izvēlnē **Lauku apvienošana** norādiet sapludināšanas uzvarētāja politiku.
 
@@ -114,6 +111,26 @@ Manuāli norādiet sapludinātu atribūtu.
 1. Atlasiet **Labi**, lai piemērotu izmaiņas.
 
 1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**. 
+
+## <a name="combine-a-group-of-fields"></a>Lauku grupas apvienošana
+
+Apstrādājiet lauku grupu kā vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Address1, Address2, Pilsēta, Štats un Zip. Mēs, visticamāk, nevēlamies apvienoties citā ieraksta adresē2, domājot, ka tas padarītu mūsu datus pilnīgākus
+
+1. **Lapā Sapludināšana** atlasiet **Apvienot**.
+
+1. Izvēlieties opciju **Lauku** grupa.
+
+1. Norādiet sapludināšanas uzvarētāja **politiku nolaižamajā grupās** Pēc.
+
+1. Atlasiet **Pievienot** un izvēlieties, ja laukiem vēlaties pievienot vairāk lauku vai papildu grupu.
+
+1. **Norādiet nosaukumu** un izvades **nosaukumu** katram kombinētajam laukam.
+
+1. Norādiet **lauku grupas nosaukumu**. 
+
+1. Atlasiet **Labi**, lai piemērotu izmaiņas.
+
+1. Lai apstrādātu izmaiņas, atlasiet **Saglabāt** un **Palaist**.
 
 ## <a name="change-the-order-of-fields"></a>Lauku secības maiņa
 

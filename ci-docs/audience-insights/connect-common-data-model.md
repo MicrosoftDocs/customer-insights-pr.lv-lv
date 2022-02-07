@@ -1,7 +1,7 @@
 ---
 title: Common Data Model datu savienošana ar Azure Data Lake kontu
-description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
-ms.date: 12/06/2021
+description: 'Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.'
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900206"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 
 Šajā rakstā ir sniegta informācija, kā iegūt datus no Common Data Model mapes, izmantojot jūsu Azure Data Lake Storage Gen2 kontu.
@@ -26,11 +21,13 @@ ms.locfileid: "7900206"
 
 - Datu ieguve atbalsta tikai Azure Data Lake *Gen2* krātuves kontus. Jūs nevarat izmantot Azure Data Lake Gen1 krātuves kontus datu ieguvei.
 
+- Azure datu ezera krātuves kontā jābūt [iespējotai hierarhiskai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Lai veiktu autentifikāciju ar Azure pakalpojuma primāro nosaukumu, pārliecinieties, vai tas ir konfigurēts jūsu nomniekā. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md).
 
 - Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no datu ezera citā Azure reģionā netiek atbalstīti. Lai iepazītu konkrētās vides Azure reģionu, apmeklējiet **Administrators** > **Sistēma** > **Par** sadaļā par auditorijas ieskatiem.
 
-- Tiešsaistes pakalpojumos glabātos datus var glabāt citā vietā, nevis vietā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar tiem, jūs piekrītat, ka datus var pārsūtīt uz Dynamics 365 Customer Insights .  [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
+- Tiešsaistes pakalpojumos glabātos datus var glabāt citā vietā, nevis vietā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights tiem, jūs piekrītat, ka datus var pārsūtīt uz . [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Izveidot savienojumu ar mapi Common Data Model
 
@@ -38,11 +35,11 @@ ms.locfileid: "7900206"
 
 1. Atlasiet **Pievienot datu avotu**.
 
-1. Atlasiet **Azure datu ezera krātuve**, ievadiet datu avots nosaukumu un pēc **tam** atlasiet **Tālāk**.
+1. Atlasiet **Azure datu ezera** krātuve **, ievadiet datu avots nosaukumu** un pēc tam atlasiet **Tālāk**.
 
    - Ja tiek prasīts, atlasiet kādu no datu kopu paraugiem, kas attiecas uz jūsu nozari, un pēc tam atlasiet **Tālāk**. 
 
-1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). Ievadiet **servera adresi,** atlasiet **Pieteikties un pēc tam** atlasiet **Tālāk**.
+1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju skatiet tēmā [Auditorijas ieskatu savienošana ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojuma primāro nosaukumu](connect-service-principal.md). **Ievadiet servera adresi**, atlasiet **Pieteikties** un pēc tam atlasiet **Tālāk**.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]

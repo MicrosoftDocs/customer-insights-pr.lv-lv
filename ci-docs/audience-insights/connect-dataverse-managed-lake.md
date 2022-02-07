@@ -9,25 +9,20 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900160"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām vienībām Microsoft Dataverse apsaimniekotā ezerā. 
+
+Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām vienībām apsaimniekotā Microsoft Dataverse ezerā. 
 
 > [!NOTE]
-> Lai Dataverse turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, jums jābūt organizācijas administratoram.
+> Lai turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, jums jābūt organizācijas administratoram Dataverse.
 
 ## <a name="important-considerations"></a>Svarīgi ieteikumi
 
-Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar tiem, jūs piekrītat, ka datus var pārsūtīt uz Dynamics 365 Customer Insights .  [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
+Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights tiem, jūs piekrītat, ka datus var pārsūtīt uz . [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Savienojuma izveide ar Dataverse pārvaldīto datu ezeru
 

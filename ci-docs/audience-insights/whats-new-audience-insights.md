@@ -1,7 +1,7 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
-description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 12/02/2021
+description: 'Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884271"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu informāciju par ilgtermiņa plāniem attiecībā uz funkcijām, skatiet [Dynamics 365 un Power Platform laidienu plānus](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>2021. gada decembra atjauninājumi
+
+Atjauninājumi 2021. gada decembrī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Pārsūtīt Customer Insights žurnālus uz Azure monitoru
+
+Customer Insights nodrošina tiešu integrāciju ar Azure monitoru. Šī funkcija ietver audita notikumus un darbības notikumus. Azure monitora resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz Azure Storage, Azure Žurnālu analīzi vai straumēt tos Azure notikumu centrmezglos.
+
+Papildinformāciju skatiet rakstā [Pieteikšanās pāradresēšanai Dynamics 365 Customer Insights, izmantojot Azure monitoru (Preview)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Bagātināt klientu profilus ar iesaistes datiem
+
+Izmantojiet datus, lai Microsoft Office 365 bagātinātu klientu kontu profilus ar ieskatiem par saistībām, izmantojot Office 365 lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu esošo sapulču skaits. Dati par atsevišķiem lietotājiem netiek kopīgoti. Šī bagātināšana ir pieejama šādos reģionos: Apvienotajā Karalistē, Eiropā, Ziemeļamerikā.
+
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar iesaistes datiem (priekšskatījums)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Papildu datu apvienošanas līdzekļi
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Iespējot konfliktu risināšanas politikas individuālā atribūta līmenī
+
+Rediģējot klientu ierakstus entītijā, iespējams, nevēlaties izvēlēties pilnu ierakstu kā uzvarētājs. Tagad mēs ļaujam apvienot labākos laukus no dažādiem ierakstiem, pamatojoties uz katra atribūta noteikumiem. Piemēram, varat izvēlēties paturēt visjaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. 
+
+Tagad atsevišķiem atribūtiem var definēt atsevišķas sapludināšanas kārtulas, vienlaikus apvienojot un sapludinot ierakstus vienā entītijā. Iepriekš mēs ļaujam atlasīt tikai vienu sapludināšanas kārtulu (saglabājot ierakstus, pamatojoties uz režijas datu pilnīgumu), un šī kārtula tika lietota ieraksta līmenī visiem atribūtiem. Tas nav ideāli, ja daži dati, kurus vēlaties saglabāt, ir atrodami A ierakstā un citi labi dati, kas atrodami ierakstā B.
+
+Papildinformāciju skatiet tēmā [Dedublēšanas definēšana sakrīt ar entītiju](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Pielāgoti atbilstības noteikumi
+
+Ir reizes, kad ir jānorāda vispārīgo kārtulu izņēmums, lai NEATBILSTU ierakstiem. Tas var notikt, ja vairākas personas dalās ar pietiekami daudz informācijas, lai sistēma atbilstu viņiem kā vienai personai. Piemēram, dvīņi ar tādu pašu uzvārds, kas dzīvo vienā pilsētā un dala dzimšanas datumu.
+
+Izņēmumi nodrošina, ka apvienošanās noteikumos var aplūkot nepareizu datu apvienošanu. Kārtulai var pievienot vairākus izņēmumus.
+
+Papildinformāciju skatiet rakstā [Izņēmumu pievienošana kārtulai](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Nodrošināt papildu konfliktu risināšanas politikas un iespējot atribūtu grupēšanu
+
+Šis līdzeklis ļauj apstrādāt lauku grupu kā vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Address1, Address2, Pilsēta, Štats un Zip. Mēs, visticamāk, nevēlamies apvienoties citā ieraksta adresē2, domājot, ka tas padarītu mūsu datus pilnīgākus.
+
+Tagad var apvienot saistīto lauku grupu un grupai lietot vienu sapludināšanas politiku. 
+
+Plašāku informāciju skatiet [Combine a group of fields](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>2021. gada novembra atjauninājumi
 
@@ -45,17 +84,17 @@ Atjauninājumi 2021. gada oktobrī ietver jaunas funkcijas, veiktspējas uzlaboj
 
 ### <a name="b-to-b"></a>B-to-B
 
-Sākot ar 2021. gada oktobri, customer insights varat strādāt ar uzņēmuma kontiem un ar tiem saistītajām kontaktpersonām. Pirms tam lietotne galvenokārt tika pielāgota individuāliem patērētājiem. Tika atjauninātas vairākas līdzekļu jomas, lai atbalstītu B-to-B scenārijus papildus jaunam vides tipam. Pārskatu par atbalstītajiem B-to-B līdzekļiem skatiet [rakstā Darbs ar uzņēmumu kontiem auditorijas ieskatos](work-with-business-accounts.md).
+Sākot ar 2021. gada oktobri, customer insights varat strādāt ar uzņēmuma kontiem un ar tiem saistītajām kontaktpersonām. Pirms tam lietotne galvenokārt tika pielāgota individuāliem patērētājiem. Tika atjauninātas vairākas līdzekļu jomas, lai atbalstītu B-to-B scenārijus papildus jaunam vides tipam. Pārskatu par atbalstītajiem B-to-B līdzekļiem skatiet rakstā [Darbs ar uzņēmumu kontiem auditorijas](work-with-business-accounts.md) ieskatos.
 
 Turpmākajās iedaļās ir uzsvērtas dažas no galvenajām jomām, kas tika pielāgotas uzņēmumu kontu un individuālo patērētāju atbalstam.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Eksportēt segmentus, pamatojoties uz biznesa kontiem
 
-Visi segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [kontaktinformācija](segment-builder.md#create-a-new-segment), kas prognozēta pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
+Visi segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [kontaktinformācija, kas prognozēta](segment-builder.md#create-a-new-segment) pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Ads eksportēšanas izmantošana ar biznesa kontiem
 
-LinkedIn Ads eksports tagad ir pieejams kontaktpersonu un uzņēmumu mērķauditorijas atlasei biznesa kontu kontekstā. Atlasot uzņēmuma mērķauditorijas atlasi kā linkedIn eksporta primāro fokusu, varat eksportēt segmentus, kuru pamatā ir uzņēmuma konti, bez nepieciešamības projicēt kontaktinformāciju. Lai iegūtu papildinformāciju, dodieties uz dokumentiem par [LinkedIn Ads eksportu](export-linkedin-ads.md) un atšķirību starp kontaktpersonu [mērķauditorijas atlasi un](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[mērķauditorijas atlasi uzņēmumiem](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+LinkedIn Ads eksports tagad ir pieejams kontaktpersonu un uzņēmumu mērķauditorijas atlasei biznesa kontu kontekstā. Atlasot uzņēmuma mērķauditorijas atlasi kā linkedIn eksporta primāro fokusu, varat eksportēt segmentus, kuru pamatā ir uzņēmuma konti, bez nepieciešamības projicēt kontaktinformāciju. Lai iegūtu papildinformāciju, dodieties uz dokumentiem par [LinkedIn Ads eksportu](export-linkedin-ads.md) un atšķirību starp [kontaktpersonu mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) un [uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Izveidot pasākumus, pamatojoties uz biznesa kontiem un to hierarhiju
 

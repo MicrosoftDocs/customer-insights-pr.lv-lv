@@ -1,6 +1,6 @@
 ---
 title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (satur video)
-description: Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
+description: 'Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.'
 ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945436"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 programmās. Kad klienta kartītes pievienojumprogramma ir instalēta atbalstītajā Dynamics 365 programmā, varat izvēlēties rādīt klientu profila laukus, ieskatus un darbību laika grafiku. Pievienojumprogramma izgūs datus no programmas Customer Insights, neietekmējot pievienotās Dynamics 365 programmas datus.
 
@@ -27,14 +22,14 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot Microsoft Dataverse savienotāju](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai uzņēmumus), jums `contactid` jāpārliecinās, vai lauks (vai ) ir `accountid` iestatīts kā šīs datu avots primārā [atslēga datu apvienošanas procesa kartes posmā](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai uzņēmumus), jums ir jāpārliecinās, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [šī datu avots primārā atslēga datu apvienošanas procesa kartes posmā](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Visi Dynamics 365 lietotāji, kas izmanto klienta kartes pievienojumprogrammu, ir [jāpievieno kā lietotāji](permissions.md) auditorijas ieskatos, lai redzētu datus.
 - Lai darbotos datu uzmeklēšana, ir nepieciešama [konfigurēta meklēšanas un filtrēšanas iespēja](search-filter-index.md) auditorijas ieskatos.
 - Katra pievienojumprogrammas vadīkla ir atkarīga no noteiktiem datiem auditorijas ieskatos. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija jūs informēs, ja atlasītā vides tipa dēļ vadīkla nav pieejama. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
   - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
-  - **Informācijas kontrole** : pieprasa datus, kas ģenerēti, izmantojot prognozes vai [pielāgotus modeļus](predictions-overview.md).
+  - **Informācijas kontrole**: nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
-  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šīs bagātināšanas: [Korporācijas](enrichment-microsoft.md) Microsoft nodrošinātie zīmoli, [Microsoft nodrošinātās intereses](enrichment-microsoft.md) un Microsoft [nodrošinātie Office iesaistes](enrichment-office.md) dati.
+  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šīs bagātināšanas: [Korporācijas Microsoft nodrošinātie zīmoli](enrichment-microsoft.md), [Microsoft nodrošinātās intereses](enrichment-microsoft.md) un [Microsoft nodrošinātie Office iesaistes dati](enrichment-office.md).
   - **Kontaktpersonu vadīkla**: nepieciešama kontaktpersonu tipa semantiskās entītijas definīcija.
   - **Laika skalas vadīkla**: Nepieciešamas [konfigurētās darbības](activities.md).
 

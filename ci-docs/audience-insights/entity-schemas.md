@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: lv-LV
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380752"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Entītiju shēmas Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) ir deklaratīva specifikācija, kā arī tādu standarta entītiju definīcija, kas attēlo bieži izmantos konceptus un darbības uzņēmuma un produktivitātes lietojumprogrammās. Šis modelis tiek paplašināts arī uz novērojumu un analītiskiem datiem. Common Data Model nodrošina precīzi definētas, modulāras un paplašināmas biznesa entītijas, piemēram, uzņēmumu, struktūrvienību, pieteikumu, kontaktpersonu, interesentu, iespēju un produktu, kā arī saziņu ar piegādātājiem, darbiniekiem un klientiem, piemēram, darbībām un servisa līmeņa līgumiem. Ikviens var izmantot un paplašināt Common Data Model definīcijas, lai iegūtu darbam raksturīgas papildu idejas.
 
