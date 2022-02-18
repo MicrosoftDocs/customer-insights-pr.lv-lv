@@ -2,6 +2,22 @@
   href: index.yml
 - name: Produkta pārskats
   href: overview.md
+- name: Mācību katalogs
+  items:
+    - name: Sākt darbu
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Datu uzņemšana
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Vienotais klienta profila izveide
+      href: /learn/modules/unified-customer-profile/
+    - name: Darbs ar auditorijas ieskatiem
+      href: /learn/modules/working-with-customer-insights/
+    - name: Bagātināt datus un veikt prognozes
+      href: /learn/modules/enrich-data/
+    - name: Ārējo savienojumu pārvaldība
+      href: /learn/modules/configure-third-party-connections/
+    - name: Administrējiet pakalpojumu Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Bezmaksas izmēģinājumversija
   items:
     - name: Reģistrēšanās bezmaksas izmēģinājumversijai
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Darbs ar uzņēmuma kontiem
       href: audience-insights/work-with-business-accounts.md
-    - name: Lean moduļi
-      items:
-        - name: Datu uzņemšana
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Vienotais klienta profila izveide
-          href: /learn/modules/unified-customer-profile/
-        - name: Darbs ar programmu
-          href: /learn/modules/working-with-customer-insights/
-        - name: Bagātināt datus un prognozes
-          href: /learn/modules/enrich-data/
     - name: Datu avoti
       items:
         - name: Datu avotu pārskats
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR tiesības un pieprasījumi
   href: dsr-rights-requests.md
+- name: Saņemt atbalstu
+  href: /power-platform/admin/get-help-support

@@ -1,7 +1,7 @@
 ---
 title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (satur video)
-description: 'Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.'
-ms.date: 12/22/2021
+description: Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085257"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
 
@@ -113,5 +118,26 @@ Klienta kartes pievienojumprogramma netiek automātiski jaunināta. Lai jauninā
 
 1. Pēc jaunināšanas procesa sākšanas tiek rādīts ielādes rādītājs, līdz jaunināšana ir pabeigta. Ja tajā nav jaunākas versijas, jaunināšanai tiks rādīts kļūdas ziņojums.
 
+## <a name="troubleshooting"></a>Problēmu novēršana
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Vadīklas no klienta kartes pievienojumprogrammas neatrod datus
+
+**Problēma:**
+
+Pat ja id lauki ir pareizi konfigurēti, vadīklas nevar atrast datus nevienam klientam.  
+
+**Risinājums**
+
+1. Pārliecinieties, vai esat konfigurējis kartes pievienojumprogrammu saskaņā ar instrukcijām: [Konfigurējiet klienta kartes pievienojumprogrammu](#configure-the-customer-card-add-in) 
+
+1. Pārskatiet datu norīšanas konfigurāciju. Rediģējiet datu avots Dynamics 365 sistēmai, kurā ir kontaktpersonas ID GUID. Ja redaktorā tiek rādīts kontaktpersonas Power Query ID GUID ar lielajiem burtiem, mēģiniet veikt šādas darbības: 
+    1. Rediģējiet datu avots, lai atvērtu datu avots redaktorā Power Query.
+    1. Atlasiet kontaktpersonas ID kolonnu.
+    1. Lai skatītu pieejamās darbības, galvenes joslā atlasiet **Transform**.
+    1. Atlasiet **mazos.** Pārbaudiet, vai tabulā ir pieejami GUID, tie tagad ir mazie burti.
+    1. Saglabājiet datu avotu.
+    1. Palaidiet datu norīšanas, apvienošanas un pakārtotos procesus, lai izplatītu GUID izmaiņas. 
+
+Pēc pilnīgas atsvaidzināšanas pabeigšanas klienta kartes pievienojumprogrammas vadīklās ir jāparāda paredzamie dati. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

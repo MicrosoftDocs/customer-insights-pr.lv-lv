@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892347"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088122"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Izveidot vidi auditorijas ieskatos
 
@@ -28,7 +28,7 @@ Organizācijas katrai Customer Insights licencei var izveidot *divas* vides. Ja 
 
 ## <a name="create-a-new-environment"></a>Jaunas vides izveide
 
-Pēc Customer Insights abonementa licences iegādes Microsoft 365 nomnieka globālais administrators saņem e-pasta ziņojumu, kas viņiem uzaicina izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Pēc Customer Insights abonementa licences iegādes nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā tiek aicināts izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Vadītā pieredze palīdz veikt darbības, kas jāveic, lai apkopotu visu nepieciešamo informāciju par jauno vidi. Lai izveidotu vai pārvaldītu vidi, ir nepieciešamas [administratora atļaujas](permissions.md) auditorijas ieskatos.
 
@@ -64,7 +64,7 @@ Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsū
 > Customer Insights pašlaik atbalsta tālāk norādītās iespējas:
 > - Izgūtās entītijas no Power BI datu plūsmām, kas tiek glabātas Microsoft Dataverse pārvaldītā Data Lake.  
 > - Azure Data Lake Storage konti no tā paša Azure reģiona, kas tika atlasīts vides izveides laikā.
-> - Azure Data Lake Storage uzņēmumi, kuriem ir iespējota *hierarhiska nosaukumvieta*.
+> - Azure Data Lake Storage kontiem, kas ir Gen2 un kam ir *iespējota hierarhiska nosaukumvieta*. Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
 
 Programmas Azure Data Lake Storage opcijai varat izvēlēties uz resursiem balstītu opciju un uz abonēšanu balstītu autentifikācijas opciju. Papildinformāciju skatiet sadaļā [Savienojuma izveide Azure Data Lake Storage ar uzņēmumu, izmantojot Azure pakalpojuma vadītāju](connect-service-principal.md). **Konteinera** nosaukums būs `customerinsights`, un to nevar mainīt.
 

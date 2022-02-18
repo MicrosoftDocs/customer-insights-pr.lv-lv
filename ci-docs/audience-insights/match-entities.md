@@ -1,7 +1,7 @@
 ---
 title: Savienot entītijas datu apvienošanai
-description: 'Savienojiet datus, lai izveidotu vienotus klientu profilus.'
-ms.date: 01/28/2022
+description: Savienojiet datus, lai izveidotu vienotus klientu profilus.
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098844"
 ---
-
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
 Atbilstības posms norāda, kā kombinēt jūsu datu kopas vienotā klienta profila datu kopā. Pēc [kartējuma darbības](map-entities.md) pabeigšanas datu unificēšanas procesā esat gatavs saskaņot savas entītijas. Atbilstības posmā ir nepieciešamas vismaz divas kartētās entītijas.
@@ -24,13 +29,7 @@ Atbilstības lapā ir trīs sadaļas:
 
 ## <a name="specify-the-match-order"></a>Atbilstības noteikšanas secības norādīšana
 
-Dodieties uz **Dati** > **Apvienot** > **Savienot** un atlasiet **Iestatīt pasūtījumu**, lai sāktu atbilstības posmu.
-
-Katra atbilstība apvieno divas vai vairākas entītijas vienā, konsolidētā entītijā. Vienlaikus tiek glabāti unikālie klientu ieraksti. Piemēram, mēs atlasījām divas entītijas: **eCommerce:eCommerceContacts** kā primāro entītiju un **LoyaltyScheme:loyCustomers** kā sekundāro entītiju. Entītiju secībā tiek norādīts, kādā secībā sistēma mēģinās saskaņot ierakstus.
-
-:::image type="content" source="media/match-page.png" alt-text="Datu unificēšanas procesa Saskaņošana lapas apgabala Unify ekrānuzņēmums.":::
-  
-Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas izriet no pirmā atbilstības soļa, tiek saskaņota ar šādu entītiju, ja jums ir vairāk nekā divas entītijas.
+Katra atbilstība apvieno divas vai vairākas entītijas vienā, konsolidētā entītijā. Vienlaikus tiek glabāti unikālie klientu ieraksti. Atbilstības secība norāda secību, kādā sistēma mēģina saskaņot ierakstus.
 
 > [!IMPORTANT]
 > Entītija, ko izvēlaties kā primāro entītiju, tiks izmantota par pamatu jūsu apvienotajai profilu datu kopai. Citas entītijai, kas tiks atlasītas atbilstības posmā, tiks pievienotas šai entītijai. Tas nozīmē, ka vienotā entītija ietvers *visus* šajā entītijā iekļautos datus.
@@ -38,9 +37,18 @@ Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo ent
 > Izvēloties entītiju hierarhiju, apsveriet divus jautājumus:
 >
 > - Izvēlieties entītiju ar vispilnīgākajiem un uzticamākajiem profila datiem par klientiem kā primāro entītiju.
-> - Kā primāro entītiju izvēlieties entītiju, kuras vairāki atribūti ir kopīgi ar citām entītijām (piemēram, nosaukumu, tālruņa numuru vai e-pasta adresi).
+> - Kā primāro entītiju izvēlieties entītiju, kurai ir vairāki atribūti, kas ir kopīgi ar citām entītijām (piemēram, vārds, tālruņa numurs vai e-pasta adrese).
 
-Pēc saskaņošanas secības norādīšanas redzēsit definētos atbilstības pārus sadaļā **Informācija par saskaņotajiem ierakstiem** **Dati** > **Unify** > **Saskaņot**. Galvenās metrikas būs tukšas, līdz tiks pabeigts saskaņošanas process.
+1. Dodieties uz **Dati** > **Apvienot** > **Savienot** un atlasiet **Iestatīt pasūtījumu**, lai sāktu atbilstības posmu.
+1. Atlasiet **Entītijas pasūtījums**. Piemēram, atlasiet **eCommerce:eCommerceContacts** kā primāro entītiju un **LoyaltyScheme:loyCustomers** kā otro entītiju. 
+1. Lai katrs entītijas ieraksts būtu unikāls debitors un atbilstu katrai tālākajai entītijai, atlasiet **Iekļaut visu**.
+1. Atlasiet **Gatavs**. 
+
+Pēc atbilstības secības norādīšanas definētie atbilstības pāri tiek parādīti **dataUnifyMatch** **·** > **sadaļā Detalizēta informācija** > **par** saskaņotajiem ierakstiem. Galvenie rādītāji ir tukši, līdz atbilstības process ir pabeigts.
+
+:::image type="content" source="media/match-page.png" alt-text="Datu unificēšanas procesa Saskaņošana lapas apgabala Unify ekrānuzņēmums.":::
+  
+Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas izriet no pirmā atbilstības soļa, tiek saskaņota ar šādu entītiju, ja jums ir vairāk nekā divas entītijas.
 
 ## <a name="define-rules-for-match-pairs"></a>Kārtulu definēšana atbilstības pāriem
 
@@ -50,7 +58,7 @@ No brīdinājuma **Nepieciešamas kārtulas** blakus entītijas nosaukumam izrie
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Sadaļas Informācija par saskaņotajiem ierakstiem ekrānuzņēmumu ar vadīklu, lai pievienotu iezīmētas kārtulas.":::
 
-1. Lai definētu atbilstības kārtulas, zem entītijas sadaļā **Informācija par saskaņotajiem ierakstiem** atlasiet **Pievienot kārtulas**.
+1. Sadaļā Saskaņotie ieraksti sadaļā Detalizēta informācija par **saskaņotajiem ierakstiem atlasiet** Pievienot **kārtulu**, lai definētu atbilstības kārtulas.
 
 1. Rūtī **Izveidot kārtulu** konfigurējiet kārtulas nosacījumus.
 
@@ -61,15 +69,15 @@ No brīdinājuma **Nepieciešamas kārtulas** blakus entītijas nosaukumam izrie
    - **Entītija/lauks (otrā rinda)**: izvēlieties atribūtu, kas saistīts ar pirmajā rindā norādīto entītijas atribūtu.
 
    - **Normalizēt**: atlasiet atlasīto atribūtu normalizēšanas opcijas. 
-     - Baltstarpa: noņem visas atstarpes. *Labdien, pasaule* kļūst par *HelloWorld*.
+     - Cipari: pārvērš citas ciparu sistēmas, piemēram, latīņu valodas ciparus, par arābu cipariem. *VIII* kļūst par *8*.
      - Simboli: noņem visus simbolus un speciālās rakstzīmes. *Head&Shoulder* kļūst par *HeadShoulder*.
      - Teksts un mazie burti: pārvērš visas rakstzīmes par mazajiem burtiem. *VISI LIELIE BURTI un Virsraksta burti* kļūst par *visi lielie burti un virsraksta burti*.
+     - Tips (tālrunis, nosaukums, adrese, organizācija): standartizē vārdus, nosaukumus, tālruņa numurus, adreses utt. 
      - Unikods uz ASCII: pārvērš unikoda notāciju par ASCII rakstzīmēm. */u00B2* kļūst par *2*.
-     - Cipari: pārvērš citas ciparu sistēmas, piemēram, latīņu valodas ciparus, par arābu cipariem. *VIII* kļūst par *8*.
-     - Semantikas veidi: standartizē nosaukumus, amatus, tālruņu numurus, adreses utt. 
+     - Baltstarpa: noņem visas atstarpes. *Labdien, pasaule* kļūst par *HelloWorld*.
 
    - **Precizitāte**: iestata šim nosacījumam piemēroto precizitātes līmeni. 
-     - **Pamata**: izvēlēties no *Zems*, *Vidējs*, *Augsts* un *Precīzs*. Atlasiet **Precīza**, lai noteiktu atbilstību tikai tādiem ierakstiem, kas atbilst par 100 procentiem. Atlasiet vienu no pārējiem līmeņiem, lai noteiktu atbilstību ierakstiem, kas nav pilnībā identiski.
+     - **Pamata**: izvēlēties no *Zems*, *Vidējs*, *Augsts* un *Precīzs*. Atlasiet **Precīzs**, lai atbilstu tikai tiem ierakstiem, kas atbilst 100 procentiem. Atlasiet vienu no pārējiem līmeņiem, lai noteiktu atbilstību ierakstiem, kas nav pilnībā identiski.
      - **Pielāgots**: iestatiet procentuālu vērtību, kurai ierakstiem jāatbilst. Sistēma saskaņos tikai ierakstus, kas pārsniedz šo robežvērtību.
 
 1. Norādiet kārtulas **Nosaukumu**.
@@ -92,7 +100,7 @@ Lai saskaņotu entītijas tikai tad, ja atribūti atbilst vairākiem nosacījumi
 
 ### <a name="add-rules-to-a-match-pair"></a>Kārtulu pievienošana atbilstības pārim
 
-Atbilstības kārtulas pārstāv nosacījumu kopas. Lai saskaņotu entītijas ar nosacījumiem, pamatojoties uz vairākiem atribūtiem, pievienojiet papildu kārtulas.
+Atbilstības kārtulas pārstāv nosacījumu kopas. Lai entītijām atbilstu pēc nosacījumiem, kuru pamatā ir vairāki atribūti, pievienojiet papildu kārtulas.
 
 1.  Pārejiet uz sadaļu **Dati** > **Unify** > **Saskaņot** un atlasiet **Pievienot kārtulu** entītijai, kurai vēlaties pievienot kārtulas.
 
@@ -117,7 +125,7 @@ Varat pārkārtot atbilstības kārtulu entītijas, lai mainītu to apstrādes s
 
 Papildus [entītiju atbilstības kārtulām](#define-rules-for-match-pairs) varat norādīt arī dedublikātu kārtulas. *Dedublikācija* ir cits process, kad tiek notiek ierakstu saskaņošana. Tas identificē ierakstu dublikātus un sapludina tos vienā ierakstā. Avota ieraksti tiek saistīti ar sapludināto ierakstu, izmantojot alternatīvus ID.
 
-Pēc tam nedublētie ieraksti tiks izmantoti saskaņošanas starp entītijām procesā. Dedublikācija notiek ar atsevišķām entītijām, un to var konfigurēt katrai entītijai, kas tiek izmantota atbilstības pāros.
+Dedulicētie ieraksti tiek izmantoti entītiju salīdzināšanas procesā. Deduplication notiek atsevišķās entītijās, un to var konfigurēt katrai entītijai, ko izmanto spēļu pāros.
 
 Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav konfigurētas, tiek lietotas sistēmas definētās kārtulas. Tie visus ierakstus apvieno vienā ierakstā pirms entītijas datu nodošanas saskaņošanai starp entītijām, lai uzlabotu veiktspēju.
 
@@ -134,7 +142,7 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
       - **Visjaunākais** : Nosaka uzvarētāju, balstoties uz augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
       - **Visvecākais** : Nosaka uzvarētāju, balstoties uz visvecāko augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
 
-   1. Pēc izvēles atlasiet **Papildu**, lai definētu deduplēšanas kārtulas atsevišķiem entītijas atribūtiem. Piemēram, varat izvēlēties paturēt visjaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. Izvērsiet entītiju, lai skatītu visus tās atribūtus un definētu, kuru opciju izmantot atsevišķiem atribūtiem. Ja izvēlaties uz reženšu balstītu opciju, ir jānorāda arī datuma/laika lauks, kas definē re resency. 
+   1. Pēc izvēles, lai definētu deduplēšanas noteikumus atsevišķiem entītijas atribūtiem, atlasiet **Papildu**. Piemēram, varat izvēlēties paturēt visjaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. Izvērsiet entītiju, lai skatītu visus tās atribūtus un definētu, kuru opciju izmantot atsevišķiem atribūtiem. Ja izvēlaties uz reženšu balstītu opciju, ir jānorāda arī datuma/laika lauks, kas definē re resency. 
  
       > [!div class="mx-imgBorder"]
       > ![Dublikātu noteikšanas kārtulas 1. darbība.](media/match-selfconflation.png "Dedublēšanas kārtulu pirmā darbība")

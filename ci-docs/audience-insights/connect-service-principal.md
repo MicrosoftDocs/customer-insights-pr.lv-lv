@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900284"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088156"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma primāro nosaukumu
 
-Šajā rakstā ir aprakstīts, kā izveidot savienojumu Dynamics 365 Customer Insights ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma pamatsummu, nevis krātuves konta atslēgas. 
+Šajā rakstā ir aprakstīts, kā izveidot savienojumu Dynamics 365 Customer Insights ar kontu, Azure Data Lake Storage izmantojot Azure pakalpojuma pamatsummu, nevis krātuves konta atslēgas. 
 
-Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr jābūt ierobežotām atļaujām. Tā vietā, lai lietojumprogrammās pieteiktos kā pilnībā priviliģēts lietotājs, Azure piedāvā pakalpojuma primāros nosaukumus. Pakalpojumu vadītājus var izmantot, lai droši [pievienotu vai rediģētu common data model mapi kā datu avots](connect-common-data-model.md) vai izveidotu vai atjauninātu [vidi](create-environment.md).
+Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr jābūt ierobežotām atļaujām. Tā vietā, lai lietojumprogrammās pieteiktos kā pilnībā priviliģēts lietotājs, Azure piedāvā pakalpojuma primāros nosaukumus. Varat izmantot pakalpojumu vadītājus, lai droši [pievienotu vai rediģētu common data model mapi kā datu avots](connect-common-data-model.md) vai [izveidotu vai atjauninātu vidi](create-environment.md).
 
 > [!IMPORTANT]
-> - Azure Data Lake Storage konts, kas plāno izmantot pakalpojuma primāro nosaukumu, ir jābūt [iespējotai Hierarhiskai nosaukuma vietai (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
+> - Datu ezera krātuves kontam, kas izmantos pakalpojuma pamatsummu, jābūt Gen2 un jābūt [iespējotam hierarhiskai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
 > - Lai izveidotu pakalpojuma vadītāju, Azure abonementam ir nepieciešamas administratora atļaujas.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure pakalpojuma primārā nosaukuma izveide programmā Customer Insights

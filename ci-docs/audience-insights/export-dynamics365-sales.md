@@ -1,6 +1,6 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Sales
-description: 'Uzziniet, kā konfigurēt savienojumu un eksportēt uz Dynamics 365 Sales.'
+description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090932"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmentu lietošana Dynamics 365 Sales (priekšskatījums)
 
 
 
-Izmantojiet Dynamics 365 Sales klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas.
+Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas ar Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Zināmie ierobežojumi
+
+- Eksports uz Dynamics 365 Sales ir ierobežots līdz 100'000 dalībniekiem katrā segmentā.
+- Segmenta eksports uz Dynamics 365 pārdošanu var ilgt līdz 3 stundām. 
 
 ## <a name="prerequisite-for-connection"></a>Savienojuma priekšnosacījums
 
