@@ -1,6 +1,6 @@
 ---
 title: Sapludināt entītijas datu apvienošanā
-description: 'Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.'
+description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
 ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046602"
 ---
-
 # <a name="merge-entities"></a>Sapludiniet entītijas
 
 Sapludināšanas posms ir pēdējais datu apvienošanas procesa posms. Tā mērķis ir konfliktējošu datu saskaņošana. Konfliktējošo datu piemērs var būt klienta vārds, kas ir atrodams divās datu kopās, taču katrā no tām tas tiek rādīts nedaudz atšķirīgi ("Oto Bērzs" un "Otto Bērzs"), vai tālruņa numurs, kas atšķiras pēc formāta (21-480-309 un 21480309). Šo konfliktējošo datu punktu sapludināšana notiek, pamatojoties uz pieeju “atribūts pēc atribūta”
