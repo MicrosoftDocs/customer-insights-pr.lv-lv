@@ -1,39 +1,37 @@
 ---
 title: LiveRamp savienotājs
-description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz LiveRamp.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Uzziniet, kā eksportēt datus LiveRamp.
+ms.date: 12/02/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: kishorem-ms
-ms.author: kishorem
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618944"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667193"
 ---
-# <a name="export-segments-to-liverampreg-preview"></a>Segmentu eksportēšana uz LiveRamp&reg; (priekšskatījums)
+# <a name="liverampreg-connector-preview"></a>LiveRamp&reg; savienotājs (priekšskatījums)
 
-Aktivizējiet savus datus LiveRamp, lai savienotos ar vairāk nekā 500 digitālajām, sociālajām un TV platformām. Strādājiet ar saviem datiem risinājumā LiveRamp, lai mērķētu, izlaistu un personalizētu reklāmas kampaņas.
+Aktivizējiet datus risinājumā LiveRamp, lai izveidotu savienojumu ar vairāk nekā 500 platformām digitālajās, sociālajās un TV ekosistēmās. Strādājiet ar saviem datiem risinājumā LiveRamp, lai mērķētu, izlaistu un personalizētu reklāmas kampaņas.
 
-## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Lai izmantotu šo savienotāju, ir nepieciešams LiveRamp abonements.
 - Lai iegūtu abonementu, [sazinieties tieši ar LiveRamp](https://liveramp.com/contact/). [Uzzināt vairāk par LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="set-up-connection-to-liveramp"></a>Savienojuma ar LiveRamp iestatīšana
+## <a name="connect-to-liveramp"></a>Savienojums ar LiveRamp
 
-1. Dodieties uz **Administrators** > **Savienojumi**.
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **LiveRamp**, lai konfigurētu savienojumu.
+1. **LiveRamp** elementā atlasiet **Iestatīt**.
 
-1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
-
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
 
 1. Norādiet **Lietotājvārds** un **Parole** savam LiveRamp Drošajam FTP (SFTP) kontam.
 Šie akreditācijas dati var atšķirties no jūsu LiveRamp Onboarding akreditācijas datiem.
@@ -42,25 +40,15 @@ Aktivizējiet savus datus LiveRamp, lai savienotos ar vairāk nekā 500 digitāl
 
 1. Pēc sekmīgas verifikācijas sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**.
 
-1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**.
+1. Atlasiet **Tālāk**, lai iestatītu LiveRamp savienotāju.
 
-## <a name="configure-an-export"></a>Eksporta konfigurēšana
-
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
-
-1. Pārejiet uz **Dati** > **Eksportēšana**.
-
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
-
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas LiveRamp. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+## <a name="configure-the-connector"></a>Savienotāja konfigurēšana
 
 1. Laukā **Izvēlēties galveno identifikatoru** atlasiet **E-pasts**, **Vārds un adrese** vai **Tālrunis**, kas tiks nosūtīts uz LiveRamp identitātes atrisināšanai.
-   > [!div class="mx-imgBorder"]
-   > ![LiveRamp savienotājs ar atribūtu kartējumu.](media/export-liveramp-segments.png "LiveRamp savienotājs ar atribūtu kartējumu")
 
-1. Kartējiet atlasītajam atslēgas identifikatoram atbilstošos atribūtus no entītijas *Klients*.
+1. Kartējiet atbilstošos atribūtus no savas vienotās klienta entītijas atlasītajam galvenajam identifikatoram.
 
-1. Atlasiet **Pievienot atribūtu**, lai kartētu vairāk atribūtu, ko nosūtīt uz LiveRamp.
+1. Atlasiet **Pievienot atribūtu**, lai kartētu papildu atribūtus nosūtīšanai uz LiveRamp.
 
    > [!TIP]
    > Vairāku galveno identifikatora atribūtu nosūtīšana uz LiveRamp, visticamāk, iegūs lielāku atbilstību.
@@ -69,14 +57,15 @@ Aktivizējiet savus datus LiveRamp, lai savienotos ar vairāk nekā 500 digitāl
 
 1. Atlasiet vienumu **Saglabāt**.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+> [!div class="mx-imgBorder"]
+> ![LiveRamp savienotājs ar atribūtu kartējumu](media/export-liveramp-segments.png "LiveRamp savienotājs ar atribūtu kartējumu")
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+## <a name="export-the-data"></a>Datu eksportēšana
 
+Eksportēšana drīzumā tiks sākta, ja būs pabeigti visi eksportēšanas priekšnosacījumi. Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
+Kad eksportēšana ir sekmīgi pabeigta, varat pieteikties programmā LiveRamp Onboarding, lai aktivizētu un izplatītu savus datus.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
 Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz Liveramp, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai nodrošinātu Liveramp atbilstību konfidencialitātes vai drošības saistībām, kas jums varētu rasties. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

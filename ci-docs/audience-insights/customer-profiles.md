@@ -1,71 +1,75 @@
 ---
 title: Klientu profilu skatīšana
 description: Iegūstiet kombinētu skatu ar jūsu apvienotajiem klientu datiem.
-ms.date: 09/30/2021
+ms.date: 12/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623278"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896336"
 ---
 # <a name="customer-profiles"></a>Klientu profili
 
-Lapā **Klienti** tiek rādīts jūsu vienoto klientu profilu apvienotais skats. Klientu profili ir pieejami, tiklīdz [esat izveidojis vienoto klienta entītiju](data-unification.md). Šajā lapā varat meklēt klientus un definēt meklējumu indeksu.
+Lapā **Klienti** tiek parādīts apvienots klientu skatījums, pamatojoties uz profila datiem, kas apkopoti no [visiem datu avotiem](data-sources.md). Klientu profili ir pieejami, kad [izveidojat vienotu klienta entītiju](data-unification.md). Pārliecinieties, vai esat pabeidzis datu apvienošanas procesu, lai iegūtu plašākus klientu skatus. Šī lapa arī sniedz iespēju meklēt klientus.
 
-Klienti var būt fiziskas personas vai organizācijas. Katram klienta profilam tiek norādīts elements. Lai iegūtu vairāk ierakstu, izmantojiet lapdales vadīklas. Šajā kartē tiek parādīti entītijas *Klients* lauki, kā definēts **Meklēšanas un filtra indeksā**. Atlasiet elementu, lai atlasītā klienta datus skatītu īpašā lapā [Klienta informācijas detaļu lapa](customer-profiles.md#customer-details-page).
+Klienti var būt personas vai organizācijas (priekšskatījums). Katram klientam vai organizācijas profilam tiek piešķirts elements. Atlasiet elementu, lai skatītu papildinformāciju par noteiktu klientu vai organizāciju. Lapas apakšdaļā izmantojiet lappušu numerācijas vadīklas, lai skatītu papildu ierakstus.
 
 > [!div class="mx-imgBorder"] 
-> ![Klientu lapa, kurā parādīti rezultātu elementi](media/customers-page-result-tiles-B2C.png "Klientu lapa, kurā parādīti rezultātu elementi")
+> ![B2C klienta profils](media/profiles-customers.png "B2C klienta profili")
+
+Organizācijas (priekšskatījums)
+> [!div class="mx-imgBorder"] 
+> ![B2B klienta profils](media/profile-customers-b2b.png "B2B klienta profili")
 
 > [!NOTE]
-> Ja elementi nav redzami, navigācijas rūtī atlasot **Klientus**, administratoram ir [jādefinē vismaz viens meklējams atribūts](search-filter-index.md)**Meklēšanas un filtra indeksā**.
+> Ja, navigācijas rūtī atlasot **Klienti**, neredzat rūtis, jūsu administratoram ir [jādefinē vismaz viens meklējams atribūts](search-filter-index.md) **Meklēšanas un filtrēšanas indeksā**.
 
 ## <a name="search-for-customers"></a>Meklēt klientus
 
-Meklējiet klientus, meklēšanas lodziņā ievadot vārdu vai citu atribūtu. Meklēšana darbojas tikai _Klienta_ entītijā, kas izveidota datu unificēšanas procesā.
+Meklējiet klientus, meklēšanas lodziņā ievadot vārdu vai citu atribūtu. Meklēšana darbojas tikai klienta profila entītijā, kas ir izveidota datu apvienošanas procesā.
 
-Kā administrators varat konfigurēt meklēšanas atribūtus, izmantojot **Meklēšanas un filtrēšanas rādītāja** lapu. Lai iegūtu papildinformāciju, dodieties uz [Meklēšanas un filtra indeksa pārvaldība](search-filter-index.md).
+Kā administrators varat konfigurēt meklēšanas atribūtus, izmantojot **Meklēšanas un filtrēšanas rādītāja** lapu. Papildinformāciju skatiet sadaļā [Pārvaldīt meklēšanas un filtra rādītāju](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtrēt klientus
 
-Klientus var filtrēt pēc _Klienta_ entītijas laukiem. Līdzīgi meklēšanai — jūsu administratoram vispirms ir jādefinē lauki kā filtrējami, izmantojot lapu **Meklēšanas un filtra rādītājs**.
+Klientus var filtrēt pēc Klienta profila entītijas laukiem. Līdzīgi meklēšanai — jūsu administratoram vispirms ir jādefinē lauki kā filtrējami, izmantojot lapu **Meklēšanas un filtra rādītājs**.
 
-1. Lapā **Klienti** atlasiet **Rādīt filtrus**.
+1. Lapā **Klienti** atlasiet **Filtrs**.
 
-1. Atzīmējiet lodziņus blakus atribūtiem, pēc kuriem vēlaties filtrēt klientus.
+2. Atzīmējiet lodziņus blakus atribūtiem, pēc kuriem vēlaties filtrēt klientus.
 
-1. Noņemiet filtrus, atlasot lapā **Klienti** **Notīrīt filtrus**.
+   > [!div class="mx-imgBorder"] 
+   > ![Klientu profili](media/profiles-customers3.png "Klientu profili")
 
-## <a name="customer-details-page"></a>Detalizēta informācija par klientu
+3. Noņemiet filtrus, atlasot lapā **Klienti** **Notīrīt filtrus**.
 
-Atlasiet jebkuru no klientu elementiem, lai atvērtu **Klientu detalizētās informācijas lapu**. Šajā skatā ir ietverta vienota informācija par atlasīto klientu. Detalizēta informācija par klientu ietver šādu saturu:
+##  <a name="customer-details-page"></a>Detalizēta informācija par klientu
 
-**Klienta profila elements**: šajā elementā tiek parādītas atšķirīgas vērtības no vienotās _Klienta_ entītijas. Ja laukam nav vērtības atlasītajam klienta profilam, tas netiks rādīts. Elements ir strukturēts sadaļās:  
-  - Pirmajā sadaļā ir redzama iepriekš definēta lauku kopa, kam seko visi lauki, kas veido daļu no meklēšanas un filtra indeksa. Visi ar adresēm saistītie lauki tiek apvienoti vienā rindā, ja profilā ir šādi lauki. 
-  - **Šī klienta kontaktpersonas**: biznesa uzņēmumu vidēs visas ar šo klientu saistītās kontaktpersonas būs redzamas otrajā sadaļā. Katra kontaktpersona tiek parādīta ar to laukiem. Tukši lauki ir paslēpti.
-  - **Papildu lauki**: rāda atlasītā klienta pārējos laukus, izņemot ID. 
-  - **ID**: uzskaita visus ID ar to atbilstošo entītijas nosaukumu. Laukus identificē kā ID pēc to semantikas, kas tos kategorizē tādus.
+Atlasiet jebkuru no klientu elementiem, lai atvērtu **Klientu detalizētās informācijas lapu**. Šajā skatā ir ietverta vienota informācija par atlasīto klientu.
 
-**Darbību laika grafiks**: rāda datus, ja ir konfigurētas darbības. Laika skalas skatā ir hronoloģiskā secībā sakārtotas atlasītā klienta darbības, sākot ar visjaunāko darbību. Lai iegūtu papildinformāciju, dodieties uz [Klientu darbības](activities.md).
+Detalizēta informācija par klientu:
 
-**Ieskati**:  
-  - **Pasākumi**: rāda, ja ir konfigurēti viens vai vairāki klienta atribūtu pasākumi. Tie iekļauj aprēķinātos KPI ap saviem klientiem atsevišķā klientu līmenī. Lai iegūtu papildinformāciju, dodieties uz [Pasākumu definēšana un pārvalde](measures.md).
+-   **Klienta profila elements:** Šis elements rāda dažādas vērtības no vienotā klienta profila entītijas. Šī detalizētā informācija var ietvert e-pasta adresi, nosaukumu, pilsētu un citus datus. 
 
-  - **Potenciālās intereses, potenciālie zīmoli**: rāda, vai esat konfigurējis zīmola vai ieinteresētības bagātinātāju. Tas attiecas uz iespējamām interesēm un interesēm attiecībā uz zīmoliem, kas balstīti uz citiem klientiem, kuru profils ir līdzīgs atlasītajam klienta profilam. Lai iegūtu papildinformāciju, atveriet sadaļu [Klientu profilu bagātināšana ar zīmolu un interesēm](enrichment-microsoft.md).
+-   **Iespējamās intereses, potenciālie zīmoli:** Rāda, ja esat konfigurējis pirmās puses bagātināšanu. Tas ataino iespējamas intereses un zīmolu radniecību, kāda varētu būt klientam ar šim klientam līdzīgu profilu. Papildinformāciju skatiet tēmā [Klientu profilu bagātināšana ar zīmolu un interešu radniecības datiem](enrichment-microsoft.md).
 
-Lai atgrieztos klientu meklēšanas lapā, atlasiet **Atpakaļ pie klientiem**.
+-   **Pasākumi:** Parāda, vai esat konfigurējis vienu vai vairākus noteikta tipa pasākumus: klientu atribūta mērvienības. Tie iekļauj aprēķinātos KPI ap saviem klientiem atsevišķā klientu līmenī. Papildinformāciju skatiet tēmā [Pasākumu definēšana un pārvaldīšana](measures.md).
+
+-   **Darbības laika skala:** Rāda, vai ir konfigurētas darbības. Laika skalas skats ietver šī klienta hronoloģiski kārtotās darbības, sākot ar pēdējo darbību. Papildinformācijai skatiet [Klientu darbības](activities.md).
+
+Atlasiet **Atpakaļ pie klientiem**, lai atgrieztos klientu meklēšanas lapā.
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-[Pievienojiet vēl datu avotus](data-sources.md), [bagātināt vienotos profilus](enrichment-hub.md) vai [izveidojiet segmentus](segments.md), lai strādātu ar vienoto klientu profiliem citās lietojumprogrammās.
+[Pievienojiet papildu datu avotus](data-sources.md) vai [izveidojiet klientu segmentus](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

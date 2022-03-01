@@ -1,75 +1,50 @@
 ---
 title: Customer Insights datu eksportēšana Azure Blob krātuvē
-description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Blob krātuvi.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+description: Uzzinieto, kā konfigurēt savienojumu ar Azure Blob krātuvi.
+ms.date: 09/18/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605859"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667148"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
+# <a name="connector-for-azure-blob-storage-preview"></a>Savienotājs Azure Blob krātuvei (priekšskatījums)
 
-Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, lai pārsūtītu datus uz citām programmām.
+Uzglabājiet Customer Insights datus Azure Blob krātuvē vai izmantojiet tos datu pārsūtīšanai uz citām programmām.
 
-## <a name="known-limitations"></a>Zināmie ierobežojumi
+## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigurējiet savienotāju Azure Blob krātuvei
 
-1. Azure Blob krātuvē varat izvēlēties starp [Standarta veiktspējas un Premium veiktspējas līmeni](/azure/storage/blobs/storage-blob-performance-tiers). Ja izvēlaties Premium veiktspējas līmeni, atlasiet [premium bloka BLOB kā uzņēmuma tipu](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Savienojuma ar Blob Storage iestatīšana
+1. Sadaļā **Azure Blob krātuve** atlasiet **Iestatīt**.
 
-1. Dodieties uz **Administrators** > **Savienojumi**.
+1. Ievadiet **Konta nosaukums**, **Konta atslēga** un **Konteiners** savam Azure Blob krātuves kontam.
+    - Papildinformāciju, kā atrast Azure Blob krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Azure Blob krātuve**, lai konfigurētu savienojumu.
+1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
 
-1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
-
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Ievadiet sava Blob Storage konta **Konta nosaukumu**, **Konta atslēgu** un **Konteineru**.
-    - Papildinformāciju par Blob krātuves konta nosaukuma un konta atslēgas meklēšanu skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
-    - Lai uzzinātu, kā izveidot konteineru, skatiet sadaļu [Konteinera izveide](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-
-1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
-
-## <a name="configure-an-export"></a>Eksporta konfigurēšana
-
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
-
-> [!IMPORTANT]
-> Ja ieslēgsit nevajadzīgās dzēšanas iestatījumu Azure Blob Storage kontam, eksportēšana neizdosies. Izslēdziet nevajadzīgo dzēšanu, lai eksportētu datus uz BLOB. Papildinformāciju skatiet sadaļā [Iespējot Blob nevajadzīgo dzēšanu](/azure/storage/blobs/soft-delete-blob-enable.md)
-
-1. Pārejiet uz **Dati** > **Eksportēšana**.
-
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
-
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Azure Blob Storage. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
+1. Atlasiet **Tālāk**.
 
 1. Atzīmējiet lodziņu blakus visām entītijām, ko vēlaties eksportēt šajā galamērķī.
 
-1. Atlasiet vienumu **Saglabāt**.
+1. Atlasiet **Saglabāt**.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+Eksportētie dati tiek glabāti jūsu konfigurētajā Azure Blob krātuves konteinerā. Konteinerā automātiski tiek izveidoti šādi mapju ceļi:
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).     
-
-Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
-
-Eksportētie dati tiek glabāti jūsu konfigurētajā Blob Storage konteinerā. Konteinerā automātiski tiek izveidoti šādi mapju ceļi:
-
-- Avota entītijām un sistēmas ģenerētajām entītijām:  
-  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
+- Avota entītijām un sistēmas ģenerētajām entītijām: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
-- Eksportēto entītiju model.json būs %ExportDestinationName% līmenī.  
+- Eksportēto entītiju model.json fails atradīsies %ExportDestinationName% līmenī
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+## <a name="export-the-data"></a>Datu eksportēšana
+
+Datus var [eksportēt pēc pieprasījuma](/export-destinations.md#export-data-on-demand). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).

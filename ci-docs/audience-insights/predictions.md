@@ -1,7 +1,7 @@
 ---
 title: Daļējo datu aizpildīšana, izmantojot prognozes
 description: Izmantojiet prognozes, lai aizpildītu nepilnīgus klientu datus.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,34 +9,33 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732415"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692536"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Pabeidziet daļējos datus ar prognozēm (novecojušas)
+# <a name="complete-your-partial-data-with-predictions"></a>Aizpildiet savus daļējos datus ar prognozēm
 
-> [!IMPORTANT]
-> Šī funkcija tiks **novecojusi** no **2021. gada 5. novembra**. Pašreizējās implementācijas turpinās darboties, līdz līdzeklis tiks noņemts, bet jūs nevarēsit izveidot jaunas integrācijas, izmantojot tālāk sniegtos norādījumus.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Prognozes ļauj viegli izveidot prognozētās vērtības, kas var uzlabot jūsu izpratni par klientu. Lapā **Informācija** > **Prognozes** varat atlasīt **Manas prognozes**, lai skatītu prognozes, ko esat konfigurējis citās auditorijas ieskatu daļās, un ļaut tās papildus pielāgot.
 
 > [!NOTE]
 > Šo līdzekli nevar izmantot, ja jūsu vidē tiek izmantots Azure Data Lake Gen2 krātuve.
 >
-> Līdzeklis Prognozes izmanto automatizētus līdzekļus, lai novērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, un tāpēc tās ir izmantojamas kā profilēšanas metode, jo šis termins ir definēts vispārīgajā datu aizsardzības regulā ("VDAR"). Šī līdzekļa izmantošana klienta datu apstrādei var būt pakļauta VDAR vai citiem likumiem vai noteikumiem. Jūs esat atbildīgs par to, lai nodrošinātu, ka Dynamics 365 Customer Insights, tostarp prognozes, izmantošana atbilst visiem piemērojamajiem normatīvajiem aktiem, tostarp tiesību aktiem, kas saistīti ar privātumu, personas datiem, biometriskajiem datiem, datu aizsardzību un saziņas konfidencialitāti.
+> Līdzeklis Prognozes izmanto automatizētus līdzekļus, lai novērtētu datus un veiktu prognozes, pamatojoties uz šiem datiem, un tāpēc tās ir izmantojamas kā profilēšanas metode, jo šis termins ir definēts vispārīgajā datu aizsardzības regulā ("VDAR"). Šī līdzekļa izmantošana klienta datu apstrādei var būt pakļauta VDAR vai citiem likumiem vai noteikumiem. Jūs esat atbildīgs par to, ka jūsu Dynamics 365 Customer Insights lietojums, ieskaitot prognozes, atbilst visiem piemērojamiem likumiem un noteikumiem, ieskaitot likumus, kas attiecas uz privātumu, personas datiem, biometrijas datiem, datu aizsardzību un saziņas konfidencialitāti.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 Lai organizācija varētu izmantot prognožu līdzekli, pārliecinieties, vai ir izpildīti šādi priekšnosacījumi:
 
-1. Jūsu organizācijai ir instance, [kas iestatīta](/ai-builder/build-model#prerequisites) Microsoft Dataverse, un tā atrodas tajā pašā organizācijā, kur Customer Insights.
+1. Jūsu organizācijai ir iestatīta instance, [kas iestatīta Microsoft Dataverse](/ai-builder/build-model#prerequisites) un tā atrodas tajā pašā organizācijā, kurā atrodas Customer Insights.
 
-2. Auditorijas ieskata vide ir piesaistīta jūsu Dataverse gadījumam.
+2. Jūsu Dataverse instancei ir pievienota auditorijas ieskatu vide.
 
-Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-environment.md).
+Ja jūs [veidojat pirmo vidi](get-started-paid.md), konfigurējiet to dialoglodziņā **Izveidot vidi** un atlasiet **Detalizētāk**. Ja esat jau izveidojis vidi, atveriet tā iestatījumus un atlasiet **Detalizētāk**. Jebkurā gadījumā sadaļā **Izmantojiet prognozes** ievadiet Dataverse instances URL, kurai vēlaties pievienot savu vidi.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognozēšanas izveide klienta entītijā
 
@@ -61,8 +60,6 @@ Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-environment.md
    > ![Kartēto lauku vērtību rādīšanas piemērs kategorijām.](media/intelligence-categorymapping.png "Kartēto lauku vērtību rādīšanas piemērs kategorijām")
 
 8. Atlasiet **Gatavs**, un prognoze tiks apstrādāta. Apstrādei ir vajadzīgs laiks atkarībā no datu lieluma un sarežģītības pakāpes. Rezultāti būs pieejami jaunā entītijā, pamatojoties uz jūsu izveidotās prognozes **Izvades entītijas nosaukumu**.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Izveidot prognozi, veidojot segmentu
 
@@ -142,7 +139,7 @@ Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atja
 
 ## <a name="troubleshooting"></a>Problēmu novēršana
 
-Ja kļūdas dēļ nevarat pabeigt pievienošanas Dataverse procesu, varat mēģināt pabeigt procesu manuāli. Ir zināmas divas problēmas, kas var rasties pievienošanas procesā:
+Ja nevarat pabeigt Dataverse pievienošanas procesu kļūdas dēļ, varat mēģināt pabeigt procesu manuāli. Ir zināmas divas problēmas, kas var rasties pievienošanas procesā:
 
 - Klientu karšu pievienojumprogrammu risinājums nav instalēts.
     1. Izpildiet norādījumus, lai [instalētu un konfigurētu risinājumu](customer-card-add-in.md).
@@ -155,7 +152,7 @@ Ja kļūdas dēļ nevarat pabeigt pievienošanas Dataverse procesu, varat mēģi
     1. Atlasiet **+ Jauns** un atlasiet **Lietotājs**.
     1. Atlasiet **Programmas lietotājs**, ja tas vēl nav atlasīts, un ievadiet šādu informāciju:
         - **Lietotājvārds:** cihelp@microsoft.com
-        - **Pieteikuma ID:** 38c77d00-5fcb-4cce-9d93-af4738258e3c
+        - **Programmas ID:** 38c77d00-5fcb-4cce-9d93-af4738258e3c
         - **Vārds:** Customer
         - **Uzvārds:** Insights
         - **Primārais e-pasts:** cihelp@microsoft.com

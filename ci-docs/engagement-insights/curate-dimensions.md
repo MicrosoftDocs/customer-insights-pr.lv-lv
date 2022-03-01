@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466357"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461112"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Uzvedības datu sadalīšanai izmantojiet demogrāfiskās dimensijas
 
@@ -29,7 +29,7 @@ Izmantojot vienotas profila demogrāfiskās dimensijas, iesaistes ieskatu lietot
 - Iesaistes ieskatu vide, kurā klienta profila dati ir saistīti ar auditorijas ieskatu vidi, kurā tiek izveidoti klientu profili. Papildinformācija: [Izveidot saiti starp auditorijas ieskatiem un iesaistes ieskatiem](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Kad būsiet izveidojis saiti starp auditorijas ieskatu un iesaistes ieskatu vidi, iespējams, vēlēsities izmantot tikai klienta profila rekvizītiem specifiskos datus, kas var būt noderīgi kā iesaistes ieskati. Lai iegūtu papildinformāciju, skatiet [Iespējot auditorijas ieskatu vienotos profilu atribūtus un segmentus](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Kad būsiet izveidojis saiti starp auditorijas ieskatu un iesaistes ieskatu vidi, iespējams, vēlēsities izmantot tikai klienta profila rekvizītiem specifiskos datus, kas var būt noderīgi kā iesaistes ieskati. Lai iegūtu papildinformāciju, skatiet [Iespējot auditorijas ieskatu vienotos profilu atribūtus un segmentus](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Izveidojiet jaunu pielāgotu atskaiti
 

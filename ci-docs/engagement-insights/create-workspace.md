@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673452"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645319"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Jaunas darbvietas izveide un dalībnieku pievienošana
 
@@ -26,17 +26,17 @@ Veidojot darbvietu, atlasiet to datu tipu, uz kuriem vēlaties koncentrēties. E
 
 ## <a name="create-a-new-workspace"></a>Jaunas darbvietas izveide
 
-Darbvietas izveides process ietver *vides* iestatīšanu darbvietas organizēšanai. Vide ir vieta, kurā var ietvert vienu vai vairākas darbvietas. Varat izmantot vidi, lai pārvaldītu darbvietas un savienojumus ar auditorijas ieskatu iespējām.
+Darbvietas izveides process ietver *vides* iestatīšanu darbvietas organizēšanai. Vide ir vieta, kurā var ietvert vienu vai vairākas darbvietas. Vidi varat izmantot, lai pārvaldītu darbvietas un savienojumus ar Customer Insights auditorijas ieskatu iespējām.
 
-1. Darbvietas pārslēdzējam atlasiet **·** +Jauns.
+1. Atlasiet **Jauns** darbvietas pārslēdzējā.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Customer Insights lapa ar remarku navigācijas rūtī un aprakstu.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Customer insights lapa ar remarku navigācijas rūtī un aprakstu.":::
 
 1. Rūtī **Darbvieta** ievadiet **Darbvietas nosaukumu**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Ievadiet darbvietas nosaukumu.":::
 
-1. Izvēlieties platformas veidu (tīmeklis vai mobilais), kuru vēlaties izmērīt.
+1. Izvēlieties, kāda tipa platformu (tīmekli vai mobilo ierīci) vēlaties mērīt.
 
 1. Atlasiet vienumu **Rādīt papildu iestatījumus**, lai iespējotu vai atspējotu šos neobligātos iestatījumus:
 

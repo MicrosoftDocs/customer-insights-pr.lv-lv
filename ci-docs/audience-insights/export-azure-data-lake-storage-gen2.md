@@ -1,65 +1,43 @@
 ---
 title: Customer Insights datu eksportēšana uz Azure Data Lake Storage Gen2
 description: Uzziniet, kā konfigurēt savienojumu ar Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+ms.date: 02/04/2021
+ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: stefanie-msft
-ms.author: sthe
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605912"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477188"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Data Lake Storage Gen2 (priekšskatījums)
+# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Savienotājs ar Azure Data Lake Storage Gen2 (priekšskatījums)
 
-Glabājiet Customer Insights datus pakalpojuma Azure Data Lake Storage Gen2 kontā vai izmantojiet to, lai pārsūtītu datus uz citām programmām.
+Glabājiet Customer Insights datus pakalpojumā Azure Data Lake Storage Gen2 vai izmantojiet pakalpojumu, lai pārsūtītu datus uz citām programmām.
 
-## <a name="known-limitations"></a>Zināmie ierobežojumi
+## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Savienotāja konfigurēšana Azure Data Lake Storage Gen2
 
-1. Izmantojot Azure Data Lake Storage Gen2, varat izvēlēties starp [Standarta veiktspēju un Premium veiktspējas līmeni](/azure/storage/blobs/create-data-lake-storage-account), kad veidojat datu importēšanai paredzētu krātuves kontu. Ja izvēlaties Premium veiktspējas līmeni, atlasiet premium bloka BLOB kā uzņēmuma tipu. 
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
+1. Sadaļā **Azure Data Lake Storage Gen2** atlasiet vienumu **Iestatīt**.
 
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Iestatiet savienojumu ar Azure Data Lake Storage Gen2 
-
-
-1. Dodieties uz **Administrators** > **Savienojumi**.
-
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Azure Data Lake Gen 2**, lai konfigurētu savienojumu.
-
-1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
-
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Laukā **Parādāmais nosaukums** piešķiriet galamērķim atpazīstamu nosaukumu.
 
 1. Ievadiet **Uzņēmuma nosaukumu**, **Uzņēmuma atslēgu** un **Konteineru** jūsu Azure Data Lake Storage Gen2.
-    - Informāciju par to, kā izveidot krātuves kontu, ko izmantot ar Azure Data Lake Storage Gen2, skatiet [Krātuves konta izveide](/azure/storage/blobs/create-data-lake-storage-account). 
-    - Papildinformāciju par Azure Data Lake Gen2 glabāšanas konta nosaukumu un konta atslēgu skatiet rakstā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
+    - Informāciju par to, kā izveidot krātuves kontu, ko izmantot ar Azure Data Lake Storage Gen2, skatiet [Krātuves konta izveide](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
+    - Papildinformāciju, kā atrast Azure Data Lake Gen2 krātuves konta nosaukumu un konta atslēgu, skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
 
-1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
-
-## <a name="configure-an-export"></a>Eksporta konfigurēšana
-
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
-
-1. Pārejiet uz **Dati** > **Eksportēšana**.
-
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot eksportu**.
-
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas **Azure Data Lake**. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Atlasiet **Tālāk**.
 
 1. Atzīmējiet lodziņu blakus visām entītijām, ko vēlaties eksportēt šajā galamērķī.
 
 1. Atlasiet vienumu **Saglabāt**.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+## <a name="export-the-data"></a>Datu eksportēšana
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
-
-Eksportētie dati tiek glabāti jūsu konfigurētajā Azure Data Lake Gen 2 krātuves konteinerā. 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Datus var [eksportēt pēc pieprasījuma](export-destinations.md#export-data-on-demand). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).

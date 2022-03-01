@@ -4,17 +4,17 @@ description: Kā izveidot, rediģēt un dzēst dimensijas.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623641"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034006"
 ---
 # <a name="view-and-create-dimensions"></a>Skatīt un izveidot dimensijas
 
@@ -22,7 +22,7 @@ ms.locfileid: "7623641"
 
 Dimensijas ir notikumu atribūti, kas var raksturot, filtrēt vai grupēt datus. Ja savā vietnē esat palaidis mārketinga veicināšanas atbalstu, varat izmantot dimensijas, lai šķirotu kampaņas pēc jauniem un lietotājiem, kas atgriežas.  
 
-Iesaistes ieskati ietver standarta (OOB) dimensijas notikuma rekvizītos. Piemēri:
+Iesaistes ieskati ietver standarta dimensijas notikuma rekvizītos. Piemēri:
 
 - Pārlūkprogrammas nosaukums
 - Lapas nosaukums
@@ -44,21 +44,17 @@ Dimensijas balstās uz esošo notikumu rekvizītiem. Izmantojot izsekošanas kod
 Papildus sistēmas ģenerētajam darba vides un darbvietas administratoram var tikt radīts pielāgots ieišana. Pielāgotas dimensijas balstās uz pamata notikumu noklusējuma rekvizītiem vai arī tās var lietot [pielāgotus notikuma rekvizītus](advanced-SDK-implementation.md).
 
 1. Ejiet uz **Dati** > **Dimensijas**.
-1. Atlasiet **Jauna dimensija**.
+1. Atlasiet **Pievienot dimensiju**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Pievienojiet notikumam dimensiju.":::
 
 1. Rūtī **Izveidot dimensiju** atlasiet rekvizītu, uz kura tiks balstīta dimensija. Rekvizītu sarakstā tiks rādīti visi tās darbvietas rekvizīti, kas nav piešķirti dimensijai.
-   
-   :::image type="content" source="media/create-new-dimension.png" alt-text="Jaunas dimensijas izveidošana.":::
-      
-3. Lodziņā **Parādāmais nosaukums** ievadiet nosaukumu. Pēc izvēles varat pievienot **Aprakstu**.
-4. Lai saglabātu dimensiju, atlasiet **Izveidot**. Lai [pielāgotā atskaitē](custom-reports.md) vai [segmentā](segments.md) varētu lietot dimensiju, var paiet viena minūte. 
+1. Lodziņā **Parādāmais nosaukums** ievadiet nosaukumu. Pēc izvēles varat pievienot aprakstu.
+1. Lai saglabātu dimensiju, atlasiet **Izveidot**. Lai [pielāgotā atskaitē](custom-reports.md) vai [segmentā](segments.md) varētu lietot dimensiju, var paiet viena minūte. 
 
 ## <a name="edit-a-dimension"></a>Dimensijas rediģēšana
 
-Varat mainīt dimensijas nosaukumu un aprakstu. Rediģēt var tikai lietotāja izveidotus profilus, bet nevar rediģēt sistēmas profilu.
-
+Varat mainīt dimensijas nosaukumu un aprakstu.
 
 1. Ejiet uz **Dati** > **Dimensijas**.
 1. Izvēlieties dimensiju, kuru vēlaties dzēst.

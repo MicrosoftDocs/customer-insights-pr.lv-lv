@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Azure Synapse Analytics
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951051"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327373"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksportēt datus uz Azure Synapse Analytics (priekšskatījums)
 
@@ -22,7 +22,7 @@ Azure Synapse ir analīzes pakalpojums, kas paātrina laiku, lai gūtu ieskatu d
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
-Lai konfigurētu savienojumu no Customer Insights uz Azure Synapse, ir jāizpilda tālāk sniegtie priekšnosacījumi.
+Lai konfigurētu savienojumu no Customer Insights uz Azure Synapse, ir jāizpilda tālāk sniegtie priekšnosacījumi. 
 
 > [!NOTE]
 > Noteikti iestatiet visas **lomu piešķires**, kā aprakstīts.  
@@ -49,8 +49,6 @@ Azure:
 
 ### <a name="configure-a-connection"></a>Savienojuma konfigurēšana
 
-Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam programmā Customer Insights ir nepieciešamas **Reader** atļaujas resursu *grupā*, kurā atrodas Synapse Analytics darbvieta. Turklāt synapse Analytics darbvietas pakalpojuma vadītājam un lietotājam ir nepieciešamas **Synapse administratora** atļaujas. 
-
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
 1. Atlasiet **Pievienot savienojumu** un atlasiet **Azure Synapse Analytics** vai atlasiet vienumu **Iestatīt** rūtī **Azure Synapse Analytics**, lai konfigurētu savienojumu.
@@ -65,7 +63,7 @@ Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam programm
 
 ### <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Lai konfigurētu eksportēšanu ar koplietojamu savienojumu, programmā Customer Insights ir nepieciešamas vismaz **līdzstrādnieka** atļaujas. Papildinformāciju skatiet rakstā [atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
@@ -84,8 +82,6 @@ Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam programm
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
 Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand).
-
-Lai veiktu vaicājumus datos, kas tika eksportēti uz Synapse Analytics, ir nepieciešama **krātuves BLOB datu lasītāja** piekļuve mērķa krātuvei eksporta darbvietā. 
 
 ### <a name="update-an-export"></a>Eksportēšanas atjaunināšana
 

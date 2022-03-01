@@ -9,13 +9,13 @@ metadata:
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 03/02/2022
-  ms.openlocfilehash: d24ed34b794e77a52ceec1a4411440a88430a369
-  ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 3764ed7c7fc4bd0dfa89e8a574617a1eb6273c2e36f6e5daa5aeca2c919ba7b8
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: lv-LV
-  ms.lasthandoff: 02/03/2022
-  ms.locfileid: "8088248"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7031390"
 landingContent:
 - title: Par auditorijas ieskatiem
   linkLists:
@@ -27,10 +27,6 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Atklājiet auditorijas ieskatus
       url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
-  - linkListType: learn
-    links:
-    - text: Customer Insights mācību ceļš
-      url: /learn/paths/build-customer-insights/
 - title: Datu apvienošana
   linkLists:
   - linkListType: how-to-guide
@@ -41,11 +37,7 @@ landingContent:
       url: data-unification.md
     - text: Entītiju izprašana
       url: entities.md
-  - linkListType: learn
-    links:
-    - text: Vienota profila izveide
-      url: /learn/modules/unified-customer-profile/
-- title: Iegūt ieskatus
+- title: Bagātināt un precizēt datus
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -53,13 +45,9 @@ landingContent:
       url: enrichment-hub.md
     - text: Relāciju konfigurēšana
       url: relationships.md
-    - text: Pabeigt datus, izmantojot prognozes
-      url: predictions.md
-  - linkListType: learn
-    links:
-    - text: Bagātināt un prognozēt datus
-      url: /learn/modules/enrich-data/
-- title: Veidojiet savus datus
+    - text: Uzskaitiet klientu darbības
+      url: activities.md
+- title: Iegūt ieskatus
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -67,12 +55,8 @@ landingContent:
       url: segments.md
     - text: Izveidot pasākumus
       url: measures.md
-    - text: Uzskaitiet klientu darbības
-      url: activities.md
-  - linkListType: learn
-    links:
-    - text: Darbs ar programmu
-      url: /learn/modules/working-with-customer-insights/
+    - text: Pabeigt datus, izmantojot prognozes
+      url: predictions.md
 - title: Klienta datu eksportēšana
   linkLists:
   - linkListType: how-to-guide
@@ -83,10 +67,6 @@ landingContent:
       url: customer-card-add-in.md
     - text: Power BI savienotājs
       url: export-power-bi.md
-  - linkListType: learn
-    links:
-    - text: Ārējo savienojumu pārvaldība
-      url: /learn/modules/configure-third-party-connections/
 - title: Administrēt programmu
   linkLists:
   - linkListType: how-to-guide
@@ -97,7 +77,3 @@ landingContent:
       url: permissions.md
     - text: Vairāku vižu pārvaldība
       url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Administrējiet pakalpojumu Customer Insights
-      url: /learn/modules/administer-customer-data-platform/

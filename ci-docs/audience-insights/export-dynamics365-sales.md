@@ -1,48 +1,41 @@
 ---
 title: Customer Insights datu eksportēšana uz Dynamics 365 Sales
-description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Dynamics 365 Sales.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Uzziniet, kā konfigurēt savienojumu ar Dynamics 365 Sales.
+ms.date: 02/01/2021
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090932"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269017"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmentu lietošana Dynamics 365 Sales (priekšskatījums)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Savienotājs ar Dynamics 365 Sales (priekšskatījums)
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
+Izmantojiet Dynamics 365 Sales klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas.
 
-Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas ar Dynamics 365 Sales.
+## <a name="prerequisite"></a>Priekšnosacījums
 
-## <a name="known-limitations"></a>Zināmie ierobežojumi
-
-- Eksports uz Dynamics 365 Sales ir ierobežots līdz 100'000 dalībniekiem katrā segmentā.
-- Segmenta eksports uz Dynamics 365 pārdošanu var ilgt līdz 3 stundām. 
-
-## <a name="prerequisite-for-connection"></a>Savienojuma priekšnosacījums
-
-1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Sales, izmantojot Microsoft Dataverse](connect-power-query.md).
+1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Sales, izmantojot Common Data Services](connect-power-query.md).
 
    > [!NOTE]
    > Eksportējot segmentus no auditorijas ieskatiem uz programmu Sales, netiek veidoti jauni kontaktpersonu ieraksti. Kontaktpersonu ieraksti no programmas Sales jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
 
-## <a name="set-up-the-connection-to-sales"></a>Savienojuma ar Sales iestatīšana
+## <a name="configure-the-connector-for-sales"></a>Savienotāja konfigurēšana pakalpojumam Sales
 
-1. Dodieties uz **Administrators** > **Savienojumi**.
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Dynamics 365 Sales**, lai konfigurētu savienojumu.
+1. Sadaļā **Dynamics 365 Sales** atlasiet **Iestatīt**.
 
-1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
-
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Piešķiriet eksportēšanas galamērķim atpazīstamu nosaukumu laukā **Parādāmais nosaukums**.
 
 1. Ievadiet jūsu organizācijas Sales URL laukā **Servera adrese**.
 
@@ -50,24 +43,15 @@ Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālā
 
 1. Kartēt klienta ID lauku uz Dynamics 365 kontaktpersonas ID.
 
-1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
-
-## <a name="configure-an-export"></a>Eksporta konfigurēšana
-
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
-
-1. Pārejiet uz **Dati** > **Eksportēšana**.
-
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
-
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Dynamics 365 Sales. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Atlasiet **Tālāk**.
 
 1. Izvēlieties vienu vai vairākus segmentus.
 
-1. Atlasiet vienumu **Saglabāt**
+1. Atlasiet vienumu **Saglabāt**.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+## <a name="export-the-data"></a>Datu eksportēšana
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+Datus var [eksportēt pēc pieprasījuma](export-destinations.md). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

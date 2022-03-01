@@ -2,30 +2,8 @@
   href: index.yml
 - name: Produkta pārskats
   href: overview.md
-- name: Mācību katalogs
-  items:
-    - name: Sākt darbu
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Datu uzņemšana
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Vienotais klienta profila izveide
-      href: /learn/modules/unified-customer-profile/
-    - name: Darbs ar auditorijas ieskatiem
-      href: /learn/modules/working-with-customer-insights/
-    - name: Bagātināt datus un veikt prognozes
-      href: /learn/modules/enrich-data/
-    - name: Ārējo savienojumu pārvaldība
-      href: /learn/modules/configure-third-party-connections/
-    - name: Administrējiet pakalpojumu Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
-- name: Bezmaksas izmēģinājumversija
-  items:
-    - name: Reģistrēšanās bezmaksas izmēģinājumversijai
-      href: trial-signup.md
-    - name: Izmēģinājumversijas BUJ
-      href: trial-FAQ.md
-- name: Sākt ar apmaksātu licenci
-  href: paid-license.md
+- name: Izveidot izmēģinājumversiju
+  href: audience-insights/get-started-trial.md
 - name: Piekļuve videi
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Auditorijas ieskati
@@ -41,11 +19,19 @@
         - name: Īsā pamācība
           href: audience-insights/get-started.md
         - name: Jaunas vides izveide
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Auditorijas ieskatu izpēte
           href: audience-insights/home.md
-    - name: Darbs ar uzņēmuma kontiem
-      href: audience-insights/work-with-business-accounts.md
+    - name: Lean moduļi
+      items:
+        - name: Datu uzņemšana
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Vienotais klienta profila izveide
+          href: /learn/modules/unified-customer-profile/
+        - name: Darbs ar programmu
+          href: /learn/modules/working-with-customer-insights/
+        - name: Bagātināt datus un prognozes
+          href: /learn/modules/enrich-data/
     - name: Datu avoti
       items:
         - name: Datu avotu pārskats
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Uzskaitiet klientu darbības
           href: audience-insights/activities.md
-        - name: Definējiet semantiskos kartējumus
-          href: audience-insights/semantic-mappings.md
     - name: Datu bagātināšana
       items:
         - name: Klientu profilu bagātināšana
           href: audience-insights/enrichment-hub.md
-        - name: Zīmoli un intereses
+        - name: Zīmola un interešu radniecība
           href: audience-insights/enrichment-microsoft.md
         - name: Uzlabotas adreses
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Uzlaboti uzņēmuma dati
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Bagātināt ar Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Bagātināšana ar HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Bagātināt ar Experian
           href: audience-insights/enrichment-experian.md
-        - name: Bagātināt ar Office 365 datiem
-          href: audience-insights/enrichment-office.md
         - name: Bagātināšana ar SFTP pielāgoto importu
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenti
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Paredzēt abonēšanas mainību
               href: audience-insights/predict-subscription-churn.md
-            - name: Prognozējiet transakcijas zudumu
+            - name: Transakciju zuduma prognoze
               href: audience-insights/predict-transactional-churn.md
-            - name: Analizēt noskaņojumu klientu atsauksmēs
-              href: audience-insights/sentiment-analysis.md
             - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
               href: audience-insights/custom-models.md
             - name: Daļēji trūkstošu datu pabeigšana
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Abonementa zudumu prognozes parauga ceļvedis
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Transakciju zuduma prognozes parauga rokasgrāmata
+            - name: Transakciju zudumu prognozes parauga ceļvedis
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Produktu ieteikumu prognozes rokasgrāmatas paraugs
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimenti ar Azure algoritmisko mācīšanos
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Azure algoritmiskās mācīšanās studijas (klasiskais) eksperimenti
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Pārvaldīt prognozes
           href: audience-insights/manage-predictions.md
         - name: 'Segmentu izveide, pamatojoties uz prognozēm'
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Vairāku vižu pārvaldība
           href: audience-insights/manage-environments.md
-        - name: Drošība
-          items:
-            - name: Ievadiet savu Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: 'Savienojuma izveide ar ADLS krātuvi, izmantojot pakalpojuma primāro nosaukumu'
-              href: audience-insights/connect-service-principal.md
-            - name: Eksportēt diagnostikas žurnālus
-              href: audience-insights/diagnostics.md
+        - name: 'Savienojuma izveide ar ADLS krātuvi, izmantojot pakalpojuma primāro nosaukumu'
+          href: audience-insights/connect-service-principal.md
+        - name: Atbalstītās valodas
+          href: audience-insights/supported-languages.md
     - name: Paplašināšana
       items:
         - name: Tīmekļa datu integrēšana no iesaistes ieskatiem
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: "API\_atsauces"
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Piekrišanas pārvaldība (priekšskatījums)
-  items:
-    - name: Palīdzības centrmezgls
-      href: consent-management/index.yml
-    - name: Iespēju pārskats
-      href: consent-management/overview.md
-    - name: Sākt darbu
-      items:
-        - name: Sākt darbu
-          href: consent-management/get-started.md
-        - name: Jēdzieni un terminoloģija
-          href: consent-management/glossary.md
-    - name: Piekrišanu datu importēšana
-      items:
-        - name: Piekrišanu datu importēšana
-          href: consent-management/import-consent-data.md
-        - name: Piekrišanas datu iestatīšana un piekrišanas preferenču lietošana
-          href: consent-management/set-consent-rules.md
-    - name: Piekrišanas datu pārvaldība
-      items:
-        - name: Piekrišanas kārtulu iespējošana auditorijas ieskatos
-          href: audience-insights/activate-consent.md
-        - name: Noklusējuma piekrišanas kārtulu pārvaldība auditorijas ieskatu segmentos
-          href: audience-insights/change-default-consent-rules.md
-    - name: Iestatījumu un lietotāju pārvaldība
-      items:
-        - name: Sistēmas iestatījumu konfigurēšana
-          href: consent-management/system-settings.md
-        - name: Lietotāju un atļauju pārvaldība
-          href: consent-management/manage-users.md
-    - name: Piekrišanas datu izmantošana
-      items:
-        - name: Prognožu izveide ar piekrišanas datiem
-          href: consent-management/predictions-consent-data.md
 - name: Iesaistes ieskati (priekšskatījums)
   items:
     - name: Palīdzības centrmezgls
       href: engagement-insights/index.yml
-    - name: Par iesaistes ieskatiem
+    - name: Iespēju pārskats
       href: engagement-insights/overview.md
     - name: Sākt darbu
       items:
         - name: Īsā pamācība
           href: engagement-insights/get-started.md
-        - name: Vides izveide
-          href: engagement-insights/create-new-environment.md
         - name: Darbvietas izveide
           href: engagement-insights/create-workspace.md
         - name: Notikumu tveršana no tīmekļa vietnēm un mobilajām programmām
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Reģionālā pieejamība
       href: engagement-insights/regional-availability.md
-- name: Datu kopīgošana starp iespējām
+- name: Auditorijas un iesaistes ieskatu integrācija
   items:
     - name: Saistiet auditorijas ieskatus un iesaistes ieskatus
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: DSR tiesības un pieprasījumi
   href: dsr-rights-requests.md
 - name: Saņemt atbalstu
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

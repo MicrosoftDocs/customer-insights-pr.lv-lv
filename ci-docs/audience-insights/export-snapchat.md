@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Snapchat
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618692"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760580"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Segmentu sarakstu eksportēšana uz Snapchat (priekšskatījums)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Segmentu sarakstu eksportēšana uz Snapchat (priekšskatījums)
 
 Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos reklāmā. 
 
@@ -29,7 +29,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos r
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
 - Eksportēšana uz Snapchat attiecas tikai uz segmentiem.
-- Līdz pat 1 miljonam klientu profilu eksportēšana uz Snapchat var aizņemt līdz 15 minūtēm. 
+- Līdz 1 miljona profilu eksportēšana uz Snapchat var aizņemt līdz 15 minūtēm. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Savienojuma ar Snapchat iestatīšana
 
@@ -63,7 +63,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos r
 
 1. Ievadiet [**Snapchat auditorijas ID**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Snapchat.
+1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Snapchat.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. 
 

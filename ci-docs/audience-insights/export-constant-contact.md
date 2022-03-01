@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana uz Constant Contact
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619128"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124282"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentu eksportēšana uz Constant Contact (priekšskatījums)
 
@@ -28,10 +28,10 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Vienā eksportā uz konstantu kontaktpersonu var eksportēt līdz pat 1 miljoniem klientu profilu.
+- Jūs varat eksportēt līdz 1 miljonam profilu uz katru eksportu uz Constant Contact.
 - Eksportēšana uz Constant Contact attiecas tikai uz segmentiem.
-- Līdz pat 1 miljoniem klientu profilu eksportēšanai uz konstantu kontaktpersonu var paiet līdz 1 stundai. 
-- To klientu profilu skaits, kurus varat eksportēt uz konstantu kontaktpersonu, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar konstantu Kontaktpersonu.
+- Līdz 1 miljona profilu eksportēšana uz Constant Contact var aizņemt līdz 1 stundai. 
+- Profilu, kurus varat eksportēt uz Constant Contact, skaits ir atkarīgs no jūsu līguma ar Constant Contract un attiecas vienīgi uz tā tvērumu.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Savienojuma ar Constant Contact izveide
 
@@ -47,7 +47,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 1. Lai uzsāktu savienojumu ar Constant Contact, atlasiet **Savienot**.
 
-1. Atlasiet vienumu **Autentificēties ar pastāvīgo kontaktpersonu** un norādiet savus administratora akreditācijas datus. 
+1. Atlasiet **Autentificēt ar AdRoll** un norādiet savus Constant Contact administratora akreditācijas datus. 
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -65,7 +65,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 1. Ievadiet savu [**Constant Contact saraksta ID**](https://app.constantcontact.com/pages/contacts/ui#lists). Constant Contact atveriet sarakstu, lai URL vietrādī atrastu saraksta ID.
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Constant Contact.
+1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Constant Contact.
 
 1. Ja vēlaties, varat eksportēt Vārds un Uzvārds kā papildu laukus, lai izveidotu vairāk personalizētu e-pasta ziņojumu. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 

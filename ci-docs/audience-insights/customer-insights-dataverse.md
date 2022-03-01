@@ -1,7 +1,7 @@
 ---
-title: Customer Insights dati Microsoft Dataverse
+title: Customer Insights dati programmā Microsoft Dataverse
 description: Izmantojiet Customer Insights entītijas kā tabulas programmā Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866943"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645227"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
-Customer Insights nodrošina iespēju padarīt izvades entītijas pieejamas [programmā Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Šī integrācija ļauj viegli kopīgot datus un veikt pielāgotu izstrādi, izmantojot zema koda/bez koda pieejas. Izvades entītijas būs pieejamas kā tabulas Dataverse. Šīs tabulas iespējo scenārijus, [piemēram, automatizētas darbplūsmas, izmantojot](/power-automate/getting-started) Power Automate, [modeļa vadītas programmas un](/powerapps/maker/model-driven-apps/)[audekla](/powerapps/maker/canvas-apps/) programmas, izmantojot Power Apps. Datus var izmantot jebkurai citai lietojumprogrammai, kuras pamatā ir Dataverse tabulas. Pašreizējā ieviešanas atbalsta uzmeklēšanas, kur pieejamajiem auditorijas ieskatu entītijām var tikt fetched attiecīgā klienta ID dati.
+Customer Insights nodrošina iespēju izvades entītijas padarīt pieejamas programmā [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Šī integrācija ļauj viegli kopīgot datus un veikt pielāgotu izstrādi, izmantojot zema koda/bez koda pieejas. Izvades entītijas būs pieejamas kā tabulas programmā Dataverse. Šīs tabulas ļauj izmantot scenārijus, piemēram, [automatizētas darbplūsmas ar Power Automate](/power-automate/getting-started), [modeļa vadītām programmām](/powerapps/maker/model-driven-apps/) un [audekla pamatnes programmām](/powerapps/maker/canvas-apps/), izmantojot programmu Power Apps. Datus var izmantot jebkurai citai lietojumprogrammai, kuras pamatā ir Dataverse tabulas. Pašreizējā ieviešanas atbalsta uzmeklēšanas, kur pieejamajiem auditorijas ieskatu entītijām var tikt fetched attiecīgā klienta ID dati.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse vides pievienošana customer insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse vides pievienošana Customer Insights
 
 **Organizācijas ar esošām Dataverse vidēm**
 
-Organizācijas, kas jau izmanto Dataverse, var [izmantot kādu no savām esošajām Dataverse vidēm, kad administrators](create-environment.md) iestata auditorijas ieskatus. Norādot URL Dataverse vidē, tas ir saistīts ar viņu jauno auditorijas ieskatu vidi. Lai nodrošinātu vislabāko iespējamo veiktspēju, Customer Insights un Dataverse vidēm ir jābūt izvietotām tajā pašā reģionā.
+Organizācijas, kas jau izmanto Dataverse, var [izmantot kādu no esošajām Dataverse vidēm](create-environment.md), administrators iestata ieskatus auditorijā. Nodrošinot Dataverse vides URL, tas tiek piesaistīts jaunajai auditorijas ieskatu videi. Lai nodrošinātu pēc iespējas labāko veiktspēju, Tajā pašā reģionā ir jāvieso Dataverse vides un Customer Insights.
 
 **Jauna organizācija**
 
-Ja, iestatot Customer Insights, izveidosit jaunu organizāciju, automātiski iegūsit jaunu Dataverse vidi.
+Ja, iestatot Customer Insights, izveidojat jaunu organizāciju, automātiski tiks izveidota jauna Dataverse vide.
 
 > [!NOTE]
-> Ja jūsu organizācijas jau izmanto Dataverse savā nomniekā, ir svarīgi atcerēties, ka [Dataverse vides izveidi kontrolē administrators](/power-platform/admin/control-environment-creation.md) . Piemēram, ja iestatāt jaunu auditorijas ieskatu vidi ar savu organizācijas kontu un administrators ir atspējojis Dataverse izmēģinājuma vides izveidi visiem, izņemot administratorus, jūs nevarat izveidot jaunu izmēģinājuma vidi.
+> Ja jūsu organizācijas jau izmanto Dataverse savā nomniekā, ir svarīgi atcerēties, ka [Dataverse vides izveidi kontrolē administrators](/power-platform/admin/control-environment-creation.md). Piemēram, ja iestatāt jaunu auditorijas ieskatu vidi ar jūsu organizācijas kontu un administrators ir atspējojis izmēģinājumversijas vidi izveidi ikvienam, izņemot administratorus, jūs nevarat izveidot jaunu Dataverse izmēģinājumversijas vidi.
 > 
-> Programmā Customer Insights izveidotajām Dataverse izmēģinājuma vidēm ir 3 GB krātuve, kas netiks ieskaitīta kopējā ietilpībā, kas ir tiesīga saņemt nomnieku. Maksas abonementi saņem Dataverse tiesības uz 15 GB datu bāzei un 20 GB failu glabāšanai.
+> Pakalpojumā Customer Insights izveidotajā Dataverse izmēģinājumversijas krātuvē ir 3 GB, kas netiek rēķināts ar nomnieka kopējo noslodzi. Apmaksātiem abonementiem ir Dataverse tiesības uz 15 GB datu bāzi un 20 GB lielu failu krātuvi.
 
 ## <a name="output-entities"></a>Izvades entītijas
 
@@ -45,7 +45,6 @@ Dažas izvades entītijas no auditorijas ieskatiem ir pieejamas kā tabulas prog
 - [CustomerMeasure](#customermeasure)
 - [Bagātināšana](#enrichment)
 - [Prognoze](#prediction)
-- [Dalība segmentā](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -62,7 +61,7 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 |EntityName        | Virkne        | Entītijas nosaukums Audience Insights. Piemērs: `contact1`        |
 |AlternateValue    |Virkne         |Alternatīvais ID, kas tiek kartēts uz klienta ID. Piemērs: `cntid_1078`         |
 |KeyRing           | Vairākrindiņu teksts        | JSON vērtība  </br> Paraugs: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"taustiņi":[" cntid_1078"]}]       |
-|CustomerId         | String        | Vienotā klienta profila ID.         |
+|CustomerId         | Virkne        | Vienotā klienta profila ID.         |
 |AlternateKeyId     | GUID         |  AlternateKey noteicošais GUID, balstoties uz msdynci_identifier       |
 |msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Paraugs: `testdatasource|contact1|cntid_1078`    |
 
@@ -121,17 +120,4 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 | Modelis                | Virkne      | Modeļa nosaukums                                                |
 | Vērtības               | JSON virkne | Modeļa radītais atribūtu saraksts |
 | msdynci_predictionid | GUID        | Noteicošais GUID, kas izveidots no msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Dalība segmentā
-
-Šajā tabulā ir ietverta klientu profilu segmenta dalības informācija.
-
-| Column        | Tipi | Apraksts                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Klienta profila ID        |
-| SegmentProvider      | String       | Lietotne, kas publicē segmentus. Noklusējums: auditorijas ieskati         |
-| SegmentMembershipType | String       | Šī segmenta dalības ieraksta debitora tips. Atbalsta vairākus veidus, piemēram, Klients, Kontaktpersona vai Konts. Noklusējums: debitors  |
-| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kurā klienta profils ir      |
-| msdynci_identifier  | String   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministisks GUID, kas ģenerēts no`msdynci_identifier`          |
+| msdynci_identifier   | Virkne      |  `Model|ModelProvider|CustomerId`                      |

@@ -1,22 +1,20 @@
 ---
-title: Datu apvienošanas entītiju un atribūtu kartēšana
-description: Atlasiet entītijas, atribūtus, primārās atslēgas un stiskus tipus, lai kartētu datus uz vienoto klienta profilu.
-ms.date: 10/18/2020
+title: Kartēt entītijas datu apvienošanai
+description: Kartējiet datus, lai izveidotu vienotus klientu profilus.
+ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673272"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406357"
 ---
 # <a name="map-entities-and-attributes"></a>Kartējiet entītijas un atribūtus
 
@@ -37,14 +35,14 @@ Papildinformāciju par datu apvienošanās vispārīgo plūsmu skatiet rakstā [
 3. Atlasiet entītijas un atribūtus, ko vēlaties izmantot posmos *saskaņot* un *sapludināt*. No entītijas varat atlasīt nepieciešamos atribūtus pa vienam vai iekļaut visus, entītijas līmenī atlasot izvēles rūtiņu **Iekļaut visus laukus**. Lai gūtu labumu no datu apvienošanas procesa, ieteicams atlasīt vismaz divas entītijas.
 
    > [!div class="mx-imgBorder"]
-   > ![Entītiju pievienošanas piemērs.](media/data-manager-configure-map-add-entities-example.png "Entītiju pievienošanas piemērs")
+   > ![Entītiju pievienošanas piemērs](media/data-manager-configure-map-add-entities-example.png "Entītiju pievienošanas piemērs")
 
    Šajā piemērā mēs pievienojam entītijas **eCommerceContacts** un **loyCustomers**. Izvēloties šīs entītijas, varat gūt ieskatu par to, kuri tiešsaistes biznesa klienti ir lojalitātes programmas dalībnieki.
    
    Visos atribūtos un entītijās varat meklēt atslēgvārdus, lai atlasītu nepieciešamos atribūtus, ko vēlaties kartēt.
    
      > [!div class="mx-imgBorder"]
-   > ![Meklēšanas lauku piemērs.](media/data-manager-configure-map-search-fields-example.png "Meklēšanas lauku piemērs")
+   > ![Meklēšanas lauku piemērs](media/data-manager-configure-map-search-fields-example.png "Meklēšanas lauku piemērs")
 
 4. Atlasiet **Lietot**, lai apstiprinātu atlasi.
 
@@ -57,7 +55,7 @@ Pēc entītiju atlasīšanas lapā **Kartēšana** pārbaudei ir uzskaitītas at
 - **Atribūta semantiskais tips**: Jūsu atribūtu kategorijas, piemēram, e-pasta adrese vai nosaukums. Lai semantikas viedajai prognozēšanai izmantotu mākslīgā intelekta modeļus, ietaupītu laiku un uzlabotu precizitāti, iestatiet **Inteliģento kartēšanu** uz pozīciju **ON**. Inteliģentā kartēšana izceļ mākslīgā intelekta semantikas ieteikumu laukā **Veids**. Ja to iestatāt uz pozīciju **OFF**, jūs redzēsit regulāros kartēšanas ieteikumus. No pieejamā opciju saraksta varat atlasīt jebkuru semantisko veidu un pārlabot esošo atlasi.
 
 > [!div class="mx-imgBorder"]
-> ![Atribūta veids un semantiskā prognoze.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribūta veids un semantiskā prognoze")
+> ![Atribūta veids un semantiskā prognoze](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribūta veids un semantiskā prognoze")
 
 Ir iespējams pievienot arī pielāgotu semantisko tipu. Atlasiet atribūta lauka tipu un ierakstiet pielāgotā semantiskā atribūta tipa nosaukumu. Tādējādi varat arī mainīt sistēmas noteiktos atribūtu tipus.
 
@@ -66,7 +64,7 @@ Visi atribūti, kam automātiski tiek noteikts semantiskais tips, tiek grupēti 
 Atribūti, kas netiek automātiski kartēti uz semantisko tipu, tiek grupēti sadaļā **Definēt datus nekartētajos laukos**. Atlasiet nekartēto atribūtu semantisko tipu lauku vai ievadiet savu pielāgoto atribūta tipa nosaukumu.
 
 > [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips.](media/data-manager-configure-map-add-attributes.png "Primārā atslēga un atribūta tips")
+> ![Primārā atslēga un atribūta tips](media/data-manager-configure-map-add-attributes.png "Primārā atslēga un atribūta tips")
 
 > [!NOTE]
 > Viens lauks ir jākartē uz semantisko tipu Person.FullName, lai klienta kartē aizpildītu klienta vārdu. Pretējā gadījumā klientu kartes tiks rādītas kā anonīmas. 
@@ -78,7 +76,7 @@ Atribūti, kas netiek automātiski kartēti uz semantisko tipu, tiek grupēti sa
 2. Rūtī **Rediģēt laukus** pievienojiet vai noņemiet atribūtus un entītijas. Izmantojiet meklēšanu vai ritiniet, lai atrastu un atlasītu interesējošos atribūtus un entītijas. Nevar noņemt atribūtu vai entītiju, ja tie jau ir saskaņoti.
 
    > [!div class="mx-imgBorder"]
-   > ![Atribūtu pievienošana vai noņemšana.](media/configure-data-map-edit.png "Atribūtu pievienošana vai noņemšana")
+   > ![Atribūtu pievienošana vai noņemšana](media/configure-data-map-edit.png "Atribūtu pievienošana vai noņemšana")
 
 3. Atlasiet vienumu **Piemērot**.
 
@@ -96,7 +94,7 @@ Turpiniet ar apvienošanās darbībām un nodrošiniet, ka darbībā [Sapludinā
 
 Organizācijām (priekšskatījums) atribūta tipam ir jābūt kartētam uz “Organization.Name”.
 > [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips B2B.](media/configure-data-map-edit-b2b.png "Primārā atslēga un atribūta tips B2B")
+> ![Primārā atslēga un atribūta tips B2B](media/configure-data-map-edit-b2b.png "Primārā atslēga un atribūta tips B2B")
 
 ## <a name="next-step"></a>Nākamā darbība
 
@@ -104,6 +102,3 @@ Datu apvienošanas procesa ietvaros pārejiet uz lapu **Atbilstība**. Apmeklēj
 
 > [!TIP]
 > Noskatieties šo videoklipu: [Darba sākšana: vienota klienta profila izveide](https://youtu.be/oBfGEhucAxs).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

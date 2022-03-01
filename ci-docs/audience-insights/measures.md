@@ -1,247 +1,113 @@
 ---
-title: Mēru izveide un pārvaldība
-description: Definējiet mērus, lai analizētu un atspoguļotu sava uzņēmuma veiktspēju.
-ms.date: 11/01/2021
+title: Mēru izveide un rediģēšana
+description: Definējiet ar klientiem saistītus mērus, lai analizētu un atspoguļotu noteiktu uzņēmējdarbības jomu veiktspēju.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732735"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406363"
 ---
-# <a name="define-and-manage-measures"></a>Mēru definēšana un pārvaldība
+# <a name="define-and-manage-measures"></a>Definējiet un pārvaldiet mērus
 
-Mēri palīdz labāk izprast klientu paradumus un uzņēmuma veiktspēju. Tie aplūko atbilstošās vērtības no [vienotajiem profiliem](data-unification.md). Piemēram, uzņēmums vēlas redzēt *kopējos tēriņus uz klientu*, lai izprastu katra klienta pirkumu vēsturi vai izmērīt *uzņēmuma kopējos pārdošanas apjomus*, lai izprastu kopējā līmeņa ieņēmumus visā uzņēmumā.  
+**Mēri** attiecas uz izpildes pamatrādītājiem (KPI), kas atspoguļo noteiktu uzņēmējdarbības jomu veiktspēju un darbības efektivitāti. Auditorijas ieskati nodrošina intuitīvu pieredzi dažādu tipu pasākumu veidošanā, izmantojot vaicājumu veidotāju, kuram nav nepieciešams manuāli piešķirt kodeksu vai validēt pasākumus. Varat izsekot savus uzņēmējdarbības mērus **sākumlapā**, skatīt konkrētu klientu mērus **klienta kartē** un izmantot mērus klientu segmentu definēšanai lapā **Segmenti**.
 
-Mēri tiek izveidoti, izmantojot mērījumu veidotāju, datu vaicājumu platformu ar dažādiem operatoriem un vienkāršām kartēšanas opcijām. Tas ļauj filtrēt datus, grupēt rezultātus, noteikt [entītiju attiecību ceļus](relationships.md) un priekšskatīt izvadi.
+## <a name="create-a-measure"></a>Mēra izveide
 
-Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicājot klientu datus un izgūstot ieskatus. Piemēram, *katra klienta kopējo tēriņu* un *katra klienta kopējo ienākumu* mēra izveide palīdz identificēt klientu grupu, kuriem ir augsti tēriņi, bet arī augsti ieņēmumi. Varat [izveidot segmentu](segments.md), lai vadītu nākamās, vislabāk piemērotās darbības. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Personīgā mērījuma izveide no nulles
-
-Šajā sadaļā ir paskaidrots, kā izveidot jaunu mērījumu no nulles. Varat izveidot pasākumu ar datu atribūtiem no datu entītijām, kurām ir iestatītas attiecības, lai izveidotu savienojumu ar vienotā klienta profila entītiju.
-
-# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
-
-1. Auditorijas ieskatu sadaļā ejiet uz **Mēri**.
-
-1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
-
-1. Atlasiet **Rediģēt nosaukumu** un norādiet mēra **Nosaukumu**. 
-
-1. Konfigurācijas apgabalā izvēlieties apkopošanas funkciju no **Atlasīt funkciju** nolaižamās izvēlnes. Apkopošanas funkcijas ir šādas: 
-   - **Sum**
-   - **Vidējais**
-   - **Skaits**
-   - **Skaitīt unikālos vienumus**
-   - **Maksimums**
-   - **Minimums**
-   - **Pirmā**: tiek ņemta pirmā datu ieraksta vērtība
-   - **Pēdējā**: tiek ņemta pēdējā vērtība, kas tika pievienota datu ierakstam
-
-   :::image type="content" source="media/measure-operators.png" alt-text="Mēru aprēķinu operatori.":::
-
-1. Atlasiet vienumu **Pievienot atribūtu**, lai atlasītu datus, kas nepieciešami šī mēra izveidei.
-   
-   1. Atlasiet cilni **Atribūti**. 
-   1. Datu entītija: izvēlieties entītiju, kurā iekļauts mēra atribūts, ko vēlaties aprēķināt. 
-   1. Datu atribūts: izvēlieties atribūtu, ko vēlaties izmantot apkopošanas funkcijai, lai aprēķinātu mēru. Vienlaikus vienā reizē var atlasīt tikai vienu atribūtu.
-   1. Atlasiet arī esoša mēra datu atribūtu, atlasot **Mērījumi** cilni. Varat arī meklēt entītijas vai mēra nosaukumu. 
-   1. Atlasiet vienumu **Pievienot**, lai mēram pievienotu atlasīto atribūtu.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Atlasiet atribūtu, ko izmantot mērījumā.":::
-
-1. Lai izveidotu sarežģītākus mērījumus, to funkcijai var pievienot papildu atribūtus vai lietot matemātikas operatorus.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Sarežģītu mērījumu izveide, izmantojot matemātikas operatorus.":::
-
-1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. 
-  
-   1. Sadaļā **Pievienot atribūtu**, kas atrodas **Filtru** rūtī, atlasiet atribūtu, ko vēlaties izmantot, lai izveidotu filtru.
-   1. Iestatiet filtra operatorus, lai definētu filtru katram atlasītajam atribūtam.
-   1. Atlasiet vienumu **Lietot**, lai mērījumam pievienotu filtrus.
-
-1. Lai pievienotu dimensijas, konfigurācijas apgabalā atlasiet **Dimensija**. Dimensijas tiek rādītas kā kolonnas mērījuma izvades entītijā.
- 
-   1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa mērījumus*. Ja vēlaties izveidot *uzņēmuma līmeņa mērījumus*, varat noņemt noklusējuma dimensiju.
-   1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
-
-1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
-
-1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Mērījumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
-   
-   1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
-   1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Atlasiet entītijas ceļu mēram.":::
-
-1. Lai mērījumam pievienotu papildu aprēķinus, atlasiet **Jauns aprēķins**. Entītijas var izmantot tikai tajā pašā entītijas ceļā jauniem aprēķiniem. Papildu aprēķini tiek rādīti kā jaunas kolonnas mērījumu izvades entītijā.
-
-1. Aprēķinā atlasiet **...**, lai **Dublētu**, **Pārdēvētu** vai **Noņemtu** aprēķinu no mērījuma.
-
-1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
-
-1. Atlasiet opciju **Izpildīt**, lai aprēķinātu konfigurētā mērījuma rezultātus. Atlasiet **Saglabāt un aizvērt**, ja vēlaties saglabāt pašreizējo konfigurāciju un izpildīt mērījumu vēlāk.
-
-1. Dodieties uz **Mērījumi**, lai sarakstā redzētu jaunizveidoto mērījumu.
-
-# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
-
-1. Auditorijas ieskatu sadaļā ejiet uz **Mēri**.
-
-1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
-
-1. Atlasiet **Rediģēt nosaukumu** un norādiet mēra **Nosaukumu**. 
-
-1. Konfigurācijas apgabalā izvēlieties apkopošanas funkciju no **Atlasīt funkciju** nolaižamās izvēlnes. Apkopošanas funkcijas ir šādas: 
-   - **Sum**
-   - **Vidējais**
-   - **Skaits**
-   - **Skaitīt unikālos vienumus**
-   - **Maksimums**
-   - **Minimums**
-   - **Pirmā**: tiek ņemta pirmā datu ieraksta vērtība
-   - **Pēdējā**: tiek ņemta pēdējā vērtība, kas tika pievienota datu ierakstam
-
-   :::image type="content" source="media/measure-operators.png" alt-text="Mēru aprēķinu operatori.":::
-
-1. Atlasiet vienumu **Pievienot atribūtu**, lai atlasītu datus, kas nepieciešami šī mēra izveidei.
-   
-   1. Atlasiet cilni **Atribūti**. 
-   1. Datu entītija: izvēlieties entītiju, kurā iekļauts mēra atribūts, ko vēlaties aprēķināt. 
-   1. Datu atribūts: izvēlieties atribūtu, ko vēlaties izmantot apkopošanas funkcijai, lai aprēķinātu mēru. Vienlaikus vienā reizē var atlasīt tikai vienu atribūtu.
-   1. Atlasiet arī esoša mēra datu atribūtu, atlasot **Mērījumi** cilni. Varat arī meklēt entītijas vai mēra nosaukumu. 
-   1. Atlasiet vienumu **Pievienot**, lai mēram pievienotu atlasīto atribūtu.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Atlasiet atribūtu, ko izmantot mērījumā.":::
-
-1. Lai izveidotu sarežģītākus mērījumus, to funkcijai var pievienot papildu atribūtus vai lietot matemātikas operatorus.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Sarežģītu mērījumu izveide, izmantojot matemātikas operatorus.":::
-
-1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. 
-  
-   1. Sadaļā **Pievienot atribūtu**, kas atrodas **Filtru** rūtī, atlasiet atribūtu, ko vēlaties izmantot, lai izveidotu filtru.
-   1. Iestatiet filtra operatorus, lai definētu filtru katram atlasītajam atribūtam.
-   1. Atlasiet vienumu **Lietot**, lai mērījumam pievienotu filtrus.
-
-1. Lai pievienotu dimensijas, konfigurācijas apgabalā atlasiet **Dimensija**. Dimensijas tiek rādītas kā kolonnas mērījuma izvades entītijā.
- 
-   1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums. Pēc noklusējuma *CustomerID* dimensija tiek atlasīta, lai izveidotu *klienta līmeņa mērījumus*. Ja vēlaties izveidot *uzņēmuma līmeņa mērījumus*, varat noņemt noklusējuma dimensiju.
-   1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
-
-1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
-
-1. Jūs varat izmantot slēdzi **Apkopot pakārtotos uzņēmumus**, ja [izmantojat uzņēmumus ar hierarhijām](relationships.md#set-up-account-hierarchies).
-   - Ja iestatījums ir **Izslēgts**, mērījums tiek aprēķināts katram kontam. Katrs konts tiek iegūts no rezultātiem.
-   - Ja iestatījums ir **Ieslēgts**, atlasiet **Rediģēt**, lai izvēlētos uzņēmumu hierarhiju atbilstoši noingestajām hierarhijām. Šis pasākums dos tikai vienu rezultātu, jo tas tiek apkopots ar apakškontiem.
-
-1. Ja starp kartēto datu entītiju un *Klienta* entītiju ir vairāki ceļi, ir jāizvēlas viens no identificētajiem [entītiju attiecību ceļiem](relationships.md). Mērījumu rezultāti var atšķirties atkarībā no atlasītā ceļa. 
-   
-   1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
-   1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Atlasiet entītijas ceļu mēram.":::
-
-1. Aprēķinā atlasiet **...**, lai **Dublētu**, **Pārdēvētu** vai **Noņemtu** aprēķinu no mērījuma.
-
-1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
-
-1. Atlasiet opciju **Izpildīt**, lai aprēķinātu konfigurētā mērījuma rezultātus. Atlasiet **Saglabāt un aizvērt**, ja vēlaties saglabāt pašreizējo konfigurāciju un izpildīt mērījumu vēlāk.
-
-1. Dodieties uz **Mērījumi**, lai sarakstā redzētu jaunizveidoto mērījumu.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Veidnes izmantošana mērījuma veidošanā
-
-Lai izveidotu bieži izmantotus mērījumus, varat lietot to iepriekš definētās veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
-
-# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
-
-Lai izveidotu bieži izmantotus mērījumus, varat lietot to iepriekš definētās veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
-
-Pieejamās mērījumu veidnes: 
-- Vidējā transakcijas vērtība (ATV)
-- Kopējā transakciju vērtība
-- Vidējie ieņēmumi dienā
-- Gada vidējie ieņēmumi
-- Transakciju skaits
-- Iegūtie lojalitātes punkti
-- Izmantotie lojalitātes punkti
-- Lojalitātes punktu bilance
-- Klienta aktivitātes laika periods
-- Dalības ilgums lojalitātes programmā
-- Laiks kopš pēdējā pirkuma
-
-Šajā procedūrā aprakstītas darbības jauna mērījuma izveidei, izmantojot veidni.
+Šajā sadaļā ir izklāstīts, kā izveidot mērus no jauna. Varat izveidot mērus, izmantojot datus no vairākiem datu avotiem, kas ir saistīti, izmantojot entītiju Klients. Ir [spēkā noteikti pakalpojuma ierobežojumi](service-limits.md).
 
 1. Sadaļā Auditorijas ieskati ejiet uz **Mēri**.
 
-1. Atlasiet **Jauns** un atlasiet **Izvēlieties veidni**.
+2. Atlasiet **Jauns mērs**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Nolaižamās izvēlnes ekrānuzņēmums, veidojot jaunu mērījumu ar iezīmētu veidni.":::
+3. Izvēlieties mēra **tipu**.
 
-1. Atrodiet sev atbilstošo veidni un atlasiet **Izvēlēties veidni**.
+   - **Klienta atribūts**: katram klientam ir viens lauks, kurā norādīts klienta rezultāts, vērtība vai statuss. Klienta atribūti tiek izveidoti kā atribūti jaunā sistēmas ģenerētajā entītijā, ko sauc **Customer_Measure**.
 
-1. Pārskatiet prasītos datus un atlasiet **Sākt darbu**, ja visi dati ir pareizi.
+   - **Klienta mērs**: ieskati par klienta rīcību ar sadalījumu pēc atlasītajām dimensijām. Katram mēram tiek ģenerēta jauna entītija, iespējams, ar vairākiem ierakstiem katram klientam.
 
-1. Rūtī **Rediģēt nosaukumu** ievadiet sava mērījuma nosaukumu un izvades entitīju. 
+   - **Uzņēmuma mērs**: izsekojiet sava uzņēmuma veiktspējai un darbības efektivitātei. Uzņēmuma mēriem var būt divas dažādas izvades: skaitliska izvade, kas tiek parādīta **sākumlapā**, vai jauna entītija, kas atrodama lapā **Entītijas**.
 
-1. Atlasiet **Gatavs**.
+4. Norādiet **nosaukumu** (varat norādīt arī **parādāmo nosaukumu**), pēc tam atlasiet **Tālāk**.
 
-1. Sadaļā **Iestatīt laikposmu** definējiet lietojamo datu laika periodu. Izvēlieties, vai jaunajam mērījumam jāaptver visa datu kopa, atlasot **Viss laiks**, vai vēlaties, lai mērījums koncentrētos uz **Noteiktu laika periodu**.
+5. Sadaļā **Entītijas** atlasiet pirmo ierakstu nolaižamajā sarakstā. Šajā brīdī jums ir jāizlemj, vai mēra definēšanai ir nepieciešamas papildu entītijas.
 
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrānuzņēmums, kurā redzama laika perioda sadaļa, kad mērījumu konfigurē no veidnes.":::
+   > [!div class="mx-imgBorder"]
+   > ![Mēra definēšana](media/measure-definition.png "Mēra definīcija")
 
-1. Nākamajā sadaļā atlasiet **Pievienot datus**, lai izvēlētos darbībs un kartētu atbilstošos datus no savas *Vienotās darbības* entitījas.
+   Lai pievienotu papildu entītijas, atlasiet **Pievienot entītiju** un atlasiet entītijas, ko vēlaties izmantot šim mēram.
 
-    1. 1. darbība no 2: Sadaļā **Darbības veids** izvēlieties entitījas veidu, kuru vēlaties lietot. **Darbībām** atlasiet entitījas, kuras vēlaties kartēt.
-    1. 2. darbība no 2: Atlasiet atribūtu no *Vienotās darbības* entitījas formulas prasītajam komponentam. Piemēram, vidējai transakcijas vērtībai tas ir komponents, kas apzīmē transakcijas vērtību. **Darbības laikspiedolam** atlasiet atribūtu no Vienotās darbības entitījas, kas apzīmē darbības datumu un laiku.
-   
-1. Kad datu kartēšana ir izdevusies, varat redzēt statusu kā **Pabeigts** un kartēto darbību un atribūtu nosaukumu.
+   > [!NOTE]
+   > Varat atlasīt tikai tās entītijas, kurām ir relācijas ar jūsu sākuma entītiju. Papildinformāciju par relāciju definēšanu skatiet rakstā [Relācijas](relationships.md).
 
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Ekrānuzņēmums pabeigtai mērījuma veidnes konfigurēšanai.":::
+6. Varat arī konfigurēt mainīgos. Sadaļā **Mainīgie** atlasiet **Jauns mainīgais**.
 
-1. Tagad varat atlasīt **Palaist**, lai aprēķinātu mērījuma rezultātus. Lai to precizētu vēlāk, atlasiet **Saglabāt melnrakstu**.
+   Mainīgie ir aprēķini, kas tiek veikti katram no atlasītajiem ierakstiem. Piemēram, summējot pārdošanas punktu (POS) un pārdošanu tiešsaistē katram jūsu klienta ierakstam.
 
-# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+7. Norādiet mainīgā **Nosaukumu**.
 
-Šis līdzeklis ir pieejams tikai pasākumiem, kas izveidoti vidē, kurā kā primāro mērķauditoriju ir individuālie klienti.
+8. Apgabalā **Izteiksme** izvēlieties lauku, ar kuru sākt aprēķinu.
 
----
+9. Izteiksmes nosaukumu ierakstiet apgabalā **Izteiksme** un izvēlieties papildu laukus iekļaušanai aprēķinā.
+
+   > [!NOTE]
+   > Pašlaik tiek atbalstītas tikai aritmētiskas izteiksmes. Turklāt mainīgo aprēķins netiek atbalstīts entītijām no atšķirīgiem [entītiju ceļiem](relationships.md).
+
+10. Atlasiet **Gatavs**.
+
+11. Sadaļā **Mēra definēšana** ir jānosaka, kā jūsu izvēlētās entītijas un aprēķinātie mainīgie tiks apkopoti jaunā mēra entītijā vai atribūtā.
+
+12. Atlasiet **Jauna dimensija**. Dimensiju var uzskatīt par *grupu pēc* funkcijas. Mēra entītijas vai atribūta datu izvade tiks grupēta pēc visām jūsu definētajām dimensijām.
+
+    > [!div class="mx-imgBorder"]
+    > ![Apkopojuma cikla izvēle](media/measures-businessreport-measure-definition2.png "Apkopojuma cikla izvēle")
+
+    Definējot dimensijas, atlasiet vai ievadiet tālāk norādītos informāciju.
+
+    - **Entītija**: Ja definējat mēra entītiju, tajā ir jābūt vismaz vienam atribūtam. Ja definējat mēra atribūtu, pēc noklusējuma tajā būs tikai viens atribūts. Šī atlase ir paredzēta, lai izvēlētos entītiju, kurā ir ietverts šis atribūts.
+    - **Lauks**: Izvēlieties konkrētu atribūtu, kas tiks iekļauts mēra entītijā, vai atribūtā.
+    - **Intervāls**: Izvēlieties, vai dati tiks apkopoti reizi dienā, mēnesī vai gadā. Tā ir obligāta atlase tikai tad, ja atlasījāt datuma veida atribūtu.
+    - **Kā**: definē jaunā lauka nosaukumu.
+    - **Parādāmais nosaukums**: Definē lauka parādāmo nosaukumu.
+
+    > [!NOTE]
+    > Jūsu uzņēmuma mērs tiks saglabāts kā viena skaitļa entītija, un tas tiks parādīts **sākumlapā**, ja vien savam mēram nepievienosiet papildu dimensijas. Pēc papildu dimensiju pievienošanas šis mērs *netiks* parādīts **sākumlapā**.
+
+13. Varat arī pievienot apkopošanas funkcijas. Jebkuras veiktās apkopošanas rezultātā tiek iegūta jauna vērtība mēra entītijā vai atribūtā. Atbalstītās apkopošanas funkcijas: **Min**, **Max**, **Average**, **Median**, **Sum**, **Count Unique**, **First** (tiek izmantots pirmais dimensijas vērtības ieraksts) un **Last** (tiek izmantots pēdējais dimensijas vērtībai pievienotais ieraksts).
+
+14. Atlasiet **Saglabāt**, lai lietotu izmaiņas mēram.
 
 ## <a name="manage-your-measures"></a>Pārvaldiet savus mērus
 
-Mērījumu saraksts atrodams lapā **Mērījumi**.
+Kad esat izveidojis vismaz vienu pasākumu, lapā **Mēri** tiks atainots pasākumu saraksts.
 
-Atradīsiet informāciju par mēra tipu, izveidotāju, izveides datumu, statusu un stāvokli. Kad sarakstā atlasāt kādu mēru, varat priekšskatīt izvadi un lejupielādēt CSV failu.
+Jūs atradīsiet informāciju par mēra tipu, izveidotāju, izveidošanas datumu un laiku, pēdējās rediģēšanas datumu un laiku, statusu (vai mērs ir aktīvs, neaktīvs vai neveiksmīgs) un pēdējās atsvaidzināšanas datumu un laiku. Atlasot mēru no saraksta, varat redzēt tā izvades priekšskatījumu.
 
 Lai vienlaikus atsvaidzinātu visus mērus, atlasiet **Atsvaidzināt visu**, neatlasot noteiktu mēru.
 
 > [!div class="mx-imgBorder"]
-> ![Darbības, lai pārvaldītu atsevišķus mērus.](media/measure-actions.png "Darbības, lai pārvaldītu atsevišķus mērus.")
+> ![Darbības, lai pārvaldītu atsevišķus mērus](media/measure-actions.png "Darbības, lai pārvaldītu atsevišķus mērus")
 
-Sarakstā atlasiet mēru, lai izvēlētos kādu no šīm opcijām:
+Varat arī atlasīt mēru no saraksta un izpildīt vienu no šīm darbībām:
 
 - Atlasiet mēra nosaukumu, lai skatītu tā detalizētu informāciju.
 - **Rediģējiet** mēra konfigurāciju.
-- **Atsvaidzināt** mēru, pamatojoties uz jaunākajiem datiem.
-- **Pārdēvējiet** mēru.
+- **Pārdēvējiet** mēru. 
 - **Dzēsiet** mēru.
-- **Aktivizēt** vai **Deaktivizēt**. Neaktīvie mēri netiks atsvaidzināti [plānotās atsvaidzināšanas laikā](system.md#schedule-tab).
+- Atlasiet daudzpunkti (...) un pēc tam **Atsvaidziniet**, lai sāktu mēra atsvaidzināšanas procesu.
+- Atlasiet daudzpunkti (...) un pēc tam **Lejupielādēt**, lai iegūtu mēra .CSV failu.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.
 
 ## <a name="next-step"></a>Nākamā darbība
 
-Esošus mērus var izmantot, lai izveidotu [klientu segmentu](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Esošos mērus varat izmantot, lai izveidotu savu pirmo klientu segmentu lapā **Segmenti**. Papildinformāciju skatiet rakstā [Segmenti](segments.md).

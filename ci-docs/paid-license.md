@@ -5,21 +5,21 @@ description: Iepazīstiet pirmās palaišanas pieredzi Dynamics 365 Customer Ins
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: conceptual
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977681"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645707"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Darba sākšana pēc Customer Insights iegādes
 
 Šajā rakstā paskaidrots, kā veikt pirmās darbības Dynamics 365 Customer Insights pēc tam, kad organizācija ir iegādājusies abonementu. Ja vēlaties iegādāties Customer Insights, mūsu saziņas opcijas ir norādītas [Dynamics 365 Customer Insights vietnē](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Pēc Customer Insights abonementa licences iegādes nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā tiek aicināts izveidot vidi. 
+Pēc Customer Insights abonementa licences iegādes Microsoft 365 nomnieka globālais administrators saņem e-pasta ziņojumu, kas viņiem uzaicina izveidot vidi. 
 
 Customer Insights ir licencēts katram nomniekam, un tajā ir ietvertas vairākas iespējas. Lai palielinātu noklusējuma kvotu, varat iegādāties lielāku noslodzi un kvotas. 
 - [Cenu pārskats](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

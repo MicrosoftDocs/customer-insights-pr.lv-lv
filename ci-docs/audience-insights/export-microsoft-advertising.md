@@ -1,7 +1,7 @@
 ---
 title: Customer Insights datu eksportēšana Microsoft Advertising
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618070"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124519"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentu eksportēšana uz Microsoft Advertising (priekšskatījums)
 
@@ -29,9 +29,9 @@ Eksportēt Customer Insights segmentus uz Microsoft Advertising, lai izveidotu C
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Programmā Microsoft Advertising viena eksporta laikā var eksportēt līdz pat 500000 klientu profilu.
+- Jūs varat eksportēt līdz 500 000 profilu katrā Microsoft Advertising eksportēšanas darbībā.
 - Eksportēšana uz Microsoft Advertising attiecas tikai uz segmentiem.
-- Līdz pat 250000 klientu profilu eksportēšana uz Microsoft Advertising var paiet līdz 10 minūtēm. 
+- Līdz 500 000 profilu eksportēšana uz Microsoft Advertising var aizņemt līdz 10 minūtēm. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Iestatiet savienojumu ar Microsoft Advertising
@@ -68,7 +68,7 @@ Eksportēt Customer Insights segmentus uz Microsoft Advertising, lai izveidotu C
 
 1. Ievadiet savu **Microsoft Advertising klienta ID un konta ID**. Vietrāža URL parametros varat atrast klienta ID (`cid`) un konta ID (`aid`), kad esat pieteicies Microsoft Advertising.
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Microsoft Advertising.
+1. Sadaļas **Datu atbilstība** laukā **E-pasts** atlasiet lauku vienotajā klienta profilā ar klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Microsoft Advertising.
 
 1. Atlasiet vienumu **Saglabāt**.
 

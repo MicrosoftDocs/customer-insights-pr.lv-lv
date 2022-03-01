@@ -7,12 +7,13 @@ ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: b2dc5a1159f8baea1fa3c686de5ac294842b3e26
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977607"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036520"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkta pārskats par Dynamics 365 Customer Insights
 
@@ -32,10 +33,5 @@ Lai izvēlētos iespēju
 1. Navigācijas rūtī atlasiet **Visas programmas**, lai atvērtu **Izvēlēties jūsu fokusa** lodziņu.
 1. Atlasiet vienumu **Doties tūlīt**, lai pārietu uz jūsu izvēlēto iespēju.
 
-## <a name="pricing-and-licensing"></a>Cenas un licencēšana
-
-Customer Insights ir licencēts katram nomniekam, un tajā ir ietvertas vairākas iespējas. Varat iegādāties papildu noslodzi un licenci, lai palielinātu noklusējuma kvotu. 
-- [Cenu pārskats](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- Noslodze un tiesības: [Dynamics 365 licencēšanas rokasgrāmata](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
