@@ -1,24 +1,28 @@
 ---
 title: Daļējo datu aizpildīšana, izmantojot prognozes
 description: Izmantojiet prognozes, lai aizpildītu nepilnīgus klientu datus.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692536"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354012"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Aizpildiet savus daļējos datus ar prognozēm
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Pabeidziet daļējos datus ar prognozēm (novecojušas)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Šī funkcija tiks **novecojusi** no **2021. gada 5. novembra**. Pašreizējās implementācijas turpinās darboties, līdz līdzeklis tiks noņemts, bet jūs nevarēsit izveidot jaunas integrācijas, izmantojot tālāk sniegtos norādījumus.
 
 Prognozes ļauj viegli izveidot prognozētās vērtības, kas var uzlabot jūsu izpratni par klientu. Lapā **Informācija** > **Prognozes** varat atlasīt **Manas prognozes**, lai skatītu prognozes, ko esat konfigurējis citās auditorijas ieskatu daļās, un ļaut tās papildus pielāgot.
 
@@ -35,7 +39,7 @@ Lai organizācija varētu izmantot prognožu līdzekli, pārliecinieties, vai ir
 
 2. Jūsu Dataverse instancei ir pievienota auditorijas ieskatu vide.
 
-Ja jūs [veidojat pirmo vidi](get-started-paid.md), konfigurējiet to dialoglodziņā **Izveidot vidi** un atlasiet **Detalizētāk**. Ja esat jau izveidojis vidi, atveriet tā iestatījumus un atlasiet **Detalizētāk**. Jebkurā gadījumā sadaļā **Izmantojiet prognozes** ievadiet Dataverse instances URL, kurai vēlaties pievienot savu vidi.
+Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognozēšanas izveide klienta entītijā
 
@@ -60,6 +64,8 @@ Ja jūs [veidojat pirmo vidi](get-started-paid.md), konfigurējiet to dialoglodz
    > ![Kartēto lauku vērtību rādīšanas piemērs kategorijām.](media/intelligence-categorymapping.png "Kartēto lauku vērtību rādīšanas piemērs kategorijām")
 
 8. Atlasiet **Gatavs**, un prognoze tiks apstrādāta. Apstrādei ir vajadzīgs laiks atkarībā no datu lieluma un sarežģītības pakāpes. Rezultāti būs pieejami jaunā entītijā, pamatojoties uz jūsu izveidotās prognozes **Izvades entītijas nosaukumu**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Izveidot prognozi, veidojot segmentu
 
@@ -110,7 +116,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="edit-a-prediction"></a>Prognozes rediģēšana
 
-Pēc tam, kad esat izveidojis prognozi, varat pielāgot modeli AI Builder, lai palielinātu sava modeļa efektivitāti.  
+Pēc prognoze izveides varat pielāgot modeli, AI Builder lai palielinātu modeļa efektivitāti.  
 
 1. Sadaļā Auditorijas ieskati ejiet uz **Informācija** > **Prognozes** > **Manas prognozes**.
 
@@ -118,14 +124,14 @@ Pēc tam, kad esat izveidojis prognozi, varat pielāgot modeli AI Builder, lai p
 
 3. Kolonnā **Darbības** atlasiet daudzpunkti un izvēlieties **Skatīt**.
 
-4. Atlasiet **Pielāgot līdzeklī AI Builder**.
+4. Atlasiet **Pielāgot programmā AI Builder**.
 
-5. Atjauniniet savu modeli līdzeklī AI Builder. [Uzziniet vairāk par modeļu pārvaldību līdzeklī AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Atjauniniet savu modeli AI Builder. [Uzziniet vairāk par modeļu pārvaldību līdzeklī AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atjauninātais modelis.
 
 > [!NOTE]
-> Jaunie modeļi, kas izveidoti programmā AI Builder, netiks parādīti auditorijas ieskatos, ja vien šis modelis netika izveidots no iepriekš minētajām iespējām.
+> Jaunie modeļi, kas AI Builder izveidoti, netiks rādīti auditorijas ieskatos, ja vien modelis nav izveidots no iepriekš uzskaitītās pieredzes.
 
 ## <a name="remove-a-prediction"></a>Prognozes noņemšana
 

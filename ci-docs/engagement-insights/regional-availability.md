@@ -4,26 +4,25 @@ description: Uzziniet vairāk par reģionu un ģeogrāfisko atrašanās vietām,
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483306"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228115"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Reģionālā pieejamība Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Iesaistes ieskati, Dynamics 365 Customer Insights opcija, kas pakāpeniski sniedz vairāk reģionu, kuros klienti var saglabāt savus datus. Administratori var izvēlēties reģionu, [izveidojot jaunu vidi](manage-environments-workspaces.md#create-an-environment). 
+Iesaistes ieskati, Dynamics 365 Customer Insights opcija, kas pakāpeniski sniedz vairāk reģionu, kuros klienti var saglabāt savus datus. Administratori var izvēlēties reģionu, [izveidojot jaunu vidi](create-new-environment.md). 
 
-Ja organizācija pirmo reizi iestata iesaistes ieskatus saistībā ar piesaisti, šī organizācija izvēlas reģionu, izmantojot [vadīto pirmās palaišanas pieredzi](quickstart.md). Vēlāk ikviena jauna vide ļauj izvēlēties reģionu, kurā tiks glabāti dati.
+Ja organizācija pirmo reizi iestata iesaistes ieskatus saistībā ar piesaisti, šī organizācija izvēlas reģionu, izmantojot [vadīto pirmās palaišanas pieredzi](quickstart.md). Vēlāk ikviena jauna vide jums ļauj izvēlēties reģionu, kurā tiks glabāti dati.
 
-Pašlaik ir divas ģeogrāfiskās atrašanās vietas: ASV un Eiropa. Lietotāji var izvēlēties starp ASV rietumu reģionu un Ziemeļeiropas reģionu.
+Pašlaik mēs atbalstām ASV un Eiropas ģeogrāfijas. Lietotāji var izvēlēties kādu no šiem apgabaliem: ASV rietumu daļa, ASV austrumu daļa, Ziemeļeiropa un Rietumeiropa.
 
 Organizācija var uzturēt vidi dažādos reģionos. Piemēram, Vide A glabā datus ASV rietumos un B vide - Eiropas ziemeļos.
 

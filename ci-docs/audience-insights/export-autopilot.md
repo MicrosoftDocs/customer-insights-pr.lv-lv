@@ -1,42 +1,48 @@
 ---
 title: Customer Insights datu eksportēšana uz Autopilot
-description: Uzziniet, kā konfigurēt savienojumu ar Autopilot.
-ms.date: 12/08/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Autopilot.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 7a7a67a52fcf39da8d50bd95817d25470fc90b6f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269247"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227675"
 ---
-# <a name="connector-for-autopilot-preview"></a>Savienotājs ar Autopilot (priekšskatījums)
+# <a name="export-segments-to-autopilot-preview"></a>Segmentu eksportēšana uz Autopilot (priekšskatījums)
 
 Eksportējiet vienoto klientu profilu segmentus uz Autopilot un izmantojiet tos e-pasta mārketingam lietojumprogrammā Autopilot. 
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
 -   Jums ir [Autopilot konts](https://www.autopilothq.com/) un atbilstošie administratora akreditācijas dati.
 -   Jums ir [konfigurēti segmenti](segments.md) auditorijas ieskatos.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
-## <a name="connect-to-autopilot"></a>Izveidot savienojumu ar Autopilot
+## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-1. Dodieties uz sadaļu **Administrators** > **Eksportēšanas galamērķi**.
+- Programmā Autopilot var eksportēt līdz pat 100000 klientu profilu.
+- Eksportēšana uz Autopilot ir ierobežota līdz segmentiem.
+- Līdz pat 100000 klientu profilu eksportēšana uz Autopilot var aizņemt dažas stundas. 
+- To klientu profilu skaits, kurus varat eksportēt uz Autopilot, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Autopilot.
 
-1. Sadaļā **Autopilot** atlasiet vienumu **Iestatīt**.
+## <a name="set-up-connection-to-autopilot"></a>Savienojuma ar Autopilot iestatīšana
 
-1. Piešķiriet eksportēšanas galamērķim atpazīstamu nosaukumu laukā **Parādāmais nosaukums**.
+1. Dodieties uz **Administrators** > **Savienojumi**.
 
-   :::image type="content" source="media/export-autopilot.PNG" alt-text="Konfigurēšanas rūts Autopilot savienojumam.":::
+1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Autopilot**, lai konfigurētu savienojumu.
 
-1. Ievadiet savu **Autopilot API atslēgu** [Autopilot API atslēga](https://autopilot.docs.apiary.io/#).
+1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
+
+1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Ievadiet savu [Autopilot API atslēgu](https://autopilot.docs.apiary.io/#).
 
 1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
 
@@ -44,26 +50,27 @@ Eksportējiet vienoto klientu profilu segmentus uz Autopilot un izmantojiet tos 
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
-1. Lai konfigurētu eksportēšanu, atlasiet **Tālāk**.
+1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**.
 
-## <a name="configure-the-connector"></a>Savienotāja konfigurēšana
+## <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**.
+Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+
+1. Pārejiet uz **Dati** > **Eksportēšana**.
+
+1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Autopilot. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Mēs **stingri iesakām eksportēt kopumā ne vairāk kā 100 000 klientu profilu** programmā Autopilot. 
 
 1. Atlasiet vienumu **Saglabāt**.
 
-## <a name="export-the-data"></a>Datu eksportēšana
+Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Datus var [eksportēt pēc pieprasījuma](export-destinations.md). Eksportēšana arī tiks palaista ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Zināmie ierobežojumi
-
-- Kopsummā var eksportēt līdz 100 000 profilu uz Autopilot.
-- Eksportēšana uz Autopilot ir ierobežota līdz segmentiem.
-- 100 000 profilu eksportēšana uz Autopilot var aizņemt dažas stundas. 
-- To profilu skaits, ko var eksportēt uz Autopilot, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar Autopilot.
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

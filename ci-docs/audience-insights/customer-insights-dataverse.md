@@ -1,20 +1,22 @@
 ---
 title: Customer Insights dati programmā Microsoft Dataverse
 description: Izmantojiet Customer Insights entītijas kā tabulas programmā Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645227"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355438"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Dažas izvades entītijas no auditorijas ieskatiem ir pieejamas kā tabulas prog
 - [CustomerMeasure](#customermeasure)
 - [Bagātināšana](#enrichment)
 - [Prognoze](#prediction)
+- [Dalība segmentā](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -120,4 +123,17 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 | Modelis                | Virkne      | Modeļa nosaukums                                                |
 | Vērtības               | JSON virkne | Modeļa radītais atribūtu saraksts |
 | msdynci_predictionid | GUID        | Noteicošais GUID, kas izveidots no msdynci_identifier | 
-| msdynci_identifier   | Virkne      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Dalība segmentā
+
+Šajā tabulā ir ietverta klientu profilu segmenta dalības informācija.
+
+| Column        | Tipi | Apraksts                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Klienta profila ID        |
+| SegmentProvider      | String       | Lietotne, kas publicē segmentus. Noklusējums: auditorijas ieskati         |
+| SegmentMembershipType | String       | Šī segmenta dalības ieraksta debitora tips. Atbalsta vairākus veidus, piemēram, Klients, Kontaktpersona vai Konts. Noklusējums: debitors  |
+| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kurā klienta profils ir      |
+| msdynci_identifier  | String   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministisks GUID, kas ģenerēts no`msdynci_identifier`          |

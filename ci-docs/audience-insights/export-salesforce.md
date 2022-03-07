@@ -1,20 +1,19 @@
 ---
 title: Customer Insights datu eksportēšana uz Salesforce Marketing Cloud
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
-ms.translationtype: HT
+ms.openlocfilehash: 17a608a64433cdc395e0b503a42b6290db5c39ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314642"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230213"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Segmentu un citu datu eksportēšana uz Salesforce Marketing Cloud (priekšskatījums)
 
@@ -23,11 +22,6 @@ Izmantojiet klientu datus programmā Salesforce Marketing Cloud, eksportējot to
 ## <a name="prerequisites-for-connection"></a>Savienojuma priekšnosacījumi
 
 - SFTP viesošanas pakalpojuma pieejamība un attiecīgie administratora akreditācijas dati. [Kā iestatīt SFTP atrašanās vietas programmai Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Zināmie ierobežojumi
-
-- Eksportēšanas izpildlaiks ir atkarīgs no sistēmas veiktspējas. Kā minimālu servera konfigurēšanu ieteicams izmantot divus procesora kodolus un 1 Gb atmiņu. 
-- Eksportējot entītijas ar līdz pat 100 miljoniem klientu profilu, var paiet 90 minūtes, izmantojot ieteicamo minimālo konfigurāciju. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Savienojuma iestatīšana ar Salesforce Marketing Cloud
 

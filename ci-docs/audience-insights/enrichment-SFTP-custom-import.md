@@ -3,18 +3,17 @@ title: Bagātināšana ar SFTP pielāgoto importu
 description: Vispārīga informācija par SFTP pielāgoto importēšanu.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304659"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229647"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Bagātiniet klientu profilus ar pielāgotiem datiem (priekšskatījums)
 
@@ -45,6 +44,8 @@ Lai konfigurētu SFTP pielāgoto importēšanu, ir jāatbilst šādiem priekšno
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrānuzņēmums, ievadot datu atrašanās vietu.":::
 
+1. Atlasiet vienumu **Tālāk** un izvēlieties klientu datu kopu. Tas var būt vai nu visi klientu profili, vai segments.
+
 1. Atlasiet **Tālāk** un norādiet bagātināmo datu nosaukumu un izvades entitījas nosaukumu. 
 
 1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
@@ -64,7 +65,7 @@ Lai konfigurētu savienojumus, jums ir jābūt administratoram. Konfigurējot ba
 1. Kad pārbaude ir pabeigta, savienojumu var saglabāt, atlasot **Saglabāt**.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian savienojuma konfigurācijas lapa](media/enrichment-SFTP-connection.png "Experian savienojuma konfigurācijas lapa")
+   > ![Experian savienojuma konfigurācijas lapa.](media/enrichment-SFTP-connection.png "Experian savienojuma konfigurācijas lapa")
 
 
 ## <a name="defining-field-mappings"></a>Notiek lauku kartējumu ģenerēšana 
@@ -123,6 +124,6 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

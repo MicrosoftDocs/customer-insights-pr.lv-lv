@@ -1,21 +1,23 @@
 ---
 title: Programmā Customer Insights izveidotie segmenti
 description: Darbības, kas jāveic, lai izveidotu vidi, izmantojot licencētu Dynamics 365 Customer Insights abonementu.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088122"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354104"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Izveidot vidi auditorijas ieskatos
 
@@ -76,12 +78,14 @@ Ja izveidojat vairākas Customer Insights vides un vēlaties saglabāt izvades e
    
 Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi.
 
-Lai izmantotu [standarta prognožu modeļus](predictions-overview.md#out-of-box-models), konfigurējiet datu kopīgošanu ar Dataverse. Varat arī iespējot datu inaktivizēšanu no lokāls avotiem, norādot Microsoft Dataverse jūsu organizācijas administrējamo vides URL. Atlasiet opciju **Iespējot datu kopīgošanu**, lai kopīgotu Customer Insights izvades datus ar programmas Dataverse pārvaldīto Data Lake.
+Nodrošiniet savu Microsoft Dataverse vidi, lai koplietotu datus (profilus un ieskatus) ar biznesa lietojumprogrammām, kuru pamatā Dataverse ir, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas programmā Power Apps. Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs jums to ienodrošināsim.
+
+Savienojuma izveide ar vidi Dataverse ļauj arī uzņemt datus no lokāls datu avotiem, [izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources). Varat arī izmantot [gatavus prognoze modeļus](predictions-overview.md?tabs=b2c#out-of-box-models), izveidojot savienojumu ar Dataverse vidi.
 
 > [!IMPORTANT]
 > Customer Insights un Dataverse tiem jābūt vienā reģionā, lai iespējotu datu koplietošanu.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātiski iespējotu neto jaunām instancēm.":::
 
 > [!NOTE]
 > Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:

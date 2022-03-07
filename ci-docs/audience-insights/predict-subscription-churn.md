@@ -3,20 +3,19 @@ title: Abonementa čupēšana prognoze (satur video)
 description: Paredziet, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967710"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354703"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Abonēšanas zuduma prognoze (priekšskatījums)
+# <a name="subscription-churn-prediction"></a>Abonementu zuduma prognoze
 
 Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus. Jūs varat izveidot jaunas abonēšanas zuduma prognozes lapā **Informācija** > **Prognozes**. Atlasiet **Manas prognozes**, lai skatītu citas jūsu izveidotās prognozes.
 
@@ -63,7 +62,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 ## <a name="create-a-subscription-churn-prediction"></a>Izveidot abonēšanas zuduma prognozi
 
 1. Sadaļā Auditorijas ieskati ejiet uz **Informācija** > **Prognozes**.
-1. Atlasiet elementu **Abonementa zuduma modelis (priekšskatījums)** un atlasiet opciju **Lietot šo modeli**.
+1. Atlasiet **abonēšanas čupa modeļa** elementu un atlasiet **Izmantot šo modeli**.
    > [!div class="mx-imgBorder"]
    > ![Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli.](media/subscription-churn-usethismodel.PNG "Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli")
 
@@ -77,7 +76,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Parasti šim periodam patīk biznesa darbības, piemēram, piedāvājumi vai citi mārketinga pasākumi, kas cenšas nepieļaut klientu zudumu.
 1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām. Atlasiet **Tālāk**, lai turpinātu
    >[!TIP]
-   > Jebkurā laikā varat atlasīt **Saglabāt** melnrakstu, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+   > Jebkurā laikā varat atlasīt **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
 ### <a name="add-required-data"></a>Nepieciešamo datu pievienošana
 

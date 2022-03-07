@@ -3,20 +3,24 @@ title: Klienta ilgtermiņa vērtības (CLV) prognoze
 description: Prognozējiet potenciālos ieņēmumus aktīvajiem klientiem nākotnē.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035378"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355798"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Klienta ilgtermiņa vērtības (CLV) prognoze (priekšskatījums)
+# <a name="customer-lifetime-value-clv-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
 Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis līdzeklis var palīdzēt sasniegt dažādus mērķus: 
 - Noteikt ļoti vērtīgus klientus un apstrādāt šo ieskatu
@@ -65,7 +69,7 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
     - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem   
 
 > [!NOTE]
-> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkumu/transakciju entitījas, apvienojiet tās risinājumā Power Query, pirms veicat datu uzņemšanu.
+> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas/darījumu entītijas, varat tās Power Query apvienot pirms datu norīšanas.
 > - Taču papildu klientu darbības datiem (neobligāti) var pievienot tik klientu darbību entītiju, cik vēlaties, lai tās izskatītu pēc modeļa.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
@@ -74,7 +78,7 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
 
 1. Atlasiet elementu **Klienta ilgtermiņa** vērtība un atlasiet vienumu **Lietot modeli**. 
 
-1. Rūtī **Klienta ilgtermiņa vērtība** (priekšskatījums) atlasiet **Sākt darbu**.
+1. Rūtī **Klienta mūža vērtība** atlasiet **Sākt darbu**.
 
 1. **Nosauciet šo modeli** un **Izvades entītijas nosaukumu**, lai nošķirtu tos no citiem modeļiem vai entītijām.
 

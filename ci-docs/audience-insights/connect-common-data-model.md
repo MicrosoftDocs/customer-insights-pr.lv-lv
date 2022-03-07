@@ -2,19 +2,23 @@
 title: Common Data Model datu savienošana ar Azure Data Lake kontu
 description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
 ms.date: 01/25/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
-ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "8027061"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354936"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 

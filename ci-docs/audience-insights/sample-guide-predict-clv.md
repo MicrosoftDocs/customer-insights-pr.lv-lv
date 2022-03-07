@@ -3,24 +3,23 @@ title: Debitora darbmūža prognozes parauga rokasgrāmata
 description: Izmantojiet šo parauga rokasgrāmatu, lai izmēģinātu klienta dzīves prognozes modelim.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306358"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354840"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Debitora darbmūža prognozes (CLV) parauga rokasgrāmata
 
 Šajā rokasgrāmatā jums tiks izskaidrots klienta mūža vērtības (CLV) pilna piemēra prognoze, izmantojot datu paraugus programmā Customer Insights.
 
-## <a name="scenario"></a>Scenārijs
+## <a name="scenario"></a>Situācija
 
 Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus. Viņi pārdod produktus, izmantojot savu Contoso Coffee vietni. Uzņēmums vēlas saprast vērtību (ieņēmumus), ko viņu klienti var radīt nākamo 12 mēnešu laikā. Zinot savu klientu paredzamo vērtību nākamajos 12 mēnešos, viņi varēs virzīt savus mārketinga centienus uz augstvērtības klientiem.
 
@@ -31,7 +30,7 @@ Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automāt
 
 ## <a name="task-1---ingest-data"></a>1.uzdevums - Datu uzņemšana
 
-Pārskatiet rakstus [par datu ietveršanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā.
+Pārskatiet rakstus [par datu norīšanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Uzņemt klientu datus no e-komercijas platformas
 
@@ -164,7 +163,7 @@ Pēc datu ietveršanas mēs sākam datu apvienošanas procesu, lai izveidotu vie
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. uzdevums - konfigurēt debitora mūža vērtību prognoze
 
-Tagad, izmantojot vienotos klientu profilus, mēs tagad varam izmantot klienta darbmūža prognozi. Detalizētas darbības skatiet sadaļā [Klienta Darbmūža vērtība prognoze (priekšskatījums)](predict-customer-lifetime-value.md).
+Tagad, izmantojot vienotos klientu profilus, mēs tagad varam izmantot klienta darbmūža prognozi. Detalizētas darbības skatiet [prognoze Klienta kalpošanas laikā](predict-customer-lifetime-value.md).
 
 1. Dodieties uz **Informācija**  > **Prognozes** un atlasiet **Klienta darbmūža vērtības modelis**.
 

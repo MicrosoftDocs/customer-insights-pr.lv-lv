@@ -1,32 +1,37 @@
 ---
 title: Auditorijas ieskatu segmenti
 description: Segmentu pārskats un to izveide un pārvaldība.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617384"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355992"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
 Segmenti jums ļauj sagrupēt klientus, pamatojoties uz demogrāfiskajiem, transakciju vai uzvedības atribūtiem. Lai sasniegtu uzņēmuma mērķus, var izmantot segmentus, lai mērķētu reklāmas kampaņas, pārdošanas darbības un klientu atbalsta darbības.
 
-Klientu profili, kas atbilst segmenta definīcijas filtriem, tiek saukti par segmenta *dalībniekiem*. Ir [spēkā noteikti pakalpojuma ierobežojumi](service-limits.md).
+Klientu profili, kas atbilst segmenta definīcijas filtriem, tiek saukti par segmenta *dalībniekiem*. Ir [spēkā noteikti pakalpojuma ierobežojumi](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-new-segment"></a>Izveidot jaunu segmentu
 
 Ir vairāki jauna segmenta izveides veidi: 
 
-# <a name="individual-customers-b2c"></a>[Atsevišķi klienti (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
 - Sarežģīts segments ar segmentu veidotāju: [Izveidojiet savu](segment-builder.md#create-a-new-segment) 
 - Vienkārši segmenti ar vienu operatoru: [ātrais segments](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Ir vairāki jauna segmenta izveides veidi:
 - AI sekmēti ierosinājumi, kas balstīti uz pasākumiem vai atribūtiem: [ieteiktie segmenti pasākumu uzlabošanai](suggested-segments.md) 
 - Uz darbībām balstīti ieteikumi: [ieteiktie segmenti, pamatojoties uz klientu darbību](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
 - Sarežģīts segments ar segmentu veidotāju: [Izveidojiet savu](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
 
 Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā **Segmenti**, vai varat atsvaidzināt vienu vai vairākus segmentus, tos atlasot un izvēloties opciju **Atsvaidzināt** no piedāvātajām opcijām. Vai arī varat konfigurēt periodisku atsvaidzināšanu sadaļā **Administrators** > **Sistēma** > **Grafiks**.
 
-> [!TIP]
-> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas ar uzdevumu saistītas kļūdas un brīdinājumus.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Segmentu eksportēšana
 
@@ -106,4 +110,5 @@ Apakšējā daļa ietver segmenta elementu sarakstu.
 >
 >Saraksts ir atbilstošo segmenta dalībnieku priekšskatījums un parāda jūsu segmenta pirmos 100 ierakstus, lai to varētu ātri novērtēt un vajadzības gadījumā pārskatīt tā definīcijas. Lai skatītu visus atbilstošos ierakstus, ir [jāeksportē šis segments](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

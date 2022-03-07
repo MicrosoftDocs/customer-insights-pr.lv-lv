@@ -1,20 +1,19 @@
 ---
 title: Power Automate savienotājs | Microsoft Docs
-description: Izveidojiet plūsmas Microsoft Power Automate no Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
-ms.service: customer-insights
+description: Plūsmu veidošana programmā Microsoft Power Automate no Dynamics 365 Customer Insights.
+ms.date: 06/24/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406320"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226723"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate savienotājs (priekšskatījums)
 
@@ -22,28 +21,35 @@ Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā u
 
 ## <a name="power-automate-triggers"></a>Power Automate trigeri
 
-Var izmantot dažādus trigerus, kas ļauj izveidot plūsmas, lai automatizētu atkārtojošos uzdevumus, piemēram, paziņojumus vai papildu darbības. 
+Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana. 
 
 - Trigeris, kad neizdodas atsvaidzināt datu avotu. 
 - Trigeris, kad izdodas atsvaidzināt datu avotu.
 - Trigeris, kad slieksnis ir šķērsots segmentā. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
-- Trigeris, kad biznesa pasākumā tiek pārsniegts slieksnis. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
-- Trigeris, kad tiek pabeigta pilnīga (datu avotu, segmentu, pasākumu,...) atsvaidzināšana.
+- Trigeris, kad biznesa pasākumā tiek pārsniegts slieksnis. Tiek atbalstīti tikai uzņēmuma mērījumi bez dimensijas. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
+- Trigeris, kad tiek pabeigta pilnīga (datu avotu, segmentu, pasākumu, ...) atsvaidzināšana.
 - Trigeris, kad ir pabeigta apvienošanas procesa (karte, atbilstība, sapludināšana) atsvaidzināšana.
 
-[Konfigurējiet trigerus programmā Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Konfigurējiet trigerus programmā Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Power Automate darbības
-Power Automate savienotājs nodrošina citas darbības, izņemot pieejamos trigerus. Papildinformāciju skatiet [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Power Automate plūsmas izveide no auditorijas ieskatiem
+Power Automate savienotājs nodrošina citas darbības, izņemot pieejamos trigerus. Papildinformāciju skatiet [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
-1. Sadaļā Auditorijas ieskati skatiet **Administrators** > **Sistēma**.
+## <a name="create-a-power-automate-flow"></a>Izveidot Power Automate plūsmu
 
-1. Lapā **Sistēma** atlasiet cilni **Statuss**.
+1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.
 
-1. Sadaļā **Datu avoti** atlasiet **Plūsmas** un nolaižamajā sarakstā atlasiet **Izveidot plūsmu**.
-   > [!div class="mx-imgBorder"]
-   > ![Power Automate savienotājs, kas rāda plūsmas darbības izveidošanu](media/power-automate-connector-create-flow.png "Power Automate savienotājs, kas rāda plūsmas izveides darbību")
+1. Elementā **Power Automate** atlasiet **Iestatīt**.
 
-1. Sadaļā Power Automate atlasiet vienu no pieejamajiem trigeriem, lai izveidotu vēlamo plūsmu. Ja veidojat savu pirmo plūsmu, vispirms ir jāautentificējas, izmantojot Power Automate savienotāju.
+1. Customer Insights savienotājs (priekšskatījums) atveras programmā Power Automate. **Pierakstieties risinājumā** Power Automate.
+
+1. Izvēlieties kādu no pieejamajiem trigeriem un pievienojiet jaunajai plūsmai papildu soļus. Papildinformāciju skatiet [Mākoņa plūsmas izveide programmā Power Automate](/power-automate/get-started-logic-flow).
+
+Plūsmu izmantošanas piemēri: 
+- Publicē ziņojumu Microsoft Teams kanālā, ja neizdodas datu avota atsvaidzināšana. 
+- Nosūtiet e-pasta ziņojumu datu īpašniekiem, kad tiek pārsvītrota segmenta sliekšņa vērtība.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

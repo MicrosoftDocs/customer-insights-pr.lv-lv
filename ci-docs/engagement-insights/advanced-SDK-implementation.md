@@ -4,17 +4,16 @@ description: Papildu scenāriji, kas jāņem vērā, izmantojot jūsu tīmekļa 
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036337"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227207"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Papildu tīmekļa SDK dokumentācija
 
@@ -33,20 +32,20 @@ Objektam `IUser` ir šādi virknes rekvizīti:
 - **authType**: autentifikācijas tips, kas tiek izmantots, lai iegūtu autentificēto lietotāja ID.
 - **name**: lietotāja vārds.
 - **email**: lietotāja e-pasta adrese.
-    
-Šajā piemērā redzams koda fragments, kas nosūta lietotāja informāciju. Ja redzat funkcijas, kas apzīmētas ar *, aizstājiet tās ar to, ka ieviešat šo vērtību izsaukšanu:  
+
+Šajā piemērā redzams koda fragments, kas nosūta lietotāja informāciju. Ja redzat funkcijas, pirms kuras ir zvaigznītes * simbols, aizstājiet šo funkciju ar jūsu pielāgoto ieviešanu:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-Varat arī norādīt lietotāja informāciju, izsaucot `setUser(user: IUser)` API SDK. Telemetrija, kas tiks nosūtīta pēc `setUser API` zvanīšanas, satur lietotāja informāciju.
+Varat arī norādīt lietotāja informāciju, izsaucot `setUser(user: IUser)` API. Telemetrija, kas tiks nosūtīta pēc `setUser` API zvanīšanas, satur lietotāja informāciju.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Pielāgotu rekvizītu pievienošana katram notikumam
 
-SDK ļauj norādīt pielāgotus rekvizītus, ko var nosūtīt kopā ar katru notikumu. Pielāgotos rekvizītus var norādīt kā objektu, kas ietver galveno vērtību pārus (vērtība var būt `string | number | boolean` tips). Objektu var pievienot rekvizītā, ko sauc par `props`, līdzīgi kā, `src`, `name` un `cfg` koda fragmenta konfigurācijā. 
+SDK ļauj norādīt pielāgotus rekvizītus, ko var nosūtīt kopā ar katru notikumu. Pielāgotos rekvizītus var norādīt kā objektu, kas ietver galveno vērtību pārus (vērtība var būt `string | number | boolean` tips). Objektu var pievienot rekvizītā, ko sauc par `props`, līdzīgi kā `src`, `name` un `cfg` koda fragmenta konfigurācijā.
 
 Šajā piemērā redzams koda fragments, kas nosūta pielāgotus rekvizītus:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-Varat norādīt arī pielāgotus rekvizītus atsevišķi, izsaucot `setProperty(name: string, value: string | number | boolean)` API SDK.
+Varat arī individuāli norādīt pielāgotos rekvizītus, izsaucot `setProperty(name: string, value: string | number | boolean)` API.
 
 ## <a name="sending-custom-events"></a>Pielāgoto notikumu sūtīšana
 

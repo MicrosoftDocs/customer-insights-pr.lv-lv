@@ -3,26 +3,28 @@ title: Abonementa zudumu prognozes parauga ceļvedis
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta abonementa zudumu prognozes modeli.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306312"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355622"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonementa zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
+# <a name="subscription-churn-prediction-sample-guide"></a>Abonementa zudumu prognozes parauga ceļvedis
 
 Mēs jums paskaidrosim, kā izbeigt parakstīšanās zudumu prognozi, izmantojot tālāk sniegto datu paraugu. 
 
 ## <a name="scenario"></a>Scenārijs
 
-Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus, kurus viņi pārdod, izmantojot savu Contoso Coffee vietni. Viņi nesen uzsāka abonēšanas uzņēmumu, lai viņu klienti regulāri saņemtu kafiju. Viņu mērķis ir izprast, kuri abonēšanas klienti tuvāko mēnešu laikā var atcelt savu abonementu. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
+Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. Viņi nesen uzsāka abonēšanas uzņēmumu, lai viņu klienti regulāri saņemtu kafiju. Viņu mērķis ir izprast, kuri abonēšanas klienti tuvāko mēnešu laikā var atcelt savu abonementu. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -31,7 +33,7 @@ Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automāt
 
 ## <a name="task-1---ingest-data"></a>1.uzdevums - Datu uzņemšana
 
-Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu importēšanu, izmantojot](connect-power-query.md) tieši Power Query savienotājus. Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā. 
+Pārskatiet rakstus [par datu norīšanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query tieši savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Uzņemt klientu datus no e-komercijas platformas
 
@@ -168,7 +170,7 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>3.uzdevums — konfigurēt abonēšanas zudumu prognozi
 
-Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudumu prognozi. Detalizētas darbības skatiet rakstu [Abonementa zudumu prognoze (priekšskatījums)](predict-subscription-churn.md). 
+Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudumu prognozi. Detalizētas darbības skatiet [rakstā Abonements, prognoze](predict-subscription-churn.md). 
 
 1. Atveriet **Informācija** > **Atklāt** un atlasiet, lai izmantotu **Klientu zudumu modeli**.
 

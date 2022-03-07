@@ -3,26 +3,25 @@ title: Transakciju zudumu prognozes parauga ceļvedis
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta transakciju zudumu prognozes modeli.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029454"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354610"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Transakciju zudumu parauga prognozes parauga ceļvedis (priekšskatījums)
+# <a name="transactional-churn-prediction-sample-guide"></a>Transakciju zudumu prognozes parauga ceļvedis
 
-Mēs jums paskaidrosim, kā izbeigt transakciju zudumu prognozi programmā Customer Insights, izmantojot tālāk sniegtos datus. Visi šajā ceļvedī izmantotie dati nav reāli klientu dati; tie ietilpst Contoso datu kopas *demonstrācijas* vidē, kas atrodas jūsu Customer Insights abonementā.
+Mēs jums paskaidrosim, kā izbeigt transakciju zudumu prognozi programmā Customer Insights, izmantojot tālāk sniegtos datus. Visi šajā rokasgrāmatā izmantotie dati nav īsti klientu dati, un tie ir daļa no Contoso datu kopas, kas ir atrodama vidē *Demo* jūsu Customer Insights abonementā.
 
 ## <a name="scenario"></a>Scenārijs
 
-Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus, kurus viņi pārdod, izmantojot savu Contoso Coffee vietni. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
+Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -31,7 +30,7 @@ Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automāt
 
 ## <a name="task-1---ingest-data"></a>1.uzdevums - Datu uzņemšana
 
-Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu importēšanu, izmantojot](connect-power-query.md) tieši Power Query savienotājus. Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā. 
+Pārskatiet rakstus [par datu norīšanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query tieši savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Uzņemt klientu datus no e-komercijas platformas
 
@@ -149,7 +148,7 @@ Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** p
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>3.uzdevums — konfigurēt transakciju zudumu prognozi
 
-Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudumu prognozi. Detalizētas darbības skatiet rakstu [Abonementa zudumu prognoze (priekšskatījums)](predict-subscription-churn.md). 
+Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudumu prognozi. Detalizētas darbības skatiet [rakstā Abonements, prognoze](predict-subscription-churn.md). 
 
 1. Atveriet **Informācija** > **Atklāt** un atlasiet, lai izmantotu **Klientu zudumu modeli**.
 

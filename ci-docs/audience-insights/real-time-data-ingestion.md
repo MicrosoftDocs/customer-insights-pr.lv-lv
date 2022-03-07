@@ -2,19 +2,21 @@
 title: Reāllaika datu uzņemšana un ierobežojumi
 description: Vispārīga informācija par reāllaika iespējām rīkā auditorijas ieskati.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689184"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355484"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
@@ -54,7 +56,7 @@ Reāllaika API ļauj publicēt jaunu darbību no avota sistēmas (atsevišķa av
 
 Ir divi paņēmieni, kā izveidot savienojumu ar reāllaika API.
 
-- [netieši](#connect-via-the-dynamics-365-customer-insights-connector), izmantojot [Dynamics 365 Customer Insights savienotāju](https://docs.microsoft.com/connectors/customerinsights/)
+- [netieši](#connect-via-the-dynamics-365-customer-insights-connector), izmantojot [Dynamics 365 Customer Insights savienotāju](/connectors/customerinsights/)
 - [tieši](#connect-directly-to-the-real-time-api), ar kodu
 
 Abiem veidiem ir šādi priekšnosacījumi:
@@ -66,13 +68,13 @@ Abiem veidiem ir šādi priekšnosacījumi:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Pieslēdzieties, izmantojot Dynamics 365 Customer Insights savienotāju
 
-Reāllaika API var uzņemt datus no īpaša Power Platform savienotāja, [Dynamics 365 Customer Insights savienotāja ](https://docs.microsoft.com/connectors/customerinsights/) bez vajadzības rakstīt un izvietot kodu.    
-Savienotājs var veikt tādas pašas reāllaika darbības kā API. Premium savienotājiem ir nepieciešama derīga licence. Papildinformāciju skatiet sadaļā [Power Apps un Power Automate licencēšanas BUJ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Reāllaika API var uzņemt datus no īpaša Power Platform savienotāja, [Dynamics 365 Customer Insights savienotāja ](/connectors/customerinsights/) bez vajadzības rakstīt un izvietot kodu.    
+Savienotājs var veikt tādas pašas reāllaika darbības kā API. Premium savienotājiem ir nepieciešama derīga licence. Papildinformāciju skatiet sadaļā [Power Apps un Power Automate licencēšanas BUJ](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps un/vai Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps un/vai Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Papildinformāciju par plūsmu izveidi skatiet [Power Automate dokumentācijā](https://docs.microsoft.com/power-automate/).
+Papildinformāciju par plūsmu izveidi skatiet [Power Automate dokumentācijā](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Tieša savienojuma izveide ar reāllaika API
 
@@ -83,6 +85,7 @@ Detalizēta informācija par šo API, ieskaitot parametrus un atbildes, ir atrod
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Reāllaika lietojuma izprašana, izmantojot telemetriju
 
-Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat [piekļūt reāllaika telemetrijai](system.md#api-usage-tab), atverot **Administrators** > **Sistēma** > **API lietojums**. Tabulā **Darbības** API darbību rindās, kas izmanto reāllaika metodes, ir poga, lai skatītu reāllaika API izmantošanu. Poga tiek vizualizēta ar tālskati. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.
+Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat piekļūt [reāllaika telemetrijai](system.md#api-usage-tab). 
 
-Lietojiet **Grupēt pēc** atlasītāju, lai izvēlētos, kā vislabāk attēlot reāllaika mijiedarbības laika skalā, sākot no pēdējām 24 stundām līdz pēdējām 30 dienām. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

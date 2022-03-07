@@ -1,24 +1,26 @@
 ---
 title: Customer Insights datu eksportēšana uz Google Ads
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Google Ads.
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
-ms.translationtype: HT
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604286"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227019"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentu eksportēšana uz Google Ads (priekšskatījums)
 
 Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakstu un izmantojiet tos, lai reklāma tiktu rādīta Google meklēšanā, Gmail, YouTube un Google Display Network. 
+
+> [!IMPORTANT]
+> Pašlaik jūs varat izveidot jaunu savienojumu un eksportēt datus uz Google Ads tikai tad, ja jums jau ir apstiprināts Google Ads izstrādātāja marķieris. Politikas izmaiņu dēļ mēs drīz atjaunināsim Google Ads eksportēšanu un nodrošināsim eksportēšanas opciju, kurai nebūs nepieciešams izstrādātāja marķieris, lai nodrošinātu jūsu pieredzes turpināšanu un vienkāršotu eksportēšanu uz Google Ads. Lai atvieglotu pāreju uz jauno eksportēšanas opciju, ieteicams neiestatīt vairāk savienojumu ar Google Ads.
 
 ## <a name="prerequisites-for-connection"></a>Savienojuma priekšnosacījumi
 
@@ -32,9 +34,9 @@ Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakst
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 000 000 profilu, eksportējot uz Google Ads.
+- Līdz 1 miljoniem klientu profilu vienai eksportēšanai uz Google Ads.
 - Eksportēšana uz Google Ads ir ierobežota līdz segmentiem.
-- Segmentu eksportēšanai kopā ar 1 000 000 profilu var būt nepieciešamas 5 minūtes, jo pastāv ierobežojumi no pakalpojuma sniedzēja puses. 
+- Eksportējot segmentus, kuru kopējais klientu profilu skaits ir 1 miljons, pakalpojumu sniedzēju puses ierobežojumu dēļ var ilgt 5 minūtes. 
 - Google Ads savienošana var aizņemt līdz 48 stundām.
 
 ## <a name="set-up-connection-to-google-ads"></a>Savienojuma ar Google Ads iestatīšana
@@ -71,7 +73,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakst
 
 1. Ievadiet savas **[Google reklāmu auditorijas ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** un atlasiet opciju **Izveidot savienojumu**, lai inicializētu savienojumu ar Google Ads.
 
-1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Kopsummā varat eksportēt līdz 1 000 000 klientu profilu uz Google Ads.
 

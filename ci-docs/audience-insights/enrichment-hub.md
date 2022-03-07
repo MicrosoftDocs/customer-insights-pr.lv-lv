@@ -1,21 +1,25 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673008"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372728"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -37,14 +41,18 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+- [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
+- [Identitāti](enrichment-liveramp.md) nodrošina LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
+- [Microsoft nodrošinātie uzlabotie uzņēmuma dati](enrichment-enhanced-company-data.md)
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
+- [Microsoft nodrošinātie konta iesaistes dati](enrichment-office.md)
 
 ---
 
@@ -73,6 +81,10 @@ Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connectio
 ## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
 
 Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai noteiktam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumus un pašreizējo lietojumu var aplūkot lapā **Bagātināšana**.
+
+## <a name="enrich-data-sources-before-unification"></a>Bagātināt datu avotus pirms apvienošanas
+
+Jūs varat bagātināt savus klientu datus pirms datu apvienošanas, lai palīdzētu uzlabot datu atbilstības kvalitāti. Plašāku informāciju skatiet [datu avots bagātināšana](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 

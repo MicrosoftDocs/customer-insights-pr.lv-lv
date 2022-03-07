@@ -3,18 +3,20 @@ title: Savienojumi ar citiem pakalpojumiem no Customer Insights.
 description: Kopīgojiet datus ar citiem pakalpojumiem.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304981"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354393"
 ---
 # <a name="connections-preview-overview"></a>Savienojumu (priekšskatījums) pārskats
 
@@ -47,6 +49,7 @@ Lai pievienotu savienojumu, ir jābūt [administratora atļaujām](permissions.m
 1. Rūtī **Iestatīt savienojumu** norādiet nepieciešamo informāciju. 
    1. **Parādāmais nosaukums** un nosaukuma veids raksturo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
    1. Precīzie lauki ir atkarīgi no tā, kādam pakalpojuma pieslēdzaties. Varat sīkāk uzzināt par konkrēto savienojuma veidu rakstā par mērķa pakalpojumu.
+   1. Ja jūs [izmantojat savu Key Vault](use-azure-key-vault.md), lai glabātu slepenu informāciju, aktivizējiet **Izmantot Key Vault** un sarakstā izvēlieties slepeno informāciju.
 
 1. Lai izveidotu savienojumu, atlasiet **Saglabāt**.
 
@@ -93,3 +96,6 @@ Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās a
 
 1. Lai apstiprinātu dzēšanu, atlasiet **Noņemt**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Savienojumu izveide ar slepeno informāciju, ko pārvalda jūsu Key Vault
+
+Dažiem savienojumiem ir nepieciešama slepenas informācijas lietošana, piemēram, API atslēgas vai paroles. Daži savienojumi atbalsta slepeno informāciju, kas tiek glabāta jūsu Key Vault krātuvē. Uzziniet vairāk par atbalstītajiem savienojumiem un to, kā iestatīt [savu Key Vault auditorijas ieskatiem](use-azure-key-vault.md).

@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645319"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229086"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Jaunas darbvietas izveide un dalībnieku pievienošana
 
@@ -26,17 +25,17 @@ Veidojot darbvietu, atlasiet to datu tipu, uz kuriem vēlaties koncentrēties. E
 
 ## <a name="create-a-new-workspace"></a>Jaunas darbvietas izveide
 
-Darbvietas izveides process ietver *vides* iestatīšanu darbvietas organizēšanai. Vide ir vieta, kurā var ietvert vienu vai vairākas darbvietas. Vidi varat izmantot, lai pārvaldītu darbvietas un savienojumus ar Customer Insights auditorijas ieskatu iespējām.
+Darbvietas izveides process ietver *vides* iestatīšanu darbvietas organizēšanai. Vide ir vieta, kurā var ietvert vienu vai vairākas darbvietas. Varat izmantot vidi, lai pārvaldītu darbvietas un savienojumus ar auditorijas ieskatu iespējām.
 
-1. Atlasiet **Jauns** darbvietas pārslēdzējā.
+1. Darbvietas pārslēdzējam atlasiet **+Jauns**.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Customer insights lapa ar remarku navigācijas rūtī un aprakstu.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Customer Insights lapa ar remarku navigācijas rūtī un aprakstu.":::
 
 1. Rūtī **Darbvieta** ievadiet **Darbvietas nosaukumu**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Ievadiet darbvietas nosaukumu.":::
 
-1. Izvēlieties, kāda tipa platformu (tīmekli vai mobilo ierīci) vēlaties mērīt.
+1. Izvēlieties platformas veidu (tīmeklis vai mobilais), kuru vēlaties izmērīt.
 
 1. Atlasiet vienumu **Rādīt papildu iestatījumus**, lai iespējotu vai atspējotu šos neobligātos iestatījumus:
 

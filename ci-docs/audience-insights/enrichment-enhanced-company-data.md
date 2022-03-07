@@ -1,28 +1,27 @@
 ---
 title: Uzņēmuma datu uzlabošana
 description: Bagātiniet un normalizējiet uzņēmuma datus ar Microsoft modeļiem.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927591"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229412"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Uzņēmuma profilu bagātināšana ar uzlabotiem uzņēmuma datiem
 
-Izmantojiet Microsoft modeļus un apkopotos uzņēmuma datus, lai labotu, papildinātu un standartizētu uzņēmuma profilus. Mēs izmantosim [common data model](/common-data-model/schema/core/applicationcommon/account) formātu, lai uzlabotu precizitāti un ieskatus.
+Izmantojiet Microsoft modeļus un apkopotos uzņēmuma datus, lai labotu, papildinātu un standartizētu uzņēmuma profilus. Mēs izmantosim [common data model formātu](/common-data-model/schema/core/applicationcommon/account), lai uzlabotu precizitāti un ieskatus.
 
 ## <a name="how-we-enhance-company-data"></a>Kā mēs uzlabojam uzņēmuma datus
 
-Mūsu modelis iziet divpakāpju procesu, lai uzlabotu uzņēmuma profilu. Pirmkārt, tas normalizē uzņēmuma nosaukumu. *Piemēram, Microsoft Corp tiks* labots un standartizēts Microsoft *corporation*. Tā mēģina atrast atbilstību Microsoft apkopotajos uzņēmuma datos. Ja tiek atrasta atbilstība, mēs bagātinām uzņēmuma profilu ar informāciju no mūsu apkopotajiem uzņēmuma datiem, ieskaitot uzņēmuma nosaukumu.
+Mūsu modelis iziet divpakāpju procesu, lai uzlabotu uzņēmuma profilu. Pirmkārt, tas normalizē uzņēmuma nosaukumu. Piemēram, *Microsoft Corp* tiks labots un standartizēts Microsoft *corporation*. Tā mēģina atrast atbilstību Microsoft apkopotajos uzņēmuma datos. Ja tiek atrasta atbilstība, mēs bagātinām uzņēmuma profilu ar informāciju no mūsu apkopotajiem uzņēmuma datiem, ieskaitot uzņēmuma nosaukumu.
 
 
 ### <a name="example"></a>Piemērs
@@ -58,7 +57,7 @@ Uzlabotajiem datiem ir daži ierobežojumi. Modelis neatbalsta vienumus zemāk r
 
 1. Dodieties uz **Dati** > **Bagātināšana**.
 
-1. Elementā Uzlabotie uzņēmuma dati atlasiet **Bagātināt** **manus** datus.
+1. Elementā Uzlabotie **uzņēmuma dati atlasiet** Bagātināt manus **datus**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Bagātināšanas flīzes bagātināšanas mezglā uzņēmuma datiem.":::
 
@@ -82,17 +81,17 @@ Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat ar
 
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
-Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opciju **Skatīt bagātinātos datus**.
+Bagātināto datu paraugu var skatīt bagātināto klientu priekšskatījuma **elementā**. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
 
 ### <a name="overview-card"></a>Pārskata karte
 
 Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas aptvērumu. 
 
-* **Klienti apstrādāja un mainīja** : veiksmīgi bagātināto klientu profilu skaits.
+* **Uzņēmumi apstrādāja un mainīja**: veiksmīgi bagātināto klientu uzņēmumu profilu skaits.
 
-* **Klienti apstrādāti un nav** mainīti : atpazīto, bet nemainīto klientu profilu skaits. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
+* **Uzņēmumi, kas apstrādāti un nav mainīti**: atpazīto, bet nemainīto klientu uzņēmuma profilu skaits. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
 
-* **Klienti nav apstrādāti un nav** mainīti : neatpazītu profilu skaits. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
+* **Uzņēmumi, kas nav apstrādāti un nav mainīti**: neatpazītu klientu uzņēmuma profilu skaits. Tas parasti notiek ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

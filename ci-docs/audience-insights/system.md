@@ -1,24 +1,30 @@
 ---
 title: Sadaļā Auditorijas ieskati skatiet sistēmas konfigurāciju
-description: Kā Dynamics 365 Customer Insights auditorijas ieskatu iespēju sadaļā ir informācija par sistēmas iestatījumiem.
+description: Informācija par sistēmas iestatījumiem, kas tiek parādīti Dynamics 365 Customer Insights auditorijas ieskatiem.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732379"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354242"
 ---
 # <a name="system-configuration"></a>Sistēmas konfigurācija
 
-Lai piekļūtu sistēmas konfigurācijām auditorijas ieskatos, kreisajā navigācijas joslā atlasiet **Administrēšanas** > **·** sistēma, lai skatītu sistēmas uzdevumu un procesu sarakstu.
+Lai piekļūtu sistēmas konfigurācijām auditorijas ieskatos, kreisajā navigācijas joslā atlasiet **AdministratorSystem** > **·**, lai skatītu sistēmas uzdevumu un procesu sarakstu.
 
 Lapā **Sistēma** ir šādas cilnes:
 - [Statuss](#status-tab)
@@ -32,11 +38,11 @@ Lapā **Sistēma** ir šādas cilnes:
 
 ## <a name="status-tab"></a>Cilne Statuss
 
-**Cilne Statuss ļauj izsekot uzdevumu** norisei, datu norīšanai, datu eksportam un vairākiem citiem svarīgiem produktu procesiem. Pārskatiet šajā cilnē esošo informāciju, lai nodrošinātu aktīvo uzdevumu un procesu pilnīgumu.
+Cilne **Statuss** ļauj izsekot uzdevumu norisei, datu norīšanai, datu eksportam un vairākiem citiem svarīgiem produktu procesiem. Pārskatiet šajā cilnē esošo informāciju, lai nodrošinātu aktīvo uzdevumu un procesu pilnīgumu.
 
 Šajā cilnē ir iekļautas tabulas ar statusu un dažādu procesu apstrādes informāciju. Katrā tabulā tiek izsekots uzdevuma **Nosaukums** un tā atbilstošā entītija, tā pēdējās izpildes **Statuss** un **Pēdējā atjaunināšana**. Detalizētu informāciju par pēdējiem vairākiem braucieniem var skatīt, atlasot uzdevuma vai procesa nosaukumu. 
 
-Atlasiet statusu blakus uzdevumam vai procesam **·** kolonnā Statuss, lai atvērtu rūti Detalizēta **informācija par** norisi.
+Atlasiet statusu blakus uzdevumam vai procesam **kolonnā Statuss**, lai atvērtu **rūti Detalizēta informācija par** norisi.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Sistēmas norises detalizētas informācijas rūts":::
 
@@ -49,16 +55,16 @@ Sistēma uzdevumiem un procesiem izmanto šādus statusus:
 |Atcelta |Lietotājs atcēla apstrādi pirms tās pabeigšanas.   |
 |Neizdevās   |Veicot datu uzņemšanu, radās kļūdas.         |
 |Kļūme  |Apstrāde neizdevās.  |
-|Nav sākta   |Datu avots nesatur datus, kas ir uzņemti vai vēl ir melnraksta režīmā.         |
+|Nav sākts   |Datu avots nesatur datus, kas ir uzņemti vai vēl ir melnraksta režīmā.         |
 |Apstrāde  |Notiek uzdevums vai process.  |
 |Notiek atsvaidzināšana    |Notiek datu uzņemšana. Šo darbību varat atcelt, kolonnā **Darbības** atlasot **Apturēt atsvaidzināšanu**. Apturot datu avota atsvaidzināšanu, tas atkal kļūs tāds pats kā pēdējās atsvaidzināšanas brīdī.       |
-|Izlaists  |Uzdevums vai process tika izlaists. Viens vai vairāki pakārtotie procesi, no kuriem atkarīgs šis uzdevums, neizdodas vai tiek izlaisti.|
-|Sekmīgs  |Uzdevums vai process ir veiksmīgi pabeigts. Datu avotiem norāda, ka dati ir veiksmīgi uzņemti, ja kolonnā Atsvaidzināts ir norādīts **·** laiks.|
-|Ievietota rindā | Apstrāde tiek stāvēta rindā un tiks sākta, kad būs pabeigti visi augšupējie uzdevumi un procesi. Plašāku informāciju skatiet [Refresh processes](#refresh-processes).|
+|Izlaista  |Uzdevums vai process tika izlaists. Viens vai vairāki pakārtotie procesi, no kuriem atkarīgs šis uzdevums, neizdodas vai tiek izlaisti.|
+|Sekmīgs  |Uzdevums vai process ir veiksmīgi pabeigts. Datu avotiem norāda, ka dati ir veiksmīgi uzņemti, ja kolonnā Atsvaidzināts **ir** norādīts laiks.|
+|Ievietota rindā | Apstrāde tiek stāvēta rindā un tiks sākta, kad būs pabeigti visi augšupējie uzdevumi un procesi. Papildinformāciju skatiet sadaļā [Atsvaidzināt procesus](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Atsvaidzināšanas procesi
 
-Atsvaidzināt uzdevumiem un procesiem tiek palaista saskaņā ar [konfigurēto grafiku](#schedule-tab). 
+Uzdevumu un procesu atsvaidzināšana tiek palaista saskaņā ar konfigurēto [grafiku](#schedule-tab). 
 
 |Process  |Apraksts  |
 |---------|---------|
@@ -78,13 +84,17 @@ Atsvaidzināt uzdevumiem un procesiem tiek palaista saskaņā ar [konfigurēto g
 |Meklējiet   |Darbojas manuāli (vienreizēja atsvaidzināšana). Atkarīgs no sapludināšanas procesa. |
 |Segmenti  |Darbojas manuāli (vienreizēja atsvaidzināšana). Atkarīgs no sapludināšanas procesa. Ieskati ir atkarīgi no to apstrādes.|
 |Sistēma   |Atkarīga no atbilstības procesa pabeigšanas. Segmenti, mērījumi, bagātināšana, meklēšana, darbības, prognozes un datu sagatavošana ir atkarīga no sekmīgas šī procesa pabeigšanas.   |
-|Lietotājs  |Darbojas manuāli (vienreizēja atsvaidzināšana). Atkarīgs no entītijām.  |
+|User  |Darbojas manuāli (vienreizēja atsvaidzināšana). Atkarīgs no entītijām.  |
 
-Atlasiet procesa statusu, lai skatītu visa tā darba norises detaļas. Iepriekš minētie atsvaidzināšanas procesi var palīdzēt saprast, ko varat darīt, lai risinātu uzdevumu vai procesu, kurā ir **·** **izlaists vai ievietots** rindā.
+Atlasiet procesa statusu, lai skatītu visa tā darba norises detaļas. Iepriekš minētie atsvaidzināšanas procesi var palīdzēt saprast, ko varat darīt, lai risinātu uzdevumu vai procesu, kurā **ir izlaists** vai **ievietots** rindā.
 
 ## <a name="schedule-tab"></a>Plānošanas cilne
 
 Izmantojiet cilni **Grafiks**, lai plānotu visu jūsu uzņemto [datu avotu automātisko atsvaidzināšanu](data-sources.md). Automātiskā atsvaidzināšana palīdz nodrošināt, ka jūsu datu avotu atjauninājumi tiek atspoguļoti vienotajos klientu profilos.
+
+> [!NOTE]
+> Jūsu pārvaldītie datu avoti tiek atsvaidzināti pēc saviem grafikiem. Lai ieplānotu jūsu pārvaldīto datu avotu atsvaidzināšanu, konfigurējiet atsvaidzināšanas iestatījumus šajā konkrētajā datu avots lapā **Datu avoti**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Datu plūsmas atsvaidzināšanas iestatījumi.":::
 
 1. Sadaļā auditorijas ieskati ejiet uz **Administrēšana** > **Sistēma** un atlasiet cilni **Grafiks**.
 
@@ -127,7 +137,7 @@ Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri 
 
 -  **Darbības** — tabula ar rindām katrai pieejamai API operācijai un detalizēta informācija par operāciju izmantošanu. Varat atlasīt operācijas nosaukumu, lai pārietu [uz API atsauci](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Darbības, kas izmanto [reāllaika datu](real-time-data-ingestion.md) norīšanu, satur pogu ar binokļa simbolu, lai skatītu reāllaika API lietojumu. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.   
+   Darbības, kas izmanto [reāllaika datu norīšanu](real-time-data-ingestion.md), satur pogu ar binokļa simbolu, lai skatītu reāllaika API lietojumu. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.   
    Lai izvēlētos, kā vislabāk sniegt reāllaika mijiedarbības, izmantojiet **Grupēt pēc** lodziņu rūtī **Reāllaika API lietojums**. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
 
 ## <a name="security-tab"></a>Drošības cilne

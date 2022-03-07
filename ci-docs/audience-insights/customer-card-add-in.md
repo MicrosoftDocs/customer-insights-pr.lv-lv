@@ -3,18 +3,22 @@ title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (satur video
 description: Rādīt auditorijas ieskatu datus Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
 ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085257"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353874"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
 
@@ -27,7 +31,7 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai uzņēmumus), jums ir jāpārliecinās, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [šī datu avots primārā atslēga datu apvienošanas procesa kartes posmā](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Lai jūsu Dynamics 365 dati kartētu uz auditorijas ieskatu klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai uzņēmumus), ir jāpārliecinās, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [šīs datu avots primārā atslēga datu apvienošanas procesa kartes posmā](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Visi Dynamics 365 lietotāji, kas izmanto klienta kartes pievienojumprogrammu, ir [jāpievieno kā lietotāji](permissions.md) auditorijas ieskatos, lai redzētu datus.
 - Lai darbotos datu uzmeklēšana, ir nepieciešama [konfigurēta meklēšanas un filtrēšanas iespēja](search-filter-index.md) auditorijas ieskatos.
 - Katra pievienojumprogrammas vadīkla ir atkarīga no noteiktiem datiem auditorijas ieskatos. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija jūs informēs, ja atlasītā vides tipa dēļ vadīkla nav pieejama. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).

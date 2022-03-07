@@ -4,17 +4,16 @@ metadata:
   author: m-hartmann
   description: Atrodiet attiecīgos rakstus, lai sāktu darbu ar palīdzības saturu.
   ms.author: mhart
-  ms.date: 10/29/2020
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-  ms.translationtype: HT
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: lv-LV
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598473"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350478"
 title: Dynamics 365 Customer Insights dokumentācija
-summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights opcijām un iespējām.
+summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights līdzekļiem un iespējām.
 landingContent:
 - title: Iepazīstieties ar Customer Insights
   linkLists:
@@ -23,19 +22,41 @@ landingContent:
     - text: Pārskats par Customer Insights
       url: overview.md
     - text: Nodošanas izpildei plāns
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Piekļuve videi
-      url: https://home.ci.ai.dynamics.com/
-- title: Darba sākšana ar auditorijas ieskatiem
+      url: /dynamics365/release-plans/
+    - text: CDP atklāšana
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Customer Insights mācību ceļš
+      url: /learn/paths/build-customer-insights/
+- title: Darba sākšana ar pakalpojumu Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Reģistrēšanās izmēģinājuma versijai
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Jaunumi
+    - text: Kas jauns auditorijas ieskatos
       url: audience-insights/whats-new-audience-insights.md
-    - text: Auditorijas ieskatu dokumentācija
-      url: audience-insights/index.yml
+    - text: Īsā pamācība
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Sākt darbu
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Administrējiet pakalpojumu Customer Insights
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistēmas konfigurēšana
+      url: audience-insights/system.md
+    - text: Lietotāja atļauju definēšana
+      url: audience-insights/permissions.md
+    - text: Vairāku vižu pārvaldība
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrējiet pakalpojumu Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Saziņa
   linkLists:
   - linkListType: overview
@@ -46,63 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Ziņot par problēmu
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Auditorijas ieskatu instrukcijas
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Izveidot jaunu vidi
-      url: audience-insights/home.md
-    - text: Vienotais klienta profila izveide
-      url: /learn/modules/unified-customer-profile/
-    - text: Darbs ar programmu
-      url: /learn/modules/working-with-customer-insights/
-- title: Datu par auditorijas ieskatiem eksportēšana
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Eksportēšanas galamērķu iestatīšana
-      url: audience-insights/export-destinations.md
-    - text: Klienta kartes Dynamics 365 lietojumprogrammās
-      url: audience-insights/customer-card-add-in.md
-    - text: Power BI savienotājs
-      url: audience-insights/export-power-bi.md
-- title: Auditorijas ieskatu pārvaldīšana
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Sistēmas konfigurēšana
-      url: audience-insights/system.md
-    - text: Lietotāja atļauju definēšana
-      url: audience-insights/permissions.md
-    - text: Vairāku vižu pārvaldība
-      url: audience-insights/manage-environments.md
-- title: Par iesaistes ieskatiem (priekšskatījums)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Iespēju pārskats
-      url: engagement-insights/overview.md
-    - text: Noteikumi un nosacījumi
-      url: engagement-insights/glossary.md
-    - text: Sākt darbu
-      url: engagement-insights/get-started.md
-- title: Iesaistes ieskatu pārskati (priekšskatījums)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Skatīt atskaites
-      url: engagement-insights/view-reports.md
-    - text: Pielāgotu atskaišu izveide
-      url: engagement-insights/custom-reports.md
-    - text: Skatīt vienoto profilu atskaiti
-      url: engagement-insights/profile-reports.md
-- title: Iesaistes ieskatu gadījumi (priekšskatījums)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Izsmalcinātu notikumu izveide
-      url: engagement-insights/refined-events.md
-    - text: Gadījumu eksportēšana
-      url: engagement-insights/export-events.md
-    - text: Personisko datu dzēšana un eksportēšana
-      url: engagement-insights/delete-export-personal-data.md

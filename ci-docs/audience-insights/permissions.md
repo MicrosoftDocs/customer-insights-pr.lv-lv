@@ -1,37 +1,40 @@
 ---
 title: Lietotāju atļauju pārvaldīšana
 description: Uzziniet vairāk par lietotāju lomām un atļaujām
-ms.date: 10/27/2020
-ms.reviewer: nimagen
-ms.service: customer-insights
+ms.date: 03/25/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689229"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355946"
 ---
 # <a name="user-permissions"></a>Lietotāju atļaujas
 
 **Atļauju** lapā varat iestatīt lomas un atļaujas, lai varētu izmantot auditorijas ieskatus.
 
-Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, izmantojot auditorijas ieskatus, apmeklējiet **Administrators** > **Atļauja**.
+Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, izmantojot auditorijas ieskatus, dodieties uz **Administrators** > **Atļauja**.
 
 Pastāv trīs lomu tipi:
 
 ## <a name="viewer"></a>Skatītājs
 
-- Izpētiet ieskatus un segmentus **sākumlapā** un lapā **Segmenti**.
+- Izpētiet ieskatus un segmentus **Sākumlapā** un lapā **Segmenti**.
 - Meklējiet un filtrējiet klientu profilus, izmantojot lapu **Klienti**. Laukiem jābūt meklējamiem.
 - Skatiet un pārlūkojiet lapu **Bagātināšana**.
 - Izpētiet un eksportējiet entītijas, izmantojot lapu **Entītijas**.
 - Skatiet sistēmas procesu statusu, izmantojot lapu **Sistēma**.
-- Eksportējiet segmentus lapā **Segmenti**.
+- Skatiet eksportus lapā **Eksportēšana**.
 - Instalējiet un izmantojiet **Power BI Customer Insights** informācijas paneli.
 
 ## <a name="contributor"></a>Līdzstrādnieks
@@ -43,6 +46,7 @@ Pastāv trīs lomu tipi:
 - Izveidojiet segmentus, izmantojot lapu **Segmenti**.
 - Izveidojiet mērus, izmantojot lapu **Mēri**.
 - Pārvaldiet konfigurāciju un bagātiniet klientu profilus no **Bagātināšanas** lapas (tikai pirmās puses bagātināšanai).
+- Pārvaldiet un izveidojiet eksportus, balstoties ar līdzstrādniekiem izveidotajos savienojumos. [Papildinformācija par to, kā administratori atļauj līdzstrādniekiem izmantot savienojumu eksportēšanai](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrators
 
@@ -50,8 +54,9 @@ Pastāv trīs lomu tipi:
 - Mainiet iestatījumus lapā **Sistēmas**, tostarp darba valodu un atsvaidziniet sistēmas procesu grafikus.
 - Skatiet un pievienojiet atļaujas, izmantojot lapu **Atļaujas**.
 - Iestatiet meklēšanas un filtrēšanas definīcijas lapai Klienti, izmantojot lapu **Meklēšana un filtrēšana** (pieejama no lapas **Klienti**).
-- Definējiet Dynamics 365 Sales segmenta galamērķus, izmantojot lapu **Eksportēt galamērķus**.
+- Pārvaldiet savienojumus un atļaujiet tos citām lietotāju lomām lapā **Savienojumi**.
 - Pārvaldiet konfigurāciju un bagātiniet klientu profilus no **Bagātināšanas** lapas (visām bagātināšanām).
+- Pārvaldiet un izveidojiet eksportus lapā **Eksportēšana**.
 - Instalējiet un izmantojiet **klienta kartes pievienojumprogrammu**.
 - Pievienojiet un izmantojiet **Power Apps savienotāju**.
 - [Iespējot API Customer Insights izmantošanu](apis.md)
@@ -74,3 +79,6 @@ Lai skatītu auditorijas ieskatus, apmeklējiet **Administrators** > **Atļaujas
 - Lomas ir norādītas kolonnā **Loma**.
 - Atlasiet jebkuru kolonnas virsrakstu, lai rezultātus kārtotu pēc šīs kolonnas vērtības.
 - Izmantojiet lapas augšdaļā esošo lauku **Meklēt**, lai atrastu konkrētus lietotājus.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

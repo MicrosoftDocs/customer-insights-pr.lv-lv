@@ -1,20 +1,25 @@
 ---
 title: Adreses uzlabošanas bagātināšana (satur video)
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934932"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353645"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
@@ -100,17 +105,17 @@ Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat ar
 
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
-Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opciju **Skatīt bagātinātos datus**.
+Bagātināto datu paraugu var skatīt bagātināto klientu priekšskatījuma **elementā**. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
 
 ### <a name="overview-card"></a>Pārskata karte
 
 Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas aptvērumu. 
 
-* **Klienti apstrādāja un mainīja** : veiksmīgi bagātināto klientu profilu skaits.
+* **Apstrādātās un mainītās** adreses: to klientu profilu skaits, kuru adreses tika veiksmīgi bagātinātas.
 
-* **Klienti apstrādāti un nav** mainīti : atpazīto, bet nemainīto klientu profilu skaits. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
+* **Apstrādātās un nemainītās** adreses: to klientu profilu skaits, kuru adreses tika atpazītas, bet netika mainītas. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
 
-* **Klienti nav apstrādāti un nav** mainīti : neatpazītu profilu skaits. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
+* **Adreses nav apstrādātas un nav mainītas**: profilu skaits ar neatpazītām adresēm. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

@@ -3,18 +3,17 @@ title: Customer Insights datu eksportēšana uz Campaign Monitor
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Campaign Monitor.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: be9c92a087ab4664077d18fe8585bf96715c1535
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618990"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228162"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentu eksportēšana uz Campaign Monitor (priekšskatījums)
 

@@ -1,20 +1,19 @@
 ---
 title: Power Apps savienotājs
 description: Savienošana ar Power Apps un Power Automate.
-ms.date: 08/21/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.date: 10/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406322"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229041"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps savienotājs (priekšskatījums)
 
@@ -22,53 +21,55 @@ Ieviesiet vienotos klientu profilus savās personalizētajās programmās, izman
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Power Apps un Dynamics 365 Customer Insights savienošana
 
-Customer Insights ir viens no daudzajiem [pieejamajiem datu avotiem pakalpojumā Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights ir viens no daudzajiem [pieejamajiem datu avotiem pakalpojumā Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Skatiet Power Apps dokumentāciju, lai uzzinātu, kā [programmai pievienot datu savienojumu](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Ieteicams arī pārskatīt, [kā Power Apps izmanto deleģēšanu, lai apstrādātu lielas datu kopas pamatnes programmās](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Skatiet Power Apps dokumentāciju, lai uzzinātu, kā [programmai pievienot datu savienojumu](/powerapps/maker/canvas-apps/add-data-connection). Ieteicams arī pārskatīt, [kā Power Apps izmanto deleģēšanu, lai apstrādātu lielas datu kopas pamatnes programmās](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Pieejamās entītijas
 
 Pēc Customer Insights pievienošanas datu savienojumam varat Power Apps izvēlēties šādas entītijas:
 
-- Klients: lai izmantotu datus no [vienotā klienta profila](customer-profiles.md).
-- Vienotā klienta darbība: lai programmā parādītu [darbību laika skalu](activities.md) 
+- **Klients**: lai izmantotu datus no [vienotā klienta profila](customer-profiles.md).
+- **UnifiedActivity**: lai programmā parādītu [darbību laika grafiku](activities.md).
+- **ContactProfile**: lai parādītu klienta kontaktpersonas. Šī entītija pašlaik nav saderīga ar auditorijas ieskatu vidi uzņēmumiem.
 
 ## <a name="limitations"></a>Ierobežojumi
 
 ### <a name="retrievable-entities"></a>Izgūstamas entītijas
 
-Varat izgūt tikai entītijas **Klients**, **Nedefinēta darbība** un **Segmenti**, izmantojot Power Apps savienotāju. Citas entītijas tiek rādītas, jo pamatā esošais savienotājs tās atbalsta, izmantojot trigerus Power Automate.  
+Ar savienotāja palīdzību var izgūt tikai entītijas **Klients**, **UnifiedActivity**, **Segmenti** un **ContactProfile** ar Power Apps savienotāju. ContactProfile ir pieejama tikai auditorijas ieskatos uzņēmuma kontiem. Citas entītijas tiek rādītas, jo pamatā esošais savienotājs tās atbalsta, izmantojot trigerus Power Automate.
 
 ### <a name="delegation"></a>Deleģēšana
 
-Deleģēšana darbojas entītijai Klients un entītijai Nedefinēta darbība. 
+Deleģēšana darbojas entītijai **Klients** un entītijai **UnifiedActivity**. 
 
 - **Klienta** entītijas deleģēšana: Lai šai entītijai izmantotu deleģēšanu, šie lauki ir jāindeksē, izmantojot [Meklēšanas & filtra indeksu](search-filter-index.md).  
-
 - Deleģēšana **Nedefinēta darbība**: Deleģēšana šai entītijai darbojas tikai laukiem **ActivityId** un **CustomerId**.  
+- Deleģēšana **ContactProfile**: šai entītijai deleģēšana darbojas laukiem **ContactId** un **CustomerId**. ContactProfile ir pieejama tikai auditorijas ieskatu vidēm uzņēmuma kontiem.
 
-- Papildinformāciju par deleģēšanu skatiet [Power Apps deleģējamās funkcijas un operācijas](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Lai iegūtu papildinformāciju par deleģēšanu, atveriet [Power Apps deleģējamās funkcijas un darbības](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Galerijas vadīklas piemērs
 
-Piemēram, varat pievienot klientu profilus [galerijas vadīklai](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Klientu profilus var pievienot [galerijas vadīklai](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Pievienojiet **Galerijas** vadīklu programmai, ko veidojat.
 
-> [!div class="mx-imgBorder"]
-> ![Galerijas elementa pievienošana](media/connector-powerapps9.png "Galerijas elementa pievienošana")
+    > [!div class="mx-imgBorder"]
+    > ![Galerijas elementa pievienošana.](media/connector-powerapps9.png "Pievienojiet galerijas elementu.")
 
-1. Atlasiet **Klientu** kā vienumu datu avotu.
+2. Atlasiet **Klientu** kā vienumu datu avotu.
 
     > [!div class="mx-imgBorder"]
-    > ![Datu avota atlasīšana](media/choose-datasource-powerapps.png "Datu avota atlasīšana")
+    > ![Datu avota atlasīšana.](media/choose-datasource-powerapps.png "Atlasiet datu avotu.")
 
-1. Varat mainīt labajā pusē esošo datu paneli, lai atlasītu, kuru entītijas Klients lauku rādīt galerijā.
+3. Varat mainīt labajā pusē esošo datu paneli, lai atlasītu, kuru entītijas Klients lauku rādīt galerijā.
 
-1. Ja vēlaties, lai galerijā tiktu rādīts jebkurš lauks no atlasītā klienta, norādiet etiķetes rekvizītu Teksts: **{Name_of_the_gallery}.Selected.{property_name}**
+4. Ja vēlaties, lai galerijā tiktu rādīts jebkurš lauks no atlasītā klienta, aizpildiet etiķetes rekvizītu **Teksts**, izmantojot **{Name_of_the_gallery}.Selected.{property_name}**  
+    - Piemēram: _Gallery1.Selected.address1_city_
 
-    Piemērs: Gallery1.Selected.address1_city
+5. Lai tiktu parādīta vienota laika skala klientam, pievienojiet galerijas elementu un rekvizītu **Vienumi**, izmantojot **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Piemēram:  _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
 
-1. Lai klientam tiktu parādīta vienota laika skala, pievienojiet elementu Galerija un rekvizītu Vienumi: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
-    Piemērs: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

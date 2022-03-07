@@ -4,17 +4,16 @@ description: Izmantojiet pieejamās atskaites, lai skatītu reāllaika darbību 
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036657"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229749"
 ---
 # <a name="view-reports"></a>Skatīt atskaites
 
@@ -92,12 +91,18 @@ Atskaites mobilajam ierīcem tiek grupētas reāllaika lietojuma, programmas un 
 
 - **Atrašanās vietās** tiek rādīta informācija par programmas lietotājiem pēc valsts, reģiona un pilsētas.
 
-## <a name="filter-by-time-or-value"></a>Filtrēt pēc laika vai vērtības
+## <a name="filter-by-time-or-date-range"></a>Filtrējiet pēc laika vai datu diapazona
 
-Varat atlasīt laika periodu vai vērtību tīmekļa vai mobilajā atskaitē, lai fokuss būtu uz vērtību vai laika periodu. 
+Tīmekļa vai mobilās versijas atskaitē var atlasīt laika periodu vai datumu diapazonu, lai koncentrētos uz vērtību vai laika periodu. 
 
-- Lai atlasītu laika periodu, atskaites nolaižamajā sarakstā atlasiet **Vēl [...]**. Laika diapazona atlase reāllaika lietojuma atskaitei ir atspējota; reāllaika lietojuma atskaites laika diapazons ir "tagad."
+- Lai atlasītu laika periodu, atskaites skata augšējā labajā stūrī atlasiet vērtību no atskaites nolaižamā saraksta. Varat arī izvēlēties **Fiksētu datu diapazonu**. 
 
-- Vairumā atskaišu atlasiet vērtību diagrammā vai sarakstā, lai filtrētu atlasītās vērtības atskaiti.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrējiet pēc laika vai datu diapazona.":::   
+
+- Lielākajai daļai atskaišu atlasiet vērtību diagrammā vai sarakstā, lai filtrētu atskaiti.
+
+> [!NOTE]
+> Laika diapazona atlase reāllaika lietojuma atskaitei ir atspējota; reāllaika lietojuma atskaites laika diapazons ir "tagad."
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

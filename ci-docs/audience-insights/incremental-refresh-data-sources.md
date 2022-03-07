@@ -1,22 +1,24 @@
 ---
-title: Power Query esošu datu avotu inkrementālā atsvaidzināšana.
-description: Atsvaidziniet jaunus un atjauninātus datus lieliem datu avotiem, kas balstīti Power Query.
+title: Inkrementāla atsvaidzināšana Power Query uz datu avotiem
+description: Atsvaidziniet jaunus un atjauninātus datus lieliem datu avotiem, pamatojoties uz Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900277"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353691"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementālā atsvaidzināšana Power Query bāzes datu avotiem
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementāla atsvaidzināšana datu avotiem, pamatojoties uz Power Query
 
 Šajā rakstā ir aprakstīts, kā konfigurēt inkrementālo atsvaidzināšanu datu avotiem, pamatojoties uz Power Query.
 
@@ -28,13 +30,13 @@ Inkrementālajai datu avotu atsvaidzināšanai ir šādas priekšrocības:
 
 ## <a name="configure-incremental-refresh"></a>Konfigurēt inkrementālo atsvaidzināšanu
 
-Auditorijas ieskati ļauj inkrementāli atsvaidzināt datus, kuri ir importēti, izmantojot Power Query, kas atbalsta inkrementālu uzņemšanu. Piemēram, Azure SQL datu bāzes ar datuma un laika laukiem, kas norāda, kad pēdējo reizi tika atjaunināti datu ieraksti.
+Auditorijas ieskati ļauj pakāpeniski atsvaidzināt datu avotus, kas importēti, izmantojot Power Query šo, kas atbalsta pakāpenisku norīšanu. Piemēram, Azure SQL datu bāzes ar datuma un laika laukiem, kas norāda, kad pēdējo reizi tika atjaunināti datu ieraksti.
 
-1. [Jauna Power Query bāzes datu avota izveide](connect-power-query.md).
+1. [Izveidojiet jaunu datu avots, pamatojoties uz Power Query](connect-power-query.md).
 
-1. Norādiet **datu** avots nosaukumu.
+1. Norādiet **datu avots nosaukumu**.
 
-1. Atlasiet datu avots, kas atbalsta inkrementālo atsvaidzināšanu, piemēram, [Azure SQL datu bāzi](/power-query/connectors/azuresqldatabase).
+1. Atlasiet datu avots, kas atbalsta inkrementālo atsvaidzināšanu, piemēram [, Azure SQL datu bāzi](/power-query/connectors/azuresqldatabase).
 
 1. Atlasiet uzņemamās entitījas vai tabulas.
 
