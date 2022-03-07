@@ -1,25 +1,20 @@
 ---
-title: Adreses uzlabošanas bagātināšana (satur video)
+title: Adreses uzlabošanas bagātināšana
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
-ms.date: 01/19/2022
+ms.date: 04/21/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353645"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305441"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
@@ -28,8 +23,6 @@ Datu adreses var būt nestrukturētas, nepilnīgas vai nepareizas. Izmantojiet M
 ## <a name="how-we-enhance-addresses"></a>Adrešu uzlabošana
 
 Mūsu modelis iet cauri divsoļu procesam, lai uzlabotu adresi. Vispirms tiek parsēta adrese, lai identificētu tās komponentus, un tie tiek ievietoti strukturētā formātā. Pēc tam izmantojam AI, lai labotu, pabeigtu un standartizētu adreses vērtības.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Piemērs
 
@@ -65,10 +58,6 @@ Pašlaik mēs atbalstītu adrešu bagātināšanu šajās valstīs vai reģionos
 
 - Austrālija
 - Kanāda
-- Francija
-- Vācija
-- Itālija
-- Japāna
 - Lielbritānija
 - Amerikas Savienotās Valstis
 
@@ -105,20 +94,10 @@ Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat ar
 
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
-Bagātināto datu paraugu var skatīt bagātināto klientu priekšskatījuma **elementā**. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
-
-### <a name="overview-card"></a>Pārskata karte
-
-Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas aptvērumu. 
-
-* **Apstrādātās un mainītās** adreses: to klientu profilu skaits, kuru adreses tika veiksmīgi bagātinātas.
-
-* **Apstrādātās un nemainītās** adreses: to klientu profilu skaits, kuru adreses tika atpazītas, bet netika mainītas. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
-
-* **Adreses nav apstrādātas un nav mainītas**: profilu skaits ar neatpazītām adresēm. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
+Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opciju **Skatīt bagātinātos datus**.
 
 ## <a name="next-steps"></a>Nākamās darbības
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Pilnveidojiet savus bagātinātos klientu datus. Veidojiet [segmentus](segments.md) un [pasākumus](measures.md) un pat [eksportējiet datus](export-destinations.md), lai nodrošinātu klientiem personalizētu pieredzi.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,22 +1,21 @@
 ---
-title: Klientu vienotā skata izveide
-description: Izmantojiet datu unification procesu, izmantojot savus datus, lai izveidotu atsevišķu klientu profilu pamata datu kopu.
-ms.date: 10/18/2021
+title: Datu apvienošana
+description: Uzziniet, kā apvienot uzņemtos datus.
+ms.date: 04/16/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-- customerInsights
-ms.openlocfilehash: 2012d32494ccd4639cbffbb81d4f6eac1258e23b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.custom: intro-internal
+ms.openlocfilehash: bf1bbcd31333c8a557b59b001112042a1783546ab0cd2af394d8af2953a493f4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353828"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032767"
 ---
 # <a name="data-unification-overview"></a>Datu apvienošanas pārskats
 

@@ -3,17 +3,19 @@ title: Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 description: Auditorijas ieskatu pārskats Dynamics 365 Customer Insights.
 ms.date: 08/04/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.custom: intro-internal
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230745"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034369"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijas ieskati Dynamics 365 Customer Insights pārskatam
 
@@ -55,5 +57,11 @@ ms.locfileid: "8230745"
 
   - Veidojiet pielāgojamus profilus, definējiet mērvienības, izveidojiet segmentus un iegūstiet no prognozējošās analīzes, lai iegūtu pilnu pārskatu par savu klientu atbilstoši savas organizācijas specifikai.  
   - Lai apstrādātu ieskatus, vairākām Microsoft un trešo pušu lietojumprogrammām vai API izmantojiet oriģinālos savienotājus.
+
+## <a name="pricing-and-licensing"></a>Cenas un licencēšana
+
+Customer Insights ir licencēts katram nomniekam, un tajā ir ietvertas vairākas iespējas. Tiesībspējas ietver profilu kopu, ikdienas sistēmas atsvaidzināšanu, Power Platform pieprasījumus un divas vides. Varat iegādāties papildu noslodzi un licenci, lai palielinātu noklusējuma kvotu. 
+- Detalizēta noslodze un tiesības: [Dynamics 365 licencēšanas rokasgrāmata](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Cenu noteikšanas pārskats: [Dynamics 365 cenu noteikšana](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

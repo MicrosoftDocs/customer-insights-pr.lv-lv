@@ -1,19 +1,20 @@
 ---
 title: Customer Insights datu eksportēšana uz SendGrid
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz SendGrid.
-ms.date: 10/08/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 65d60e7e70e3444b0695b905431bab9a0269ceef
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231581"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036110"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmentu eksportēšana uz SendGrid (priekšskatījums)
 
@@ -28,10 +29,10 @@ Eksportējiet vienoto klientu profilu segmentus uz SendGrid kontaktpersonu sarak
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 100000 klientu profilu kopā uz SendGrid.
+- Kopumā līdz 100 000 profiliem uz SendGrid.
 - Eksportēšana uz SendGrid ir ierobežota līdz segmentiem.
-- Līdz pat 100000 klientu profilu eksportēšana uz SendGrid var paiet līdz dažām stundām. 
-- To klientu profilu skaits, kurus varat eksportēt uz SendGrid, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar SendGrid.
+- 100 000 profilu eksportēšana uz SendGrid var aizņemt dažas stundas. 
+- To profilu skaits, ko var eksportēt uz SendGrid, ir atkarīgs, un tas ir ierobežots jūsu līgumā ar SendGrid.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Savienojuma ar SendGrid iestatīšana
 
@@ -65,7 +66,7 @@ Eksportējiet vienoto klientu profilu segmentus uz SendGrid kontaktpersonu sarak
 
 1. Ievadiet savu **[SendGrid saraksta ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**, **Valsts/Reģions**, **Štats**, **Pilsēta**, and **Pasta indekss**.
+1. Sadaļas **Datu atbilstības** laukā **E-pasts** atlasiet lauku, kas iekļauts vienotajā klientu profilā, kas pārstāv klienta e-pasta adresi. Veiciet tās pašas darbības ar citiem neobligātajiem laukiem, piemēram, **Vārds**, **Uzvārds**, **Valsts/Reģions**, **Štats**, **Pilsēta**, and **Pasta indekss**.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. Mēs **stingri iesakām eksportēt kopumā ne vairāk kā 100 000 klientu profilu** programmā SendGrid. 
 

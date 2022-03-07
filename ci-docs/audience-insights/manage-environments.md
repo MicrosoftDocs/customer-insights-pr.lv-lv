@@ -1,26 +1,24 @@
 ---
 title: Vižu izveide un pārvaldība
 description: Uzziniet, kā pierakstīties pakalpojumā un kā pārvaldīt vides.
-ms.date: 12/06/2021
+ms.date: 10/14/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-system-about
-- customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354288"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673742"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 ## <a name="switch-environments"></a>Pārslēgt vides
 
@@ -41,22 +39,6 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 3. Lodziņā **Rediģēt vidi** varat atjaunināt vides iestatījumus.
 
 Papildinformāciju par vides iestatījumiem skatiet sadaļā [Jaunas vides izveide](create-environment.md).
-
-## <a name="connect-to-microsoft-dataverse"></a>Izveidot savienojumu ar Microsoft Dataverse
-   
-Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi.
-
-Lai izmantotu [standarta prognožu modeļus](predictions-overview.md#out-of-box-models), konfigurējiet datu kopīgošanu ar Dataverse. Varat arī iespējot datu inaktivizēšanu no lokāls avotiem, norādot Microsoft Dataverse jūsu organizācijas administrējamo vides URL.
-
-> [!IMPORTANT]
-> Customer Insights un Dataverse tiem jābūt vienā reģionā, lai iespējotu datu koplietošanu.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Konfigurēšanas opcijas, lai iespējotu datu kopīgošanu ar Microsoft Dataverse.":::
-
-> [!NOTE]
-> Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:
-> - Ja saglabāsit visus datus pats savā Azure Data Lake Storage, jūs nevarēsit iespējot datu kopīgošanu ar Dataverse pārvaldīto Data Lake.
-> - Ja iespējosit datu kopīgošanu ar Dataverse, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Izveidojiet vides konfigurācijas kopiju
 

@@ -1,136 +1,87 @@
 ---
-title: Klienta darbības
-description: Definējiet klientu darbības un apskatiet tās laika skalā pēc klientu profiliem.
-ms.date: 11/01/2021
+title: Klientu darbības
+description: Definējiet klientu darbības un aplūkojiet tās klientu laika skalā.
+ms.date: 10/13/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-searchScope:
-- ci-entities
-- ci-customer-card
-- ci-relationships
-- ci-activities
-- ci-activities-wizard
-- ci-measures
-- ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: MT
+ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359838"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596738"
 ---
-# <a name="customer-activities"></a>Klienta darbības
+# <a name="customer-activities"></a>Klientu darbības
 
-Apvienojiet klientu darbības no [dažādiem datu avotiem](data-sources.md) risinājumā Dynamics 365 Customer Insights, lai izveidotu laika skalu, kurā hronoloǵiski uzskaitītas darbības. Iekļaujiet laika skalu Dynamics 365 programmās, izmantojot risinājumu [Klienta kartes pievienojumprogramma](customer-card-add-in.md) vai Power BI informācijas panelī.
+Kombinējiet klientu darbības no [dažādiem datu avotiem](data-sources.md) Dynamics 365 Customer Insights, lai izveidotu klientu laika skalu, kurā darbības ir uzskaitītas hronoloģiskā secībā. Varat iekļaut laika skalu klientu iesaistes programmās pakalpojumā Dynamics 365, izmantojot [Customer Card pievienojumprogrammu](customer-card-add-in.md) vai Power BI informācijas paneli.
 
 ## <a name="define-an-activity"></a>Darbības definēšana
 
-Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākiem datu avotiem. Identificējiet šīs entītijas un atlasiet darbības, kuras vēlaties skatīt klienta laika skalā. Izvēlieties entītiju, kurā ir jūsu mērķa darbība vai darbības.
-
-Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut klienta laika skalā, un entītijas bez **Datuma** laukiem nevar pievienot. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
+Datu avoti ietver entītijas ar transakciju un darbību datiem no vairākiem datu avotiem. Identificējiet šīs entītijas un atlasiet darbības, kuras vēlaties skatīt klienta laika skalā. Izvēlieties entītiju, kurā ir jūsu mērķa darbība vai darbības.
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
-1. Atlasiet **Pievienot darbību**, lai sāktu vadīti iestatīt darbību.
+1. Atlasiet **Pievienot darbību**.
 
-1. Darbībā **Darbības dati** iestatiet šādu lauku vērtības:
+   > [!NOTE]
+   > Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut klienta laika skalā, un entītijas bez **Datuma** laukiem nevar pievienot. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
 
-   - **Darbības nosaukums**: Atlasiet savas darbības nosaukumu.
+1. Rūtī **Pievienot darbību** iestatiet šādu lauku vērtības:
+
    - **Entītija**: Atlasiet entītiju, kurā ir transakciju vai darbību dati.
    - **Primārā atslēga**: Atlasīt lauku, kas unikāli identificē ierakstu. Tajā nedrīkst ietvert dublētas vērtības, tukšas vērtības vai trūkstošas vērtības.
+   - **Laikspiedols**: Atlasiet lauku, kas norāda darbības sākuma laiku.
+   - **Notikums**: Atlasiet lauku, kas ir darbības notikums.
+   - **Tīmekļa adrese** : Atlasiet lauku, kas norāda URL, kas nodrošina papildinformāciju par šo darbību. Piemēram, transakciju sistēma, kas ģenerē šo darbību. Šis URL var būt jebkurš lauks no datu avota, vai arī to var būvēt kā jaunu lauku, izmantojot Power Query transformāciju. Šie URL dati tiks saglabāti Vienotās darbības entītijā, ko var patērēt pa straumi, izmantojot API.
+   - **Detalizēta informācija**: Pēc izvēles atlasiet lauku, kas tiek pievienots papildu informācijai.
+   - **Ikona**: Pēc izvēles atlasiet ikonu, kas apzīmē šo darbību.
+   - **Darbības tips**: Definējiet darbības tipa atsauci uz Common Data Model, kas vislabāk apraksta darbības semantisko definīciju.
 
-   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Iestatiet darbības datus ar nosaukumu, entītiju un primāro atslēgu.":::
+1. Sadaļā **Relācijas iestatīšana** konfigurējiet detalizēto informāciju, lai savienotu savus darbību datus ar atbilstošo klientu.
 
-1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**.
-
-1. Solī **Attiecības** konfigurējiet detalizētu informāciju, lai darbības datus savienotu ar atbilstošo klienta ierakstu. Šajā darbībā tiek vizualizēts entītiju savienojums.  
-
-   - **Pirmais**: Ārējs darbību entitījas lauks, kuru izmantos, lai izveidotu relāciju ar citu entitīju.
-   - **Otrais**: Atbilstošā avota klienta entitīja, ar kuru jūsu entitījai būs relācija. Ir iespējams izveidot relāciju tikai ar avota klientu entitījām, kuras tiek izmantotas datu apvienošanas procesā.
-   - **Trešā**: Ja jau pastāv relācija starp šo darbības entitīju un atlasīto avota klienta entitīju, relācijas nosaukums būs tikai lasāmā režīmā. Ja šāda relācija nepastāv, tiks izveidota jauna relācija ar šajā lodziņā sniegto nosaukumu.
-
-   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Entītiju relācijas definēšana.":::
-
-   > [!TIP]
-   > B2B vidēs varat atlasīt starp uzņēmuma entītijām un citām entītijām. Atlasot uzņēmuma entītiju, tiek automātiski iestatīts attiecību ceļš. Citām entītijām attiecību ceļš jādefinē pāri vienai vai vairākām entītijām ar aizstācību, līdz tiek sasniegta uzņēmuma entītija.
-
-1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. 
-
-1. Darbībā **Darbību apvienošana** atlasiet darbības nosaukumu un savas darbības sākuma laiku. 
-   - **Obligātie lauki**
-      - **Notikuma darbība**: Lauks, kas ir šīs darbības notikums.
-      - **Laikspiedols**: Lauks, kas norāda uz darbības sākuma laiku.
-
-   - **Neobligātie lauki**
-      - **Papildu informācija**: Lauks ar atbilstošu informāciju par šo darbību.
-      - **Ikona**: Ikona, kas vislabāk atbilst šim darbības tipam.
-      - **Tīmekļa adrese**: Lauks, kurā ir vietrādis URL ar informāciju par šo darbību. Piemēram, transakciju sistēma, kas ģenerē šo darbību. Šis URL var būt jebkurš datu avots lauks, vai arī to var veidot kā jaunu lauku, izmantojot Power Query transformāciju. URL dati tiks glabāti entitījā *Apvienotās darbības*, kuru var patērēt lejupstraumē, izmantojot [API](apis.md).
-
-   - **Rādīt laika skalā**
-      - Izvēlieties, vai vēlaties atainot šo darbību savu klientu profilu laika skalas skatā. Atlasiet **Jā**, lai rādītu darbību laika skalā vai **Nē**, lai to paslēptu.
-
-      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Norādiet klienta darbības datus apvienoto darbību entitījā.":::
-
-1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. Varat atlasīt **Pabeigt un pārskatīt**, lai saglabātu darbību ar darbības veidu iestatītu uz **Cita**. 
-
-1. Darbībā **Darbības veids** izvēlieties darbības veidu un, ja vēlaties, atlasiet, vai vēlaties semantiski kartēt dažus darbību veidus, kurus izmantot citos Customer Insights apgabalos. Pašlaik *Atsauksme*, *Lojalitāte*, *SalesOrder*, *SalesOrderLine* un *Abonementa* darbību veidi var tikt kartēti semantiski pēc tam, kad ir saņemta piekrišana kartēt laukus. Ja jaunajai darbībai nav atbilstoša darbības veida, varat atlasīt *Cita* vai *Izveidot jaunu*, lai izveidotu pielāgotu darbības veidu.
-
-1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. 
-
-1. Darbībā **Pārskatīt** pārbaudies savu atlasi. Atgriezieties pie iepriekšējām darbībām un, ja nepieciešams, atjauniniet informāciju.
-
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Pārskatiet darbībai norādītos laukus.":::
+    - **Darbības entītijas lauks**: Atlasiet lauku savā darbības entītijā, kurš tiks izmantots relācijas izveidei ar citu entītiju.
+    - **Klienta entītija**: Atlasiet atbilstošo avota klienta entītiju, ar kuru jūsu darbības entītijai tiks izveidota relācija. Var saistīt tikai tās avota klienta entītijas, kuras tiek izmantotas datu apvienošanas procesā.
+    - **Klienta entītijas lauks**: Šajā laukā ir norādīta avota klienta entītijas primārā atslēga, kas atlasīta kartēšanas procesā. Šis primārās atslēgas lauks avota klienta entītijā tiek izmantots, lai izveidotu relāciju ar darbības entītiju.
+    - **Nosaukums**: Ja relācija starp šo darbības entītiju un atlasīto avota klienta entītiju jau pastāv, relācijas nosaukums būs tikai lasāmā režīmā. Ja šādas relācijas nav, tiek izveidota jauna relācija ar šeit norādīto nosaukumu.
    
-1. Atlasiet **Saglabāt darbību**, lai piemērotu izmaiņas, un atlasiet **Gatavs**, lai atgrieztos **Dati** > **Darbības**. Šeit ir redzams, kuras darbības tiek rādītas laika skalā. 
+   > [!div class="mx-imgBorder"]
+   > ![Entītiju relācijas definēšana](media/activities-entities-define.png "Entītiju relācijas definēšana")
 
-1. Lapā **Darbības** atlasiet **Palaist**, lai apstrādātu darbību. 
+1. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+1. Lapā **Darbības** atlasiet **Palaist**.
 
-## <a name="manage-existing-activities"></a>Esošo darbību pārvaldība
+> [!TIP]
+> Uzdevumiem/procesiem ir [seši statusu tipi](system.md#status-types). Turklāt vairums procesu [ir atkarīgi no citiem pakārtotiem procesiem](system.md#refresh-policies). Varat atlasīt procesa statusu, lai skatītu detalizētu informāciju par visa uzdevuma norisi. Pēc tam, kad vienam no darba uzdevumiem esat atlasījis **Skatīt detalizētu informāciju**, jūs redzēsit papildinformāciju: apstrādes laiku, pēdējās apstrādes datumu un visas kļūdas un brīdinājumus, kas saistīti ar uzdevumu.
 
-Lapā **Dati** > **Darbības** varat skatīt visas saglabātās darbības un tās pārvaldīt. Katru darbību uzrāda rinda, kurā ir iekļauta arī informācija par avotu, entitīju un darbības veidu.
+## <a name="edit-an-activity"></a>Darbības rediģēšana
 
-Atlasot darbību ir pieejamas šādas darbības. 
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
-- **Rediģēt**: Priekšstatījuma darbībā atver darbības iestatīšanu. Šajā darbībā varat mainīt jebkuru vai visas konfigurācijas. Pēc konfigurācijas maiņas atlasiet **Saglabāt darbību** un **Palaist**, lai apstrādātu izmaiņas.
+2. Atlasiet darbības entītiju, kuru vēlaties rediģēt, un atlasiet **Rediģēt**. Vai arī varat novietot rādītāju virs entītijas rindas un atlasīt ikonu **Rediģēt**.
 
-- **Pārdēvēt**: Atver dialogu, kurā var ievadīt citu atlasītās darbības nosaukumu. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
+3. Noklikšķiniet uz ikonas **Rediģēt**.
 
-- **Dzēst**: Atver dialoglodziņu, kurā var apstriprināt atlasītās darbības dzēšanu. Varat vienlaikus arī dzēst vairāk nekā vienu darbību, atlasot darbības un pēc tam noklikšķinot uz dzēšanas ikonas. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
+4. **Rediģēšanas darbības** rūtī atjauniniet vērtības un atlasiet vienumu **Saglabāt**.
 
-## <a name="view-activity-timelines-on-customer-profiles"></a>Darbību laika grafiku skatīšana klientu profilos
+5. Lapā **Darbības** atlasiet **Palaist**.
 
-Pēc klientu darbību konfigurēšanas atlasiet vienumu **Rādīt darbību laika skalā** darbību konfigurācijā, lai atrastu visas klienta darbības savā klienta profilā.
+## <a name="delete-an-activity"></a>Darbības dzēšana
 
-Lai atvērtu klienta laika skalu, dodieties uz **Klienti** un izvēlieties klienta profilu, kuru vēlaties skatīt.
+1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
-Ja klients ir piedalījies jūsu konfigurētajā darbībā, tā būs sadaļā **Darbības laika grafiks**.
+2. Atlasiet darbības entītiju, kuru vēlaties noņemt, un atlasiet **Dzēst**. Vai arī varat novietot rādītāju virs entītijas rindas un atlasīt ikonu **Dzēst**. Turklāt vienlaikus varat atlasīt vairākas darbību entītijas, lai izdzēstu tās vienlaicīgi.
+   > [!div class="mx-imgBorder"]
+   > ![Entītiju attiecību rediģēšana vai dzēšana](media/activities-entities-edit-delete.png "Entītiju attiecību rediģēšana vai dzēšana")
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Skatiet konfigurētās darbības klientu profilos.":::
+3. Atlasiet ikonu **Dzēst**.
 
-Ir vairāki veidi, kā darbību filtrēt darbību laika skalā:
+4. Apstipriniet dzēšanu.
 
-- Varat atlasīt vienu vai vairākas darbību ikonas, lai uzlabotu rezultātus un iekļautu tikai atlasītos tipus.
-
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrējiet darbības pēc tipa, izmantojot ikonas.":::
-
-- Varat atlasīt **Filtrēt**, lai atvērtu filtrēšanas paneli laika skalas filtru konfigurēšanai.
-
-   1. Varat filtrēt pēc *ActivityType* un *Datuma*
-   1. Atlasiet **Lietot**, lai darbību laika skalā izmantotu filtrus.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtrēšanas nosacījumu konfigurēšanai izmantojiet filtrēšanas paneli.":::
-
-Lai noņemtu filtrus, atlasiet blakus katram laika skalai lietotajiem filtriem **x** vai atlasiet vienumu **Notīrīt filtrus**.
-
-
-> [!NOTE]
-> Darbību filtri tiek noņemti, kad atstājat klienta profilu. Tie ir jālieto ikreiz, kad atverat klienta profilu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

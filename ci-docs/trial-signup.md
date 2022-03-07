@@ -5,15 +5,16 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
+ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
-ms.translationtype: MT
+ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350232"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645500"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Reģistrēšanās bezmaksas Dynamics 365 Customer Insights izmēģinājumversijai
 
@@ -31,12 +32,23 @@ Izmēģinājumversija tiks ielādēta dažu minūšu laikā. Pēc tam varat sāk
 
 Jūsu izmēģinājumversijas vidē ir iekļauti tie paši līdzekļi, kas maksas versijā. Tālāk norādītās saites palīdzēs izmantot dažus no galvenajiem līdzekļiem.
 
+### <a name="audience-insights"></a>Auditorijas ieskati
+
 - [Ātrais sākums auditorijas ieskatiem.](audience-insights/get-started.md)
 - [Pievienojiet vairāk lietotāju un piešķiriet atļaujas.](audience-insights/permissions.md)
 - [Izgūstiet savus datu avotus](audience-insights/data-sources.md) un palaidiet tos [datu unificēšanas procesā](audience-insights/data-unification.md), lai iegūtu [vienotos klientu profilus](audience-insights/customer-profiles.md).
 - [Bagātināt vienotos klientu profilus](audience-insights/enrichment-hub.md) vai [palaist prognozējošus modeļus](audience-insights/predictions-overview.md).
 - Izveidojiet [segmentus](audience-insights/segments.md), lai grupētu klientus un [pasākumus](audience-insights/measures.md) KPI pārskatīšanai.
 - Iestatiet [savienojumus](audience-insights/connections.md) un [eksportu](audience-insights/export-destinations.md), lai apstrādātu datu apakškopas citās lietojumprogrammās.
+
+### <a name="engagement-insights"></a>Iesaistes ieskati
+
+- [Ātrais sākums iesaistes ieskatiem.](engagement-insights/get-started.md)
+- [Izveidot darbvietu](engagement-insights/create-workspace.md) un pievienot dalībniekus.
+- [Pievienojiet kodu tīmekļa vietnei](engagement-insights/instrument-website.md) vai [mobilajai programmai](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
+- Skatiet [reāllaika ziņojumu](engagement-insights/view-reports.md) vai izveidojiet [pielāgotus ziņojumus](engagement-insights/custom-reports.md).
+- [Izveidojiet precizētus notikumus](engagement-insights/refined-events.md) eksportēšanai.
+- [Datu eksportēšana](engagement-insights/export-events.md) uz Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Papildu resursi
 
