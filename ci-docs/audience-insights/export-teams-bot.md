@@ -1,27 +1,26 @@
 ---
 title: Bots pakalpojumam Microsoft Teams
 description: Ar bota palīdzību uzmeklējiet vienotos klientu profilus pakalpojumā Microsoft Teams.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 03299610fd41a7e142e3c9723fad56ce7f90e083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267961"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232111"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams bots Dynamics 365 Customer Insights (priekšskatījums)
 
 Pievienojieties Microsoft Teams, lai ļautu botam uzmeklēt vienotos klientu profilus Teams kanālos.
 
 > [!div class="mx-imgBorder"]
-> ![Programmas Teams bots, kas rāda klienta ierakstu](media/teams-bot.png "Programmas Teams bots rāda klienta ierakstu")
+> ![Programmas Teams bots, kas rāda klienta ierakstu.](media/teams-bot.png "Programmas Teams bots rāda klienta ierakstu")
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -31,7 +30,10 @@ Lai iestatītu un konfigurētu botu, ir jāizpilda tālāk aprakstītie priekšn
 - Ir pabeigts [apvienošanas process](data-unification.md).
 - Lauki tiek pievienoti [meklēšanas un filtru indeksam](search-filter-index.md).
 - Customer Insights un Teams ir vienā un tajā pašā organizācijā.
+- Jūsu vides primārā mērķauditorija ir iestatīta atsevišķiem klientiem. Biznesa konti netiek atbalstīti.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Bota konfigurēšana
 
 1. Sadaļā Auditorijas ieskati ejiet uz **Administrators** > **Eksportēšanas galamērķi**.

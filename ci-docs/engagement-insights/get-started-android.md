@@ -3,18 +3,18 @@ title: Darba sākšana ar Android SDK
 description: Uzziniet, kā personalizēt un palaist Android SDK
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
-ms.date: 06/23/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: b06822b2c2d6a859bdf808f7800baef43c4ab874
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036927"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226178"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Darba sākšana ar Android SDK
 
@@ -35,17 +35,38 @@ Tālāk uzskaitītās konfigurācijas opcijas ir iespējams nodot SDK:
 
 - Pieņemšanas atslēga (lai iegūtu, skatiet tālāk sniegtos norādījumus)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>1. darbība. SDK integrēšana programmā
+## <a name="integrate-the-sdk-into-your-application"></a>SDK integrēšana programmā
 Sāciet procesu, atlasot darbvietu, atlasot Android mobilo platformu un lejupielādējot Android SDK.
 
 - Lai atlasītu darbvietu, izmantojiet darbvietas pārslēdzēju kreisās puses navigācijas rūtī.
 
 - Ja jums nav esošas darbvietas, atlasiet **Jauna darbvieta** un izpildiet tālāk norādītās darbības, lai izveidotu [jaunu darbvietu](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>2. darbība. SDK konfigurēšana
+- Pēc darbvietas izveides dodieties uz **Administrators** > **Darbvieta** un pēc tam atlasiet **Instalēšanas rokasgrāmata**.
 
-1. Pēc darbvietas izveides dodieties uz **Administrators** > **Darbvieta** un pēc tam atlasiet **Instalēšanas rokasgrāmata**. 
+## <a name="configure-the-sdk"></a>SDK konfigurēšana
 
+Pēc SDK lejupielādes ar to var strādāt, izmantojot Android Studio, lai iespējotu un definētu notikumus. Ir divi veidi:
+### <a name="option-1-use-jitpack-recommended"></a>1. iespēja: izmantojiet JitPack (ieteicams)
+1. Pievienojiet JitPack krātuvi saknes `build.gradle`:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Pievienojiet atkarību:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-use-download-link"></a>2. iespēja: izmantojiet lejupielādes saiti
 1. Lejupielādējiet [iesaistes ieskatus Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) un ievietojiet `eiandroidsdk-debug.aar` failu `libs` mapē.
 
 1. Atveriet projekta līmeņa `build.gradle` failu un pievienojiet norādītos fragmentus:
@@ -62,12 +83,23 @@ Sāciet procesu, atlasot darbvietu, atlasot Android mobilo platformu un lejupiel
     }
     ```
 
-1. Iestatiet iesaistes ieskatus SDK konfigurācijai, izmantojot savu `AndroidManifest.xml` failu, kas atrodas mapē `manifests`. 
+## <a name="enable-auto-instrumentation"></a>Automātiskās instrumentācijas iespējošana
+
+1. Pievienojiet tīkla un interneta atļaujas `AndroidManifest.xml` failā, kas atrodas mapē `manifests`.
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+
+1. Iestatiet iesaistes ieskatus SDK konfigurācijai, izmantojot savu `AndroidManifest.xml` failu, kas atrodas mapē .
+
 1. Kopējiet XML fragmentu no **Instalēšanas rokasgrāmatas**. `Your-Ingestion-Key` jābūt automātiski aizpildītam.
 
    > [!NOTE]
    > Sadaļu `${applicationId}` nav nepieciešams aizstāt. Tā tiek aizpildīta automātiski.
-   
+
 
    ```xml
    <application>
@@ -85,20 +117,24 @@ Sāciet procesu, atlasot darbvietu, atlasot Android mobilo platformu un lejupiel
    </application>
    ```
 
-1. Iespējojiet vai atspējojiet `View` notikumu automātisku tveršanu, iestatot iepriekš minētajā `autoCapture` laukā vērtību `true` vai `false`.
+1. Iespējojiet vai atspējojiet `View` notikumu automātisku tveršanu, iestatot iepriekš minētajā `autoCapture` laukā vērtību `true` vai `false`. 
 
-1. (Nav obligāti) Citas konfigurācijas ietver galapunkta kolektora URL iestatīšanu. Tās var pievienot zem pieņemšanas atslēgas metadatiem sadaļā `AndroidManifest.xml`:
-    ```xml
+   >[!NOTE]
+   >`Action` notikumi jāpievieno manuāli.
+
+1. (Nav obligāti) Citas konfigurācijas ietver galapunkta kolektora URL iestatīšanu. Tos var pievienot zem norīšanas galvenajiem metadatiem programmā `AndroidManifest.xml`.
+
+   ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-    ```
+   ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>3. darbība. Inicializējiet SDK sadaļā MainActivity 
+## <a name="implement-custom-events"></a>Pielāgotu notikumu ieviešana
 
-Pēc SDK inicializēšanas varat strādāt ar notikumiem un to rekvizītiem MainActivity vidē.
+Pēc SDK inicializēšanas varat strādāt ar notikumiem un to rekvizītiem `MainActivity` vidē.
 
-    
+
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -110,7 +146,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>Iestatīt rekvizītu visiem notikumiem (nav obligāti)
-    
+
 Java:
 ```java
 analytics.setProperty("year", 2021);
@@ -147,7 +183,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Lietotāja informācijas iestatīšana savam notikumam (nav obligāti)
+## <a name="set-user-details-for-your-event-optional"></a>Lietotāja informācijas iestatīšana savam notikumam (nav obligāti)
 
 SDK ļauj definēt lietotāja informāciju, ko var nosūtīt kopā ar katru notikumu. Varat norādīt lietotāja informāciju, izsaucot `setUser(user: User)` API uz `Analytics` līmeni.
 

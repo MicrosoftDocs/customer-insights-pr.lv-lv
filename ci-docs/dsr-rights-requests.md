@@ -3,18 +3,17 @@ title: Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR | Microsoft
 description: Atbilde uz datu subjektu prasībām saistībā ar Dynamics 365 Customer Insights auditorijas ieskatiem.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483686"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350278"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -79,71 +78,78 @@ Lai eksportētu datus, nomnieka administrators var veikt tālāk norādītas dar
 2. Atzīstiet apstiprinājumu eksportēt pieprasītā lietotāja datus.
 3. Saņemiet eksportētos datus, izmantojot nomnieka administratora e-pasta adresi.
 
-## <a name="engagement-insights"></a>Iesaistes ieskati
+## <a name="consent-management-preview"></a>Piekrišanas pārvaldība (priekšskatījums)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Notikuma datu, kas ietver lietotāja identificējamu informāciju, dzēšana un eksportēšana
+Piekrišanas pārvaldības iespēja tieši neapkopo lietotāju datus. Tā importē un apstrādā tikai tos piekrišanas datus, ko lietotāji sniedz citās lietojumprogrammās.
 
-Nākamajās sadaļās ir aprakstīts, kā dzēst un eksportēt notikumu datus, kuros var būt ietverti personiskie dati.
+Lai noņemtu piekrišanas datus par konkrētiem lietotājiem, noņemiet tos datu avotos, kas uzņemti piekrišanas pārvaldības iespējās. Pēc datu avots atsvaidzināšanas noņemtie dati tiks dzēsti arī piekrišanas centrā. Lietojumprogrammas, kas izmanto piekrišanas entītiju, arī dzēsīs datus, kas pēc atsvaidzināšanas tika noņemti [avotā](audience-insights/system.md#refresh-processes). Mēs iesakām ātri atsvaidzināt datu avotus pēc tam, kad esat atbildējusi uz datu subjekta pieprasījumu, lai noņemtu lietotāja datus no visiem citiem procesiem un lietojumprogrammām.
 
-Lai dzēstu vai eksportētu datus:
 
-1. Atzīmējiet notikuma rekvizītus, kuros ir dati ar personisku informāciju.
-2. Dzēsiet vai eksportējiet datus, kas saistīti ar noteiktām vērtībām (piemēram, norādīto lietotāja ID).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Atzīmējiet vai atjauniniet notikuma rekvizītus
+### Deleting and exporting event data containing end user identifiable information
 
-Personiskie dati tiek atzīmēti notikuma rekvizītu līmenī. Vispirms atzīmējiet rekvizītus, kas tiek uzskatīti par dzēšanas vai eksportēšanas rekvizītiem.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Lai notikuma rekvizītam pievienotu atzīmi, kurā ir iekļauta personiska informācija, veiciet šīs darbības:
+To delete or export data:
 
-1. Atveriet darbvietu, kurā ir notikums.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Dodieties uz **Dati** > **Notikumi**, lai skatītu atlasītās darbvietas notikumu sarakstu.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Atlasiet notikumu, ko vēlaties atzīmēt.
+1. Select the event you want to tag.
 
-1. Atlasiet **Rediģēt rekvizītus**, lai atvērtu rūts priekšskatījuma skatu visiem atlasītā notikuma rekvizītiem.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Atlasiet **...** un pēc tam izvēlieties **Rediģēt**, lai atvērtu dialogu **Atjaunināt rekvizītu**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Rediģēt notikumu.](engagement-insights/media/edit-event.png "Rediģēt notikumu")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Lodziņā **Atjaunināt rekvizītu** izvēlieties **...** augšējā labajā stūrī un pēc tam izvēlieties lodziņu **Satur EUII**. Izvēlieties **Atjaunināt**, lai saglabātu izmaiņas.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Saglabājiet izmaiņas.](engagement-insights/media/update-property.png "Saglabājiet izmaiņas")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Ja nepieciešams, katru reizi, kad notikumu shēma mainās vai izveidojat jaunu notikumu, ieteicams novērtēt saistītos notikumu rekvizītus un atzīmēt tos vai noņemt atzīmi no tiem, kas ietver personiskus datus.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Dzēst vai eksportēt atzīmētos notikuma datus
+#### Delete or export tagged event data
 
-Ja visi notikuma rekvizīti ir atzīmēti kā aprakstīts iepriekšējā darbībā, vides administrators var izdot dzēšanas pieprasījumu, salīdzinot ar atzīmētajiem notikuma datiem.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Lai pārvaldītu EUII dzēšanu vai eksportētu pieprasījumus
+To manage EUII deletion or export requests
 
-1. Dodieties uz **Administrators** > **Vide** > **Iestatījumi**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Sadaļā **Pārvaldīt gala lietotāju identificējošo informāciju (EUII)** atlasiet **Pārvaldīt EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Dzēšana
+##### Deletion
 
-Dzēšanas nolūkā komatatdalīto lietotāju ID sarakstu var ievadīt sadaļā **Dzēst gala lietotāja identificējošo informāciju (EUII)**. Šie ID pēc tam tiks salīdzināti ar visiem atzīmētajiem notikumu rekvizītiem visos pašreizējās vides projektos, izmantojot precīzu virkņu atbilstību. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Ja rekvizīta vērtība atbilst vienam no nodrošinātajiem ID, saistītais notikums tiks neatgriezeniski dzēsts. Šī darbība ir neatgriezeniska, tāpēc dzēšana ir jāapstiprina pēc vienuma **Dzēst** atlasīšanas.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Eksportēšana
+##### Export
 
-Eksportēšanas process ir identisks dzēšanas procesam, kas attiecas uz notikuma rekvizītu vērtību definēšanu sadaļā **Eksportēt gala lietotāja identificējošo informāciju (EUII)**. Turklāt jānorāda **Azure Blob krātuves URL**, lai norādītu eksportēšanas galamērķi. Azure BLOB URL ir jābūt iekļautam [Koplietojamās piekļuves parakstā (SAS)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Pēc vienuma **Eksportēt** atlasīšanas, visi pašreizējās darba grupas notikumi satur atbilstošos, atzīmētos rekvizītus, kas tiks eksportēti CSV formātā uz eksportēšanas galamērķi.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Laba prakse
+### Good practices
 
-* Mēģiniet izvairīties no notikumu sūtīšanas, kuros ir ietverti personiski dati.
-* Ja jānosūta notikumi, kuros ir EUII dati, ierobežojiet notikumu un notikumu rekvizītu skaitu, kuros ir EUII dati. Ideālā gadījumā aprobežojieties ar vienu šādu notikumu.
-* Pārliecinieties, vai nosūtītajiem personiskajiem datiem ir piekļuve pēc iespējas vairāk personām.
-* Notikumiem, kuros ir personiskie dati, pārliecinieties, vai ir iestatīts viens rekvizīts, lai ģenerētu unikālu identifikatoru, ko var viegli saistīt ar konkrētu lietotāju (piemēram, lietotāja ID). Šādi ir vienkāršāk nodalīt datus un eksportēt vai dzēst pareizos datus.
-* Katram notikumam atzīmējiet tikai vienu rekvizītu, kurā ir iekļauti personiskie dati. Vislabāk - tas, kurā ir tikai unikālais identifikators.
-* Neatzīmējiet rekvizītus, kas ietver zīmju rindas vērtības (piemēram, veselu pieprasījuma pamattekstu). Iesaistes ieskatu iespēja izmanto precīzu virkņu atbilstību, izlemjot, kurus notikumus dzēst vai eksportēt.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

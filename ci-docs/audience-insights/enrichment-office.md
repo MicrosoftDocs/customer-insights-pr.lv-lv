@@ -1,24 +1,23 @@
 ---
 title: Bagātināt klientu profilus ar datiem no Microsoft Office 365
-description: Izmantojiet patentētus datus, Microsoft Office lai bagātinātu klientu profilus ar iesaistes datiem.
+description: Izmantojiet patentētus datus, lai Microsoft Office bagātinātu klientu profilus ar iesaistes datiem.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889779"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228483"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Klientu profilu bagātināšana ar iesaistes datiem (priekšskatījums)
 
-Izmantojiet datus, Microsoft Office 365 lai bagātinātu klientu kontu profilus ar ieskatiem par Office 365 saistībām, izmantojot lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu esošo sapulču skaits. Dati par atsevišķiem lietotājiem nav pieejami. 
+Izmantojiet datus, lai Microsoft Office 365 bagātinātu klientu kontu profilus ar ieskatiem par saistībām, izmantojot Office 365 lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu esošo sapulču skaits. Dati par atsevišķiem lietotājiem nav pieejami. 
 
 Šī bagātināšana ir pieejama šādos reģionos: Apvienotajā Karalistē, Eiropā, Ziemeļamerikā.
 
@@ -27,40 +26,40 @@ Izmantojiet datus, Microsoft Office 365 lai bagātinātu klientu kontu profilus 
 Lai konfigurētu bagātināšanu, jāievēro šādi priekšnosacījumi:
 
 - Jums ir aktīva Office 365 mākoņa licence.
-- Jums ir [vienoti klientu](customer-profiles.md) profili, pamatojoties uz biznesa [kontiem](work-with-business-accounts.md).
-- Customer Insights vidē ir jābūt [Microsoft Dataverse piesaistītai organizācijai](create-environment.md#step-3-connect-to-microsoft-dataverse).
+- Jums ir [vienoti klientu profili](customer-profiles.md), pamatojoties uz [biznesa kontiem](work-with-business-accounts.md).
+- Jūsu Customer Insights vidē ir jābūt piesaistītai [Microsoft Dataverse organizācijai](create-environment.md#step-3-connect-to-microsoft-dataverse).
 - Jums ir [administratora](permissions.md#administrator) atļaujas.
-- Jums ir vai var saņemt Office 365 nomnieka administratora piekrišanu izmantot Office 365 datus, lai sniegtu **ieskatus organizācijai** Dynamics 365 lietojumprogrammās.
+- Jums ir vai var saņemt nomnieka administratora piekrišanu Office 365 izmantot Office 365 datus, lai sniegtu **ieskatus organizācijai** Dynamics 365 lietojumprogrammās.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
 1. Sadaļā Auditorijas ieskati skatiet **Dati** > **Darbības**.
 
-1. Dodieties uz **cilni Atklāšana** un elementā Konta iesaiste atlasiet **Bagātināt** **manus** datus.
+1. Dodieties uz **cilni Atklāšana** un elementā **Konta iesaiste** atlasiet **Bagātināt manus datus**.
 
    :::image type="content" source="media/enrichment-office-tile.png" alt-text="Konta piesaistes elements.":::
    
-1. **Darbības Pārskats atlasiet Tālāk un** **ievadiet** e-pasta adreses no savas organizācijas, kurai tiks apkopoti Office dati. Attiecīgajai saziņai tiek apstrādāti tikai dati no norādītajām e-pasta adresēm. Labākā prakse ir izmantot e-pasta grupas, piemēram, *ASV pārdošanas komandu, kas ir viegli* pārvaldāmas programmā Office 365. E-pasta adrešu skaits grupās tiek atrisināts un parādīts. Kopējam e-pasta adrešu skaitam jābūt vismaz 2, un tas nedrīkst pārsniegt 2500.
+1. Darbības Pārskats **atlasiet** Tālāk **un** ievadiet e-pasta adreses no savas organizācijas, kurai tiks apkopoti Office dati. Attiecīgajai saziņai tiek apstrādāti tikai dati no norādītajām e-pasta adresēm. Labākā prakse ir izmantot e-pasta grupas, piemēram, *ASV pārdošanas komandu*, kas ir viegli pārvaldāmas programmā Office 365. E-pasta adrešu skaits grupās tiek atrisināts un parādīts. Kopējam e-pasta adrešu skaitam jābūt vismaz 2, un tas nedrīkst pārsniegt 2500.
 
    :::image type="content" source="media/enrichment-office-email-addresses.png" alt-text="Konta iesaistes e-pasta adreses.":::
 
-1. Pārskatiet piekrišanas paziņojumu, atzīmējiet **izvēles rūtiņu Es piekrītu un** atlasiet **Tālāk**.
+1. Pārskatiet piekrišanas paziņojumu, atzīmējiet **izvēles rūtiņu Es piekrītu** un atlasiet **Tālāk**.
 
 1. Atlasiet debitora datu kopu un atlasiet **Tālāk**.
 
 1. Kartējiet kontaktpersonas e-pasta adreses lauku un atlasiet **Tālāk**.
 
-1. Pārskatiet bagātināšanas konfigurāciju, piešķiriet bagātināšanai nosaukumu un atlasiet **Saglabāt bagātināšanu,** lai saglabātu bagātināšanu.
+1. Pārskatiet bagātināšanas konfigurāciju, piešķiriet bagātināšanai nosaukumu un atlasiet **Saglabāt bagātināšanu**, lai saglabātu bagātināšanu.
 
 ## <a name="office-365-tenant-administrator-consent"></a>Office 365 nomnieka administratora piekrišana
 
-Lai Office 365 aktivizētu bagātināšanu, ir nepieciešama nomnieka administratora piekrišana. Saglabājot bagātināšanu, nomnieka administratoriem tiek nosūtīts e-pasta Office 365 ziņojums, kurā tiek lūgts pārskatīt un piekrist, atļaujot Dynamics 365 lietojumprogrammām izmantot jūsu uzņēmumu Office 365 datus, lai sniegtu **ieskatus organizācijai**. Office 365 Nomnieka administrators var arī piekrist tieši savā Office 365 administratora konsolē, atlasot **Ieskati organizācijai**.
+Lai aktivizētu bagātināšanu, Office 365 ir nepieciešama nomnieka administratora piekrišana. Saglabājot bagātināšanu, nomnieka administratoriem tiek nosūtīts Office 365 e-pasta ziņojums, kurā tiek lūgts pārskatīt un piekrist, ka Dynamics 365 lietojumprogrammas var izmantot jūsu uzņēmuma Office 365 datus, lai sniegtu **ieskatus organizācijai**. Nomnieka Office 365 administrators var arī piekrist tieši savā Office 365 administratora konsolē, atlasot **Ieskati organizācijai**.
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Bagātināšanas palaišana pirmo reizi
 
-Kad bagātināšana tiek uzsākta pirmo reizi, pēc tam, kad Office 365 nomnieka administrators ir devis piekrišanu, sākas datu Office 365 lejupielāde. Šis process aizņem kādu laiku. Paredzēts, ka pirmais bagātināšanas brauciens notiks ar sešu stundu kavēšanos. Dienu skaitu, ko dati aptver kontu piesaistes pārskata lapā pēc bagātināšanas pabeigšanas. Ar lielu datu apjomu pēc dažām dienām vēlreiz palaidiet bagātināšanu. Tas nodrošina, ka dati ir pabeigti par visu laika logu, kas ir viens gads.
+Kad bagātināšana tiek uzsākta pirmo reizi, pēc tam, kad nomnieka Office 365 administrators ir devis piekrišanu, sākas datu lejupielāde Office 365. Šis process aizņem kādu laiku. Paredzēts, ka pirmais bagātināšanas brauciens notiks ar sešu stundu kavēšanos. Dienu skaitu, ko dati aptver kontu piesaistes pārskata lapā pēc bagātināšanas pabeigšanas. Ar lielu datu apjomu pēc dažām dienām vēlreiz palaidiet bagātināšanu. Tas nodrošina, ka dati ir pabeigti par visu laika logu, kas ir viens gads.
 
-Lai sāktu procesu, lapā Konta iesaistes konfigurācija atlasiet **Palaist**. Turklāt sistēmu var ļaut sistēmai automātiski palaist bagātināšanu kā daļu no [ieplānotās atsvaidzināšanas](system.md#schedule-tab). Pēc noklusējuma bagātināšana notiek reizi nedēļā.
+Lai sāktu procesu, lapā Konta iesaistes konfigurācija atlasiet **Palaist**. Turklāt sistēmu var ļaut sistēmai automātiski palaist bagātināšanu kā daļu no plānotās [atsvaidzināšanas](system.md#schedule-tab). Pēc noklusējuma bagātināšana notiek reizi nedēļā.
 
 Atkarībā no Office datu lieluma bagātināšanas darbības pabeigšanai var paiet vairākas stundas.
 
@@ -70,7 +69,7 @@ Palaižot bagātināšanu, Microsoft apstrādās datus Office 365 atbilstības r
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 
-Pēc bagātināšanas procesa palaišanas dodieties uz **My** enrichments, lai pārskatītu bagātināšanas rezultātus. Jūs atradīsiet kopējo bagātināto klientu skaitu un pārskatu par bagātināšanas rezultātiem. Tas ietver apstrādāto e-pasta ziņojumu un sapulču skaitu, dienu skaitu, par kurām dati ir apkopoti, un daudz ko citu.
+Pēc bagātināšanas procesa palaišanas dodieties uz **My enrichments**, lai pārskatītu bagātināšanas rezultātus. Jūs atradīsiet kopējo bagātināto klientu skaitu un pārskatu par bagātināšanas rezultātiem. Tas ietver apstrādāto e-pasta ziņojumu un sapulču skaitu, dienu skaitu, par kurām dati ir apkopoti, un daudz ko citu.
 
 Jūs atradīsiet arī diagrammu ar bagātināto klientu skaitu laika gaitā un bagātināšanas datu priekšskatījumu.  
 
@@ -100,7 +99,7 @@ Visi dati tiek apkopoti līdz konta līmenim. Sistēma katram kontam aprēķina 
 | Apkopojuma līmenis (gads, mēnesis vai nedēļa)                                          |  Apkopojuma līmenis                        | 
 
 
-Pārskatiet bagātinātos datus, **sadaļā** Skatīt vairāk. Tas atver *Office* entītiju. Entītiju var atrast **arī** **datu entītiju grupā Bagātināšana** > **·**. Jūs atradīsiet arī *Office_UserEntity,* kurā ir Active Directory IDA e-pasta adresēm, kas tika izvēlētas bagātināšanas konfigurācijas laikā 
+Pārskatiet bagātinātos datus, **sadaļā Skatīt vairāk**. Tas atver *Office* entītiju. Entītiju **var atrast arī datuentities grupā** **Bagātināšana** > **·**. Jūs atradīsiet *arī Office_UserEntity*, kurā ir Active Directory IDA e-pasta adresēm, kas tika izvēlētas bagātināšanas konfigurācijas laikā 
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Skatiet informāciju par produkta bagātināšanu klienta kartītē
 
@@ -110,7 +109,7 @@ Konta piesaisti var apskatīt arī atsevišķu klientu kartēs. Atveriet sadaļu
 
 ## <a name="create-segments-and-measures-based-on-the-enriched-data"></a>Segmentu un pasākumu izveide, pamatojoties uz bagātinātajiem datiem
 
-Bagātinātos datus var izmantot, lai izveidotu segmentus un pasākumus, kā aprakstīts turpmāk. Piemēram, segments, kurā ir visi klienti, kuru vērtība ir vecāka par 60 *dienām kopš pēdējās e-pasta* un dienām kopš pēdējās *sapulces*. Šajā segmentā ir novecojis fails, kurus var mēģināt atkārtoti aktivizēt. 
+Bagātinātos datus var izmantot, lai izveidotu segmentus un pasākumus, kā aprakstīts turpmāk. Piemēram, segments, kurā ir visi klienti, kuru vērtība ir vecāka par *60 dienām kopš pēdējās e-pasta* un *dienām kopš pēdējās sapulces*. Šajā segmentā ir novecojis fails, kurus var mēģināt atkārtoti aktivizēt. 
 
 ## <a name="next-steps"></a>Nākamās darbības
 

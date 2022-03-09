@@ -1,20 +1,22 @@
 ---
 title: Customer Insights dati programmā Microsoft Dataverse
 description: Izmantojiet Customer Insights entītijas kā tabulas programmā Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032905"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355438"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
@@ -24,11 +26,7 @@ Customer Insights nodrošina iespēju izvades entītijas padarīt pieejamas prog
 
 **Organizācijas ar esošām Dataverse vidēm**
 
-Organizācijas, kas jau izmanto Dataverse, var [izmantot kādu no esošajām Dataverse vidēm](get-started-paid.md), administrators iestata ieskatus auditorijā. Nodrošinot Dataverse vides URL, tas tiek piesaistīts jaunajai auditorijas ieskatu videi. Lai nodrošinātu pēc iespējas labāko veiktspēju, Tajā pašā reģionā ir jāvieso Dataverse vides un Customer Insights.
-
-Lai pievienotu Dataverse vidi, veidojot auditorijas ieskatu vidi, izvērsiet **Papildu iestatījumi**. Norādiet **Microsoft Dataverse vides URL** un atzīmējiet izvēles rūtiņu **Iespējot datu kopīgošanu**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt.":::
+Organizācijas, kas jau izmanto Dataverse, var [izmantot kādu no esošajām Dataverse vidēm](create-environment.md), administrators iestata ieskatus auditorijā. Nodrošinot Dataverse vides URL, tas tiek piesaistīts jaunajai auditorijas ieskatu videi. Lai nodrošinātu pēc iespējas labāko veiktspēju, Tajā pašā reģionā ir jāvieso Dataverse vides un Customer Insights.
 
 **Jauna organizācija**
 
@@ -49,6 +47,7 @@ Dažas izvades entītijas no auditorijas ieskatiem ir pieejamas kā tabulas prog
 - [CustomerMeasure](#customermeasure)
 - [Bagātināšana](#enrichment)
 - [Prognoze](#prediction)
+- [Dalība segmentā](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -124,4 +123,17 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 | Modelis                | Virkne      | Modeļa nosaukums                                                |
 | Vērtības               | JSON virkne | Modeļa radītais atribūtu saraksts |
 | msdynci_predictionid | GUID        | Noteicošais GUID, kas izveidots no msdynci_identifier | 
-| msdynci_identifier   | Virkne      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Dalība segmentā
+
+Šajā tabulā ir ietverta klientu profilu segmenta dalības informācija.
+
+| Column        | Tipi | Apraksts                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Klienta profila ID        |
+| SegmentProvider      | String       | Lietotne, kas publicē segmentus. Noklusējums: auditorijas ieskati         |
+| SegmentMembershipType | String       | Šī segmenta dalības ieraksta debitora tips. Atbalsta vairākus veidus, piemēram, Klients, Kontaktpersona vai Konts. Noklusējums: debitors  |
+| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kurā klienta profils ir      |
+| msdynci_identifier  | String   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministisks GUID, kas ģenerēts no`msdynci_identifier`          |

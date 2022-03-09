@@ -1,20 +1,19 @@
 ---
 title: Jaunie un gaidāmie līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 01/27/2022
-ms.service: customer-insights
+ms.date: 03/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 304b508124e52552ea908f06b02bca0e2db8f944
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046722"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232667"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
 
@@ -26,6 +25,17 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>2022. gada janvāra atjauninājumi
+
+Atjauninājumi 2022. gada janvārī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsu klienta atsauksmju sentimenta analīze
+
+Customer Insights nodrošina jaunu ar MI darbināmu funkciju, lai sintezētu klientu noskaņojumu un identificētu konkrētus biznesa aspektus kā iespējas mērķtiecīgiem uzlabojumiem. Analizējot klientu rakstiskās atsauksmes, jūs varat iegūt precīzus ieskatus par zemām izmaksām. Sentimenta analīze, ko nodrošina dabiskās valodas apstrādes (NLP) modeļi, kas katram klienta ID rada divus atvasinātus ieskatus. Sentimenta vērtējums (no –5 līdz 5) un piemērojamo biznesa aspektu saraksts. 
+
+Papildinformāciju skatiet rakstā [Noskaņojuma analīze klientu atsauksmēs (Priekšskatījums)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021. gada decembra atjauninājumi
@@ -42,7 +52,7 @@ Papildinformāciju skatiet rakstā [Pieteikšanās pāradresēšanai Dynamics 36
 
 Izmantojiet datus, lai Microsoft Office 365 bagātinātu klientu kontu profilus ar ieskatiem par saistībām, izmantojot Office 365 lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu esošo sapulču skaits. Dati par atsevišķiem lietotājiem netiek kopīgoti. Šī bagātināšana ir pieejama šādos reģionos: Apvienotajā Karalistē, Eiropā, Ziemeļamerikā.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar iesaistes datiem (priekšskatījums)](enrichment-office.md)
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar iesaistes datiem (Priekšskatījums)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Papildu datu apvienošanas līdzekļi
 

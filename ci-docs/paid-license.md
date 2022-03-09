@@ -4,16 +4,15 @@ author: m-hartmann
 description: Iepazīstiet pirmās palaišanas pieredzi Dynamics 365 Customer Insights un izpētiet tās iespējas.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977681"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350140"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Darba sākšana pēc Customer Insights iegādes
 
@@ -40,10 +39,7 @@ Pirmā palaišanas pieredze palīdz jums izvēlēties sākotnējo fokusu ar Cust
 
 ## <a name="create-your-own-environment"></a>Izveidojiet savu vidi
 
-Pēc pirmās pierakstīšanās būs redzama vide ar datu paraugu. Šos datus varat izmantot, lai izpētītu līdzekļus un iepazītu programmu. Lai izmantotu savus datus, jums ir jāizveido vide, kurā ir izmantojama iespēja, kurā strādāt.
-
-- [Izveidot vidi auditorijas ieskatos.](audience-insights/get-started-paid.md)
-- [Izveidot vidi iesaistes ieskatos.](engagement-insights/create-new-environment.md) 
+Pēc pirmās pierakstīšanās būs redzama vide ar datu paraugu. Šos datus varat izmantot, lai izpētītu līdzekļus un iepazītu programmu. Lai izmantotu savus datus, jums ir [jāizveido vide](audience-insights/get-started-paid.md).
 
 
 
