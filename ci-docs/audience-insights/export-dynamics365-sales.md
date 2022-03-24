@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355026"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455871"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmentu lietošana Dynamics 365 Sales (priekšskatījums)
 
@@ -27,11 +27,11 @@ Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālā
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
 - Eksports uz Dynamics 365 Sales ir ierobežots līdz 100'000 dalībniekiem katrā segmentā.
-- Segmenta eksports uz Dynamics 365 pārdošanu var ilgt līdz 3 stundām. 
+- Segmenta eksports uz Dynamics 365 Sales var ilgt līdz 3 stundām. 
 
 ## <a name="prerequisite-for-connection"></a>Savienojuma priekšnosacījums
 
-1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Sales, izmantojot Microsoft Dataverse](connect-power-query.md).
+1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Lasiet vairāk par to, kā uzņemt kontaktpersonas no [Dynamics 365 Sales, izmantojot Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Eksportējot segmentus no auditorijas ieskatiem uz programmu Sales, netiek veidoti jauni kontaktpersonu ieraksti. Kontaktpersonu ieraksti no programmas Sales jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229041"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455961"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps savienotājs (priekšskatījums)
 
@@ -38,6 +38,8 @@ Pēc Customer Insights pievienošanas datu savienojumam varat Power Apps izvēl�
 ### <a name="retrievable-entities"></a>Izgūstamas entītijas
 
 Ar savienotāja palīdzību var izgūt tikai entītijas **Klients**, **UnifiedActivity**, **Segmenti** un **ContactProfile** ar Power Apps savienotāju. ContactProfile ir pieejama tikai auditorijas ieskatos uzņēmuma kontiem. Citas entītijas tiek rādītas, jo pamatā esošais savienotājs tās atbalsta, izmantojot trigerus Power Automate.
+
+Varat veikt ne vairāk kā 100 zvanus 60 sekundēs. API galapunktu var izsaukt vairākas reizes, izmantojot parametru $skip. [Uzziniet vairāk par parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Deleģēšana
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229973"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376701"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientu profilu bagātināšana ar demogrāfiskajiem datiem no Experian (priekšskatījums)
 
@@ -25,7 +25,7 @@ Lai konfigurētu Experian, ir jāizpilda šādi priekšnosacījumi:
 
 - Jums ir jābūt aktīvam Experian abonementam. Lai iegūtu abonementu, tieši [sazinieties ar Experian](https://www.experian.com/marketing-services/contact). [Papildinformācija par Experian datu bagātināšanu](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Administrators jau ir konfigurējis Experian savienojumu *vai* jums ir [administratora](permissions.md#administrator) atļaujas. Jums ir nepieciešams arī lietotāja ID, puses ID un modeļa numurs jūsu SSH iespējotajam drošajam transporta (ST) kontam, ko Experian izveidoja jums.
+- Administrators jau ir konfigurējis Experian savienojumu *vai* jums ir [administratora](permissions.md#admin) atļaujas. Jums ir nepieciešams arī lietotāja ID, puses ID un modeļa numurs jūsu SSH iespējotajam drošajam transporta (ST) kontam, ko Experian izveidoja jums.
 
 ## <a name="supported-countriesregions"></a>Atbalstītās valstis/reģioni
 

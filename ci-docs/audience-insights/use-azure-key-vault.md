@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355900"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376517"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Ievadiet savu Azure atslēgu akreditācijas datu komplektu (priekšskatījums)
 
@@ -31,7 +31,7 @@ Lai konfigurētu atslēgu akreditācijas datu komplektu auditorijas ieskatos, ir
 
 - Jums ir jābūt aktīvam Azure abonementam.
 
-- Auditorijas ieskatos jums ir [Administratora](permissions.md#administrator) loma. Papildinformācija par [lietotāju atļaujām auditorijas ieskatos](permissions.md#assign-roles-and-permissions).
+- Auditorijas ieskatos jums ir [Administratora](permissions.md#admin) loma. Papildinformācija par [lietotāju atļaujām auditorijas ieskatos](permissions.md#assign-roles-and-permissions).
 
 - Jums ir [Līdzdalībnieka](/azure/role-based-access-control/built-in-roles#contributor) un [Lietotāja piekļuves administratora](/azure/role-based-access-control/built-in-roles#user-access-administrator) lomas atslēgu akreditācijas datu komplektam vai resursu grupa, kurai pieder atslēgu akreditācijas datu komplekts. Lai iegūtu papildinformāciju, dodieties uz [Azure lomu piešķiru pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal). Ja jums nav lietotāja piekļuves administratora lomas atslēgu akreditācijas datu komplektam, Azure pakalpojuma vadītājam atsevišķi jāiestata lomu Dynamics 365 Customer Insights piekļuves kontroles atļaujas. Veiciet šīs darbības, lai [izmantotu Azure pakalpojuma vadītāju](connect-service-principal.md) sasaistāmajam atslēgu akreditācijas datu komplektam.
 

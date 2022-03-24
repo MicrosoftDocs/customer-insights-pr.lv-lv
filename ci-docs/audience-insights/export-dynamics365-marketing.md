@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353920"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455841"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmentu lietošana Dynamics 365 Marketing (priekšskatījums)
 
@@ -28,7 +28,7 @@ Ja izmantojat jaunās iespējas Dynamics 365 Marketing reāllaika automatizētas
 
 ## <a name="prerequisite-for-a-connection"></a>Savienojuma priekšnosacījums
 
-- Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Marketing, programmā Dynamics 365 Marketing ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Marketing, izmantojot Microsoft Dataverse](connect-power-query.md).
+- Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Marketing, programmā Dynamics 365 Marketing ir jābūt kontaktpersonu ierakstiem. Papildinformācija par kontaktpersonu uzņemšanu programmā [Dynamics 365 Marketing, izmantojot Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Eksportējot segmentus no auditorijas ieskatiem uz programmu Marketing, netiek veidoti jauni kontaktpersonu ieraksti. Kontaktpersonu ieraksti no programmas Marketing jābūt uzņemtiem auditorijas ieskatos un izmantotiem kā datu avotam. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
@@ -47,7 +47,7 @@ Ja izmantojat jaunās iespējas Dynamics 365 Marketing reāllaika automatizētas
 
 1. Sadaļā **Servera administratora konts** atlasiet **Pieteikties** un izvēlieties Dynamics 365 Marketing kontu.
 
-1. Kartēt kontaktpersonas ID entītijā uz Dynamics 365 Kontaktpersonas ID.
+1. Kartējiet kontaktpersonas ID entītijā uz Dynamics 365 kontaktpersonas ID.
 
 1. Lai pabeigtu savienošanu, atlasiet **Saglabāt**. 
 

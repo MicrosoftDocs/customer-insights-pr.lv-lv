@@ -1,5 +1,5 @@
 ---
-title: Adreses uzlabošanas bagātināšana (satur video)
+title: Adrešu uzlabošanas bagātināšana (satur video)
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
 ms.date: 01/19/2022
 ms.reviewer: mhart
@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353645"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376331"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
 Datu adreses var būt nestrukturētas, nepilnīgas vai nepareizas. Izmantojiet Microsoft modeļus, lai normalizētu un bagātinātu adreses [Common Data Model formātā](/common-data-model/schema/core/applicationcommon/address), lai iegūtu labāku precizitāti un ieskatus.
+
+Varat arī [bagātināt adreses datu avotos](data-sources-enrichment.md), lai uzlabotu atbilstības precizitāti datu apvienošanas procesā. 
 
 ## <a name="how-we-enhance-addresses"></a>Adrešu uzlabošana
 
@@ -105,17 +107,17 @@ Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat ar
 
 Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
 
-Bagātināto datu paraugu var skatīt bagātināto klientu priekšskatījuma **elementā**. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
+Bagātināto klientu priekšskatījuma elementā var redzēt bagātināto klientu priekšskatījuma **paraugu**. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
 
 ### <a name="overview-card"></a>Pārskata karte
 
-Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas aptvērumu. 
+Pārskata kartē ir norādīta detalizēta informācija par bagātināšanas aptvērumu. 
 
-* **Apstrādātās un mainītās** adreses: to klientu profilu skaits, kuru adreses tika veiksmīgi bagātinātas.
+* **Apstrādātās un mainītās** adreses: klientu profilu skaits ar veiksmīgi bagātinātām adresēm.
 
-* **Apstrādātās un nemainītās** adreses: to klientu profilu skaits, kuru adreses tika atpazītas, bet netika mainītas. Tas parasti notiek, ja ievades dati ir derīgi un bagātināšana tos nevar uzlabot.
+* **Apstrādātās un nemainītās** adreses: to klientu profilu skaits, kuru adreses tika atpazītas, bet netika mainītas. Tas parasti notiek, kad ievades dati ir derīgi un bagātināšanas dēļ tos nevar uzlabot.
 
-* **Adreses nav apstrādātas un nav mainītas**: profilu skaits ar neatpazītām adresēm. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
+* **Adreses nav apstrādātas un nav mainītas**: profilu skaits ar neatpazītām adresēm. Parasti ievades datiem, kas nav derīgi vai netiek atbalstīti bagātināšanā.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

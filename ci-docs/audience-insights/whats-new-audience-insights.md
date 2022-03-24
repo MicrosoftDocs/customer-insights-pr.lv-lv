@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232667"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376471"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Jaunumi klausītāju ieskatiem Dynamics 365 Customer Insights iespējās
-
-
 
 Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu informāciju par ilgtermiņa plāniem attiecībā uz funkcijām, skatiet [Dynamics 365 un Power Platform laidienu plānus](/dynamics365/release-plans/).
 
@@ -27,71 +25,127 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>2022. gada februāra atjauninājumi
+
+Atjauninājumi 2022. gada februārī ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
+
+### <a name="general-availability-for-prediction-models"></a>Prognoze modeļu vispārēja pieejamība
+
+Kā daļa no Customer Insights parasti ir pieejami iebūvēti prognoze modeļi, **tostarp** abonēšanas čupa **, darījumu čupa** un **klientu mūža vērtība (CLV).** 
+
+Plašāku informāciju skatiet [Predictions overview](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Jauns datu avots: integrācija ar Azure Synapse Analytics (Priekšskatījums)
+
+Azure Synapse Analytics ir uzņēmuma analītikas pakalpojums, kas paātrina laiku, lai gūtu ieskatus datu noliktavās un lielo datu sistēmās.
+
+Ja jūsu organizācija jau izmanto uzlabotas analīzes iespējas Azure Synapse Analytics un saglabā izvadi Data Lake datu bāzēs, varat viegli uzņemt šos datus pakalpojumā Customer Insights. Papildinformāciju skatiet rakstā [datu avots savienošana Azure Synapse (priekšskatījums)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp bagātināšana (Priekšskatījums)
+
+LiveRamp nodrošina deterministisku bezsaistes identitātes izšķirtspēju un klientu datu konsolidāciju. Jūs varat kartēt personas identifikatorus savos klienta datos uz AbiliTec identitātes grafiku un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk unificētu klientu datus.
+
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar identitātes datiem no LiveRamp (Preview)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (Priekšskatījums)
+
+Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. Datu avots bagātināšana palīdz nodrošināt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad jūs apvienojat savus datus.
+
+Papildinformāciju skatiet rakstā [Datu avotu bagātināšana (Preview)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Mainīt vides īpašnieku
+
+Lai gan vairākiem lietotājiem programmā Customer Insights var būt administratora atļaujas, vides īpašnieks ir tikai viens lietotājs. Uzlabota pieredze ļauj mainīt vides īpašniekus un pieprasīt īpašumtiesības, ja bijušais īpašnieks atstāja organizāciju. 
+
+Papildinformāciju skatiet rakstā [Vides](manage-environments.md#change-the-owner-of-an-environment) īpašnieka maiņa.
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Datu sagatavošanas procesā ir uzskaitīti bojāto ierakstu bojājuma iemesls
+
+Datu sagatavošanas process tagad parāda korupcijas iemeslu visiem laukiem ar bojātiem datiem individuālā ierakstu līmenī, lai tos varētu viegli identificēt. 
+
+Papildinformāciju skatiet rakstā [Bojāti datu avoti](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Priekšskatījuma beigas atskaišu veidošanas līdzekļiem iesaistes ieskatu iespējā
+
+Iesaistes Dynamics 365 Customer Insights ieskatu iespēju priekšskatījums beidzās 2022. gada 15. februārī.  
+Šīs izmaiņas nozīmē, ka Customer Insights izmēģinājuma pieredze vairs neietver iespēju izveidot piltuves vai citu atskaišu funkcionalitāti.
+
+Mēs aicinām jūs izpētīt un novērtēt daudzos citus Microsoft klientu datu platformas (CDP) [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) līdzekļus.    
+ 
+Pārejas periodā esošajiem priekšskatījuma dalībniekiem joprojām ir piekļuve dažām priekšskatījuma iespējām un funkcionalitātei:
+
+- Iegūstiet kodu, lai rīkotos tīmekļa vietnē vai mobilajā programma 
+- Skatīt notikumus un pasākumu rekvizītus 
+- Uzlabojiet vienotus profilus ar uzņemtiem un izsmalcinātiem notikumiem, lai gūtu labumu no to klientu datu pilnas vērtības
+  
+Pārejas periodā uzņemtie notikumi joprojām tiek straumēti uz savienoto Datu ezeru. Kad šī funkcionalitāte ir izslēgta, datu kopīgošana starp iesaistes ieskatiem un auditorijas ieskatiem tiks pārtraukta un uz savienoto krātuvi netiks nosūtīti jauni notikumi.
+Ja jums ir jautājumi par iespēju priekšskatījuma beigām, lūdzu, sazinieties tieši ar Microsoft konta komandu. Jūsu konta komanda informēs jūs par nākamajām palaišanas reizēm. 
+
 ## <a name="january-2022-updates"></a>2022. gada janvāra atjauninājumi
 
-Atjauninājumi 2022. gada janvārī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+2022. gada janvāra atjauninājumi ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
 
 ### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsu klienta atsauksmju sentimenta analīze
 
-Customer Insights nodrošina jaunu ar MI darbināmu funkciju, lai sintezētu klientu noskaņojumu un identificētu konkrētus biznesa aspektus kā iespējas mērķtiecīgiem uzlabojumiem. Analizējot klientu rakstiskās atsauksmes, jūs varat iegūt precīzus ieskatus par zemām izmaksām. Sentimenta analīze, ko nodrošina dabiskās valodas apstrādes (NLP) modeļi, kas katram klienta ID rada divus atvasinātus ieskatus. Sentimenta vērtējums (no –5 līdz 5) un piemērojamo biznesa aspektu saraksts. 
+Customer Insights nodrošina jaunu ar MI darbināmu funkciju, lai sintezētu klientu noskaņojumu un identificētu konkrētus biznesa aspektus kā iespējas mērķtiecīgiem uzlabojumiem. Analizējot klientu rakstiskās atsauksmes, jūs varat iegūt precīzus ieskatus par zemām izmaksām. Sentimenta analīze, ko darbina dabiskās valodas apstrādes (Natural Language Processing — NLP) modeļi, kas katram klienta ID rada divus iegūtus ieskatus. Sentimenta rādītājs (no –5 līdz 5) un piemērojamo biznesa aspektu saraksts. 
 
-Papildinformāciju skatiet rakstā [Noskaņojuma analīze klientu atsauksmēs (Priekšskatījums)](sentiment-analysis.md).
+Papildinformāciju skatiet rakstā [Sentimenta analīze klientu atsauksmēs (Priekšskatījums)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021. gada decembra atjauninājumi
 
-Atjauninājumi 2021. gada decembrī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+2021. gada decembra atjauninājumi ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
 
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Pārsūtīt Customer Insights žurnālus uz Azure monitoru
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Pārsūtīt Customer Insights žurnālus uz Azure Monitor
 
-Customer Insights nodrošina tiešu integrāciju ar Azure monitoru. Šī funkcija ietver audita notikumus un darbības notikumus. Azure monitora resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz Azure Storage, Azure Žurnālu analīzi vai straumēt tos Azure notikumu centrmezglos.
+Customer Insights nodrošina tiešu integrāciju ar Azure Monitor. Šis līdzeklis ietver audita notikumus un operatīvus notikumus. Azure Monitor resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz Azure Storage, Azure Žurnālu analīzi vai straumēt tos Azure notikumu centrmezglos.
 
-Papildinformāciju skatiet rakstā [Pieteikšanās pāradresēšanai Dynamics 365 Customer Insights, izmantojot Azure monitoru (Preview)](diagnostics.md).
+Papildinformāciju skatiet rakstā [Pieteikšanās pāradresācija Dynamics 365 Customer Insights, izmantojot Azure Monitor (Preview)](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Bagātināt klientu profilus ar iesaistes datiem
 
-Izmantojiet datus, lai Microsoft Office 365 bagātinātu klientu kontu profilus ar ieskatiem par saistībām, izmantojot Office 365 lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu esošo sapulču skaits. Dati par atsevišķiem lietotājiem netiek kopīgoti. Šī bagātināšana ir pieejama šādos reģionos: Apvienotajā Karalistē, Eiropā, Ziemeļamerikā.
+Izmantojiet datus, lai Microsoft Office 365 bagātinātu klientu kontu profilus ar ieskatu par iesaistīšanos, izmantojot Office 365 lietotnes. Iesaistes dati sastāv no e-pasta un sapulces darbībām, kas tiek apkopotas konta līmenī. Piemēram, e-pasta ziņojumu skaits no uzņēmuma konta vai ar kontu saistīto sapulču skaits. Dati par atsevišķiem lietotājiem netiek kopīgoti. Šī bagātināšana ir pieejama šādos reģionos: Apvienotajā Karalistē, Eiropā, Ziemeļamerikā.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar iesaistes datiem (Priekšskatījums)](enrichment-office.md).
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar piesaistes datiem (Priekšskatījums)](enrichment-office.md).
 
-### <a name="advanced-data-unification-features"></a>Papildu datu apvienošanas līdzekļi
+### <a name="advanced-data-unification-features"></a>Uzlabotas datu apvienošanas funkcijas
 
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Iespējot konfliktu risināšanas politikas individuālā atribūta līmenī
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Iespējot konfliktu risināšanas politikas atsevišķu atribūtu līmenī
 
-Rediģējot klientu ierakstus entītijā, iespējams, nevēlaties izvēlēties pilnu ierakstu kā uzvarētājs. Tagad mēs ļaujam apvienot labākos laukus no dažādiem ierakstiem, pamatojoties uz katra atribūta noteikumiem. Piemēram, varat izvēlēties paturēt visjaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. 
+Dublējot klientu ierakstus entītijā, iespējams, nevēlaties izvēlēties pilnu ierakstu kā uzvarētāju. Tagad mēs ļaujam apvienot labākos laukus no dažādiem ierakstiem, pamatojoties uz katra atribūta noteikumiem. Piemēram, varat izvēlēties paturēt jaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. 
 
-Tagad atsevišķiem atribūtiem var definēt atsevišķas sapludināšanas kārtulas, vienlaikus apvienojot un sapludinot ierakstus vienā entītijā. Iepriekš mēs ļaujam atlasīt tikai vienu sapludināšanas kārtulu (saglabājot ierakstus, pamatojoties uz režijas datu pilnīgumu), un šī kārtula tika lietota ieraksta līmenī visiem atribūtiem. Tas nav ideāli, ja daži dati, kurus vēlaties saglabāt, ir atrodami A ierakstā un citi labi dati, kas atrodami ierakstā B.
+Tagad var definēt atsevišķas sapludināšanas kārtulas atsevišķiem atribūtiem, veicot ierakstu dublēšanu un sapludināšanu vienā entītijā. Iepriekš mēs ļaujam jums atlasīt tikai vienu sapludināšanas kārtulu (ierakstu glabāšana, pamatojoties uz rektifikācijas datu pilnīgumu), un šī kārtula ierakstu līmenī tika lietota visiem atribūtiem. Tas nav ideāls, ja daži no datiem, kurus vēlaties saglabāt, ir atrodami ierakstā A, un citi labi dati, kas atrodami ierakstā B.
 
 Papildinformāciju skatiet tēmā [Dedublēšanas definēšana sakrīt ar entītiju](match-entities.md#define-deduplication-on-a-match-entity).
 
 #### <a name="custom-rules-for-matching"></a>Pielāgoti atbilstības noteikumi
 
-Ir reizes, kad ir jānorāda vispārīgo kārtulu izņēmums, lai NEATBILSTU ierakstiem. Tas var notikt, ja vairākas personas dalās ar pietiekami daudz informācijas, lai sistēma atbilstu viņiem kā vienai personai. Piemēram, dvīņi ar tādu pašu uzvārds, kas dzīvo vienā pilsētā un dala dzimšanas datumu.
+Ir reizes, kad ir jānorāda izņēmums no vispārīgajām kārtulām, lai NESAKRISTu ar ierakstiem. Tas var notikt, ja vairākas personas kopīgo pietiekami daudz informācijas, lai sistēma atbilstu viņiem kā vienai personai. Piemēram, dvīņi ar tādu pašu uzvārds, kas dzīvo vienā pilsētā un dala dzimšanas datumu.
 
-Izņēmumi nodrošina, ka apvienošanās noteikumos var aplūkot nepareizu datu apvienošanu. Kārtulai var pievienot vairākus izņēmumus.
+Izņēmumi nodrošina, ka apvienošanās noteikumos var aplūkot nepareizu datu apvienošanos. Kārtulai var pievienot vairākus izņēmumus.
 
 Papildinformāciju skatiet rakstā [Izņēmumu pievienošana kārtulai](match-entities.md#add-exceptions-to-a-rule).
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Nodrošināt papildu konfliktu risināšanas politikas un iespējot atribūtu grupēšanu
 
-Šis līdzeklis ļauj apstrādāt lauku grupu kā vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Address1, Address2, Pilsēta, Štats un Zip. Mēs, visticamāk, nevēlamies apvienoties citā ieraksta adresē2, domājot, ka tas padarītu mūsu datus pilnīgākus.
+Šis līdzeklis ļauj lauku grupu uzskatīt par vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Adrese1, Adrese2, Pilsēta, Stāvoklis un Zip. Mēs, visticamāk, nevēlamies apvienoties cita ieraksta adresē2, domājot, ka tas padarīs mūsu datus pilnīgākus.
 
-Tagad var apvienot saistīto lauku grupu un grupai lietot vienu sapludināšanas politiku. 
+Tagad grupai var apvienot saistītu lauku grupu un lietot vienu sapludināšanas politiku. 
 
-Plašāku informāciju skatiet [Combine a group of fields](merge-entities.md#combine-a-group-of-fields).
+Papildinformāciju skatiet rakstā [Lauku grupas apvienošana](merge-entities.md#combine-a-group-of-fields).
 
 
 ## <a name="november-2021-updates"></a>2021. gada novembra atjauninājumi
 
-Atjauninājumi 2021. gada novembrī ietver jaunas funkcijas, veiktspējas uzlabojumus un kļūdu labojumus.
+Atjauninājumi 2021. gada novembrī ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Dalība segmentā tagad ir pieejama Dataverse
 
-Segmenta dalības informācija klientu profiliem tagad ir pieejama Dataverse kopā ar klientu profiliem un ieskatiem. Dynamics 365 darbību programmas un modeļa vadītas programmas var izmantot šos datus, lai uzmeklētu segmenta dalības informāciju konkrētam klientam.
+Segmenta dalības informācija klientu profiliem tagad ir pieejama Dataverse kopā ar klientu profiliem un ieskatiem. Dynamics 365 darbību programmas un modeļa vadītas programmas var izmantot šos datus, lai atrastu detalizētu informāciju par dalību segmentā konkrētam klientam.
 
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Darbības atbalsta biznesa kontu kontaktlīmeņa informāciju
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivitātes atbalsta biznesa kontu kontaktlīmeņa informāciju
 
-Tagad varat konfigurēt, parādīt un filtrēt darbības kontaktpersonām uzņēmuma konta darbību laika skalā, lai labāk izprastu, kuras uzņēmuma kontaktpersonas piedalījās konkrētās darbībās.
+Tagad varat konfigurēt, parādīt un filtrēt kontaktpersonu darbības sava uzņēmuma konta darbību laika skalā, lai labāk izprastu, kuras konta kontaktpersonas piedalījās konkrētās darbībās.
 
 ## <a name="october-2021-updates"></a>2021. gada oktobra atjauninājumi
 
@@ -99,33 +153,33 @@ Atjauninājumi 2021. gada oktobrī ietver jaunas funkcijas, veiktspējas uzlaboj
 
 ### <a name="b-to-b"></a>B-to-B
 
-Sākot ar 2021. gada oktobri, customer insights varat strādāt ar uzņēmuma kontiem un ar tiem saistītajām kontaktpersonām. Pirms tam lietotne galvenokārt tika pielāgota individuāliem patērētājiem. Tika atjauninātas vairākas līdzekļu jomas, lai atbalstītu B-to-B scenārijus papildus jaunam vides tipam. Pārskatu par atbalstītajiem B-to-B līdzekļiem skatiet rakstā [Darbs ar uzņēmumu kontiem auditorijas](work-with-business-accounts.md) ieskatos.
+Sākot ar 2021. gada oktobri, pakalpojumā Customer Insights varat strādāt ar biznesa kontiem un ar tiem saistītajām kontaktpersonām. Pirms tam lietotne galvenokārt tika pielāgota individuāliem patērētājiem. Vairāki līdzekļu apgabali tika atjaunināti, lai atbalstītu B-to-B scenārijus papildus jaunam vides tipam. Pārskatu par atbalstītajiem B-B līdzekļiem skatiet rakstā [Darbs ar biznesa kontiem auditorijas ieskatos](work-with-business-accounts.md).
 
-Turpmākajās iedaļās ir uzsvērtas dažas no galvenajām jomām, kas tika pielāgotas uzņēmumu kontu un individuālo patērētāju atbalstam.
+Turpmākajās iedaļās ir uzsvērtas dažas no galvenajām jomām, kas tika pielāgotas, lai atbalstītu uzņēmējdarbības kontus un individuālos patērētājus.
 
-#### <a name="export-segments-based-on-business-accounts"></a>Eksportēt segmentus, pamatojoties uz biznesa kontiem
+#### <a name="export-segments-based-on-business-accounts"></a>Segmentu eksportēšana, pamatojoties uz biznesa kontiem
 
-Visi segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [kontaktinformācija, kas prognozēta](segment-builder.md#create-a-new-segment) pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
+Viss segmenta eksports auditorijas ieskatos ir pieejams biznesa kontu kontekstā. Lielākajai daļai segmentu eksporta ir nepieciešama papildu konfigurācija un [kontaktinformācija, kas prognozēta](segment-builder.md#create-a-new-segment) pamatā esošajos segmentos, lai tā būtu derīga biznesa kontiem. Plašāku informāciju skatiet [Export segments](export-destinations.md#export-segments).
 
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Ads eksportēšanas izmantošana ar biznesa kontiem
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn reklāmu eksportēšanas izmantošana, izmantojot biznesa kontus
 
-LinkedIn Ads eksports tagad ir pieejams kontaktpersonu un uzņēmumu mērķauditorijas atlasei biznesa kontu kontekstā. Atlasot uzņēmuma mērķauditorijas atlasi kā linkedIn eksporta primāro fokusu, varat eksportēt segmentus, kuru pamatā ir uzņēmuma konti, bez nepieciešamības projicēt kontaktinformāciju. Lai iegūtu papildinformāciju, dodieties uz dokumentiem par [LinkedIn Ads eksportu](export-linkedin-ads.md) un atšķirību starp [kontaktpersonu mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) un [uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+LinkedIn Ads eksports tagad ir pieejams kontaktpersonu un uzņēmuma mērķauditorijas atlasei biznesa kontu kontekstā. Atlasot uzņēmuma mērķauditorijas atlasi kā galveno LinkedIn eksporta fokusu, varat eksportēt segmentus, kas veidoti uz biznesa kontiem, bez nepieciešamības projicēt kontaktinformāciju. Lai iegūtu papildinformāciju, dodieties uz dokumentiem par [LinkedIn reklāmu eksportu](export-linkedin-ads.md) un atšķirību starp [kontaktpersonu mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) un [uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Izveidot pasākumus, pamatojoties uz biznesa kontiem un to hierarhiju
 
-Mērvienību veidotājs ļauj izveidot pasākumus ap biznesa kontiem un pēc izvēles izmantot hierarhijas informāciju. Hierarhijas informācija tiek izmantota, lai apkopotu mērījumu aprēķinu visā kontā un visos ar to saistītajiem apakškontiem. Piemēram, katrai biznesa kontu grupai, kas identificēta pēc to hierarhijas, var izveidot tādus pasākumus kā kopējie ieņēmumi. Papildinformāciju skatiet tēmā [Pasākumu definēšana un pārvaldīšana](measures.md).
+Pasākumu veidotājs ļauj izveidot pasākumus ap biznesa kontiem un pēc izvēles izmantot hierarhijas informāciju. Hierarhijas informācija tiek izmantota, lai apkopotu mērījuma aprēķinu kontā un visos ar to saistītajos apakškontos. Piemēram, katrai biznesa kontu grupai, kas identificēta pēc to hierarhijas, var izveidot tādus pasākumus kā kopējie ieņēmumi. Papildinformāciju skatiet tēmā [Pasākumu definēšana un pārvaldīšana](measures.md).
 
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Izveidot segmentus, pamatojoties uz biznesa kontiem un to hierarhiju
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentu izveide, pamatojoties uz biznesa kontiem un to hierarhiju
 
-Segmentu veidotājs ļauj izveidot biznesa kontu segmentus, kuros pēc izvēles ir iekļauta katra segmenta uzņēmuma kontaktinformācija. Ja ir iestatīta kontu hierarhija, segmenta izveidē var izmantot kontu hierarhijas informāciju. Plašāku informāciju skatiet [Create a new segment](segment-builder.md#create-a-new-segment).
+Segmentu veidotājs ļauj izveidot biznesa kontu segmentus, kuros pēc izvēles ir iekļauta kontaktinformācija par katru segmenta uzņēmumu. Ja ir iestatīta kontu hierarhija, segmenta izveidē var izmantot konta hierarhijas informāciju. Papildinformāciju skatiet rakstā [Jauna segmenta](segment-builder.md#create-a-new-segment) izveide.
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Saglabājiet savus uzņēmuma kontus ar dziļiem ieskatiem par to čurāto tendenci
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Saglabājiet savus biznesa kontus ar dziļu ieskatu viņu čupa tendencē
 
-Klients čublē prognoze modelis tagad atbalsta arī biznesa kontus. Jūs varat novērtēt risku, ka tas var griezties ne tikai uz kontu, bet arī konta un produktu vai pakalpojumu kategorijas kombināciju, ko viņi pērk no jums. Šis papildinājums palīdz jums saprast, vai konts, visticamāk, pārtrauks pirkt no jums kopumā vai tikai noteiktai preču vai pakalpojumu kategorijai. Lai vēl vairāk palīdzētu jums izmantot šo AI modeli, tajā ir uzskaitīti arī iemesli, kāpēc konts varētu čubināt. Plašāku informāciju skatiet [Transaction churn prognoze (preview)](predict-transactional-churn.md).
+Klientu čupa prognoze modelis tagad atbalsta arī biznesa kontus. Jūs varat novērtēt risku, ka jūs varat izmantot ne tikai kontu, bet arī konta un produktu vai pakalpojumu kategorijas kombināciju, ko viņi pērk no jums. Šis papildinājums palīdz jums saprast, vai konts, visticamāk, pārtrauks pirkt no jums kopumā vai tikai noteiktai preču vai pakalpojumu kategorijai. Lai vēl vairāk palīdzētu jums izmantot šo MI modeli, tajā ir uzskaitīti arī iemesli, kāpēc konts, iespējams, čukstēs. Plašāku informāciju skatiet [Transaction churn prognoze (preview)](predict-transactional-churn.md).
 
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Uzņēmuma uzņēmuma kontaktpersonu skatīšana klienta skatā
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Uzņēmuma konta kontaktpersonu skatīšana klienta skatā
 
-Ja biznesa konti ir kartēti uz saistītiem kontiem, programma Customer Insights parāda šīs saistītās kontaktpersonas kā daļu no klientu detalizētas informācijas skata. Plašāku informāciju skatiet [Customer profiles](customer-profiles.md).
+Ja biznesa konti ir kartēti uz saistītajiem kontiem, programma Customer Insights parāda šīs saistītās kontaktpersonas kā daļu no klienta detalizētās informācijas skata. Plašāku informāciju skatiet [Customer profiles](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>2021. gada septembra atjauninājumi

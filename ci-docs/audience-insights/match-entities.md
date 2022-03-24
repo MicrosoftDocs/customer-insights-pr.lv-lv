@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372636"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376931"
 ---
 # <a name="match-entities"></a>Saskaņojiet entītijas
 
@@ -39,18 +39,18 @@ Katra atbilstība apvieno divas vai vairākas entītijas vienā, konsolidētā e
 > Izvēloties entītiju hierarhiju, apsveriet divus jautājumus:
 >
 > - Izvēlieties entītiju ar vispilnīgākajiem un uzticamākajiem profila datiem par klientiem kā primāro entītiju.
-> - Kā primāro entītiju izvēlieties entītiju, kurai ir vairāki atribūti, kas ir kopīgi ar citām entītijām (piemēram, vārds, tālruņa numurs vai e-pasta adrese).
+> - Kā primāro entītiju izvēlieties entītiju, kurai ir vairāki atribūti, kas ir kopīgi ar citām entītijām (piemēram, vārdu, tālruņa numuru vai e-pasta adresi).
 
 1. Dodieties uz **Dati** > **Apvienot** > **Savienot** un atlasiet **Iestatīt pasūtījumu**, lai sāktu atbilstības posmu.
-1. Atlasiet **Entītijas pasūtījums**. Piemēram, atlasiet **eCommerce:eCommerceContacts** kā primāro entītiju un **LoyaltyScheme:loyCustomers** kā otro entītiju. 
-1. Lai katrs entītijas ieraksts būtu unikāls debitors un atbilstu katrai tālākajai entītijai, atlasiet **Iekļaut visu**.
+1. Atlasiet **Entītijas pasūtījums**. Piemēram, atlasiet **e-komercija:eCommerceKontakti** kā primāro entītiju un **LoyaltyScheme:loyCustomers** kā otro entītiju. 
+1. Lai katrs entītijas ieraksts būtu unikāls klients un saskaņots ar katru nākamo entītiju, atlasiet **Iekļaut visu**.
 1. Atlasiet **Gatavs**. 
 
-Pēc atbilstības secības norādīšanas definētie atbilstības pāri tiek parādīti **dataUnifyMatch** **·** > **sadaļā Detalizēta informācija** > **par** saskaņotajiem ierakstiem. Galvenie rādītāji ir tukši, līdz atbilstības process ir pabeigts.
+Pēc atbilstības secības norādīšanas definētie sērkociņu pāri tiek parādīti **DataUnifyMatch** **·** > **sadaļā Detalizēta informācija** > **par** saskaņotajiem ierakstiem. Galvenie rādītāji ir tukši, līdz atbilstības process ir pabeigts.
 
 :::image type="content" source="media/match-page.png" alt-text="Datu unificēšanas procesa Saskaņošana lapas apgabala Unify ekrānuzņēmums.":::
   
-Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas izriet no pirmā atbilstības soļa, tiek saskaņota ar šādu entītiju, ja jums ir vairāk nekā divas entītijas.
+Primārā entītija *eCommerce:eCommerceContacts* tiek saskaņota ar nākamo entītiju *LoyaltyScheme:loyCustomers*. Datu kopa, kas izriet no pirmās atbilstības soļa, tiek saskaņota ar šo entītiju, ja jums ir vairāk nekā divas entītijas.
 
 ## <a name="define-rules-for-match-pairs"></a>Kārtulu definēšana atbilstības pāriem
 
@@ -60,7 +60,7 @@ No brīdinājuma **Nepieciešamas kārtulas** blakus entītijas nosaukumam izrie
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Sadaļas Informācija par saskaņotajiem ierakstiem ekrānuzņēmumu ar vadīklu, lai pievienotu iezīmētas kārtulas.":::
 
-1. Sadaļā Saskaņotie ieraksti sadaļā Detalizēta informācija par **saskaņotajiem ierakstiem atlasiet** Pievienot **kārtulu**, lai definētu atbilstības kārtulas.
+1. Sadaļā Detalizēta informācija **par saskaņotiem ierakstiem sadaļā Entītijas atlasiet** Pievienot **kārtulu**, lai definētu atbilstības kārtulas.
 
 1. Rūtī **Izveidot kārtulu** konfigurējiet kārtulas nosacījumus.
 
@@ -74,7 +74,7 @@ No brīdinājuma **Nepieciešamas kārtulas** blakus entītijas nosaukumam izrie
      - Cipari: pārvērš citas ciparu sistēmas, piemēram, latīņu valodas ciparus, par arābu cipariem. *VIII* kļūst par *8*.
      - Simboli: noņem visus simbolus un speciālās rakstzīmes. *Head&Shoulder* kļūst par *HeadShoulder*.
      - Teksts un mazie burti: pārvērš visas rakstzīmes par mazajiem burtiem. *VISI LIELIE BURTI un Virsraksta burti* kļūst par *visi lielie burti un virsraksta burti*.
-     - Tips (tālrunis, nosaukums, adrese, organizācija): standartizē vārdus, nosaukumus, tālruņa numurus, adreses utt. 
+     - Tips (tālrunis, vārds, adrese, organizācija): standartizē vārdus, virsrakstus, tālruņa numurus, adreses utt. 
      - Unikods uz ASCII: pārvērš unikoda notāciju par ASCII rakstzīmēm. */u00B2* kļūst par *2*.
      - Baltstarpa: noņem visas atstarpes. *Labdien, pasaule* kļūst par *HelloWorld*.
 
@@ -102,7 +102,7 @@ Lai saskaņotu entītijas tikai tad, ja atribūti atbilst vairākiem nosacījumi
 
 ### <a name="add-rules-to-a-match-pair"></a>Kārtulu pievienošana atbilstības pārim
 
-Atbilstības kārtulas pārstāv nosacījumu kopas. Lai entītijām atbilstu pēc nosacījumiem, kuru pamatā ir vairāki atribūti, pievienojiet papildu kārtulas.
+Atbilstības kārtulas pārstāv nosacījumu kopas. Lai entītijas saskaņotu ar nosacījumiem, kuru pamatā ir vairāki atribūti, pievienojiet papildu kārtulas.
 
 1.  Pārejiet uz sadaļu **Dati** > **Unify** > **Saskaņot** un atlasiet **Pievienot kārtulu** entītijai, kurai vēlaties pievienot kārtulas.
 
@@ -127,7 +127,7 @@ Varat pārkārtot atbilstības kārtulu entītijas, lai mainītu to apstrādes s
 
 Papildus [entītiju atbilstības kārtulām](#define-rules-for-match-pairs) varat norādīt arī dedublikātu kārtulas. *Dedublikācija* ir cits process, kad tiek notiek ierakstu saskaņošana. Tas identificē ierakstu dublikātus un sapludina tos vienā ierakstā. Avota ieraksti tiek saistīti ar sapludināto ierakstu, izmantojot alternatīvus ID.
 
-Dedulicētie ieraksti tiek izmantoti entītiju salīdzināšanas procesā. Deduplication notiek atsevišķās entītijās, un to var konfigurēt katrai entītijai, ko izmanto spēļu pāros.
+Dedulicēti ieraksti tiek izmantoti vairāk entītiju salīdzināšanas procesā. Deduplifikācija notiek atsevišķās entītijās, un to var konfigurēt katrai entītijai, kas tiek izmantota spēļu pāros.
 
 Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav konfigurētas, tiek lietotas sistēmas definētās kārtulas. Tie visus ierakstus apvieno vienā ierakstā pirms entītijas datu nodošanas saskaņošanai starp entītijām, lai uzlabotu veiktspēju.
 
@@ -135,7 +135,7 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
 
 1. Ejiet uz **Dati** > **Unify** > **Saskaņot**.
 
-1. **Sadaļā Detalizēta informācija par** dedulicētiem ierakstiem atlasiet **Iestatīt entītijas**. Ja dedublikācijas kārtulas jau ir izveidotas, atlasiet **Rediģēt**.
+1. Sadaļā Detalizēta informācija par **dublējtiem** ierakstiem atlasiet **Iestatīt entītijas**. Ja dedublikācijas kārtulas jau ir izveidotas, atlasiet **Rediģēt**.
 
 1. Rūtī **Sapludināšanas preferences** izvēlieties entītijas, kurām vēlaties palaist dedublikāciju.
 
@@ -144,12 +144,12 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
       - **Visjaunākais** : Nosaka uzvarētāju, balstoties uz augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
       - **Visvecākais** : Nosaka uzvarētāju, balstoties uz visvecāko augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
 
-   1. Pēc izvēles, lai definētu deduplēšanas noteikumus atsevišķiem entītijas atribūtiem, atlasiet **Papildu**. Piemēram, varat izvēlēties paturēt visjaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. Izvērsiet entītiju, lai skatītu visus tās atribūtus un definētu, kuru opciju izmantot atsevišķiem atribūtiem. Ja izvēlaties uz reženšu balstītu opciju, ir jānorāda arī datuma/laika lauks, kas definē re resency. 
+   1. Pēc izvēles, lai definētu dedupikācijas kārtulas atsevišķiem entītijas atribūtiem, atlasiet **Papildu**. Piemēram, varat izvēlēties paturēt jaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. Izvērsiet entītiju, lai skatītu visus tās atribūtus un definētu, kuru opciju izmantot atsevišķiem atribūtiem. Ja izvēlaties uz atsvešinātību balstītu opciju, ir jānorāda arī datuma/laika lauks, kas definē atsvešinātību. 
  
       > [!div class="mx-imgBorder"]
       > ![Dublikātu noteikšanas kārtulas 1. darbība.](media/match-selfconflation.png "Dedublēšanas kārtulu pirmā darbība")
 
-   1. Atlasiet **Gatavs**, lai deduplication lietotu sapludināšanas preferences.
+   1. Atlasiet **Gatavs**, lai lietotu sapludināšanas preferences deduplifikācijai.
  
 1. Kad entītijas ir atlasītas un ir iestatītas to sapludināšanas preferences, atlasiet vienumu **Pievienot kārtulu**, lai entītiju līmenī definētu dedublikācijas kārtulas.
    - **Atlasīt laukus** uzskaita visus no šīs entītijas pieejamos laukus. Izvēlieties lauku, kura dublikātus vēlaties pārbaudīt. Izvēlieties laukus, kas, visticamāk, ir unikāli katram atsevišķam klientam. Piemēram, e-pasta adrese vai vārda, pilsētas un tālruņa numura kombinācija.
@@ -167,7 +167,7 @@ Norādīšanas kārtulu norādīšana nav obligāta. Ja šādas kārtulas nav ko
 
 1. Jebkuras pielāgotas atbilstības kārtulas, kas definētas kā pārrakstīšanas dedublikācijas kārtulas. Ja atkārtošanas kārtula identificē atbilstošos ierakstus, un pielāgota atbilstības kārtula ir iestatīta, lai nekad neatbilstu šiem ierakstiem, tad šie divi ieraksti netiek saskaņoti.
 
-1. Pēc [atbilstības procesa](#run-the-match-process) palaišanas galveno metrikas elementu deduplēšanas statistika būs redzama.
+1. Pēc [atbilstības procesa](#run-the-match-process) izpildes galvenajās metrikas elementos būs redzama dedupikācijas statistika.
 
 ### <a name="deduplication-output-as-an-entity"></a>Dedublikācijas izvade kā entītija
 
@@ -181,15 +181,17 @@ Dedublikācijas izvades entītija ietver šādu informāciju:
 - Lauki, ko lieto dedublikācijas kārtulu definēšanai.
 - Kārtulu un punktu skaita lauki, lai apzīmētu, kuras no dedublikācijas kārtulām tika lietotas, un punktu skaitu, kas tika atgriezts, veicot atbilstošu aizstāšanu.
  
-## <a name="include-enriched-entities-preview"></a>Iekļaut bagātinātās entītijas (priekšskatījums)
+## <a name="include-enriched-entities-preview"></a>Bagātinātu entītiju iekļaušana (priekšskatījums)
 
-Ja bagātinātas entītijas datu avots līmenī, atlasiet tās pirms atbilstības procesa palaišanas. Bagātinātās entītijas var uzlabot jūsu apvienošanas rezultātus. Papildinformāciju skatiet sadaļā [Datu avotu](data-sources-enrichment.md) bagātināšana. 
+Ja bagātinātas entītijas datu avots līmenī, atlasiet tās pirms atbilstības procesa izpildes. Bagātinātās entītijas var uzlabot jūsu apvienošanas rezultātus. Plašāku informāciju skatiet [Enrichment for data sources](data-sources-enrichment.md). 
 
-1. Dodieties uz **DataUnifyMatch** > **·** > **un** lapas augšdaļā atlasiet **Izmantot bagātinātās entītijas.**
+Bagātinātā entītija satur sākotnējos datu avots laukus un bagātinātos laukus. Tātad, ja izvēlaties strādāt ar bagātināto entītiju, esošā konfigurācija netiek ietekmēta. Tomēr, iespējams, būs jāatjaunina atbilstības kārtulas, lai tā vietā izmantotu bagātinātos laukus.
 
-1. Rūtī **Bagātinātu entītiju** izmantošana izvēlieties vienu vai vairākas bagātinātas entītijas.
+1. Dodieties uz **DataUnifyMatch** > **·** > **un** lapas augšdaļā atlasiet **Izmantot bagātinātas entītijas.**
 
-1. Atlasiet **Gatavs**. Ikreiz, kur tiek izmantota avota entītija (piemēram, atbilstības secība vai kārtulas), tā tiek automātiski mainīta uz bagātināto entītiju.
+1. **Rūtī Bagātināto entītiju** izmantošana izvēlieties vienu vai vairākas bagātinātas entītijas.
+
+1. Atlasiet **Gatavs**. Visur, kur tiek izmantota avota entītija (piemēram, atbilstības secība vai kārtulas), tā tiek automātiski mainīta uz bagātināto entītiju.
   
 ## <a name="run-the-match-process"></a>Saskaņošanas procesa izpilde
 
@@ -245,13 +247,13 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru.
 
 ### <a name="add-exceptions-to-a-rule"></a>Izņēmumu pievienošana kārtulai
 
-Vairumā gadījumu entītiju salīdzināšana rada unikālus lietotāju profilus ar konsolidētiem datiem. Lai dinamiski risinātu retos viltus pozitīvo un viltus negatīvu gadījumu gadījumus, varat definēt atbilstības kārtulas izņēmumus. Izņēmumi tiek piemēroti pēc atbilstības kārtulu apstrādes un izvairās no visu ierakstu saskaņošanas, kas atbilst izņēmuma kritērijiem.
+Vairumā gadījumu entītiju salīdzināšana noved pie unikāliem lietotāju profiliem ar konsolidētiem datiem. Lai dinamiski risinātu retos viltus pozitīvo un kļūdaini negatīvos gadījumos, atbilstības kārtulai var definēt izņēmumus. Izņēmumi tiek piemēroti pēc atbilstības kārtulu apstrādes un izvairieties no visu ierakstu atbilstības atbilstības, kas atbilst izņēmuma kritērijiem.
 
-Piemēram, ja jūsu atbilstības kārtula apvieno uzvārds, pilsētu un dzimšanas datumu, sistēma identificētu dvīņus ar tādiem pašiem uzvārds, kuri dzīvo vienā pilsētā ar to pašu profilu. Varat norādīt izņēmumu, kas neatbilst profiliem, ja vārds jūsu apvienotajās entītijās nav vienādas.
+Piemēram, ja atbilstības kārtula apvieno uzvārds, pilsētu un dzimšanas datumu, sistēma identificēs dvīņus ar tādiem pašiem uzvārds, kuri dzīvo vienā pilsētā ar to pašu profilu. Varat norādīt izņēmumu, kas neatbilst profiliem, ja vārds apvienotajās entītijās nav vienādas.
 
 1. Pārejiet uz sadaļu **Dati** > **Unify** > **Saskaņot** un atlasiet **Rediģēt** kārtulai, kurai vēlaties pievienot nosacījumus.
 
-1. Kārtulu rediģēšanas **rūtī** atlasiet **Pievienot izņēmumu**.
+1. Kārtulu **rūtī** Rediģēt atlasiet **Pievienot izņēmumu**.
 
 1. Norādiet izņēmuma kritērijus. 
 
@@ -263,18 +265,18 @@ Var norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir pi
 
 |Iespēja  |Apraksts |Piemērs  |
 |---------|---------|---------|
-|Vienmēr atbilst     | Definē vērtības, kas vienmēr atbilst.         |  Vienmēr atbilst *Maikam* un *Maikam*.       |
-|Nekad neatbilst     | Definē vērtības, kas nekad nesakrīt.        | Nekad nesakrītiet *ar Džonu* un *Džonatanu*.        |
-|Pielāgota apeja     | Definē vērtības, kas sistēmai vienmēr jāignorē atbilstības fāzē. |  Spēles laikā ignorēt vērtības *11111* un *Nezināms*.        |
-|Aizstājvārda kartējums    | Vērtību definēšana, kas sistēmai jāuzskata par vienu un to pašu vērtību.         | Uzskatiet, ka *Džo* ir līdzvērtīgs *Džozefam*.        |
+|Vienmēr atbilst     | Definē vērtības, kas vienmēr tiek saskaņotas.         |  Vienmēr atbilst *Maikam* un *Maikam.*       |
+|Nekad neatbilst     | Definē vērtības, kas nekad nesakrīt.        | Nekad nesakrīti ar *Džonu* un *Džonatanu*.        |
+|Pielāgota apeja     | Definē vērtības, kuras sistēmai vienmēr jāignorē atbilstības fāzē. |  Spēles laikā ignorēt vērtības *11111* un *Nezināms*.        |
+|Aizstājvārda kartējums    | Vērtību definēšana, kas sistēmai būtu jāuzskata par vienu un to pašu vērtību.         | Uzskati *, ka Džo* ir līdzvērtīgs *Džozefam*.        |
 
 1. Pārejiet uz **Dati** > **Unify** > **Saskaņot** un atlasiet **Pielāgota saskaņošana** sadaļā **Informācija par saskaņotajiem ierakstiem**.
 
    :::image type="content" source="media/custom-match-create.png" alt-text="Sadaļas Atbilstības kārtulas ekrānuzņēmums ar izceltu Pielāgotās saskaņošanas kārtulu.":::
 
-1. Pielāgotajā **rūtī** dodieties uz **cilni Ieraksti**.
+1. **Rūtī Pielāgota** dodieties uz **cilni Ieraksti**.
 
-1. Nolaižamajā izvēlnē Pielāgots tips **izvēlieties pielāgotu atbilstības opciju** un atlasiet **Lejupielādēt veidni**. Katrai atbilstības opcijai ir nepieciešama atsevišķa veidne.
+1. Nolaižamajā izvēlnē Pielāgots tips **izvēlieties pielāgotās atbilstības opciju** un atlasiet **Lejupielādēt veidni**. Katrai atbilstības opcijai ir nepieciešama atsevišķa veidne.
 
 1. Atveriet lejupielādēto veidnes failu un aizpildiet detalizētu informāciju. Veidnē ir ietverti lauki, kuros jānorāda entītija un entītijas primārās atslēgas vērtības, kas tiks izmantotas pielāgotajā atbilstībā. Piemēram, ja vēlaties, lai primārā atslēga *12345* no entītijas *Pārdošana* vienmēr atbilst primārajai atslēgai *34567* no entītijas *Kontaktinformācija*, aizpildiet veidni:
     - Entity1: Pārdošana
@@ -286,7 +288,7 @@ Var norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir pi
    
    Ja vēlaties norādīt pielāgotu dedublikācijas atbilstību entītijai, norādiet to pašu entītiju kā Entity1 un Entity2 un iestatiet dažādas primārās atslēgas vērtības.
 
-1. Pēc visu ignorēšanas pievienošanas saglabājiet veidnes failu.
+1. Pēc visu ignorēšanu pievienošanas saglabājiet veidnes failu.
 
 1. Ejiet uz **Dati** > **Datu avoti** un uzņemiet veidnes failus kā jaunas entītijas.
 
@@ -296,8 +298,8 @@ Var norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir pi
 
 1. Pielāgotās atbilstības lietošana ir atkarīga no atbilstības opcijas, kuru vēlaties izmantot. 
 
-   - Lai **always match** vai **Never match (Never match**), pārejiet pie nākamās darbības.
-   - Pielāgotam **apvedceļam** vai **aizstājvārda kartēšanai** atlasiet **Rediģēt** esošā atbilstības kārtulā vai izveidojiet jaunu kārtulu. Nolaižamajā izvēlnē Normalizations izvēlieties opciju **Pielāgots apvedceļš** vai **Aizstājvārds un** atlasiet **Gatavs**.
+   - Lai **vienmēr atbilstu** vai **Nekad nesakristu**, pārejiet pie nākamās darbības.
+   - Pielāgota **apvedceļa** vai **aizstājvārda kartēšanai** atlasiet **Rediģēt** esošā atbilstības kārtulā vai izveidojiet jaunu kārtulu. Nolaižamajā izvēlnē Normalizācijas izvēlieties kartēšanas **opciju** Pielāgots apvedceļš **vai** Aizstājvārds un atlasiet **Gatavs**.
 
 1. Lai piemērotu pielāgoto atbilstības konfigurāciju, lapā **Saskaņot** atlasiet **Saglabāt**.
 
@@ -305,13 +307,13 @@ Var norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir pi
 
 #### <a name="known-issues"></a>Zināmās problēmas
 
-- Paškonstituācija nerāda normalizētos datus deduplication entītijās. Tomēr tas piemēro normalizāciju iekšēji deduplēšanas laikā. Tas ir pēc dizaina visām normalizācijām. 
-- Ja semantiskā tipa iestatījums tiek noņemts **posmā Karte**, kad atbilstības kārtula izmanto aizstājvārda kartējumu vai pielāgotu apiešanu, normalizācija netiks lietota. Tas notiek tikai tad, ja pēc atbilstības kārtulas normalizācijas konfigurēšanas notīrat semantisko tipu, jo semantisks tips nebūs zināms.
+- Paškonfekcija nerāda normalizētos datus dedupikācijas entītijās. Tomēr tas piemēro normalizāciju iekšēji dedupikācijas laikā. Tas ir pēc dizaina visām normalizācijām. 
+- Ja semantiskā tipa iestatījums tiek noņemts kartēšanas **fāzē**, kad atbilstības kārtula izmanto aizstājvārda kartējumu vai pielāgoto apiešanu, normalizācija netiks lietota. Tas notiek tikai tad, ja pēc normalizācijas konfigurēšanas atbilstības kārtulā notīrāt semantisko tipu, jo semantisks tips nebūs zināms.
 
 
 ## <a name="next-step"></a>Nākamā darbība
 
-Pēc vismaz viena pāra atbilstības procesa pabeigšanas pārejiet pie sapludināšanas [**·**](merge-entities.md) darbības.
+Pēc vismaz viena atbilstības pāra atbilstības procesa pabeigšanas turpiniet sapludināšanas [**·**](merge-entities.md) darbību.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

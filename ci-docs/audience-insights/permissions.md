@@ -1,7 +1,7 @@
 ---
 title: Lietotāju atļauju pārvaldīšana
 description: Uzziniet vairāk par lietotāju lomām un atļaujām
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355946"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376747"
 ---
 # <a name="user-permissions"></a>Lietotāju atļaujas
 
@@ -48,7 +48,7 @@ Pastāv trīs lomu tipi:
 - Pārvaldiet konfigurāciju un bagātiniet klientu profilus no **Bagātināšanas** lapas (tikai pirmās puses bagātināšanai).
 - Pārvaldiet un izveidojiet eksportus, balstoties ar līdzstrādniekiem izveidotajos savienojumos. [Papildinformācija par to, kā administratori atļauj līdzstrādniekiem izmantot savienojumu eksportēšanai](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrators
+## <a name="admin"></a>Admin.
 
 - Visas līdzstrādniekam pieejamās atļaujas.
 - Mainiet iestatījumus lapā **Sistēmas**, tostarp darba valodu un atsvaidziniet sistēmas procesu grafikus.
@@ -60,6 +60,12 @@ Pastāv trīs lomu tipi:
 - Instalējiet un izmantojiet **klienta kartes pievienojumprogrammu**.
 - Pievienojiet un izmantojiet **Power Apps savienotāju**.
 - [Iespējot API Customer Insights izmantošanu](apis.md)
+- [Piešķiriet vides īpašumtiesības](manage-environments.md#change-the-owner-of-an-environment) citam administratoram.
+
+## <a name="admin-owner"></a>Administrators (īpašnieks)
+
+- Visas administratoram pieejamās atļaujas.
+- [Atiestatiet un dzēsiet](manage-environments.md#reset-an-existing-environment) vidi.
 
 ## <a name="assign-roles-and-permissions"></a>Lomu un atļauju piešķiršana
 
