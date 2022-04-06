@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232000"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487524"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentu eksportēšana uz Marketo (priekšskatījums)
 
@@ -63,7 +63,7 @@ Izmantojiet pakalpojumā Customer Insights izveidotos segmentus kampaņu veidoš
 
 1. Ievadiet savu **[Marketo saraksta ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Saraksta ID ir tikai skaitliska vērtība. Piemēram, ja Marketo saraksta ID ir ST12345A7, noņemiet rakstzīmi pirms un pēc cipariem un ievadiet `12345`. 
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. 
+1. **Sadaļā Datu salīdzināšana** atlasiet vismaz vienu lauku, kas norāda klienta e-pasta adresi vai klienta Marketo ID. 
 
 1. Ja vēlaties, varat eksportēt **Vārdu**, **Uzvārdu**, **Pilsētu**, **Pavalsti** un **Valsti/reģionu**, lai izveidotu personalizētākus e-pastus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 

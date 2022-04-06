@@ -1,7 +1,7 @@
 ---
 title: Izmantojiet datu avotus datu uzņemšanai
 description: Uzziniet, kā importēt datus no dažādiem avotiem.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354058"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464083"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -27,7 +27,7 @@ Auditorijas ieskatus Dynamics 365 Customer Insights var savienot ar datiem no pl
 
 ## <a name="add-a-data-source"></a>Pievienot datu avotu
 
-Skatiet detalizētus rakstus par to, kā pievienot datu avots atkarībā no izvēlētās opcijas.
+Skatiet detalizētus rakstus, lai uzzinātu, kā pievienot datu avots atkarībā no izvēlētās opcijas.
 
 Varat pievienot šādus datu avotus:
 
@@ -37,17 +37,28 @@ Varat pievienot šādus datu avotus:
 - [Azure Synapse Analytics No datu bāzes](connect-synapse.md)
 
 > [!NOTE]
-> Ja izmantojat izmēģinājuma versiju, importēšanas metožu sadaļā ir **iekļauta Customer Insights datu bibliotēkas** opcija. Izvēlieties šo opciju, lai atlasītu datu kopas paraugu, kas pieejams dažādām nozarēm. Papildinformāciju skatiet [Dynamics 365 Customer Insights izmēģinājumversijā](../trial-signup.md).
+> Ja izmantojat izmēģinājuma versiju, importēšanas metožu sadaļā ir **iekļauta opcija Customer Insights datu bibliotēkas** opcija. Izvēlieties šo opciju, lai atlasītu dažādām nozarēm pieejamo datu kopas paraugu. Papildinformāciju skatiet sadaļā [Dynamics 365 Customer Insights Izmēģinājumversija](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Datu pievienošana no lokālajiem datu avotiem
 
-Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas programmā Customer Insights var iespējot, iestatot [vidi, norādot vides URL Microsoft Dataverse.](create-environment.md)
+Datu pievienošana no lokālajiem datu avotiem auditorijas ieskatos tiek atbalstīta, balstoties uz Microsoft Power Platform datu plūsmām. Datu plūsmas programmā Customer Insights var iespējot, iestatot vidi, [norādot Microsoft Dataverse vides URL](create-environment.md).
 
-Datu avoti, kas izveidoti pēc vides saistīšanas Dataverse ar Customer Insights, pēc noklusējuma izmanto [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Varat noņemt un atkārtoti izveidot datu avotus, kas pastāvēja pirms Dataverse vides saisti, [izmantojot lokāls datu vārtejas](/data-integration/gateway/service-gateway-app).
+Datu avoti, kas izveidoti pēc vides saistīšanas Dataverse ar Customer Insights, pēc noklusējuma izmanto [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Varat noņemt un atkārtoti izveidot datu avotus, kas pastāvēja pirms vides saistīšanas Dataverse, [izmantojot lokāls datu vārtejas](/data-integration/gateway/service-gateway-app).
 
 Datu vārtejas no esošās Power BI vai Power Apps vides būs redzama, un to varat atkārtoti izmantot risinājumā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
 
+> [!IMPORTANT]
+> Pārliecinieties, vai vārtejas ir atjauninātas uz jaunāko versiju. Varat instalēt atjauninājumu un pārkonfigurēt vārteju no uzvednes, kas tiek parādīta vārtejas ekrānā tieši, vai [lejupielādēt jaunāko versiju](https://powerapps.microsoft.com/downloads/). Ja neizmantojat jaunāko vārtejas versiju, datu plūsmas atsvaidzināšana neizdodas ar kļūdu ziņojumiem, piemēram **, Atslēgvārds netiek atbalstīts: konfigurācijas rekvizīti. Parametra nosaukums: atslēgvārds**.
+
 ## <a name="review-ingested-data"></a>Uzņemto datu pārskatīšana
+Ja jūsu vidē ir Power Platform datu plūsmas, **lapā Datu avoti** ir uzskaitītas trīs sadaļas: 
+- **Koplietots**: datu avoti, kurus var pārvaldīt visi Customer Insights administratori. Power BI datu plūsmas, savs krātuves konts un pievienošana pārvaldītam datu ezeram Dataverse ir koplietojamu datu avotu piemēri.
+- **Pārvalda es**: Power Platform datu plūsmas, kas izveidotas, un tās var pārvaldīt tikai jūs. Citi Customer Insights administratori var skatīt tikai šīs datu plūsmas, bet ne rediģēt, atsvaidzināt vai dzēst tās.
+- **Pārvalda citi**: Power Platform datu plūsmas, ko izveidojuši citi administratori. Tos var apskatīt tikai. Tajā ir norādīts datu plūsmas īpašnieks, ar kuru sazināties, lai saņemtu jebkādu palīdzību.
+> [!NOTE]
+> Visas entītijas var skatīt un izmantot citi lietotāji. Lietotāja kontekstualitāte attiecas tikai uz datu avotiem, nevis uz entītijām, kas rodas šo datu plūsmu rezultātā.
+
+Power Platform Ja netiek izmantotas datu plūsmas, neredzēsiet nevienu grupu vai sadaļu. Lapā **Datu avoti** ir tikai visu datu avotu saraksts.
 
 Jūs redzēsit katra uzņemtā datu avota nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti no šī avota. Datu avotu sarakstu var kārtot pēc katras kolonnas.
 

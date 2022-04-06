@@ -1,7 +1,7 @@
 ---
 title: Vienoto klientu profilu bagātināšana
 description: Izmantojiet iespējas, lai bagātinātu klientu datus.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372728"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491968"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
 
@@ -48,11 +48,11 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft 
-- [Microsoft nodrošinātie uzlabotie uzņēmuma dati](enrichment-enhanced-company-data.md)
+- [Uzlaboti uzņēmuma dati](enrichment-enhanced-company-data.md), ko nodrošina Microsoft
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati 
 - [Pielāgoti dati](enrichment-SFTP-custom-import.md), izmantojot Drošās failu pārsūtīšanas protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md), ko nodrošina Microsoft
-- [Microsoft nodrošinātie konta iesaistes dati](enrichment-office.md)
+- [Microsoft sniegtie konta piesaistes dati](enrichment-office.md)
 
 ---
 
@@ -84,7 +84,7 @@ Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļa
 
 ## <a name="enrich-data-sources-before-unification"></a>Bagātināt datu avotus pirms apvienošanas
 
-Jūs varat bagātināt savus klientu datus pirms datu apvienošanas, lai palīdzētu uzlabot datu atbilstības kvalitāti. Plašāku informāciju skatiet [datu avots bagātināšana](data-sources-enrichment.md).
+Jūs varat bagātināt savus klientu datus pirms datu apvienošanas, lai palīdzētu uzlabot datu atbilstības kvalitāti. Plašāku informāciju skatiet [datu avots bagātināšanu](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 
@@ -97,5 +97,19 @@ Lai redzētu bagātināšanas statusu
 1. Detalizētas informācijas rūtī **Norise** izvērsiet sadaļu **Bagātinātjumi**. 
 1. Sadaļā Bagātināšana, kuras norisi vēlaties redzēt, atlasiet **Skatīt informāciju**. 
 1. **Uzdevumu detalizētās informācijas** rūtī atlasiet **Rādīt detalizētu informāciju**, lai skatītu procesus, kas saistīti ar bagātināšanas atjaunināšanu un to statusu. 
+
+## <a name="enrichment-results"></a>Bagātināšanas rezultāti
+
+Pēc pabeigtas bagātināšanas palaišanas bagātināšanas rezultātus var pārskatīt.
+
+1. Dodieties uz **Dati** > **Bagātināšana**. 
+1. Atlasiet bagātināšanu, par kuru vēlaties saņemt informāciju.
+
+Visos bagātināšanās tiek rādīta pamatinformācija, piemēram, bagātināto profilu skaits, ģenerētās bagātināšanas entītijas priekšskatījums un bagātināto profilu skaits laika gaitā. Ja iespējams, klientu skaits, **kas bagātināts ar lauku**, nodrošina rakšanos katra bagātinātā lauka aptvērumā.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Bagātināšanas rezultātu lapa.":::
+
+Daži bagātināšanas gadījumi liecina arī par informāciju, kas attiecas uz bagātināšanas veidu. Plašāku informāciju skatiet attiecīgās bagātināšanas dokumentācijā.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

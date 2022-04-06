@@ -1,7 +1,7 @@
 ---
 title: Auditorijas ieskatu segmenti
 description: Segmentu pārskats un to izveide un pārvaldība.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355992"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508575"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -68,7 +68,9 @@ Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
 
 ## <a name="refresh-segments"></a>Atsvaidzināt segmentus
 
-Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā **Segmenti**, vai varat atsvaidzināt vienu vai vairākus segmentus, tos atlasot un izvēloties opciju **Atsvaidzināt** no piedāvātajām opcijām. Vai arī varat konfigurēt periodisku atsvaidzināšanu sadaļā **Administrators** > **Sistēma** > **Grafiks**.
+Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā **Segmenti**, vai varat atsvaidzināt vienu vai vairākus segmentus, tos atlasot un izvēloties opciju **Atsvaidzināt** no piedāvātajām opcijām. Vai arī varat konfigurēt periodisku atsvaidzināšanu sadaļā **Administrators** > **Sistēma** > **Grafiks**. Ja ir konfigurēta periodiska atsvaidzināšana, tiek lietotas šādas kārtulas:
+- Visi segmenti ar tipu **Dynamic** vai **Expansion** tiks automātiski atsvaidzināti iestatītajā kadencē. Kad atsvaidzināšana ir pabeigta, **statuss** norāda, vai segmenta atsvaidzināšanā radās problēmas. Pēdējā **atsvaidzinātajā** tiek rādīts pēdējās veiksmīgās atsvaidzināšanas laikspiedols. Ja rodas kļūda, atlasiet kļūdu, lai skatītu detalizētu informāciju par notikušo.
+- Segmenti, kuru tips **ir Statisks** *, netiks* atsvaidzināti automātiski. Pēdējais **atsvaidzinātais** parāda laikspiedolu, kad statiskie segmenti pēdējo reizi tika palaisti vai atsvaidzināti manuāli.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

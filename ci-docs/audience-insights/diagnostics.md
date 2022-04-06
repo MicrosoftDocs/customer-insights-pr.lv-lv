@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376425"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523678"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikšanās pāradresācija, Dynamics 365 Customer Insights izmantojot Azure Monitor (Preview)
 
@@ -230,7 +230,7 @@ Darbplūsmas notikumiem ir šādi rekvizīti.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Jā      | Jā  | Vienmēr `WorkflowEvent`, atzīmējot notikumu kā darbplūsmas notikumu.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Jā      | Jā  | Darbplūsmas izpildes identifikators. Visiem darbplūsmas un uzdevumu notikumiem darbplūsmas izpildē ir vienāds `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Jā      | Jā  | Operācijas identifikators, sk. [Operāciju tipi].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Jā      | Jā  | Operācijas identifikators, sk [. Operāciju tipi](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Jā      | Nē.   | Tikai darbplūsma. Darbplūsmas izraisīto uzdevumu skaits.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Jā      | Nē.   | Neobligāts. Tikai darbplūsmas notikumi. Tā Azure Active Directory [lietotāja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objekta ID, kurš aktivizēja darbplūsmu, skatiet arī `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Jā      | Nē.   | `full` vai `incremental` atsvaidzināt.                                                                                                                                                                                                                            |

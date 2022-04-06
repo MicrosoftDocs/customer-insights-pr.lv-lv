@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354890"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523736"
 ---
 # <a name="customer-profiles"></a>Klientu profili
 
 Lapā **Klienti** tiek rādīts jūsu vienoto klientu profilu apvienotais skats. Klientu profili ir pieejami, tiklīdz [esat izveidojis vienoto klienta entītiju](data-unification.md). Šajā lapā varat meklēt klientus un definēt meklējumu indeksu.
 
-Klienti var būt fiziskas personas vai organizācijas. Katram klienta profilam tiek norādīts elements. Lai iegūtu vairāk ierakstu, izmantojiet lapdales vadīklas. Šajā kartē tiek parādīti entītijas *Klients* lauki, kā definēts **Meklēšanas un filtra indeksā**. Atlasiet elementu, lai atlasītā klienta datus skatītu īpašā lapā [Klienta informācijas detaļu lapa](customer-profiles.md#customer-details-page).
+Klienti var būt fiziskas personas vai organizācijas. Katram klienta profilam tiek norādīts elements. Lai iegūtu vairāk ierakstu, izmantojiet lapdales vadīklas. Šajā kartē tiek parādīti entītijas *Klients* lauki, kā definēts **Meklēšanas un filtra indeksā**. Katras kartes lauku secību izvēlas sistēma.
+
+Atlasiet elementu, lai atlasītā klienta datus skatītu īpašā lapā [Klienta informācijas detaļu lapa](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Klientu lapa, kurā parādīti rezultātu elementi](media/customers-page-result-tiles-B2C.png "Klientu lapa, kurā parādīti rezultātu elementi")

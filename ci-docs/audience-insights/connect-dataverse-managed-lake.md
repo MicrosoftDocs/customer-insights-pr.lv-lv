@@ -1,7 +1,7 @@
 ---
 title: Izveidot savienojumu ar tabulām programmā Microsoft Dataverse
 description: Datu importēšana no Microsoft Dataverse pārvaldītā datu ezera.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,25 +11,24 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354151"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464104"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
-
-
-Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām vienībām apsaimniekotā Microsoft Dataverse ezerā. 
+Šajā rakstā ir sniegta informācija par to, kā Dataverse lietotāji var ātri izveidot savienojumu ar analītiskajām vienībām apsaimniekotā Microsoft Dataverse ezerā. 
 
 > [!NOTE]
-> Lai turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, jums jābūt organizācijas administratoram Dataverse.
+> Lai turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu, Dataverse jums jābūt organizācijas administratoram.
 
 ## <a name="important-considerations"></a>Svarīgi ieteikumi
 
-Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights tiem, jūs piekrītat, ka datus var pārsūtīt uz . [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
+1. Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos glabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights tiem, jūs piekrītat, ka datus var pārsūtīt uz . [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
+2. Ir redzamas tikai Dataverse entītijas, kurās [ir iespējota izmaiņu izsekošana](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šīs entītijas var eksportēt uz pārvaldīto Dataverse datu ezeru un izmantot programmā Customer Insights. Novecojušajām Dataverse tabulām izmaiņu izsekošana ir iespējota pēc noklusējuma. Pielāgotām tabulām ir jāieslēdz izmaiņu izsekošana. Lai pārbaudītu, vai tabula ir iespējota Dataverse izmaiņu izsekošanai, dodieties uz [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Atrodiet sev interesējošo tabulu un atlasiet to. Dodieties uz **SettingsAdvanced** > **opcijas** un pārskatiet **iestatījumu Reģistrēt izmaiņas**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Savienojuma izveide ar Dataverse pārvaldīto datu ezeru
 

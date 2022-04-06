@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Izmēģinājumversijas BUJ
       href: trial-FAQ.md
-- name: Sākt ar apmaksātu licenci
-  href: paid-license.md
 - name: Piekļuve videi
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Auditorijas ieskati
@@ -40,12 +38,14 @@
       items:
         - name: Īsā pamācība
           href: audience-insights/get-started.md
+        - name: Sākt ar apmaksātu licenci
+          href: paid-license.md
         - name: Jaunas vides izveide
           href: audience-insights/create-environment.md
         - name: Auditorijas ieskatu izpēte
           href: audience-insights/home.md
-    - name: Darbs ar uzņēmuma kontiem
-      href: audience-insights/work-with-business-accounts.md
+        - name: Darbs ar uzņēmuma kontiem
+          href: audience-insights/work-with-business-accounts.md
     - name: Datu avoti
       items:
         - name: Datu avotu pārskats
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Reāllaika datu uzņemšana
           href: audience-insights/real-time-data-ingestion.md
-        - name: Izprotiet entītijas un datu kopas
-          href: audience-insights/entities.md
     - name: Datu apvienošana
       items:
         - name: Datu apvienošanas pārskats
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Sapludiniet entītijas
           href: audience-insights/merge-entities.md
-        - name: Pārskatiet vienotos klientu profilus
-          href: audience-insights/customer-profiles.md
-        - name: Filtrējiet vienotos klientu profilus
-          href: audience-insights/search-filter-index.md
-        - name: Attiecību un saistīto entītiju izveide
-          href: audience-insights/relationships.md
-        - name: Uzskaitiet klientu darbības
-          href: audience-insights/activities.md
-        - name: Definējiet semantiskos kartējumus
-          href: audience-insights/semantic-mappings.md
     - name: Datu bagātināšana
       items:
         - name: Klientu profilu bagātināšana
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Bagātināšana ar SFTP pielāgoto importu
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Vienotie profili
+      items:
+        - name: Pārskatiet vienotos klientu profilus
+          href: audience-insights/customer-profiles.md
+        - name: Filtrējiet vienotos klientu profilus
+          href: audience-insights/search-filter-index.md
+        - name: Definēt debitoru aktivitātes
+          href: audience-insights/activities.md
     - name: Segmenti
       items:
         - name: Segmentu pārskats
@@ -126,7 +122,7 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Mērījumi
       items:
-        - name: Pasākumu pārskats
+        - name: Mērījumu pārskats
           href: audience-insights/measures.md
         - name: Izveidot jaunu pasākumu
           href: audience-insights/measure-builder.md
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -198,12 +196,14 @@
               href: audience-insights/export-dotdigital.md
             - name: "Dynamics\_365 Marketing"
               href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
+            - name: "Dynamics\_365 Sales"
               href: audience-insights/export-dynamics365-sales.md
             - name: Facebook Ads Manager
               href: audience-insights/export-facebook.md
             - name: Google Ads ikona
               href: audience-insights/export-google-ads.md
+            - name: Iterējams
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: "LinkedIn\_Ads"
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entītijas
+      items:
+        - name: Entītiju izprašana
+          href: audience-insights/entities.md
+        - name: Entītiju shēmu pārskatīšana Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Customer Insights dati programmā Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Attiecību un saistīto entītiju izveide
+          href: audience-insights/relationships.md
+        - name: Definējiet semantiskos kartējumus
+          href: audience-insights/semantic-mappings.md
     - name: Administrēšana
       items:
         - name: Sistēmas konfigurācijas iestatīšana
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Vairāku vižu pārvaldība
           href: audience-insights/manage-environments.md
-        - name: Drošība
-          items:
-            - name: Ievadiet savu Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: 'Savienojuma izveide ar ADLS krātuvi, izmantojot pakalpojuma primāro nosaukumu'
-              href: audience-insights/connect-service-principal.md
-            - name: Eksportēt diagnostikas žurnālus
-              href: audience-insights/diagnostics.md
-    - name: Paplašināšana
+        - name: Ievadiet savu Key Vault
+          href: audience-insights/use-azure-key-vault.md
+        - name: 'Savienojuma izveide ar krātuves kontu, izmantojot pakalpojumu principālu'
+          href: audience-insights/connect-service-principal.md
+        - name: Eksportēt diagnostikas žurnālus
+          href: audience-insights/diagnostics.md
+        - name: Pakalpojuma ierobežojumi
+          href: service-limits.md
+        - name: DSR tiesības un pieprasījumi
+          href: dsr-rights-requests.md
+    - name: API
       items:
         - name: Entītiju shēmu pārskatīšana Common Data Model
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Iesaistes ieskati (priekšskatījums)
   href: engagement-insights/overview.md
-- name: Pakalpojuma ierobežojumi
-  href: service-limits.md
-- name: DSR tiesības un pieprasījumi
-  href: dsr-rights-requests.md
 - name: Saņemt atbalstu
   href: /power-platform/admin/get-help-support

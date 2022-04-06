@@ -1,23 +1,23 @@
 ---
 title: Programmā Customer Insights izveidotie segmenti
 description: Darbības, kas jāveic, lai izveidotu vidi, izmantojot licencētu Dynamics 365 Customer Insights abonementu.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354104"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491922"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Izveidot vidi auditorijas ieskatos
 
@@ -30,7 +30,7 @@ Organizācijas katrai Customer Insights licencei var izveidot *divas* vides. Ja 
 
 ## <a name="create-a-new-environment"></a>Jaunas vides izveide
 
-Pēc Customer Insights abonementa licences iegādes nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā tiek aicināts izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Pēc Customer Insights abonementa licences iegādes nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā viņš tiek aicināts izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Vadītā pieredze palīdz veikt darbības, kas jāveic, lai apkopotu visu nepieciešamo informāciju par jauno vidi. Lai izveidotu vai pārvaldītu vidi, ir nepieciešamas [administratora atļaujas](permissions.md) auditorijas ieskatos.
 
@@ -66,7 +66,7 @@ Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsū
 > Customer Insights pašlaik atbalsta tālāk norādītās iespējas:
 > - Izgūtās entītijas no Power BI datu plūsmām, kas tiek glabātas Microsoft Dataverse pārvaldītā Data Lake.  
 > - Azure Data Lake Storage konti no tā paša Azure reģiona, kas tika atlasīts vides izveides laikā.
-> - Azure Data Lake Storage kontiem, kas ir Gen2 un kam ir *iespējota hierarhiska nosaukumvieta*. Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
+> - Azure Data Lake Storage kontiem, kas ir Gen2 un kuriem ir *iespējota hierarhiska nosaukumvieta*. Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
 
 Programmas Azure Data Lake Storage opcijai varat izvēlēties uz resursiem balstītu opciju un uz abonēšanu balstītu autentifikācijas opciju. Papildinformāciju skatiet sadaļā [Savienojuma izveide Azure Data Lake Storage ar uzņēmumu, izmantojot Azure pakalpojuma vadītāju](connect-service-principal.md). **Konteinera** nosaukums būs `customerinsights`, un to nevar mainīt.
 
@@ -78,19 +78,21 @@ Ja izveidojat vairākas Customer Insights vides un vēlaties saglabāt izvades e
    
 Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi.
 
-Nodrošiniet savu Microsoft Dataverse vidi, lai koplietotu datus (profilus un ieskatus) ar biznesa lietojumprogrammām, kuru pamatā Dataverse ir, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas programmā Power Apps. Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs jums to ienodrošināsim.
+Nodrošiniet savu Microsoft Dataverse vidi, lai koplietotu datus (profilus un ieskatus) ar biznesa lietojumprogrammām, pamatojoties uz Dataverse, piemēram, Dynamics 365 Marketing vai modeļa vadītām lietojumprogrammām programmā Power Apps. Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs jums to nodrošināsim.
 
-Savienojuma izveide ar vidi Dataverse ļauj arī uzņemt datus no lokāls datu avotiem, [izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources). Varat arī izmantot [gatavus prognoze modeļus](predictions-overview.md?tabs=b2c#out-of-box-models), izveidojot savienojumu ar Dataverse vidi.
+Savienojuma izveide ar Dataverse vidi arī ļauj [uzņemt datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources). Varat arī izmantot [gatavus prognoze modeļus](predictions-overview.md?tabs=b2c#out-of-box-models), izveidojot savienojumu ar Dataverse vidi.
 
 > [!IMPORTANT]
-> Customer Insights un Dataverse tiem jābūt vienā reģionā, lai iespējotu datu koplietošanu.
+> 1. Customer Insights, un Dataverse, lai iespējotu datu koplietošanu, tam jāatrodas vienā reģionā.
+> 1. Jums ir jābūt globāla administratora lomai Dataverse vidē. Pārbaudiet, vai šī [Dataverse vide ir saistīta ar](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) noteiktām drošības grupām, un pārliecinieties, vai esat pievienots šīm drošības grupām.
+> 1. Ar šo vidi jau nav saistīta Dataverse neviena esoša Customer Insights vide. Uzziniet, [kā noņemt esošu savienojumu ar Dataverse vidi](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātiski iespējotu neto jaunām instancēm.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātisko iespējotu neto jaunām instancēm.":::
 
-> [!NOTE]
-> Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:
-> - Ja saglabāsit visus datus pats savā Azure Data Lake Storage, jūs nevarēsit iespējot datu kopīgošanu ar Dataverse pārvaldīto Data Lake.
-> - Ja iespējosit datu kopīgošanu ar Dataverse, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
+Papildinformāciju par datu koplietošanas iespējošanu no savas Microsoft Dataverse informācijas skatiet rakstā Azure Data Lake Storage Savienojuma izveide [ar Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights neatbalsta šādus datu kopīgošanas scenārijus:
+- Ja iespējosit datu kopīgošanu ar Dataverse, jūs nevarēsit [izveidot paredzamas vai trūkstošas vērtības entītijā](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. darbība. Iestatījumu pabeigšana
 
