@@ -1,28 +1,28 @@
 ---
 title: Pasākumu izveide no veidnēm
-description: Definējiet pasākumus, izmantojot veidnes koplietošanas gadījumiem.
-ms.date: 02/28/2022
+description: Definējiet pasākumus, izmantojot veidnes bieži lietojamiem pieteikumiem.
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359963"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529410"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Veidnes izmantošana mērījuma veidošanā
 
-Lai tos izveidotu, var izmantot iepriekš definētas bieži lietotu [pasākumu](measures.md) veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
+Lai tos izveidotu, varat izmantot iepriekš definētas parasti izmantoto [pasākumu](measures.md) veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
 
-Lai izveidotu pielāgotus pasākumus, skatiet rakstu [Mērvienību veidotāja izmantošana, lai izveidotu pasākumus no nulles](measure-builder.md).
+Lai izveidotu pielāgotus pasākumus, skatiet rakstu [Mērījumu veidotāja izmantošana, lai izveidotu pasākumus no nulles](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Pieejamās mērījumu veidnes:
 
 1. Pārskatiet prasītos datus un atlasiet **Sākt darbu**, ja visi dati ir pareizi.
 
-1. Rūtī **Rediģēt nosaukumu** ievadiet sava mērījuma nosaukumu un izvades entitīju. 
+1. Blakus Mērījuma nosaukumam atlasiet **Rediģēt detaļas**. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam atzīmes](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 
 1. Atlasiet **Gatavs**.
 

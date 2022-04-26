@@ -1,37 +1,36 @@
 ---
 title: Izveidojiet segmentus, izmantojot segmenta veidotāju
 description: Izveidojiet klientiem segmentus, lai tos grupētu, pamatojoties uz dažādiem atribūtiem.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354564"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529594"
 ---
 # <a name="create-segments"></a>Izveidot segmentus
 
-Definēt sarežģītus filtrus vienotā klienta entītijā unsaistītajās entītijās. Katrs segments pēc apstrādes izveido klientu ierakstu kopu, ko var eksportēt un ar kurām veikt darbības. Segmenti tiek pārvaldīti lapā **Segmenti**. Jūs varat [izveidot jaunus segmentus](#create-a-new-segment), izmantojot segmentu veidotāju, vai [izveidot ātros segmentus](#quick-segments) no citiem programmas apgabaliem. 
+Definēt sarežģītus filtrus vienotā klienta entītijā unsaistītajās entītijās. Katrs segments pēc apstrādes izveido klientu ierakstu kopu, ko var eksportēt un ar kurām veikt darbības. Segmenti tiek pārvaldīti lapā **Segmenti**. Jūs varat [izveidot jaunus segmentus](#create-a-new-segment), izmantojot segmentu veidotāju, vai [izveidot ātros segmentus](#quick-segments) no citiem programmas apgabaliem.
 
 > [!TIP]
-> - Ātrie segmenti tiek atbalstīti tikai vidēs, kas ir pieejamas **atsevišķiem klientiem**.    
-> - Segmentos, kas balstīti uz **atsevišķiem klientiem**, automātiski tiek iekļauta segmenta dalībniekiem pieejamā kontaktinformācija. **Uzņēmumu kontu** vidēs segmenti ir balstīti uz uzņēmumiem (uzņēmumiem vai meitasuzņēmumiem). Lai segmentā iekļautu kontaktinformāciju, izmantojiet **Projekta atribūtu** funkcionalitāti segmenta veidotājā.
->    - Pārliecinieties, vai kontaktpersonu datu avoti tiek [semantiski kartēti uz ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entītiju.
+> - Ātrie segmenti tiek atbalstīti tikai vidēs, kas ir pieejamas **atsevišķiem klientiem**.
+> - Segmentos, kas balstīti uz **atsevišķiem klientiem**, automātiski tiek iekļauta segmenta dalībniekiem pieejamā kontaktinformācija. **Uzņēmumu kontu** vidēs segmenti ir balstīti uz uzņēmumiem (uzņēmumiem vai meitasuzņēmumiem). Lai segmentā iekļautu kontaktinformāciju, izmantojiet **Projekta atribūtu** funkcionalitāti segmenta veidotājā. Pārliecinieties, vai kontaktpersonu datu avoti tiek [semantiski kartēti uz ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entītiju.
 
 ## <a name="segment-builder"></a>Segmentu veidotājs
 
-Tālāk sniegtajā attēlā ir parādīti dažādie segmentu veidotāja fragmenta aspekti. Tajā ir redzams segments, kura rezultāts ir klientu grupa. Klienti pasūtīja preces noteiktā laika periodā un apkopoja apbalvojumu punktus vai pavadīja noteiktu naudas summu. 
+Tālāk sniegtajā attēlā ir parādīti dažādie segmentu veidotāja fragmenta aspekti. Tajā ir redzams segments, kura rezultāts ir klientu grupa. Klienti pasūtīja preces noteiktā laika periodā un apkopoja apbalvojumu punktus vai pavadīja noteiktu naudas summu.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmentu veidotāja fragmenti." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 
 1. Segmenta veidošanas lapā jūs definējat vai rakstāt kārtulas. Kārtula sastāv no viena vai vairākiem nosacījumiem, kas definē klientu kopu.
 
-1. Sadaļā **1. kārtula** izvēlieties entītijas atribūtu, pēc kura vēlaties filtrēt klientus. Pastāv divi atibūtu izvēles veid: 
+1. Sadaļā Kārtula1 **izvēlieties** tās entītijas atribūtu, pēc kuras vēlaties filtrēt klientus. Pastāv divi atibūtu izvēles veid:
    - Rūtī **Pievienot kārtulai** pārskatiet pieejamo entītiju un atribūtu sarakstu un atlasiet ikonu **+** pie pievienojamā atribūta. Izvēlieties, vai atribūtu vēlaties pievienot esošai kārtulai vai izmantot to, lai izveidotu jaunu kārtulu.
    - Lai skatītu atbilstošos ieteikumus, ierakstiet atribūta nosaukumu kārtulu sadaļā.
 
-1. Izvēlieties operatorus, lai norādītu atbilstošās nosacījuma vērtības. Atribūtam kā vērtība var būt viens no četriem datu tipiem: skaitlisks, virkne, datums vai Būla vērtība. Atkarībā no atribūta datu tipa ir pieejami dažādi operatori, lai norādītu nosacījumu. Segmentiem ar biznesa uzņēmumiem ir pieejami divi īpaši operatori, lai iekļautu potenciālās hierarhijas starp noslogotajiem uzņēmumiem. Lai iekļautu saistītus uzņēmumus, izmantojiet *atvasināto* un *primāro* operatoru. 
+1. Izvēlieties operatorus, lai norādītu atbilstošās nosacījuma vērtības. Atribūtam kā vērtība var būt viens no četriem datu tipiem: skaitlisks, virkne, datums vai Būla vērtība. Atkarībā no atribūta datu tipa ir pieejami dažādi operatori, lai norādītu nosacījumu. Segmentiem ar biznesa uzņēmumiem ir pieejami divi īpaši operatori, lai iekļautu potenciālās hierarhijas starp noslogotajiem uzņēmumiem. Lai iekļautu saistītus uzņēmumus, izmantojiet *atvasināto* un *primāro* operatoru.
 
 1. Atlasiet **Pievienot nosacījumu**, lai kārtulai pievienotu papildu nosacījumus. Lai zem pašreizējās kārtulas izveidotu kārtulu, atlasiet **Pievienot apakškārtulu**.
 
@@ -77,7 +76,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potenciālo attiecību ceļš, izveidojot kārtulu, pamatojoties uz entītiju, kas kartēta uz vienoto klienta entītiju.":::
 
-   Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar vienoto profila entītiju *Klients*: 
+   Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar vienoto profila entītiju *Klients*:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Klients
    - eCommerce_eCommercePurchases > Klients
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klients
@@ -101,11 +100,11 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
       - **Izveidot krustpunktu** pārklāj divas grupas. Vienotā grupā paliek tikai dati, kas *ir kopīgi* abām grupām.
       - **Izņemot** apvieno divas grupas. Tiek saglabāti tikai A grupas dati, kas *nav kopīgi* B grupas datiem.
 
-1. Pēc noklusējuma segmenti ģenerē izvades entītiju, kurā ir visi klientu profilu atribūti, kas atbilst definētajiem filtriem. Ja segments ir balstīts uz citām entītijām, nevis entītiju *Klients*, izvades entītijai var pievienot papildu atribūtus no šīm entītijām. Atlasiet **Projekta atribūtus**, lai izvēlētos atribūtus, kas tiks pievienoti izvades entītijai. 
+1. Pēc noklusējuma segmenti ģenerē izvades entītiju, kurā ir visi klientu profilu atribūti, kas atbilst definētajiem filtriem. Ja segments ir balstīts uz citām entītijām, nevis entītiju *Klients*, izvades entītijai var pievienot papildu atribūtus no šīm entītijām. Atlasiet **Projekta atribūtus**, lai izvēlētos atribūtus, kas tiks pievienoti izvades entītijai.
 
    > [!IMPORTANT]
    > Segmentos, kuru pamatā ir biznesa uzņēmumi, segmentā ir jāiekļauj detalizēta informācija par vienu vai vairākām katra uzņēmuma kontaktpersonām no entītijas *ContactProfile*, lai šo segmentu varētu aktivizēt vai eksportēt uz adresātiem, kuriem ir vajadzīga kontaktinformācija. Papildinformāciju par *ContactProfile* entītiju skatiet [Semantiski kartējumi](semantic-mappings.md).
-   > Piemēram, segmenta izvades paraugs, balstoties uz biznesa uzņēmumiem ar plānotajiem kontaktpersonu atribūtiem, var izskatīties šādi: 
+   > Piemēram, segmenta izvades paraugs, balstoties uz biznesa uzņēmumiem ar plānotajiem kontaktpersonu atribūtiem, var izskatīties šādi:
    >
    > |ID  |Konta nosaukums  |Ieņēmumi  |Kontaktpersonas nosaukums  | Kontaktpersonas loma|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 
    > [!NOTE]
    > - **Projekta atribūti** darbojas tikai entītijām, kurām ir attiecības viens pret daudziem ar klienta entītiju. Piemēram, vienam klientam var būt vairāki abonementi.
-   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat. 
-   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat. 
+   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat.
+   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat.
    > - **Plānotie atribūti** tiek faktorizēti, izmantojot kopas operatorus.
 
-1. Pirms segmenta saglabāšanas un palaišanas atlasiet vienumu **Rediģēt detalizēto informāciju** pie segmenta nosaukuma. Norādiet segmenta nosaukumu un atjauniniet segmentam ieteikto **Izvades entītijas nosaukumu**. Segmentam var pievienot arī aprakstu.
+1. Blakus segmentam Bez nosaukuma atlasiet **Rediģēt detaļas**. Norādiet segmenta nosaukumu un atjauniniet segmentam ieteikto **Izvades entītijas nosaukumu**. Pēc izvēles pievienojiet segmentam aprakstu un [atzīmes](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 
 1. Atlasiet **Palaist**, lai saglabātu segmentu, aktivizējiet to un sāciet segmenta apstrādi, pamatojoties uz visām kārtulām un nosacījumiem. Pretējā gadījumā tas tiks saglabāts kā neaktīvs segments.
-   
+
 1. Atlasiet **Atgriezties pie segmentiem**, lai atgrieztos pie **Segmentu** lapas.
 
 1. Pēc noklusējuma segments tiek izveidots kā dinamiskais segments. Tas nozīmē, ka segments tiek atsvaidzināts sistēmas atsvaidzināšanas laikā. Lai [apturētu automātisko atsvaidzināšanu](segments.md#manage-existing-segments), atlasiet segmentu, izvēlieties opciju **Padarīt statisku**. Statiskos segmentus var [atsvaidzināt manuāli](segments.md#refresh-segments) jebkurā laikā.
@@ -132,7 +133,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 > [!TIP]
 > - Iestatot operatorus nosacījumos, segmentu veidotājs no entītijām neieteiks derīgas vērtības. Varat pāriet uz **Dati** > **Entītijas** un lejupielādēt entītijas datus, lai skatītu pieejamās vērtības.
 > - Nosacījumi atkarībā no datumiem ļauj pārslēgt fiksētus datumus un peldošu datumu diapazonu.
-> - Ja segmentam ir vairākas kārtulas, rediģējamajai kārtulai blakus ir vertikāla zilā līnija. 
+> - Ja segmentam ir vairākas kārtulas, rediģējamajai kārtulai blakus ir vertikāla zilā līnija.
 > - Segmenta definīcijā kārtulas un nosacījumus var pārvietot uz citām vietām. Atlasiet [...] blakus kārtulai vai nosacījumam un izvēlieties, kā un kur to pārvietot.
 > - Komandjoslā izmantojot vadīklas **Atsaukt** un **Atcelt**, varat atsaukt atpakaļ veiktās izmaiņas.
 
@@ -153,10 +154,9 @@ Izmantojot ātros segmentus, varat ātri izveidot vienkāršus segmentus, izmant
 
 4. Sistēma nodrošinās jūs ar **Aptuveniem segmenta izmēriem**. Varat izvēlēties, vai ģenerēt definēto segmentu, vai arī to vispirms pārskatīt, lai iegūtu citu segmenta lielumu.
 
-    > [!div class="mx-imgBorder"]
-    > ![Ātrā segmenta nosaukums un novērtējums.](media/quick-segment-name.png "Ātrā segmenta nosaukums un novērtējums")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Ātrā segmenta nosaukums un novērtējums.":::
 
-5. Norādiet segmenta **Nosaukumu**. Vai ari norādiet **Parādāmo vārdu**.
+5. Norādiet segmenta **nosaukumu** un **izvades entītijas nosaukumu**. Pēc izvēles pievienojiet [atzīmes](work-with-tags-columns.md#manage-tags).
 
 6. Lai izveidotu segmentu, atlasiet opciju **Saglabāt**.
 

@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508575"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529548"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -47,24 +47,30 @@ Ir vairāki jauna segmenta izveides veidi:
 
 ## <a name="manage-existing-segments"></a>Esošo segmentu pārvaldība
 
-Lai skatītu visus saglabātos segmentus un tos pārvaldītu, atveriet lapu **Segmenti**.
+Dodieties uz **lapu Segmenti**, lai skatītu visus saglabātos segmentus un pārvaldītu tos.
 
 Katru segmentu apzīmē rinda, kurā ir iekļauta papildu informācija par segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Atlasīts segments ar opciju nolaižamo sarakstu un pieejamajām opcijām.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Atlasīts segments ar opciju nolaižamo sarakstu un pieejamajām opcijām." lightbox="media/segments-selected-segment.png":::
 
-Kad atlasāt segmentu, ir pieejamas tālāk norādītās darbības:
+Atlasot segmentu, ir pieejamas šādas darbības:
 
 - **Skatīt** segmenta informāciju, tostarp segmenta dalībnieku skaita tendences priekšskatījumu.
+- **Lejupielādēt** dalībnieku sarakstu kā .CSV failu.
 - **Rediģēt** segmentu, lai mainītu tā rekvizītus.
 - **Izveidot dublikātu** segmentam. Varat izvēlēties rediģēt tā rekvizītus uzreiz vai vienkārši saglabāt dublikātu.
 - **Atsvaidzināt** segmentu, lai iekļautu jaunākos datus.
-- **Aktivizēt** vai **Deaktivizēt** segmentu. Segmentiem ir divi iespējamie statusi — aktīvs vai neaktīvs. Šie statusi ir noderīgi, rediģējot segmentu. Neaktīvajiem segmentiem pastāv segmenta definīcija, taču tajā vēl nav klientu. Aktivizējot segmentu, tā statuss tiek mainīts no “neaktīvs” uz “aktīvs”, un tas sāk meklēt klientus, kas atbilst segmenta definīcijai. Ja ir konfigurēta [plānotā atsvaidzināšana](system.md#schedule-tab), neaktīvajiem segmentiem **Statuss** ir norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana nav pat mēģināta. Ja ir aktivizēts neaktīvs segments, tas tiek atsvaidzināts un iekļauts atsvaidzināšanas grafikā.
+- **Aktivizēt** vai **Deaktivizēt** segmentu. Neaktīvajiem segmentiem pastāv segmenta definīcija, taču tajā vēl nav klientu. Aktīvs segments meklē klientus, kas atbilst segmenta definīcijai. Ja ir konfigurēta [plānotā atsvaidzināšana](system.md#schedule-tab), neaktīvajiem segmentiem **Statuss** ir norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana nav pat mēģināta. Ja ir aktivizēts neaktīvs segments, tas tiek atsvaidzināts un iekļauts atsvaidzināšanas grafikā.
   Vai arī varat izmantot funkcionalitāti **Plānot vēlāk** nolaižamajā izvēlnē **Aktivizēt/Deaktivizēt**, lai norādītu nākotnes datumu un laiku noteikta segmenta aktivizēšanai un deaktivizēšanai.
+- **[Atrodiet līdzīgus klientus](find-similar-customer-segments.md)** no segmenta.
 - **Pārdēvēt** segmentu.
+- **Atzīmējiet**, lai [pārvaldītu segmenta atzīmes](work-with-tags-columns.md#manage-tags).
 - **Lejupielādēt** dalībnieku sarakstu kā .CSV failu.
 - **Pārvaldīt eksportu**, lai skatītu ar eksportu saistīto segmentu un pārvaldītu to. [Uzzināt vairāk par eksportēšanu.](export-destinations.md)
 - **Dzēst** segmentu.
+- **Kolonnas**, lai [pielāgotu parādītās kolonnas](work-with-tags-columns.md#customize-columns).
+- **Filtrējiet**, lai filtrētu [tagus](work-with-tags-columns.md#filter-on-tags).
+- **Meklēšanas nosaukums**, lai meklētu pēc segmenta nosaukuma.
 
 ## <a name="refresh-segments"></a>Atsvaidzināt segmentus
 

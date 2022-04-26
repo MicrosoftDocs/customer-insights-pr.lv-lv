@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225525"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552065"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI savienotājs (priekšskatījums)
 
@@ -72,6 +72,6 @@ Pēc dublicēto attiecību noņemšanas mēģiniet vēlreiz konfigurēt Power BI
 
 Ielādējot entītijas, kas ietver laukus ar datuma formātu, piemēram, MM/DD/YYYY, var rasties kļūdas nesaderīgu lokalizācijas formātu dēļ. Šī neatbilstība rodas, ja Power BI Desktop failā ir iestatīta cita lokalizācija, nevis angļu valoda (ASV), jo datuma lauki auditorijas ieskatos tiek saglabāti ASV formātā.
 
-Power BI Desktop failam ir viens lokalizācijas iestatījums, kas tiek lietots, izgūstot datus. Lai šos datuma laukus interpretētu pareizi, iestatiet šī lauka .BPI faila lokalizāciju angļu valodā (ASV). [Informācija par to, kā mainīt Power BI desktop faila lokalizāciju](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Power BI Desktop failam ir viens lokalizācijas iestatījums, kas tiek lietots, izgūstot datus. Lai šos datuma laukus interpretētu pareizi, iestatiet šī lauka .BPI faila lokalizāciju angļu valodā (ASV). [Informācija par to, kā mainīt Power BI desktop faila lokalizāciju](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

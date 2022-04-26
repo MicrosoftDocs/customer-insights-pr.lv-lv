@@ -1,12 +1,12 @@
 ---
 title: Izprotiet un pārvaldiet pasākumus
-description: Uzziniet, kā mēri palīdz analizēt un atspoguļot jūsu uzņēmuma veiktspēju.
-ms.date: 02/28/2022
+description: Uzziniet, kā pasākumi palīdz analizēt un atspoguļot jūsu uzņēmuma veiktspēju.
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,20 +14,20 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359796"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529686"
 ---
-# <a name="measures-overview"></a>Pasākumu pārskats
+# <a name="measures-overview"></a>Mērījumu pārskats
 
 Mēri palīdz labāk izprast klientu paradumus un uzņēmuma veiktspēju. Tie aplūko atbilstošās vērtības no [vienotajiem profiliem](data-unification.md). Piemēram, uzņēmums vēlas redzēt *kopējos tēriņus uz klientu*, lai izprastu katra klienta pirkumu vēsturi vai izmērīt *uzņēmuma kopējos pārdošanas apjomus*, lai izprastu kopējā līmeņa ieņēmumus visā uzņēmumā.  
 
-Pasākumi tiek izveidoti [, izmantojot mērvienību veidotāju](measure-builder.md), datu vaicājumu platformu ar dažādiem operatoriem un vienkāršām kartēšanas iespējām. Tas ļauj filtrēt datus, grupēt rezultātus, noteikt [entītiju attiecību ceļus](relationships.md) un priekšskatīt izvadi. Iepriekš definētas veidnes [var](measure-templates.md) izmantot, lai efektīvi konfigurētu bieži lietotos pasākumus.
+Pasākumi tiek izveidoti [, izmantojot pasākumu veidotāju](measure-builder.md), datu vaicājumu platformu ar dažādiem operatoriem un vienkāršas kartēšanas iespējas. Tas ļauj filtrēt datus, grupēt rezultātus, noteikt [entītiju attiecību ceļus](relationships.md) un priekšskatīt izvadi. [Varat izmantot iepriekš definētas veidnes](measure-templates.md), lai efektīvi konfigurētu bieži lietotos pasākumus.
 
-Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicājot klientu datus un izgūstot ieskatus. Piemēram, *katra klienta kopējo tēriņu* un *katra klienta kopējo ienākumu* mēra izveide palīdz identificēt klientu grupu, kuriem ir augsti tēriņi, bet arī augsti ieņēmumi. Pamatojoties uz šiem pasākumiem, varat [izveidot segmentu](segments.md), lai virzītu nākamās labākās darbības. 
+Izmantojiet mērījumu veidotāju, lai plānotu uzņēmuma aktivitātes, vaicājot klientu datus un izgūstot ieskatus. Piemēram, *katra klienta kopējo tēriņu* un *katra klienta kopējo ienākumu* mēra izveide palīdz identificēt klientu grupu, kuriem ir augsti tēriņi, bet arī augsti ieņēmumi. [Varat izveidot segmentu](segments.md), pamatojoties uz šiem pasākumiem, lai virzītu nākamās labākās darbības.
 
 ## <a name="manage-your-measures"></a>Pārvaldiet savus mērus
 
@@ -35,18 +35,17 @@ Mērījumu saraksts atrodams lapā **Mērījumi**.
 
 Atradīsiet informāciju par mēra tipu, izveidotāju, izveides datumu, statusu un stāvokli. Kad sarakstā atlasāt kādu mēru, varat priekšskatīt izvadi un lejupielādēt CSV failu.
 
-Lai vienlaikus atsvaidzinātu visus mērus, atlasiet **Atsvaidzināt visu**, neatlasot noteiktu mēru.
+:::image type="content" source="media/measures-actions.png" alt-text="Darbības, lai pārvaldītu atsevišķus mērus."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Darbības, lai pārvaldītu atsevišķus mērus.":::
+Atlasot pasākumu, ir pieejamas šādas darbības:
 
-Sarakstā atlasiet mēru, lai izvēlētos kādu no šīm opcijām:
-
-- Atlasiet mēra nosaukumu, lai skatītu tā detalizētu informāciju.
 - **Rediģējiet** mēra konfigurāciju.
-- **Atsvaidzināt** mēru, pamatojoties uz jaunākajiem datiem.
+- **Dublējiet** pasākumu. Varat izvēlēties rediģēt tā rekvizītus uzreiz vai vienkārši saglabāt dublikātu.
+- **Atsvaidzināt** mēru, pamatojoties uz jaunākajiem datiem. Lai vienlaikus atsvaidzinātu visus pasākumus, atlasiet visus pasākumus un pēc tam **atsvaidziniet**.
 - **Pārdēvējiet** mēru.
-- **Dzēsiet** mēru.
 - **Aktivizēt** vai **Deaktivizēt**. Neaktīvie mēri netiks atsvaidzināti [plānotās atsvaidzināšanas laikā](system.md#schedule-tab).
+- **Atzīmējiet**, lai [pārvaldītu segmenta atzīmes](work-with-tags-columns.md#manage-tags).
+- **Dzēsiet** mēru.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

@@ -6,12 +6,12 @@ ms.author: mhart
 ms.date: 07/30/2021
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 82b335388002158885fa55b61562db6c8370dc9d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350186"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560442"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkta pārskats par Dynamics 365 Customer Insights
 
@@ -19,7 +19,7 @@ ms.locfileid: "8350186"
 
 [Auditorijas ieskati](audience-insights/overview.md) palīdz jūsu uzņēmumu pārveidot par uz klientiem vērstu organizāciju. Mārketinga, pārdošanas un apkalpošanas speciālistiem ir ieskati, kas viņiem nepieciešami, lai personalizētu pieredzi. Savienojiet datus no transakciju, uzvedības un novērojumu avotiem, lai izveidotu pilnu klienta skatu. Ātrāk skatīt rezultātus, izmantojot CDP, kas izstrādāta, lai sniegtu ieskatus, ar ko var rīkoties. 
 
-[Iesaistes ieskati](engagement-insights/overview.md) bija priekšskatījuma iespēja customer insights, kas koncentrējas uz tīmekļa un mobilo notikumu vākšanu, lai iegūtu papildu ieskatus Priekšskatījums ir beidzies 2022. gada 15. februārī.
+[Iesaistes ieskati](engagement-insights/overview.md) bija priekšskatījuma iespēja customer insights, kas koncentrējas uz tīmekļa un mobilo pasākumu apkopošanu, lai iegūtu papildu ieskatus. Priekšskatījums ir beidzies 2022. gada 15. februārī.
  
 ## <a name="choose-a-capability"></a>Izvēlieties iespēju
 

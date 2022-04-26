@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Auditorijas ieskatu izpēte
           href: audience-insights/home.md
+        - name: Darbs ar atzīmēm un kolonnām
+          href: audience-insights/work-with-tags-columns.md
         - name: Darbs ar uzņēmuma kontiem
           href: audience-insights/work-with-business-accounts.md
     - name: Datu avoti

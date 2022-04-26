@@ -1,21 +1,21 @@
 ---
 title: Customer Insights datu eksportēšana uz Azure Synapse Analytics
 description: Uzziniet, kā konfigurēt savienojumu ar programmu Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231321"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560396"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Datu eksportēšana uz Azure Synapse Analytics (priekšskatījums)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Datu eksportēšana uz Azure Synapse Analytics (priekšskatījumu)
 
 Azure Synapse ir analīzes pakalpojums, kas paātrina laiku, lai gūtu ieskatu datu noliktavās un lielās datu sistēmās. Jūs varat uzņemt un izmantot Customer Insights datus programmā [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -28,31 +28,31 @@ Lai konfigurētu savienojumu no Customer Insights uz Azure Synapse, ir jāizpild
 
 ## <a name="prerequisites-in-customer-insights"></a>Customer Insights priekšnosacījumi
 
-* Auditorijas ieskatos jums ir **Administratora** loma. Papildinformācija par [lietotāju atļauju iestatīšanu auditorijas ieskatos](permissions.md#assign-roles-and-permissions)
+* Jūsu Azure Active Directory (AD) lietotāja kontam ir **administratora** loma programmā Customer Insights. Papildinformācija par [lietotāju atļauju iestatīšanu auditorijas ieskatos](permissions.md#assign-roles-and-permissions)
 
 Azure: 
 
 - Aktīvs Azure abonements.
 
-- Ja izmantojat jaunu Azure Data Lake Storage Gen2 kontu, *pakalpojuma vadītājam auditorijas ieskatiem* ir nepieciešamas **Krātuves BLOB datu līdzdalībnieku** atļaujas. Uzziniet vairāk [par to, kā izveidot Azure Data Lake Storage Gen2 kontu savienojumu ar Azure pakalpojumu vadītāju auditorijas ieskatiem](connect-service-principal.md). Data Lake Storage Gen2 **jābūt** iespējotai [hierarhiskajai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace).
+- Ja izmantojat jaunu Azure Data Lake Storage Gen2 kontu, *Customer Insights servisa vadītājam ir nepieciešamas* krātuves **BLOB datu līdzstrādnieka** atļaujas. Uzziniet vairāk [par to, kā izveidot Azure Data Lake Storage Gen2 kontu savienojumu ar Azure pakalpojumu vadītāju auditorijas ieskatiem](connect-service-principal.md). Data Lake Storage Gen2 **jābūt** iespējotai [hierarhiskajai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Resursu grupā, kas atrodas Azure Synapse darbvietā, *servisa vadītājam* un *auditorijas ieskatu lietotājam* ir jāpiešķir vismaz **Lasītāja** atļaujas. Papildinformāciju skatiet sadaļā [Azure lomu piešķiršana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal).
+- Resursu grupā, kurā Azure Synapse atrodas darbvieta, *pakalpojuma vadītājam* un *Azure AD lietotājam ar administratora atļaujām programmā Customer Insights* ir jāpiešķir vismaz **Reader** atļaujas. Papildinformāciju skatiet sadaļā [Azure lomu piešķiršana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal).
 
-- *Lietotājam* ir nepieciešamas **Blob datu līdzdalībā glabātavas** atļaujas Azure Data Lake Storage Gen2 kontā, kur šie dati atrodas un ir saistīti ar šo Azure Synapse darbvietu. Uzziniet vairāk par [Azure portāla izmantošanas iespēju, lai piešķirtu Azure lomu piekļuvei BLOB un rindas datiem](/azure/storage/common/storage-auth-aad-rbac-portal) un [Krātuves Blob datu līdzdalības atļaujām](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Lietotājam *Azure AD ar administratora atļaujām programmā Customer Insights ir nepieciešamas* krātuves **BLOB datu līdzstrādnieka** atļaujas Azure Data Lake Storage Gen2 kontā, kurā dati atrodas un ir saistīti Azure Synapse ar darbvietu. Uzziniet vairāk par [Azure portāla izmantošanas iespēju, lai piešķirtu Azure lomu piekļuvei BLOB un rindas datiem](/azure/storage/common/storage-auth-aad-rbac-portal) un [Krātuves Blob datu līdzdalības atļaujām](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Azure Synapse darbvietas pārvaldītajai identitātei](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* ir nepieciešamas **Storage Blob datu līdzdalības** atļaujas Azure Data Lake Storage Gen2 kontā, kur atrodas dati un ir saistīti ar Azure Synapse darbvietu. Uzziniet vairāk par [Azure portāla izmantošanas iespēju, lai piešķirtu Azure lomu piekļuvei BLOB un rindas datiem](/azure/storage/common/storage-auth-aad-rbac-portal) un [Krātuves Blob datu līdzdalības atļaujām](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Darbvietā Azure Synapse *servisa vadītājam auditorijas ieskatiem* ir jāpiešķir **Synapse administratora** loma. Papildinformāciju skatiet rakstā [Kā iestatīt piekļuves vadīklu jūsu Synapse darbvietai](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Darbvietā Azure Synapse *customer insights* pakalpojuma vadītājam ir jāpiešķir **Synapse administratora** loma. Papildinformāciju skatiet rakstā [Kā iestatīt piekļuves vadīklu jūsu Synapse darbvietai](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Savienojuma izveide un eksportēšana Azure Synapse
 
 ### <a name="configure-a-connection"></a>Savienojuma konfigurēšana
 
-Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam programmā Customer Insights ir nepieciešamas **Reader** atļaujas *resursu grupā*, kurā atrodas Synapse Analytics darbvieta. Turklāt synapse Analytics darbvietas pakalpojuma vadītājam un lietotājam ir nepieciešamas **Synapse administratora** atļaujas. 
+Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam pakalpojumā Customer Insights ir nepieciešamas **Reader** atļaujas *resursu grupā*, kurā atrodas Synapse Analytics darbvieta. Turklāt pakalpojuma vadītājam un Synapse Analytics darbvietas lietotājam ir nepieciešamas **Synapse administratora** atļaujas. 
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet **Pievienot savienojumu** un izvēlieties **Azure Synapse Analytics** vai atlasiet **Elementu Iestatīt** **Azure Synapse Analytics**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **Azure Synapse Analytics** vai atlasiet **elementu Iestatīt**, **Azure Synapse Analytics** lai konfigurētu savienojumu.
 
 1. Laukā Parādāmais nosaukums piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
@@ -70,11 +70,11 @@ Lai izveidotu savienojumu, pakalpojuma vadītājam un lietotāja kontam programm
 
 1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot eksportu**.
 
-1. Laukā **Savienojums eksportam** sadaļā izvēlieties savienojumu **Azure Synapse Analytics**. Ja šis sadaļas nosaukums nav redzams, šāda veida [savienojumi](connections.md) jums nav pieejami.
+1. Laukā **Savienojums eksportam** izvēlieties savienojumu no **Azure Synapse Analytics** sadaļas. Ja šis sadaļas nosaukums nav redzams, šāda veida [savienojumi](connections.md) jums nav pieejami.
 
 1. Norādiet atpazīstamu eksportēšanas **Parādāmo nosaukumu** un **Datu bāzes nosaukumu**.
 
-1. Atlasiet entītijas, uz Azure Synapse Analytics kurām vēlaties eksportēt.
+1. Atlasiet, uz kurām entītijām vēlaties eksportēt Azure Synapse Analytics.
    > [!NOTE]
    > Datu avoti, kuru pamatā ir [Common Data Model](connect-common-data-model.md) mape, netiek atbalstīti.
 

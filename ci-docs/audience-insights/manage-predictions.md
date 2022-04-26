@@ -5,15 +5,15 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 8ff8d70ffb8489def072e5d8a6e43d062594141a
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230801"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555322"
 ---
 # <a name="manage-predictions"></a>Pārvaldīt prognozes
 
@@ -49,11 +49,11 @@ Kad pirmās izvēles modelis ir pabeidzis apmācības darbību, skatiet atskaiti
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ievades datu lietojamības atskaites piemērs, kurā redzama tabula ar kļūdām, brīdinājumiem un ieteikumiem.":::
 
-- **Nosaukums:** kļūdas, brīdinājuma vai ieteikuma aprakstošais nosaukums.
-- **Solis:** Modeļa fāze, vilciens vai rezultāts, informācija attiecas.
+- **Nosaukums:** aprakstošs kļūdas, brīdinājuma vai ieteikuma nosaukums.
+- **Solis:** modeļa fāze, vilciens vai rezultāts, informācija attiecas uz.
 - **Stāvoklis:** informācijas nopietnība (kļūda, brīdinājums, ieteikums).
-- **Kolonnas nosaukums:** kolonna entītijā, kas ir jāgroza, lai uzlabotu modeļa veiktspēju.
-- **Entītijas nosaukums:** tās entītijas nosaukums, kura jāgroza, lai uzlabotu modeļa veiktspēju.
+- **Kolonnas nosaukums:** entītijas kolonna, kas ir jāmaina, lai uzlabotu modeļa veiktspēju.
+- **Entītijas nosaukums:** tās entītijas nosaukums, kas ir jāmodernizē, lai uzlabotu modeļa veiktspēju.
 - **Detalizēta informācija:** detalizēta informācija par kļūdu, brīdinājumu vai ieteikumu.
 
 ## <a name="refresh-a-prediction"></a>Atsvaidzināt prognozi
