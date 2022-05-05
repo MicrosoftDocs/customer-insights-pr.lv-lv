@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
-  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.openlocfilehash: e3a9f6d5f4d23ca3e85fa3f69272a0162ca7bd2d
+  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
   ms.translationtype: MT
   ms.contentlocale: lv-LV
-  ms.lasthandoff: 02/25/2022
-  ms.locfileid: "8350478"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "8641665"
 title: Dynamics 365 Customer Insights dokumentācija
 summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights līdzekļiem un iespējām.
 landingContent:
@@ -23,8 +23,8 @@ landingContent:
       url: overview.md
     - text: Nodošanas izpildei plāns
       url: /dynamics365/release-plans/
-    - text: CDP atklāšana
-      url: https://dynamics.microsoft.com/ai/customer-insights/
+    - text: Jauni un atjaunināti līdzekļi
+      url: whats-new-customer-insights.md
   - linkListType: learn
     links:
     - text: Customer Insights mācību ceļš
@@ -35,24 +35,94 @@ landingContent:
     links:
     - text: Reģistrēšanās izmēģinājuma versijai
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Kas jauns auditorijas ieskatos
-      url: audience-insights/whats-new-audience-insights.md
-    - text: Īsā pamācība
-      url: audience-insights/get-started.md
+    - text: Sākt ar izmēģinājumversiju
+      url: trial-signup.md
+    - text: Darba sākšana ar pakalpojumu Customer Insights
+      url: get-started.md
   - linkListType: learn
     links:
     - text: Sākt darbu
       url: /learn/modules/get-started-customer-data-platform/
+- title: Datu apvienošana
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Datu avotu pārskats
+      url: data-sources.md
+    - text: Apvienošanas kopsavilkums
+      url: data-unification.md
+    - text: Entītiju izprašana
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Vienota profila izveide
+      url: /learn/modules/unified-customer-profile/
+- title: Iegūt ieskatus
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Klientu profilu bagātināšana
+      url: enrichment-hub.md
+    - text: Relāciju konfigurēšana
+      url: relationships.md
+    - text: Pabeigt datus, izmantojot prognozes
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Datu bagātināšana un prognozēšana
+      url: /learn/modules/enrich-data/
+- title: Datu pamatā
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Izveidot segmentus
+      url: segments.md
+    - text: Izveidot pasākumus
+      url: measures.md
+    - text: Definēt debitoru aktivitātes
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Darbs ar programmu
+      url: /learn/modules/working-with-customer-insights/
+- title: Eksportēt datus
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eksportēšanas galamērķu iestatīšana
+      url: export-destinations.md
+    - text: Klienta kartes Dynamics 365 lietojumprogrammās
+      url: customer-card-add-in.md
+    - text: Power BI savienotājs
+      url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Ārējo savienojumu pārvaldība
+      url: /learn/modules/configure-third-party-connections/
+- title: Administrēt programmu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistēmas konfigurēšana
+      url: system.md
+    - text: Lietotāja atļauju definēšana
+      url: permissions.md
+    - text: Vairāku vižu pārvaldība
+      url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrējiet pakalpojumu Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Administrējiet pakalpojumu Customer Insights
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Sistēmas konfigurēšana
-      url: audience-insights/system.md
+      url: system.md
     - text: Lietotāja atļauju definēšana
-      url: audience-insights/permissions.md
+      url: permissions.md
     - text: Vairāku vižu pārvaldība
-      url: audience-insights/manage-environments.md
+      url: manage-environments.md
   - linkListType: learn
     links:
     - text: Administrējiet pakalpojumu Customer Insights

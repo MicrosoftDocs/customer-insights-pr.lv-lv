@@ -1,39 +1,41 @@
 ---
-title: Produkta pārskats
+title: Dynamics 365 Customer Insights preces pārskats
 author: m-hartmann
-description: Saņemiet pārskatu par Dynamics 365 Customer Insights un tā iespēju klāstu.
+description: Iegūstiet pārskatu par Dynamics 365 Customer Insights un tā galvenajām funkcijām.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560442"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641909"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkta pārskats par Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ir daļa no korporācijas Microsoft klientu datu platformas (CDP), kas palīdz nodrošināt personalizētu klientu pieredzi. Platformas iespējas nodrošina ieskatus par to, kas ir jūsu klienti un kā tie sadarbojas ar jūsu platformu. Apvienojiet klientu datus, izmantojot vairākus avotus, lai iegūtu vienotu klientu skatu.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ir Microsoft klientu datu platforma (CDP), kas palīdz nodrošināt personalizētu klientu pieredzi. Lietojumprogramma sniedz holistisku skatījumu uz klientiem ar nepārspējamu laiku, lai gūtu ieskatu. Iegūstiet visplašāko klientu skatījumu, reāllaikā apvienojot klientu datus ar operatīvajiem un IoT datiem. Bagātiniet klientu profilus, izmantojot pirmās un trešās puses datu avotus. 
 
-[Auditorijas ieskati](audience-insights/overview.md) palīdz jūsu uzņēmumu pārveidot par uz klientiem vērstu organizāciju. Mārketinga, pārdošanas un apkalpošanas speciālistiem ir ieskati, kas viņiem nepieciešami, lai personalizētu pieredzi. Savienojiet datus no transakciju, uzvedības un novērojumu avotiem, lai izveidotu pilnu klienta skatu. Ātrāk skatīt rezultātus, izmantojot CDP, kas izstrādāta, lai sniegtu ieskatus, ar ko var rīkoties. 
-
-[Iesaistes ieskati](engagement-insights/overview.md) bija priekšskatījuma iespēja customer insights, kas koncentrējas uz tīmekļa un mobilo pasākumu apkopošanu, lai iegūtu papildu ieskatus. Priekšskatījums ir beidzies 2022. gada 15. februārī.
+Customer Insights palīdz pārveidot savu uzņēmumu par uz klientu orientētu organizāciju, dodot iespēju mārketinga, pārdošanas un pakalpojumu speciālistiem pielāgot 1:1 mijiedarbību mērogā. Pabeigtās integrācijas ar Microsoft un trešo pušu lietojumprogrammām var izmantot, lai aktivizētu reāllaika ieskatus, lai virzītu jēgpilnas darbības.
  
-## <a name="choose-a-capability"></a>Izvēlieties iespēju
+Savienojiet datus no transakciju, uzvedības un demogrāfisko datu avotiem, lai izveidotu 360 grādu klientu skatus. Iegūstiet visaptverošus ieskatus, izmantojot iepriekš izveidotus MI modeļus, vai ātri izveidojiet, testējiet un izvietojiet pielāgotus MI/ML modeļus, izmantojot uzlabotus analīzes risinājumus neierobežotā mērogā.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Customer insights lapa, kas ļauj navigēt uz auditorijas ieskatiem vai iesaistes ieskatiem.":::
-
-Lai izvēlētos iespēju
-
-1. Navigācijas rūtī atlasiet **Visas programmas**, lai atvērtu **Izvēlēties jūsu fokusa** lodziņu.
-1. Atlasiet vienumu **Doties tūlīt**, lai pārietu uz jūsu izvēlēto iespēju.
+Saglabājiet pilnīgu kontroli pār saviem klientu datiem, lai nodrošinātu visaugstāko datu pārvaldības līmeni un atbilstību pašapkalpošanās uzņēmuma līmeņa CDP, kura pamatā ir Microsoft Azure. Atbalstīt Vispārīgo datu aizsardzības regulu (VDAR) un citas likumdošanas prasības un nozares standartus, izmantojot iebūvētu privātumu, drošību un pārvaldību, kā arī piekrišanas pārvaldības rīkus.
 
 ## <a name="pricing-and-licensing"></a>Cenas un licencēšana
+Customer Insights ir licencēts katram nomniekam un ietver gan uzņēmuma-patērētāja (B2C), gan biznesa-biznesa (B2B) iespējas. Varat iegādāties papildu noslodzi, izmantojot pievienojumprogrammu licences, lai palielinātu profilu un kontu skaitu.
 
-Customer Insights ir licencēts katram nomniekam, un tajā ir ietvertas vairākas iespējas. Varat iegādāties papildu noslodzi un licenci, lai palielinātu noklusējuma kvotu. 
 - [Cenu pārskats](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Noslodze un tiesības: [Dynamics 365 licencēšanas rokasgrāmata](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsoft lielapjoma licencēšanas tīmekļa vietne](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Izmēģiniet Customer Insights un sāciet darbu
+
+[Sāciet bezmaksas Customer Insights izmēģinājumversiju](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) jau šodien, lai pārbaudītu lietojumprogrammu ar saviem klientu datiem. [Uzziniet, kā ātri piekļūt un izpētīt daudzas lietojumprogrammas galvenās funkcijas](trial-signup.md). 
+
+Pārlūkojiet [piedāvātos mācību resursus](https://dynamics.microsoft.com/ai/customer-insights/resources/), tostarp analītiķu atskaites, vebinārus pēc pieprasījuma un klientu stāstus.
+
+Uzziniet, kā jūs varat veidot dziļāku izpratni par saviem klientiem, izmantojot mūsu [rokasgrāmatu par darba sākšanu](get-started.md).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

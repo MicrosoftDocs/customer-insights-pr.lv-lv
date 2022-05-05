@@ -2,6 +2,8 @@
   href: index.yml
 - name: Produkta pārskats
   href: overview.md
+- name: Jauni un atjaunināti līdzekļi
+  href: whats-new-customer-insights.md
 - name: Mācību katalogs
   items:
     - name: Sākt darbu
@@ -10,9 +12,9 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Vienotais klienta profila izveide
       href: /learn/modules/unified-customer-profile/
-    - name: Darbs ar auditorijas ieskatiem
+    - name: Darbs ar customer insights
       href: /learn/modules/working-with-customer-insights/
-    - name: Bagātināt datus un veikt prognozes
+    - name: Bagātiniet datus un veiciet prognozes
       href: /learn/modules/enrich-data/
     - name: Ārējo savienojumu pārvaldība
       href: /learn/modules/configure-third-party-connections/
@@ -26,266 +28,260 @@
       href: trial-FAQ.md
 - name: Piekļuve videi
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Auditorijas ieskati
+- name: Sākt darbu
   items:
-    - name: Palīdzības centrmezgls
-      href: audience-insights/index.yml
-    - name: Iespēju pārskats
-      href: audience-insights/overview.md
-    - name: Jauni un atjaunināti līdzekļi
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Sākt darbu
+    - name: Īsā pamācība
+      href: get-started.md
+    - name: Sākt ar apmaksātu licenci
+      href: paid-license.md
+    - name: Jaunas vides izveide
+      href: create-environment.md
+    - name: Izpētiet klientu ieskatus
+      href: home.md
+    - name: Darbs ar tagiem un kolonnām
+      href: work-with-tags-columns.md
+    - name: Darbs ar uzņēmuma kontiem
+      href: work-with-business-accounts.md
+    - name: Integrācija ar Dynamics 365 Marketing
+      href: marketing-get-started.md
+- name: Datu avoti
+  items:
+    - name: Datu avotu pārskats
+      href: data-sources.md
+    - name: 'Datu avotu pievienošana, izmantojot Power Query savienotājus'
+      href: connect-power-query.md
+    - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
+      href: connect-common-data-model.md
+    - name: Pievienojiet Dataverse pārvaldīto datu ezeru
+      href: connect-dataverse-managed-lake.md
+    - name: Pievienot Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Datu avotu bagātināšana
+      href: data-sources-enrichment.md
+    - name: Inkrementālā atsvaidzināšana datu avotiem
+      href: incremental-refresh-data-sources.md
+    - name: Reāllaika datu uzņemšana
+      href: real-time-data-ingestion.md
+- name: Datu apvienošana
+  items:
+    - name: Datu apvienošanas pārskats
+      href: data-unification.md
+    - name: Kartējiet entītijas un atribūtus
+      href: map-entities.md
+    - name: Saskaņojiet entītijas
+      href: match-entities.md
+    - name: Sapludiniet entītijas
+      href: merge-entities.md
+- name: Datu bagātināšana
+  items:
+    - name: Klientu profilu bagātināšana
+      href: enrichment-hub.md
+    - name: Zīmoli un intereses
+      href: enrichment-microsoft.md
+    - name: Uzlabotas adreses
+      href: enrichment-enhanced-addresses.md
+    - name: Uzlaboti uzņēmuma dati
+      href: enrichment-enhanced-company-data.md
+    - name: Bagātināt ar Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Bagātiniet ar Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Bagātināšana ar HERE Technologies
+      href: enrichment-here.md
+    - name: 'Bagātināt, izmantojot Leadspace'
+      href: enrichment-leadspace.md
+    - name: Bagātiniet ar LiveRamp
+      href: enrichment-liveramp.md
+    - name: Bagātināt ar Experian
+      href: enrichment-experian.md
+    - name: Bagātināt ar Office 365 datiem
+      href: enrichment-office.md
+    - name: Bagātināšana ar SFTP pielāgoto importu
+      href: enrichment-SFTP-custom-import.md
+- name: Vienotie profili
+  items:
+    - name: Pārskatiet vienotos klientu profilus
+      href: customer-profiles.md
+    - name: Filtrējiet vienotos klientu profilus
+      href: search-filter-index.md
+    - name: Definēt debitoru aktivitātes
+      href: activities.md
+- name: Segmenti
+  items:
+    - name: Segmentu pārskats
+      href: segments.md
+    - name: Izveidot segmentus
+      href: segment-builder.md
+    - name: Uz darbībām balstīti segmenta ieteikumi
+      href: suggested-segments.md
+    - name: Uz darbībām balstīti segmenta ieteikumi
+      href: suggested-segments-activity.md
+    - name: Ieskatu par segmentiem iegūšana
+      href: segment-insights.md
+    - name: Atrast līdzīgus klientus
+      href: find-similar-customer-segments.md
+- name: Mērījumi
+  items:
+    - name: Pasākumu pārskats
+      href: measures.md
+    - name: Izveidot jaunu pasākumu
+      href: measure-builder.md
+    - name: Pasākuma veidnes izmantošana
+      href: measure-templates.md
+- name: Prognozes
+  items:
+    - name: 'Prognozēt datus, izmantojot AI'
       items:
-        - name: Īsā pamācība
-          href: audience-insights/get-started.md
-        - name: Sākt ar apmaksātu licenci
-          href: paid-license.md
-        - name: Jaunas vides izveide
-          href: audience-insights/create-environment.md
-        - name: Auditorijas ieskatu izpēte
-          href: audience-insights/home.md
-        - name: Darbs ar atzīmēm un kolonnām
-          href: audience-insights/work-with-tags-columns.md
-        - name: Darbs ar uzņēmuma kontiem
-          href: audience-insights/work-with-business-accounts.md
-    - name: Datu avoti
+        - name: Prognožu modeļu pārskats
+          href: predictions-overview.md
+        - name: Klienta ilgtermiņa vērtības prognozēšana (CLV)
+          href: predict-customer-lifetime-value.md
+        - name: Produktu ieteikumu prognoze
+          href: predict-product-recommendation.md
+        - name: Paredzēt abonēšanas mainību
+          href: predict-subscription-churn.md
+        - name: Prognozējiet transakcijas zudumu
+          href: predict-transactional-churn.md
+        - name: Klientu atsauksmju noskaņojuma analīze
+          href: sentiment-analysis.md
+        - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
+          href: custom-models.md
+        - name: Daļēji trūkstošu datu pabeigšana
+          href: predictions.md
+    - name: Norādījumu paraugi
       items:
-        - name: Datu avotu pārskats
-          href: audience-insights/data-sources.md
-        - name: 'Datu avotu pievienošana, izmantojot Power Query savienotājus'
-          href: audience-insights/connect-power-query.md
-        - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
-          href: audience-insights/connect-common-data-model.md
-        - name: Pievienojiet Dataverse pārvaldīto datu ezeru
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Pievienot Azure Synapse Analytics
-          href: audience-insights/connect-synapse.md
-        - name: Bagātināšana datu avotiem
-          href: audience-insights/data-sources-enrichment.md
-        - name: Inkrementālā atsvaidzināšana datu avotiem
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Reāllaika datu uzņemšana
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Datu apvienošana
+        - name: CLV datu parauga prognoze
+          href: sample-guide-predict-clv.md
+        - name: Abonementa zudumu prognozes parauga ceļvedis
+          href: sample-guide-predict-subscription-churn.md
+        - name: Transakciju zuduma prognozes parauga rokasgrāmata
+          href: sample-guide-predict-transactional-churn.md
+        - name: Produktu ieteikumu prognozes rokasgrāmatas paraugs
+          href: sample-guide-predict-product-recommendation.md
+        - name: Eksperimenti ar Azure algoritmisko mācīšanos
+          href: azure-machine-learning-experiments.md
+    - name: Pārvaldīt prognozes
+      href: manage-predictions.md
+    - name: 'Segmentu izveide, pamatojoties uz prognozēm'
+      href: prediction-based-segment.md
+- name: Eksportēšanas opcijas
+  items:
+    - name: Eksportēšanas darbības
       items:
-        - name: Datu apvienošanas pārskats
-          href: audience-insights/data-unification.md
-        - name: Kartējiet entītijas un atribūtus
-          href: audience-insights/map-entities.md
-        - name: Saskaņojiet entītijas
-          href: audience-insights/match-entities.md
-        - name: Sapludiniet entītijas
-          href: audience-insights/merge-entities.md
-    - name: Datu bagātināšana
+        - name: Pārskats par eksportēšanu
+          href: export-destinations.md
+        - name: Aktīvās kampaņas
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: "Dynamics\_365 Marketing"
+          href: export-dynamics365-marketing.md
+        - name: "Dynamics\_365 Sales"
+          href: export-dynamics365-sales.md
+        - name: Facebook Ads Manager
+          href: export-facebook.md
+        - name: Google Ads ikona
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: "LinkedIn\_Ads"
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: MailChimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Citi lietojumi
       items:
-        - name: Klientu profilu bagātināšana
-          href: audience-insights/enrichment-hub.md
-        - name: Zīmoli un intereses
-          href: audience-insights/enrichment-microsoft.md
-        - name: Uzlabotas adreses
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Uzlaboti uzņēmuma dati
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Bagātināt ar Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
-        - name: Bagātināšana ar HERE Technologies
-          href: audience-insights/enrichment-here.md
-        - name: 'Bagātināt, izmantojot Leadspace'
-          href: audience-insights/enrichment-leadspace.md
-        - name: Bagātināt ar LiveRamp
-          href: audience-insights/enrichment-liveramp.md
-        - name: Bagātināt ar Experian
-          href: audience-insights/enrichment-experian.md
-        - name: Bagātināt ar Office 365 datiem
-          href: audience-insights/enrichment-office.md
-        - name: Bagātināšana ar SFTP pielāgoto importu
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Vienotie profili
-      items:
-        - name: Pārskatiet vienotos klientu profilus
-          href: audience-insights/customer-profiles.md
-        - name: Filtrējiet vienotos klientu profilus
-          href: audience-insights/search-filter-index.md
-        - name: Definēt debitoru aktivitātes
-          href: audience-insights/activities.md
-    - name: Segmenti
-      items:
-        - name: Segmentu pārskats
-          href: audience-insights/segments.md
-        - name: Izveidot segmentus
-          href: audience-insights/segment-builder.md
-        - name: Uz darbībām balstīti segmenta ieteikumi
-          href: audience-insights/suggested-segments.md
-        - name: Uz darbībām balstīti segmenta ieteikumi
-          href: audience-insights/suggested-segments-activity.md
-        - name: Ieskatu par segmentiem iegūšana
-          href: audience-insights/segment-insights.md
-        - name: Atrast līdzīgus klientus
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Mērījumi
-      items:
-        - name: Mērījumu pārskats
-          href: audience-insights/measures.md
-        - name: Izveidot jaunu pasākumu
-          href: audience-insights/measure-builder.md
-        - name: Pasākuma veidnes izmantošana
-          href: audience-insights/measure-templates.md
-    - name: Prognozes
-      items:
-        - name: 'Prognozēt datus, izmantojot AI'
-          items:
-            - name: Prognožu modeļu pārskats
-              href: audience-insights/predictions-overview.md
-            - name: Klienta ilgtermiņa vērtības prognozēšana (CLV)
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Produktu ieteikumu prognoze
-              href: audience-insights/predict-product-recommendation.md
-            - name: Paredzēt abonēšanas mainību
-              href: audience-insights/predict-subscription-churn.md
-            - name: Prognozējiet transakcijas zudumu
-              href: audience-insights/predict-transactional-churn.md
-            - name: Analizēt noskaņojumu klientu atsauksmēs
-              href: audience-insights/sentiment-analysis.md
-            - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
-              href: audience-insights/custom-models.md
-            - name: Daļēji trūkstošu datu pabeigšana
-              href: audience-insights/predictions.md
-        - name: Norādījumu paraugi
-          items:
-            - name: CLV datu parauga prognoze
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Abonementa zudumu prognozes parauga ceļvedis
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Transakciju zuduma prognozes parauga rokasgrāmata
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Produktu ieteikumu prognozes rokasgrāmatas paraugs
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Eksperimenti ar Azure algoritmisko mācīšanos
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Pārvaldīt prognozes
-          href: audience-insights/manage-predictions.md
-        - name: 'Segmentu izveide, pamatojoties uz prognozēm'
-          href: audience-insights/prediction-based-segment.md
-    - name: Eksportēšanas opcijas
-      items:
-        - name: Eksportēšanas darbības
-          items:
-            - name: Pārskats par eksportēšanu
-              href: audience-insights/export-destinations.md
-            - name: Aktīvās kampaņas
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: "Dynamics\_365 Marketing"
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: "Dynamics\_365 Sales"
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Ads Manager
-              href: audience-insights/export-facebook.md
-            - name: Google Ads ikona
-              href: audience-insights/export-google-ads.md
-            - name: Iterējams
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: "LinkedIn\_Ads"
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: MailChimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Citi lietojumi
-          items:
-            - name: Dynamics 365 Apps klienta kartes pievienojumprogramma
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (robots)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Entītijas
-      items:
-        - name: Entītiju izprašana
-          href: audience-insights/entities.md
-        - name: Entītiju shēmu pārskatīšana Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insights dati programmā Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Attiecību un saistīto entītiju izveide
-          href: audience-insights/relationships.md
-        - name: Definējiet semantiskos kartējumus
-          href: audience-insights/semantic-mappings.md
-    - name: Administrēšana
-      items:
-        - name: Sistēmas konfigurācijas iestatīšana
-          href: audience-insights/system.md
-        - name: Lietotāju atļauju piešķiršana
-          href: audience-insights/permissions.md
-        - name: Savienojumu pārskats
-          href: audience-insights/connections.md
-        - name: Vairāku vižu pārvaldība
-          href: audience-insights/manage-environments.md
-        - name: Ievadiet savu Key Vault
-          href: audience-insights/use-azure-key-vault.md
-        - name: 'Savienojuma izveide ar krātuves kontu, izmantojot pakalpojumu principālu'
-          href: audience-insights/connect-service-principal.md
-        - name: Eksportēt diagnostikas žurnālus
-          href: audience-insights/diagnostics.md
-        - name: Pakalpojuma ierobežojumi
-          href: service-limits.md
-        - name: DSR tiesības un pieprasījumi
-          href: dsr-rights-requests.md
-    - name: API
-      items:
-        - name: Entītiju shēmu pārskatīšana Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insights dati programmā Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Darbs ar API
-          href: audience-insights/apis.md
-        - name: "API\_atsauces"
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+        - name: Dynamics 365 Apps klienta kartes pievienojumprogramma
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (robots)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Entītijas
+  items:
+    - name: Entītiju izprašana
+      href: entities.md
+    - name: Entītiju shēmu pārskatīšana Common Data Model
+      href: entity-schemas.md
+    - name: Customer Insights dati programmā Dataverse
+      href: customer-insights-dataverse.md
+    - name: Attiecību un saistīto entītiju izveide
+      href: relationships.md
+    - name: Definējiet semantiskos kartējumus
+      href: semantic-mappings.md
+- name: Administrēšana
+  items:
+    - name: Sistēmas konfigurācijas iestatīšana
+      href: system.md
+    - name: Drošības iestatījumu konfigurēšana
+      href: security-overview.md
+    - name: Lietotāju atļauju piešķiršana
+      href: permissions.md
+    - name: Savienojumu pārskats
+      href: connections.md
+    - name: Vairāku vižu pārvaldība
+      href: manage-environments.md
+    - name: Ievadiet savu Key Vault
+      href: use-azure-key-vault.md
+    - name: 'Savienojuma izveide ar krātuves kontu, izmantojot pakalpojuma principālu'
+      href: connect-service-principal.md
+    - name: Eksportēt diagnostikas žurnālus
+      href: diagnostics.md
+    - name: Pakalpojuma ierobežojumi
+      href: service-limits.md
+    - name: DSR tiesības un pieprasījumi
+      href: dsr-rights-requests.md
+- name: API
+  items:
+    - name: Darbs ar API
+      href: apis.md
+    - name: "API\_atsauces"
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
 - name: Piekrišanas pārvaldība (priekšskatījums)
   items:
     - name: Palīdzības centrmezgls
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: Piekrišanas datu pārvaldība
       items:
-        - name: Piekrišanas kārtulu iespējošana auditorijas ieskatos
-          href: audience-insights/activate-consent.md
-        - name: Noklusējuma piekrišanas kārtulu pārvaldība auditorijas ieskatu segmentos
-          href: audience-insights/change-default-consent-rules.md
+        - name: Piekrišanas kārtulu iespējošana customer insights
+          href: activate-consent.md
+        - name: Noklusējuma piekrišanas kārtulu pārvaldība Customer Insights segmentos
+          href: change-default-consent-rules.md
     - name: Iestatījumu un lietotāju pārvaldība
       items:
         - name: Sistēmas iestatījumu konfigurēšana
@@ -318,9 +314,7 @@
           href: consent-management/manage-users.md
     - name: Piekrišanas datu izmantošana
       items:
-        - name: Prognožu izveide ar piekrišanas datiem
+        - name: 'Prognožu izveide, izmantojot piekrišanas datus'
           href: consent-management/predictions-consent-data.md
-- name: Iesaistes ieskati (priekšskatījums)
-  href: engagement-insights/overview.md
 - name: Saņemt atbalstu
   href: /power-platform/admin/get-help-support

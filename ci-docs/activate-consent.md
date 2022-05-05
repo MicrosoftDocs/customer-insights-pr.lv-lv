@@ -1,0 +1,53 @@
+---
+title: Segmentu piekrišanas kārtulu aktivizēšana
+description: Veiciet šīs darbības, lai saistītu piekrišanas datus un aktivizētu piekrišanas pārbaudes programmā Dynamics 365 Customer Insights. Administrators var arī atspējot piekrišanas pārbaudes.
+ms.date: 11/12/2021
+ms.subservice: audience-insights
+ms.topic: how-to
+author: smithy7
+ms.author: smithc
+ms.reviewer: mhart
+manager: shellyha
+ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.translationtype: MT
+ms.contentlocale: lv-LV
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8643115"
+---
+# <a name="activate-consent-rules"></a>Aktivizēt piekrišanas kārtulas
+
+Piekrišanas [centrs (priekšskatījums)](consent-management/overview.md) palīdz saskaņot piekrišanas datus no dažādiem avotiem. Izmantojiet vienoto *piekrišanas entītiju*, lai lietotu noklusējuma piekrišanas pārbaudes. Pēc piekrišanas datu importēšanas piekrišanas centrā un datu kārtulu konfigurēšanas piekrišanas entītija *tiek* automātiski sinhronizēta ar Dynamics 365 Customer Insights.
+
+## <a name="enable-consent-checks"></a>Iespējot piekrišanas pārbaudes
+
+Ja piekrišanas dati tiek importēti piekrišanas centrā (priekšskatījumā) un iestatītas kārtulas, varat iespējot piekrišanas pārbaudes. 
+
+:::image type="content" source="consent-management/media/enable-consent-checks.png" alt-text="Piekrišanas cilne Customer Insights iestatījumos ar aktivizētiem piekrišanas datiem.":::
+
+1. Sadaļā Customer Insights dodieties uz **Administrators** > **Sistēma**.
+
+1. **Atlasiet cilni Piekrišana (priekšskatījums).**
+
+1. Sadaļā Piekrišanas **pārbaužu** iespējošana iestatiet slēdzi uz **Ieslēgts** visiem apgabaliem, kurus vēlaties iespējot.
+
+1. **Atzīmējiet izvēles rūtiņu Atļaut ignorēt noklusējuma piekrišanas kārtulas**, lai noņemtu noklusējuma piekrišanas pārbaudes, kas ieviestas noteiktā segmentā. 
+
+1. Nolaižamajā izvēlnē atlasiet vietu, kur vēlaties atļaut ignorēšanu.     
+
+1. **Sadaļā Saistīt piekrišanu klientu profiliem** izvēlieties atribūtu, kas tiek izmantots kā identifikators, lai saistītu piekrišanas datus ar klientu datiem. Tas, visticamāk, būs tālruņa numurs vai e-pasta adrese. 
+
+1. Atlasiet **Saglabāt**, lai lietotu iestatījumus.
+
+## <a name="disable-consent-checks"></a>Atspējot piekrišanas pārbaudes
+
+Lai pārtrauktu piekrišanas datu izmantošanu customer insights, administratoram ir attiecīgi jāatjaunina sistēmas iestatījumi.
+
+1. Sadaļā Customer Insights dodieties uz **Administrators** > **Sistēma**.
+
+1. **Atlasiet cilni Piekrišana (priekšskatījums).**
+
+1. Sadaļā Piekrišanas **pārbaužu iespējošana iestatiet slēdzi izslēgts** **·**.
+
+> [!TIP]
+> Lai pārtrauktu piekrišanas pārvaldības iespēju izmantošanu, skatiet sadaļu [Sistēmas iestatījumi piekrišanas centrā (priekšskatījums)](consent-management/system-settings.md).

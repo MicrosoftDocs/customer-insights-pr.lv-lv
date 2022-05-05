@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229504"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641817"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>BUJ par Dynamics 365 Customer Insights izmēģinājumversiju
 
@@ -23,7 +23,7 @@ ms.locfileid: "8229504"
 
 Šī programma ir mākoņpakalpojums, un tās lietošanai nav nepieciešama nekāda īpaša programmatūra, izņemot atjauninātu tīmekļa pārlūkprogrammu, lai gan pastāv daži ierobežojumi. Lai iegūtu labāko izmēģinājumversijas lietošanas pieredzi, nemēģiniet piekļūt izmēģinājumversijas vietnei inkognito režīmā un izvēlieties jums vistuvāko izmēģinājumversijas atrašanās vietu. [Papildinformācija par prasībām tīmekļa programmai.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kā reģistrēties izmēģinājumversijai bez nomnieka Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kā reģistrēties tiesas procesam bez īrnieka Microsoft 365?
 
 Varat ievadīt ar darbu nesaistītu e-pasta adresi, un mēs jums izveidosim kontu un nomnieku.
 
@@ -42,7 +42,7 @@ Reģistrējoties izmēģinājumversijai, saņemsit e-pasta ziņojumu ar detaliz�
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kā izmēģinājumversijai pievienot papildu lietotājus?
 
-Lai pievienotu lietotājus, dodieties uz [Microsoft 365 administrēšanas centru](https://admin.microsoft.com), izmantojot izmēģinājumversijas administratora kontu. Izpildiet [administrēšanas centrā sniegtos norādījumus](/microsoft-365/admin/add-users/add-users), lai pievienotu lietotājus līdz izmēģinājumversijas licencei noteiktajam ierobežojumam. Ja lietotājam, kuru pievienojat, jau ir Microsoft 365 konts, piešķiriet viņiem atbilstošu drošības loma izmēģinājuma orgā. Plašāku informāciju skatiet [Assign a drošības loma for a user](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Lai pievienotu lietotājus, dodieties uz [Microsoft 365 administrēšanas centru](https://admin.microsoft.com), izmantojot izmēģinājumversijas administratora kontu. Izpildiet [administrēšanas centrā sniegtos norādījumus](/microsoft-365/admin/add-users/add-users), lai pievienotu lietotājus līdz izmēģinājumversijas licencei noteiktajam ierobežojumam. Ja lietotājam, kuru pievienojat, jau ir Microsoft 365 konts, piešķiriet viņam atbilstošu drošības loma izmēģinājuma organizācijā. Papildinformāciju skatiet rakstā [drošības loma piešķiršana lietotājam](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Cik daudz lietotāju es varu pievienot izmēģinājumversijas vidē?
 
@@ -62,13 +62,13 @@ Izmēģinājumversiju programmā varat paplašināt tieši. Izmēģinājumversij
 
 Parasti ieteicams sākt atjaunināšanu ar saviem datiem, jauninot uz Customer Insights apmaksāto versiju. 
 
-Ja vēlaties, izmantojot tikai auditorijas ieskatus, varat kopēt datus no izmēģinājumversijas vides, iegādājoties customer Insights. Lai migrētu iestatījumus no izmēģinājuma vides uz maksas vidi, jums jābūt Customer Insights izmēģinājuma versijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram jūsu organizācijā. 
+Pēc izvēles, ja izmantojat tikai Customer Insights, varat kopēt savus datus no izmēģinājuma vides, ja iegādājaties Customer Insights. Lai migrētu iestatījumus no izmēģinājuma vides uz apmaksātu vidi, jums jābūt Customer Insights izmēģinājumversijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram savā organizācijā. 
 
-Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek piedāvāts izveidot jaunu vidi. Šajā procesā varat izvēlēties kopēt konfigurāciju no esošas vides un migrēt lielāko daļu iestatījumu. Ja jums ir iepriekšminētās atļaujas, izmēģinājumversijas vide tiks parādīta šajā sarakstā. Papildinformāciju skatiet sadaļā [Vides konfigurācijas kopēšana](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek piedāvāts izveidot jaunu vidi. Šajā procesā varat izvēlēties kopēt konfigurāciju no esošas vides un migrēt lielāko daļu iestatījumu. Ja jums ir iepriekšminētās atļaujas, izmēģinājumversijas vide tiks parādīta šajā sarakstā. Papildinformāciju skatiet sadaļā [Vides konfigurācijas kopēšana](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kādi ir izmēģinājumversijas ierobežojumi un kvotas?
 
-- Jūs nevarat izmantot savu Azure Data Lake krātuves kontu, lai izvades datus glabātu auditorijas ieskatu izmēģinājumversijā. Tomēr datus varat ievadīt no Data Lake Storage konta.
+- Jūs nevarat izmantot savu Azure Data Lake krātuves kontu, lai saglabātu izvades datus Customer Insights izmēģinājuma versijas laikā. Tomēr datus varat ievadīt no Data Lake Storage konta.
 - Dataverse vidē varat glabāt līdz pat 3 GB datu, kas tiek nodrošināti automātiski, sākot Customer Insights izmēģinājumversiju.
 
 ## <a name="customer-insights-specific-questions"></a>Specifiski jautājumi par Customer Insights
@@ -83,7 +83,7 @@ Vairākums Customer Insights iespēju līdzekļu ir pieejami izmēģinājumversi
 
 Nav pieejami **šādi** līdzekļi: 
 - Jūs nevarat izveidot jaunas vides, kas izmanto jūsu Azure Data Lake krātuves kontu.
-- Izmēģinājuma vidi nevar dzēst. 
+- Izmēģinājuma vidi nevar izdzēst. 
 
 ### <a name="how-long-does-the-trial-last"></a>Kāds ir izmēģinājumversijas derīguma termiņš?
 
