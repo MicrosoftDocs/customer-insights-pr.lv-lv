@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653577"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740912"
 ---
 # <a name="user-permissions"></a>Lietotāju atļaujas
 
 Lapā **Atļaujas** tiks iestatītas lomas un atļaujas Customer Insights izmantošanai.
 
-Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, dodieties uz **AdminSecurityUsers** > **·** > **·**.
+Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, dodieties uz **Administrēšanas** > **drošības** > **lietotāji**.
 
 Pastāv trīs lomu tipi:
 
@@ -41,7 +41,7 @@ Pastāv trīs lomu tipi:
 
 - Visas skatītājam pieejamās atļaujas.
 - Ielādējiet un pārveidojiet datus, izmantojot lapu **Datu avoti**.
-- Izpildiet *Datu apvienošanas* sadaļas (**Kartēšana**, **Atbilstība** un **Sapludināšana**), kas veido vienotā klienta profila entītiju.
+- Pilnīga ***Datu apvienošana**, kuras rezultātā tiek izveidota vienotā klienta profila entītija.
 - Definējiet **relācijas** un **darbības**.
 - Izveidojiet segmentus, izmantojot lapu **Segmenti**.
 - Izveidojiet mērus, izmantojot lapu **Mēri**.
@@ -69,7 +69,7 @@ Pastāv trīs lomu tipi:
 
 ## <a name="assign-roles-and-permissions"></a>Lomu un atļauju piešķiršana
 
-1. Dodieties uz **AdminSecurity** > **·** > **Lietotāji***.
+1. Dodieties uz **administrēšanas** > **drošības** > **Lietotāji***.
 
 1. Atlasiet vienumu **Pievienot lietotājus**, lai atvērtu rūti **Pievienot/Rediģēt atļaujas**.
 
@@ -79,7 +79,7 @@ Pastāv trīs lomu tipi:
 
 ## <a name="view-current-permissions"></a>Pašreizējo atļauju skatīšana
 
-Dodieties uz **AdminSecurityUsers** > **·** > **·**, lai redzētu, kādas lomu piešķires pašlaik ir aktīvas.
+Dodieties uz **administrēšanas** > **drošības** > **lietotājiem**, lai redzētu, kādas lomu piešķires pašlaik ir aktīvas.
 
 - Kolonnā **Tips** ir norādīts atsevišķs lietotājs, grupa vai lietojumprogramma. Sistēma atbalsta atsevišķus lietotājus un grupas.
 - Lomas ir norādītas kolonnā **Loma**.

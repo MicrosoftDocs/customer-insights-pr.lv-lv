@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643692"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741188"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate savienotājs (priekšskatījums)
 
@@ -25,14 +25,14 @@ Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā u
 
 ## <a name="power-automate-triggers"></a>Power Automate trigeri
 
-Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana. 
+Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana.
 
-- Trigeris, kad neizdodas atsvaidzināt datu avotu. 
+- Trigeris, kad neizdodas atsvaidzināt datu avotu.
 - Trigeris, kad izdodas atsvaidzināt datu avotu.
 - Trigeris, kad slieksnis ir šķērsots segmentā. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
 - Trigeris, kad biznesa pasākumā tiek pārsniegts slieksnis. Tiek atbalstīti tikai uzņēmuma mērījumi bez dimensijas. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
 - Trigeris, kad tiek pabeigta pilnīga (datu avotu, segmentu, pasākumu, ...) atsvaidzināšana.
-- Trigeris, kad ir pabeigta apvienošanas procesa (karte, atbilstība, sapludināšana) atsvaidzināšana.
+- Aktivizēt, kad apvienošanas procesa atsvaidzināšana ir pabeigta.
 
 [Konfigurējiet trigerus programmā Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

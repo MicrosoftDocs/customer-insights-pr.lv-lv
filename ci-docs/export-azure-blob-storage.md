@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643436"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757395"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
 
@@ -44,7 +44,7 @@ Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, l
 Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Ja ieslēgsit nevajadzīgās dzēšanas iestatījumu Azure Blob Storage kontam, eksportēšana neizdosies. Izslēdziet nevajadzīgo dzēšanu, lai eksportētu datus uz BLOB. Papildinformāciju skatiet sadaļā [Iespējot Blob nevajadzīgo dzēšanu](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Ja ieslēgsit nevajadzīgās dzēšanas iestatījumu Azure Blob Storage kontam, eksportēšana neizdosies. Izslēdziet nevajadzīgo dzēšanu, lai eksportētu datus uz BLOB. Papildinformāciju skatiet sadaļā [Iespējot Blob nevajadzīgo dzēšanu](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 

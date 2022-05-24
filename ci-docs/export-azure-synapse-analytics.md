@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643166"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741512"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksportēt datus uz Azure Synapse Analytics (Priekšskatījums)
 
@@ -34,7 +34,7 @@ Azure:
 
 - Aktīvs Azure abonements.
 
-- Ja izmantojat jaunu Azure Data Lake Storage Gen2 kontu, *Customer Insights pakalpojumu vadītājam ir nepieciešamas* Krātuves **BLOB datu līdzstrādnieka** atļaujas. Uzziniet vairāk [par to, kā izveidot Azure Data Lake Storage Gen2 kontu savienojumu ar Azure pakalpojumu vadītāju auditorijas ieskatiem](connect-service-principal.md). Data Lake Storage Gen2 **jābūt** iespējotai [hierarhiskajai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace).
+- Ja izmantojat jaunu Azure Data Lake Storage Gen2 kontu, *Customer Insights pakalpojumu vadītājam ir nepieciešamas* Krātuves **BLOB datu līdzstrādnieka** atļaujas. Uzziniet vairāk par [savienojumu ar Azure Data Lake Storage Gen2 kontu, izmantojot Azure pakalpojumu vadītāju customer insights](connect-service-principal.md). Data Lake Storage Gen2 **jābūt** iespējotai [hierarhiskajai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Resursu grupā, kurā Azure Synapse atrodas darbvieta, *pakalpojuma vadītājam* un *Azure AD lietotājam ar administratora atļaujām customer insights* ir jāpiešķir vismaz **Reader** atļaujas. Papildinformāciju skatiet sadaļā [Azure lomu piešķiršana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal).
 

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643097"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712911"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Vides izveide customer insights
 
@@ -63,8 +63,7 @@ Jums ir divas iespējas: **Customer Insights krātuve** (Azure Data Lake, ko pā
 Saglabājot datus Azure Data Lake Storage, jūs piekrītat, ka dati tiks pārsūtīti un glabāti attiecīgajā ģeogrāfiskā atrašanās vietā šim Azure krātuves kontam. Šī atrašanās vieta var atšķirties no tā, kur tiek glabāti Dynamics 365 Customer Insights dati. Uzziniet vairāk [Microsoft Uzticības centrs](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights pašlaik atbalsta tālāk norādītās iespējas:
-> - Izgūtās entītijas no Power BI datu plūsmām, kas tiek glabātas Microsoft Dataverse pārvaldītā Data Lake.  
+> Customer Insights pašlaik atbalsta tālāk norādītās iespējas:  
 > - Azure Data Lake Storage konti no tā paša Azure reģiona, kas tika atlasīts vides izveides laikā.
 > - Azure Data Lake Storage konti, kas ir Gen2 un kam ir *iespējota hierarhiska nosaukumvieta*. Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
 
@@ -80,7 +79,7 @@ Ja izveidojat vairākas Customer Insights vides un vēlaties saglabāt izvades e
 
 Nodrošiniet savu Microsoft Dataverse vidi datu (profilu un ieskatu) kopīgošanai ar biznesa lietojumprogrammām, kuru pamatā ir Dataverse, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas programmā Power Apps. Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs jums to nodrošināsim.
 
-Dataverse Savienojums ar vidi ļauj arī uzņemt [datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources). Varat arī izmantot [gatavus prognoze modeļus](predictions-overview.md?tabs=b2c#out-of-box-models), izveidojot savienojumu ar Dataverse vidi.
+Dataverse Savienojums ar vidi ļauj arī uzņemt [datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Customer Insights, un, Dataverse lai iespējotu datu kopīgošanu, tam jāatrodas vienā reģionā.

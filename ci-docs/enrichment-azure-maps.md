@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643015"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755363"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Klientu profilu bagātināšana ar Azure Maps (priekšskatījums)
 
@@ -51,7 +51,7 @@ Lai konfigurētu Azure Maps datu bagātināšanu, ir jāizpilda tālāk noteikti
 
 1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
 
-1. Novērtējiet, vai vēlaties modificēt **Papildu iestatījumus**. Tie ir nodrošināti, lai nodrošinātu maksimāli elastīgu iespēju apstrādāt detalizētās izmantošanas pieteikumus, taču noklusējuma vērtības vairumā gadījumu būs atbilstošas:
+1. Novērtējiet, vai vēlaties modificēt **Papildu iestatījumus**. Šie iestatījumi ir paredzēti, lai nodrošinātu maksimālu elastību, apstrādājot uzlabotas lietošanas gadījumus, taču noklusējuma vērtības vairumā gadījumu būs atbilstošas:
    - **Adrešu tips**: noklusējuma uzvedība ir tāda, ka bagātināšana atgriezīs vislabāko adrešu atbilstību pat tad, ja tā ir nepilnīga. Lai iegūtu tikai pilnīgas adreses&mdash;, piemēram, adreses, kurās iekļauts mājas numurs&mdash;, notīriet visas izvēles rūtiņas, izņemot **Punktu adreses**. 
    - **Valoda**: pēc noklusējuma adreses tiek atgrieztas tā reģiona valodā, kuram ir noteikta adrese. Lai lietotu standartizētu adrešu valodu, nolaižamajā izvēlnē atlasiet valodu. Piemēram, atlasot **angļu valodu**, jūs atgriezīs **Kopenhāgena, Dānija**, nevis **København, Danmark**.
 
@@ -89,7 +89,7 @@ Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opc
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
-Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Azure Maps, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādījuma, bet jūs esat atbildīgs par to, lai Azure Maps atbilstu visām jūsu konfidencialitātes vai drošības saistībām. Papildinformāciju skatiet [Microsoft paziņojumā par konfidencialitāti](https://go.microsoft.com/fwlink/?linkid=396732).
+Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Azure Maps, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft pārsūtīs šādus datus pēc jūsu norādījumiem, bet jūs esat atbildīgs par to, lai Azure Maps atbilstu visiem jūsu konfidencialitātes vai drošības pienākumiem. Papildinformāciju skatiet [Microsoft paziņojumā par konfidencialitāti](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

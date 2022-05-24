@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643367"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757441"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entītiju shēmas Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8643367"
 
 Šis ir koplietojams datu modelis, kas ļauj lietojumprogrammām un datu integrētājiem daudz vieglāk sadarboties, nodrošinot vienotu datu definīciju. Common Data Model ietver bagātīgu metadatu sistēmu ar standarta entītijām, attiecībām, hierarhijām, īpašībām utt. Tas tika radīts no Dynamics 365 lietotnēm un ir atvērts GitHub ar vairāk nekā 260 standarta entītijām. Liela iekšējo un ārējo partneru sistēma sniedz nozarei raksturīgos jēdzienus Common Data Model.
 
-Vairākas sistēmas un platformas pašlaik ievieš kopējo datu modeli, tostarp Power BI datu plūsmas un Azure datu pakalpojums. Tas jau tiek atbalstīts programmā Microsoft Dataverse, Dynamics 365, Power Apps, Power BI un gaidāmajos Azure datu pakalpojumos, tieši uzkrāšanas vērtība attiecībā pret [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Vairākas sistēmas un platformas pašlaik ievieš kopējo datu modeli, tostarp Power BI datu plūsmas un Azure datu pakalpojums. Tas jau tiek atbalstīts programmā Microsoft Dataverse, Dynamics 365, Power Apps, Power BI un gaidāmajos Azure datu pakalpojumos, tieši uzkrāšanas vērtība attiecībā pret [Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights entītiju shēmas
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643035"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755271"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikšanās pārsūtīšanai Dynamics 365 Customer Insights, izmantojot Azure Monitor (Preview)
 
@@ -27,8 +27,8 @@ Customer Insights tiek nosūtīti šādi notikumu žurnāli:
 - **Audita notikumi**
   - **APIEvent** - ļauj veikt izmaiņu izsekošanu, izmantojot lietotāja interfeisu Dynamics 365 Customer Insights.
 - **Operatīvie notikumi**
-  - **WorkflowEvent** — darbplūsma ļauj iestatīt [datu avotus](data-sources.md), apvienot [un](data-unification.md) bagātināt [un](enrichment-hub.md) visbeidzot [eksportēt](export-destinations.md) datus citās sistēmās. Visus šos pasākumus var veikt atsevišķi (piemēram, aktivizēt vienu eksportu) vai organizēt (piemēram, datu atsvaidzināšanu no datu avotiem, kas izraisa apvienošanās procesu, kas radīs papildu bagātinājumus un pēc tam eksportēs datus citā sistēmā). Papildinformāciju [skatiet WorkflowEvent schema](#workflow-event-schema).
-  - **APIEvent** - visi API zvani uz klientu instanci uz Dynamics 365 Customer Insights. Plašāku informāciju skatiet [APIEvent shēmā](#api-event-schema).
+  - **WorkflowEvent** — darbplūsma ļauj iestatīt [datu avotus](data-sources.md), [apvienot](data-unification.md), [bagātināt](enrichment-hub.md) un visbeidzot [eksportēt](export-destinations.md) datus citās sistēmās. Visas šīs darbības var veikt atsevišķi (piemēram, izraisīt vienu eksportu). Var arī palaist orķestrētu (piemēram, datu atsvaidzināšanu no datu avotiem, kas izraisa apvienošanās procesu, kas ievelk bagātinājumus un pēc tam eksportēs datus citā sistēmā). Papildinformāciju [skatiet WorkflowEvent Schema](#workflow-event-schema).
+  - **APIEvent** - visi API zvani uz klientu instanci uz Dynamics 365 Customer Insights. Papildinformāciju [skatiet APIEvent shēmā](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnostikas iestatījumu iestatīšana
 
@@ -44,7 +44,7 @@ Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosa
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostikas iestatīšana, izmantojot Azure monitoru
 
-1. Sadaļā Customer Insights atlasiet **SystemDiagnostics** > **·**, lai skatītu diagnostikas mērķus, kas konfigurēti šajā gadījumā.
+1. Sadaļā Customer Insights atlasiet **Sistēmas** > **diagnostika**, lai skatītu diagnostikas mērķus, kas konfigurēti šajā gadījumā.
 
 1. Atlasiet **Pievienot mērķi**.
 
@@ -55,7 +55,7 @@ Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosa
 
 1. **Izvēlieties Azure abonementa nomnieku** ar mērķa resursu un atlasiet **Pieteikties**.
 
-1. Atlasiet resursa **tipu** (Krātuves konts, Notikumu centrmezgls vai Žurnāla analīze).
+1. Atlasiet resursa **tipu** (Krātuves konts, notikumu centrmezgls vai žurnāla analīze).
 
 1. **Atlasiet mērķa resursa abonementu**.
 
@@ -69,7 +69,7 @@ Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosa
 
 ### <a name="remove-a-destination"></a>Mērķa noņemšana
 
-1. Dodieties uz **SystemDiagnostics** > **·**.
+1. Dodieties uz **sistēmas** > **diagnostiku**.
 
 1. Sarakstā atlasiet diagnostikas mērķi.
 
@@ -109,7 +109,7 @@ Customer Insights pakalpojuma vadītājs resursā **saņem Azure Event Hubs datu
 
 ### <a name="log-analytics"></a>Žurnāla analītika
 
-Customer Insights pakalpojuma vadītājs saņem **Log Analytics līdzstrādnieka** atļauju resursā. Žurnāli būs pieejami atlasītās Žurnāla analīzes darbvietas sadaļā **LogTablesLog** > **·** > **Management**. Izvērsiet **žurnāla pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
+Customer Insights pakalpojuma vadītājs saņem **Log Analytics līdzstrādnieka** atļauju resursā. Žurnāli būs pieejami atlasītajā žurnāla analīzes darbvietas sadaļā **Žurnālu tabulu** > **žurnāla pārvaldība** > **.** Izvērsiet **žurnāla pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
 
 - `CIEventsAudit` kas satur **audita notikumus**
 - `CIEventsOperational` kas ietver **operatīvus notikumus**
@@ -182,7 +182,7 @@ API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta i
 
 ### <a name="workflow-event-schema"></a>Darbplūsmas notikumu shēma
 
-Darbplūsmā ir vairākas darbības. [Uzņemiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var veikt atsevišķi vai organizēt ar šādiem procesiem. 
+Darbplūsmā ir vairākas darbības. [Uzņemiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var veikt atsevišķi vai organizēt ar šādiem procesiem.
 
 #### <a name="operation-types"></a>Operāciju tipi
 
@@ -215,7 +215,7 @@ Darbplūsmā ir vairākas darbības. [Uzņemiet datu avotus](data-sources.md), [
 | `time`          | Laikspiedols | Obligāti          | Notikuma laikspiedols (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Obligāti          | Notikuma izstarotās instances ResourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Obligāti          | Operācijas nosaukums, ko attēlo šis notikums. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Atsaucei skatiet [operāciju tipus](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Obligāti          | Notikuma žurnāla kategorija. Vienmēr `Operational` darbplūsmas notikumiem                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Obligāti          | Notikuma žurnāla kategorija. Vienmēr `Operational` darbplūsmas notikumiem                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Obligāti          | Notikuma statuss. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Garš      | Neobligāti          | Operācijas ilgums milisekundēs.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētai notikumu kategorijai.                                                                                        | Skatīt apakšsadaļu [Darbplūsmas rekvizīti](#workflow-properties-schema)                                                                                                       |

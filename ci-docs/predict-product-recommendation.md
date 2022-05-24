@@ -1,25 +1,25 @@
 ---
 title: Produktu ieteikumu prognoze
 description: Prognozējiet produktus, kurus klients, visticamāk, iegādāsies vai ar kuriem mijiedarbosies.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643832"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762741"
 ---
 # <a name="product-recommendation-prediction"></a>Produktu ieteikumu prognoze
 
 Produktu ieteikumu modelis izveido paredzamu produktu ieteikumu kopas. Ieteikumi ir balstīti uz iepriekšējo iegādes scenāriju un klientiem ar līdzīgām iegādes shēmām. Lapā **Informācija** > **Prognozes** varat izveidot jaunus ieteikumus par produktiem. Atlasiet **Manas prognozes**, lai skatītu citas jūsu izveidotās prognozes.
 
-Uz produktu ieteikumiem var attiekties vietējie tiesību akti un noteikumi, kā arī klientu prasības, kuras modelis nevar konkrēti ņemt vērā.  Kā šīs prognozēšanas iespējas lietotājam, **jums ir jāpārskata ieteikumi, pirms tos pārvirzāt saviem klientiem**, lai nodrošinātu, ka tiek ievēroti visi spēkā esošie tiesību akti un regulējumi un klientu vēlmes attiecībā uz produktu, kuru iesakāt. 
+Uz produktu ieteikumiem var attiekties vietējie tiesību akti un noteikumi, kā arī klientu prasības, kuras modelis nevar konkrēti ņemt vērā.  Kā šīs prognozēšanas iespējas lietotājam, **jums ir jāpārskata ieteikumi, pirms tos pārvirzāt saviem klientiem**, lai nodrošinātu, ka tiek ievēroti visi spēkā esošie tiesību akti un regulējumi un klientu vēlmes attiecībā uz produktu, kuru iesakāt.
 
 Šī modeļa izvade sniegs jums ieteikumus, pamatojoties uz produkta ID. Jūsu piegādes mehānismam būs jākartē prognozētie produktu ID uz atbilstošo saturu, lai atbilstošais saturs jūsu klientiem tiktu rādīts ievērojot lokalizāciju, attēla saturu un citu uzņēmējdarbībai raksturīgu saturu vai uzvedību.
 
@@ -33,29 +33,31 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
 - Zināšanas par komercdarbību, lai izprastu dažādus jūsu uzņēmuma produktu veidus un veidu, kā klienti ar tiem sazinās. Mēs iesakām produktus, kurus klienti jau iepriekš iegādājušies, vai ieteikumus par jauniem produktiem.
 
+- Jums ir jākonfigurē vide individuāliem patērētājiem **primārajai mērķauditorijai**.
+
 - Dati par jūsu transakcijām, pirkumiem un to vēsturi:
-    - Transakciju identifikatori, lai nodalītu pirkumus vai transakcijas.
-    - Klientu identifikatori, lai kartētu transakcijas ar klientiem.
-    - Darbības notikuma datumi, kuros definēti transakcijas datumi.
-    - Produkta ID informācija transakcijai.
-    - (Neobligāti) Produktu kataloga datu vienība, lai lietotu produktu filtru.
-    - (Nav obligāti) Ja transakcija ir vai nav atgriezta.
-    - Semantiskajai datu shēmuaiir nepieciešama šāda informācija:
-        - **Transakcijas ID:** Unikāls pirkšanas vai transakcijas identifikators.
-        - **Transakcijas datums:** Pirkšanas vai transakcijas datums.
-        - **Darbības vērtība:** darbības vai pirkuma skaitliskās vērtības summa.
-        - **Unikāls produkta ID:** produkta vai pakalpojuma ID, kas iegādāts, ja dati ir rindas elementu līmenī.
-        - (Neobligāti)**Iegāde vai atgriešana:** Būla vērtības lauka, kurā vērtība *true* norāda, ka transakcija bija atgriešana. Ja modelī netiek nodrošināti Pirkšanas vai Atgriešanas dati un **Transakcijas vērtība** ir negatīva, mēs izmantosim arī šo informāciju, lai veiktu secinājumus par atgriešanu.
+  - Transakciju identifikatori, lai nodalītu pirkumus vai transakcijas.
+  - Klientu identifikatori, lai kartētu transakcijas ar klientiem.
+  - Darbības notikuma datumi, kuros definēti transakcijas datumi.
+  - Produkta ID informācija transakcijai.
+  - (Neobligāti) Produktu kataloga datu vienība, lai lietotu produktu filtru.
+  - (Nav obligāti) Ja transakcija ir vai nav atgriezta.
+  - Semantiskajai datu shēmuaiir nepieciešama šāda informācija:
+    - **Transakcijas ID:** Unikāls pirkšanas vai transakcijas identifikators.
+    - **Transakcijas datums:** Pirkšanas vai transakcijas datums.
+    - **Darbības vērtība:** darbības vai pirkuma skaitliskās vērtības summa.
+    - **Unikāls produkta ID:** produkta vai pakalpojuma ID, kas iegādāts, ja dati ir rindas elementu līmenī.
+    - (Neobligāti)**Iegāde vai atgriešana:** Būla vērtības lauka, kurā vērtība *true* norāda, ka transakcija bija atgriešana. Ja modelī netiek nodrošināti Pirkšanas vai Atgriešanas dati un **Transakcijas vērtība** ir negatīva, mēs izmantosim arī šo informāciju, lai veiktu secinājumus par atgriešanu.
 - Ieteicamie datu raksturlielumi:
-    - Pietiekami vēsturiskie dati: Vismaz viens gads transakcijas datu, vēlams divi vai trīs gadi, lai tiktu ietverta zināma sezonalitāte.
-    - Vairāki pirkumi katram klientam: Trīs vai vairākas transakcijas vienam klienta ID
-    - Klientu skaits: Vismaz 100 klientu, vēlams vairāk nekā 10 000 klientu. Ja klientu būs mazāk par 100, modelis neizdosies.
+  - Pietiekami vēsturiskie dati: Vismaz viens gads transakcijas datu, vēlams divi vai trīs gadi, lai tiktu ietverta zināma sezonalitāte.
+  - Vairāki pirkumi katram klientam: Trīs vai vairākas transakcijas vienam klienta ID
+  - Klientu skaits: Vismaz 100 klientu, vēlams vairāk nekā 10 000 klientu. Ja klientu būs mazāk par 100, modelis neizdosies.
 
 > [!NOTE]
+>
 > - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Transakcijas definīcija ir diezgan elastīga. Jebkuri dati, kuri raksturo lietotāja-produkta mijiedarbību, var darboties kā ievade. Piemēram, produkta iegāde, nodarbību apmeklējums, pasākuma apmeklējums.
 > - Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas entītijas, apvienojiet tās Power Query pirms datu uzņemšanas.
 > - Ja pasūtījums un pasūtījuma informācija ir atšķirīgas entitījas, pirms lietošanas modelī tās apvienojiet. Modelis nedarbojas tikai ar entitījas pasūtījuma ID vai kvīts ID.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Produktu ieteikumu prognozes izveide
 
@@ -76,7 +78,7 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 ### <a name="define-product-recommendation-configuration"></a>Definēt produkta ieteikumu konfigurāciju
 
 1. Iestatiet to **Produktu skaitu**, ko vēlaties ieteikt klientam. Šī vērtība ir atkarīga no tā, kā piegādes metode aizpilda datus. Ja varat ieteikt trīs produktus, iestatiet šo vērtību atbilstoši.
-   
+
    >[!TIP]
    > Varat atlasīt **Saglabāt melnrakstu** jebkurā laikā, lai saglabātu prognoze kā melnrakstu. Prognozes melnraksts ir atrodams cilnē **Manas prognozes**.
 
@@ -98,14 +100,13 @@ Ja interesē šī līdzekļa izmēģināšana, taču jums nav datu, lai izpildī
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Lapas iestatīšanas darbības tips.":::
 
-1. Pēc darbības kartēšanas uz atbilstošo semantisko tipu atlasiet **Tālāk**, lai turpinātu 
- 
+1. Pēc aktivitātes kartēšanas uz atbilstošo semantisko tipu atlasiet **Tālāk**, lai turpinātu.
+
 1. Kartējiet semantiskos atribūtus uz laukiem, kas nepieciešami modeļa palaišanai.
 
 1. Atlasiet vienumu **Saglabāt**.
 
 1. Atlasiet **Tālāk**.
-
 
 ### <a name="configure-product-filters"></a>Produktu filtru konfigurēšana
 
@@ -113,11 +114,11 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
 
 1. Darbībā **Pievienot produkta informāciju** pievienojiet savu preču katalogu ar informāciju par katru produktu. Kartējiet nepieciešamo informāciju un atlasiet **Tālāk**.
 
-3. Darbībā **Produktu filtri** izvēlieties no šīm opcijām.
+1. Darbībā **Produktu filtri** izvēlieties no šīm opcijām.
 
-   * **Nav filtru**: Prognozē lietojiet visus produkta ieteikuma produktus.
+   - **Nav filtru**: Prognozē lietojiet visus produkta ieteikuma produktus.
 
-   * **Definēt konkrētus produktu filtrus**: Produkta ieteikuma prognozē izmantojiet konkrētus produktus.
+   - **Definēt konkrētus produktu filtrus**: Produkta ieteikuma prognozē izmantojiet konkrētus produktus.
 
 1. Atlasiet **Tālāk**.
 
@@ -126,7 +127,7 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
    :::image type="content" source="media/product-filters-sidepane.png" alt-text=" Sānu rūts, kurā redzami produktu kataloga entitījas atribūti, kurus atlasīt produktu filtriem.":::
 
 1. Izvēlieties, vai vēlaties, lai produkta filtrs izmanto savienotājus **un** vai **vai**, lai loģiski saistītu jūsu atribūtu atlasi no produktu kataloga.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Preču filtru konfigurācijas paraugs apvienojumā ar loģiskajiem AND savienotājiem.":::
 
 1. Atlasiet **Tālāk**.
@@ -150,7 +151,7 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
 1. Atlasiet prognozes, kuras vēlaties pārskatīt.
    - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
    - **Prognozes tips:** modeļa tips, ko izmanto prognozēšanai
-   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.    
+   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.
       *Rezultāts* izlaides entitīja ir ieteikuma kvantitatīvais rādītājs. Modelis iesaka produktus ar augstāku rezultātu iepretim produktiem, kuru rezultāts ir zemāks.
    - **Prognozētais lauks:** Šis lauks tiek aizpildīts vienīgi dažiem prognožu veidiem, un to nelieto produkta ieteikuma prognozē.
    - **Statuss:** prognozes izpildes pašreizējais statuss.
@@ -171,28 +172,27 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
             - **A** tiek uzskatīts par **A** kvalitātes modeli, ja metrika "Success@K" ir vismaz par 10% lielāka nekā bāzlīnija. 
             - **B** tiek uzskatīts par **B** kvalitātes modeli, ja metrika "Success@K" ir vismaz 0-10% lielāka nekā bāzlīnija.
             - **C** tiek uzskatīts par **C** kvalitātes modeli, ja metrika "Success@K" ir mazāka nekā bāzlīnija.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Modeļa veiktspējas rezultāta skats.](media/product-recommendation-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
             - **Bāzlīnija**: modelī tiek ņemti vērā visbiežāk ieteicamie produkti pēc iegādes skaita visiem klientiem, un šis modelis izmanto modelī identificētās apgūtās kārtulas, lai izveidotu klientiem ieteikumu kopu. Pēc tam šīs prognozes tiek salīdzinātas ar populārākajiem produktiem, ņemot vērā klientu skaitu, kuri iegādājušies šo produktu. Ja klientam ir vismaz viens produkts starp ieteiktajiem produktiem, kas tika redzēti arī populārākajiem iegādātajiem produktiem, šis produkts tiek uzskatīts par daļu no bāzlīnijas. Ja 10 klienti no 100 kopējiem klientiem būtu iegādājušies ieteiktu produktu, bāzlīnijas vērtība būtu 10%.
             - **Sekmīgs@K**: izmantojot transakciju validācijas laika perioda kopu, ieteikumi tiek izveidoti visiem klientiem un salīdzināti ar transakciju validācijas kopu. Piemēram, 12 mēnešu periodā 12. mēnesis var tikt atlikts kā validācijas datu kopa. Ja modelis prognozē vismaz vienu lietu, ko iegādāsies 12. mēnesī, pamatojoties uz to, kas tika gūts no iepriekšējiem 11 mēnešiem, klients palielinās metriku "Success@K".
-    
+
     1. **Visvairāk ieteiktie produkti (ar rēķinu):** Pieci galvenie klientiem prognozētie produkti.
        > [!div class="mx-imgBorder"]
        > ![Diagramma, kurā parādīti 5 labākie ieteicamie produkti.](media/product-recommendation-topproducts.PNG "Diagramma, kurā parādīti 5 labākie ieteicamie produkti")
-    
+
     1. **Ieteikšanas galvenie faktori:** Lai sniegtu produktu ieteikumus, modelis pielieto klienta transakciju vēsturi. Tas apgūst modeļus, balstoties iepriekšējos pirkumos, un atrod līdzības starp klientiem un produktiem. Pēc tam šīs līdzības tiek izmantotas, lai ģenerētu produktu ieteikumus.
-    Zemāk ir uzskaitīti faktori, kuri var ietekmēt modeļa ģenerēto produkta ieteikumu. 
-        - **Iepriekšējās transakcijas**: Modelis izmantoja iepriekšējo pirkumu modeļus, lai ģenerētu produkta ieteikumus. Piemēram, modelis var ieteikt _Surface peli_, ka kāds nesen iegādājies _Surface grāmatu 3_ un _Surface pildspalvu_. Modelis ieguva informāciju, ka daudzi klienti iepriekš ir pēc _Surface grāmatas 3_ un _Surface pildspalvas_ iegādes ir iegādājušies _Surface peli_.
-        - **Klientu līdzība**: Ieteikto produktu iepriekš iegādājušies citi klienti ar līdzīgiem pirkšanas modeļiem. Piemēram, Džonam tika ieteiktas _Surface austiņas 2_, jo Dženifera un Breds nesen iegādājās _Surface austiņas 2_. Modelis uzskata, ka Džons ir līdzīgs Dženiferai un Bredam, jo viņiem iepriekš bijuši līdzīgi pirkšanas paradumi.
-        - **Produktu līdzība**: Ieteicamais produkts ir līdzīgs citiem produktiem, kurus klients iepriekš bija iegādājies. Modelis uzskata, ka divi ražojumi ir līdzīgi, ja tie tika iegādāti kopā vai ja tos iegādājās līdzīgi klienti. Piemēram, kādam tiek ieteikts _USB atmiņas disks_, jo šī persona iepriekš iegādājās _Adapteru no USB-C uz USB_ un modelis uzskata, ka produkts _USB atmiņas disks_ ir līdzīgs produktam _Adapters no USB-C uz USB_.
+    Zemāk ir uzskaitīti faktori, kuri var ietekmēt modeļa ģenerēto produkta ieteikumu.
+        - **Iepriekšējās transakcijas**: Modelis izmantoja iepriekšējo pirkumu modeļus, lai ģenerētu produkta ieteikumus. Piemēram, modelis var ieteikt *Surface peli*, ka kāds nesen iegādājies *Surface grāmatu 3* un *Surface pildspalvu*. Modelis ieguva informāciju, ka daudzi klienti iepriekš ir pēc *Surface grāmatas 3* un *Surface pildspalvas* iegādes ir iegādājušies *Surface peli*.
+        - **Klientu līdzība**: Ieteikto produktu iepriekš iegādājušies citi klienti ar līdzīgiem pirkšanas modeļiem. Piemēram, Džonam tika ieteiktas *Surface austiņas 2*, jo Dženifera un Breds nesen iegādājās *Surface austiņas 2*. Modelis uzskata, ka Džons ir līdzīgs Dženiferai un Bredam, jo viņiem iepriekš bijuši līdzīgi pirkšanas paradumi.
+        - **Produktu līdzība**: Ieteicamais produkts ir līdzīgs citiem produktiem, kurus klients iepriekš bija iegādājies. Modelis uzskata, ka divi ražojumi ir līdzīgi, ja tie tika iegādāti kopā vai ja tos iegādājās līdzīgi klienti. Piemēram, kādam tiek ieteikts *USB atmiņas disks*, jo šī persona iepriekš iegādājās *Adapteru no USB-C uz USB* un modelis uzskata, ka produkts *USB atmiņas disks* ir līdzīgs produktam *Adapters no USB-C uz USB*.
 
         Katru produkta ieteikumu ietekmē viens vai vairāki no šiem faktoriem. Ieteikumu procentuālā daļa, kurā nozīme bija katram no faktoriem, ir attēlota diagrammā. Šajā piemērā 100% ieteikumu ietekmēja iepriekšējās transakcijas, 60% — klientu līdzība un 22% — produktu līdzība. Pārvelciet kursoru pāri diagrammas joslām, lai aplūkotu precīzu procentuālo daļu, kurā bijusi nozīme katram no faktoriem.
 
         > [!div class="mx-imgBorder"]
         > ![Galvenie ieteikumu faktori.](media/product-recommendation-keyrecommendationfactors.png "Galvenie modeļa apgūtie ieteikumu faktori produktu rekomendāciju ģenerēšanai")
-       
-     
+
    1. **Datu statistika** : Sniedz pārskatu par modeļa izmantoto transakciju, klientu un preču skaitu. Tā balstās ievades datos, kuri tika izmantoti, lai apgūtu modeļus un ģenerētu produktu ieteikumus.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Reizēm noderīgi vai jūsu veidotajam prognozes veidam piemēroti ir tikai note
 ## <a name="manage-predictions"></a>Pārvaldīt prognozes
 
 Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

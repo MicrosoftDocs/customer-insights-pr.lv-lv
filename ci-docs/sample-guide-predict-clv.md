@@ -1,19 +1,19 @@
 ---
 title: Debitora darbmūža prognozes parauga rokasgrāmata
 description: Izmantojiet šo parauga rokasgrāmatu, lai izmēģinātu klienta dzīves prognozes modelim.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643592"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740820"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Debitora darbmūža prognozes (CLV) parauga rokasgrāmata
 
@@ -102,64 +102,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
-Pēc datu ietveršanas mēs sākam datu apvienošanas procesu, lai izveidotu vienotu klientu profilu. Papildinformāciju skatiet tēmā [Datu apvienošana](data-unification.md).
-
-### <a name="map"></a>Kartēt
-
-1. Pēc datu uzņemšanas kartējiet kontaktpersonas no e-komercijas un lojalitātes datiem līdz vispārējiem datu tipiem. Ejiet uz **Dati** > **Apvienot** > **Kartēt**.
-
-1. Atlasiet entītijas, kas pārstāv klienta profilu — **eCommerceContacts** un **loyCustomers**. Atlasiet vienumu **Piemērot**.
-
-   ![apvienot e-komercijas un lojalitātes datu avotus.](media/unify-ecommerce-loyalty.png)
-
-1. Atlasiet **ContactId** kā primāro atslēgu **eCommerceContacts** un **LoyaltyID** kā **loyCustomers** primāro atslēgu.
-
-   ![Apvienot LoyaltyId kā primāro atslēgu.](media/unify-loyaltyid.png)
-
-1. Atlasiet vienumu **Saglabāt**.
-
-### <a name="match"></a>Saskaņot
-
-1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
-
-1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
-
-1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
-
-   ![Apvienot e-komercijas un lojalitātes atbilstības.](media/unify-match-order.png)
-
-1. Atlasiet **Pievienot kārtulu**
-
-1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
-
-   - Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
-   - Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
-   - Atlasiet nolaižamo izvēlni **Normalizēt** un izvēlieties **Tips (Tālrunis, Nosaukums, Adrese, ...)**.
-   - Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
-
-   - Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   - Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
-   - Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**.
-   - Atstājiet normalizāciju tukšu.
-   - Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-   ![Apvienot nosaukuma un e-pasta ziņojuma saskaņošanas kārtulu.](media/unify-match-rule.png)
-
-1. Atlasiet **Gatavs**.
-
-1. Atlasiet vienumu **Saglabāt** un **Palaist**.
-
-### <a name="merge"></a>Sapludināšana
-
-1. Ejiet uz cilni **Sapludināt**.
-
-1. **ContactId** attiecībā uz **loyCustomers** entītiju mainiet parādāmo nosaukumu uz **ContactIdLOYALTY**, lai atšķirtu to no citiem uzņemtajiem ID.
-
-   ![pārdēvējiet contactid no lojalitātes ID.](media/unify-merge-contactid.png)
-
-1. Atlasiet **Saglabāt** un **Palaist sapludināšanas un lejasposma procesus**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. uzdevums - konfigurēt debitora mūža vērtību prognoze
 

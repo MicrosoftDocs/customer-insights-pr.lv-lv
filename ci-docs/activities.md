@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643277"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755507"
 ---
-# <a name="customer-activities"></a>Klienta darbības
+# <a name="customer-activities"></a>Klientu darbības
 
-Apvienojiet klientu darbības no [dažādiem datu avotiem](data-sources.md) risinājumā Dynamics 365 Customer Insights, lai izveidotu laika skalu, kurā hronoloǵiski uzskaitītas darbības. Iekļaujiet laika skalu Dynamics 365 programmās, izmantojot risinājumu [Klienta kartes pievienojumprogramma](customer-card-add-in.md) vai Power BI informācijas panelī.
+Kombinējiet klientu darbības no [dažādiem datu avotiem](data-sources.md) programmā Dynamics 365 Customer Insights. Izveidojiet laika skalu, kurā aktivitātes uzskaitītas hronoloģiski. Iekļaujiet laika grafiku Dynamics 365 programmās, izmantojot [klienta kartes pievienojumprogrammas](customer-card-add-in.md) risinājumu.
 
 ## <a name="define-an-activity"></a>Darbības definēšana
 
@@ -34,7 +34,7 @@ Datu avoti var ietvert entītijas ar transakciju un darbību datiem no vairākie
 
 Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut klienta laika skalā, un entītijas bez **Datuma** laukiem nevar pievienot. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
 
-1. Dodieties uz **DataActivities** > **·**.
+1. Dodieties uz **Datu** > **darbības**.
 
 1. Atlasiet **Pievienot darbību**, lai sāktu vadīti iestatīt darbību.
 
@@ -78,7 +78,7 @@ Entītijai ir nepieciešams vismaz viens veida **Datums** atribūts, ko iekļaut
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. Varat atlasīt **Pabeigt un pārskatīt**, lai saglabātu darbību ar darbības veidu iestatītu uz **Cita**. 
 
-1. Darbībā **Darbības veids** izvēlieties darbības veidu un, ja vēlaties, atlasiet, vai vēlaties semantiski kartēt dažus darbību veidus, kurus izmantot citos Customer Insights apgabalos. Pašlaik *Atsauksme*, *Lojalitāte*, *SalesOrder*, *SalesOrderLine* un *Abonementa* darbību veidi var tikt kartēti semantiski pēc tam, kad ir saņemta piekrišana kartēt laukus. Ja jaunajai darbībai nav atbilstoša darbības veida, varat atlasīt *Cita* vai *Izveidot jaunu*, lai izveidotu pielāgotu darbības veidu.
+1. Darbībā **Darbības veids** izvēlieties darbības veidu un, ja vēlaties, atlasiet, vai vēlaties semantiski kartēt dažus darbību veidus, kurus izmantot citos Customer Insights apgabalos. Pašlaik Feedback, *Loyalty, SalesOrder*, *SalesOrderLine* un *Abonementa* darbību tipi atbalsta semantiku pēc vienošanās par lauku kartēšanu. *·* *·* Ja jaunajai darbībai nav atbilstoša darbības veida, varat atlasīt *Cita* vai *Izveidot jaunu*, lai izveidotu pielāgotu darbības veidu.
 
 1. Lai pārietu uz nākamo darbību, atlasiet **Tālāk**. 
 
@@ -110,7 +110,7 @@ Pēc klientu darbību konfigurēšanas atlasiet vienumu **Rādīt darbību laika
 
 Lai atvērtu klienta laika skalu, dodieties uz **Klienti** un izvēlieties klienta profilu, kuru vēlaties skatīt.
 
-Ja klients ir piedalījies jūsu konfigurētajā darbībā, tā būs sadaļā **Darbības laika grafiks**.
+Ja klients ir piedalījies konfigurētā darbībā, tas **ir atrodams sadaļā Darbības laika grafiks**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Skatiet konfigurētās darbības klientu profilos.":::
 

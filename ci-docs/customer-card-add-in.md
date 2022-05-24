@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643094"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755645"
 ---
 # <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
-
-
 
 Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 programmās. Kad klienta kartītes pievienojumprogramma ir instalēta atbalstītajā Dynamics 365 programmā, varat izvēlēties rādīt klientu profila laukus, ieskatus un darbību laika grafiku. Pievienojumprogramma izgūs datus no programmas Customer Insights, neietekmējot pievienotās Dynamics 365 programmas datus.
 
@@ -31,10 +29,10 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja Dynamics 365 kontaktpersonu (vai uzņēmumu) uzņemšanai izmantojat citu metodi, pārliecinieties, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [primārā atslēga šai datu avots datu apvienošanas procesa kartes solī](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja Dynamics 365 kontaktpersonu (vai uzņēmumu) uzņemšanai izmantojat citu metodi, pārliecinieties, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [primārā atslēga šai datu avots datu apvienošanas procesa kartes solī](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Visi Klienta kartes pievienojumprogrammas Dynamics 365 lietotāji ir [jāpievieno kā lietotāji](permissions.md) customer insights, lai skatītu datus.
 - [Lai dati darbotos, klientu ieskatos ir nepieciešamas konfigurētas meklēšanas un filtrēšanas iespējas](search-filter-index.md).
-- Katra pievienojumprogrammas vadīkla paļaujas uz noteiktiem datiem customer insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija jūs informēs, ja atlasītā vides tipa dēļ vadīkla nav pieejama. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
+- Katra pievienojumprogrammas vadīkla paļaujas uz noteiktiem datiem customer insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
   - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
   - **Informācijas kontrole**: nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
@@ -132,16 +130,16 @@ Pat ar pareizi konfigurētiem ID laukiem vadīklas nevar atrast datus nevienam k
 
 **Risinājums**
 
-1. Pārliecinieties, vai esat konfigurējis kartes pievienojumprogrammu saskaņā ar instrukcijām: [Klienta kartes pievienojumprogrammas konfigurēšana](#configure-the-customer-card-add-in) 
+1. Pārliecinieties, vai esat konfigurējis kartes pievienojumprogrammu saskaņā ar instrukcijām: [Klienta kartes pievienojumprogrammas konfigurēšana](#configure-the-customer-card-add-in)
 
-1. Pārskatiet datu norīšanas konfigurāciju. Rediģējiet Dynamics 365 sistēmas datu avots, kurā ir kontaktpersonas ID GUID. Ja redaktorā kontaktpersonas ID GUID tiek rādīts Power Query ar lielajiem burtiem, mēģiniet veikt šādas darbības: 
+1. Pārskatiet datu norīšanas konfigurāciju. Rediģējiet dynamics 365 sistēmas datu avots, kurā ir kontaktpersonas ID GUID. Ja kontaktpersonas ID GUID redaktorā Power Query tiek rādīts ar lielajiem burtiem, mēģiniet veikt šādas darbības:
     1. Rediģējiet datu avots, lai redaktorā Power Query atvērtu datu avots.
     1. Atlasiet kolonnas Kontaktpersonas ID.
     1. Galvenes joslā atlasiet **Transformēt**, lai skatītu pieejamās darbības.
     1. Atlasiet **mazos burtus**. Pārbaudiet, vai GUID tabulā tagad ir mazie.
     1. Saglabājiet datu avotu.
-    1. Palaidiet datu norīšanas, apvienošanas un pakārtotos procesus, lai izplatītu GUID izmaiņas. 
+    1. Palaidiet datu norīšanas, apvienošanas un pakārtotos procesus, lai izplatītu GUID izmaiņas.
 
-Pēc pilnīgas atsvaidzināšanas klienta kartes pievienojumprogrammas vadīklām ir jāparāda gaidāmie dati. 
+Kad sistēma ir pabeigusi pilnīgu atsvaidzināšanu, klienta kartes pievienojumprogrammas vadīklām jāparāda paredzamie dati.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

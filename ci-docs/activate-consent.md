@@ -1,23 +1,22 @@
 ---
 title: Segmentu piekrišanas kārtulu aktivizēšana
 description: Veiciet šīs darbības, lai saistītu piekrišanas datus un aktivizētu piekrišanas pārbaudes programmā Dynamics 365 Customer Insights. Administrators var arī atspējot piekrišanas pārbaudes.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643115"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755179"
 ---
 # <a name="activate-consent-rules"></a>Aktivizēt piekrišanas kārtulas
 
-Piekrišanas [centrs (priekšskatījums)](consent-management/overview.md) palīdz saskaņot piekrišanas datus no dažādiem avotiem. Izmantojiet vienoto *piekrišanas entītiju*, lai lietotu noklusējuma piekrišanas pārbaudes. Pēc piekrišanas datu importēšanas piekrišanas centrā un datu kārtulu konfigurēšanas piekrišanas entītija *tiek* automātiski sinhronizēta ar Dynamics 365 Customer Insights.
+Piekrišanas [centrs (priekšskatījums)](consent-management/overview.md) palīdz saskaņot piekrišanas datus no dažādiem avotiem. Izmantojiet vienoto *piekrišanas entītiju*, lai lietotu noklusējuma piekrišanas pārbaudes. Pēc piekrišanas datu importēšanas un kartes kārtulu konfigurēšanas piekrišanas entītija *tiek* automātiski sinhronizēta ar Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Iespējot piekrišanas pārbaudes
 

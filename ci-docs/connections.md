@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643331"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755318"
 ---
 # <a name="connections-preview-overview"></a>Savienojumu (priekšskatījums) pārskats
 
@@ -24,15 +24,15 @@ Savienojumi ir atslēga tam, lai jūs iespējotu datu kopīgošanu ar un no Cust
 
 Lai izveidotu un skatītu savienojumus, dodieties uz **Administrators** > **Savienojumi**.
 
-Cilnē **Savienojumi** ir redzami visi aktīvie savienojumi. Sarakstā redzama katra savienojuma rinda. 
+Cilnē **Savienojumi** ir redzami visi aktīvie savienojumi. Sarakstā redzama katra savienojuma rinda.
 
 Cilnē **Atklāt** aplūkojiet īsu pārskatu un aprakstu un uzziniet, ko varat darīt ar katru paplašināšanas opciju.
 
-### <a name="exports"></a>Eksports
+## <a name="exports"></a>Eksports
 
 Tikai administratori var konfigurēt jaunos savienojumus, taču viņi var piešķirt piekļuvi līdzstrādniekiem, lai viņi lietotu esošos savienojumus. Administratori nosaka, kur dati var doties, līdzstrādnieki atbilstoši savām vajadzībām definē lietderīgo slodzi un biežumu. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Bagātinājumi
+## <a name="enrichments"></a>Bagātinājumi
 
 Jaunus savienojumu drīkst konfigurēt tikai administratori, taču izveidotie savienojumi vienmēr ir pieejami gan administratoriem, gan līdzstrādniekiem. Administratori pārvalda akreditācijas un sniedz piekrišanu datu pārsūtīšanai. Pēc tam savienojumus bagātināšanai var izmantot kā administratori, tā arī līdzstrādnieki.
 
@@ -46,9 +46,9 @@ Lai pievienotu savienojumu, ir jābūt [administratora atļaujām](permissions.m
 
 1. Lai izveidotu jaunu savienojumu, atlasiet **Pievienot savienojumu**. Nolaižamajā izvēlnē izvēlieties, kāda veida savienojumu vēlaties izveidot.
 
-1. Rūtī **Iestatīt savienojumu** norādiet nepieciešamo informāciju. 
+1. Rūtī **Iestatīt savienojumu** norādiet nepieciešamo informāciju.
    1. **Parādāmais nosaukums** un nosaukuma veids raksturo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
-   1. Precīzie lauki ir atkarīgi no tā, kādam pakalpojuma pieslēdzaties. Varat sīkāk uzzināt par konkrēto savienojuma veidu rakstā par mērķa pakalpojumu.
+   1. Precīzi lauki ir atkarīgi no tā, ar kādu pakalpojumu veidojat savienojumu. Varat sīkāk uzzināt par konkrēto savienojuma veidu rakstā par mērķa pakalpojumu.
    1. Ja jūs [izmantojat savu Key Vault](use-azure-key-vault.md), lai glabātu slepenu informāciju, aktivizējiet **Izmantot Key Vault** un sarakstā izvēlieties slepeno informāciju.
 
 1. Lai izveidotu savienojumu, atlasiet **Saglabāt**.
@@ -59,7 +59,7 @@ Cilnes elementā **Iestatīt** var atlasīt arī **Atklāt**.
 
 Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem lietotājiem ir atļauts izmantot konkrēto savienojumu, lai definētu [eksportēšanu](export-destinations.md). Savienojums pēc noklusējuma ir pieejams lietotājiem ar administratora lomu. Šo iestatījumu varat mainīt sadaļām **Izvēlieties, kas var lietot šo savienojumu** un ļaut šo savienojumu izmantot lietotājiem ar līdzstrādnieka lomu.
 
-- Līdzstrādnieki nevarēs savienojumu skatīt vai rediģēt. Viņi eksporta izveides laikā redzēs vienīgi parādāmo nosaukumu un veidu.
+- Līdzstrādnieki nevarēs savienojumu skatīt vai rediģēt. Viņi redzēs tikai parādāmo nosaukumu un tā tipu, veidojot eksportu.
 - Kopīgojot savienojumu, jūs ļaujat savienojumu izmantot līdzstrādniekiem. Līdzstrādnieki eksportēšanas iestatīšanas laikā redzēs kopīgotos savienojumus. Viņi var pārvaldīt visus eksportus, kuri izmanto konkrēto savienojumu.
 - Šo iestatījumu varat mainīt, vienlaikus paturot līdzstrādnieku jau definētos eksportus.
 
@@ -77,7 +77,7 @@ Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem l
 
 ## <a name="remove-a-connection"></a>Savienojuma noņemšana
 
-Ja savienojumu, kuru noņemat, izmanto bagātināšanā vai eksportēšanā, tās vispirms ir jāatvieno vai jāņoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu. 
+Ja noņemtais savienojums tiek izmantots ar bagātināšanu vai eksportu, vispirms tie ir jāatvieno vai jānoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu.
 
 Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās aktivizēt no jauna, pievienojot tām citu savienojumu lapā [Bagātināšana](enrichment-hub.md) vai [Eksportēšana](export-destinations.md).
 
@@ -91,7 +91,7 @@ Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās a
 
    1. Ja šo savienojumu izmanto bagātināšana vai eksportēšana, atlasiet pogu, lai redzētu, kas izmanto savienojumu.
       - **Eksportēšana:** Varat izvēlēties vai nu noņemt vai atvienot eksportēšanu, lai varētu noņemt savienojumu. Lai atvienotu eksportēšanu, administratori var izmantot darbību **Atvienot**. Šī darbība ir pieejama atsevišķām un vairākām eksportēšanām. Veicot atvienošanu, tiek saglabāta eksportēšanas konfigurācija, taču tā netiks palaista, iekams nebūs pievienots cits savienojums.
-      - **Bagātināšana:** Varat izvēlēties vai nu noņemt vai deaktivizēt bagātināšanu, lai varētu noņemt savienojumu. 
+      - **Bagātināšana:** Varat izvēlēties vai nu noņemt vai deaktivizēt bagātināšanu, lai varētu noņemt savienojumu.
    1. Kolīdz savienojumam vairs nav atkarīgo elementu, atgriezieties lapā **Administrators** > **Savienojumi** un vēlreiz mēģiniet noņemt savienojumu.
 
 1. Lai apstiprinātu dzēšanu, atlasiet **Noņemt**.

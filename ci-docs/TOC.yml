@@ -66,12 +66,18 @@
   items:
     - name: Datu apvienošanas pārskats
       href: data-unification.md
-    - name: Kartējiet entītijas un atribūtus
+    - name: Atlasīt avota laukus
       href: map-entities.md
-    - name: Saskaņojiet entītijas
+    - name: Ierakstu dublikātu noņemšana
+      href: remove-duplicates.md
+    - name: Atbilstības nosacījumi
       href: match-entities.md
-    - name: Sapludiniet entītijas
+    - name: Klientu lauku apvienošana
       href: merge-entities.md
+    - name: Pārskatīt datu apvienošanu
+      href: review-unification.md
+    - name: Atjaunināt apvienošanas iestatījumus
+      href: data-unification-update.md
 - name: Datu bagātināšana
   items:
     - name: Klientu profilu bagātināšana
@@ -282,6 +288,8 @@
       href: apis.md
     - name: "API\_atsauces"
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData vaicājumu paraugi
+      href: odata-examples.md
 - name: Piekrišanas pārvaldība (priekšskatījums)
   items:
     - name: Palīdzības centrmezgls

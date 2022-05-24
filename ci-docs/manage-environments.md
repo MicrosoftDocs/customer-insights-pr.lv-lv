@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643612"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741050"
 ---
 # <a name="manage-environments"></a>Pārvaldīt vides
 
@@ -113,7 +113,7 @@ Veidojot savienojumu ar Dataverse vidi, kļūdas ziņojums **Šī CDS organizāc
 VAI 
 
 1. Atveriet savu Dataverse vidi.
-1. Dodieties uz **Advanced SettingsSolutions** > **·**.
+1. Dodieties uz **Papildu iestatījumu** > **risinājumi**.
 1. Atinstalējiet **risinājumu CustomerInsightsCustomerCard**.
 
 ## <a name="copy-the-environment-configuration"></a>Izveidojiet vides konfigurācijas kopiju
@@ -127,9 +127,9 @@ Jūs redzēsiet sarakstu, kurā ir visas jūsu organizācijā pieejamās vides, 
 Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 
 - Ievadītie/importētie datu avoti
-- Datu apvienošanas (kartējums, atbilstība, sapludināšana) konfigurācija
+- Datu apvienošanas konfigurācija
 - Segmenti
-- Mēri
+- Mērījumi
 - Attiecības
 - Darbības
 - Meklēšanas un filtrēšanas rādītājs
@@ -158,7 +158,7 @@ Pēc datu avotu atsvaidzināšanas dodieties uz **Dati** > **Apvienot**. Šeit a
 
 Kad datu unificēšana ir pabeigta, dodieties uz **Pasākumi** un **Segmenti**, lai atsvaidzinātu arī tos.
 
-Pirms eksportēšanas un bagātināšanas atkārtotas aktivizēšanas dodieties uz **AdminConnections** > **·**, lai atkārtoti apstiprinātu savienojumus jaunajā vidē.
+Pirms eksportēšanas un bagātināšanas atkārtotas aktivizēšanas dodieties uz **Administrēšanas** > **savienojumi**, lai atkārtoti apstiprinātu savienojumus jaunajā vidē.
 
 ## <a name="change-the-owner-of-an-environment"></a>Vides īpašnieka maiņa
 

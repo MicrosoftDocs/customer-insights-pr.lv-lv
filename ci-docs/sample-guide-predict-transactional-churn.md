@@ -1,19 +1,19 @@
 ---
 title: Transakciju zudumu prognozes parauga ceļvedis
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta transakciju zudumu prognozes modeli.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643749"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741328"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Transakciju zudumu prognozes parauga ceļvedis
 
@@ -86,69 +86,13 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 1. Saglabājiet datu avotu.
 
-
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
-Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** procesu, lai izveidotu vienotu klientu profilu. Papildinformāciju skatiet tēmā [Datu apvienošana](data-unification.md).
-
-### <a name="map"></a>Kartēt
-
-1. Pēc datu uzņemšanas kartējiet kontaktpersonas no e-komercijas un lojalitātes datiem līdz vispārējiem datu tipiem. Ejiet uz **Dati** > **Apvienot** > **Kartēt**.
-
-1. Atlasiet entītijas, kas pārstāv klienta profilu — **eCommerceContacts** un **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="apvienot e-komercijas un lojalitātes datu avotus.":::
-
-1. Atlasiet **ContactId** kā primāro atslēgu **eCommerceContacts** un **LoyaltyID** kā **loyCustomers** primāro atslēgu.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Apvienot LoyaltyId kā primāro atslēgu.":::
-
-### <a name="match"></a>Saskaņot
-
-1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
-
-1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
-
-1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Apvienot e-komercijas un lojalitātes atbilstības.":::
-
-1. Atlasiet **Jaunas kārtulas izveide**
-
-1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
-
-   * Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
-   * Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
-   * Atlasiet opciju **Normalizēt** nolaižamo sarakstu un izvēlieties **tipu (tālrunis, nosaukums, adrese,...)**.
-   * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
-
-   * Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   * Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
-   * Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**. 
-   * Atstājiet normalizāciju tukšu. 
-   * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Apvienot nosaukuma un e-pasta ziņojuma saskaņošanas kārtulu.":::
-
-7. Atlasiet vienumu **Saglabāt** un **Palaist**.
-
-### <a name="merge"></a>Sapludināšana
-
-1. Ejiet uz cilni **Sapludināt**.
-
-1. **ContactId** attiecībā uz **loyCustomers** entītiju mainiet parādāmo nosaukumu uz **ContactIdLOYALTY**, lai atšķirtu to no citiem uzņemtajiem ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pārdēvējiet contactid no lojalitātes ID.":::
-
-1. Atlasiet **Saglabāt** un **Palaist**, lai sāktu sapludināšanas procesu.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>3.uzdevums — konfigurēt transakciju zudumu prognozi
 
-Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudumu prognozi. Detalizētas darbības skatiet [rakstā Abonēšanas prognoze](predict-subscription-churn.md). 
+Ja ir ieviesti vienotie klientu profili, mēs tagad varam palaist transakcijas prognoze. Detalizētus soļus skatiet rakstā Transakcijas [čurkste prognoze](predict-transactional-churn.md). 
 
 1. Atveriet **Informācija** > **Atklāt** un atlasiet, lai izmantotu **Klientu zudumu modeli**.
 
@@ -180,7 +124,7 @@ Izmantojot vienoto klientu profilus, mēs tagad varam palaist abonēšanas zudum
 
 ## <a name="task-4---review-model-results-and-explanations"></a>4.uzdevums — pārskatīt modeļa rezultātus un paskaidrojumus
 
-Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Tagad jūs varat pārskatīt abonēšanas zudumu modeļa paskaidrojumus. Papildinformāciju skatiet rakstā [Prognozes statusa un rezultātu pārskatīšana](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Tagad varat pārskatīt čurkstes modeļa skaidrojumus. Papildinformāciju skatiet rakstā [Prognozes statusa un rezultātu pārskatīšana](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>5.uzdevums — Izveidot augsta zudumu riska klientu segmentu
 
@@ -192,14 +136,12 @@ Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Izveidot segmentu ar modeļa izvadi.":::
 
-1. Atlasiet **OOBSubscriptionChurnPrediction** galapunktu un definējiet segmentu: 
+1. **Atlasiet OOBeCommerceChurnPrediction** galapunktu un definējiet segmentu: 
    - Lauks: ChurnScore
    - Operators: ir lielāks nekā
    - Vērtība: 0.6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Iestatiet abonementu zudumu segmentu.":::
 
-Tagad jums ir segments, kas tiek dinamiski atjaunināts, kas identificē šā abonēšanas uzņēmuma augsta zudumu riska klientus.
+Tagad jums ir segments, kas ir dinamiski atjaunināts un kas identificē klientus ar augstu čurkstes risku.
 
 Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
 

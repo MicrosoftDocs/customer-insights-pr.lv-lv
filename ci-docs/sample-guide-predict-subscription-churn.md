@@ -1,8 +1,8 @@
 ---
 title: Abonementa zudumu prognozes parauga ceļvedis
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta abonementa zudumu prognozes modeli.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643572"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741420"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Abonementa zudumu prognozes parauga ceļvedis
 
@@ -112,61 +112,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
-Pēc datu uzņemšanas mēs tagad sākam **Kartēt, saskaņot un sapludināt** procesu, lai izveidotu vienotu klientu profilu. Papildinformāciju skatiet tēmā [Datu apvienošana](data-unification.md).
-
-### <a name="map"></a>Kartēt
-
-1. Pēc datu uzņemšanas kartējiet kontaktpersonas no e-komercijas un lojalitātes datiem līdz vispārējiem datu tipiem. Ejiet uz **Dati** > **Apvienot** > **Kartēt**.
-
-1. Atlasiet entītijas, kas pārstāv klienta profilu — **eCommerceContacts** un **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="apvienot e-komercijas un lojalitātes datu avotus.":::
-
-1. Atlasiet **ContactId** kā primāro atslēgu **eCommerceContacts** un **LoyaltyID** kā **loyCustomers** primāro atslēgu.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Apvienot LoyaltyId kā primāro atslēgu.":::
-
-### <a name="match"></a>Saskaņot
-
-1. Dodieties uz cilni **Saskaņot** un atlasiet **Iestatīt secību**.
-
-1. Nolaižamajā sarakstā **Primārs** izvēlieties **eCommerceContacts : eCommerce** kā primāro avotu un iekļaujiet visus ierakstus.
-
-1. Nolaižamajā sarakstā **2. entītija** izvēlieties **loyCustomers :LoyaltyScheme** un iekļaujiet visus ierakstus.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Apvienot e-komercijas un lojalitātes atbilstības.":::
-
-1. Atlasiet **Jaunas kārtulas izveide**
-
-1. Pievienojiet pirmo nosacījumu, izmantojot FullName.
-
-   * Entītijai eCommerceContacts atlasiet **FullName** nolaižamajā sarakstā.
-   * Entītijai loyCustomers atlasiet **FullName** nolaižamajā sarakstā.
-   * Atlasiet opciju **Normalizēt** nolaižamo sarakstu un izvēlieties **tipu (tālrunis, nosaukums, adrese,...)**.
-   * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-1. Ievadiet jaunās kārtulas nosaukumu **FullName, e-pasts**.
-
-   * Pievienojiet e-pasta adresei otru nosacījumu, atlasot **Pievienot nosacījumu**
-   * Entītijai eCommerceContacts nolaižamajā sarakstā izvēlieties **E-pasts**.
-   * Entītijai loyCustomers nolaižamajā sarakstā izvēlieties **E-pasts**. 
-   * Atstājiet normalizāciju tukšu. 
-   * Iestatiet **Precizitātes līmeni**: **Pamatinformācija** un **Vērtību**: **Augsts**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Apvienot nosaukuma un e-pasta ziņojuma saskaņošanas kārtulu.":::
-
-7. Atlasiet vienumu **Saglabāt** un **Palaist**.
-
-### <a name="merge"></a>Sapludināšana
-
-1. Ejiet uz cilni **Sapludināt**.
-
-1. **ContactId** attiecībā uz **loyCustomers** entītiju mainiet parādāmo nosaukumu uz **ContactIdLOYALTY**, lai atšķirtu to no citiem uzņemtajiem ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pārdēvējiet contactid no lojalitātes ID.":::
-
-1. Atlasiet **Saglabāt** un **Palaist**, lai sāktu sapludināšanas procesu.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>3.uzdevums — konfigurēt abonēšanas zudumu prognozi
 

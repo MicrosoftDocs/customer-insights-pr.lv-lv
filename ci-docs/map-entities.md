@@ -1,110 +1,83 @@
 ---
-title: Datu apvienošanas entītiju un atribūtu kartēšana
-description: Atlasiet entītijas, atribūtus, primārās atslēgas un stiskus tipus, lai kartētu datus uz vienoto klienta profilu.
-ms.date: 10/18/2020
+title: Atlasīt avota laukus datu apvienošanai
+description: Pirmais apvienošanas procesa solis ir entītiju, atribūtu, primāro atslēgu un semantisko tipu atlase, lai kartētu datus uz vienoto klienta profilu.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643169"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741004"
 ---
-# <a name="map-entities-and-attributes"></a>Kartējiet entītijas un atribūtus
+# <a name="select-source-fields-for-data-unification"></a>Atlasīt avota laukus datu apvienošanai
 
-**Karte** ir pirmais posms datu apvienošanas procesā. Kartēšana sastāv no trim posmiem:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Entītijas atlase*: Norādiet savienojamās entītijas, kas aizved pie datu kopas ar pilnīgāku informāciju par jūsu klientiem.
-- *Atribūtu atlase*: katrai entītijai norādiet kolonnas, ko vēlaties kombinēt un saskaņot *atbilstības noteikšanas* un *sapludināšanas* posmos. Šīs kolonnas sauc par *Atribūtiem*.
-- *Primārā atslēga un semantiskā tipa atlase*: Katrai entītijai norādiet atribūtu, ko vēlaties definēt kā šīs entītijas primāro atslēgu, un katram atribūtam norādiet semantisko tipu, kas vislabāk raksturo šo atribūtu.
+Pirmais apvienošanas solis ir to datu kopu entītiju un lauku atlase, kurus vēlaties apvienot. Atlasiet entītijas, kas satur ar klientu saistītu informāciju, piemēram, vārdu, adresi, tālruņa numuru un e-pastu. Varat atlasīt vienu vai vairākas entītijas.
 
-Papildinformāciju par datu apvienošanās vispārīgo plūsmu skatiet rakstā [Apvienošana](data-unification.md).
+## <a name="select-entities-and-fields"></a>Entītiju un lauku atlase
 
-## <a name="select-the-first-entities"></a>Pirmo entītiju atlase
+1. Dodieties uz **Data** > **Unify**.
 
-1. Ejiet uz **Dati** > **Apvienot** > **Kartēt**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Ekrānuzņēmums, kurā redzama galvenās lapas vienādošana pirmās palaišanas pieredzei, izmantojot iezīmētu opciju Sākt darbu.":::
 
-2. Sāciet kartēšanas posmu, atlasot **Atlasīt entītijas**.
+1. Atlasiet **Sākt darbu**.
 
-3. Atlasiet entītijas un atribūtus, ko vēlaties izmantot posmos *saskaņot* un *sapludināt*. No entītijas varat atlasīt nepieciešamos atribūtus pa vienam vai iekļaut visus, entītijas līmenī atlasot izvēles rūtiņu **Iekļaut visus laukus**. Lai gūtu labumu no datu apvienošanas procesa, ieteicams atlasīt vismaz divas entītijas.
+1. **Lapā Avota lauki** atlasiet **Atlasīt entītijas un laukus**. Tiek **parādīta rūts Entītiju un lauku** atlase.
 
-   > [!div class="mx-imgBorder"]
-   > ![Entītiju pievienošanas piemērs.](media/data-manager-configure-map-add-entities-example.png "Entītiju pievienošanas piemērs")
+1. Atlasiet vismaz vienu entītiju.
 
-   Šajā piemērā mēs pievienojam entītijas **eCommerceContacts** un **loyCustomers**. Izvēloties šīs entītijas, varat gūt ieskatu par to, kuri tiešsaistes biznesa klienti ir lojalitātes programmas dalībnieki.
-   
-   Visos atribūtos un entītijās varat meklēt atslēgvārdus, lai atlasītu nepieciešamos atribūtus, ko vēlaties kartēt.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Meklēšanas lauku piemērs.](media/data-manager-configure-map-search-fields-example.png "Meklēšanas lauku piemērs")
+1. Katrai atlasītajai entītijai norādiet laukus, kurus vēlaties izmantot, lai saskaņotu klientu ierakstus un laukus, kas jāiekļauj vienotajā profilā. Šos laukus sauc par *atribūtiem*. Nepieciešamos atribūtus var atlasīt atsevišķi no entītijas vai iekļaut visus entītijas atribūtus, atzīmējot izvēles rūtiņu entītijas līmenī. Visos atribūtos un entītijās varat meklēt atslēgvārdus, lai atlasītu nepieciešamos atribūtus, ko vēlaties kartēt.
 
-4. Atlasiet **Lietot**, lai apstiprinātu atlasi.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Atlasīto entītiju un atribūtu ekrānuzņēmums.":::
+
+   Šajā piemērā mēs pievienojam kontaktpersonas **un** **klientu lojalitātes** programmas entītijas. Izvēloties šīs entītijas, varat gūt ieskatu par to, kuri tiešsaistes biznesa klienti ir lojalitātes programmas dalībnieki.
+
+1. Atlasiet **Lietot**, lai apstiprinātu atlasi. Tiek parādītas atlasītās entītijas un atribūti.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Atribūtu primārās atslēgas un semantiskā tipa atlasīšana
 
-Pēc entītiju atlasīšanas lapā **Kartēšana** pārbaudei ir uzskaitītas atlasītās entītijas. Definējiet entītijas primāro atslēgu un nosakiet entītijas atribūta semantisko tipu.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Atlasīto entītiju ekrānuzņēmums ar neatlasītu primāro atslēgu." lightbox="media/m3_select_primary.png":::
 
-- **Primārā atslēga**: atlasiet vienu atribūtu kā primāro atslēgu katrai entītijai. Lai atribūts būtu derīga primārā atslēga, tajā nedrīkst ietvert vērtību dublikātus, trūkstošās vērtības vai nulles vērtības. Virknes, vesela skaitļa un GUID datu tipu atribūti tiek atbalstīti kā primārās atslēgas un tiks parādīti laukā, no kura iespējams veikt atlasi.
+Katrai entītijai veiciet šādas darbības.
 
-- **Atribūta semantiskais tips**: Jūsu atribūtu kategorijas, piemēram, e-pasta adrese vai nosaukums. Lai semantikas viedajai prognozēšanai izmantotu mākslīgā intelekta modeļus, ietaupītu laiku un uzlabotu precizitāti, iestatiet **Inteliģento kartēšanu** uz pozīciju **ON**. Inteliģentā kartēšana izceļ mākslīgā intelekta semantikas ieteikumu laukā **Veids**. Ja to iestatāt uz pozīciju **OFF**, jūs redzēsit regulāros kartēšanas ieteikumus. No pieejamā opciju saraksta varat atlasīt jebkuru semantisko veidu un pārlabot esošo atlasi.
+1. **Izvēlieties atslēgu Primārais**. Primārā atslēga ir atribūts, kas ir unikāls entītijai. Lai atribūts būtu derīga primārā atslēga, tajā nedrīkst ietvert vērtību dublikātus, trūkstošās vērtības vai nulles vērtības. Virknes, vesela skaitļa un GUID datu tipa atribūti tiek atbalstīti kā primārie taustiņi.
 
-> [!div class="mx-imgBorder"]
-> ![Atribūta veids un semantiskā prognoze.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribūta veids un semantiskā prognoze")
+1. Lai izmantotu MI modeļus viedai semantikas prognoze, ietaupītu laiku un uzlabotu precizitāti, pārliecinieties, ka **ir ieslēgta inteliģentā kartēšana**. Inteliģentā kartēšana izceļ mākslīgā intelekta semantikas ieteikumu laukā **Veids**. Ieteikto atlasi var ignorēt, izvēloties jebkuru semantisko tipu no pieejamā opciju saraksta.
 
-Ir iespējams pievienot arī pielāgotu semantisko tipu. Atlasiet atribūta lauka tipu un ierakstiet pielāgotā semantiskā atribūta tipa nosaukumu. Tādējādi varat arī mainīt sistēmas noteiktos atribūtu tipus.
+1. Katram atribūtam izvēlieties semantisko **tipu**, kas vislabāk raksturo šo atribūtu, piemēram, nosaukumu, pilsētu vai e-pasta adresi.
 
-Visi atribūti, kam automātiski tiek noteikts semantiskais tips, tiek grupēti sadaļā **Pārbaudīt kartētos laukus**. Pārbaudiet šos atribūtus un to semantiskos tipus, jo tie tiks izmantoti, lai apvienotu jūsu entītijas datu apvienošanas sapludināšanas darbībā.
+   > [!NOTE]
+   > Vienam laukam ir jākartē uz semantisko tipu *Person.FullName*, lai klienta kartē aizpildītu klienta vārdu. Pretējā gadījumā klientu kartes tiks rādītas kā anonīmas.
 
-Atribūti, kas netiek automātiski kartēti uz semantisko tipu, tiek grupēti sadaļā **Definēt datus nekartētajos laukos**. Atlasiet nekartēto atribūtu semantisko tipu lauku vai ievadiet savu pielāgoto atribūta tipa nosaukumu.
+   1. Lai mainītu sistēmas identificēto atribūta tipu, atlasiet citu tipu. Ja tips nepastāv, izveidojiet pielāgotu semantisko tipu, atlasot **atribūta lauku Tips** un ievadot pielāgoto semantiskā tipa nosaukumu.
 
-> [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips.](media/data-manager-configure-map-add-attributes.png "Primārā atslēga un atribūta tips")
+   1. Lai publiski pieejamiem profila attēliem vai logotipiem pievienotu atribūtu, kurā ir URL, atlasiet entītiju un lauku, kurā ir URL. Laukā **Tips** ievadiet:
+      - Personai: Person.ProfileImage
+      - Organizācijai: Organization.LogoImage
 
-> [!NOTE]
-> Viens lauks ir jākartē uz semantisko tipu Person.FullName, lai klienta kartē aizpildītu klienta vārdu. Pretējā gadījumā klientu kartes tiks rādītas kā anonīmas. 
+   1. Konta nosaukuma atribūtam laukā Tips **ievadiet "Organization.Name"**.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Atribūtu un entītiju pievienošana un noņemšana
+1. Pārskatiet atribūtus, kuros semaniskais tips tiek identificēts automātiski. Šie atribūti ir norādīti sadaļā **Pārskatīt kartētos laukus**. Solī Vienotie debitori **var kombinēt tikai tāda paša tipa atribūtus**. Semantiskos tipus izmanto, lai automātiski ieteiktu ieskatus. Pārliecinieties, vai izvēlētie tipi ir konsekventi visās atlasītajās entītijās.
 
-1. Sadaļā **Apvienot** > **Kartēšana**, atlasiet **Rediģēt laukus**.
+1. Atribūtiem, kas netiek automātiski kartēti uz semantisko tipu, atlasiet semantiskā tipa lauku, ievadiet pielāgoto atribūta tipa nosaukumu vai atstājiet tos nekartētus. Šie atribūti ir uzskaitīti sadaļā **Datu definēšana nekartētajos laukos**.
 
-2. Rūtī **Rediģēt laukus** pievienojiet vai noņemiet atribūtus un entītijas. Izmantojiet meklēšanu vai ritiniet, lai atrastu un atlasītu interesējošos atribūtus un entītijas. Nevar noņemt atribūtu vai entītiju, ja tie jau ir saskaņoti.
+1. Pēc katras entītijas darbību veikšanas atlasiet **Saglabāt avota laukus**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Atribūtu pievienošana vai noņemšana.](media/configure-data-map-edit.png "Atribūtu pievienošana vai noņemšana")
+1. Atlasiet **Tālāk**.
 
-3. Atlasiet vienumu **Piemērot**.
-
-## <a name="add-images-to-profiles"></a>Pievienojiet profiliem attēlus
-
-Ja entitīja satur vietrāžus URL uz publiski pieejamiem profila attēliem vai logotipiem, varat tos pievienot vienotajam klienta profilam.
-
-Atlasiet entitīju un atrodiet lauku, kas satur vietrādi URL uz profila attēlu. Ievades laukā **Veids** manuāli ievadiet tālāk norādīto vērtību: 
-- Personai: Person.ProfileImage
-- Organizācijai: Organization.LogoImage
-
-Turpiniet ar apvienošanās darbībām un nodrošiniet, ka darbībā [Sapludināt](merge-entities.md) tiek pievienots arī atribūts, kas satur attēla URL.
-
-## <a name="set-attributes-for-organizations"></a>Atribūtu iestatīšana organizācijām
-
-Organizācijām (priekšskatījums) atribūta tipam ir jābūt kartētam uz “Organization.Name”.
-> [!div class="mx-imgBorder"]
-> ![Primārā atslēga un atribūta tips B2B.](media/configure-data-map-edit-b2b.png "Primārā atslēga un atribūta tips B2B")
-
-## <a name="next-step"></a>Nākamā darbība
-
-Datu apvienošanas procesa ietvaros pārejiet uz lapu **Atbilstība**. Apmeklējiet rakstu [**Atbilstība**](match-entities.md), lai uzzinātu par šo posmu.
-
-> [!TIP]
-> Noskatieties šo videoklipu: [Darba sākšana: vienota klienta profila izveide](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Nākamā darbība: dublikātu noņemšana](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

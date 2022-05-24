@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643609"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740728"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Daļējo datu aizpildīšana ar prognozēm (novecojusi)
 
@@ -37,13 +37,13 @@ Lai organizācija varētu izmantot prognožu līdzekli, pārliecinieties, vai ir
 
 1. Jūsu organizācijai ir iestatīta instance, [kas iestatīta Microsoft Dataverse](/ai-builder/build-model#prerequisites) un tā atrodas tajā pašā organizācijā, kurā atrodas Customer Insights.
 
-2. Jūsu Dataverse instancei ir pievienota auditorijas ieskatu vide.
+2. Customer Insights vide ir piesaistīta jūsu Dataverse instancei.
 
 Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognozēšanas izveide klienta entītijā
 
-1. Dodieties uz **DataEntities** > **·**.
+1. Dodieties uz **Datu** > **entītijas**.
 
 2. Atlasiet entītiju **Klients**.
 
@@ -91,7 +91,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="view-a-prediction"></a>Prognozes skatīšana
 
-1. Dodieties uz **IntelligencePredictionsMy** > **·** > **prognozes**.
+1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
 
 2. Atlasiet prognozes, kuras vēlaties pārskatīt.
 
@@ -108,7 +108,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="update-a-prediction"></a>Prognožu atjaunināšana
 
-1. Dodieties uz **IntelligencePredictionsMy** > **·** > **prognozes**.
+1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
 
 2. Atlasiet prognozi, kuru vēlaties atjaunināt, un atlasiet ikonu **Atjaunināt**.
 
@@ -118,7 +118,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 Kad esat izveidojis prognoze, varat pielāgot modeli programmā AI Builder, lai palielinātu modeļa efektivitāti.  
 
-1. Dodieties uz **IntelligencePredictionsMy** > **·** > **prognozes**.
+1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
 
 2. Atlasiet prognozi, kuru vēlaties rediģēt.
 
@@ -135,7 +135,7 @@ Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atja
 
 ## <a name="remove-a-prediction"></a>Prognozes noņemšana
 
-1. Dodieties uz **IntelligencePredictionsMy** > **·** > **prognozes**.
+1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
 
 2. Atlasiet prognozi, ko vēlaties izdzēst.
 
