@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653486"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763588"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Ievadiet savu Azure atslēgu akreditācijas datu komplektu (priekšskatījums)
 
@@ -37,11 +37,11 @@ Lai konfigurētu atslēgu glabātuvi customer insights, ir jāizpilda šādi pri
 
 - Atslēgu akreditācijas datu komplektam ir jābūt **atspējotam** Key Vault ugunsmūrim.
 
-- Atslēgas glabātuve atrodas tajā pašā [Azure atrašanās vietā](https://azure.microsoft.com/global-infrastructure/geographies/#overview), kur customer insights vide. Vides reģions customer insights ir norādīts sadaļā **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- Atslēgas glabātuve atrodas tajā pašā [Azure atrašanās vietā](https://azure.microsoft.com/global-infrastructure/geographies/#overview), kur customer insights vide. Vides reģions customer insights ir norādīts sadaļā **Administrēšanas** > **sistēma** > **par** > **reģionu**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Saistiet atslēgu akreditācijas datu komplektu ar vidi
 
-1. Dodieties uz **AdminSecurity** > **un** pēc tam atlasiet cilni Atslēgas **glabātuve**.
+1. Dodieties uz **Administrēšanas** > **drošība** un pēc tam atlasiet cilni Atslēgas **glabātuve**.
 1. Elementā **Key Vault** **Iestatīt**.
 1. Izvēlēties **Abonements**.
 1. Nolaižamajā sarakstā **Key Vault** izvēlieties atslēgas akreditācijas datu komplektu. Ja tiek rādīts pārāk daudz galveno akreditācijas datu komplektu, atlasiet resursu grupu, lai ierobežotu meklēšanas rezultātus.
@@ -89,9 +89,9 @@ Tālāk norādītās atļaujas tiek piešķirtas Customer Insights saistītajā 
 
 | Tips        | Atļaujas          |
 | ----------- | -------------------- |
-| Taustiņš         | [Iegūt atslēgas](/rest/api/keyvault/get-keys) [Iegūt atslēgu](/rest/api/keyvault/get-key)                                 |
-| Noslēpums      | [Iegūt slepeno informāciju](/rest/api/keyvault/get-secrets), [Iegūt slepeno informāciju](/rest/api/keyvault/get-secret)                     |
-| Sertifikāts | [Iegūt sertifikātus](/rest/api/keyvault/get-certificates), [Iegūt sertifikātu](/rest/api/keyvault/get-certificate) |
+| Taustiņš         | [Iegūt atslēgas](/rest/api/keyvault/keys/get-keys/get-keys) [Iegūt atslēgu](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Noslēpums      | [Iegūt slepeno informāciju](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Iegūt slepeno informāciju](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Sertifikāts | [Iegūt sertifikātus](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Iegūt sertifikātu](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Iepriekšējās vērtības ir minimālās sarakstā un lasīt izpildes laikā.
 

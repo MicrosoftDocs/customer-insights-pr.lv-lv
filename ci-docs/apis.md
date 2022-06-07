@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755459"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808515"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbs ar API Customer Insights
 
@@ -31,11 +31,11 @@ Dynamics 365 Customer Insights nodrošina API, lai būvētu savas lietojumprogra
 
 1. [Pierakstieties](https://home.ci.ai.dynamics.com) risinājumā Customer Insights . Ja jums vēl nav abonementa, [pierakstieties Customer Insights izmēģinājumversijai](https://aka.ms/tryci).
 
-1. Lai iespējotu API Customer Insights vidē, apmeklējiet **Administrators** > **Atļaujas**. Lai to izdarītu, jums ir nepieciešamas administratora atļaujas.
+1. Lai iespējotu API klientu ieskatu vidē, dodieties uz **Administrēšanas** > **drošība**. Lai to izdarītu, jums ir nepieciešamas administratora atļaujas.
 
 1. Atveriet **API** cilni un atlasiet pogu **Iespējot**.    
  
-   Iespējojot API, tiek izveidota primārā un sekundārā abonēšanas atslēga jūsu instancei, kas tiek izmantota API pieprasījumos. Varat atkārtoti ģenerēt atslēgas, atlasot opciju **Atjaunot primāro** vai **Atjaunot sekundāro** sadaļā **Administrators** > **Atļaujas** > **API**.
+   Iespējojot API, tiek izveidota primārā un sekundārā abonēšanas atslēga jūsu instancei, kas tiek izmantota API pieprasījumos. Atslēgas var atkārtoti ģenerēt, administratora drošības API atlasot **Ģenerēt primāro** vai **Ģenerēt sekundāro** **.** > **·** > **·**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ HTTP atbilde drīz būs redzama tālāk.
 1. Pa kreisi atlasiet **Programmu reģistrācijas**.
 
 1. Atlasiet **Jauna reģistrācija**, norādiet lietojumprogrammas nosaukumu un izvēlieties konta veidu.
- 
+
    Ja nepieciešams, pievienojiet novirzīšanas URL. Ar http://localhost pietiek, lai izstrādātu lietojumprogrammu jūsu lokālajā datorā.
 
 1. Jaunās programmas reģistrācijā ejiet uz **API atļaujas**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Atlasiet **Pievienot atļauju** un atlasiet sānu rūtī **Customer Insights**.
+1. Atlasiet **Pievienot atļauju** un sānu rūtī atlasiet **Dynamics 365 AI for Customer Insights**.
 
 1. Sadaļā **Atļaujas veids** atlasiet **Deleģētās atļaujas** un pēc tam atlasiet **lietotāja personificēšanas** atļauju.
 
@@ -109,7 +107,7 @@ Sadaļa [Lietojumprogrammas reģistrācijas](#create-a-new-app-registration-in-t
 
 1. Lai to izdarītu, ir jāpievieno lietojumprogrammas reģistrācijas nosaukums kā lietotājs Customer Insights.  
    
-   Atveriet sadaļu Customer Insights, atveriet **Administrators** > **Atļaujas** un atlasiet vienumu **Pievienot lietotāju**.
+   Atveriet Customer Insights, dodieties uz **Administrēšanas** > **drošība** un atlasiet **Pievienot lietotāju**.
 
 1. Meklējiet savas programmas reģistrācijas nosaukumu, meklēšanas rezultātos atlasiet to un atlasiet vienumu **Saglabāt**.
 

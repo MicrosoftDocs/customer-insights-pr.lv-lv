@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641817"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833777"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>BUJ par Dynamics 365 Customer Insights izmēģinājumversiju
 
@@ -62,9 +62,9 @@ Izmēģinājumversiju programmā varat paplašināt tieši. Izmēģinājumversij
 
 Parasti ieteicams sākt atjaunināšanu ar saviem datiem, jauninot uz Customer Insights apmaksāto versiju. 
 
-Pēc izvēles, ja izmantojat tikai Customer Insights, varat kopēt savus datus no izmēģinājuma vides, ja iegādājaties Customer Insights. Lai migrētu iestatījumus no izmēģinājuma vides uz apmaksātu vidi, jums jābūt Customer Insights izmēģinājumversijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram savā organizācijā. 
+Pēc izvēles, ja izmantojat tikai Customer Insights, varat kopēt savus datus no izmēģinājuma vides, ja iegādājaties Customer Insights. Lai migrētu iestatījumus no izmēģinājuma vides uz apmaksātu vidi, jums jābūt Customer Insights izmēģinājumversijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram savā organizācijā.
 
-Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek piedāvāts izveidot jaunu vidi. Šajā procesā varat izvēlēties kopēt konfigurāciju no esošas vides un migrēt lielāko daļu iestatījumu. Ja jums ir iepriekšminētās atļaujas, izmēģinājumversijas vide tiks parādīta šajā sarakstā. Papildinformāciju skatiet sadaļā [Vides konfigurācijas kopēšana](manage-environments.md#copy-the-environment-configuration).
+Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek piedāvāts izveidot jaunu vidi. Šajā procesā varat izvēlēties kopēt konfigurāciju no esošas vides un migrēt lielāko daļu iestatījumu. Ja jums ir iepriekšminētās atļaujas, izmēģinājumversijas vide tiks parādīta šajā sarakstā. Papildinformāciju skatiet sadaļā [Vides konfigurācijas kopēšana](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kādi ir izmēģinājumversijas ierobežojumi un kvotas?
 
@@ -81,9 +81,10 @@ Pēc reģistrēšanās izmēģinājumversijai jūs nonāksiet programmas galvena
 
 Vairākums Customer Insights iespēju līdzekļu ir pieejami izmēģinājumversijai.
 
-Nav pieejami **šādi** līdzekļi: 
+Nav pieejami **šādi** līdzekļi:
+
 - Jūs nevarat izveidot jaunas vides, kas izmanto jūsu Azure Data Lake krātuves kontu.
-- Izmēģinājuma vidi nevar izdzēst. 
+- Izmēģinājuma vidi nevar izdzēst.
 
 ### <a name="how-long-does-the-trial-last"></a>Kāds ir izmēģinājumversijas derīguma termiņš?
 

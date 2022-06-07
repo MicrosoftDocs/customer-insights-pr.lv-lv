@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739217"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800475"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -76,7 +76,7 @@ Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-2. Nolaižamajā izvēlnes sarakstā atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties atsvaidzināt un atlasiet **Atsvaidzināt**.
+2. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties atsvaidzināt, un nolaižamajā sarakstā atlasiet **Atsvaidzināt**.
 
 3. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
 
@@ -86,7 +86,7 @@ Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-2. Nolaižamajā izvēlnē atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties noņemt un atlasiet **Dzēst**.
+2. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties noņemt, un nolaižamajā izvēlnē atlasiet **Dzēst**.
 
 3. Apstipriniet dzēšanu.
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700946"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833639"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -58,6 +58,7 @@ LiveRamp nodrošina identitātes izšķirtspēju un klientu datu konsolidāciju.
 Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar LiveRamp (Preview) identitātes datiem](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentu un pasākumu organizēšana, izmantojot atzīmes un filtrus
+
 Ja jūsu organizācija uztur daudz segmentu vai pasākumu, pareizā atrašana dažkārt var justies izaicinoša. Šis jaunais līdzeklis ļauj kārtot sarakstus, izmantojot atzīmes un kolonnas. Tas palīdz ātri un viegli atrast datus un pielāgot skatus.
 
 Papildinformāciju skatiet rakstā [Darbs ar atzīmēm un kolonnām](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Papildinformāciju skatiet rakstā [Darbs ar atzīmēm un kolonnām](work-with-t
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Datu kopīgošanas iespējošana, Dataverse izmantojot savu krātuves kontu
 
 Ja jūsu vide izmanto Customer Insights Azure Data Lake Storage datu glabāšanai, datu kopīgošanai ir Microsoft Dataverse nepieciešama papildu konfigurācija.
-Agrāk jūs varējāt iespējot datu kopīgošanu tikai tad Dataverse, kad jūsu dati tika glabāti mūsu pārvaldītajā datu ezerā. 
+Agrāk jūs varējāt iespējot datu kopīgošanu tikai tad Dataverse, kad jūsu dati tika glabāti mūsu pārvaldītajā datu ezerā.
 
-Papildinformāciju skatiet rakstā [Datu kopīgošanas iespējošana ar Dataverse savu Azure Data Lake Storage (Priekšskatījums)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Papildinformāciju skatiet rakstā [Datu kopīgošanas iespējošana ar Dataverse savu Azure Data Lake Storage (Priekšskatījums)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Jauni eksporta galamērķi: Iterable un Braze
 
@@ -81,7 +82,6 @@ Mainot API saistītajos pakalpojumos, tiek panākts, ka savienotāji darbojas dr
 
 - Google Ads: Jaunā Google Ads eksporta savienotāja versija vienkāršo autentifikācijas pieredzi un tagad ļauj automātiski izveidot jaunas Google Ads auditorijas. 
 - Marketo: Jaunā Marketo eksporta savienotāja versija nodrošina Marketo ID atbalstu, ļaujot izvairīties no datu dublēšanās, atjaunināt esošos ierakstus un izveidot jaunus ierakstus Marketo. 
-
 
 ## <a name="february-2022-updates"></a>2022. gada februāra atjauninājumi
 

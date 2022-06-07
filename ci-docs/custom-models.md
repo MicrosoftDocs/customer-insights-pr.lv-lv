@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643202"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800429"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
 
@@ -92,7 +92,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 ## <a name="edit-a-workflow"></a>Darbplūsmas rediģēšana
 
-1. Lapā **Pielāgotie modeļi** atlasiet vertikālās daudzpunktes kolonnā **Darbības** blakus iepriekš izveidotajai darbplūsmai un atlasiet vienumu **Rediģēt**.
+1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti () kolonnā Darbības&vellip; blakus iepriekš izveidotajai darbplūsmai atlasiet vertikālo daudzpunkti (**)** un atlasiet **Rediģēt**.
 
 1. Darbplūsmas atpazīstamo nosaukumu var atjaunināt laukā **Parādāmais nosaukums**, taču konfigurēto tīmekļa pakalpojumu vai konveijeru nevar mainīt. Atlasiet **Tālāk**.
 
@@ -108,7 +108,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 ## <a name="run-a-workflow"></a>Darbplūsmas palaišana
 
-1. Lapā **Pielāgotie modeļi** atlasiet vertikālās daudzpunktes kolonnā **Darbības** jūsu blakus iepriekš izveidotajai darbplūsmai.
+1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotajai darbplūsmai.
 
 1. Atlasiet **Izpildīt**.
 
@@ -116,7 +116,7 @@ Jūsu darbplūsma arī tiek palaista automātiski ar katru plānoto atsvaidzinā
 
 ## <a name="delete-a-workflow"></a>Dzēst darbplūsmu
 
-1. Lapā **Pielāgotie modeļi** atlasiet vertikālās daudzpunktes kolonnā **Darbības** blakus iepriekš jūsu izveidotajai darbplūsmai.
+1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotajai darbplūsmai.
 
 1. Atlasiet **Dzēst** un apstipriniet dzēšanu.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643364"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800164"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avots
 
@@ -76,7 +76,7 @@ Savienotāji ar atzīmi **kolonnā Customer Insights (Dataflows)** ir pieejami, 
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-2. Nolaižamajā izvēlnē atlasiet vertikālās līknes blakus datu avotam, kuru vēlaties mainīt un atlasiet **Rediģēt**.
+2. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots vēlaties mainīt, un nolaižamajā izvēlnē atlasiet **Rediģēt**.
 
    > [!div class="mx-imgBorder"]
    > ![Rediģēšanas opcija.](media/edit-option-data-sources.png "Rediģēšanas opcija")

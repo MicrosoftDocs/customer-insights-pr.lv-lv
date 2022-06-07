@@ -1,7 +1,7 @@
 ---
 title: Common Data Model datu savienošana ar Azure Data Lake kontu
 description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643328"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833371"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 
@@ -34,7 +34,7 @@ ms.locfileid: "8643328"
 
 - Lai veiktu autentifikāciju ar Azure pakalpojuma primāro nosaukumu, pārliecinieties, vai tas ir konfigurēts jūsu nomniekā. Papildinformāciju [skatiet rakstā Azure Data Lake Storage Savienojuma izveide ar Gen2 kontu, izmantojot Azure pakalpojumu vadītāju](connect-service-principal.md).
 
-- Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no datu ezera citā Azure reģionā netiek atbalstīti. Lai uzzinātu vides debeszilu reģionu, dodieties uz **AdminSystemAbout** > **·** > **sadaļā** Customer Insights.
+- Azure Data Lake, kurā jūs vēlaties savienot un iegūt datus, ir jābūt vienā un tajā pašā Azure reģionā kā Dynamics 365 Customer Insights videi. Savienojumi ar Common Data Model mapi no datu ezera citā Azure reģionā netiek atbalstīti. Lai uzzinātu Azure vides reģionu, dodieties uz **Administrēšanas** > **sistēma** > **par** customer insights.
 
 - Tiešsaistes pakalpojumos glabātos datus var glabāt citā vietā, nevis vietā, kur dati tiek apstrādāti vai glabāti Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos saglabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights  [tiem, jūs piekrītat, ka datus var pārsūtīt uz . Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
 
@@ -46,16 +46,16 @@ ms.locfileid: "8643328"
 
 1. Atlasiet **Azure datu ezera** krātuve **, ievadiet datu avots nosaukumu** un pēc tam atlasiet **Tālāk**.
 
-   - Ja tiek prasīts, atlasiet kādu no datu kopu paraugiem, kas attiecas uz jūsu nozari, pēc tam atlasiet **Tālāk**. 
+   - Ja tiek prasīts, atlasiet kādu no datu kopu paraugiem, kas attiecas uz jūsu nozari, pēc tam atlasiet **Tālāk**.
 
 1. Varat izvēlēties, vai, izmantojot opciju, kuras pamatā ir resurss, vai abonementa opciju, lai autentificētos. Papildinformāciju [skatiet rakstā Azure Data Lake Storage Savienojuma izveide ar Gen2 kontu, izmantojot Azure pakalpojumu vadītāju](connect-service-principal.md). **Ievadiet servera adresi**, atlasiet **Pieteikties** un pēc tam atlasiet **Tālāk**.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, lai ievadītu jauna savienojuma detaļas Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:
-   >  - Krātuves Blob datu lasītājs
-   >  - Krātuves Blob datu īpašnieks
-   >  - Krātuves Blob datu ieguldītājs
+   > Krātuves kontā esošajam konteineram ir nepieciešama viena no šīm lomām, lai izveidotu un izveidotu datu avots:
+   >
+   >  - Krātuves BLOB datu lasītājs ir pietiekams, lai lasītu no krātuves konta un uzņemtu datus Customer Insights. 
+   >  - Krātuves BLOB datu līdzstrādnieks vai īpašnieks ir nepieciešams, ja vēlaties rediģēt manifesta failus tieši customer insights.
 
 1. **Atlasiet Common Data Model mapi** dialoglodziņā atlasiet model.json vai manifest.json failu, no kura importēt datus, un atlasiet **Tālāk**.
    > [!NOTE]
@@ -65,11 +65,11 @@ ms.locfileid: "8643328"
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, kurā redzams entītiju saraksts no model.json faila.](media/review-entities.png)
 
-8. Norādiet, kuras datu entītijas vēlaties iespējot datu profilēšanu, pēc tam atlasiet **Saglabāt**. Datu profilēšana iespējo analīzi un citas iespējas. Varat atlasīt visu entītiju, kas atlasa visus entītijas atribūtus, vai atlasiet noteiktus atribūtus pēc jūsu izvēles. Pēc noklusējuma neviena entītija nav iespējota datu profilēšanai.
+1. Norādiet, kuras datu entītijas vēlaties iespējot datu profilēšanu, pēc tam atlasiet **Saglabāt**. Datu profilēšana iespējo analīzi un citas iespējas. Varat atlasīt visu entītiju, kas atlasa visus entītijas atribūtus, vai atlasiet noteiktus atribūtus pēc jūsu izvēles. Pēc noklusējuma neviena entītija nav iespējota datu profilēšanai.
    > [!div class="mx-imgBorder"]
    > ![Dialoglodziņš, kurā redzama datu profilēšana.](media/dataprofiling-entities.png)
 
-9. Kad esat saglabājis savas atlases, tiek atvērta lapa **Datu avoti**. Tagad jums būtu jāredz mapes Common Data Model savienojums kā datu avots.
+1. Kad esat saglabājis savas atlases, tiek atvērta lapa **Datu avoti**. Tagad jums būtu jāredz mapes Common Data Model savienojums kā datu avots.
 
 > [!NOTE]
 > model.json vai manifest.json failu var saistīt tikai ar vienu datu avotu tajā pašā vidē. Tomēr tādu pašu model.json vai manifest.json failu var izmantot datu avotiem, kas atrodas vairākās vidēs.
@@ -80,7 +80,7 @@ Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Co
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-2. Blakus atjaunināmajam datu avotam atlasiet elipsi.
+2. Blakus datu avots, kuru vēlaties atjaunināt, atlasiet vertikālo daudzpunkti (&vellip;).
 
 3. No saraksta atlasiet opciju **Rediģēt**.
 
@@ -93,13 +93,6 @@ Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Co
 
    > ![Dialoglodziņš, lai ievadītu Azure Data Lake savienojuma informāciju esošā krātuves kontā.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Lai varētu izveidot savienojumu ar konteineri vai krātuves kontu, ir nepieciešama viena no tālāk minētajām lomām, lai varētu izveidot savienojumu ar datu avotu:
-   >  - Krātuves Blob datu lasītājs
-   >  - Krātuves Blob datu īpašnieks
-   >  - Krātuves Blob datu ieguldītājs
-
-
 6. Pēc izvēles izvēlieties citu model.json vai manifest.json failu ar citu entītiju kopu no konteinera.
 
 7. Ja vēlaties, varat atlasīt papildu entītijas, ko iegūt. Ja nav atkarību, varat noņemt arī jau atlasītās entītijas.
@@ -107,7 +100,6 @@ Varat atjaunināt tās krātuves konta piekļuves atslēgu, kurā ir ietverta Co
    > [!IMPORTANT]
    > Ja esošajā model.json vai manifest.json failā un entītiju kopā ir atkarības, tiks parādīts kļūdas ziņojums un nevarēs atlasīt citu model.json vai manifest.json failu. Pirms maināt model.json vai manifest.json failu, noņemiet šīs atkarības vai izveidojiet jaunu datu avotu ar model.json vai manifest.json failu, kuru vēlaties izmantot, lai izvairītos no atkarību noņemšanas.
 
-8. Ja vēlaties, varat atlasīt papildu atribūtus vai entītijas, lai iespējotu datu profilēšanu vai atspējotu jau atlasītos.   
-
+8. Ja vēlaties, varat atlasīt papildu atribūtus vai entītijas, lai iespējotu datu profilēšanu vai atspējotu jau atlasītos.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

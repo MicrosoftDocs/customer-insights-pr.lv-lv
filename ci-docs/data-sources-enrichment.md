@@ -1,19 +1,19 @@
 ---
 title: Datu avots bagātināšana
 description: Bagātiniet datu avotus pirms datu apvienošanas procesa.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755695"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800290"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 
@@ -27,7 +27,7 @@ Lai izveidotu vai rediģētu bagātinājumus, jums ir jābūt līdzstrādnieka v
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-1. Atlasiet vertikālo daudzpunkti blakus datu avots, kuru vēlaties bagātināt, un atlasiet **Bagātināt**.
+1. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties bagātināt, un atlasiet **Bagātināt**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datu avotu bagātināšanas lapa.":::
 
@@ -41,11 +41,12 @@ Datu avotiem pašlaik ir pieejami šādi bagātinājumi. Pārskatiet detalizētu
 
 - [Uzlabotas adreses](enrichment-enhanced-addresses.md)
 - [Uzlaboti uzņēmuma dati](enrichment-enhanced-company-data.md)
+- [Identitātes dati no LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Esošo datu avots bagātināšanas pārvaldība
 
 Lai skatītu visus konfigurētos bagātinātos datus, dodieties uz **Manas bagātināšanas** cilni.
 
-Atlasiet bagātināšanu, lai redzētu pieejamās opcijas. Lai skatītu opcijas, varat arī saraksta elementā atlasīt daudzpunkti (...). Ja konfigurējāt vairākus bagātinātus uzlabojumus, varat izmantot meklēšanas lodziņu, lai to ātri atrastu.
+Atlasiet bagātināšanu, lai redzētu pieejamās opcijas. Varat arī atlasīt vertikālo daudzpunkti (&vellip;) saraksta elementā, lai skatītu opcijas. Ja konfigurējāt vairākus bagātinātus uzlabojumus, varat izmantot meklēšanas lodziņu, lai to ātri atrastu.
 
 Varat skatīt, rediģēt, palaist vai dzēst datu avots bagātināšanu. Papildinformāciju skatiet manage [existing enrichments](enrichment-hub.md).

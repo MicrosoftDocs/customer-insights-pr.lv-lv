@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643112"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800182"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
@@ -28,7 +28,7 @@ ms.locfileid: "8643112"
 ## <a name="important-considerations"></a>Svarīgi ieteikumi
 
 1. Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot tiešsaistes pakalpojumos saglabātos datus vai izveidojot savienojumu ar Dynamics 365 Customer Insights  [tiem, jūs piekrītat, ka datus var pārsūtīt uz . Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
-2. Ir redzamas tikai Dataverse tās entītijas, kurām [ir iespējota izmaiņu izsekošana](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šīs entītijas var eksportēt uz pārvaldīto Dataverse datu ezeru un izmantot customer insights. Izejošajās tabulās Dataverse pēc noklusējuma ir iespējota izmaiņu izsekošana. Pielāgotām tabulām ir jāieslēdz izmaiņu izsekošana. Lai pārbaudītu, vai tabula ir iespējota Dataverse izmaiņu izsekošanai, dodieties uz [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Atrodiet sev interesējošo tabulu un atlasiet to. Dodieties uz **SettingsAdvanced** > **opcijas** un pārskatiet **iestatījumu Reģistrēt izmaiņas**.
+2. Ir redzamas tikai Dataverse tās entītijas, kurām [ir iespējota izmaiņu izsekošana](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šīs entītijas var eksportēt uz pārvaldīto Dataverse datu ezeru un izmantot customer insights. Izejošajās tabulās Dataverse pēc noklusējuma ir iespējota izmaiņu izsekošana. Pielāgotām tabulām ir jāieslēdz izmaiņu izsekošana. Lai pārbaudītu, vai tabula ir iespējota Dataverse izmaiņu izsekošanai, dodieties uz [Power Apps](https://make.powerapps.com) > **Datu** > **tabulas**. Atrodiet sev interesējošo tabulu un atlasiet to. Dodieties uz **iestatījumu papildu opcijas** > **un pārskatiet** iestatījumu Reģistrēt **izmaiņas**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Savienojuma izveide ar Dataverse pārvaldīto datu ezeru
 
@@ -62,7 +62,7 @@ Lai izveidotu savienojumu ar citu Dataverse datu ezeru, [izveidojiet jaunu datu 
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-2. Blakus atjaunināmajam datu avotam atlasiet elipsi.
+2. Blakus datu avots, kuru vēlaties atjaunināt, atlasiet vertikālo daudzpunkti (&vellip;).
 
 3. No saraksta atlasiet opciju **Rediģēt**.
 

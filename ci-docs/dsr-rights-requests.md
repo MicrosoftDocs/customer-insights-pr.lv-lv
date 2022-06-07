@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641525"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808570"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -39,9 +39,9 @@ Customer Insights piedāvā šādu produkta pieredzi, lai dzēstu personas datus
 Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, kas bija dzēsti klientu datos:
 
 1. Pierakstieties programmā Dynamics 365 Customer Insights.
-2. Doties uz **DataData** > **avotiem**
+2. Doties uz **datu datu** > **avotiem**
 3. Katram sarakstā iekļautajam datu avotam, kurā ir izdzēsti klienta dati:
-   1. Atlasiet (...) un pēc tam atlasiet **Atsvaidzināt**.
+   1. Atlasiet vertikālo daudzpunkti (&vellip;) un pēc tam atlasiet **Atsvaidzināt**.
    2. Skatiet datu avota statusu sadaļā **Statuss**. Atzīme nozīmē, ka atsvaidzināšana bija veiksmīga. Brīdinājuma trijstūris nozīmē, ka radās problēma. Ja tiek parādīts brīdinājuma trijstūris, sazinieties ar D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, 
 Customer Insights administrators var veikt tālāk norādītās darbības, lai dzēstu Customer Insights lietotāja datus:
 
 1. Pierakstieties programmā Dynamics 365 Customer Insights.
-2. Dodieties uz **AdminPermissions** > **·**.
+2. Dodieties uz **administratora** > **drošības** > **atļaujām**.
 3. Atzīmējiet tā lietotāja izvēles rūtiņu, kuru vēlaties dzēst.
 4. Atlasiet **Noņemt**.
 
@@ -82,6 +82,6 @@ Lai eksportētu datus, nomnieka administrators var veikt tālāk norādītas dar
 
 Piekrišanas pārvaldības iespēja tieši neapkopo lietotāja datus. Tas tikai importē un apstrādā piekrišanas datus, ko lietotāji sniedz citās lietojumprogrammās.
 
-Lai noņemtu piekrišanas datus par konkrētiem lietotājiem, noņemiet tos datu avotos, kas uzņemti piekrišanas pārvaldības iespējai. Pēc datu avots atsvaidzināšanas noņemtie dati tiks dzēsti arī piekrišanas centrā. Lietojumprogrammas, kas izmanto piekrišanas entītiju, arī dzēsīs datus, kas pēc atsvaidzināšanas tika noņemti [avotā](system.md#refresh-processes). Mēs iesakām ātri atsvaidzināt datu avotus pēc atbildes uz datu subjekta pieprasījumu noņemt lietotāja datus no visiem citiem procesiem un lietojumprogrammām.
+Lai noņemtu piekrišanas datus par konkrētiem lietotājiem, noņemiet tos datu avotos, kas uzņemti piekrišanas pārvaldības iespējai. Pēc datu avots atsvaidzināšanas noņemtie dati tiks dzēsti arī piekrišanas centrā. Lietojumprogrammas, kas izmanto piekrišanas entītiju, arī dzēsīs datus, kas pēc atsvaidzināšanas [tika noņemti avotā](system.md#refresh-processes). Mēs iesakām ātri atsvaidzināt datu avotus pēc atbildes uz datu subjekta pieprasījumu noņemt lietotāja datus no visiem citiem procesiem un lietojumprogrammām.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

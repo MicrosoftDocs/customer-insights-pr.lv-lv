@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755271"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807590"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikšanās pārsūtīšanai Dynamics 365 Customer Insights, izmantojot Azure Monitor (Preview)
 
@@ -38,7 +38,7 @@ Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosa
 
 - Jums ir aktīvs [Azure abonements](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Jums ir [administratora](permissions.md#admin) atļaujas customer insights.
-- Mērķa resursā **Azure ir līdzstrādnieka** un **lietotāja piekļuves administratora** loma. Resurss var būt Azure krātuves konts, Azure Event Hub vai Azure Log Analytics darbvieta. Papildinformāciju skatiet rakstā [Azure lomu piešķires pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal).
+- Mērķa resursā **Azure ir līdzstrādnieka** un **lietotāja piekļuves administratora** loma. Resurss var būt Azure Data Lake Storage konts, Azure Notikumu centrmezgls vai Azure Log Analytics darbvieta. Papildinformāciju skatiet rakstā [Azure lomu piešķires pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal). Šī atļauja ir nepieciešama, konfigurējot diagnostikas iestatījumus customer insights, to var mainīt pēc veiksmīgas iestatīšanas.
 - [Mērķa prasības](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Azure Storage, Azure Event Hub vai Azure Log Analytics izpildīts.
 - Resursu grupā, kurai pieder resurss **, ir vismaz lasītāja** loma.
 

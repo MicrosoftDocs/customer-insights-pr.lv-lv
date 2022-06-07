@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743422"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768359"
 ---
 # <a name="explore-customer-insights"></a>Izpētiet klientu ieskatus
 
 Jūs varat piekļūt [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) ar šādu URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Sākumlapa **parāda** galveno līdzekļu konfigurācijas procesu un sniedz pārskatu par segmentiem, mēriem un bagātināšanas datiem.
+Sākumlapa **palīdz** veikt galveno funkciju konfigurācijas procesu un sniedz pārskatu par segmentiem, mēriem un bagātināšanas datiem.
 
 :::image type="content" source="media/home-page.png" alt-text="Sākuma ekrāna ekrāns, kurā parādīti ieskatu paraugi.":::
 
 ## <a name="left-side-pane"></a>Kreisā sānu rūts
 
-Izmantojiet kreiso rūti, lai naviģētu starp dažādiem apgabaliem Customer Insights. 
+Izmantojiet kreiso rūti, lai naviģētu starp dažādiem Customer Insights apgabaliem.
 
-Ja strādājat ar biznesa kontiem un individuāliem patērētājiem, varat atlasīt savu primāro auditoriju, lai atbilstoši iestatītu fokusu. 
+Ja strādājat ar biznesa kontiem un individuāliem patērētājiem, varat atlasīt savu primāro auditoriju, lai atbilstoši iestatītu fokusu.
 
 ## <a name="application-header"></a>Lietojumprogrammas virsraksts
 
@@ -38,7 +38,7 @@ Vides **atlasītājs** parāda vidi, kurā strādājat, un ļauj izveidot vai p�
 
 Smaidošās sejas ikona ir atsauksmju **vadīkla**. Atlasiet to, lai pastāstītu mums par savu pieredzi ar Customer Insights. Mēs aktīvi uzklausām jūsu atsauksmes un jau iepriekš pateicamies, ka paziņojāt mums, kas jums patīk un kā mēs varam uzlabot.
 
-Vadīkla **Iestatījumi**, ko attēlo zobrata ikona, ļauj apkopot sesijas informāciju customer insights un konfigurēt sava Microsoft 365 profila globālos iestatījumus. 
+Vadīkla **Iestatījumi**, ko attēlo zobrata ikona, ļauj apkopot sesijas informāciju customer insights un konfigurēt sava Microsoft 365 profila globālos iestatījumus.
 
 **Palīdzības** opcijas, kas vizualizētas ar jautājuma zīmes ikonu, nodrošina kontekstuālas palīdzības saites un citus noderīgus resursus.
 
@@ -46,7 +46,7 @@ Jūsu profila attēls **atver jūsu** profila konta pārvaldnieku Microsoft 365.
 
 ## <a name="getting-started-with-customer-insights-section"></a>Darba sākšana sadaļā Customer Insights
 
-Šajā sadaļā ir kartes, kas palīdz iziet cauri Customer Insights vides iestatīšanas procesam. 
+Šajā sadaļā ir kartes, kas palīdz iziet cauri Customer Insights vides iestatīšanas procesam.
 
 1. Datu **kartes** pievienošana palīdz importēt datus. Customer Insights atbalsta [vairākas iespējas, kā iegūt datus par saviem klientiem](data-sources.md). Atlasiet **Pievienot datu avotus**, lai sāktu darbu.
 1. Kad sākotnējā datu importēšana ir veiksmīgi pabeigta, varat izmantot **unify datu** karti, lai saskaņotu datus un [izveidotu vienotus klientu profilus](data-unification.md) no atšķirīgiem avotiem. 

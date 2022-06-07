@@ -1,19 +1,19 @@
 ---
 title: OData piemēri API Dynamics 365 Customer Insights
 description: Bieži izmantotie atvērto datu protokola (OData) piemēri, lai veiktu vaicājumu Customer Insights API, lai pārskatītu datus.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740070"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808470"
 ---
 # <a name="odata-query-examples"></a>OData vaicājumu piemēri
 
@@ -33,16 +33,15 @@ Lai tie darbotos mērķa vidēs, ir jāmodificē vaicājumu paraugi:
 
 Šajā tabulā ir norādīta entītijas Klients vaicājumu paraugu *kopa*.
 
-
 |Vaicājuma tips |Piemērs  | Note  |
 |---------|---------|---------|
 |Viena debitora ID     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Alternatīvā atslēga    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Vienotā debitora entītijā saglabājas alternatīvās atslēgas       |
+|Alternatīvā atslēga    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Vienotā debitora entītijā saglabājas alternatīvās atslēgas       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Iekš    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Alternatīvā atslēga + iekšā   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Meklējiet  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Atgriež meklēšanas virknes 10 labākos rezultātus      |
-|Segmenta dalība  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Atgriež iepriekš iestatītu rindu skaitu no segmentācijas entītijas.      |
+|Segmenta dalība  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Atgriež iepriekš iestatītu rindu skaitu no segmentācijas entītijas.      |
 
 ## <a name="unified-activity"></a>Vienota darbība
 
@@ -53,7 +52,7 @@ Lai tie darbotos mērķa vidēs, ir jāmodificē vaicājumu paraugi:
 |CID aktivitāte     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Uzskaita noteikta debitora profila aktivitātes |
 |Aktivitātes laika grafiks    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Debitora profila aktivitātes laika periodā       |
 |Darbības veids    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Aktivitāte pēc parādāmā nosaukuma     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Aktivitāte pēc parādāmā nosaukuma     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Darbību kārtošana    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Kārtot aktivitātes augošā vai dilstošā secībā       |
 |Aktivitāte izvērsta no segmenta dalības  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Lai tie darbotos mērķa vidēs, ir jāmodificē vaicājumu paraugi:
 |Bagātināti CID zīmoli    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |Bagātinātās CID intereses    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |In-Klauzula + Izvērst     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Neatbalsta OData vaicājumus
+
+Customer Insights neatbalsta šādus vaicājumus:
+
+- `$filter` par uzņemtajām avota entītijām. $filter vaicājumus var palaist tikai klientu ieskatu izveidotajās sistēmas entītijās.
+- `$expand` no vaicājuma`$search`. Piemērs: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` no `$select` ja ir atlasīta tikai atribūtu apakškopa. Piemērs: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` bagātināts zīmols vai interešu radniecība konkrētam klientam. Piemērs: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Vaicājums prognoze modeļa izvades entītijas, izmantojot alternatīvā atslēga. Piemērs: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

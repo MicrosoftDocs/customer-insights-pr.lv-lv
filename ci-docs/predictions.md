@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740728"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800659"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Daļējo datu aizpildīšana ar prognozēm (novecojusi)
 
@@ -95,7 +95,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 2. Atlasiet prognozes, kuras vēlaties pārskatīt.
 
-3. Kolonnā **Darbības** atlasiet daudzpunkti un izvēlieties **Skatīt**.
+3. Kolonnā Darbības atlasiet vertikālo daudzpunkti (&vellip;) **un izvēlieties** Skats **.**
 
 4. Prognozes skatā redzēsit vairākus datu punktus.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Kad esat izveidojis prognoze, varat pielāgot modeli programmā AI Builder, lai 
 
 2. Atlasiet prognozi, kuru vēlaties rediģēt.
 
-3. Kolonnā **Darbības** atlasiet daudzpunkti un izvēlieties **Skatīt**.
+3. Kolonnā Darbības atlasiet vertikālo daudzpunkti (&vellip;) **un izvēlieties** Skats **.**
 
 4. Atlasiet **Pielāgot programmā AI Builder**.
 
@@ -139,7 +139,7 @@ Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atja
 
 2. Atlasiet prognozi, ko vēlaties izdzēst.
 
-3. Kolonnā **Darbības** atlasiet daudzpunkti un izvēlieties **Dzēst**.
+3. Kolonnā Darbības atlasiet vertikālo daudzpunkti (&vellip;) **un izvēlieties** Dzēst **.**
 
 4. Apstipriniet dzēšanu.
 
@@ -153,7 +153,7 @@ Ja nevarat pabeigt Dataverse pievienošanas procesu kļūdas dēļ, varat mēģi
 - Programmas atļaujas nav piešķirtas.
     1. Dodieties uz [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Atlasiet **Vides**.
-    1. Atlasiet daudzpunkti blakus videi, kurai vēlaties pievienot atļauju un atlasiet **Iestatījumi**.
+    1. Atlasiet vertikālo daudzpunkti (&vellip;) blakus videi, kurai vēlaties pievienot atļauju, un atlasiet **Iestatījumi**.
     1. Izvērsiet **Lietotāji + atļaujas** un atlasiet **Lietotāji**.
     1. Atlasiet **+ Jauns** un atlasiet **Lietotājs**.
     1. Atlasiet **Programmas lietotājs**, ja tas vēl nav atlasīts, un ievadiet šādu informāciju:

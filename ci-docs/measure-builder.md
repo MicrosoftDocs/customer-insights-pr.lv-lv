@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643769"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800335"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Izmantojiet mēru veidotāju, lai izveidotu pasākumus no nulles
 
@@ -88,7 +88,7 @@ Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klient
 
 1. Lai mērījumam pievienotu papildu aprēķinus, atlasiet **Jauns aprēķins**. Entītijas var izmantot tikai tajā pašā entītijas ceļā jauniem aprēķiniem. Papildu aprēķini tiek rādīti kā jaunas kolonnas mērījumu izvades entītijā.
 
-1. Aprēķinā atlasiet **...**, lai **Dublētu**, **Pārdēvētu** vai **Noņemtu** aprēķinu no mērījuma.
+1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā uz **Dublikāts**, **Pārdēvēt** vai **Noņemt** aprēķinu no mērījuma.
 
 1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
 
@@ -158,7 +158,7 @@ Pasākumus var izveidot atsevišķu kontu līmenī (debitora mērījums) vai vis
    1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
    1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi.
 
-1. Aprēķinā atlasiet **...**, lai **Dublētu**, **Pārdēvētu** vai **Noņemtu** aprēķinu no mērījuma.
+1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā uz **Dublikāts**, **Pārdēvēt** vai **Noņemt** aprēķinu no mērījuma.
 
 1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
 

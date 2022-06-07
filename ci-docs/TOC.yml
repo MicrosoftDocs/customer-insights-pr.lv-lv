@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Mācību katalogs
   items:
-    - name: Sākt darbu
+    - name: Sertificēt kā Microsoft klientu datu platformas speciālistu
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Darba sākšana ar pakalpojumu Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Datu uzņemšana
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Sākt ar apmaksātu licenci
       href: paid-license.md
-    - name: Jaunas vides izveide
-      href: create-environment.md
     - name: Izpētiet klientu ieskatus
       href: home.md
     - name: Darbs ar tagiem un kolonnām
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: "Dynamics\_365 Marketing"
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Entītiju shēmu pārskatīšana Common Data Model
       href: entity-schemas.md
-    - name: Customer Insights dati programmā Dataverse
-      href: customer-insights-dataverse.md
     - name: Attiecību un saistīto entītiju izveide
       href: relationships.md
     - name: Definējiet semantiskos kartējumus
       href: semantic-mappings.md
+- name: Vides
+  items:
+    - name: Jaunas vides izveide
+      href: create-environment.md
+    - name: Izveidot savienojumu ar Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Izmantojiet savu Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Vides pārvaldījumu iestatīšana
+      href: manage-environments.md
+    - name: 'Savienojuma izveide ar krātuves kontu, izmantojot pakalpojuma principālu'
+      href: connect-service-principal.md
 - name: Administrēšana
   items:
     - name: Sistēmas konfigurācijas iestatīšana
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Lietotāju atļauju piešķiršana
       href: permissions.md
-    - name: Savienojumu pārskats
-      href: connections.md
-    - name: Vairāku vižu pārvaldība
-      href: manage-environments.md
     - name: Ievadiet savu Key Vault
       href: use-azure-key-vault.md
-    - name: 'Savienojuma izveide ar krātuves kontu, izmantojot pakalpojuma principālu'
-      href: connect-service-principal.md
     - name: Eksportēt diagnostikas žurnālus
       href: diagnostics.md
-    - name: Pakalpojuma ierobežojumi
-      href: service-limits.md
-    - name: DSR tiesības un pieprasījumi
-      href: dsr-rights-requests.md
+    - name: Savienojumu pārskats
+      href: connections.md
 - name: API
   items:
     - name: Darbs ar API
@@ -324,5 +328,9 @@
       items:
         - name: 'Prognožu izveide, izmantojot piekrišanas datus'
           href: consent-management/predictions-consent-data.md
+- name: Pakalpojuma ierobežojumi
+  href: service-limits.md
+- name: DSR tiesības un pieprasījumi
+  href: dsr-rights-requests.md
 - name: Saņemt atbalstu
   href: /power-platform/admin/get-help-support

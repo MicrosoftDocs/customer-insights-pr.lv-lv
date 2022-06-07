@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643552"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800105"
 ---
 # <a name="create-segments"></a>Izveidot segmentus
 
@@ -134,8 +134,9 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 > - Iestatot operatorus nosacījumos, segmentu veidotājs no entītijām neieteiks derīgas vērtības. Varat pāriet uz **Dati** > **Entītijas** un lejupielādēt entītijas datus, lai skatītu pieejamās vērtības.
 > - Nosacījumi atkarībā no datumiem ļauj pārslēgt fiksētus datumus un peldošu datumu diapazonu.
 > - Ja segmentam ir vairākas kārtulas, rediģējamajai kārtulai blakus ir vertikāla zilā līnija.
-> - Segmenta definīcijā kārtulas un nosacījumus var pārvietot uz citām vietām. Atlasiet [...] blakus kārtulai vai nosacījumam un izvēlieties, kā un kur to pārvietot.
+> - Segmenta definīcijā kārtulas un nosacījumus var pārvietot uz citām vietām. Atlasiet vertikālo daudzpunkti (&vellip;) blakus kārtulai vai nosacījumam un izvēlieties, kā un kur to pārvietot.
 > - Komandjoslā izmantojot vadīklas **Atsaukt** un **Atcelt**, varat atsaukt atpakaļ veiktās izmaiņas.
+> - Pēc segmenta izveides daži segmenti ļauj [izsekot segmenta](segments.md#track-usage-of-a-segment) lietojumam.
 
 ## <a name="quick-segments"></a>Ātrie segmenti
 
