@@ -48,14 +48,14 @@
   items:
     - name: Datu avotu pārskats
       href: data-sources.md
+    - name: Izveidot savienojumu ar datiem programmā Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Savienojuma izveide ar Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
+      href: connect-dataverse-managed-lake.md
     - name: 'Datu avotu pievienošana, izmantojot Power Query savienotājus'
       href: connect-power-query.md
-    - name: Pievienojiet vispārējā datu modeļa mapi kā datu avotu
-      href: connect-common-data-model.md
-    - name: Pievienojiet Dataverse pārvaldīto datu ezeru
-      href: connect-dataverse-managed-lake.md
-    - name: Pievienot Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Datu avotu bagātināšana
       href: data-sources-enrichment.md
     - name: Inkrementālā atsvaidzināšana datu avotiem
@@ -82,27 +82,27 @@
   items:
     - name: Klientu profilu bagātināšana
       href: enrichment-hub.md
+    - name: Konti no Office 365 datiem
+      href: enrichment-office.md
     - name: Zīmoli un intereses
       href: enrichment-microsoft.md
+    - name: Uzņēmuma dati no Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Leadspace piedāvātie uzņēmumu dati
+      href: enrichment-leadspace.md
+    - name: Demogrāfija ar Experian
+      href: enrichment-experian.md
     - name: Uzlabotas adreses
       href: enrichment-enhanced-addresses.md
     - name: Uzlaboti uzņēmuma dati
       href: enrichment-enhanced-company-data.md
-    - name: Bagātināt ar Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Bagātiniet ar Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Bagātināšana ar HERE Technologies
-      href: enrichment-here.md
-    - name: 'Bagātināt, izmantojot Leadspace'
-      href: enrichment-leadspace.md
-    - name: Bagātiniet ar LiveRamp
+    - name: Identitāte ar LiveRamp
       href: enrichment-liveramp.md
-    - name: Bagātināt ar Experian
-      href: enrichment-experian.md
-    - name: Bagātināt ar Office 365 datiem
-      href: enrichment-office.md
-    - name: Bagātināšana ar SFTP pielāgoto importu
+    - name: Atrašanās vieta no Azure Maps
+      href: enrichment-azure-maps.md
+    - name: HERE Technologies piedāvātās atrašanās vietas
+      href: enrichment-here.md
+    - name: SFTP pielāgota importēšana
       href: enrichment-SFTP-custom-import.md
 - name: Vienotie profili
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Definēt debitoru aktivitātes
       href: activities.md
+    - name: Klientu ieskatu piekrišanas pārvaldība
+      href: consent-management.md
 - name: Segmenti
   items:
     - name: Segmentu pārskats
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData vaicājumu paraugi
       href: odata-examples.md
-- name: Piekrišanas pārvaldība (priekšskatījums)
-  items:
-    - name: Palīdzības centrmezgls
-      href: consent-management/index.yml
-    - name: Iespēju pārskats
-      href: consent-management/overview.md
-    - name: Sākt darbu
-      items:
-        - name: Sākt darbu
-          href: consent-management/get-started.md
-        - name: Jēdzieni un terminoloģija
-          href: consent-management/glossary.md
-    - name: Piekrišanu datu importēšana
-      items:
-        - name: Piekrišanu datu importēšana
-          href: consent-management/import-consent-data.md
-        - name: Piekrišanas datu iestatīšana un piekrišanas preferenču lietošana
-          href: consent-management/set-consent-rules.md
-    - name: Piekrišanas datu pārvaldība
-      items:
-        - name: Piekrišanas kārtulu iespējošana customer insights
-          href: activate-consent.md
-        - name: Noklusējuma piekrišanas kārtulu pārvaldība Customer Insights segmentos
-          href: change-default-consent-rules.md
-    - name: Iestatījumu un lietotāju pārvaldība
-      items:
-        - name: Sistēmas iestatījumu konfigurēšana
-          href: consent-management/system-settings.md
-        - name: Lietotāju un atļauju pārvaldība
-          href: consent-management/manage-users.md
-    - name: Piekrišanas datu izmantošana
-      items:
-        - name: 'Prognožu izveide, izmantojot piekrišanas datus'
-          href: consent-management/predictions-consent-data.md
 - name: Pakalpojuma ierobežojumi
   href: service-limits.md
 - name: DSR tiesības un pieprasījumi

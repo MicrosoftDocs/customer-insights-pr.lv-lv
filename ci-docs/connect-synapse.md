@@ -1,7 +1,7 @@
 ---
 title: Uzņemt datus no Azure Synapse Analytics
 description: Izmantojiet datu bāzi Azure Synapse programmā kā datu avots programmā Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643346"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011436"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Azure Synapse datu avots savienošana (priekšskatījums)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics datu avots savienošana (priekšskatījums)
 
 Azure Synapse Analytics ir uzņēmuma analītikas pakalpojums, kas paātrina laiku, lai gūtu ieskatu datu noliktavās un lielo datu sistēmās. Azure Synapse Analytics apvieno labākās SQL tehnoloģijas, ko izmanto uzņēmuma datu uzglabāšanā, Spark tehnoloģijas, ko izmanto lielajiem datiem, Data Explorer žurnāla un laikrindu analīzei, Konveijerus datu integrācijai un ETL/ELT, kā arī dziļu integrāciju ar citiem Azure pakalpojumiem, piemēram Power BI, un Cosmos DB AzureML.
 
@@ -24,16 +24,14 @@ Plašāku informāciju skatiet [Azure Synapse overview](/azure/synapse-analytics
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai konfigurētu savienojumu no Dynamics 365 Customer Insights uz Azure Synapse.
-
 > [!IMPORTANT]
 > Noteikti iestatiet visas **lomu piešķires**, kā aprakstīts.  
 
-## <a name="prerequisites-in-customer-insights"></a>Customer Insights priekšnosacījumi
+**Sadaļā Customer Insights**:
 
 * Programmā Customer Insights **ir administratora** loma. Uzziniet vairāk par [lietotāju atļaujām customer insights](permissions.md#assign-roles-and-permissions).
 
-Azure: 
+**In Azure**:
 
 - Aktīvs Azure abonements.
 
@@ -47,7 +45,7 @@ Azure:
 
 - Darbvietā Azure Synapse *Customer Insights* pakalpojumu vadītājam ir **jāpiešķir Synapse administratora** loma. Papildinformāciju skatiet rakstā [Kā iestatīt piekļuves vadīklu jūsu Synapse darbvietai](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Savienojuma izveide ar datu ezeru datu bāzēm Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Izveidot savienojumu ar datu ezera datu bāzi Azure Synapse Analytics
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
@@ -55,14 +53,16 @@ Azure:
 
 1. Izvēlieties **Azure Synapse Analytics (Priekšskatījums)** metodi.
 
-1. Sniedziet datu avota **Nosaukmu** un atlasiet **Tālāk**, lai izveidotu datu avotu. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dialoglodziņš savienojuma izveidei ar Synapse Analytics datiem":::
+  
+1. **Ievadiet datu avots nosaukumu** un neobligātu **aprakstu**.
 
 1. [Izvēlieties pieejamo savienojumu ar](connections.md)Azure Synapse Analytics vai izveidojiet jaunu savienojumu.
 
-1. **Atlasītajā** savienojumā pievienotajā darbvietā izvēlieties ezera datu bāzi Azure Synapse Analytics un atlasiet **Tālāk**.
+1. **Atlasītajā** savienojumā pievienotajā darbvietā izvēlieties datu bāzi Azure Synapse Analytics un atlasiet **Tālāk**.
 
-1. Atlasiet entītijas, ko uzņemt no pievienotās datu bāzes. 
+1. Atlasiet entītijas, ko uzņemt no pievienotās datu bāzes, un atlasiet **Tālāk**.
 
-1. Pēc izvēles izvēlieties datu entītijas, kurās atļaut datu profilēšanu. 
+1. Pēc izvēles izvēlieties datu entītijas, kurās atļaut datu profilēšanu.
 
-1. Atlasiet **Saglabāt**, lai lietotu atlasi, un sāciet datu uzņemšanu no jaunizveidotās datu avots, kas saistītas ar ezera datu bāzes tabulām programmā Azure Synapse Analytics.
+1. Atlasiet **Saglabāt**, lai lietotu atlasi, un sāciet datu uzņemšanu no jaunizveidotās datu avots, kas saistītas ar ezera datu bāzes tabulām programmā Azure Synapse Analytics. Tiek **atvērta lapa Datu avoti**, kurā redzams jaunais datu avots atsvaidzināšanas **statusā**.

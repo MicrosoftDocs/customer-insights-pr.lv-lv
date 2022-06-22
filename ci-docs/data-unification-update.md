@@ -1,7 +1,7 @@
 ---
 title: Atjaunināt apvienošanas iestatījumus
 description: Atjauniniet dublikātus kārtulas, atbilstības kārtulas vai vienotus laukus apvienošanas iestatījumos.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755599"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844049"
 ---
 # <a name="update-the-unification-settings"></a>Atjaunināt apvienošanas iestatījumus
 
@@ -43,8 +43,9 @@ Lai pārskatītu vai mainītu visus apvienošanas iestatījumus pēc vienotā pr
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Datu unifikācija ar iezīmētām unify opcijām.":::
 
-   - Lai atjauninātu vienoto klienta profilu (ar vai bez atkarībām), skatiet rakstu [Klienta profila](#run-updates-to-the-unified-customer-profile) atjauninājumu palaišana.
-   - Lai novērtētu atbilstošo nosacījumu kvalitāti, neatjauninot vienoto profilu, skatiet rakstu [Atbilstības nosacījumu](#run-matching-conditions) izpilde. Opcija **Palaist tikai** atbilstošos nosacījumus netiek rādīta vienai entītijai.
+   - [Palaidiet atbilstības nosacījumus](#run-matching-conditions), lai ātri novērtētu atbilstošo nosacījumu (deduplication and match rules) kvalitāti, neatjauninot vienoto profilu. Opcija **Palaist tikai** atbilstošos nosacījumus netiek rādīta vienai entītijai.
+   - [Apvienojiet klientu profilus](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātināšanu, segmentus vai pasākumus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
+   - [Apvienojiet klientu profilus un atkarības, lai palaistu atbilstošos](#run-updates-to-the-unified-customer-profile) nosacījumus un atjauninātu vienoto klienta profila entītiju un visas atkarības (piemēram, bagātinājumus, segmentus vai pasākumus). Visi procesi tiek atkārtoti izpildīti automātiski.
 
 ## <a name="edit-source-fields"></a>Rediģēt avota laukus
 
@@ -70,7 +71,7 @@ Atribūtu vai entītiju nevar noņemt, ja tas jau ir vienots.
 
    Atrasto ierakstu dublikātu skaits tiek parādīts sadaļā **Dublikāti**. Kolonnā **Ierakstu paplašināšana** ir redzams, kurām entītijām bija ierakstu dublikāti un dublēto ierakstu procentuālā vērtība.
 
-1. Ja pievienojāt bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet rakstā [Datu avotu bagātināšana](data-sources-enrichment.md).
+1. Ja pievienojāt bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet rakstā [Datu avotu](data-sources-enrichment.md) bagātināšana.
 
 1. Lai pārvaldītu deduplikācijas kārtulas, izvēlieties kādu no šīm opcijām:
    - **Izveidot jaunu kārtulu**: atbilstošajā entītijā atlasiet **Pievienot kārtulu**. Plašāku informāciju skatiet [Define deduplication rules](remove-duplicates.md#define-deduplication-rules).
@@ -88,7 +89,7 @@ Atribūtu vai entītiju nevar noņemt, ja tas jau ir vienots.
 
    1. Atlasiet **Gatavs**.
 
-1. Atlasiet **Tālāk**, lai veiktu izmaiņas atbilstošajos nosacījumos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Apvienošanas iestatījumu](#update-the-unification-settings) atjaunināšanas.
+1. Atlasiet **Tālāk**, lai veiktu izmaiņas atbilstošajos nosacījumos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Apvienošanas iestatījumu atjaunināšanas](#update-the-unification-settings).
 
 ## <a name="manage-match-rules"></a>Atbilstības kārtulu pārvaldība
 
@@ -111,7 +112,7 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Nesaskaņotu un saskaņotu ierakstu grafisks attēlojums, ieskaitot datu sarakstu.":::
 
-1. Ja pievienojāt bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet rakstā [Datu avotu bagātināšana](data-sources-enrichment.md).
+1. Ja pievienojāt bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet rakstā [Datu avotu](data-sources-enrichment.md) bagātināšana.
 
 1. Lai pārvaldītu kārtulas, izvēlieties kādu no šīm opcijām:
    - **Izveidot jaunu kārtulu**: atbilstošajā entītijā atlasiet **Pievienot kārtulu**. Papildinformāciju skatiet rakstā [Atbilstības pāru kārtulu definēšana](match-entities.md#define-rules-for-match-pairs).
@@ -135,11 +136,13 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
 
 ## <a name="run-matching-conditions"></a>Izpildīt atbilstības nosacījumus
 
+Izpildīt atbilstošos nosacījumus izpilda tikai deduplikācijas un atbilstības kārtulas un atjaunina *entītijas Deduplication_** un *ConflationMatchPair*.
+
 1. **Lapā Datu** > **unifikācija** atlasiet **Palaist tikai** atbilstošos nosacījumus.
 
-   Elementos **Ierakstu** dublikāti un **atbilstošie nosacījumi** tiek rādīti **rindā ievietoti** vai **atsvaidzinoši**.
+   Elementu **Ierakstu** dublikāti un **atbilstošie nosacījumi** parāda **statusu Rindā** vai **Atsvaidzināšana**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Kad atbilstības process ir pabeigts, elementā **Atbilstības nosacījumi** atlasiet **Rediģēt**.
 
@@ -153,10 +156,12 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
 
 1. **Lapā Datu** > **unifikācija** atlasiet:
 
-   - **Klientu profilu** apvienošana: atjaunina vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātināšanu, segmentus vai pasākumus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
+   - **Klientu profilu** apvienošana: izpilda atbilstības nosacījumus un atjaunina vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātināšanu, segmentus vai pasākumus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
 
-   - **Klientu profilu un atkarību** apvienošana: atjaunina vienoto profilu un visas atkarības. Visi procesi tiek atkārtoti izpildīti automātiski. Kad visi pakārtotie procesi ir pabeigti, klienta profils atspoguļo atjauninātos datus.
+   - **Unificēt klientu profilus un atkarības**: izpilda atbilstošos nosacījumus un atjaunina vienoto profilu un visas atkarības. Visi procesi tiek atkārtoti izpildīti automātiski. Kad visi pakārtotie procesi ir pabeigti, klienta profils atspoguļo atjauninātos datus.
 
-   Elementu **Ierakstu dublikāti,** atbilstošie nosacījumi **un** Vienotie klienta lauki **rāda** rindā ievietotu **vai** atsvaidzinošu **.**
+   Elementos **Ierakstu** dublikāti, **Atbilstības nosacījumi** un **Vienotie klientu lauki** rāda **statusu Rindas** vai **Atsvaidzināšana**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Veiksmīgas izpildes displeja **rezultāti lapā Unify**, parādot vienoto klientu profilu skaitu.

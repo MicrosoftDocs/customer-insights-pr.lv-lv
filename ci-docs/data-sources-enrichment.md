@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800290"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011482"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 
@@ -29,9 +29,11 @@ Lai izveidotu vai rediģētu bagātinājumus, jums ir jābūt līdzstrādnieka v
 
 1. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties bagātināt, un atlasiet **Bagātināt**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datu avotu bagātināšanas lapa.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Datu avotu lapa ar iezīmētu opciju Bagātināt":::
 
    Cilnē **Atklāšana** tiek parādītas atbalstītās [datu avots bagātināšanas opcijas](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datu avotu bagātināšanas lapa.":::
 
 1. Atlasiet **Bagātināt manus datus**, lai konfigurētu datu avots bagātināšanu. Izvades entītijas nosaukums tiek aizpildīts automātiski.
 

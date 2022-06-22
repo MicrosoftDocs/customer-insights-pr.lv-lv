@@ -3,17 +3,17 @@ title: Izmantojiet savu Azure Data Lake Storage Gen2 kontu
 author: mukeshpo
 description: Uzziniet par prasībām izmantot savu Azure Data Lake Storage kontu Customer Insights datu glabāšanai.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833949"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011942"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Izmantojiet savu Azure Data Lake Storage Gen2 kontu
 
@@ -37,6 +37,7 @@ Veidojot jaunu vidi, pārliecinieties, vai datu ezera krātuves konts pastāv un
 1. Izvēlieties, **kā savienot krātuvi**. Varat izvēlēties opciju, kuras pamatā ir resursi, un autentifikācijas opciju, kuras pamatā ir abonements. Papildinformāciju skatiet rakstā [Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma direktoriju](connect-service-principal.md).
    - Azure abonementam **izvēlieties** abonements **·**, **resursu grupa** un **krātuves konts**, kurā atrodas konteiners`customerinsights`.
    - Konta atslēgai **norādiet** datu ezera **krātuves konta konta nosaukumu** un **konta atslēgu**. Šīs autentifikācijas metodes izmantošana nozīmē, ka esat informēts, ja jūsu organizācija pagriež atslēgas. Kad vides konfigurācija [ir pagriezta, tā ir jāatjaunina](manage-environments.md#edit-an-existing-environment) ar jauno atslēgu.
+1. Izvēlieties, vai vēlaties izmantot Azure Private Link, lai izveidotu savienojumu ar krātuves kontu un [izveidotu savienojumu ar privāto saiti](security-overview.md#private-links-tab), izmantojot divpakāpju procesu.
 
 Kad sistēmas procesi, piemēram, datu uzņemšana ir pabeigta, sistēma izveido atbilstošas mapes krātuves kontā. Datu faili un *model.json* faili tiek izveidoti un pievienoti mapēm, pamatojoties uz procesa nosaukumu.
 

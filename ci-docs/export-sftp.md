@@ -1,19 +1,19 @@
 ---
 title: Customer Insights datu eksportēšana uz SFTP resursdatoriem (satur video)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz SFTP atrašanās vietu.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643238"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947193"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksportējiet segmentus un citus datus uz SFTP (priekšskatījums)
 
@@ -28,8 +28,8 @@ Izmantojiet klientu datus trešo pušu lietojumprogrammās, eksportējot tos uz 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
 - SFTP galamērķi aiz ugunsmūriem pašlaik netiek atbalstīti. 
-- Eksportēšanas izpildlaiks ir atkarīgs no sistēmas veiktspējas. Kā minimālu servera konfigurēšanu ieteicams izmantot divus procesora kodolus un 1 Gb atmiņu. 
-- Līdz pat 100 miljoniem klientu profilu entītiju eksportēšana var aizņemt 90 minūtes, ja tiek izmantota ieteicama minimālā divu procesoru kodolu konfigurācija un 1 Gb atmiņa. 
+- Eksportēšanas izpildlaiks ir atkarīgs no sistēmas veiktspējas. Kā minimālu servera konfigurēšanu ieteicams izmantot divus procesora kodolus un 1 Gb atmiņu.
+- Līdz pat 100 miljoniem klientu profilu entītiju eksportēšana var aizņemt 90 minūtes, ja tiek izmantota ieteicama minimālā divu procesoru kodolu konfigurācija un 1 Gb atmiņa.
 
 ## <a name="set-up-connection-to-sftp"></a>Savienojuma ar SFTP iestatīšana
 
@@ -64,13 +64,17 @@ Izmantojiet klientu datus trešo pušu lietojumprogrammās, eksportējot tos uz 
 1. Atlasiet entītijas, piemēram, segmentus, kurus vēlaties eksportēt.
 
    > [!NOTE]
-   > Eksportēšanas laikā katra atlasītā entitīja tiks iedalīta maksimums piecos izvades failos. 
+   > Eksportēšanas laikā katra atlasītā entitīja tiks iedalīta maksimums piecos izvades failos.
 
 1. Atlasiet vienumu **Saglabāt**.
 
 Eksporta saglabāšana automātiski nepalaiž eksportu.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab).
+Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Eksportējot entītijas, kurās ir liels datu apjoms, katram eksportam vienā mapē var rasties vairāki CSV faili. Eksporta sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksporta pabeigšanai.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

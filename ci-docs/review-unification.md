@@ -1,7 +1,7 @@
 ---
 title: Pārskatīt datu apvienošanu
 description: Pārskatiet datu apvienošanas darbības, izveidojiet vienotus klientu profilus un pārskatiet rezultātus
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8743037"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844095"
 ---
 # <a name="review-data-unification"></a>Pārskatīt datu apvienošanu
 
@@ -32,11 +32,13 @@ ms.locfileid: "8743037"
 
 1. Atlasiet **Rediģēt** jebkurā no datu apvienošanas darbībām, lai pārskatītu un veiktu jebkādas izmaiņas.
 
-1. Ja esat apmierināts ar savām atlasēm, atlasiet **Izveidot debitoru profilus**. Lapa **Unify** tiek parādīta vienotā klienta profila izveides laikā. Apvienošanas algoritma pabeigšana prasa zināmu laiku, un konfigurāciju nevar mainīt, kamēr tā nav pabeigta.
+1. Ja esat apmierināts ar savām atlasēm, atlasiet **Izveidot debitoru profilus**. Lapa **Unify** tiek parādīta vienotā klienta profila izveides laikā. Visiem elementiem, izņemot **avota laukus**, ir redzams **statuss** Rindā vai **Atsvaidzināšana**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Unify ar elementiem, kuros redzama rinda vai atsvaidzināšana.":::
 
-Kad apvienošanas process ir pabeigts, vienotā klienta profila entītija ar nosaukumu *Klients ir norādīta* sadaļā Profili lapā **Entītijas** **.** Pirmā veiksmīgā apvienošanas izpilde izveido vienotu *klienta entītiju*. Visas turpmākās darbības paplašina šo entītiju.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Apvienošanas algoritma pabeigšana prasa zināmu laiku, un konfigurāciju nevar mainīt, kamēr tā nav pabeigta. Kad apvienošanas process ir pabeigts, vienotā klienta profila entītija ar nosaukumu *Klients ir norādīta* sadaļā Profili lapā **Entītijas** **.** Pirmā veiksmīgā apvienošanas izpilde izveido vienotu *klienta entītiju*. Visas turpmākās darbības paplašina šo entītiju.
 
 ## <a name="review-the-results-of-data-unification"></a>Pārskatīt datu apvienošanas rezultātus
 

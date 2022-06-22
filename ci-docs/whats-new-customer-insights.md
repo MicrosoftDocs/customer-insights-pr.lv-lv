@@ -1,19 +1,19 @@
 ---
-title: Jaunie un gaidāmie līdzekļi
+title: Jauni un atjaunināti līdzekļi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833639"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843356"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -24,6 +24,37 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>2022. gada maija atjauninājumi
+
+Atjauninājumi 2022. gada maijā ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="updated-data-unification-experience"></a>Atjaunināta datu apvienošanas pieredze
+
+ Datu apvienošana ļauj apvienot vienreiz atšķirīgus datu avotus vienā pamatdatu kopā, kas nodrošina vienotu skatījumu uz šiem datiem. Datus var apvienot vienā entītijā vai vairākās entītijās. Vispirms atlasiet [entītijas un avota laukus](map-entities.md), [noņemiet ierakstu dublikātus](remove-duplicates.md), norādiet atbilstības nosacījumu [apstiprināšanas noteikumus](match-entities.md) un definējiet, kurus [laukus iekļaut vienotajos klientu profilos](merge-entities.md).
+
+Plašāku informāciju skatiet [Data unification overview](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Atsvaidzināta sākumlapa customer insights
+
+**Sākums** palīdz veikt galveno funkciju konfigurācijas procesu un sniedz pārskatu par segmentiem, mēriem un bagātināšanas datiem. Mēs esam atsvaidzinājuši pieredzi, lai īsumā sniegtu atbilstošāku informāciju.
+
+Papildinformāciju skatiet sadaļā [Customer Insights](home.md) izpēte.
+
+### <a name="track-usage-of-a-segment"></a>Segmenta lietojuma izsekošana
+
+Tagad [varat izsekot segmenta](segments.md#track-usage-of-a-segment) lietojumam programmās, kuru pamatā Dataverse ir organizācija, kas ir saistīta ar Customer Insights. Customer [Insights segmentiem, kas tiek izmantoti Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) klientu braucienos, sistēma informē jūs par šī segmenta izmantošanu.
+
+### <a name="export-to-criteo"></a>Eksportēt uz Criteo
+
+Criteo ir tiešsaistes platforma, kas palīdz lietotājiem pārvaldīt digitālo reklāmu. Tagad varat eksportēt vienotu klientu profilu segmentus, lai ģenerētu kampaņas, nodrošinātu e-pasta mārketingu un izmantotu noteiktas klientu grupas ar Criteo.
+
+Plašāku informāciju skatiet [Export segments to Criteo (preview)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Precizēta dokumentācijas struktūra vides radīšanai
+
+Mēs esam pārskatījuši palīdzības dokumentus, kas saistīti ar vides izveidi un pārvaldību customer insights. Raksti tagad ir grupēti satura rādītājā zem mezgla Vide. Pārstrukturētie raksti sniedz vairāk norādījumu par dažādiem veidiem, kā izveidot vidi un tiem ir skaidrāka struktūra. Ja jums ir atgriezeniskā saite, ko kopīgot, informējiet mūs, izmantojot vadīklas, palīdzības rakstu beigās.
+
+Papildinformāciju skatiet [tēmā Jaunas vides](create-environment.md) izveide.
 
 ## <a name="april-2022-updates"></a>2022. gada aprīļa atjauninājumi
 
@@ -55,7 +86,7 @@ Atjauninājumi 2022. gada martā ietver jaunas funkcijas, veiktspējas jaunināj
 
 LiveRamp nodrošina identitātes izšķirtspēju un klientu datu konsolidāciju. Klienta datu personiskos identifikatorus varat kartēt uz AbiliTec identitātes grafiku un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu klientu datus.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar LiveRamp (Preview) identitātes datiem](enrichment-liveramp.md).
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar LiveRamp (Preview)](enrichment-liveramp.md) identitātes datiem.
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentu un pasākumu organizēšana, izmantojot atzīmes un filtrus
 
@@ -105,7 +136,7 @@ Papildinformāciju skatiet rakstā [Azure Synapse datu avots savienošana (priek
 
 LiveRamp nodrošina identitātes izšķirtspēju un klientu datu konsolidāciju. Klienta datu personiskos identifikatorus varat kartēt uz AbiliTec identitātes grafiku un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu klientu datus.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar LiveRamp (Preview) identitātes datiem](enrichment-liveramp.md).
+Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana ar LiveRamp (Preview)](enrichment-liveramp.md) identitātes datiem.
 
 ### <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 

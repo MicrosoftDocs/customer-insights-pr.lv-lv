@@ -1,95 +1,95 @@
 ---
 title: Bagātināt klientu profilus ar atrašanās vietas datiem no Azure maps
 description: Vispārīga informācija par Azure Maps pirmo pušu bagātināšanu.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755363"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953637"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Klientu profilu bagātināšana ar Azure Maps (priekšskatījums)
 
-Azure Maps nodrošina uz atrašanās vietu balstītus datus un pakalpojumus, lai, izmantojot iebūvētu atrašanās vietas informāciju, sniegtu pieredzi, kuras pamatā ir iebūvētas atrašanās vietas dati. Azure Maps datu bagātināšanas pakalpojumi uzlabo atrašanās vietas informācijas precizitāti par klientiem. Tas sniedz iespējas, piemēram, adrešu normalizēšanu un platuma un garuma izvilkšanu Dynamics 365 Customer Insights.
+Azure Maps nodrošina uz atrašanās vietu orientētus datus un pakalpojumus, lai sniegtu pieredzi, pamatojoties uz ģeotelpiskajiem datiem, ar iebūvētu atrašanās vietas informāciju. Azure Maps datu bagātināšanas pakalpojumi uzlabo atrašanās vietas informācijas precizitāti par klientiem. Tas sniedz iespējas, piemēram, adrešu normalizēšanu un platuma un garuma izvilkšanu Dynamics 365 Customer Insights.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai konfigurētu Azure Maps datu bagātināšanu, ir jāizpilda tālāk noteiktie priekšnosacījumi:
+- Aktīvs Azure Maps abonements. Lai iegūtu abonementu, [reģistrējieties vai saņemiet bezmaksas izmēģinājumu](https://azure.microsoft.com/services/azure-maps/).
 
-- Jums ir jābūt aktīvam Azure Maps abonementam. Lai iegūtu abonementu, varat [pierakstīties vai iegūt izmēģinājumversiju bez maksas](https://azure.microsoft.com/services/azure-maps/).
-
-- Ir pieejams Azure Maps [savienojums](connections.md) *vai* jums ir [administratora](permissions.md#admin) atļaujas un aktīva Azure Maps API atslēga.
-
-## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
-
-1. Dodieties uz **Dati** > **Bagātināšana**. 
-
-1. Elementā **Atrašanās vieta** atlasiet **Bagātināt manus datus**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="elements Azure Maps.":::
-
-1. Atlasiet [savienojumu](connections.md) nolaižamajā sarakstā. Sazinieties ar administratoru, ja nav pieejams neviens Azure Maps savienojums. Ja esat administrators, varat konfigurēt [savienojumu ar Azure Maps](#configure-the-connection-for-azure-maps). 
-
-1. Atlasiet **Tālāk**, lai apstiprinātu atlasi.
-
-1. Izvēlieties **Klientu datu kopu**, kuru vēlaties bagātināt ar atrašanās vietas datiem no Azure Maps. Varat atlasīt entītiju **Klients**, lai bagātinātu visus savus vienotos klientu profilus, vai atlasīt segmenta entītiju, lai bagātinātu tikai šajā segmentā iekļautos klientu profilus.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Izvēloties klienta datu kopu, veiciet ekrānuzņēmumu.":::
-
-1. Izvēlieties, vai vēlaties kartēt laukus ar primāro un/vai sekundāro adresi. Varat norādīt lauku kartējumu gan adresēm, gan bagātināt abu adrešu profilus atsevišķi&mdash;, piemēram, kā sākuma adresi un uzņēmuma adresi. Atlasiet **Tālāk**.
-
-1. Definējiet, kāda tipa lauki no jūsu vienotajiem profiliem ir jāizmanto, lai meklētu atbilstošos atrašanās vietu datus no Azure Maps. Atlasītajai primārajai un/vai sekundārajai adresei ir nepieciešami lauki **Adreses 1. rinda** un **Pasta indekss**. Lai nodrošinātu lielāku atbilstības precizitāti, var pievienot papildu laukus.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Azure Maps bagātināšanas konfigurācijas lapa.":::
-
-1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
-
-1. Novērtējiet, vai vēlaties modificēt **Papildu iestatījumus**. Šie iestatījumi ir paredzēti, lai nodrošinātu maksimālu elastību, apstrādājot uzlabotas lietošanas gadījumus, taču noklusējuma vērtības vairumā gadījumu būs atbilstošas:
-   - **Adrešu tips**: noklusējuma uzvedība ir tāda, ka bagātināšana atgriezīs vislabāko adrešu atbilstību pat tad, ja tā ir nepilnīga. Lai iegūtu tikai pilnīgas adreses&mdash;, piemēram, adreses, kurās iekļauts mājas numurs&mdash;, notīriet visas izvēles rūtiņas, izņemot **Punktu adreses**. 
-   - **Valoda**: pēc noklusējuma adreses tiek atgrieztas tā reģiona valodā, kuram ir noteikta adrese. Lai lietotu standartizētu adrešu valodu, nolaižamajā izvēlnē atlasiet valodu. Piemēram, atlasot **angļu valodu**, jūs atgriezīs **Kopenhāgena, Dānija**, nevis **København, Danmark**.
-
-1. Norādiet bagātināto datu nosaukumu.
-
-1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
+- Azure Maps [savienojumu](connections.md)[konfigurē](#configure-the-connection-for-azure-maps) administrators.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Konfigurējiet Azure Maps savienojumu
 
-Lai konfigurētu savienojumus, programmā Customer Insights jābūt administratoram. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** vai dodieties uz **Administrators** > **Savienojumi** un atlasiet **Iestatīt** rūtī Azure Maps.
+Jums jābūt Customer Insights administratoram [un](permissions.md#admin) jābūt aktīvai Azure Maps API atslēgai.
 
-1. Lodziņā **Parādāmais nosaukums** ievadiet savienojuma nosaukumu.
+1. Konfigurējot bagātinātos datus, atlasiet **Pievienot savienojumu** vai dodieties uz **Administrators** > **Savienojumi** un atlasiet **Iestatīt** rūtī Azure Maps.
 
-1. Norādiet derīgu Azure maps API atslēgu.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Maps bagātināšanas konfigurācijas lapa.":::
 
-1. Pārskatiet un sniedziet savu piekrišanu **Datu konfidencialitātei un atbilstībai**, atzīmējot izvēles rūtiņu **Piekrītu**
+1. Ievadiet savienojuma nosaukumu un derīgu Azure Maps API atslēgu.
 
-1. Lai pārbaudītu konfigurāciju, atlasiet **Pārbaudīt**.
+1. Pārskatiet un sniedziet savu piekrišanu [Datu konfidencialitātei un atbilstībai](#data-privacy-and-compliance), atlasot **Es piekrītu**.
 
-1. Pēc pārbaudes pabeigšanas atlasiet **Saglabāt**.
+1. Atlasiet **Pārbaudīt**, lai validētu konfigurāciju, un pēc tam atlasiet **Saglabāt**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Maps bagātināšanas konfigurācijas lapa.":::
+### <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
+
+Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Azure Maps, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft pārsūtīs šādus datus pēc jūsu norādījumiem, bet jūs esat atbildīgs par to, lai Azure Maps atbilstu visiem jūsu konfidencialitātes vai drošības pienākumiem. Papildinformāciju skatiet [Microsoft paziņojumā par konfidencialitāti](https://go.microsoft.com/fwlink/?linkid=396732).
+Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
+
+## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
+
+1. Dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
+
+1. Atlasiet **Bagātināt manus datus** elementā **Atrašanās vieta** no Microsoft Azure elementa Maps.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="elements Azure Maps.":::
+
+1. Pārskatiet pārskatu un pēc tam atlasiet **Tālāk**.
+
+1. Atlasiet savienojumu. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
+
+1. Atlasiet **Tālāk**.
+
+1. **Atlasiet klienta datu kopu** un izvēlieties profilu vai segmentu, kuru vēlaties bagātināt ar Microsoft datiem. Klientu *uzņēmums* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā esošos klientu profilus.
+
+1. Definējiet, kāda tipa laukus no vienotajiem profiliem izmantot saskaņošanai: primārā un/vai sekundārā adrese. Jūs varat norādīt lauka kartējumu abām adresēm un atsevišķi bagātināt abu adrešu profilus. Piemēram, mājas adresei un uzņēmuma adresei. Atlasiet **Tālāk**.
+
+1. Kartējiet savus laukus uz atrašanās vietas datiem no Azure Maps. Atlasītajai primārajai un/vai sekundārajai adresei ir nepieciešami lauki **Adreses 1. rinda** un **Pasta indekss**. Lai nodrošinātu augstāku atbilstības precizitāti, pievienojiet papildu laukus.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Azure Maps atribūtu kartēšana.":::
+
+1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
+
+1. Pārskatiet **papildu iestatījumus**, kas nodrošina maksimālu elastību, lai apstrādātu papildu lietošanas pieteikumus. Tomēr šādas noklusējuma vērtības parasti nav jāmaina.
+
+   - **Adrešu** tips: labākā adreses atbilstība tiek atgriezta pat tad, ja tā ir nepilnīga. Lai iegūtu tikai pilnīgas adreses&mdash;, piemēram, adreses, kurās iekļauts mājas numurs&mdash;, notīriet visas izvēles rūtiņas, izņemot **Punktu adreses**.
+   - **Valoda**: adreses atgriežas valodā, pamatojoties uz adreses reģionu. Lai lietotu standartizētu adrešu valodu, nolaižamajā izvēlnē atlasiet valodu. Piemēram, izvēloties **angļu valodu**, tiek atgriezta **Kopenhāgena, Dānija**, nevis **København, Danmark**.
+   - **Maksimālais rezultātu** skaits: rezultātu skaits vienā adresē.
+
+1. Atlasiet **Tālāk**.
+
+1. **Norādiet bagātināšanas nosaukumu** un entītijas **Izvade nosaukumu**.
+
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
+
+1. Atlasiet **Palaist**, lai sāktu bagātināšanas procesu, vai tuvu, lai **atgrieztos lapā Bagātinājumi**.
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 
-Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat arī ļaut sistēmai palaist bagātināšanu automātiski kā daļu no [plānotās atsvaidzināšanas](system.md#schedule-tab). Apstrādes laiks ir atkarīgs no jūsu klientu datu apjoma un API atbildes laikiem.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Kad bagātināšanas process ir pabeigts, sadaļā **Mani bagātinājumi** varat pārskatīt tikko bagātinātos klientu profilu datus. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
-
-Jūs varat piekļūt detalizētam katra bagātināta profila skatam, atlasot opciju **Skatīt bagātinātos datus**.
+Klientu **skaits, kas bagātināts ar lauku**, nodrošina katra bagātinātā lauka aptvērumu.
 
 ## <a name="next-steps"></a>Nākamās darbības
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Azure Maps, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft pārsūtīs šādus datus pēc jūsu norādījumiem, bet jūs esat atbildīgs par to, lai Azure Maps atbilstu visiem jūsu konfidencialitātes vai drošības pienākumiem. Papildinformāciju skatiet [Microsoft paziņojumā par konfidencialitāti](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

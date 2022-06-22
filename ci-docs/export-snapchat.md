@@ -1,19 +1,19 @@
 ---
 title: Customer Insights datu eksportēšana uz Snapchat
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643629"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947285"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentu sarakstu eksportēšana uz Snapchat (priekšskatījums)
 
@@ -21,7 +21,8 @@ Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos r
 
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
--   Jums ir [Snapchat Business konts](https://business.snapchat.com/), [Snapchat Ads konts](https://ads.snapchat.com/) un atbilstošie administratora akreditācijas dati.
+-   Jums ir [Snapchat Business konts](https://business.snapchat.com/), [Snapchat Ads konts](https://ads.snapchat.com/) un atbilstošie administratora akreditācijas dati. Jums ir jābūt vismaz organizācijas konta dalībniekam un noteikta reklāmas konta datu pārvaldniekam. 
+-   Jums ir vismaz viena auditorija Snapchat auditorijas pārvaldniekā, kura tips ir SAM (Snap Audience Match). 
 -   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
@@ -60,7 +61,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos r
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Snapchat. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
 
-1. Ievadiet [**Snapchat auditorijas ID**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Ievadiet Snapchat segmenta [**/auditorijas ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). Auditorijas ID var atrast vietrādī URL pēc auditorijas atlases Snapchat auditorijas pārvaldniekā. 
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Snapchat.
 

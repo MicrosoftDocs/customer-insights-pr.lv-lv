@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833567"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011620"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kā: Izveidot jaunu vidi
 
@@ -67,6 +67,7 @@ Ir divas iespējas, no kurām varat izvēlēties:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>3. darbība. Izveidojiet savienojumu ar Microsoft Dataverse
 
 Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi. Koplietojiet datus ar Dataverse tiem, lai tos izmantotu biznesa lietojumprogrammās, kuru Dataverse pamatā ir, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas programmā Power Apps.
+
 
 Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs to izveidosim jums.
 

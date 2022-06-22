@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833394"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011850"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma primāro nosaukumu
 
@@ -51,7 +51,13 @@ Pirms klienta ieskatiem tiek izveidots jauns servisa vadītājs, pārbaudiet, va
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Piešķirt atļaujas pakalpojuma primārajam nosaukumam, lai piekļūtu krātuves kontam
 
-Dodieties uz Azure portālu, lai piešķirtu atļaujas tā krātuves konta pakalpojuma vadītājam, kuru vēlaties izmantot programmā Customer Insights.
+Dodieties uz Azure portālu, lai piešķirtu atļaujas tā krātuves konta pakalpojuma vadītājam, kuru vēlaties izmantot programmā Customer Insights. Uzglabāšanas kontam vai konteineram jāpiešķir viena no šīm lomām:
+
+|Akreditācijas datu|Prasības:|
+|----------|------------|
+|Pašlaik ir pieteicies lietotājs|**Loma**: krātuves BLOB datu lasītājs, krātuves BLOB līdzstrādnieks vai krātuves BLOB īpašnieks.<br>**Līmenis**: atļaujas var piešķirt krātuves kontā vai konteinerā.</br>|
+|Klientu ieskatu pakalpojuma vadītājs -<br>Izmantošana Azure Data Lake Storage par datu avots</br>|1. opcija<ul><li>**Loma**: krātuves BLOB datu lasītājs, krātuves BLOB datu līdzstrādnieks vai krātuves BLOB datu īpašnieks.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>2 *. iespēja (nedalot pakalpojumu principāla piekļuvi krātuves kontam)*<ul><li>**1**. loma: krātuves BLOB datu lasītājs, krātuves BLOB datu līdzstrādnieks vai krātuves BLOB datu īpašnieks.</li><li>**Līmenis**: konteineram jāpiešķir atļaujas.</li><li>**2**. loma: krātuves BLOB datu deleģētājs.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>|
+|Klientu ieskatu pakalpojuma vadītājs - <br>Izmantošana Azure Data Lake Storage par izvadi vai mērķi</br>|1. opcija<ul><li>**Loma**: krātuves BLOB datu līdzstrādnieks vai krātuves BLOB īpašnieks.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>2 *. iespēja (nedalot pakalpojumu principāla piekļuvi krātuves kontam)*<ul><li>**Loma**: krātuves BLOB datu līdzstrādnieks vai krātuves BLOB īpašnieks.</li><li>**Līmenis**: konteineram jāpiešķir atļaujas.</li><li>**2**. loma: krātuves BLOB deleģētājs.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>|
 
 1. Apmeklējiet [Azure administratora portālu](https://portal.azure.com) un piesakieties savā organizācijā.
 
@@ -62,7 +68,7 @@ Dodieties uz Azure portālu, lai piešķirtu atļaujas tā krātuves konta pakal
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Ekrānuzņēmums, kurā redzams Azure portāls, kas pievieno lomas piešķiri.":::
 
 1. Rūtī **Pievienot lomu piešķiri** iestatiet šādus rekvizītus:
-   - Loma: **Krātuve Blob Data Contributor**
+   - Loma: krātuves BLOB datu lasītājs, krātuves BLOB līdzstrādnieks vai krātuves BLOB īpašnieks, pamatojoties uz iepriekš uzskaitītajiem akreditācijas datiem.
    - Piešķirt piekļuvi: **Lietotājam, grupai vai pakalpojuma primārajam nosaukumam**
    - Dalībnieku atlase: **Dynamics 365 AI for Customer Insights** (servisa principāls [,](#create-a-new-service-principal) kuru uzmeklējāt iepriekš šajā procedūrā)
 

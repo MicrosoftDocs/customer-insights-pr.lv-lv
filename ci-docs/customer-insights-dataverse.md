@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833685"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011537"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
 Customer Insights piedāvā iespēju padarīt izvades entītijas pieejamas kā [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Šī integrācija nodrošina ērtu datu koplietošanu un pielāgotu izstrādi, izmantojot zema koda/bez koda pieeju. Izvades [entītijas](#output-entities) ir pieejamas kā tabulas vidē Dataverse. Datus var izmantot jebkurai citai lietojumprogrammai, pamatojoties uz tabulām Dataverse. Šīs tabulas iespējo tādus scenārijus kā automatizētas darbplūsmas, izmantojot Power Automate vai veidojot programmas ar Power Apps.
 
-Dataverse Savienojums ar vidi ļauj arī uzņemt [datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](data-sources.md#add-data-from-on-premises-data-sources).
+Dataverse Savienojums ar vidi ļauj arī uzņemt [datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
@@ -57,7 +57,7 @@ Lai iespējotu datu kopīgošanu ar Microsoft Dataverse laiku, kad vide [izmanto
 Lietojot Dataverse ar savu Azure Data Lake Storage kontu, ir divi ierobežojumi:
 
 - Starp organizāciju un Dataverse kontu ir viens pret vienu kartējums Azure Data Lake Storage. Dataverse Kad organizācija ir izveidojusi savienojumu ar krātuves kontu, tā nevar izveidot savienojumu ar citu krātuves kontu. Šis ierobežojums neļauj a Dataverse aizpildīt vairākus krātuves kontus.
-- Datu kopīgošana nedarbosies, ja Azure Private Link iestatījums ir nepieciešams, lai piekļūtu jūsu Azure Data Lake krātuves kontam, jo tas atrodas aiz ugunsmūra. Dataverse pašlaik neatbalsta savienojumu ar privātiem galapunktiem, izmantojot privāto saiti.
+- Datu kopīgošana nedarbosies, ja Azure Private Link iestatījums ir nepieciešams, lai piekļūtu jūsu Azure Data Lake Storage kontam, jo tas atrodas aiz ugunsmūra. Dataverse pašlaik neatbalsta savienojumu ar privātiem galapunktiem, izmantojot privāto saiti.
 
 ### <a name="set-up-powershell"></a>PowerShell iestatīšana
 

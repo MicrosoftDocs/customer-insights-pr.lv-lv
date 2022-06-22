@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833777"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011896"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>BUJ par Dynamics 365 Customer Insights izmēģinājumversiju
 
@@ -68,7 +68,7 @@ Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek p
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kādi ir izmēģinājumversijas ierobežojumi un kvotas?
 
-- Jūs nevarat izmantot savu Azure Data Lake krātuves kontu, lai saglabātu izvades datus Customer Insights izmēģinājuma versijas laikā. Tomēr datus varat ievadīt no Data Lake Storage konta.
+- Jūs nevarat izmantot savu Azure Data Lake Storage kontu, lai saglabātu izvades datus Customer Insights izmēģinājuma versijas laikā. Tomēr jūs varat uzņemt datus no Datu ezera krātuves konta.
 - Dataverse vidē varat glabāt līdz pat 3 GB datu, kas tiek nodrošināti automātiski, sākot Customer Insights izmēģinājumversiju.
 
 ## <a name="customer-insights-specific-questions"></a>Specifiski jautājumi par Customer Insights
@@ -83,7 +83,7 @@ Vairākums Customer Insights iespēju līdzekļu ir pieejami izmēģinājumversi
 
 Nav pieejami **šādi** līdzekļi:
 
-- Jūs nevarat izveidot jaunas vides, kas izmanto jūsu Azure Data Lake krātuves kontu.
+- Nevar izveidot jaunas vides, kas izmanto jūsu Azure Data Lake Storage kontu.
 - Izmēģinājuma vidi nevar izdzēst.
 
 ### <a name="how-long-does-the-trial-last"></a>Kāds ir izmēģinājumversijas derīguma termiņš?

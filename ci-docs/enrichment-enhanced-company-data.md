@@ -1,32 +1,31 @@
 ---
 title: Uzņēmuma datu uzlabošana
 description: Bagātiniet un normalizējiet uzņēmuma datus, izmantojot Microsoft modeļus.
-ms.date: 04/22/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6aa38afa7f92b512d19b4967fc1652b5e43ad094
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642995"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953958"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Uzņēmuma profilu bagātināšana ar uzlabotiem uzņēmuma datiem
 
 Izmantojiet Microsoft modeļus un apkopotos uzņēmuma datus, lai labotu, papildinātu un standartizētu uzņēmuma profilus. Lai uzlabotu precizitāti un ieskatus, [mēs izmantosim kopējo datu modeļa formātu](/common-data-model/schema/core/applicationcommon/account).
 
-Varat arī [uzlabot uzņēmuma datus par datu avotiem](data-sources-enrichment.md), lai uzlabotu atbilstības precizitāti datu apvienošanas procesā. 
+Varat arī [uzlabot uzņēmuma datus par datu avotiem](data-sources-enrichment.md), lai uzlabotu atbilstības precizitāti datu apvienošanas procesā.
 
 Amerikas Savienoto Valstu valsts uzņēmumiem ir pieejama tāda informācija kā ieņēmumi, akciju rādītājs, rūpniecība un daudz kas cits.  
 
 ## <a name="how-we-enhance-company-data"></a>Kā mēs uzlabojam uzņēmuma datus
 
 Mūsu modelis iziet divpakāpju procesu, lai uzlabotu uzņēmuma profilu. Pirmkārt, tas normalizē uzņēmuma nosaukumu. Piemēram, *Microsoft Corp* tiks labots un standartizēts korporācijai *Microsoft Corporation*. Tas mēģina atrast atbilstību Microsoft apkopotajos uzņēmuma datos. Ja tiek atrasta atbilstība, mēs bagātinām uzņēmuma profilu ar informāciju no mūsu apkopotajiem uzņēmuma datiem, tostarp uzņēmuma nosaukumu.
-
 
 ### <a name="example"></a>Piemērs
 
@@ -50,52 +49,52 @@ Microsft
 
 ## <a name="limitations"></a>Ierobežojumi
 
-Uzlabotajiem datiem ir daži ierobežojumi. Modelis neatbalsta tālāk redzamā saraksta vienumus.
+Modelis:
 
-1.  Apstipriniet uzņēmuma identitāti. Mēs nepārbaudām, vai ievade ir esoša organizācija vai uzņēmums izmanto izvadi kā standarta nosaukumu.
-2.  Visaptveroši aptver uzņēmumus visā pasaulē. Microsoft apkopotajiem uzņēmuma datiem ir globāls pārklājums, taču tie piedāvā vislielāko pārklājumu Austrālijā, Kanādā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
-3.  Standartizēt uzņēmuma adreses visā pasaulē. Pašlaik mēs atbalstām adrešu standartizāciju šajās valstīs vai reģionos: Austrālijā, Kanādā, Francijā, Vācijā, Itālijā, Japānā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
-4.  Garantējiet datu precizitāti vai svaigumu. Tā kā biznesa informācija bieži mainās, mēs nevaram garantēt, ka sniegtie uzlabotie uzņēmuma dati vienmēr ir precīzi vai atjaunināti.
+- Apstipriniet uzņēmuma identitāti. Mēs nepārbaudām, vai ievade ir esoša organizācija vai uzņēmums izmanto izvadi kā standarta nosaukumu.
+- Visaptveroši aptver uzņēmumus visā pasaulē. Microsoft apkopotajiem uzņēmuma datiem ir globāls pārklājums, taču tie piedāvā vislielāko pārklājumu Austrālijā, Kanādā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
+- Standartizēt uzņēmuma adreses visā pasaulē. Pašlaik mēs atbalstām adrešu standartizāciju šajās valstīs vai reģionos: Austrālijā, Kanādā, Francijā, Vācijā, Itālijā, Japānā, Apvienotajā Karalistē un Amerikas Savienotajās Valstīs.
+- Garantējiet datu precizitāti vai svaigumu. Tā kā biznesa informācija bieži mainās, mēs nevaram garantēt, ka sniegtie uzlabotie uzņēmuma dati vienmēr ir precīzi vai atjaunināti.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 
-1. Dodieties uz **Dati** > **Bagātināšana**.
+1. Dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
 
 1. Uzlabotā uzņēmuma datu elementā atlasiet **Bagātināt manus** datus **·**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Bagātināšanas elements bagātināšanas centrmezglā uzņēmuma datiem.":::
 
-1. Atlasiet **Klientu datu kopu** un izvēlieties entītiju, kurā ir ietvertas bagātināmās adreses. Varat atlasīt entītiju *Klients*, lai bagātinātu adreses visos klientu profilos, vai atlasīt segmenta entītiju, lai bagātinātu adreses tikai šajā segmentā iekļautajos klientu profilos.
+1. Pārskatiet pārskatu un pēc tam atlasiet **Tālāk**.
 
-1. Atlasiet, kāda tipa lauki no jūsu uzņēmuma profiliem jāizmanto, lai saskaņotu ar Microsoft apkopotajiem uzņēmuma datiem. Šāda atlase ietekmēs kartēšanas laukus, kuriem jums būs piekļuve nākamajā darbībā.
+1. Atlasiet klienta datu kopu **un** izvēlieties profilu vai segmentu, kuru vēlaties bagātināt. Klientu *uzņēmums* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā esošos klientu profilus.
 
-1.  Kartējiet uzņēmuma laukus no vienotās klienta entītijas. Jo vairāk atslēgu identifikatoru un lauku kartējat, jo lielāka ir lielāka atbilstības līmeņa iespējamība.
+1. Atlasiet, kāda veida laukus no uzņēmuma profiliem izmantot saskaņošanai ar Microsoft apkopotajiem uzņēmuma datiem. Šāda atlase ietekmēs kartēšanas laukus, kuriem jums būs piekļuve nākamajā darbībā.
+
+1. Atlasiet **Tālāk**.
+
+1. Kartējiet uzņēmuma laukus uz uzņēmuma datiem no Microsoft. Lai nodrošinātu augstāku atbilstības precizitāti, pievienojiet papildu laukus.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Datu kartēšanas solis, konfigurējot uzņēmuma bagātināšanu.":::
 
 1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
 
-1. Norādiet bagātināto datu nosaukumu un izvades entitījas nosaukumu.
+1. Norādiet **bagātināšanas un entītijas** Izvades **nosaukumu**.
 
-1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt vidi**.
+1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
+
+1. Atlasiet **Palaist**, lai sāktu bagātināšanas procesu, vai tuvu, lai **atgrieztos lapā Bagātinājumi**.
 
 ## <a name="enrichment-results"></a>Bagātināšanas rezultāti
 
-Lai sāktu bagātināšanas procesu, komandjoslā atlasiet **Palaist**. Varat arī ļaut sistēmai palaist bagātināšanu automātiski kā daļu no [plānotās atsvaidzināšanas](system.md#schedule-tab). Apstrādes laiks ir atkarīgs no klientu datu lieluma.
-
-Pēc bagātināšanas procesa noslēgšanas varat pārskatīt tikko bagātinātos klientu profilu datus, dodoties uz sadaļu **Mana bagātināšana**. Turklāt jūs redzēsit pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
-
-Bagātināto klientu priekšskatījuma elementā **varat redzēt bagātināto klientu priekšskatījuma** paraugu. Atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**, lai piekļūtu detalizētam katra bagātinātā profila skatam.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ### <a name="overview-card"></a>Pārskata karte
 
-Pārskata kartē ir parādīta detalizēta informācija par bagātināšanas segumu. 
+Klientu **izmaiņu pārskata** elements parāda detalizētu informāciju par bagātināšanas segumu
 
-* **Uzņēmumi apstrādāti un mainīti**: veiksmīgi bagātināto klientu uzņēmumu profilu skaits.
-
-* **Uzņēmumi apstrādāti un nav mainīti**: klientu uzņēmuma profilu skaits, kas tika atzīti, bet netika mainīti. Tas parasti notiek, ja ievades dati ir derīgi un tos nevar uzlabot ar bagātināšanu.
-
-* **Uzņēmumi nav apstrādāti un nav mainīti**: neatzīto klientu uzņēmumu profilu skaits. Tas parasti notiek ievades datiem, kas nav derīgi vai ko bagātināšana neatbalsta.
+- **Uzņēmumi apstrādāti un mainīti**: veiksmīgi bagātināto klientu uzņēmumu profilu skaits.
+- **Uzņēmumi apstrādāti un nav mainīti**: klientu uzņēmuma profilu skaits, kas tika atzīti, bet netika mainīti. Tas parasti notiek, ja ievades dati ir derīgi un tos nevar uzlabot ar bagātināšanu.
+- **Uzņēmumi nav apstrādāti un nav mainīti**: neatpazītu klientu uzņēmuma profilu skaits. Tas parasti notiek ievades datiem, kas nav derīgi vai ko bagātināšana neatbalsta.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

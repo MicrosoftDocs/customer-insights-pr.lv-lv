@@ -1,19 +1,19 @@
 ---
 title: Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR | Microsoft Docs
 description: Atbildiet uz datu subjektu pieprasījumiem attiecībā uz Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808570"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947377"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -77,11 +77,5 @@ Lai eksportētu datus, nomnieka administrators var veikt tālāk norādītas dar
 1. Nosūtiet e-pasta ziņojumu uz e-pasta adresi D365CI@microsoft.com, norādot lietotāja e-pasta adresi pieprasījumā. Customer Insights komanda nosūtīs e-pasta ziņojumu uz reģistrēto nomnieka administratora e-pasta adresi, lūdzot apstiprinājumu datu eksportēšanai.
 2. Atzīstiet apstiprinājumu eksportēt pieprasītā lietotāja datus.
 3. Saņemiet eksportētos datus, izmantojot nomnieka administratora e-pasta adresi.
-
-## <a name="consent-management-preview"></a>Piekrišanas pārvaldība (priekšskatījums)
-
-Piekrišanas pārvaldības iespēja tieši neapkopo lietotāja datus. Tas tikai importē un apstrādā piekrišanas datus, ko lietotāji sniedz citās lietojumprogrammās.
-
-Lai noņemtu piekrišanas datus par konkrētiem lietotājiem, noņemiet tos datu avotos, kas uzņemti piekrišanas pārvaldības iespējai. Pēc datu avots atsvaidzināšanas noņemtie dati tiks dzēsti arī piekrišanas centrā. Lietojumprogrammas, kas izmanto piekrišanas entītiju, arī dzēsīs datus, kas pēc atsvaidzināšanas [tika noņemti avotā](system.md#refresh-processes). Mēs iesakām ātri atsvaidzināt datu avotus pēc atbildes uz datu subjekta pieprasījumu noņemt lietotāja datus no visiem citiem procesiem un lietojumprogrammām.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

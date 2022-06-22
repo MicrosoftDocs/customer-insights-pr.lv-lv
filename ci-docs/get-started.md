@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833584"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011988"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Darba sākšana ar Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Pirmo reizi piesakoties Customer Insights, konfigurējiet iestatījumus un izpē
 
 Vienotie profili ir pamats, lai gūtu ieskatus un veikt darbības ar datiem. Ievadiet datus no dažādiem avotiem un izmantojiet datu apvienošanas procesu, lai apvienotu vienotos profilus. Norādiet attiecības starp uzņemtajām entītijām un izmantojiet bagātināšanas līdzekļus, lai profiliem pievienotu informāciju.
 
-1. Datu tveršana, izveidojot datu avotus no vairākām opcijām. Izvēlieties starp [Power Query savienotājiem](connect-power-query.md), koplietojamu [datu modeļa mapi](connect-common-data-model.md) vai [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Datu tveršana, izveidojot datu avotus no vairākām opcijām. Izvēlieties starp [Azure Data Lake Storage, ieskaitot parasto datu modeli](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md) vai [Microsoft Dataverse](connect-dataverse-managed-lake.md)[Power Query savienotājus](connect-power-query.md).
 
 1. Palaidiet datu apvienošanas procesu, [identificējot avota laukus](data-unification.md)[, noņemot](map-entities.md) dublikātus, [atbilstošos](remove-duplicates.md) nosacījumus [un](match-entities.md) vienojot laukus [.](merge-entities.md)
 
