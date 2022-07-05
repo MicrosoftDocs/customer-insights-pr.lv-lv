@@ -1,5 +1,5 @@
 ---
-title: Atrast līdzīgus klientus ar AI (satur video)
+title: Līdzīgu klientu atrašana, izmantojot AI (priekšskatījums) (satur video)
 description: Atrodiet līdzīgu klientu segmentus, izmantojot mākslīgo intelektu
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643385"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054810"
 ---
-# <a name="similar-customers-preview"></a>Līdzīgi klienti (priekšskatījums)
+# <a name="find-similar-customers-with-ai-preview"></a>Līdzīgu klientu atrašana, izmantojot AI (priekšskatījums)
 
 Šis līdzeklis ļauj atrast līdzīgus klientus jūsu klientu bāzē, izmantojot mākslīgo intelektu. Lai izmantotu šo līdzekli, ir jābūt izveidotam vismaz vienam segmentam. Izvēršot esoša segmenta kritērijus, varat atrast šim segmentam līdzīgus klientus.
 
@@ -30,13 +30,13 @@ ms.locfileid: "8643385"
 
 ## <a name="finding-similar-customers"></a>Līdzīgu klientu atrašana
 
-1. Dodieties uz **Segmenti** un atlasiet segmentu, uz kuru vēlaties balstīt jauno segmentu. Tas būs jūsu *avota segments*.
+1. Dodieties uz **Sadaļu Segmenti** un atlasiet segmentu, uz kuru vēlaties balstīt savu jauno segmentu. Tas būs jūsu *avota segments*.
 
 1. Darbību joslā atlasiet **Atrast līdzīgus klientus**.
 
 1. Pārskatiet jaunā segmenta ierosināto nosaukumu un, ja nepieciešams, to mainiet.
 
-1. Pēc izvēles pievienojiet [atzīmes](work-with-tags-columns.md#manage-tags) jaunajam segmentam.
+1. Pēc izvēles pievienojiet [tagus](work-with-tags-columns.md#manage-tags) jaunajam segmentam.
 
 1. Pārskatiet laukus, kuri definē jauno segmentu. Šie lauki definē pamatu, uz kura sistēma centīsies atrast jūsu avota segmentam līdzīgus klientus. Sistēma pēc noklusējuma atlasīs ieteiktos laukos.
   Lauki, kuri var ievērojami samazināt modeļa veiktspēju, tiek automātiski izslēgti:
@@ -48,7 +48,7 @@ ms.locfileid: "8643385"
 
 1. Sistēma pēc noklusējuma piedāvā iekļaut tikai 20% no jūsu izvades mērķauditorijas apjoma. Pēc nepieciešamības rediģējiet šo robežvērtību. Robežvērtības palielināšana samazinās precizitāti.
 
-1. Iekļaujiet klientus avota segmentā, **atzīmējot izvēles rūtiņu Iekļaut dalībniekus no avota segmenta papildus klientiem ar līdzīgiem atribūtiem**.
+1. Iekļaujiet klientus savā avota segmentā, atzīmējot izvēles **rūtiņu Iekļaut dalībniekus no avota segmenta papildus klientiem ar līdzīgiem atribūtiem**.
 
 1. Lapas lejasdaļā atlasiet opciju **Palaist**, lai uzsāktu binārās klasificēšanas uzdevumu (algoritmiskās mācīšanās metode), kas analizē datu kopu.
 

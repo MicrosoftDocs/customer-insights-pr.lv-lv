@@ -1,5 +1,5 @@
 ---
-title: Power Automate savienotājs | Microsoft Docs
+title: Power Automate savienotājs (priekšskatījums) | Microsoft dokumenti
 description: Plūsmu veidošana programmā Microsoft Power Automate no Dynamics 365 Customer Insights.
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741188"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082452"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate savienotājs (priekšskatījums)
 
-Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā un pārvaldiet sarežģītākas plūsmas tieši pakalpojumā [Power Automate](https://flow.microsoft.com/).
+Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā un pārvaldiet sarežģītākas plūsmas tieši pakalpojumā [Microsoft Power Automate](https://flow.microsoft.com/).
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
@@ -32,7 +32,7 @@ Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkār
 - Trigeris, kad slieksnis ir šķērsots segmentā. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
 - Trigeris, kad biznesa pasākumā tiek pārsniegts slieksnis. Tiek atbalstīti tikai uzņēmuma mērījumi bez dimensijas. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
 - Trigeris, kad tiek pabeigta pilnīga (datu avotu, segmentu, pasākumu, ...) atsvaidzināšana.
-- Aktivizēt, kad apvienošanas procesa atsvaidzināšana ir pabeigta.
+- Aktivizējiet, kad ir pabeigta apvienošanas procesa atsvaidzināšana.
 
 [Konfigurējiet trigerus programmā Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

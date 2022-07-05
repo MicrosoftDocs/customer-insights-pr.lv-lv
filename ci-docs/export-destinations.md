@@ -1,5 +1,5 @@
 ---
-title: Datu eksportēšana no Customer Insights
+title: Eksportēšanas (priekšskatījuma) pārskats
 description: Pārvaldiet eksportēšanu, lai kopīgotu datus.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9c3b35f1514adcc697672f09cabf593f936e4a82
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d983e84e713003610eb27dc9b3f911b62b01d522
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643403"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082914"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
@@ -29,8 +29,8 @@ Dodieties uz lapu **Dati** > **Eksportēšana**, lai skatītu eksportēšanas la
 
 Ir divi galvenie eksporta veidi:  
 
-- **Datizaudējošs eksports** ļauj eksportēt jebkura veida entītijas, kas pieejamas customer insights. Eksportēšanai atlasītās entītijas tiek eksportētas, izmantojot visus datu laukus, metadatus, shēmas un detalizētu kartēšanas informāciju. 
-- **Segmenta eksports** ļauj eksportēt segmenta entītijas no Customer Insights. Segmenti apzīmē klientu profilu sarakstu. Konfigurējot eksportēšanu, jūs atlasāt iekļautos datu laukus atkarībā no mērķa sistēmas, uz kuru eksportējat datus. 
+- **Eksportējot datus**, varat eksportēt jebkura veida entītijas, kas pieejamas programmā Customer Insights. Eksportēšanai atlasītās entītijas tiek eksportētas, izmantojot visus datu laukus, metadatus, shēmas un detalizētu kartēšanas informāciju. 
+- **Segmentu eksportēšana** ļauj eksportēt segmenta entītijas no Customer Insights. Segmenti apzīmē klientu profilu sarakstu. Konfigurējot eksportēšanu, jūs atlasāt iekļautos datu laukus atkarībā no mērķa sistēmas, uz kuru eksportējat datus. 
 
 ### <a name="export-segments"></a>Segmentu eksportēšana
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights entītiju shēmas Common Data Model
+title: Entītiju shēmas Common Data Model
 description: Darba ar entītijām Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757441"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054763"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entītiju shēmas Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) ir deklaratīva specifikācija, kā arī tādu standarta entītiju definīcija, kas attēlo bieži izmantos konceptus un darbības uzņēmuma un produktivitātes lietojumprogrammās. Šis modelis tiek paplašināts arī uz novērojumu un analītiskiem datiem. Common Data Model nodrošina precīzi definētas, modulāras un paplašināmas biznesa entītijas, piemēram, uzņēmumu, struktūrvienību, pieteikumu, kontaktpersonu, interesentu, iespēju un produktu, kā arī saziņu ar piegādātājiem, darbiniekiem un klientiem, piemēram, darbībām un servisa līmeņa līgumiem. Ikviens var izmantot un paplašināt Common Data Model definīcijas, lai iegūtu darbam raksturīgas papildu idejas.
 

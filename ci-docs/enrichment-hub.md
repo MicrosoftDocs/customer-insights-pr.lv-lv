@@ -1,6 +1,6 @@
 ---
-title: Vienoto klientu profilu bagātināšana
-description: Izmantojiet iespējas, lai bagātinātu klientu datus.
+title: Datu bagātināšanas (priekšskatījuma) pārskats
+description: Izmantojiet Microsoft un citu trešo pušu pakalpojumu iespējas, lai bagātinātu klientu datus.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954050"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053889"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Klientu profilu bagātināšana (priekšskatījums)
+# <a name="data-enrichment-preview-overview"></a>Datu bagātināšanas (priekšskatījuma) pārskats
 
-Izmantojiet avotu datus, piemēram, no Microsoft un citiem partneriem, lai bagātinātu klientu datus.
+Izmantojiet avotu datus, piemēram, no Microsoft un citiem partneriem, lai bagātinātu klientu datus. Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connections.md), kurus administrators iestata ar akreditāciju un kuru pārnesei tiek sniegta piekrišana. Šos savienojumus bagātinājumu konfigurēšanai var izmantot administratori un līdzstrādnieki.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
+
+Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai noteiktam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumi un pašreizējais lietojums ir redzams katrā elementā **lapas Bagātināšana** cilnē **Discover**.
+
+## <a name="enrich-data-sources-before-unification"></a>Pirms apvienošanās bagātiniet datu avotus
+
+Varat bagātināt klientu datus pirms datu apvienošanas, lai palīdzētu uzlabot datu atbilstības kvalitāti. Papildinformāciju skatiet sadaļā [datu avots bagātināšana](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Bagātināšanas izveide
+
+Jums ir jābūt līdzstrādnieka vai administratora [atļaujām](permissions.md), lai izveidotu vai rediģētu bagātinājumus.
+
+Dodieties uz **Dati** > **Bagātināšana**. Cilnē **Discover** tiek rādītas visas atbalstītās bagātināšanas opcijas.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Bagātināšanas centra lapa.":::
-
-Dodieties uz **Datu** > **bagātināšana**, lai strādātu ar bagātināšanas iespējām.  
-
-Lai izveidotu vai rediģētu bagātināšanos, jums ir nepieciešamas Līdzstrādnieka vai Administratora atļaujas. Lai iegūtu papildinformāciju, skatiet [Atļaujas](permissions.md).
-
-Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
@@ -40,86 +48,74 @@ Cilnē **Atklāt** ir pieejamas visas atbalstītās bagātināšanas opcijas.
 - [Demogrāfiskie dati](enrichment-experian.md), ko nodrošina Experian
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft
 - Microsoft nodrošinātās [Intereses](enrichment-microsoft.md)
-- [Maps nodrošinātie](enrichment-azure-maps.md) atrašanās vietas dati Microsoft Azure
+- [Atrašanās vietas dati](enrichment-azure-maps.md), ko Microsoft Azure nodrošina kartes
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati
-- [SFTP pielāgotie dati,](enrichment-SFTP-custom-import.md) izmantojot drošo failu pārsūtīšanas protokolu (Drošo failu pārsūtīšanas protokolu ( Dr. File Transfer Protocol — SFTP)
+- [SFTP pielāgotie dati](enrichment-SFTP-custom-import.md), izmantojot drošu failu pārsūtīšanas protokolu (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
-- [Microsoft sniegtie konta piesaistes dati](enrichment-office.md)
+- [Microsoft nodrošinātie konta iesaistes dati](enrichment-office.md)
 - [Uzņēmuma datus](enrichment-dnb.md) sniedza Dun & Bradstreet
 - Leadspace nodrošinātie [uzņēmuma dati](enrichment-leadspace.md)
 - [Paplašinātās adreses](enrichment-enhanced-addresses.md), ko nodrošina Microsoft
 - [Uzlaboti uzņēmuma dati](enrichment-enhanced-company-data.md), ko nodrošina Microsoft
-- [Maps nodrošinātie](enrichment-azure-maps.md) atrašanās vietas dati Microsoft Azure
+- [Atrašanās vietas dati](enrichment-azure-maps.md), ko Microsoft Azure nodrošina kartes
 - [Atrašanās vietas dati](enrichment-here.md) HERE Technologies nodrošinātie atrašanās vietas dati
-- [SFTP pielāgotie dati,](enrichment-SFTP-custom-import.md) izmantojot drošo failu pārsūtīšanas protokolu (Drošo failu pārsūtīšanas protokolu ( Dr. File Transfer Protocol — SFTP)
+- [SFTP pielāgotie dati](enrichment-SFTP-custom-import.md), izmantojot drošu failu pārsūtīšanas protokolu (SFTP)
 
 ---
 
-Cilnē **Manas bagātināšanas** varat redzēt jūsu konfigurētos bagātinājumus un rediģēt to rekvizītus. Segmentus [vai](segments.md) pasākumus [var izveidot](measures.md) arī no bagātināšanas.
-
 ## <a name="manage-existing-enrichments"></a>Esošo papildinājumu pārvaldība
 
-Lai skatītu visus konfigurētos bagātinātos datus, dodieties uz **Manas bagātināšanas** cilni. Katrs bagātinājums tiek attēlots kā rinda, kurā ir iekļauta papildu informācija par bagātinājumu.
+Dodieties uz **Dati** > **Bagātināšana**. **Cilnē Mani bagātinājumi** skatiet konfigurētos bagātinājumus, to statusu, bagātināto klientu skaitu un pēdējo reizi, kad dati tika atsvaidzināti. Bagātinājumu sarakstu var kārtot pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu bagātinājumu, kuru vēlaties pārvaldīt.
 
-Atlasiet bagātināšanu, lai redzētu pieejamās opcijas. Varat arī atlasīt vertikālo daudzpunkti (&vellip;) saraksta elementā, lai skatītu opcijas. Ja konfigurējāt vairākus bagātinātus uzlabojumus, varat izmantot meklēšanas lodziņu, lai to ātri atrastu.
+Atlasiet bagātināšanu, lai skatītu pieejamās darbības.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcijas bagātinājumu pārvaldībai papildinājumu sarakstā.":::
 
 - **Skatiet** detalizēto informāciju par bagātināšanu ar bagātināto klientu profilu skaitu.
 - **Rediģējiet** bagātināšanas konfigurāciju.
-- **Palaidiet** bagātinājumu, lai atjauninātu klientu profilus ar jaunākajiem datiem.
-- **Deaktivizējiet** esošu bagātinājumu, lai neļautu tam automātiski atsvaidzināties ar katru plānoto atsvaidzināšanu. Dati no pēdējās sekmīgās atsvaidzināšanas joprojām būs pieejami. **Aktivizējiet** neaktīvu bagātināšanu, lai restartētu automātisko atsvaidzināšanu ar katru plānoto atsvaidzināšanu.
+- [**Palaidiet**](#run-or-refresh-enrichments) bagātināšanu, lai atjauninātu klientu profilus ar jaunākajiem datiem. Palaidiet vairākus bagātinājumus vienlaikus, atlasot tos sarakstā.
+- **Aktivizējiet** vai **deaktivizējiet** bagātināšanu. Neaktīvie bagātinājumi netiks atsvaidzināti plānotās [atsvaidzināšanas](system.md#schedule-tab) laikā.
 - **Dzēst** bagātināšanu.
 
-Vienlaicīgi izpildiet vai deaktivizējiet vairākus bagātinātos bagātinātos laukus, atlasot tos sarakstā. Skatīšanas un rediģēšanas opcijas nav pieejamas kā lielapjoma darbība. Viņi vienā reizē strādā tikai uz vienu bagātināšanu.
-
-## <a name="enrichments-and-connections"></a>Bagātināšana un savienojumi
-
-Trešo pušu bagātinātos datus konfigurē, izmantojot [savienojumus](connections.md), kurus administrators iestata ar akreditāciju un kuru pārnesei tiek sniegta piekrišana. Šos savienojumus bagātinājumu konfigurēšanai var izmantot administratori un līdzstrādnieki.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Vairāki viena veida bagātinātie dati
-
-Bagātināmo entitīju norāda bagātināšanas konfigurēšanas laikā, kas ļauj bagātināt vienīgi jūsu profilu apakškopu. Piemēram, bagātināt datus tikai noteiktam segmentam. Jūs varat konfigurēt vairākus viena veida bagātinātos datus un atkārtoti izmantot to pašu savienojumu. Daži bagātinātie dati tiks ierobežoti līdz atļautajam bagātināmo datu izveides skaitam. Ierobežojumi un pašreizējais lietojums ir redzams katrā elementa **lapas Bagātināšana cilnē** Atklāšana **·**.
-
-## <a name="enrich-data-sources-before-unification"></a>Datu avotu bagātināšana pirms apvienošanas
-
-Jūs varat bagātināt klientu datus pirms datu apvienošanas, lai palīdzētu uzlabot datu atbilstības kvalitāti. Plašāku informāciju skatiet [datu avots bagātināšanas](data-sources-enrichment.md).
+Varat arī izveidot [segmentus vai](segments.md) mērus [no](measures.md) bagātināšanas.
 
 ## <a name="run-or-refresh-enrichments"></a>Palaist vai atsvaidzināt bagātinājumus
 
-1. Lai sāktu bagātināšanas procesu, atlasiet **Palaist**. Vai arī ļaujiet sistēmai automātiski palaist bagātināšanu kā daļu no plānotās [atsvaidzināšanas](system.md#schedule-tab). Apstrādes laiks ir atkarīgs no klientu datu lieluma.
+Pēc palaišanas bagātināšanu var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma.
 
-1. Pēc izvēles [skatiet bagātināšanas procesa](#see-the-progress-of-the-enrichment-process) progresu.
+1. Lai manuāli atsvaidzinātu vienu vai vairākus bagātinājumus, atlasiet tos un izvēlieties **Palaist**. Lai [ieplānotu automātisku atsvaidzināšanu](system.md#schedule-tab), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**. Apstrādes laiks ir atkarīgs no klientu datu lieluma.
 
-1. Kad bagātināšanas process ir pabeigts, dodieties uz **Mani bagātinājumi, lai pārskatītu** nesen bagātināto klientu profilu datus, pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
+1. Pēc izvēles [skatiet bagātināšanas procesa](#see-the-progress-of-the-enrichment-process) gaitu.
 
-1. Atlasiet bagātināšanu, lai redzētu [bagātināšanas rezultātus](#enrichment-results).
+1. Kad bagātināšanas process ir pabeigts, dodieties uz **My enrichments**, lai pārskatītu nesen bagātināto klientu profilu datus, pēdējā atjauninājuma laiku un bagātināto profilu skaitu.
+
+1. Izvēlieties bagātinājumu, lai redzētu [bagātināšanas rezultātus](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 
 Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
 
 1. Dodieties uz **Dati** > **Bagātināšana**.
-1. Cilnē **Mani bagātinājumi** atlasiet bagātināšanas statusu, lai atvērtu sānu rūti.
+1. **Cilnē Mani bagātinātāji** atlasiet bagātināšanas statusu, lai atvērtu sānu rūti.
 1. Detalizētas informācijas rūtī **Norise** izvērsiet sadaļu **Bagātinātjumi**.
 1. Sadaļā Bagātināšana, kuras norisi vēlaties redzēt, atlasiet **Skatīt informāciju**.
 1. **Uzdevumu detalizētās informācijas** rūtī atlasiet **Rādīt detalizētu informāciju**, lai skatītu procesus, kas saistīti ar bagātināšanas atjaunināšanu un to statusu.
 
-## <a name="enrichment-results"></a>Bagātināšanas rezultāti
+## <a name="view-enrichment-results"></a>Bagātināšanas rezultātu skatīšana
 
-Pēc pabeigta bagātināšanas skrējiena pārskatiet bagātināšanas rezultātus.
+Pēc pabeigtas bagātināšanas gaitas pārskatiet bagātināšanas rezultātus.
 
 1. Dodieties uz **Dati** > **Bagātināšana**.
-1. Cilnē **Mani bagātinājumi** atlasiet bagātinājumu, par kuru vēlaties saņemt informāciju.
+1. **Cilnē Mans bagātinājums** atlasiet bagātinājumu, kuru vēlaties skatīt.
 
-Visi bagātinājumi parāda pamatinformāciju, piemēram, bagātināto profilu skaitu un bagātināto profilu skaitu laika gaitā. Bagātināto **klientu priekšskatījuma** elementā tiek parādīts ģenerētās bagātināšanas entītijas paraugs. Lai skatītu detalizētu skatu, atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**.
+Visi bagātinātāji parāda pamatinformāciju, piemēram, bagātināto profilu skaitu un bagātināto profilu skaitu laika gaitā. Elements **Bagātināto klientu priekšskatījums** parāda ģenerētās bagātināšanas entītijas paraugu. Lai skatītu detalizētu skatu, atlasiet **Skatīt vairāk** un atlasiet **cilni Dati**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Bagātināšanas rezultātu lapa.":::
 
-Ja iespējams, klientu skaits, **kas bagātināts ar lauku**, nodrošina katra bagātinātā lauka aptvērumu.
+Ja iespējams, **ar lauku** bagātināto klientu skaits nodrošina detalizētu informāciju par katra bagātinātā lauka pārklājumu.
 
-Daži bagātinājumi liecina arī par informāciju, kas raksturīga bagātināšanas veidam. Papildinformāciju skatiet saistītajā dokumentācijā.
+Dažos bagātinājumos ir arī informācija, kas attiecas uz bagātināšanas veidu. Papildinformāciju skatiet saistītajā dokumentācijā.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

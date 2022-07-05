@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Omnisend
+title: Segmentu eksportēšana uz Omnisend (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Omnisend.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 70bd94ea5e4060094c3d215e3fc263a98df51229
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 15918b2e2550869115d30ea4d84b4549c3c7d1ca
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643649"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052290"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentu eksportēšana uz Omnisend (priekšskatījums)
 
@@ -22,7 +22,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 -   Jums ir [Omnisend konts](https://www.omnisend.com/) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

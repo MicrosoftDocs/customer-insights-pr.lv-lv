@@ -1,5 +1,5 @@
 ---
-title: Bots pakalpojumam Microsoft Teams
+title: Teams bots Dynamics 365 Customer Insights (priekšskatījums)
 description: Ar bota palīdzību uzmeklējiet vienotos klientu profilus pakalpojumā Microsoft Teams.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643909"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082599"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams bots Dynamics 365 Customer Insights (priekšskatījums)
 
@@ -37,7 +37,7 @@ Lai iestatītu un konfigurētu botu, ir jāizpilda tālāk aprakstītie priekšn
 
 ## <a name="configure-the-bot"></a>Bota konfigurēšana
 
-1. Dodieties uz **AdminExport** > **destinations**.
+1. Dodieties uz **Administratoru** > **eksporta galamērķi**.
 1. Elementā Microsoft Teams atlasiet **Iestatīt**.
 1. Jūs tiksit pārvirzīts uz sadaļu **Programmas** programmā Teams. Varat arī atvērt Teams un atlasīt **Programmas** apakšējā kreisajā stūrī vai [iegūt to tieši no programmas AppSource](https://go.microsoft.com/fwlink/?linkid=2124104).
 1. Meklējiet **Customer Insights** un atlasiet programmu.

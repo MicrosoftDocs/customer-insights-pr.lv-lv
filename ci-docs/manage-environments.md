@@ -1,6 +1,6 @@
 ---
-title: Vides pārvaldība
-description: Uzziniet, kā pārvaldīt esošās Customer Insights vides kā administrators."
+title: 'Kā: pārvaldīt vides'
+description: Uzziniet, kā pārvaldīt esošās Customer Insights vides kā administratoram."
 ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 62a5856edac5e66e5e42c93313d78fa6826469b3
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833501"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083061"
 ---
-# <a name="how-to-manage-environments"></a>Vides pārvaldība
+# <a name="how-to-manage-environments"></a>Kā: pārvaldīt vides
 
-Administratori [izveido](create-environment.md) un pārvalda vides. Viņi var mainīt dažus iestatījumus esošajās vidēs. Pēc vides izveides tiek fiksēta biznesa, tipa, reģiona, krātuves opcija un Dataverse iestatījumi. Ja vēlaties mainīt šos iestatījumus, atiestatiet vidi vai izveidojiet jaunu vidi.
+Administratori [izveido](create-environment.md) un pārvalda vides. Viņi var mainīt dažus iestatījumus esošajās vidēs. Bizness, tips, reģions, krātuves opcija un Dataverse iestatījumi tiek fiksēti pēc vides izveides. Ja vēlaties mainīt šos iestatījumus, atiestatiet vidi vai izveidojiet jaunu vidi.
 
 ## <a name="edit-an-existing-environment"></a>Esošas vides rediģēšana
 
@@ -30,31 +30,31 @@ Jūs varat rediģēt dažas esošās vides detaļas.
 
 1. Atlasiet **Rediģēt** ikonu.
 
-   :::image type="content" source="media/edit-environment.png" alt-text="Ikona vides iestatījumu rediģēšanai.":::
+   :::image type="content" source="media/edit-environment.png" alt-text="Ikona, lai rediģētu vides iestatījumus.":::
 
 1. Lodziņā **Rediģēt vidi** varat atjaunināt vides iestatījumus.
 
-Lai sāktu ar svaigu vidi, skatiet rakstu [Jaunas vides izveide](create-environment.md).
+Lai sāktu ar jaunu vidi, skatiet rakstu [Jaunas vides izveide](create-environment.md).
 
 ## <a name="change-the-owner-of-an-environment"></a>Vides īpašnieka maiņa
 
-Vairākiem lietotājiem var būt administratora atļaujas, bet tikai viens lietotājs ir vides īpašnieks. Pēc noklusējuma administrators sākotnēji izveido vidi. Kā vides administrators varat piešķirt īpašumtiesības citam lietotājam ar administratora atļaujām.
+Vairākiem lietotājiem var būt administratora atļaujas, bet tikai viens lietotājs ir vides īpašnieks. Pēc noklusējuma tas ir administrators, kurš sākotnēji izveido vidi. Kā vides administrators varat piešķirt īpašumtiesības citam lietotājam ar administratora atļaujām.
 
 1. Programmas galvenē atlasiet **Vides** atlasītāju.
 
 1. Atlasiet **Rediģēt** ikonu.
 
-1. **Lodziņā Vides rediģēšana** dodieties uz soli **Pamatinformācija**.
+1. **Lodziņā Rediģēt vidi** pārejiet uz **darbību Pamatinformācija**.
 
-1. Laukā **Mainīt vides** īpašnieku izvēlieties jauno vides īpašnieku.  
+1. **Laukā Mainīt vides** īpašnieku izvēlieties jauno vides īpašnieku.  
 
-1. Atlasiet **Pārskatīšana un pabeigšana**, pēc tam **Atjauniniet**, lai lietotu izmaiņas.
+1. Atlasiet **Pārskatīt un pabeigt**, pēc tam **Atjaunināt**, lai lietotu izmaiņas.
 
-## <a name="claim-ownership-of-an-environment"></a>Pieprasīt īpašumtiesības uz vidi
+## <a name="claim-ownership-of-an-environment"></a>Pieprasiet īpašumtiesības uz vidi
 
-Ja īpašnieka lietotāja konts ir izdzēsts vai apturēts, videi nebūs īpašnieka. Katrs administratora lietotājs var pieprasīt īpašumtiesības un kļūt par jauno īpašnieku. Viņi var turpināt piederēt videi vai [mainīt īpašumtiesības uz citu administratoru](#change-the-owner-of-an-environment).
+Ja īpašnieka lietotāja konts tiek izdzēsts vai apturēts, videi nebūs īpašnieka. Katrs administratora lietotājs var pieprasīt īpašumtiesības un kļūt par jauno īpašnieku. Viņi var turpināt piederēt videi vai [mainīt īpašumtiesības uz citu administratoru](#change-the-owner-of-an-environment).
 
-Lai pieprasītu īpašumtiesības, atlasiet **pogu Uzņemties īpašumtiesības**, kas tiek rādīta katras Customer Insights lapas augšdaļā, kad sākotnējais īpašnieks pameta organizāciju.
+Lai pieprasītu īpašumtiesības, atlasiet **pogu Veikt īpašumtiesības**, kas tiek rādīta katras Customer Insights lapas augšdaļā, kad sākotnējais īpašnieks pameta organizāciju.
 
 ## <a name="reset-an-existing-environment-preview"></a>Esošas vides atiestatīšana (priekšskatījums)
 
@@ -62,7 +62,7 @@ Kā vides īpašnieks varat atiestatīt vidi tukšā stāvoklī, ja vēlaties iz
 
 1. Programmas galvenē atlasiet **Vides** atlasītāju.
 
-1. Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet vertikālo daudzpunkti (&vellip;).
+1. Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet vertikālo elipsi (&vellip;).
 
 1. Izvēlieties opciju **Atiestatīt**.
 
@@ -74,11 +74,11 @@ Kā vides īpašnieks varat atiestatīt vidi tukšā stāvoklī, ja vēlaties iz
 
 ## <a name="delete-an-existing-environment"></a>Esošas vides dzēšana
 
-Kā vides īpašnieks varat izdzēst administrēto vidi.
+Kā vides īpašnieks varat izdzēst vidi, kuru administrējat.
 
 1. Programmas galvenē atlasiet **Vides** atlasītāju.
 
-1. Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet vertikālo daudzpunkti (&vellip;). 
+1. Atlasiet vidi, kuru vēlaties atiestatīt, un atlasiet vertikālo elipsi (&vellip;). 
 
 1. Izvēlieties opciju **Dzēst**.
 
@@ -87,6 +87,6 @@ Kā vides īpašnieks varat izdzēst administrēto vidi.
 1. Lai apstiprinātu dzēšanu, ievadiet vides nosaukumu un atlasiet **Dzēst**.
 
 > [!IMPORTANT]
-> Dzēšot vidi, netiek noņemts savienojums ar Dataverse vidi. Ja nākotnē plānojat savienot to pašu Dataverse vidi ar jaunu Customer Insights vidi, ir jānoņem šis savienojums Uzziniet, kā [noņemt esošu savienojumu ar Dataverse vidi](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
+> Dzēšot vidi, netiek noņemts savienojums ar Dataverse vidi. Ja nākotnē plānojat savienot to pašu Dataverse vidi ar jaunu Customer Insights vidi, šis savienojums ir jānoņem Uzziniet, kā [noņemt esošu savienojumu ar Dataverse vidi](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

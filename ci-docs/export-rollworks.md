@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz RollWorks
+title: Segmentu eksportēšana uz RollWorks (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz RollWorks.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ba63f9146b17ebf6daf5b0a9f39c0d6bc32a1bfa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 83c3f2437b9822d29d1d2f99ead96815b1b0881a
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643709"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055177"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentu eksportēšana uz RollWorks (priekšskatījums)
 
@@ -22,7 +22,7 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
 -   Jums ir [RollWorks konts](https://www.rollworks.com/) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

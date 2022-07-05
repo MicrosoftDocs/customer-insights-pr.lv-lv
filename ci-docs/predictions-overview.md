@@ -1,5 +1,5 @@
 ---
-title: Pārskats par atbalstītajiem prognožu scenārijiem
+title: Prognožu pārskats
 description: Prognoze scenārijiem un iespējām, uz kurām attiecas Dynamics 365 Customer Insights pieteikums.
 ms.date: 03/24/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643932"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083103"
 ---
 # <a name="predictions-overview"></a>Prognožu pārskats
 
@@ -29,7 +29,7 @@ Visvienkāršākais veids, kā sākt ar datu prognozēšanu, ir iepriekš defin�
 - [Produkta ieteikums](predict-product-recommendation.md): iesaka prognozēšanas produktu ieteikumu kopas, pamatojoties uz pirkumu uzvedību un klientiem ar līdzīgiem pirkšanas modeļiem.
 - [Abonementu zudums](predict-subscription-churn.md): Prognozē, vai pastāv risks, ka klients var pārtraukt izmantot jūsu uzņēmuma abonējamos produktus vai pakalpojumus.
 - [Transakciju zudums](predict-transactional-churn.md): Prognozē, vai klients vairs nepirks jūsu produktus vai pakalpojumus noteiktā laika periodā.
-- [Sentimenta analīze](sentiment-analysis.md): analizējiet klientu atsauksmju noskaņojumu un identificējiet bieži minētos biznesa aspektus.
+- [Noskaņojuma analīze](sentiment-analysis.md): analizējiet klientu atsauksmju noskaņojumu un nosakiet bieži pieminētos biznesa aspektus.
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
@@ -38,9 +38,9 @@ Visvienkāršākais veids, kā sākt ar datu prognozēšanu, ir iepriekš defin�
 ---
 
 > [!TIP]
-> Mēs iesakām regulāri atsvaidzināt ārpus kastes esošos modeļus ar atjauninātiem datiem, lai nodrošinātu, ka tie precīzi informē jūsu biznesa lietošanas gadījumu. Dati tiek atsvaidzināti ekspromta laikā, kad sistēma uzņem jaunus vai atjauninātus datu avotus. Tomēr modeļi tikai šajā gadījumā tiks atkārtoti uzsvērti un turpinās izmantot esošos mācību datus.
+> Mēs iesakām regulāri atsvaidzināt gatavus modeļus ar atjauninātiem datiem, lai nodrošinātu, ka tie precīzi informē jūsu uzņēmuma lietošanas gadījumu. Dati tiek atsvaidzināti ad-hoc, kad sistēma uzņem jaunus vai atjauninātus datu avotus. Tomēr šajā gadījumā modeļi tikai pārfrāzēsies un turpinās izmantot esošos apmācības datus.
 > 
-> Atjaunināšanas **grafiku** var konfigurēt, konfigurācijas pieredzē iestatot modeļa pārkvalifikācijas grafiku. Modelis pārkvalificēsies un reģistrēsies šajā grafikā, kuru varat mainīt jebkurā laikā.
+> Atjaunināšanas **grafiku** var konfigurēt, iestatot modeļa pārkvalifikācijas grafiku konfigurācijas pieredzē. Modelis pārkvalificēsies un pārzīmēs šo grafiku, kuru jūs varat mainīt jebkurā laikā.
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure algoritmiskās mācīšanās integrēšana

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Google Ads
+title: Segmentu eksportēšana uz Google Ads (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Google Ads.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3e0eb91be97d69a999e90708d29c572f0055527e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643400"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082998"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentu eksportēšana uz Google Ads (priekšskatījums)
 
@@ -26,7 +26,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakst
 -   Jūs atbilstat [Klientu atbilstības politikas](https://support.google.com/adspolicy/answer/6299717) prasībām.
 -   Jūs atbilstat [atkārtota mārketinga adresātu saraksta izmēru](https://support.google.com/google-ads/answer/7558048) prasībām.
 -   Jums ir [konfigurēti segmenti](segments.md).
--   Eksportēto segmentu vienotajos klientu profilos ir lauki, kas attēlo e-pasta adresi, tālruni, mobilā reklāmdevēja ID, trešās puses lietotāja ID vai adresi.
+-   Vienoti klientu profili eksportētajos segmentos satur laukus, kuros norādīta e-pasta adrese, tālrunis, mobilā reklāmdevēja ID, trešās puses lietotāja ID vai adrese.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
@@ -64,9 +64,9 @@ Eksportējiet vienoto klientu profilu segmentus uz Google Ads auditoriju sarakst
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Google Ads. Ja neredzat šo sadaļas nosaukumu, tad jums nav pieejami šī tipa savienojumi.
 
-1. Ja vēlaties izveidot jaunu auditoriju, atstājiet google auditorijas ID lauku tukšu. Mēs automātiski izveidosim jaunu auditoriju jūsu Google Ads kontā un izmantosim eksportētā segmenta nosaukumu. Ja vēlaties atjaunināt esošu Google Ads auditoriju, ievadiet savu [Google Ads auditorijas ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Ja vēlaties izveidot jaunu mērķauditoriju, atstājiet lauku Google auditorijas ID tukšu. Mēs automātiski izveidosim jaunu mērķauditoriju jūsu Google Ads kontā un izmantosim eksportētā segmenta nosaukumu. Ja vēlaties atjaunināt esošu Google Ads mērķauditoriju, ievadiet savu [Google Ads mērķauditorijas ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. **Sadaļā Datu salīdzināšana** atlasiet vienu vai vairākus eksportējamos datu laukus un atlasiet lauku, kas attēlo atbilstošos datu laukus customer insights.
+1. **Sadaļā Datu saskaņošana atlasiet vienu vai vairākus eksportējamos** datu laukus un atlasiet lauku, kas programmā Customer Insights attēlo atbilstošos datu laukus.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt. 
 

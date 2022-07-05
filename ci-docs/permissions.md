@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833731"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054884"
 ---
-# <a name="user-permissions"></a>Lietotāju atļaujas
+# <a name="manage-user-permissions"></a>Lietotāju atļauju pārvaldīšana
 
-Lapā **Atļaujas** tiks iestatītas lomas un atļaujas Customer Insights izmantošanai.
+Atļauju **lapā** varat iestatīt lomas un atļaujas Customer Insights izmantošanai.
 
-Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, dodieties uz **Administrēšanas** > **drošības** > **lietotāji**.
+Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, dodieties uz **Administratoru** > **drošības** > **lietotāji**.
 
 Pastāv trīs lomu tipi:
 
@@ -41,7 +41,7 @@ Pastāv trīs lomu tipi:
 
 - Visas skatītājam pieejamās atļaujas.
 - Ielādējiet un pārveidojiet datus, izmantojot lapu **Datu avoti**.
-- Pilnīga ***Datu apvienošana**, kuras rezultātā tiek izveidota vienotā klienta profila entītija.
+- Pilnīga ***Datu apvienošana**, kuras rezultātā tiek izveidota vienota klienta profila entītija.
 - Definējiet **relācijas** un **darbības**.
 - Izveidojiet segmentus, izmantojot lapu **Segmenti**.
 - Izveidojiet mērus, izmantojot lapu **Mēri**.
@@ -60,16 +60,16 @@ Pastāv trīs lomu tipi:
 - Instalējiet un izmantojiet **klienta kartes pievienojumprogrammu**.
 - Pievienojiet un izmantojiet **Power Apps savienotāju**.
 - [Iespējot API Customer Insights izmantošanu](apis.md)
-- [Piešķirt vides īpašumtiesības](manage-environments.md#change-the-owner-of-an-environment) citam administratoram.
+- [Piešķiriet vides īpašumtiesības](manage-environments.md#change-the-owner-of-an-environment) citam administratoram.
 
 ## <a name="admin-owner"></a>Administrators (īpašnieks)
 
 - Visas administratoram pieejamās atļaujas.
-- [Atiestatiet un dzēsiet](manage-environments.md#reset-an-existing-environment-preview) vidi.
+- [Atiestatiet un izdzēsiet](manage-environments.md#reset-an-existing-environment-preview) vidi.
 
 ## <a name="assign-roles-and-permissions"></a>Lomu un atļauju piešķiršana
 
-1. Dodieties uz **administrēšanas** > **drošības** > **Lietotāji***.
+1. Dodieties uz **administratoru** > **drošības** > **Lietotāji***.
 
 1. Atlasiet vienumu **Pievienot lietotājus**, lai atvērtu rūti **Pievienot/Rediģēt atļaujas**.
 
@@ -79,7 +79,7 @@ Pastāv trīs lomu tipi:
 
 ## <a name="view-current-permissions"></a>Pašreizējo atļauju skatīšana
 
-Dodieties uz **administrēšanas** > **drošības** > **lietotājiem**, lai redzētu, kādas lomu piešķires pašlaik ir aktīvas.
+Dodieties uz **Administratoru** > **drošības** > **lietotāji**, lai uzzinātu, kādas lomu piešķires pašlaik ir aktīvas.
 
 - Kolonnā **Tips** ir norādīts atsevišķs lietotājs, grupa vai lietojumprogramma. Sistēma atbalsta atsevišķus lietotājus un grupas.
 - Lomas ir norādītas kolonnā **Loma**.

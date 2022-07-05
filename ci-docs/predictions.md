@@ -1,5 +1,5 @@
 ---
-title: Daļējo datu aizpildīšana, izmantojot prognozes
+title: Aizpildiet savus daļējos datus ar prognozēm
 description: Izmantojiet prognozes, lai aizpildītu nepilnīgus klientu datus.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800659"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082515"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Daļējo datu aizpildīšana ar prognozēm (novecojusi)
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Pabeidziet savus daļējos datus, izmantojot prognozes (novecojušas)
 
 > [!IMPORTANT]
-> Šī funkcija tiks **novecojusi** no **2021. gada 5. novembra**. Pašreizējās implementācijas turpinās darboties, līdz līdzeklis tiks noņemts, bet jūs nevarēsit izveidot jaunas integrācijas, izmantojot tālāk sniegtos norādījumus.
+> Šī funkcija būs **novecojusi no** 2021. gada 5. novembra **·**. Pašreizējās ieviešanas turpinās darboties, līdz līdzeklis tiks noņemts, taču jūs nevarēsit izveidot jaunas integrācijas, izmantojot tālāk sniegtos norādījumus.
 
 Prognozes ļauj viegli izveidot prognozētās vērtības, kas var uzlabot jūsu izpratni par klientu. Lapā **Informācija** > **Prognozes** varat atlasīt **Manas prognozes**, lai skatītu prognozes, kuras konfigurējāt citās Customer Insights daļās, un lai varētu turpināt tās pielāgot.
 
@@ -43,7 +43,7 @@ Papildinformāciju skatiet sadaļā [Jaunas vides izveide](create-environment.md
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognozēšanas izveide klienta entītijā
 
-1. Dodieties uz **Datu** > **entītijas**.
+1. Dodieties uz **datu** > **entītijas**.
 
 2. Atlasiet entītiju **Klients**.
 
@@ -91,11 +91,11 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="view-a-prediction"></a>Prognozes skatīšana
 
-1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
+1. Dodieties uz **Izlūkošanas** > **prognozes** > **Manas prognozes**.
 
 2. Atlasiet prognozes, kuras vēlaties pārskatīt.
 
-3. Kolonnā Darbības atlasiet vertikālo daudzpunkti (&vellip;) **un izvēlieties** Skats **.**
+3. Kolonnā Darbības&vellip; atlasiet vertikālo daudzpunkti (**)** un izvēlieties **Skats**.
 
 4. Prognozes skatā redzēsit vairākus datu punktus.
    > [!div class="mx-imgBorder"]
@@ -108,7 +108,7 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="update-a-prediction"></a>Prognožu atjaunināšana
 
-1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
+1. Dodieties uz **Izlūkošanas** > **prognozes** > **Manas prognozes**.
 
 2. Atlasiet prognozi, kuru vēlaties atjaunināt, un atlasiet ikonu **Atjaunināt**.
 
@@ -116,26 +116,26 @@ Kā daļu no šīs plūsmas jūs izvēlaties noteiktu atribūtu, lai balstītu s
 
 ## <a name="edit-a-prediction"></a>Prognozes rediģēšana
 
-Kad esat izveidojis prognoze, varat pielāgot modeli programmā AI Builder, lai palielinātu modeļa efektivitāti.  
+Kad esat izveidojis prognoze, varat pielāgot modeli AI Builder, lai palielinātu modeļa efektivitāti.  
 
-1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
+1. Dodieties uz **Izlūkošanas** > **prognozes** > **Manas prognozes**.
 
 2. Atlasiet prognozi, kuru vēlaties rediģēt.
 
-3. Kolonnā Darbības atlasiet vertikālo daudzpunkti (&vellip;) **un izvēlieties** Skats **.**
+3. Kolonnā Darbības&vellip; atlasiet vertikālo daudzpunkti (**)** un izvēlieties **Skats**.
 
-4. Atlasiet **Pielāgot programmā AI Builder**.
+4. Atlasiet **Pielāgot .AI Builder**
 
-5. Atjauniniet savu modeli .AI Builder [Uzziniet vairāk par modeļu pārvaldību līdzeklī AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Atjauniniet savu modeli sadaļā AI Builder. [Uzziniet vairāk par modeļu pārvaldību līdzeklī AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Nākamajā jūsu prognozes izpildes gaitā tiks izmantots jūsu izveidotais atjauninātais modelis.
 
 > [!NOTE]
-> Jauni modeļi, kas izveidoti programmā AI Builder Customer Insights, netiks parādīti, ja vien modelis netiks izveidots no iepriekš minētajām pieredzēm.
+> Jauni modeļi, kas izveidoti programmā AI Builder Customer Insights, netiks parādīti, ja vien modelis nav izveidots no iepriekš uzskaitītajām iespējām.
 
 ## <a name="remove-a-prediction"></a>Prognozes noņemšana
 
-1. Dodieties uz **Intelligence Predictions** > **Manas prognozes** > **·**.
+1. Dodieties uz **Izlūkošanas** > **prognozes** > **Manas prognozes**.
 
 2. Atlasiet prognozi, ko vēlaties izdzēst.
 

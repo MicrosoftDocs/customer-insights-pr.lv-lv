@@ -1,5 +1,5 @@
 ---
-title: Segmenti klientu ieskatos
+title: Segmentu pārskats
 description: Segmentu pārskats un to izveide un pārvaldība.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800751"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050956"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -58,26 +58,26 @@ Atlasot segmentu, ir pieejamas šādas darbības:
 - **Skatīt** segmenta informāciju, tostarp segmenta dalībnieku skaita tendences priekšskatījumu.
 - **Lejupielādēt** dalībnieku sarakstu kā .CSV failu.
 - **Rediģēt** segmentu, lai mainītu tā rekvizītus.
-- **Izveidot dublikātu** segmentam. Varat izvēlēties rediģēt tā rekvizītus uzreiz vai saglabāt dublikātu.
+- **Izveidot dublikātu** segmentam. Varat izvēlēties uzreiz rediģēt tā rekvizītus vai saglabāt dublikātu.
 - **Atsvaidzināt** segmentu, lai iekļautu jaunākos datus.
-- **Aktivizēt** vai **Deaktivizēt** segmentu. Neaktīvajiem segmentiem pastāv segmenta definīcija, taču tajā vēl nav klientu. Aktīvs segments meklē debitorus, kas atbilst segmenta definīcijai. Ja ir konfigurēta [plānotā atsvaidzināšana](system.md#schedule-tab), neaktīvajiem segmentiem **Statuss** ir norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana nav pat mēģināta. Ja ir aktivizēts neaktīvs segments, tas tiek atsvaidzināts un iekļauts atsvaidzināšanas grafikā.
+- **Aktivizēt** vai **Deaktivizēt** segmentu. Neaktīvajiem segmentiem pastāv segmenta definīcija, taču tajā vēl nav klientu. Aktīvs segments meklē klientus, kas atbilst segmenta definīcijai. Ja ir konfigurēta [plānotā atsvaidzināšana](system.md#schedule-tab), neaktīvajiem segmentiem **Statuss** ir norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana nav pat mēģināta. Ja ir aktivizēts neaktīvs segments, tas tiek atsvaidzināts un iekļauts atsvaidzināšanas grafikā.
   Vai arī varat izmantot funkcionalitāti **Plānot vēlāk** nolaižamajā izvēlnē **Aktivizēt/Deaktivizēt**, lai norādītu nākotnes datumu un laiku noteikta segmenta aktivizēšanai un deaktivizēšanai.
 - **[Atrodiet līdzīgus klientus](find-similar-customer-segments.md)** no segmenta.
 - **Pārdēvēt** segmentu.
-- **Atzīmējiet**, lai [pārvaldītu segmenta atzīmes](work-with-tags-columns.md#manage-tags).
+- **Atzīmējiet**, lai [pārvaldītu segmenta tagus](work-with-tags-columns.md#manage-tags).
 - **Lejupielādēt** dalībnieku sarakstu kā .CSV failu.
 - **Pārvaldīt eksportu**, lai skatītu ar eksportu saistīto segmentu un pārvaldītu to. [Uzzināt vairāk par eksportēšanu.](export-destinations.md)
 - **Dzēst** segmentu.
 - **Kolonnas**, lai [pielāgotu parādītās kolonnas](work-with-tags-columns.md#customize-columns).
-- **Filtrēt**, lai [filtrētu atzīmes](work-with-tags-columns.md#filter-on-tags).
-- **Meklēt nosaukumu**, lai meklētu pēc segmenta nosaukuma.
+- **Filtrējiet**, lai filtrētu [tagus](work-with-tags-columns.md#filter-on-tags).
+- **Meklēt vārdu**, lai meklētu pēc segmenta nosaukuma.
 
 ## <a name="refresh-segments"></a>Atsvaidzināt segmentus
 
-Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā **Segmenti**, vai varat atsvaidzināt vienu vai vairākus segmentus, tos atlasot un izvēloties opciju **Atsvaidzināt** no piedāvātajām opcijām. Vai arī varat konfigurēt periodisku atsvaidzināšanu sadaļā **Administrators** > **Sistēma** > **Grafiks**. Kad periodiska atsvaidzināšana ir konfigurēta, tiek lietotas šādas kārtulas:
+Visus segmentus uzreiz var atsvaidzināt, atlasot **Atsvaidzināt visus** lapā **Segmenti**, vai varat atsvaidzināt vienu vai vairākus segmentus, tos atlasot un izvēloties opciju **Atsvaidzināt** no piedāvātajām opcijām. Vai arī varat konfigurēt periodisku atsvaidzināšanu sadaļā **Administrators** > **Sistēma** > **Grafiks**. Ja ir konfigurēta periodiska atsvaidzināšana, tiek piemēroti šādi noteikumi:
 
-- Visi segmenti ar tipu **Dinamiskā** vai **Paplašināšana** tiks automātiski atsvaidzināti iestatītajā kadencē. Kad atsvaidzināšana ir pabeigta, statuss **norāda,** vai segmenta atsvaidzināšanā radās kādas problēmas. Pēdējā **atsvaidzinātā programma parāda pēdējās veiksmīgās** atsvaidzināšanas laikspiedolu. Ja rodas kļūda, atlasiet kļūdu, lai skatītu detalizētu informāciju par notikušo.
-- Segmenti ar tipu **Statisks** *netiks* atsvaidzināti automātiski. Pēdējā **atsvaidzinātā** programma parāda laika zīmogu pēdējo reizi, kad statiskie segmenti tika palaisti vai atsvaidzināti manuāli.
+- Visi segmenti ar tipu **Dynamic** vai **Expansion** tiks automātiski atsvaidzināti iestatītajā kadencē. Kad atsvaidzināšana ir pabeigta, **statuss** norāda, vai ir bijušas kādas problēmas ar segmenta atsvaidzināšanu. Pēdējais **atsvaidzinātais** parāda pēdējās veiksmīgās atsvaidzināšanas laikspiedolu. Ja rodas kļūda, atlasiet kļūdu, lai skatītu detalizētu informāciju par notikušo.
+- Segmenti ar tipu **Static** *netiks* atsvaidzināti automātiski. Pēdējā **atsvaidzinātajā** tiek rādīts laikspiedols, kas iegūts pēdējā reizē, kad statiskie segmenti tika palaisti vai atsvaidzināti manuāli.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
@@ -87,13 +87,13 @@ Segmentu var eksportēt no segmentu lapas vai [eksportēšanas lapas](export-des
 
 1. Doties uz lapu **Segmenti**.
 
-1. Atlasiet eksportējamā segmenta vertikālo daudzpunkti (&vellip;).
+1. Atlasiet vertikālo elipsi (&vellip;) segmentam, kuru vēlaties eksportēt.
 
 1. Darbību nolaižamajā sarakstā atlasiet **Pārvaldīt eksportēšanas darbības**.
 
 1. Tiek atvērta lapa **Segmenta eksports (priekšskatījums)**. Varat skatīt visus konfigurētos eksportus, sagrupētus pēc tā, vai tajos ir iekļauts pašreizējais segments.
 
-   1. Lai pievienotu atlasīto segmentu eksportēšanai, **Rediģējiet** attiecīgo eksportu, lai atlasītu atbilstošo segmentu, un pēc tam saglabājiet. Vidēs atsevišķiem klientiem varat atlasīt eksportēšanu sarakstā un atlasīt **Pievienot segmentu**, lai sasniegtu tādu pašu rezultātu.
+   1. Lai pievienotu atlasīto segmentu eksportēšanai, **Rediģējiet** attiecīgo eksportu, lai atlasītu atbilstošo segmentu, un pēc tam saglabājiet. Atsevišķu klientu vidēs varat atlasīt eksportu sarakstā un atlasīt **Pievienot segmentu**, lai sasniegtu tādu pašu rezultātu.
 
    1. Lai izveidotu jaunu eksportu ar atlasīto segmentu, atlasiet **Pievienot eksportēšanu**. Papildinformāciju par eksportēšanas darbību izveidi skatiet rakstā [Jaunas eksportēsanas darbības iestatīšana](export-destinations.md#set-up-a-new-export).
 
@@ -101,23 +101,23 @@ Segmentu var eksportēt no segmentu lapas vai [eksportēšanas lapas](export-des
 
 ## <a name="track-usage-of-a-segment"></a>Segmenta lietojuma izsekošana
 
-Ja izmantojat segmentus programmās, kuru pamatā ir tā pati Microsoft Dataverse organizācija, kas ir saistīta ar Customer Insights, varat izsekot segmenta lietojumam. Customer [Insights segmentiem, kas tiek izmantoti Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) klientu braucienos, sistēma informē jūs par šī segmenta izmantošanu.
+Ja programmās izmantojat segmentus, kuru pamatā ir tā pati Microsoft Dataverse organizācija, kas ir saistīta ar Customer Insights, varat izsekot segmenta lietojumam. Customer [Insights segmentiem, kas tiek izmantoti Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) automatizētajās kampaņās, sistēma informē jūs par šī segmenta lietojumu.
 
-Rediģējot segmentu, kas tiek izmantots Customer Insights vidē vai mārketinga automatizēta kampaņa, segmenta veidotāja [reklāmkarogs](segment-builder.md) informē jūs par atkarībām. Atkarības informāciju var pārbaudīt tieši no reklāmkaroga vai segmentu veidotājā atlasot **Lietojums**.
+Rediģējot segmentu, kas tiek izmantots Customer Insights vidē vai mārketinga automatizēta kampaņa, segmentu veidotāja [reklāmkarogs](segment-builder.md) informē jūs par atkarībām. Atkarības informāciju varat pārbaudīt tieši no reklāmkaroga vai segmentu veidotājā atlasot **Lietojums**.
 
-Lietojuma **rūtī Segments** tiek parādīta detalizēta informācija par šī segmenta Dataverse izmantošanu programmās, kuru pamatā ir. Segmentiem, kas tiek izmantoti klientu ceļojumos, atradīsit saiti, lai pārbaudītu ceļojumu mārketingā, kur šis segments tiek izmantots. Ja jums ir atļaujas piekļūt mārketinga programmai, varat tur piekļūt papildinformācijai.
+Segmenta **lietojuma** rūtī ir redzama detalizēta informācija par šī segmenta Dataverse lietojumu programmās. Segmentiem, kas tiek izmantoti automatizētajās kampaņās, atradīsit saiti, lai pārbaudītu ceļu mārketingā, kurā šis segments tiek izmantots. Ja jums ir atļaujas piekļūt programmai Mārketings, varat tur piekļūt papildinformācijai.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Sānu rūts ar detalizētu informāciju par segmenta lietojumu segmentu veidotājā.":::
 
-Sistēma informē jūs par izsekotā segmenta izmantošanu, mēģinot to izdzēst. Ja segments, kuru gatavojaties dzēst, tiek izmantots mārketinga automatizēta kampaņa, šis ceļojums tiks pārtraukts visiem segmenta lietotājiem. Ja ceļojums ir daļa no mārketinga kampaņas, dzēšana ietekmēs pašu kampaņu. Tomēr, neskatoties uz brīdinājumiem, segmentu joprojām var izdzēst.
+Sistēma informē jūs par izsekotā segmenta izmantošanu, kad mēģināt to izdzēst. Ja segments, kuru gatavojaties dzēst, tiek izmantots mārketinga automatizēta kampaņa, šis ceļš tiks pārtraukts visiem segmenta lietotājiem. Ja ceļojums ir daļa no mārketinga kampaņas, dzēšana ietekmēs pašu kampaņu. Tomēr, neskatoties uz brīdinājumiem, joprojām varat izdzēst segmentu.
 
-:::image type="content" source="media/segment-usage-delete.png" alt-text="Dialoglodziņš, lai apstiprinātu segmenta dzēšanu, kad segments tiek izmantots lietojumprogrammā Dataverse .":::
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Dialoglodziņš, lai apstiprinātu segmenta dzēšanu, ja segments Dataverse tiek izmantots lietojumprogrammā.":::
 
 ### <a name="supported-apps"></a>Atbalstītās lietotnes
 
-Lietojums pašlaik tiek izsekots Dataverse šādās uz informāciju balstītās lietotnēs:
+Lietojums pašlaik tiek izsekots tālāk norādītajās Dataverse lietotnēs.
 
-- [Klientu ceļojumi programmā Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
+- [Automatizētās darbības dynamics 365 mārketingā](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Apstrādes vēstures un segmentu elementu skatīšana
 

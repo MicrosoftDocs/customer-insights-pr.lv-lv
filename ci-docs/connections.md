@@ -1,6 +1,6 @@
 ---
-title: Savienojumi ar citiem pakalpojumiem no Customer Insights.
-description: Kopīgojiet datus ar citiem pakalpojumiem.
+title: Savienojumu (priekšskatījums) pārskats
+description: Savienojumi ar citiem pakalpojumiem no Customer Insights.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800381"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082095"
 ---
 # <a name="connections-preview-overview"></a>Savienojumu (priekšskatījums) pārskats
 
@@ -59,7 +59,7 @@ Cilnes elementā **Iestatīt** var atlasīt arī **Atklāt**.
 
 Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem lietotājiem ir atļauts izmantot konkrēto savienojumu, lai definētu [eksportēšanu](export-destinations.md). Savienojums pēc noklusējuma ir pieejams lietotājiem ar administratora lomu. Šo iestatījumu varat mainīt sadaļām **Izvēlieties, kas var lietot šo savienojumu** un ļaut šo savienojumu izmantot lietotājiem ar līdzstrādnieka lomu.
 
-- Līdzstrādnieki nevarēs savienojumu skatīt vai rediģēt. Viņi redzēs tikai parādāmo nosaukumu un tā tipu, veidojot eksportu.
+- Līdzstrādnieki nevarēs savienojumu skatīt vai rediģēt. Parādāmo vārdu un tā veidu viņi redzēs tikai tad, kad tiks izveidots eksports.
 - Kopīgojot savienojumu, jūs ļaujat savienojumu izmantot līdzstrādniekiem. Līdzstrādnieki eksportēšanas iestatīšanas laikā redzēs kopīgotos savienojumus. Viņi var pārvaldīt visus eksportus, kuri izmanto konkrēto savienojumu.
 - Šo iestatījumu varat mainīt, vienlaikus paturot līdzstrādnieku jau definētos eksportus.
 
@@ -69,7 +69,7 @@ Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem l
 
 1. Doties uz cilni **Savienojumi**.
 
-1. Atlasiet rediģējamā savienojuma vertikālo daudzpunkti (&vellip;) .
+1. Atlasiet vertikālo daudzpunkti (&vellip;) savienojumam, kuru vēlaties rediģēt.
 
 1. Atlasiet **Rediģēt**.
 
@@ -77,7 +77,7 @@ Iestatot vai rediģējot eksportēšanas savienojumu, jūs izvēlaties, kuriem l
 
 ## <a name="remove-a-connection"></a>Savienojuma noņemšana
 
-Ja noņemtais savienojums tiek izmantots ar bagātināšanu vai eksportu, vispirms tie ir jāatvieno vai jānoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu.
+Ja noņemtais savienojums tiek izmantots bagātināšanai vai eksportēšanai, vispirms tie ir jāatvieno vai jānoņem. Noņemšanas dialoglodziņš jūs aizvirzīs uz atbilstīgo bagātināšanu vai eksportēšanu.
 
 Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās aktivizēt no jauna, pievienojot tām citu savienojumu lapā [Bagātināšana](enrichment-hub.md) vai [Eksportēšana](export-destinations.md).
 
@@ -85,7 +85,7 @@ Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās a
 
 1. Doties uz cilni **Savienojumi**.
 
-1. Atlasiet noņemamā savienojuma vertikālo daudzpunkti (&vellip;) .
+1. Atlasiet vertikālo elipsi (&vellip;) savienojumam, kuru vēlaties noņemt.
 
 1. Atlasiet **Noņemt** nolaižamajā izvēlnē. Tiek atvērts apstiprinājuma dialoglodziņš.
 
@@ -98,4 +98,4 @@ Atvienota bagātināšana un eksportēšana kļūst neaktīva. Jūs varat tās a
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Savienojumu izveide ar slepeno informāciju, ko pārvalda jūsu Key Vault
 
-Dažiem savienojumiem ir nepieciešama slepenas informācijas lietošana, piemēram, API atslēgas vai paroles. Daži savienojumi atbalsta slepeno informāciju, kas tiek glabāta jūsu Key Vault krātuvē. Uzziniet vairāk par atbalstītajiem savienojumiem un to, kā iestatīt [savā Customer Insights atslēgu glabātuvē](use-azure-key-vault.md).
+Dažiem savienojumiem ir nepieciešama slepenas informācijas lietošana, piemēram, API atslēgas vai paroles. Daži savienojumi atbalsta slepeno informāciju, kas tiek glabāta jūsu Key Vault krātuvē. Uzziniet vairāk par atbalstītajiem savienojumiem un to, kā iestatīt [savu key vault for Customer Insights](use-azure-key-vault.md).

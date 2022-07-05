@@ -1,6 +1,6 @@
 ---
-title: Customer Insights datu eksportēšana uz Adobe Campaign Standard
-description: Uzziniet, kā kampaņas standartā izmantot segmentus Adobe Customer Insights.
+title: Customer Insights segmentu eksportēšana uz Adobe campaign standard (priekšskatījums)
+description: Uzziniet, kā izmantot Customer Insights segmentus kampaņas standartā Adobe.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,38 +8,38 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643454"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082347"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights segmentu izmantošana programmā Adobe Campaign Standard (priekšskatījums)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Customer Insights segmentu eksportēšana uz Adobe campaign standard (priekšskatījums)
 
-Iespējams, esat izveidojis segmentus kā lietotājs Dynamics 365 Customer Insights, lai padarītu mārketinga kampaņas efektīvākas, pievēršoties atbilstošajām auditorijām. Lai izmantotu segmentu no Customer Insights programmā Adobe Experience Platform un lietojumprogrammām, piemēram Adobe, Campaign Standard, ir jāveic dažas šajā rakstā aprakstītās darbības.
+Kā lietotājs Dynamics 365 Customer Insights, iespējams, esat izveidojis segmentus, lai padarītu savas mārketinga kampaņas efektīvākas, orientējoties uz atbilstošām mērķauditorijām. Lai izmantotu segmentu no Customer Insights un Adobe Experience Platform lietojumprogrammām, piemēram Adobe, Campaign Standard, jums ir jāveic dažas šajā rakstā aprakstītās darbības.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Šajā rakstā aprakstīto darbību procesa shēma.":::
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
--   Dynamics 365 Customer Insights licence
--   Adobe Campaign Standard licence
--   Azure Blob krātuves konts
+- Dynamics 365 Customer Insights licence
+- Adobe Campaign Standard licence
+- Azure Blob krātuves konts
 
 ## <a name="campaign-overview"></a>Kampaņas pārskats
 
-Lai labāk izprastu, kā programmā Customer Insights varat izmantot segmentus Adobe Experience Platform, apskatīsim fiktīvu kampaņas paraugu.
+Lai labāk izprastu, kā varat izmantot segmentus no Customer Insights, Adobe Experience Platform apskatīsim fiktīvu kampaņas paraugu.
 
 Pieņemsim, ka jūsu uzņēmums saviem klientiem ASV piedāvā mēneša abonementa servisu. Jūs vēlaties identificēt klientus, kuru abonementi ir jāatjauno nākamajās astoņās dienās, bet kuri vēl nav atjaunojušas savu abonementu. Lai saglabātu šos klientus, jūs vēlaties viņiem nosūtīt reklāmas piedāvājumu pa e-pastu, izmantojot Adobe Campaign Standard.
 
-Šajā piemērā mēs vēlamies vienu reizi palaist reklāmas e-pasta kampaņu. Šajā rakstā nav ietverta kampaņas izmantošana vairākas reizes. Tomēr Customer Insights un Adobe Campaign Standard var konfigurēt darbam arī periodiskam kampaņas scenārijam.
+Šajā piemērā mēs vēlamies vienu reizi palaist reklāmas e-pasta kampaņu. Šajā rakstā nav ietverta kampaņas izmantošana vairākas reizes. Tomēr Customer Insights un Adobe Campaign Standard var konfigurēt tā, lai tie darbotos arī periodiskas kampaņas scenārijā.
 
 ## <a name="identify-your-target-audience"></a>Mērķa auditorijas identificēšana
 
 Mūsu scenārijā mēs pieņemam, ka klientu e-pasta adreses ir pieejamas un viņu reklāmas preferences tika analizētas, lai identificētu segmenta dalībniekus.
 
-Segments, [kuru definējāt customer insights, tiek saukts](segments.md) par **ChurnProneCustomers,** un jūs plānojat nosūtīt šiem klientiem e-pasta paaugstinājumu.
+Segments [, kuru definējāt programmā Customer Insights, tiek saukts](segments.md) par **ChurnProneCustomers**, un jūs plānojat nosūtīt šiem klientiem e-pasta akciju.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Segmentu lapas ekrānuzņēmumu, kurā ir izveidots ChurnProneCustomers segments.":::
 
@@ -49,9 +49,9 @@ Piedāvājuma e-pasta ziņojumā, kuru vēlaties izsūtīt, būs vārds, uzvārd
 
 ### <a name="configure-a-connection"></a>Savienojuma konfigurēšana
 
-Identificējot mūsu mērķauditoriju, mēs varam konfigurēt eksportu uz Azure BLOB krātuves kontu.
+Kad mūsu mērķauditorija ir identificēta, mēs varam konfigurēt eksportēšanu uz Azure Blob krātuves kontu.
 
-1. Sadaļā Customer Insights dodieties uz **AdminConnections** > **·**.
+1. Programmā Customer Insights dodieties uz **Administratoru** > **savienojumi**.
 
 1. Atlasiet **Pievienot savienojumu** un atlasiet **Adobe Campaign**, lai konfigurētu savienojumu, vai elementā **Adobe Campaign** atlasiet **Iestatīt**.
 
@@ -87,14 +87,14 @@ Identificējot mūsu mērķauditoriju, mēs varam konfigurēt eksportu uz Azure 
 
 1. Atlasiet **Tālāk**.
 
-1. Tagad mēs kartējam **avota** laukus no segmenta Customer Insights uz **kampaņas standarta profila shēmas mērķa** lauku nosaukumiem Adobe.
+1. Tagad mēs kartējam **laukus Avots** no segmenta Customer Insights uz **mērķa** lauku nosaukumiem kampaņas Adobe standarta profila shēmā.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Lauka kartējums Adobe Campaign Standard savienotājam.":::
 
-   Ja vēlaties pievienot papildu atribūtus, atlasiet **Pievienot atribūtu**. Mērķa nosaukums var atšķirties no avota lauka nosaukuma, lai segmenta izvadi no Customer Insights uz Campaign Standard joprojām varētu kartēt, Adobe ja laukiem abās sistēmās nav vienāds nosaukums.
+   Ja vēlaties pievienot papildu atribūtus, atlasiet **Pievienot atribūtu**. Mērķa nosaukums var atšķirties no avota lauka nosaukuma, lai joprojām varētu kartēt segmenta izvadi no Customer Insights uz Adobe Campaign Standard, ja laukiem abās sistēmās nav tāda paša nosaukuma.
 
    > [!NOTE]
-   > E-pasta adrese tiek izmantota kā identitātes lauks, bet varat izmantot jebkuru citu identifikatoru no klienta profila, lai kartētu datus uz Adobe Kampaņas standartu.
+   > E-pasta adrese tiek izmantota kā identitātes lauks, taču varat izmantot jebkuru citu klienta profila identifikatoru, lai kartētu datus uz Adobe Campaign Standard.
 
 1. Atlasiet **Saglabāt**.
 
@@ -113,7 +113,7 @@ Piemērs: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-2
 
 ## <a name="configure-adobe-campaign-standard"></a>Konfigurēt Adobe Campaign Standard
 
-Eksportētajos segmentos ir kolonnas, kuras atlasījāt, definējot eksportēšanas mērķi iepriekšējā solī. Šos datus var izmantot, lai [izveidotu profilus programmā Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Eksportētie segmenti satur kolonnas, kuras atlasījāt, definējot eksportēšanas mērķi iepriekšējā darbībā. Šos datus var izmantot, lai [izveidotu profilus programmā Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
 Lai segmentu izmantotu programmā Adobe Campaign Standard, ir jāpaplašina profila shēma programmā Adobe Campaign Standard, iekļaujot divus papildu laukus. Informācija par to, kā [paplašināt profila resursu](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing), ar jauniem laukiem programmā Adobe Campaign Standard.
 
@@ -125,9 +125,9 @@ Ja Adobe Campaign Standard nav citu ierakstu, izņemot tos, ko plānojat import�
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Datu importēšana programmā Adobe Campaign Standard
 
-Tagad, kad viss ir ieviests, mums ir jāimportē sagatavotie auditorijas dati no Customer Insights uz Adobe Campaign Standard, lai izveidotu profilus. Informācija par to, [kā programmā Adobe Campaign Standard importēt profilus](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences), izmantojot darbplūsmu.
+Tagad, kad viss ir sagatavots, mums ir jāimportē sagatavotie mērķauditorijas dati no Customer Insights kampaņas standartā Adobe, lai izveidotu profilus. Informācija par to, [kā programmā Adobe Campaign Standard importēt profilus](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences), izmantojot darbplūsmu.
 
-Zemāk redzamajā attēlā redzamā importēšanas darbplūsma ir konfigurēta, lai tā darbotos ik pēc astoņām stundām un meklētu eksportētos Customer Insights segmentus (.csv failu Azure Blob krātuvē). Darbplūsma izvelk .csv faila saturu noteiktā kolonnu secībā. Šī darbplūsma ir būvēta, lai veiktu pamata kļūdu apstrādi un nodrošinātu, ka katram ierakstam ir e-pasta adrese pirms datu aizpildīšanas programmā Adobe Campaign Standard. Darbplūsma arī izvelk segmenta nosaukumu no faila nosaukuma, pirms tas tiek ievadīts Adobe Campaign Standard profila datos.
+Importēšanas darbplūsma tālāk redzamajā attēlā ir konfigurēta tā, lai tā darbotos ik pēc astoņām stundām un meklētu eksportētos Customer Insights segmentus (.csv failu Azure Blob krātuvē). Darbplūsma izvelk .csv faila saturu noteiktā kolonnu secībā. Šī darbplūsma ir būvēta, lai veiktu pamata kļūdu apstrādi un nodrošinātu, ka katram ierakstam ir e-pasta adrese pirms datu aizpildīšanas programmā Adobe Campaign Standard. Darbplūsma arī izvelk segmenta nosaukumu no faila nosaukuma, pirms tas tiek ievadīts Adobe Campaign Standard profila datos.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Importēšanas darbplūsmas Adobe Campaign Standard lietotāja interfeisā ekrānuzņēmums.":::
 

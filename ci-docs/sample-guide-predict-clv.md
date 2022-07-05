@@ -1,5 +1,5 @@
 ---
-title: Debitora darbmūža prognozes parauga rokasgrāmata
+title: Debitora darbmūža prognozes (CLV) parauga rokasgrāmata
 description: Izmantojiet šo parauga rokasgrāmatu, lai izmēģinātu klienta dzīves prognozes modelim.
 ms.date: 03/31/2022
 ms.reviewer: v-wendysmith
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740820"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051646"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Debitora darbmūža prognozes (CLV) parauga rokasgrāmata
 
@@ -21,7 +21,7 @@ ms.locfileid: "8740820"
 
 ## <a name="scenario"></a>Situācija
 
-Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus. Viņi pārdod produktus, izmantojot savu Contoso Coffee vietni. Uzņēmums vēlas saprast vērtību (ieņēmumus), ko viņu klienti var radīt nākamo 12 mēnešu laikā. Zinot savu klientu paredzamo vērtību nākamajos 12 mēnešos, viņi varēs virzīt savus mārketinga centienus uz augstvērtības klientiem.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus. Viņi pārdod produktus, izmantojot savu Contoso kafijas vietni. Uzņēmums vēlas saprast vērtību (ieņēmumus), ko viņu klienti var radīt nākamo 12 mēnešu laikā. Zinot savu klientu paredzamo vērtību nākamajos 12 mēnešos, viņi varēs virzīt savus mārketinga centienus uz augstvērtības klientiem.
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
@@ -106,7 +106,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. uzdevums - konfigurēt debitora mūža vērtību prognoze
 
-Tagad, izmantojot vienotos klientu profilus, mēs tagad varam izmantot klienta darbmūža prognozi. Detalizētas darbības skatiet sadaļā [Klienta mūža vērtības prognoze](predict-customer-lifetime-value.md).
+Tagad, izmantojot vienotos klientu profilus, mēs tagad varam izmantot klienta darbmūža prognozi. Detalizētu informāciju par darbībām skatiet sadaļā [Klienta mūža vērtība prognoze](predict-customer-lifetime-value.md).
 
 1. Dodieties uz **Informācija**  > **Prognozes** un atlasiet **Klienta darbmūža vērtības modelis**.
 

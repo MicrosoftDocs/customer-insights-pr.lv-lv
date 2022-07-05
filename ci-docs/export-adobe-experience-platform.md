@@ -1,6 +1,6 @@
 ---
-title: Customer Insights datu eksportēšana uz Adobe Experience Platform
-description: Uzziniet, kā programmā izmantot Customer Insights segmentus Adobe Experience Platform.
+title: Segmentu eksportēšana uz Adobe Experience Platform (priekšskatījums)
+description: Uzziniet, kā izmantot Customer Insights segmentus sadaļā Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643732"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052520"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights segmentu izmantošana programmā Adobe Experience Platform (priekšskatījums)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Segmentu eksportēšana uz Adobe Experience Platform (priekšskatījums)
 
-Kā lietotājs Dynamics 365 Customer Insights, iespējams, esat izveidojis segmentus, lai padarītu mārketinga kampaņas efektīvākas, pievēršoties atbilstošām auditorijām. Lai izmantotu segmentu no Customer Insights programmā Adobe Experience Platform un lietojumprogrammām, piemēram Adobe, Campaign Standard, ir jāveic dažas šajā rakstā aprakstītās darbības.
+Kā lietotājs Dynamics 365 Customer Insights, iespējams, esat izveidojis segmentus, lai padarītu savas mārketinga kampaņas efektīvākas, orientējoties uz atbilstošām mērķauditorijām. Lai izmantotu segmentu no Customer Insights un Adobe Experience Platform lietojumprogrammām, piemēram Adobe, Campaign Standard, jums ir jāveic dažas šajā rakstā aprakstītās darbības.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Šajā rakstā aprakstīto darbību procesa shēma.":::
 
@@ -30,7 +30,7 @@ Kā lietotājs Dynamics 365 Customer Insights, iespējams, esat izveidojis segme
 
 ## <a name="campaign-overview"></a>Kampaņas pārskats
 
-Lai labāk izprastu, kā programmā Customer Insights varat izmantot segmentus Adobe Experience Platform, apskatīsim fiktīvu kampaņas paraugu.
+Lai labāk izprastu, kā varat izmantot segmentus no Customer Insights, Adobe Experience Platform apskatīsim fiktīvu kampaņas paraugu.
 
 Pieņemsim, ka jūsu uzņēmums saviem klientiem ASV piedāvā mēneša abonementa servisu. Jūs vēlaties identificēt klientus, kuru abonementi ir jāatjauno nākamajās astoņās dienās, bet kuri vēl nav atjaunojušas savu abonementu. Lai saglabātu šos klientus, jūs vēlaties viņiem nosūtīt reklāmas piedāvājumu pa e-pastu, izmantojot Adobe Experience Platform.
 
@@ -38,9 +38,9 @@ Pieņemsim, ka jūsu uzņēmums saviem klientiem ASV piedāvā mēneša abonemen
 
 ## <a name="identify-your-target-audience"></a>Mērķa auditorijas identificēšana
 
-Mūsu scenārijā mēs pieņemam, ka klientu e-pasta adreses ir pieejamas Customer Insights un viņu reklāmas preferences tika analizētas, lai identificētu segmenta dalībniekus.
+Mūsu scenārijā mēs pieņemam, ka klientu e-pasta adreses ir pieejamas programmā Customer Insights un viņu reklāmas preferences tika analizētas, lai identificētu segmenta dalībniekus.
 
-Segments, [kuru definējāt customer insights, tiek saukts](segments.md) par **ChurnProneCustomers,** un jūs plānojat nosūtīt šiem klientiem e-pasta paaugstinājumu.
+Segments [, kuru definējāt programmā Customer Insights, tiek saukts](segments.md) par **ChurnProneCustomers**, un jūs plānojat nosūtīt šiem klientiem e-pasta akciju.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Segmentu lapas ekrānuzņēmumu, kurā ir izveidots ChurnProneCustomers segments.":::
 
@@ -48,7 +48,7 @@ Piedāvājuma e-pasta ziņojumā, kuru vēlaties izsūtīt, būs vārds, uzvārd
 
 ## <a name="export-your-target-audience"></a>Mērķa auditorijas eksportēšana
 
-Identificējot mūsu mērķauditoriju, mēs varam konfigurēt eksportu no Customer Insights uz Azure Blob krātuves kontu.
+Kad mūsu mērķauditorija ir identificēta, mēs varam konfigurēt eksportēšanu no Customer Insights uz Azure Blob krātuves kontu.
 
 ### <a name="configure-a-connection"></a>Savienojuma konfigurēšana
 
@@ -106,17 +106,17 @@ Piemērs: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-2
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Pieredzes datu modeļa (Experience Data Model - XDM) definēšana programmā Adobe Experience Platform
 
-Lai eksportētos datus no Customer Insights varētu izmantot programmā Adobe Experience Platform, mums jādefinē pieredzes datu modeļa shēma un [jākonfigurē dati reāllaika klienta profilam](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Lai programmā Customer Insights eksportētos datus varētu izmantot Adobe Experience Platform, mums ir jādefinē ērtību datu modeļa shēma un [jākonfigurē reāllaika klienta profila](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) dati.
 
 Uzziniet, [kas ir XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) un izprotiet [shēmas veidošanas pamatus](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Datu importēšana uz Adobe Experience Platform
 
-Tagad, kad viss ir vietā, mums ir jāimportē sagatavotie auditorijas dati no Customer Insights uz Adobe Experience Platform.
+Tagad, kad viss ir sakārtots, mums ir jāimportē sagatavotie mērķauditorijas dati no Customer Insights Adobe Experience Platform uz.
 
 Vispirms [izveidojiet Azure Blob krātuves avota savienojumu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Pēc avota savienojuma definēšanas konfigurējiet datu plūsmu [mākoņkrātuves paketes savienojumam,](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) lai importētu segmenta izvadi no Customer Insights programmā Adobe Experience Platform.
+Pēc avota savienojuma definēšanas konfigurējiet datu plūsmu mākoņkrātuves pakešs savienojumam, [lai importētu segmenta izvadi no Customer Insights](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials).Adobe Experience Platform
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Auditorijas izveide programmā Adobe Campaign Standard
 

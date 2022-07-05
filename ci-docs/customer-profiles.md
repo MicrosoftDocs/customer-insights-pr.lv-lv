@@ -1,6 +1,6 @@
 ---
-title: Klientu profilu skatīšana
-description: Iegūstiet kombinētu skatu ar jūsu apvienotajiem klientu datiem.
+title: Klientu profili
+description: Savu vienoto klientu datu skatīšana, tostarp izmantojot meklēšanu un filtrēšanu
 ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947055"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052198"
 ---
 # <a name="customer-profiles"></a>Klientu profili
 
@@ -55,9 +55,9 @@ Klientus var filtrēt pēc *Klienta* entītijas laukiem. Līdzīgi meklēšanai�
 
 Atlasiet jebkuru no klientu elementiem, lai atvērtu **Klientu detalizētās informācijas lapu**. Šajā skatā ir ietverta vienota informācija par atlasīto klientu. Detalizēta informācija par klientu ietver šādu saturu:
 
-**Klienta profila elements**: šajā elementā tiek parādītas atšķirīgas vērtības no vienotās *Klienta* entītijas. Ja laukam nav vērtības atlasītajam klienta profilam, tas netiks rādīts, izņemot adreses lauku. Elements ir strukturēts sadaļās:
+**Klienta profila elements**: šajā elementā tiek parādītas atšķirīgas vērtības no vienotās *Klienta* entītijas. Ja laukam nav atlasītā klienta profila vērtības, tas netiks rādīts, izņemot adreses lauku. Elements ir strukturēts sadaļās:
 
-- Pirmajā sadaļā ir redzama iepriekš definēta lauku kopa, kam seko visi lauki, kas veido daļu no meklēšanas un filtra indeksa. Visi ar adresi saistītie lauki tiek apvienoti vienā rindā, kas parāda pat tad, ja profilā nav adreses informācijas.
+- Pirmajā sadaļā ir redzama iepriekš definēta lauku kopa, kam seko visi lauki, kas veido daļu no meklēšanas un filtra indeksa. Visi ar adresēm saistītie lauki tiek apvienoti vienā rindā, kas tiek rādīta pat tad, ja profilā nav adreses informācijas.
 - **Šī klienta kontaktpersonas**: biznesa uzņēmumu vidēs visas ar šo klientu saistītās kontaktpersonas būs redzamas otrajā sadaļā. Katra kontaktpersona tiek parādīta ar to laukiem. Tukši lauki ir paslēpti.
 - **Papildu lauki**: rāda atlasītā klienta pārējos laukus, izņemot ID.
 - **ID**: uzskaita visus ID ar to atbilstošo entītijas nosaukumu. Laukus identificē kā ID pēc to semantikas, kas tos kategorizē tādus.

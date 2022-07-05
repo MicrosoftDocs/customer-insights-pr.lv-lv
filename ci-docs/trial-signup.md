@@ -1,5 +1,5 @@
 ---
-title: Reģistrēšanās bezmaksas izmēģinājuma versijai - Dynamics 365 Customer Insights
+title: Reģistrēšanās bezmaksas Dynamics 365 Customer Insights izmēģinājumversijai
 description: Uzziniet, kā ātri reģistrēties bezmaksas Customer Insights izmēģinājumversijai un sākt darbu ar to. Izpētiet programmu un atrodiet papildu mācību resursus.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641725"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082494"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Reģistrēšanās bezmaksas Dynamics 365 Customer Insights izmēģinājumversijai
 
@@ -21,7 +21,7 @@ Customer Insights piedāvā bezmaksas 30 dienu izmēģinājumversiju. Pēc ātr�
 
 **Lai reģistrētos izmēģinājumversijai, veiciet tālāk norādītās darbības**.
 
-1. Dodieties uz [izmēģinājuma pārskata lapu](https://dynamics.microsoft.com/ai/customer-insights/) un atlasiet **Izmēģināt customer insights bez maksas**.
+1. Dodieties uz [izmēģinājuma pārskata lapu](https://dynamics.microsoft.com/ai/customer-insights/) un atlasiet **Izmēģināt Customer Insights bez maksas**.
 1. Izpildiet ekrānā redzamos norādījumus, lai ievadītu [e-pasta adresi, kas saistīta ar jūsu Microsoft kontu](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa), un savu kontaktinformāciju.
 1. Atlasiet un izvēlieties iespējas, uz ko koncentrēties, kamēr nokļūsiet atlasīto iespēju sākuma lapā.
 

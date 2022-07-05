@@ -1,5 +1,5 @@
 ---
-title: Adreses uzlabošanas bagātināšana (satur video)
+title: Klientu profilu bagātināšana ar uzlabotām adresēm (satur video)
 description: Bagātināt un normalizēt klientu profilu adrešu informāciju, izmantojot Microsoft modeļus.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,18 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953820"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082074"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Klientu profilu bagātināšana ar uzlabotām adresēm
 
 Datu adreses var būt nestrukturētas, nepilnīgas vai nepareizas. Izmantojiet Microsoft modeļus, lai normalizētu un bagātinātu adreses [Common Data Model formātā](/common-data-model/schema/core/applicationcommon/address), lai iegūtu labāku precizitāti un ieskatus.
 
-Varat arī [bagātināt adreses datu avotos](data-sources-enrichment.md), lai uzlabotu datu apvienošanas procesa atbilstības precizitāti. 
+Varat arī [bagātināt adreses datu avotos](data-sources-enrichment.md), lai uzlabotu atbilstības precizitāti datu apvienošanas procesā. 
 
 ## <a name="how-we-enhance-addresses"></a>Adrešu uzlabošana
 
@@ -53,13 +53,13 @@ Adreses informācija var būt nestandarta formātā un var saturēt pareizrakst�
 
 ### <a name="limitations"></a>Ierobežojumi
 
-Uzlabotās adreses darbojas tikai ar vērtībām, kas jau pastāv jūsu uzņemtajos adreses datos. Modelis:
+Uzlabotās adreses darbojas tikai ar vērtībām, kas jau pastāv jūsu uzņemtajos adrešu datos. Modelis:
 
 1. nepārbauda, vai adrese ir derīga.
 2. nepārbauda, vai ir derīga kāda no vērtībām, piemēram, pasta indeksi vai pasta indeksu nosaukumi.
 3. nemaina neatpazītās vērtības.
 
-Modelis izmanto algoritmiskās mācīšanās metodes, lai uzlabotu adreses. Tāpat kā jebkuram mašīnmācīšanās modelim, simtprocentīga precizitāte netiek garantēta.
+Modelis izmanto algoritmiskās mācīšanās metodes, lai uzlabotu adreses. Tāpat kā jebkuram uz mašīnmācīšanos balstītam modelim, 100% precizitāte nav garantēta.
 
 ## <a name="supported-countries-or-regions"></a>Atbalstītās valstis vai reģioni
 
@@ -84,11 +84,11 @@ Pašlaik mēs atbalstītu adrešu bagātināšanu šajās valstīs vai reģionos
 
 1. Pārskatiet pārskatu un pēc tam atlasiet **Tālāk**.
 
-1. Atlasiet klienta datu kopu **un** izvēlieties profilu vai segmentu, kuru vēlaties bagātināt. Klientu *uzņēmums* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā esošos klientu profilus.
+1. **Atlasiet klienta datu kopu** un izvēlieties profilu vai segmentu, kuru vēlaties bagātināt. Klienta *entītija* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā ietvertos klientu profilus.
 
 1. Atlasiet adrešu formatēšanas veidu datu kopā. Izvēlieties **Viena atribūta adresi**, ja datu adresēs tiek izmantots viens lauks. Izvēlieties **Vairāku atribūta adresi**, ja datu adresēs tiek izmantots vairāk nekā viens datu lauks.
 
-1. Atlasiet **Tālāk** un kartējiet adreses laukus no vienotās klienta entītijas.
+1. Atlasiet **Tālāk** un kartējiet adreses laukus no savas vienotās klienta entītijas.
 
     :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Paplašināta adrešu lauku kartējuma lapa.":::
 
@@ -97,23 +97,23 @@ Pašlaik mēs atbalstītu adrešu bagātināšanu šajās valstīs vai reģionos
 
 1. Lai pabeigtu lauka kartēšanu, atlasiet **Tālāk**.
 
-1. Norādiet **bagātināšanas un entītijas** Izvades **nosaukumu**.
+1. **Norādiet bagātināšanas un izvades entītijas** **nosaukumu**.
 
 1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
 
-## <a name="enrichment-results"></a>Bagātināšanas rezultāti
+## <a name="view-enrichment-results"></a>Bagātināšanas rezultātu skatīšana
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Klientu **skaits, kas bagātināts ar lauku**, nodrošina katra bagātinātā lauka aptvērumu.
+Klientu **skaits, kas bagātināts ar lauku**, nodrošina detalizētu informāciju par katra bagātinātā lauka pārklājumu.
 
-### <a name="overview-card"></a>Pārskata karte
+### <a name="overview-card"></a>Pārskata kartīte
 
-Klienti **maina pārskata** karti, kurā redzama detalizēta informācija par bagātināšanas segumu:
+Klientu **izmaiņu pārskata** kartītē ir sniegta informācija par bagātināšanas segumu:
 
 - **Apstrādātās un mainītās** adreses: klientu profilu skaits ar veiksmīgi bagātinātām adresēm.
-- **Adreses, kas apstrādātas un nav mainītas**: klientu profilu skaits ar adresēm, kas tika atpazītas, bet netika mainītas. Tas parasti notiek, kad ievades dati ir derīgi un tos nevar uzlabot ar bagātināšanu.
-- **Adreses nav apstrādātas un nav mainītas**: profilu skaits ar neatpazītām adresēm. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
+- **Adreses, kas apstrādātas un nav mainītas**: to klientu profilu skaits, kuros adreses tika atpazītas, bet netika mainītas. Tas parasti notiek, kad ievades dati ir derīgi, un bagātināšana tos nevar uzlabot.
+- **Adreses, kas nav apstrādātas un nav mainītas**: to profilu skaits, kuros adreses netika atpazītas. Parasti ievades datiem, kas nav derīgi vai ko neatbalsta bagātināšana.
 
 ## <a name="next-steps"></a>Nākamās darbības
 

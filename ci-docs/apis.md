@@ -1,5 +1,5 @@
 ---
-title: Darbs ar API
+title: Darbs ar API Customer Insights
 description: Izmantojiet API un izprotiet ierobežojumus.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 8e8bd590d3bba9dc7b1644b6ff42b9fc53237ca9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808515"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054073"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbs ar API Customer Insights
 
@@ -25,17 +25,17 @@ Dynamics 365 Customer Insights nodrošina API, lai būvētu savas lietojumprogra
 > [!IMPORTANT]
 > Detalizēta informācija par šiem API ir iekļauta [atsaucē API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Tajos ir iekļauta papildinformācija par operācijām, parametriem un atbildēm.
 
-Šajā rakstā ir aprakstīts, kā piekļūt Customer Insights API, izveidot Azure lietotnes reģistrāciju un sākt darbu ar klientu bibliotēkām.
+Šajā rakstā ir aprakstīts, kā piekļūt Customer Insights API, izveidot Azure programmu reģistrāciju un sākt darbu ar klientu bibliotēkām.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Darba sākšana ar API Customer Insights
 
 1. [Pierakstieties](https://home.ci.ai.dynamics.com) risinājumā Customer Insights . Ja jums vēl nav abonementa, [pierakstieties Customer Insights izmēģinājumversijai](https://aka.ms/tryci).
 
-1. Lai iespējotu API klientu ieskatu vidē, dodieties uz **Administrēšanas** > **drošība**. Lai to izdarītu, jums ir nepieciešamas administratora atļaujas.
+1. Lai iespējotu API savā Customer Insights vidē, dodieties uz **administratoru** > **drošība**. Lai to izdarītu, jums ir nepieciešamas administratora atļaujas.
 
 1. Atveriet **API** cilni un atlasiet pogu **Iespējot**.    
  
-   Iespējojot API, tiek izveidota primārā un sekundārā abonēšanas atslēga jūsu instancei, kas tiek izmantota API pieprasījumos. Atslēgas var atkārtoti ģenerēt, administratora drošības API atlasot **Ģenerēt primāro** vai **Ģenerēt sekundāro** **.** > **·** > **·**
+   Iespējojot API, tiek izveidota primārā un sekundārā abonēšanas atslēga jūsu instancei, kas tiek izmantota API pieprasījumos. Taustiņus var atjaunot, administratora drošības API atlasot **opciju Atjaunot primāro** vai **Atjaunot sekundāro** **·** > **.** > **·**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -107,13 +107,13 @@ Sadaļa [Lietojumprogrammas reģistrācijas](#create-a-new-app-registration-in-t
 
 1. Lai to izdarītu, ir jāpievieno lietojumprogrammas reģistrācijas nosaukums kā lietotājs Customer Insights.  
    
-   Atveriet Customer Insights, dodieties uz **Administrēšanas** > **drošība** un atlasiet **Pievienot lietotāju**.
+   Atveriet Customer Insights, dodieties uz **Administratora** > **drošība** un atlasiet **Pievienot lietotāju**.
 
 1. Meklējiet savas programmas reģistrācijas nosaukumu, meklēšanas rezultātos atlasiet to un atlasiet vienumu **Saglabāt**.
 
 ## <a name="sample-queries"></a>Vaicājumu paraugi
 
-Mēs esam izveidojuši īsu sarakstu ar OData paraugu vaicājumiem darbam ar API: [OData vaicājumu piemēri](odata-examples.md).
+Mēs esam izveidojuši īsu sarakstu ar OData vaicājumu paraugiem, lai strādātu ar API: [OData vaicājumu piemēriem](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights klientu bibliotēkas
 
@@ -139,7 +139,7 @@ Uzziniet, kā sākt lietot C# klienta bibliotēkas no NuGet.org. Papildinformāc
 
 1. Izmantojiet [Microsoft autentifikācijas bibliotēku (MSAL)](/azure/active-directory/develop/msal-overview), lai iegūtu `AccessToken`, izmantojot esošo [Azure programmu reģistrāciju](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Pēc veiksmīgas pilnvaras autentifikācijas un iegūšanas izveidojiet jaunu vai izmantojiet esošu `HttpClient`, **izmantojot DefaultRequestHeaders "Authorization"** iestatītu uz **Uzrādītāja "piekļuves marķieris"** un **Ocp-Apim-Subscription-Key**, kas iestatīts uz [**abonementa atslēgu** no jūsu Customer Insights vides](#get-started-trying-the-customer-insights-apis).   
+1. Pēc veiksmīgas marķiera autentificēšanas un iegūšanas izveidojiet jaunu vai izmantojiet esošu `HttpClient` ar **DefaultRequestHeaders "Autorizāciju"**, kas iestatīta uz **Bearer "piekļuves pilnvara"** un **Ocp-Apim-Subscription-Key**, kas iestatīta uz [**abonēšanas atslēgu** no jūsu Customer Insights vides](#get-started-trying-the-customer-insights-apis).   
  
    Ja nepieciešams, atiestatiet galveni **Autorizācija**. Piemēram, ja ir izbeidzies marķieris.
 
@@ -149,7 +149,7 @@ Uzziniet, kā sākt lietot C# klienta bibliotēkas no NuGet.org. Papildinformāc
 
 1. Piemēram, veiciet zvanus ar klientu uz “paplašinājuma metodēm” – `GetAllInstancesAsync`. Ja ir vēlama piekļuve pamatdatiem `Microsoft.Rest.HttpOperationResponse`, izmantojiet, piemēram, “http ziņojumu metodes” – `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Visticamāk, atbilde būs `object` veidā, jo šī metode var atgriezt vairākus tipus (piemēram, `IList<InstanceInfo>` un `ApiErrorResult`). Lai pārbaudītu atgriešanas tipu, šai operācijai izmantojat objektus atbilžu tipos [, kas norādīti lapā](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) API detaļas.    
+1. Visticamāk, atbilde būs `object` veidā, jo šī metode var atgriezt vairākus tipus (piemēram, `IList<InstanceInfo>` un `ApiErrorResult`). Lai pārbaudītu atgriešanas tipu, izmantojiet objektus atbilžu tipos, [kas norādīti šīs operācijas lapā](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) Detalizēta informācija par API.    
    
    Ja ir nepieciešama papildu informācija par pieprasījumu, izmantojiet **http ziņojumu metodes**, lai piekļūtu neapstrādātam atbildes objektam.
 

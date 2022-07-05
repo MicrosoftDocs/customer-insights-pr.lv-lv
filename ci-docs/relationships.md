@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643809"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082578"
 ---
-# <a name="relationships-between-entities"></a>Relācijas starp entītijām
+# <a name="relationships-between-entities-and-entity-paths"></a>Attiecību izveide starp entītijām un entītiju ceļiem
 
 Attiecības savieno entītijas un definē datu grafiku, kad entītijas koplieto kopēju identifikatoru — ārēju atslēgu. Šī ārējā atslēga var tikt atsaukties no vienas entītijas uz citu. Savienotās entītijas ļauj definēt segmentus un pasākumus, par pamatu izmantojot vairākus datu avotus.
 
@@ -84,7 +84,7 @@ Attiecības sastāv no *avota entītijas*, kurā ir iekļaujošā atslēga un *m
 
 Vides, kas ir konfigurētas, lai uzņēmumu kontus izmantotu kā primāro mērķa auditoriju, var konfigurēt kontu hierarhijas attiecīgajiem uzņēmumiem. Piemēram, uzņēmums, kam ir atsevišķas struktūrvienības. 
 
-Organizācijas veido uzņēmumu hierarhijas, lai labāk pārvaldītu uzņēmumus un to attiecības citam ar citu. Customer Insights atbalsta vecākobjekta un pakārtotā konta hierarhijas, kas jau pastāv uzņemtajos klientu datos. Piemēram, uzņēmumi no Dynamics 365 Sales. Šīs hierarhijas var konfigurēt lapā **Relācijas**.
+Organizācijas veido uzņēmumu hierarhijas, lai labāk pārvaldītu uzņēmumus un to attiecības citam ar citu. Customer Insights atbalsta vecāku un bērnu kontu hierarhijas, kas jau pastāv uzņemtajos klientu datos. Piemēram, uzņēmumi no Dynamics 365 Sales. Šīs hierarhijas var konfigurēt **lapā Relācijas**.
 
 1. Dodieties uz **Dati** > **Attiecības**.
 1. Atlasiet cilni **Uzņēmuma hierarhija**.

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz LinkedIn Ads
+title: Segmentu eksportēšana uz LinkedIn Ads (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz LinkedIn Ads.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bf1d12ffbd7a4cfd7d268fea8a1f90cc37589e00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643929"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050865"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentu eksportēšana uz LinkedIn Ads (priekšskatījums)
 
@@ -22,12 +22,12 @@ Eksportēt vienoto klientu profilu segmentus uz LinkedIn Ads, lai izveidotu Matc
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 -   Jums ir [LinkedIn Campaign Manager konts](https://business.linkedin.com/marketing-solutions/ads) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportēto segmentu klientu profilos ir lauks ar e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūsu segmentā Customer Insights ir jābūt vismaz 300 unikāliem profiliem. 
+- Jūsu segmentā programmā Customer Insights ir jābūt vismaz 300 unikāliem profiliem. 
 - Programmā LinkedIn Ads viena eksporta laikā var eksportēt līdz pat 100000 klientu profilu.
 - Eksportēšana uz LinkedIn Ads attiecas tikai uz segmentiem.
 - Līdz pat 100000 klientu profilu eksportēšana uz LinkedIn Ads var aizņemt līdz 10 minūtēm. 

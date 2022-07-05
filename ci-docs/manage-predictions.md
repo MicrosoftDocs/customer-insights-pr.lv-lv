@@ -1,5 +1,5 @@
 ---
-title: Koplietojamie uzdevumi prognožu scenārijiem
+title: Pārvaldīt prognozes
 description: Uzziniet, kā pārvaldīt, novērst problēmas un precizēt prognozes.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c4d269e1b542e84ade8c6e63c1dadace51ddde32
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643869"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082851"
 ---
 # <a name="manage-predictions"></a>Pārvaldīt prognozes
 
@@ -49,10 +49,10 @@ Kad pirmās izvēles modelis ir pabeidzis apmācības darbību, skatiet atskaiti
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ievades datu lietojamības atskaites piemērs, kurā redzama tabula ar kļūdām, brīdinājumiem un ieteikumiem.":::
 
-- **Nosaukums:** aprakstošs kļūdas, brīdinājuma vai ieteikuma nosaukums.
-- **Solis:** modeļa fāze, vilciens vai rezultāts, uz kuru attiecas informācija.
+- **Nosaukums:** kļūdas, brīdinājuma vai ieteikuma aprakstošais nosaukums.
+- **Solis:** Modeļa fāze, vilciens vai rezultāts, informācija attiecas uz.
 - **Stāvoklis:** informācijas nopietnība (kļūda, brīdinājums, ieteikums).
-- **Kolonnas nosaukums:** kolonna entītijā, kas jāmodificē, lai uzlabotu modeļa veiktspēju.
+- **Kolonnas nosaukums:** kolonna entītijā, kas ir jāmodificē, lai uzlabotu modeļa veiktspēju.
 - **Entītijas nosaukums:** tās entītijas nosaukums, kas jāmodificē, lai uzlabotu modeļa veiktspēju.
 - **Detalizēta informācija:** detalizēta informācija par kļūdu, brīdinājumu vai ieteikumu.
 

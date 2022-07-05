@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz SFTP resursdatoriem (satur video)
+title: Eksportējiet datus uz SFTP resursdatoriem (priekšskatījums) (satur video)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz SFTP atrašanās vietu.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947193"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082767"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksportējiet segmentus un citus datus uz SFTP (priekšskatījums)
+# <a name="export-data-to-sftp-preview"></a>Datu eksportēšana uz SFTP (priekšskatījums)
 
 Izmantojiet klientu datus trešo pušu lietojumprogrammās, eksportējot tos uz drošu failu pārsūtīšanas protokola (SFTP) atrašanās vietu.
 
@@ -27,7 +27,7 @@ Izmantojiet klientu datus trešo pušu lietojumprogrammās, eksportējot tos uz 
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- SFTP galamērķi aiz ugunsmūriem pašlaik netiek atbalstīti. 
+- SFTP mērķi aiz ugunsmūriem pašlaik netiek atbalstīti. 
 - Eksportēšanas izpildlaiks ir atkarīgs no sistēmas veiktspējas. Kā minimālu servera konfigurēšanu ieteicams izmantot divus procesora kodolus un 1 Gb atmiņu.
 - Līdz pat 100 miljoniem klientu profilu entītiju eksportēšana var aizņemt 90 minūtes, ja tiek izmantota ieteicama minimālā divu procesoru kodolu konfigurācija un 1 Gb atmiņa.
 
@@ -74,7 +74,7 @@ Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-
 Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand).
 
 > [!TIP]
-> Eksportējot entītijas, kurās ir liels datu apjoms, katram eksportam vienā mapē var rasties vairāki CSV faili. Eksporta sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksporta pabeigšanai.
+> Eksportējot entītijas, kurās ir liels datu apjoms, katrā eksportā var rasties vairāki CSV faili vienā mapē. Eksportēšanas sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksportēšanas pabeigšanai.
 
 ## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 

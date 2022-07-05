@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643829"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055223"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
-Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis līdzeklis var palīdzēt sasniegt dažādus mērķus: 
+Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis līdzeklis var palīdzēt sasniegt dažādus mērķus:
 - Noteikt ļoti vērtīgus klientus un apstrādāt šo ieskatu
 - Veidojiet stratēģiskus klientu segmentus, balstoties uz to iespējamo vērtību, lai izpildītu personalizētas kampaņas, ar mērķtiecīgiem pārdošanas, mārketinga un atbalsta pasākumiem
 - Produktu izstrādes rokasgrāmata, koncentrējoties uz līdzekļiem, kas palielina klienta vērtību
@@ -69,16 +69,16 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
     - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem   
 
 > [!NOTE]
-> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas/transakcijas entītijas, tās Power Query var apvienot pirms datu uzņemšanas.
+> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas/darījumu entītijas, varat tās Power Query apvienot pirms datu uzņemšanas.
 > - Taču papildu klientu darbības datiem (neobligāti) var pievienot tik klientu darbību entītiju, cik vēlaties, lai tās izskatītu pēc modeļa.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
-1. Dodieties uz **IntelligencePredictions** > **·**.
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
 
 1. Atlasiet elementu **Klienta ilgtermiņa** vērtība un atlasiet vienumu **Lietot modeli**. 
 
-1. Rūtī **Klienta mūža vērtība** atlasiet **Sākt darbu**.
+1. **Klienta mūža vērtību** rūtī atlasiet **Sākt darbu**.
 
 1. **Nosauciet šo modeli** un **Izvades entītijas nosaukumu**, lai nošķirtu tos no citiem modeļiem vai entītijām.
 
@@ -149,7 +149,7 @@ Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, kli
 
 ### <a name="set-update-schedule"></a>Iestatīt grafika atjaunināšanu
 
-1. **Datu atjaunināšanas grafika** darbībā izvēlieties, cik bieži modelis atkārtoti jāplāno, pamatojoties uz jaunākajiem datiem. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo customer insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
+1. **Datu atjaunināšanas grafika** darbībā izvēlieties, cik bieži modelis atkārtoti jāplāno, pamatojoties uz jaunākajiem datiem. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
 
 1. Atlasiet **Tālāk**.
 

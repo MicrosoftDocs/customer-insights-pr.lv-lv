@@ -1,6 +1,6 @@
 ---
-title: Izveidot jaunus pasākumus ar mēru veidotāju
-description: Veidojiet pasākumus no nulles, lai analizētu galvenos rādītājus par savu uzņēmumu.
+title: Jaunu pasākumu izveide, izmantojot pasākumu veidotāju
+description: Veidojiet mērus no nulles, lai analizētu galvenos rādītājus par savu uzņēmumu.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,38 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800335"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083019"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Izmantojiet mēru veidotāju, lai izveidotu pasākumus no nulles
+# <a name="create-new-measures-with-the-measure-builder"></a>Jaunu pasākumu izveide, izmantojot pasākumu veidotāju
 
-Šajā rakstā ir paskaidrots, kā izveidot jaunu [pasākumu](measures.md) no nulles. Mērījumu veidotājs ļauj definēt aprēķinus, izmantojot matemātiskos operatorus, apkopošanas funkcijas un filtrus. Varat izveidot mēru ar atribūtiem no entītijām, kas ir saistītas ar vienoto *klienta entītiju*.
+Šajā rakstā ir paskaidrots, kā izveidot jaunu [pasākumu](measures.md) no nulles. Mēru veidotājs ļauj definēt aprēķinus, izmantojot matemātikas operatorus, apkopošanas funkcijas un filtrus. Varat izveidot mēru ar atribūtiem no entītijām, kas ir saistītas ar vienoto *klienta* entītiju.
 
-Pasākumu radīšana B-to-C un B-B vidē darbojas vienādi. Tomēr, ja esat B-B vide [izmanto kontus ar hierarhijām](relationships.md#set-up-account-hierarchies), varat izvēlēties apkopot mēru visos saistītajos apakškontos.
+Pasākumu izveide B-to-C un B-to-B vidē darbojas tāpat. Tomēr, ja jūs esat B-to-B vide [izmanto kontus ar hierarhijām](relationships.md#set-up-account-hierarchies), varat izvēlēties apkopot mēru saistītajos apakškontos.
 
-Varat arī ātri izveidot pasākumu, izvēloties kādu no bieži izmantoto un iepriekš definēto pasākumu kopas. Papildinformāciju skatiet rakstā [Veidnes izmantošana pasākuma izveidei](measure-templates.md).
+Varat arī ātri izveidot mēru, izvēloties no bieži izmantoto un iepriekš definēto mēru kopas. Papildinformāciju skatiet rakstā [Veidnes izmantošana mēra izveidei](measure-templates.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
-Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klienta mērs) vai uzņēmuma/organizācijas līmenī (biznesa pasākums). Debitora atribūts un klienta mērs ir divi tipi, kas ļauj izsekot veiktspēju katram klientam. Piemēram, katra klienta kopējie tēriņi. Biznesa pasākumi ļauj izsekot katra uzņēmuma darbības rezultātiem. Piemēram, uzņēmuma kopējie ieņēmumi.
+Mērus var izveidot atsevišķu klientu līmenī (klienta atribūts, klienta mērs) vai uzņēmuma/organizācijas līmenī (biznesa mērs). Klienta atribūts un klientu mērs ir divi veidi, kas ļauj izsekot katra klienta veiktspēju. Piemēram, katra klienta kopējie tēriņi. Biznesa pasākumi ļauj izsekot katra uzņēmuma veiktspējai. Piemēram, uzņēmuma kopējie ieņēmumi.
 
-- Debitora atribūts: ģenerē izvadi kā jaunu atribūtu, kas tiek saglabāts kā jauna kolonna sistēmas ģenerētajā entītijā ar nosaukumu *Customer_Measure*. Atsvaidzinot debitora atribūtu, visi pārējie klienta atribūti entītijas *Customer_Measure* vienlaikus tiek atsvaidzināti. Turklāt klienta profila kartē tiek parādīti klienta atribūti. Pēc palaišanas vai saglabāšanas klienta atribūtu nevar mainīt uz klienta mēru.
+- Klienta atribūts: ģenerē izvadi kā jaunu atribūtu, kas tiek saglabāts kā jauna kolonna sistēmas ģenerētajā entītijā ar nosaukumu *Customer_Measure*. Atsvaidzinot klienta atribūtu, visi pārējie Customer_Measure *entītijas* klienta atribūti tiek atsvaidzināti vienlaicīgi. Turklāt klienta atribūti tiek parādīti klienta profila kartē. Kad klienta atribūts ir palaists vai saglabāts, to nevar mainīt uz klientu mēru.
 
-- Klienta mērs: ģenerē izvadi kā savu entītiju, un pēc palaišanas vai saglabāšanas to nevar mainīt uz klienta atribūtu. Klienta pasākumi netiek rādīti klienta profila kartē.
+- Klientu mērs: ģenerē izvadi kā savu entītiju, un pēc palaišanas vai saglabāšanas to nevar mainīt uz klienta atribūtu. Klientu mēri netiek rādīti klienta profila kartītē.
 
-- Biznesa pasākums: ģenerē izvadi kā savu entītiju un tiek rādīta customer insights vides sākumlapā.
+- Biznesa pasākums: ģenerē izvadi kā savu entītiju un parāda jūsu Customer Insights vides sākumlapā.
 
-1. Dodieties uz **Pasākumi**.
+1. Dodieties uz **sadaļu Pasākumi**.
 
 1. Atlasiet **Jauns** un izvēlieties **Izveidot savu**.
 
-   :::image type="content" source="media/measure-b2c.png" alt-text="Tukšs konfigurācijas ekrāns mērījumam no B-C līdz C." lightbox="media/measure-b2c.png":::
+   :::image type="content" source="media/measure-b2c.png" alt-text="Tukšs konfigurācijas ekrāns mērījumam no B līdz C." lightbox="media/measure-b2c.png":::
 
-1. Lai izsekotu biznesa līmeņa veiktspēju, pārslēdziet **tipu Pasākums** uz **biznesa līmeni**. **Debitora līmenis** ir atlasīts pēc noklusējuma. **Debitora līmenis** automātiski pievieno atribūtu *CustomerId* dimensijām, kamēr **biznesa līmenis** to automātiski noņem.
+1. Lai izsekotu biznesa līmeņa veiktspēju, pārslēdziet **mēra tipu** uz **Biznesa līmenis**. **Klienta līmenis** tiek atlasīts pēc noklusējuma. **Klienta līmenis** automātiski pievieno atribūtu *CustomerId* dimensijām, savukārt **biznesa līmenis** to automātiski noņem.
 
 1. Konfigurācijas apgabalā nolaižamajā izvēlnē Atlasīt funkciju **izvēlieties apkopošanas** funkciju. Apkopošanas funkcijas ir šādas:
    - **Sum**
@@ -53,8 +53,8 @@ Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klient
    - **Minimums**
    - **Pirmā**: tiek ņemta pirmā datu ieraksta vērtība
    - **Pēdējā**: tiek ņemta pēdējā vērtība, kas tika pievienota datu ierakstam
-   - **ArgMax**: atrod datu ierakstu, kas norāda maksimālo vērtību no mērķa funkcijas
-   - **ArgMin**: atrod datu ierakstu, norādot mērķa funkcijas minimālo vērtību
+   - **ArgMax**: atrod datu ierakstu, kas dod maksimālu vērtību no mērķa funkcijas
+   - **ArgMin**: atrod datu ierakstu, kas dod minimālo vērtību no mērķa funkcijas
 
 1. Atlasiet vienumu **Pievienot atribūtu**, lai atlasītu datus, kas nepieciešami šī mēra izveidei.
 
@@ -66,17 +66,17 @@ Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klient
 
 1. Lai izveidotu sarežģītākus mērījumus, to funkcijai var pievienot papildu atribūtus vai lietot matemātikas operatorus.
 
-1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. Lietojot filtrus, mērījuma aprēķināšanai tiks izmantoti tikai filtriem atbilstošie ieraksti.
+1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. Filtru lietošana mēra aprēķināšanai izmantos tikai tos ierakstus, kas atbilst filtriem.
   
    1. Sadaļā **Pievienot atribūtu**, kas atrodas **Filtru** rūtī, atlasiet atribūtu, ko vēlaties izmantot, lai izveidotu filtru.
    1. Iestatiet filtra operatorus, lai definētu filtru katram atlasītajam atribūtam.
    1. Atlasiet vienumu **Lietot**, lai mērījumam pievienotu filtrus.
 
-1. Atlasiet **Dimensija**, lai izvēlētos citus laukus, kas tiek pievienoti kā kolonnas mērvienības izvades entītijai.
+1. Atlasiet **Dimensija**, lai izvēlētos citus laukus, kas tiek pievienoti kā kolonnas mēra izvades entītijai.
 
    1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums.
    > [!TIP]
-   > Ja kā mēra tips **atlasījāt** Klienta līmenis **, atribūts** CustomerId *jau ir pievienots.* Ja noņemat atribūtu, **tips** Measure pārslēdzas uz **biznesa līmeni**.
+   > Ja kā mēra tipu **atlasījāt** klienta līmeni **, atribūts** CustomerId *jau ir pievienots.* Ja noņemat atribūtu, **mēra tips** pārslēdzas uz **biznesa līmeni**.
    1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
 
 1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
@@ -88,11 +88,11 @@ Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klient
 
 1. Lai mērījumam pievienotu papildu aprēķinus, atlasiet **Jauns aprēķins**. Entītijas var izmantot tikai tajā pašā entītijas ceļā jauniem aprēķiniem. Papildu aprēķini tiek rādīti kā jaunas kolonnas mērījumu izvades entītijā.
 
-1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā uz **Dublikāts**, **Pārdēvēt** vai **Noņemt** aprēķinu no mērījuma.
+1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā, lai **dublētu**, **pārdēvētu** vai **noņemtu** aprēķinu no mēra.
 
 1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
 
-1. Blakus pasākumam Nenosaukts atlasiet **Rediģēt detaļas**. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam atzīmes](work-with-tags-columns.md#manage-tags).
+1. Atlasiet **Rediģēt detalizētu informāciju** blakus mērījumam Bez nosaukuma. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam tagus](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 
@@ -102,17 +102,17 @@ Pasākumus var izveidot atsevišķu klientu līmenī (debitora atribūts, klient
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
-Pasākumus var izveidot atsevišķu kontu līmenī (debitora mērījums) vai visu kontu līmenī (biznesa pasākums).
+Varat izveidot mērus atsevišķu kontu līmenī (klientu mērs) vai visu kontu līmenī (uzņēmējdarbības mērs).
 
-- Klienta mērs: ģenerē izvadi kā savu entītiju. Klienta pasākumi netiek rādīti klienta profila kartē.
+- Klientu mērs: ģenerē izvadi kā savu entītiju. Klientu mēri netiek rādīti klienta profila kartītē.
 
-- Biznesa pasākums: ģenerē izvadi kā savu entītiju un tiek rādīta customer insights vides sākumlapā.
+- Biznesa pasākums: ģenerē izvadi kā savu entītiju un parāda jūsu Customer Insights vides sākumlapā.
 
-1. Dodieties uz **Pasākumi**.
+1. Dodieties uz **sadaļu Pasākumi**.
 
 1. Atlasiet **Jauns**.
 
-   :::image type="content" source="media/measure-b2b.png" alt-text="Tukšs konfigurācijas ekrāns mērījumam no B līdz punktam B.":::
+   :::image type="content" source="media/measure-b2b.png" alt-text="Tukšs konfigurācijas ekrāns B-to-B mērījumam.":::
 
 1. Konfigurācijas apgabalā nolaižamajā izvēlnē Atlasīt funkciju **izvēlieties apkopošanas** funkciju. Apkopošanas funkcijas ir šādas:
    - **Sum**
@@ -134,17 +134,17 @@ Pasākumus var izveidot atsevišķu kontu līmenī (debitora mērījums) vai vis
 
 1. Lai izveidotu sarežģītākus mērījumus, to funkcijai var pievienot papildu atribūtus vai lietot matemātikas operatorus.
 
-1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. Lietojot filtrus, mērījuma aprēķināšanai tiks izmantoti tikai filtriem atbilstošie ieraksti.
+1. Lai pievienotu filtrus, konfigurācijas apgabalā atlasiet **Filtri**. Filtru lietošana mēra aprēķināšanai izmantos tikai tos ierakstus, kas atbilst filtriem.
   
    1. Sadaļā **Pievienot atribūtu**, kas atrodas **Filtru** rūtī, atlasiet atribūtu, ko vēlaties izmantot, lai izveidotu filtru.
    1. Iestatiet filtra operatorus, lai definētu filtru katram atlasītajam atribūtam.
    1. Atlasiet vienumu **Lietot**, lai mērījumam pievienotu filtrus.
 
-1. Atlasiet **Dimensija**, lai izvēlētos citus laukus, kas tiek pievienoti kā kolonnas mērvienības izvades entītijai.
+1. Atlasiet **Dimensija**, lai izvēlētos citus laukus, kas tiek pievienoti kā kolonnas mēra izvades entītijai.
 
    1. Atlasiet vienumu **Rediģēt dimensijas**, lai pievienotu datu atribūtus, pēc kuriem vēlaties grupēt mērus. Piemēram, pilsēta vai dzimums.
       > [!TIP]
-      > Ja kā mēra tips **atlasījāt** Klienta līmenis **, atribūts** CustomerId *jau ir pievienots.* Ja noņemat atribūtu, **tips Measure** pārslēdzas uz **biznesa līmeni**.
+      > Ja kā mēra tipu **atlasījāt** klienta līmeni **, atribūts** CustomerId *jau ir pievienots.* Ja noņemat atribūtu, **mēra tips** pārslēdzas uz **biznesa līmeni**.
    1. Atlasiet vienumu **Pabeigts**, lai mērījumam pievienotu dimensijas.
 
 1. Ja datos ir vērtības, kas jāaizstāj ar veselu skaitli, atlasiet **Kārtulas**. Konfigurējiet kārtulu un pārliecinieties, ka kā aizstājējus izvēlējāties tikai veselus skaitļus. Piemēram, aizstājiet *nulli* ar *0*.
@@ -158,11 +158,11 @@ Pasākumus var izveidot atsevišķu kontu līmenī (debitora mērījums) vai vis
    1. Atlasiet **Attiecību ceļu** un izvēlieties entītijas ceļu, kas jāizmanto pasākuma identificēšanai. Ja entītijai *Klients* ir tikai viens ceļš, šī vadīkla netiks rādīta.
    1. Atlasiet **Pabeigts**, lai lietotu jūsu atlasi.
 
-1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā uz **Dublikāts**, **Pārdēvēt** vai **Noņemt** aprēķinu no mērījuma.
+1. Atlasiet vertikālo daudzpunkti (&vellip;) aprēķinā, lai **dublētu**, **pārdēvētu** vai **noņemtu** aprēķinu no mēra.
 
 1. **Priekšskatījuma** apgabalā redzēsit izvades entītijas mērījuma datu shēmu, tostarp filtrus un dimensijas. Priekšskatījums dinamiski reaģē uz konfigurācijas izmaiņām.
 
-1. Blakus pasākumam Nenosaukts atlasiet **Rediģēt detaļas**. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam atzīmes](work-with-tags-columns.md#manage-tags).
+1. Atlasiet **Rediģēt detalizētu informāciju** blakus mērījumam Bez nosaukuma. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam tagus](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 

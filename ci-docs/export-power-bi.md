@@ -1,5 +1,5 @@
 ---
-title: Power BI savienotājs
+title: Power BI savienotājs (priekšskatījums)
 description: Uzziniet, kā izmantot Dynamics 365 Customer Insights savienotāju pakalpojumā Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643632"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051278"
 ---
-# <a name="connector-for-power-bi-preview"></a>Power BI savienotājs (priekšskatījums)
+# <a name="power-bi-connector-preview"></a>Power BI savienotājs (priekšskatījums)
 
-Izveidojiet vizualizācijas saviem datiem, izmantojot līdzekli Power BI Desktop. Veidojiet papildu ieskatus un atskaites, izmantojot vienotos klientu datus.
+Izveidojiet datu vizualizācijas, izmantojot darbvirsmu Microsoft Power BI. Veidojiet papildu ieskatus un atskaites, izmantojot vienotos klientu datus.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -56,11 +56,11 @@ Apsveriet iespēju strādāt ar datu apakškopu. Piemēram, varat izveidot [segm
 
 ### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights vide netiek rādīta programmā Power BI
 
-Savienotājā [nebūs pieejamas vides, kurām programmā Customer Insights ir definētas vairākas](relationships.md) identiskas Power BI entītijas starp divām identiskām entītijām.
+Vides, kurās ir vairākas [relācijas](relationships.md), kas definētas starp divām identiskām entītijām programmā Customer Insights, savienotājā Power BI nebūs pieejamas.
 
 Varat identificēt un noņemt dublicētās attiecības.
 
-1. Dodieties uz **DataRelations** > **par** vidi, kurā trūkst Power BI.
+1. Dodieties uz **sadaļu Datu** > **relācijas** vidē, kuras jums trūkst Power BI.
 2. Nosakiet dublicētās attiecības:
    - Pārbaudiet, vai starp vienām un tām pašām divām entītijām ir definētas vairākas attiecības.
    - Pārbaudiet, vai ir izveidotas attiecības starp divām entītijām, kas ir iekļautas apvienošanas procesā. Pastāv netiešas attiecības, kas tiek definētas starp visām entītijām, kas ir iekļautas apvienošanas procesā.
@@ -70,7 +70,7 @@ Pēc dublicēto attiecību noņemšanas mēģiniet vēlreiz konfigurēt Power BI
 
 ### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Kļūdas datuma laukos, ielādējot entītijas programmā Power BI Desktop
 
-Ielādējot entītijas, kas ietver laukus ar datuma formātu, piemēram, MM/DD/YYYY, var rasties kļūdas nesaderīgu lokalizācijas formātu dēļ. Šī neatbilstība rodas, ja fails Power BI Desktop ir iestatīts uz citu lokalizāciju, nevis angļu valodu (Amerikas Savienotās Valstis), jo datumu lauki Customer Insights tiek saglabāti ASV formātā.
+Ielādējot entītijas, kas ietver laukus ar datuma formātu, piemēram, MM/DD/YYYY, var rasties kļūdas nesaderīgu lokalizācijas formātu dēļ. Šī neatbilstība rodas, ja Power BI Desktop failam ir iestatīta cita lokalizācija, nevis angļu valoda (Amerikas Savienotās Valstis), jo datuma lauki customer insights tiek saglabāti ASV formātā.
 
 Power BI Desktop failam ir viens lokalizācijas iestatījums, kas tiek lietots, izgūstot datus. Lai šos datuma laukus interpretētu pareizi, iestatiet šī lauka .BPI faila lokalizāciju angļu valodā (ASV). [Informācija par to, kā mainīt Power BI desktop faila lokalizāciju](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 

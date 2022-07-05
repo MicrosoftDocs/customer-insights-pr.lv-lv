@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz ActiveCampaign
+title: Segmentu eksportēšana uz ActiveCampaign
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643418"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054717"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentu eksportēšana uz ActiveCampaign (priekšskatījums)
 
@@ -21,9 +21,9 @@ Eksportējiet vienoto klientu profilu segmentus uz ActiveCampaign un izmantojiet
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
--   Jums ir [ActiveCampaign konts](https://www.activecampaign.com/) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
--   Eksportētajos segmentos vienoto klientu profilos ir lauks ar e-pasta adresi.
+- Jums ir [ActiveCampaign konts](https://www.activecampaign.com/) un atbilstošie administratora akreditācijas dati.
+- Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
+- Eksportētajos segmentos vienoto klientu profilos ir lauks ar e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 

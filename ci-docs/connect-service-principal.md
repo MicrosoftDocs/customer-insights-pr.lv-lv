@@ -1,5 +1,5 @@
 ---
-title: Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot pakalpojuma primāro nosaukumu
+title: Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma primāro nosaukumu
 description: Izmantojiet Azure pakalpojuma primāro nosaukumu, lai izveidotu savienojumu ar savu Data Lake.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,27 +11,27 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011850"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082242"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Savienojuma izveide ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma primāro nosaukumu
 
-Šajā rakstā ir aplūkots, kā izveidot savienojumu Dynamics 365 Customer Insights ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma vadītāju, nevis krātuves konta atslēgas.
+Šajā rakstā ir aprakstīts, kā izveidot savienojumu Dynamics 365 Customer Insights ar Azure Data Lake Storage kontu, izmantojot Azure pakalpojuma principālu, nevis krātuves konta atslēgas.
 
-Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr jābūt ierobežotām atļaujām. Tā vietā, lai lietojumprogrammās pieteiktos kā pilnībā priviliģēts lietotājs, Azure piedāvā pakalpojuma primāros nosaukumus. Varat izmantot pakalpojumu vadītājus, lai droši [pievienotu vai rediģētu mapi Bieži lietots datu modelis kā datu avots](connect-common-data-model.md) vai [izveidotu vai atjauninātu vidi](create-environment.md).
+Automatizētajiem rīkiem, kas izmanto pakalpojumu Azure pakalpojumus, vienmēr jābūt ierobežotām atļaujām. Tā vietā, lai lietojumprogrammās pieteiktos kā pilnībā priviliģēts lietotājs, Azure piedāvā pakalpojuma primāros nosaukumus. Varat izmantot pakalpojumu principālus, lai droši [pievienotu vai rediģētu common data model mapi kā datu avots](connect-common-data-model.md) vai [izveidotu vai atjauninātu vidi](create-environment.md).
 
 > [!IMPORTANT]
 >
-> - Datu ezera krātuves kontam, kas izmantos pakalpojuma principālu, jābūt Gen2 un jābūt iespējotam [hierarhiskai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
-> - Lai izveidotu pakalpojuma principālu, Azure nomnieks ir nepieciešamas administratora atļaujas.
+> - Data Lake Storage kontam, kas izmantos pakalpojuma pamatnoteikumu, ir jābūt Gen2, un tam ir jābūt [iespējotai hierarhiskai nosaukumvietai](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 krātuves konti netiek atbalstīti.
+> - Lai izveidotu pakalpojuma vadītāju, jūsu Azure nomnieks ir nepieciešamas administratora atļaujas.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure pakalpojuma primārā nosaukuma izveide programmā Customer Insights
 
-Pirms klienta ieskatiem tiek izveidots jauns servisa vadītājs, pārbaudiet, vai tas jau pastāv jūsu organizācijā.
+Pirms izveidojat jaunu customer insights servisa principālu, pārbaudiet, vai tas jau pastāv jūsu organizācijā.
 
 ### <a name="look-for-an-existing-service-principal"></a>Meklējiet esošu pakalpojuma primāro nosaukumu
 
@@ -39,44 +39,44 @@ Pirms klienta ieskatiem tiek izveidots jauns servisa vadītājs, pārbaudiet, va
 
 2. No **Azure pakalpojumi** atlasiet **Azure Active Directory**.
 
-3. Sadaļā **Pārvaldība** atlasiet **Microsoft lietojumprogramma**.
+3. Sadaļā **Pārvaldīt** atlasiet **Microsoft lietojumprogramma**.
 
-4. Pievienojiet filtru **lietojumprogrammas ID, sāciet ar**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nosaukumu vai meklējiet to `Dynamics 365 AI for Customer Insights`.
+4. Pievienojiet filtru lietojumprogrammas ID sākšanai **ar**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nosaukumu vai meklējiet to `Dynamics 365 AI for Customer Insights`.
 
 5. Ja atradīsit atbilstošu ierakstu, tas nozīmē, ka pakalpojuma primārais nosaukums jau pastāv.
 
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Ekrānuzņēmums, kurā redzams esošs pakalpojuma primārais nosaukums.":::
 
-6. Ja rezultāti netiek atgriezti, varat [izveidot jaunu servisa principālu](#create-a-new-service-principal). Vairumā gadījumu tas jau pastāv, un jums ir jāpiešķir tikai atļaujas pakalpojuma vadītājam, lai piekļūtu krātuves kontam.
+6. Ja rezultāti netiek atgriezti, varat [izveidot jaunu pakalpojumu principālu](#create-a-new-service-principal). Vairumā gadījumu tas jau pastāv, un jums ir jāpiešķir tikai atļaujas, lai pakalpojuma vadītājs varētu piekļūt krātuves kontam.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Piešķirt atļaujas pakalpojuma primārajam nosaukumam, lai piekļūtu krātuves kontam
 
-Dodieties uz Azure portālu, lai piešķirtu atļaujas tā krātuves konta pakalpojuma vadītājam, kuru vēlaties izmantot programmā Customer Insights. Uzglabāšanas kontam vai konteineram jāpiešķir viena no šīm lomām:
+Dodieties uz Azure portālu, lai piešķirtu atļaujas tā krātuves konta pakalpojuma vadītājam, kuru vēlaties izmantot programmā Customer Insights. Krātuves kontam vai konteineram ir jāpiešķir viena no šīm lomām:
 
 |Akreditācijas datu|Prasības:|
 |----------|------------|
-|Pašlaik ir pieteicies lietotājs|**Loma**: krātuves BLOB datu lasītājs, krātuves BLOB līdzstrādnieks vai krātuves BLOB īpašnieks.<br>**Līmenis**: atļaujas var piešķirt krātuves kontā vai konteinerā.</br>|
-|Klientu ieskatu pakalpojuma vadītājs -<br>Izmantošana Azure Data Lake Storage par datu avots</br>|1. opcija<ul><li>**Loma**: krātuves BLOB datu lasītājs, krātuves BLOB datu līdzstrādnieks vai krātuves BLOB datu īpašnieks.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>2 *. iespēja (nedalot pakalpojumu principāla piekļuvi krātuves kontam)*<ul><li>**1**. loma: krātuves BLOB datu lasītājs, krātuves BLOB datu līdzstrādnieks vai krātuves BLOB datu īpašnieks.</li><li>**Līmenis**: konteineram jāpiešķir atļaujas.</li><li>**2**. loma: krātuves BLOB datu deleģētājs.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>|
-|Klientu ieskatu pakalpojuma vadītājs - <br>Izmantošana Azure Data Lake Storage par izvadi vai mērķi</br>|1. opcija<ul><li>**Loma**: krātuves BLOB datu līdzstrādnieks vai krātuves BLOB īpašnieks.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>2 *. iespēja (nedalot pakalpojumu principāla piekļuvi krātuves kontam)*<ul><li>**Loma**: krātuves BLOB datu līdzstrādnieks vai krātuves BLOB īpašnieks.</li><li>**Līmenis**: konteineram jāpiešķir atļaujas.</li><li>**2**. loma: krātuves BLOB deleģētājs.</li><li>**Līmenis**: krātuves kontā jāpiešķir atļaujas.</li></ul>|
+|Pašlaik pieteicies lietotājs|**Loma**: krātuves Blob datu lasītājs, krātuves Blob līdzstrādnieks vai krātuves Blob īpašnieks.<br>**Līmenis**: atļaujas var piešķirt krātuves kontā vai konteinerā.</br>|
+|Customer Insights servisa direktors -<br>Izmantojiet Azure Data Lake Storage kā datu avots</br>|1. opcija<ul><li>**Loma**: krātuves Blob datu lasītājs, krātuves Blob datu līdzstrādnieks vai krātuves Blob datu īpašnieks.</li><li>**Līmenis**: krātuves kontā ir jāpiešķir atļaujas.</li></ul>2 *. iespēja (nekopīgojot pakalpojuma galveno piekļuvi krātuves kontam)*<ul><li>**1**. loma: krātuves Blob datu lasītājs, krātuves Blob datu līdzstrādnieks vai krātuves Blob datu īpašnieks.</li><li>**Līmenis**: konteineram ir jāpiešķir atļaujas.</li><li>**2**. loma: krātuves Blob datu delegators.</li><li>**Līmenis**: krātuves kontā ir jāpiešķir atļaujas.</li></ul>|
+|Customer Insights servisa direktors - <br>Izmantošana Azure Data Lake Storage kā izvade vai galamērķis</br>|1. opcija<ul><li>**Loma**: Krātuves Blob datu līdzstrādnieks vai krātuves Blob īpašnieks.</li><li>**Līmenis**: krātuves kontā ir jāpiešķir atļaujas.</li></ul>2 *. iespēja (nekopīgojot pakalpojuma galveno piekļuvi krātuves kontam)*<ul><li>**Loma**: Krātuves Blob datu līdzstrādnieks vai krātuves Blob īpašnieks.</li><li>**Līmenis**: konteineram ir jāpiešķir atļaujas.</li><li>**2**. loma: Krātuves lodes delegators.</li><li>**Līmenis**: krātuves kontā ir jāpiešķir atļaujas.</li></ul>|
 
 1. Apmeklējiet [Azure administratora portālu](https://portal.azure.com) un piesakieties savā organizācijā.
 
-1. Atveriet krātuves kontu, kuram vēlaties piekļūt customer insights pakalpojuma vadītājam.
+1. Atveriet krātuves kontu, kuram vēlaties piekļūt Customer Insights pakalpojumu principālam.
 
 1. Kreisajā rūtī atlasiet **Piekļuves vadīkla (Access control — IAM)** un pēc tam atlasiet **Pievienot** > **Pievienot lomas piešķiri**.
 
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Ekrānuzņēmums, kurā redzams Azure portāls, kas pievieno lomas piešķiri.":::
 
 1. Rūtī **Pievienot lomu piešķiri** iestatiet šādus rekvizītus:
-   - Loma: krātuves BLOB datu lasītājs, krātuves BLOB līdzstrādnieks vai krātuves BLOB īpašnieks, pamatojoties uz iepriekš uzskaitītajiem akreditācijas datiem.
+   - Loma: krātuves Blob datu lasītājs, krātuves Blob līdzstrādnieks vai krātuves Blob īpašnieks, pamatojoties uz iepriekš uzskaitītajiem akreditācijas datiem.
    - Piešķirt piekļuvi: **Lietotājam, grupai vai pakalpojuma primārajam nosaukumam**
-   - Dalībnieku atlase: **Dynamics 365 AI for Customer Insights** (servisa principāls [,](#create-a-new-service-principal) kuru uzmeklējāt iepriekš šajā procedūrā)
+   - Atlasīt dalībniekus: **Dynamics 365 AI for Customer Insights** ([pakalpojuma vadītājs,](#create-a-new-service-principal) kuru uzmeklējāt iepriekš šajā procedūrā)
 
-1. Atlasiet **Pārskatīšana + piešķirt**.
+1. Atlasiet **Pārskatīt + piešķirt**.
 
 Lai ieviestu izmaiņas, var paiet 15 minūtes.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Ievadiet Azure resursa ID vai Azure abonementa informāciju Customer Insights krātuves konta pielikumā
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Ievadiet Azure resursa ID vai Azure abonementa informāciju krātuves konta pielikumā Customer Insights
 
 Programmā Customer Insights varat pievienot Datu ezera krātuves kontu, lai [saglabātu izvades datus](manage-environments.md) vai [izmantotu tos kā datu avots](connect-dataverse-managed-lake.md). Šī opcija ļauj izvēlēties starp uz resursiem balstītu vai uz abonementu balstītu pieeju. Atkarībā no izvēlētās pieejas izpildiet procedūru vienā no nākamajām sadaļām.
 
@@ -90,11 +90,11 @@ Programmā Customer Insights varat pievienot Datu ezera krātuves kontu, lai [sa
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Nokopējiet krātuves konta resursa ID vērtību.":::
 
-1. Sadaļā Customer Insights ievietojiet resursa ID resursa laukā, kas parādīts krātuves konta savienojuma ekrānā.
+1. Programmā Customer Insights ievietojiet resursa ID resursa laukā, kas tiek parādīts krātuves konta savienojuma ekrānā.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Nokopējiet krātuves konta resursa ID vērtību.":::   
 
-1. Lai pievienotu krātuves kontu, turpiniet ar atlikušajām customer insights darbībām.
+1. Turpiniet ar pārējām Customer Insights darbībām, lai pievienotu krātuves kontu.
 
 ### <a name="subscription-based-storage-account-connection"></a>Uz abonementu balstīta krātuves konta savienojuma virkne
 
@@ -102,24 +102,24 @@ Programmā Customer Insights varat pievienot Datu ezera krātuves kontu, lai [sa
 
 1. Kreisajā rūtī atveriet **Iestatījumi** > **Rekvizīti**.
 
-1. Pārskatiet krātuves **konta abonementu**, **resursu grupu** un **nosaukumu**, lai pārliecinātos, vai programmā Customer Insights atlasāt pareizās vērtības.
+1. Pārskatiet **abonementu**, **resursu grupu** un **krātuves konta nosaukumu**, lai programmā Customer Insights atlasītu pareizās vērtības.
 
-1. Programmā Customer Insights, pievienojot krātuves kontu, izvēlieties atbilstošo lauku vērtības.
+1. Programmā Customer Insights izvēlieties atbilstošo lauku vērtības, pievienojot krātuves kontu.
 
-1. Lai pievienotu krātuves kontu, turpiniet ar atlikušajām customer insights darbībām.
+1. Turpiniet ar pārējām Customer Insights darbībām, lai pievienotu krātuves kontu.
 
 ### <a name="create-a-new-service-principal"></a>Izveidot jaunu pakalpojuma primāro nosaukumu
 
 1. Instalējiet jaunāko Azure Active Directory PowerShell versiju pakalpojumam Graph. Lai iegūtu papildinformāciju, skatiet [Instalēt Azure Active Directory PowerShell pakalpojumam Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Datorā nospiediet tastatūras taustiņu Windows un meklējiet **Windows PowerShell** un atlasiet **Palaist kā administratoram**.
+   1. Datorā nospiediet tastatūras Windows taustiņu un meklējiet **Windows PowerShell** un atlasiet **Palaist kā administratoram**.
 
    1. PowerShell logā, kas tiek atvērts, ievadiet `Install-Module AzureAD`.
 
 2. Izveidojiet Customer Insights pakalpojuma primāro nosaukumu, izmantojot Azure AD PowerShell moduli.
 
-   1. PowerShell logā, kas tiek atvērts, ievadiet `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Aizstājiet *[savu direktorija ID]* ar faktisko Azure abonementa direktorija ID, kurā vēlaties izveidot pakalpojuma principālu. Atjaunotās vides nosaukuma parametrs `AzureEnvironmentName` nav obligāts.
+   1. PowerShell logā, kas tiek atvērts, ievadiet `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Aizstājiet *[savu direktorija ID]* ar faktisko direktorija ID savā Azure abonementā, kur vēlaties izveidot pakalpojuma vadītāju. Atjaunotās vides nosaukuma parametrs `AzureEnvironmentName` nav obligāts.
   
-   1. Ievadīt `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Šī komanda izveido customer insights pakalpojuma vadītāju atlasītajā Azure abonementā.
+   1. Ievadīt `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Šī komanda izveido customer insights pakalpojuma principālu atlasītajā Azure abonementā.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

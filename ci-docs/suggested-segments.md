@@ -1,5 +1,5 @@
 ---
-title: Algoritmiskā mācīšanās nodrošinātie ieteiktie segmenti
+title: Ieteicamie segmenti (priekšskatījums)
 description: Ļaujiet algoritmiskajai mācīšanās palīdzēt atrast jaunus un aizraujošus segmentus, balstoties uz klientu atribūtiem.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643509"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082746"
 ---
 # <a name="suggested-segments-preview"></a>Ieteicamie segmenti (priekšskatījums)
 
@@ -29,7 +29,7 @@ Ar mākslīgā intelekta modeļa palīdzību izpētiet jūsu klientu aizraujošo
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Ieteicamie segmenti savu KPI uzlabošanai
 
-Kā Customer Insights lietotājam, iespējams, ir izveidota [virkne](measures.md) pasākumu, kas palīdz izsekot jūsu galvenajiem darbības rādītājiem (KPI). Ir svarīgi saprast, kā noteikti atribūti ietekmē šo KPI, lai izveidotu segmentus un izpildītu īpaši mērķtiecīgu kampaņu.   
+Ja esat Customer Insights lietotājs, jums, visticamāk, ir izveidota [virkne](measures.md) pasākumu, kas palīdz izsekot veiktspējas pamatrādītājiem (KPI). Ir svarīgi saprast, kā noteikti atribūti ietekmē šo KPI, lai izveidotu segmentus un izpildītu īpaši mērķtiecīgu kampaņu.   
 Piemēram, jūs izsekojat pasākumu *TotalSpendPerCustomer*. Jūs kā uzņēmums vēlaties redzēt šo skaitli palielināmies. Izvēloties pasākumu kā primāro atribūtu, varat atlasīt atribūtus, kuriem vēlaties novērtēt ietekmi. Pieņemsim, *dalības līmenis*, *dalības periods* un *nodarbošanās*. Pēc tam Customer Insights var ieteikt segmentu, kurā ir informācija par to, kas visvairāk ietekmē konkrēto līdzekli. Piemēram, *Grāmatveži*, kas ir *Zelta* programmas dalībnieki un ir saistīti ar jūsu uzņēmumu *vismaz piecus gadus*, ir lielākie *TotalSpendPerCustomer* ietekmētāji. Katram ierosinājumam tiks parādīts prognozētais segmenta lielums. Šo informāciju var izmantot, lai izveidotu kampaņas mērķa auditorijām.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Klienta atribūta ietekmes izpratne

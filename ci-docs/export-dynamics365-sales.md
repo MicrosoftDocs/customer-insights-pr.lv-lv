@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Dynamics 365 Sales
+title: Segmentu eksportēšana uz Dynamics 365 Sales (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,30 +11,28 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643313"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082389"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmentu lietošana Dynamics 365 Sales (priekšskatījums)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Segmentu eksportēšana uz Dynamics 365 Sales (priekšskatījums)
 
 Izmantojiet klientu datus, lai izveidotu mārketinga adresātu sarakstus, tālāko darbību plūsmas un nosūtītu reklāmas ar Dynamics 365 Sales.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Eksports uz Dynamics 365 Sales ir ierobežots līdz 100'000 dalībniekiem vienā segmentā.
-- Segmenta eksports uz Dynamics 365 Sales var ilgt līdz 3 stundām. 
+- Eksports uz Dynamics 365 Sales ir ierobežots līdz 100'000 dalībniekiem katrā segmentā.
+- Segmentu eksportēšana uz Dynamics 365 Sales var ilgt līdz 3 stundām. 
 
 ## <a name="prerequisite-for-connection"></a>Savienojuma priekšnosacījums
 
 1. Lai varētu eksportēt segmentu no programmas Customer Insights uz programmu Sales, programmā Dynamics 365 Sales ir jābūt kontaktpersonu ierakstiem. Uzziniet vairāk par to, kā uzņemt kontaktpersonas no [Dynamics 365 Sales, izmantojot Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Eksportējot segmentus no Customer Insights uz Sales, pārdošanas instancēs netiks izveidoti jauni kontaktpersonu ieraksti. Pārdošanas kontaktpersonu ierakstiem jābūt uzņemtiem customer insights un jāizmanto kā datu avots. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
+   > Eksportējot segmentus no Customer Insights uz Sales, pārdošanas instancēs netiks izveidoti jauni kontaktpersonu ieraksti. Sales kontaktpersonu ieraksti ir jāuzņem programmā Customer Insights un jāizmanto kā datu avots. Tie ir jāiekļauj arī vienotā Klienta entītijā, lai kartētu klientu ID uz kontaktu ID pirms segmentu eksportēšanas.
 
 ## <a name="set-up-the-connection-to-sales"></a>Savienojuma ar Sales iestatīšana
 

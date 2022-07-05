@@ -1,6 +1,6 @@
 ---
-title: Darba sākšana ar uzņēmuma uzņēmumiem kā primārā mērķa auditorija
-description: Darba sākšana ar uzņēmuma uzņēmumiem kā primārā mērķa auditorija programmā Dynamics 365 Customer Insights.
+title: Darbs ar uzņēmuma kontiem
+description: Uzziniet par biznesa kontiem kā galveno mērķauditoriju sadaļā Dynamics 365 Customer Insights.
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -13,20 +13,20 @@ searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: f16c8ad50ed290562fa9f223a3e8c86228e5331e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643475"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053122"
 ---
 # <a name="work-with-business-accounts"></a>Darbs ar uzņēmuma kontiem
 
-Ļauj Dynamics 365 Customer Insights konfigurēt vidi dažādām primārajām mērķauditorijām: individuāliem patērētājiem (no B-C līdz C) un biznesa kontiem (no B-līdz B). B2C scenārijos dati tiek centrēti uz atsevišķiem indivīdiem. B2B vajadzībām primārā mērķa auditorija ir uzņēmumi - organizācijas vai uzņēmumi - un kontaktpersonas. Šis raksts palīdz sākt darbu ar uzņēmumu kontu vidi. Tajā ir uzskaitītas klientu ieskatu līdzekļu apgabalu atšķirības atkarībā no jūsu vides fokusa. Lai iegūtu papildinformāciju par atšķirībām, pārskatiet līdzekļu apgabalu dokumentus. 
+Tas Dynamics 365 Customer Insights ļauj konfigurēt vidi dažādām primārajām mērķauditorijām: individuāliem patērētājiem (no B līdz C) un uzņēmuma kontiem (no B līdz B). B2C scenārijos dati tiek centrēti uz atsevišķiem indivīdiem. B2B vajadzībām primārā mērķa auditorija ir uzņēmumi - organizācijas vai uzņēmumi - un kontaktpersonas. Šis raksts palīdz sākt darbu ar uzņēmumu kontu vidi. Tajā ir uzskaitītas Customer Insights līdzekļu apgabalu atšķirības atkarībā no jūsu fokusa uz vidi. Lai iegūtu papildinformāciju par atšķirībām, pārskatiet līdzekļu apgabalu dokumentus. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Vides izveide uzņēmuma kontiem
 
-Administratori var [izveidot vidi esošā organizācijā](create-environment.md). Jaunas vides izveides procesā notiek darbība, kurā administratoriem tiek lūgts izmantot vides primāro mērķa auditoriju. Gadījumā, ja tas ir sākotnējais iestatījums pēc licences iegādes, vadīta pieredze palīdz izveidot pirmo vidi.
+Administratori var [izveidot vidi esošā organizācijā](create-environment.md). Jaunas vides izveides procesā notiek darbība, kurā administratoriem tiek lūgts izmantot vides primāro mērķa auditoriju. Gadījumā, ja tā ir sākotnējā iestatīšana pēc licences iegādes, vadīta pieredze palīdz izveidot pirmo vidi.
 
 Pēc tam varat [izgūt datus](data-sources.md) uzņēmumu kontiem un saistītajām kontaktpersonām kā datu avotus no visiem atbalstītajiem avotiem.
 

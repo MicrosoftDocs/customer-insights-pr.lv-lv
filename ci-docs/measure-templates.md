@@ -1,6 +1,6 @@
 ---
-title: Mēru izveide no veidnēm
-description: Definējiet pasākumus, izmantojot veidnes bieži lietojamiem lietošanas gadījumiem.
+title: Pasākumu izveide no veidnēm
+description: Definējiet mērus, izmantojot veidnes bieži lietotiem lietošanas gadījumiem.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643133"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051692"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Veidnes izmantošana mērījuma veidošanā
+# <a name="create-measures-from-templates"></a>Pasākumu izveide no veidnēm
 
-Lai tos izveidotu, var izmantot iepriekš definētas bieži izmantoto [pasākumu](measures.md) veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
+Lai tos izveidotu, varat izmantot iepriekš definētas bieži izmantoto [mēru](measures.md) veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
 
-Lai izveidotu pielāgotus pasākumus, skatiet rakstu [Mēru veidotāja izmantošana, lai izveidotu pasākumus no nulles](measure-builder.md).
+Lai izveidotu pielāgotus mērus, skatiet rakstu [Mēru veidotāja izmantošana, lai izveidotu mērus no nulles](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
 
@@ -39,9 +39,9 @@ Pieejamās mērījumu veidnes:
 - Dalības ilgums lojalitātes programmā
 - Laiks kopš pēdējā pirkuma
 
-## <a name="build-a-new-measure-using-a-template"></a>Jaunas mērierīces izveide, izmantojot veidni
+## <a name="build-a-new-measure-using-a-template"></a>Jauna mēra izveide, izmantojot veidni
 
-1. Dodieties uz **Pasākumi**.
+1. Dodieties uz **sadaļu Pasākumi**.
 
 1. Atlasiet **Jauns** un atlasiet **Izvēlieties veidni**.
 
@@ -51,7 +51,7 @@ Pieejamās mērījumu veidnes:
 
 1. Pārskatiet prasītos datus un atlasiet **Sākt darbu**, ja visi dati ir pareizi.
 
-1. Blakus Vienumam Izmērīt nosaukumu atlasiet **Rediģēt detaļas**. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam atzīmes](work-with-tags-columns.md#manage-tags).
+1. Atlasiet **Rediģēt detalizētu informāciju** blakus Vienumam Novērtēt nosaukumu. Norādiet pasākuma nosaukumu. Pēc izvēles pievienojiet [pasākumam tagus](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Constant Contact
+title: Segmentu eksportēšana uz Constant Contact (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Constant Contact.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 310de0355f71829346f0e35508487e5962d6e912
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fe9706a7cd0755412ee18c4b974684bb9aa3f8d3
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643792"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082305"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentu eksportēšana uz Constant Contact (priekšskatījums)
 
@@ -22,7 +22,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
 -   Jums ir [Constant Contact konts](https://www.constantcontact.com/account-home) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana Microsoft Advertising
+title: Segmentu eksportēšana uz Microsoft Advertising (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Microsoft Advertising.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14479e915dd6ae76e018b59bee5980a600bb222d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643912"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082809"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentu eksportēšana uz Microsoft Advertising (priekšskatījums)
 
@@ -23,7 +23,7 @@ Eksportēt Customer Insights segmentus uz Microsoft Advertising, lai izveidotu C
 
 -   [Microsoft Advertising konts](https://ads.microsoft.com/) un atbilstošie administratora akreditācijas dati.
 -   Jūs esat piekritis Customer Match lietošanas noteikumiem. 
--   [Konfigurētie segmenti](segments.md) customer insights.
+-   [Konfigurētie segmenti](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienoto klientu profilos ir lauks ar e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

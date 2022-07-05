@@ -1,5 +1,5 @@
 ---
-title: Customer Insights sākumlapa
+title: Izpētiet customer insights
 description: Sāciet lietotnes izpēti sākumlapā.
 ms.date: 05/11/2022
 ms.reviewer: mhart
@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
-ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.openlocfilehash: 13b4bfa2f0b0cd69454c025e2f59de3dd6bb75a3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "8768359"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053306"
 ---
-# <a name="explore-customer-insights"></a>Izpētiet klientu ieskatus
+# <a name="explore-customer-insights"></a>Izpētiet customer insights
 
-Jūs varat piekļūt [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) ar šādu URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Varat piekļūt [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/), izmantojot šādu vietrādi URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Sākumlapa **palīdz** veikt galveno funkciju konfigurācijas procesu un sniedz pārskatu par segmentiem, mēriem un bagātināšanas datiem.
+Sākumlapā **ir** sniegta informācija par galveno līdzekļu konfigurācijas procesu un sniegts pārskats par segmentiem, mēriem un bagātināšanas datiem.
 
 :::image type="content" source="media/home-page.png" alt-text="Sākuma ekrāna ekrāns, kurā parādīti ieskatu paraugi.":::
 
@@ -30,36 +30,36 @@ Sākumlapa **palīdz** veikt galveno funkciju konfigurācijas procesu un sniedz 
 
 Izmantojiet kreiso rūti, lai naviģētu starp dažādiem Customer Insights apgabaliem.
 
-Ja strādājat ar biznesa kontiem un individuāliem patērētājiem, varat atlasīt savu primāro auditoriju, lai atbilstoši iestatītu fokusu.
+Ja strādājat ar uzņēmuma kontiem un individuāliem patērētājiem, varat atlasīt savu galveno mērķauditoriju, lai atbilstoši iestatītu fokusu.
 
-## <a name="application-header"></a>Lietojumprogrammas virsraksts
+## <a name="application-header"></a>Lietojumprogrammas galvene
 
-Vides **atlasītājs** parāda vidi, kurā strādājat, un ļauj izveidot vai pārvaldīt vides kā administratoram.
+Vides **atlasītājs** parāda vidi, kurā strādājat, un ļauj jums izveidot vai pārvaldīt vides kā administratoram.
 
-Smaidošās sejas ikona ir atsauksmju **vadīkla**. Atlasiet to, lai pastāstītu mums par savu pieredzi ar Customer Insights. Mēs aktīvi uzklausām jūsu atsauksmes un jau iepriekš pateicamies, ka paziņojāt mums, kas jums patīk un kā mēs varam uzlabot.
+Smaidiņa sejas ikona ir **vadīkla Atsauksmes**. Atlasiet to, lai pastāstītu mums par savu pieredzi ar Customer Insights. Mēs aktīvi uzklausām jūsu atsauksmes un jau iepriekš pateicamies, ka informējāt mūs par to, kas jums patīk un kā mēs varam uzlabot.
 
-Vadīkla **Iestatījumi**, ko attēlo zobrata ikona, ļauj apkopot sesijas informāciju customer insights un konfigurēt sava Microsoft 365 profila globālos iestatījumus.
+Vadīkla **Iestatījumi**, ko attēlo zobrata ikona, ļauj apkopot sesijas informāciju programmai Customer Insights un konfigurēt sava Microsoft 365 profila globālos iestatījumus.
 
 **Palīdzības** opcijas, kas vizualizētas ar jautājuma zīmes ikonu, nodrošina kontekstuālas palīdzības saites un citus noderīgus resursus.
 
-Jūsu profila attēls **atver jūsu** profila konta pārvaldnieku Microsoft 365. Atlasiet **Mans konts**, lai pārvaldītu savus personiskos iestatījumus.
+Jūsu profila attēlā tiek **atvērts jūsu** profila konta pārvaldnieks Microsoft 365. Atlasiet **Mans konts**, lai pārvaldītu savus personiskos iestatījumus.
 
-## <a name="getting-started-with-customer-insights-section"></a>Darba sākšana sadaļā Customer Insights
+## <a name="getting-started-with-customer-insights-section"></a>Darba sākšana ar Customer Insights sadaļu
 
-Šajā sadaļā ir kartes, kas palīdz iziet cauri Customer Insights vides iestatīšanas procesam.
+Šajā sadaļā ir kartītes, kas palīdz jums iziet Customer Insights vides iestatīšanas procesu.
 
-1. Datu **kartes** pievienošana palīdz importēt datus. Customer Insights atbalsta [vairākas iespējas, kā iegūt datus par saviem klientiem](data-sources.md). Atlasiet **Pievienot datu avotus**, lai sāktu darbu.
+1. Datu pievienošanas **karte** palīdz veikt datu importēšanu. Customer Insights atbalsta [vairākas iespējas, kā iegūt datus par jūsu klientiem](data-sources.md). Atlasiet **Pievienot datu avotus**, lai sāktu darbu.
 1. Kad sākotnējā datu importēšana ir veiksmīgi pabeigta, varat izmantot **unify datu** karti, lai saskaņotu datus un [izveidotu vienotus klientu profilus](data-unification.md) no atšķirīgiem avotiem. 
-1. Ja ir ieviesti vienoti klientu profili, ir pienācis laiks pārskatīt **datu** analīzes opcijas un iegūt papildu ieskatus. Mēģiniet izveidot biznesa pasākumus [, lai izsekotu KPI, definētu segmentus](measures.md), [lai sasniegtu noteiktas auditorijas, vai](segments.md) konfigurēt prognozes [ar MI](predictions-overview.md) palīdzību.
-1. Tagad, kad jūsu klientu dati ir importēti, vienoti un glīti strukturēti, jūs izmantojat mūsu [dažādos eksporta galamērķus](export-destinations.md), lai veiktu darbības ar datiem. Atlasiet **Pievienot savienojumus**, lai savienotu iecienītākos pakalpojumus. Piemēram, eksportējiet datus uz Dynamics 365 Marketing, lai izveidotu izejošās mārketinga kampaņas vai veidotu klientu braucienus. 
+1. Tā kā ir ieviesti vienoti klientu profili, ir pienācis laiks pārskatīt **datu** analīzes opcijas un iegūt papildu ieskatus. Mēģiniet izveidot [biznesa mērus](measures.md), lai izsekotu KPI, definētu segmentus [,](segments.md) lai sasniegtu noteiktas mērķauditorijas, vai [konfigurētu prognozes](predictions-overview.md), izmantojot AI.
+1. Tagad, kad jūsu klientu dati ir importēti, vienoti un glīti strukturēti, jūs izmantojat mūsu [dažādos eksporta galamērķus](export-destinations.md), lai veiktu darbības ar datiem. Atlasiet **Pievienot savienojumus, lai savienotu savus iecienītākos** pakalpojumus. Piemēram, eksportējiet datus uz Dynamics 365 Marketing, lai izveidotu izejošās mārketinga kampaņas vai izveidotu automatizētās kampaņas. 
 
-## <a name="your-customer-insights-section"></a>Klientu ieskatu sadaļa
+## <a name="your-customer-insights-section"></a>Jūsu klientu ieskatu sadaļa
 
-- **Segmentos** tiek rādītas debitoru grupas, pamatojoties uz definētajiem demogrāfiskajiem, uzvedības vai transakciju atribūtiem. [Izveidojot segmentus](segments.md), varat grupēt klientu bāzi un labāk izvēlēties uzņēmējdarbības mērķauditoriju.
+- **Segmentos tiek rādītas** klientu grupas, pamatojoties uz jūsu definētajiem demogrāfiskajiem, uzvedības vai transakciju atribūtiem. [Izveidojot segmentus](segments.md), varat grupēt klientu bāzi un labāk izvēlēties uzņēmējdarbības mērķauditoriju.
 
-- **Biznesa pasākumos** tiek rādīti elementi ar [galvenajiem darbības rādītājiem (KPI](measures.md)), kurus esat definējis. Piemēram, klienta vidējā iespējamība vai vidējie tiešsaistes izdevumi vienam klientam.
+- **Biznesa mērījumos** tiek rādīti elementi ar [jūsu definētajiem veiktspējas pamatrādītājiem (KPI).](measures.md) Piemēram, klienta vidējā iespējamība vai vidējie tiešsaistes izdevumi vienam klientam.
 
-- **Bagātināšana** uzskaita nesen pabeigto bagātināšanas braucienu rezultātus. [Bagātinājumi](enrichment-hub.md) pievieno informāciju jūsu klientu bāzei. Piemēram, izprotot intereses un zīmolus, kas viņiem simpatizē.
+- **Bagātināšanas** dokumentos ir uzskaitīti nesen pabeigto bagātināšanas braucienu rezultāti. [Bagātinājumi](enrichment-hub.md) pievieno informāciju jūsu klientu bāzei. Piemēram, izprotot intereses un zīmolus, kas viņiem simpatizē.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

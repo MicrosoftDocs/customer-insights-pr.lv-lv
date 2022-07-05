@@ -1,6 +1,6 @@
 ---
-title: Izveidojiet segmentus, izmantojot segmenta veidotāju
-description: Izveidojiet klientiem segmentus, lai tos grupētu, pamatojoties uz dažādiem atribūtiem.
+title: Izveidot segmentus
+description: Izveidojiet klientu segmentus, lai tos grupētu, pamatojoties uz dažādiem atribūtiem, izmantojot segmentu veidotāju vai ātros segmentus.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800105"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053981"
 ---
 # <a name="create-segments"></a>Izveidot segmentus
 
@@ -64,7 +64,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 
 1. Segmenta veidošanas lapā jūs definējat vai rakstāt kārtulas. Kārtula sastāv no viena vai vairākiem nosacījumiem, kas definē klientu kopu.
 
-1. **Sadaļā Kārtula1** izvēlieties tās entītijas atribūtu, pēc kuras vēlaties filtrēt klientus. Pastāv divi atibūtu izvēles veid:
+1. **Sadaļā Kārtula1** izvēlieties atribūtu entītijai, pēc kuras vēlaties filtrēt klientus. Pastāv divi atibūtu izvēles veid:
    - Rūtī **Pievienot kārtulai** pārskatiet pieejamo entītiju un atribūtu sarakstu un atlasiet ikonu **+** pie pievienojamā atribūta. Izvēlieties, vai atribūtu vēlaties pievienot esošai kārtulai vai izmantot to, lai izveidotu jaunu kārtulu.
    - Lai skatītu atbilstošos ieteikumus, ierakstiet atribūta nosaukumu kārtulu sadaļā.
 
@@ -120,7 +120,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
    > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat.
    > - **Plānotie atribūti** tiek faktorizēti, izmantojot kopas operatorus.
 
-1. Atlasiet **Rediģēt detaļas** blakus segmentam Bez nosaukuma. Norādiet segmenta nosaukumu un atjauniniet segmentam ieteikto **Izvades entītijas nosaukumu**. Pēc izvēles segmentam pievienojiet aprakstu un [atzīmes](work-with-tags-columns.md#manage-tags).
+1. Atlasiet **Rediģēt detalizētu informāciju** blakus segmentam Bez nosaukuma. Norādiet segmenta nosaukumu un atjauniniet segmentam ieteikto **Izvades entītijas nosaukumu**. Pēc izvēles segmentam pievienojiet aprakstu un [atzīmes](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
 
@@ -134,7 +134,7 @@ Veidojot segmentu, var saglabāt melnrakstu. Melnraksta posmā segments tiek sag
 > - Iestatot operatorus nosacījumos, segmentu veidotājs no entītijām neieteiks derīgas vērtības. Varat pāriet uz **Dati** > **Entītijas** un lejupielādēt entītijas datus, lai skatītu pieejamās vērtības.
 > - Nosacījumi atkarībā no datumiem ļauj pārslēgt fiksētus datumus un peldošu datumu diapazonu.
 > - Ja segmentam ir vairākas kārtulas, rediģējamajai kārtulai blakus ir vertikāla zilā līnija.
-> - Segmenta definīcijā kārtulas un nosacījumus var pārvietot uz citām vietām. Atlasiet vertikālo daudzpunkti (&vellip;) blakus kārtulai vai nosacījumam un izvēlieties, kā un kur to pārvietot.
+> - Segmenta definīcijā kārtulas un nosacījumus var pārvietot uz citām vietām. Atlasiet vertikālo elipsi (&vellip;) blakus kārtulai vai nosacījumam un izvēlieties, kā un kur to pārvietot.
 > - Komandjoslā izmantojot vadīklas **Atsaukt** un **Atcelt**, varat atsaukt atpakaļ veiktās izmaiņas.
 > - Pēc segmenta izveides daži segmenti ļauj [izsekot segmenta](segments.md#track-usage-of-a-segment) lietojumam.
 
@@ -157,7 +157,7 @@ Izmantojot ātros segmentus, varat ātri izveidot vienkāršus segmentus, izmant
 
    :::image type="content" source="media/quick-segment-name.png" alt-text="Ātrā segmenta nosaukums un novērtējums.":::
 
-5. Norādiet segmenta **nosaukumu** un **izvades entītijas nosaukumu**. Pēc izvēles pievienojiet [atzīmes](work-with-tags-columns.md#manage-tags).
+5. **Norādiet nosaukuma** un **izvades entītijas nosaukumu** savam segmentam. Pēc izvēles pievienojiet [atzīmes](work-with-tags-columns.md#manage-tags).
 
 6. Lai izveidotu segmentu, atlasiet opciju **Saglabāt**.
 

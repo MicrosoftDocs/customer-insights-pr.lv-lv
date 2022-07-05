@@ -1,5 +1,5 @@
 ---
-title: Izmēģinājumversijas BUJ - Dynamics 365 Customer Insights
+title: BUJ par Dynamics 365 Customer Insights izmēģinājumversiju
 description: Atbildes uz bieži uzdotiem jautājumiem, kuri saistīti ar Customer Insights izmēģinājumversijas iestatīšanu un pārvaldību. Uzziniet, kā novērst platformas un lietotnes specifiskās problēmas.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011896"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051508"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>BUJ par Dynamics 365 Customer Insights izmēģinājumversiju
 
@@ -23,7 +23,7 @@ ms.locfileid: "9011896"
 
 Šī programma ir mākoņpakalpojums, un tās lietošanai nav nepieciešama nekāda īpaša programmatūra, izņemot atjauninātu tīmekļa pārlūkprogrammu, lai gan pastāv daži ierobežojumi. Lai iegūtu labāko izmēģinājumversijas lietošanas pieredzi, nemēģiniet piekļūt izmēģinājumversijas vietnei inkognito režīmā un izvēlieties jums vistuvāko izmēģinājumversijas atrašanās vietu. [Papildinformācija par prasībām tīmekļa programmai.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kā reģistrēties tiesas procesam bez īrnieka Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kā reģistrēties izmēģinājumversijai bez nomnieka Microsoft 365?
 
 Varat ievadīt ar darbu nesaistītu e-pasta adresi, un mēs jums izveidosim kontu un nomnieku.
 
@@ -42,7 +42,7 @@ Reģistrējoties izmēģinājumversijai, saņemsit e-pasta ziņojumu ar detaliz�
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kā izmēģinājumversijai pievienot papildu lietotājus?
 
-Lai pievienotu lietotājus, dodieties uz [Microsoft 365 administrēšanas centru](https://admin.microsoft.com), izmantojot izmēģinājumversijas administratora kontu. Izpildiet [administrēšanas centrā sniegtos norādījumus](/microsoft-365/admin/add-users/add-users), lai pievienotu lietotājus līdz izmēģinājumversijas licencei noteiktajam ierobežojumam. Ja lietotājam, kuru pievienojat, jau ir Microsoft 365 konts, piešķiriet viņam atbilstošu drošības loma izmēģinājuma organizācijā. Papildinformāciju skatiet rakstā [drošības loma piešķiršana lietotājam](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Lai pievienotu lietotājus, dodieties uz [Microsoft 365 administrēšanas centru](https://admin.microsoft.com), izmantojot izmēģinājumversijas administratora kontu. Izpildiet [administrēšanas centrā sniegtos norādījumus](/microsoft-365/admin/add-users/add-users), lai pievienotu lietotājus līdz izmēģinājumversijas licencei noteiktajam ierobežojumam. Ja lietotājam, kuru pievienojat, jau ir Microsoft 365 konts, piešķiriet viņam atbilstošu drošības loma izmēģinājuma organizācijā. Papildinformāciju skatiet sadaļā [drošības loma piešķiršana lietotājam](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Cik daudz lietotāju es varu pievienot izmēģinājumversijas vidē?
 
@@ -62,13 +62,13 @@ Izmēģinājumversiju programmā varat paplašināt tieši. Izmēģinājumversij
 
 Parasti ieteicams sākt atjaunināšanu ar saviem datiem, jauninot uz Customer Insights apmaksāto versiju. 
 
-Pēc izvēles, ja izmantojat tikai Customer Insights, varat kopēt savus datus no izmēģinājuma vides, ja iegādājaties Customer Insights. Lai migrētu iestatījumus no izmēģinājuma vides uz apmaksātu vidi, jums jābūt Customer Insights izmēģinājumversijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram savā organizācijā.
+Ja izmantojat tikai Customer Insights, varat kopēt savus datus no izmēģinājumversijas vides, ja iegādājaties Customer Insights. Lai migrētu iestatījumus no izmēģinājumversijas uz maksas vidi, jums ir jābūt Customer Insights izmēģinājumversijas administratoram un nomnieka globālajam administratoram Microsoft 365 vai Dynamics 365 administratoram savā organizācijā.
 
 Pēc pieteikšanās apmaksātajā Customer Insights instancē pirmo reizi tiek piedāvāts izveidot jaunu vidi. Šajā procesā varat izvēlēties kopēt konfigurāciju no esošas vides un migrēt lielāko daļu iestatījumu. Ja jums ir iepriekšminētās atļaujas, izmēģinājumversijas vide tiks parādīta šajā sarakstā. Papildinformāciju skatiet sadaļā [Vides konfigurācijas kopēšana](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kādi ir izmēģinājumversijas ierobežojumi un kvotas?
 
-- Jūs nevarat izmantot savu Azure Data Lake Storage kontu, lai saglabātu izvades datus Customer Insights izmēģinājuma versijas laikā. Tomēr jūs varat uzņemt datus no Datu ezera krātuves konta.
+- Jūs nevarat izmantot savu Azure Data Lake Storage kontu, lai saglabātu izvades datus Customer Insights izmēģinājuma versijas laikā. Tomēr varat uzņemt datus no Data Lake Storage konta.
 - Dataverse vidē varat glabāt līdz pat 3 GB datu, kas tiek nodrošināti automātiski, sākot Customer Insights izmēģinājumversiju.
 
 ## <a name="customer-insights-specific-questions"></a>Specifiski jautājumi par Customer Insights
@@ -81,10 +81,10 @@ Pēc reģistrēšanās izmēģinājumversijai jūs nonāksiet programmas galvena
 
 Vairākums Customer Insights iespēju līdzekļu ir pieejami izmēģinājumversijai.
 
-Nav pieejami **šādi** līdzekļi:
+Tālāk minētie līdzekļi **nav pieejami**.
 
-- Nevar izveidot jaunas vides, kas izmanto jūsu Azure Data Lake Storage kontu.
-- Izmēģinājuma vidi nevar izdzēst.
+- Jūs nevarat izveidot jaunas vides, kas izmanto jūsu kontu Azure Data Lake Storage.
+- Izmēģinājumversijas vidi nevar izdzēst.
 
 ### <a name="how-long-does-the-trial-last"></a>Kāds ir izmēģinājumversijas derīguma termiņš?
 

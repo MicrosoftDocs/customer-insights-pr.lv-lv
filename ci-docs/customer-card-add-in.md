@@ -1,6 +1,6 @@
 ---
-title: Klienta kartes pievienojumprogramma Dynamics 365 programmām (satur video)
-description: Rādīt klientu profila datus no Customer Insights dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
+title: Customer Card pievienojumprogramma Dynamics 365 programmām (priekšskatījums) (satur video)
+description: Parādiet klienta profila datus no Customer Insights Dynamics 365 programmās, izmantojot šo pievienojumprogrammu.
 ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755645"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082137"
 ---
-# <a name="customer-card-add-in-preview"></a>Klienta kartes pievienojumprogramma (priekšskatījums)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Klienta kartes pievienojumprogramma Dynamics 365 programmām (priekšskatījums)
 
 Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 programmās. Kad klienta kartītes pievienojumprogramma ir instalēta atbalstītajā Dynamics 365 programmā, varat izvēlēties rādīt klientu profila laukus, ieskatus un darbību laika grafiku. Pievienojumprogramma izgūs datus no programmas Customer Insights, neietekmējot pievienotās Dynamics 365 programmas datus.
 
@@ -29,14 +29,14 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 - Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja Dynamics 365 kontaktpersonu (vai uzņēmumu) uzņemšanai izmantojat citu metodi, pārliecinieties, vai `contactid` lauks (vai `accountid`) ir iestatīts kā [primārā atslēga šai datu avots datu apvienošanas procesa kartes solī](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
-- Visi Klienta kartes pievienojumprogrammas Dynamics 365 lietotāji ir [jāpievieno kā lietotāji](permissions.md) customer insights, lai skatītu datus.
-- [Lai dati darbotos, klientu ieskatos ir nepieciešamas konfigurētas meklēšanas un filtrēšanas iespējas](search-filter-index.md).
-- Katra pievienojumprogrammas vadīkla paļaujas uz noteiktiem datiem customer insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
+- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai kontus), datu apvienošanas procesa kartes solī ir jāpārliecinās `contactid`, vai lauks (vai`accountid`) ir iestatīts kā [primārā atslēga šim datu avots](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Lai skatītu datus, visiem Dynamics 365 pievienojumprogrammas Customer Card lietotājiem programmā Customer Insights ir jābūt [pievienotiem kā lietotājiem](permissions.md).
+- [Lai uzmeklētu datus un darbotos, programmā Customer Insights ir nepieciešamas konfigurētas meklēšanas un filtrēšanas iespējas](search-filter-index.md) programmā Customer Insights.
+- Katra pievienojumprogrammas vadīkla balstās uz konkrētiem datiem programmā Customer Insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs jūs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
   - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
-  - **Informācijas kontrole**: nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
+  - **Informācijas vadīkla**: nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
-  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Karšu pievienojumprogramma atbalsta šos uzlabojumus: [Microsoft nodrošinātos zīmolus](enrichment-microsoft.md), [Microsoft nodrošinātās intereses](enrichment-microsoft.md) un [Microsoft sniegtos Office iesaistes datus](enrichment-office.md).
+  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šos bagātinājumus: [Microsoft nodrošinātie zīmoli](enrichment-microsoft.md), [Microsoft nodrošinātie intereses](enrichment-microsoft.md) un [Microsoft nodrošinātie Office iesaistes dati](enrichment-office.md).
   - **Kontaktpersonu vadīkla**: nepieciešama kontaktpersonu tipa semantiskās entītijas definīcija.
   - **Laika skalas vadīkla**: Nepieciešamas [konfigurētās darbības](activities.md).
 
@@ -77,7 +77,7 @@ Lai Dynamics 365 programma instalētu risinājumu, jums, iespējams, vajadzēs p
 
 ## <a name="add-customer-card-controls-to-forms"></a>Klienta karšu vadīklu pievienošana veidlapām
 
-Atkarībā no scenārija varat izvēlēties pievienot vadīklas veidlapai **Kontaktpersona** vai veidlapai **Uzņēmums**. Ja customer insights vide ir paredzēta biznesa kontiem, ieteicams vadīklas pievienot veidlapai Konts. Šādā gadījumā nākamajās darbībās "kontaktpersona" aizstājiet ar "uzņēmumu."
+Atkarībā no scenārija varat izvēlēties pievienot vadīklas veidlapai **Kontaktpersona** vai veidlapai **Uzņēmums**. Ja jūsu Customer Insights vide ir paredzēta uzņēmumu kontiem, ieteicams šīs vadīklas pievienot veidlapai Konts. Šādā gadījumā nākamajās darbībās "kontaktpersona" aizstājiet ar "uzņēmumu."
 
 1. Lai savai kontaktpersonas veidlapai pievienotu klienta kartes vadīklas, dodieties uz **Iestatījumi** > **Pielāgojumi** risinājumā Dynamics 365.
 
@@ -122,7 +122,7 @@ Klienta kartes pievienojumprogramma netiek automātiski jaunināta. Lai jauninā
 
 ## <a name="troubleshooting"></a>Problēmu novēršana
 
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Klienta kartes pievienojumprogrammas vadīklas neatrod datus
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Vadīklas no customer card pievienojumprogrammas neatrod datus
 
 **Problēma:**
 
@@ -132,14 +132,14 @@ Pat ar pareizi konfigurētiem ID laukiem vadīklas nevar atrast datus nevienam k
 
 1. Pārliecinieties, vai esat konfigurējis kartes pievienojumprogrammu saskaņā ar instrukcijām: [Klienta kartes pievienojumprogrammas konfigurēšana](#configure-the-customer-card-add-in)
 
-1. Pārskatiet datu norīšanas konfigurāciju. Rediģējiet dynamics 365 sistēmas datu avots, kurā ir kontaktpersonas ID GUID. Ja kontaktpersonas ID GUID redaktorā Power Query tiek rādīts ar lielajiem burtiem, mēģiniet veikt šādas darbības:
-    1. Rediģējiet datu avots, lai redaktorā Power Query atvērtu datu avots.
-    1. Atlasiet kolonnas Kontaktpersonas ID.
+1. Pārskatiet datu uzņemšanas konfigurāciju. Rediģējiet dynamics 365 sistēmas datu avots, kurā ir kontaktpersonas ID GUID. Ja redaktorā kontaktpersonas ID GUID tiek rādīts ar lielajiem burtiem Power Query, mēģiniet veikt šādas darbības:
+    1. Rediģējiet datu avots, lai datu avots atvērtu redaktorā Power Query.
+    1. Atlasiet kolonnu kontaktpersonas ID.
     1. Galvenes joslā atlasiet **Transformēt**, lai skatītu pieejamās darbības.
-    1. Atlasiet **mazos burtus**. Pārbaudiet, vai GUID tabulā tagad ir mazie.
+    1. Atlasiet **mazos burtus**. Pārbaudiet, vai tabulā norādītie GUID tagad ir ar mazajiem burtiem.
     1. Saglabājiet datu avotu.
     1. Palaidiet datu norīšanas, apvienošanas un pakārtotos procesus, lai izplatītu GUID izmaiņas.
 
-Kad sistēma ir pabeigusi pilnīgu atsvaidzināšanu, klienta kartes pievienojumprogrammas vadīklām jāparāda paredzamie dati.
+Kad sistēma ir pabeigusi pilnu atsvaidzināšanu, customercard pievienojumprogrammas vadīklās ir jāparāda paredzamie dati.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

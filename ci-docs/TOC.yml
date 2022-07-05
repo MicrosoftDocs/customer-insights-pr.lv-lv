@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Mācību katalogs
   items:
-    - name: Sertificēt kā Microsoft klientu datu platformas speciālistu
+    - name: Sertifikācija kā Microsoft klientu datu platformas speciālists
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Darba sākšana ar pakalpojumu Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -14,9 +14,9 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Vienotais klienta profila izveide
       href: /learn/modules/unified-customer-profile/
-    - name: Darbs ar customer insights
+    - name: Darbs ar Customer Insights
       href: /learn/modules/working-with-customer-insights/
-    - name: Bagātiniet datus un veiciet prognozes
+    - name: Datu bagātināšana un prognožu veikšana
       href: /learn/modules/enrich-data/
     - name: Ārējo savienojumu pārvaldība
       href: /learn/modules/configure-third-party-connections/
@@ -36,9 +36,9 @@
       href: get-started.md
     - name: Sākt ar apmaksātu licenci
       href: paid-license.md
-    - name: Izpētiet klientu ieskatus
+    - name: Izpētiet customer insights
       href: home.md
-    - name: Darbs ar tagiem un kolonnām
+    - name: Darbs ar atzīmēm un kolonnām
       href: work-with-tags-columns.md
     - name: Darbs ar uzņēmuma kontiem
       href: work-with-business-accounts.md
@@ -56,7 +56,7 @@
       href: connect-dataverse-managed-lake.md
     - name: 'Datu avotu pievienošana, izmantojot Power Query savienotājus'
       href: connect-power-query.md
-    - name: Datu avotu bagātināšana
+    - name: Bagātināšana datu avotiem
       href: data-sources-enrichment.md
     - name: Inkrementālā atsvaidzināšana datu avotiem
       href: incremental-refresh-data-sources.md
@@ -66,21 +66,21 @@
   items:
     - name: Datu apvienošanas pārskats
       href: data-unification.md
-    - name: Atlasīt avota laukus
+    - name: Avota lauku atlasīšana
       href: map-entities.md
     - name: Ierakstu dublikātu noņemšana
       href: remove-duplicates.md
-    - name: Atbilstības nosacījumi
+    - name: Spēles nosacījumi
       href: match-entities.md
     - name: Klientu lauku apvienošana
       href: merge-entities.md
-    - name: Pārskatīt datu apvienošanu
+    - name: Datu apvienošanas pārskatīšana
       href: review-unification.md
-    - name: Atjaunināt apvienošanas iestatījumus
+    - name: Apvienošanas iestatījumu atjaunināšana
       href: data-unification-update.md
 - name: Datu bagātināšana
   items:
-    - name: Klientu profilu bagātināšana
+    - name: Datu bagātināšanas pārskats
       href: enrichment-hub.md
     - name: Konti no Office 365 datiem
       href: enrichment-office.md
@@ -110,9 +110,9 @@
       href: customer-profiles.md
     - name: Filtrējiet vienotos klientu profilus
       href: search-filter-index.md
-    - name: Definēt debitoru aktivitātes
+    - name: Definējiet klientu aktivitātes
       href: activities.md
-    - name: Klientu ieskatu piekrišanas pārvaldība
+    - name: Piekrišanas pārvaldības izmantošana
       href: consent-management.md
 - name: Segmenti
   items:
@@ -132,9 +132,9 @@
   items:
     - name: Pasākumu pārskats
       href: measures.md
-    - name: Izveidot jaunu pasākumu
+    - name: Jauna pasākuma izveide
       href: measure-builder.md
-    - name: Pasākuma veidnes izmantošana
+    - name: Mēra veidnes izmantošana
       href: measure-templates.md
 - name: Prognozes
   items:
@@ -150,7 +150,7 @@
           href: predict-subscription-churn.md
         - name: Prognozējiet transakcijas zudumu
           href: predict-transactional-churn.md
-        - name: Klientu atsauksmju noskaņojuma analīze
+        - name: Analizējiet noskaņojumu klientu atsauksmēs
           href: sentiment-analysis.md
         - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
           href: custom-models.md
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads ikona
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo
@@ -284,7 +286,7 @@
       href: permissions.md
     - name: Ievadiet savu Key Vault
       href: use-azure-key-vault.md
-    - name: Eksportēt diagnostikas žurnālus
+    - name: Diagnostikas žurnālu eksportēšana
       href: diagnostics.md
     - name: Savienojumu pārskats
       href: connections.md

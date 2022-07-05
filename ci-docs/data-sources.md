@@ -1,7 +1,7 @@
 ---
-title: Izmantojiet datu avotus datu uzņemšanai
-description: Uzziniet, kā importēt datus no dažādiem avotiem.
-ms.date: 05/31/2022
+title: Datu avotu pārskats
+description: Uzziniet, kā importēt vai uzņemt datus no dažādiem avotiem.
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,45 +12,45 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011758"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051462"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
-Dynamics 365 Customer Insights nodrošina savienojumus, lai iegūtu datus no plaša avotu kopuma. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat [apvienoties](data-unification.md), ģenerēt ieskatus un aktivizēt datus personalizētas pieredzes veidošanai.
+Dynamics 365 Customer Insights nodrošina savienojumus, lai iegūtu datus no plaša avotu kopuma. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat [apvienot](data-unification.md), ģenerēt ieskatus un aktivizēt datus personalizētas pieredzes veidošanai.
 
 ## <a name="add-data-sources"></a>Pievienot datu avotus
 
-Programmā Customer Insights varat pievienot vai importēt datu avotus. Tālāk norādītajās saitēs ir sniegti norādījumi par datu avotu pievienošanu.
+Varat pievienot vai importēt datu avotus programmā Customer Insights. Tālāk norādītajās saitēs ir sniegti norādījumi par datu avotu pievienošanu.
 
-**datu avots pievienošana**
+**Pievienojiet datu avots**
 
-Ja dati ir sagatavoti kādā no Microsoft Azure datu pakalpojumiem, Customer Insights var viegli izveidot savienojumu ar datu avots, atkārtoti neuzņemot datus. Atlasiet kādu no šīm opcijām:
-- [Azure Data Lake Storage(csv vai parketa faili mapē Kopējais datu modelis)](connect-common-data-model.md)
+Ja jums ir dati, kas sagatavoti kādā no Microsoft Azure datu pakalpojumiem, Customer Insights var viegli izveidot savienojumu ar datu avots bez nepieciešamības atkārtoti ievadīt datus. Atlasiet kādu no šīm opcijām:
+- [Azure Data Lake Storage(csv vai parketa faili mapē Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(Ezeru datubāzes)](connect-synapse.md)
 - [Microsoft Dataverse datu ezers](connect-dataverse-managed-lake.md)
 
-**Importēt un pārveidot**
+**Importēšana un transformācija**
 
-Ja izmantojat lokālus datu avotus, Microsoft vai trešo pušu datus, importējiet un pārveidojiet datus, izmantojot Power Query savienotājus.
+Ja izmantojat lokālos datu avotus, Microsoft vai trešo pušu datus, importējiet un pārveidojiet datus, izmantojot Power Query savienotājus.
 - [Power Query Savienotāji](connect-power-query.md)
 
-## <a name="review-data-sources"></a>Pārskatīt datu avotus
+## <a name="review-data-sources"></a>Datu avotu pārskatīšana
 
-Ja vide ir konfigurēta Customer Insights krātuves izmantošanai un tiek izmantoti lokāli datu avoti, tiek izmantotas Power Platform datu plūsmas. Izmantojot Power Platform datu plūsmas, varat skatīt koplietojamus datu avotus un datu avotus, ko pārvalda citi. Lapā **Datu avoti** datu avoti ir uzskaitīti trīs sadaļās:
-- **Koplietots**: datu avoti, kurus var pārvaldīt visi Customer Insights administratori. Power Platform datu plūsmas, savs krātuves konts un pievienošana pārvaldītam datu ezeram ir koplietojamu Dataverse datu avotu piemēri.
-- **Manis pārvaldīts**: Power Platform datu plūsmas, ko izveidoja un pārvalda tikai jūs. Citi Customer Insights administratori var skatīt tikai šīs datu plūsmas, bet ne rediģēt, atsvaidzināt vai dzēst tās.
-- **Pārvalda citi**: Power Platform citu administratoru izveidotas datu plūsmas. Tos var apskatīt tikai. Tajā ir norādīts datu plūsmas īpašnieks, ar kuru sazināties, lai saņemtu jebkādu palīdzību.
+Ja jūsu vide tika konfigurēta tā, lai izmantotu Customer Insights krātuvi, un jūs izmantojat lokālos datu avotus, jūs izmantojat Power Platform datu plūsmas. Izmantojot Power Platform datu plūsmas, varat skatīt koplietojamus datu avotus un datu avotus, ko pārvalda citi. Lapā **Datu avoti** datu avoti ir uzskaitīti trīs sadaļās:
+- **Kopīgots**: datu avoti, kurus var pārvaldīt visi Customer Insights administratori. Power Platform datu plūsmas, savs krātuves konts un pievienošana pārvaldītam datu ezeram Dataverse ir koplietojamu datu avotu piemēri.
+- **Pārvalda es**: Power Platform datu plūsmas, ko izveidojis un pārvaldāt tikai jūs. Citi Customer Insights administratori var tikai skatīt šīs datu plūsmas, bet ne rediģēt, atsvaidzināt vai dzēst.
+- **Pārvalda citi**: Power Platform datu plūsmas, ko izveidojuši citi administratori. Tos var apskatīt tikai. Tajā ir norādīts datu plūsmas īpašnieks, ar kuru sazināties, lai saņemtu palīdzību.
 > [!NOTE]
-> Visas entītijas var skatīt un izmantot citi lietotāji. Lai gan datu avoti pieder lietotājam, kurš tos izveidoja, datu norīšanas rezultātā iegūtās entītijas var izmantot ikviens Customer Insights lietotājs.
+> Visas entītijas var skatīt un izmantot citi lietotāji. Lai gan datu avoti pieder lietotājam, kurš tos ir izveidojis, iegūtās entītijas no datu norīšanas var izmantot ikviens Customer Insights lietotājs.
 
-Ja vide neizmanto Power Platform datu plūsmas, **lapā Datu avoti** ir tikai visu datu avotu saraksts. Sadaļas netiek rādītas.
+Ja jūsu vide neizmanto Power Platform datu plūsmas, **lapā Datu avoti** ir tikai visu datu avotu saraksts. Sadaļas netiek rādītas.
 
-Dodieties uz **Datu** > **datu avoti**, lai skatītu katra uzņemtā datu avots nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti šim avotam. Datu avotu sarakstu var kārtot pēc katras kolonnas.
+Dodieties uz **Datu** > **datu avoti**, lai skatītu katras uzņemtās datu avots nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti šim avotam. Datu avotu sarakstu var kārtot pēc katras kolonnas.
 
 :::image type="content" source="media/configure-data-datasource-added.png" alt-text="Pievienotie datu avoti.":::
 
@@ -60,9 +60,9 @@ Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos d
 
 ## <a name="refresh-data-sources"></a>Atsvaidzināt datu avotus
 
-Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. [Lokāli datu avoti](connect-power-query.md#add-data-from-on-premises-data-sources) tiek atsvaidzināti pēc saviem grafikiem, kas iestatīti datu uzņemšanas laikā. Attiecībā uz pievienotajiem datu avotiem datu uzņemšana patērē jaunākos datus, kas pieejami no šīs datu avots.
+Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. [Lokālie datu avoti](connect-power-query.md#add-data-from-on-premises-data-sources) atsvaidzina savus grafikus, kas tiek iestatīti datu uzņemšanas laikā. Attiecībā uz pievienotajiem datu avotiem datu uzņemšana patērē jaunākos datus, kas pieejami no šīs datu avots.
 
-Dodieties uz **Administrēšanas** > **sistēmas** > [**grafiku**](system.md#schedule-tab), lai konfigurētu sistēmā ieplānotās uzņemto datu avotu atsvaidzināšanas.
+Dodieties uz **administrēšanas** > **sistēmas** > [**grafiku**](system.md#schedule-tab), lai konfigurētu sistēmas ieplānotos uzņemto datu avotu atsvaidzinājumus.
 
 Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
@@ -74,7 +74,7 @@ Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
 
 ## <a name="delete-a-data-source"></a>Datu avota dzēšana
 
-Datu avots var dzēst tikai tad, ja dati netiek izmantoti nekādā apstrādē, piemēram, apvienošanā, ieskatos, aktivizēšanā vai eksportā.
+Datu avots var dzēst tikai tad, ja dati netiek izmantoti nekādā apstrādē, piemēram, unifikācijā, ieskatos, aktivizēšanā vai eksportēšanā.
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 

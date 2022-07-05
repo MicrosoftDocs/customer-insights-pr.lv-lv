@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz SendGrid
+title: Segmentu eksportēšana uz SendGrid (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz SendGrid.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 38dd782fdf06d5970e79e6deb6e8fc94252da585
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 669f0fb48b095f6a9faeebf257ee9df3d1c580c7
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643689"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083040"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmentu eksportēšana uz SendGrid (priekšskatījums)
 
@@ -23,7 +23,7 @@ Eksportējiet vienoto klientu profilu segmentus uz SendGrid kontaktpersonu sarak
 
 -   Jums ir [SendGrid konts](https://sendgrid.com/) un atbilstošie administratora akreditācijas dati.
 -   SendGrid ir esoši kontaktpersonu saraksti un attiecīgie ID. Papildinformāciju skatiet rakstā [SendGrid - Pārvaldīt kontaktus](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

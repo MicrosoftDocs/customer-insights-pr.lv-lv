@@ -1,5 +1,5 @@
 ---
-title: Uzņēmumu profilu bagātināšana ar trešās puses bagātināšanas programmu Leadspace
+title: Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
 description: Vispārēja informācija par Leadspace trešās puses bagātināšanu.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,36 +8,36 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954188"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082368"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Uzņēmuma profilu bagātināšana ar Leadspace (priekšskatījums)
 
 Leadspace ir datu uzņēmums, kas nodrošina datu platformu B2B klientam. Tas ļauj vidēm ar vienotiem klientu profiliem, kuru pamatā ir uzņēmumi, bagātināt viņu datus. Bagātināt *klientu profilus* ar atribūtiem, piemēram, uzņēmuma lielumu, atrašanās vietu vai nozari. Bagātināt *kontaktpersonu profilus* ar atribūtiem, piemēram, amatu, personu vai e-pasta pārbaudi.
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
 - Aktīva Leadspace licence.
-- [Vienoti debitoru profili,](customer-profiles.md) kuru pamatā ir konti.
+- [Vienoti klientu profili,](customer-profiles.md) kuru pamatā ir konti.
 - Leadspace [savienojumu](connections.md)[konfigurē](#configure-the-connection-for-leadspace) administrators. Tieši sazinieties ar [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/), lai iegūtu informāciju par produktu.
 
 ## <a name="configure-the-connection-for-leadspace"></a>Leadspace savienojuma konfigurēšana
 
-Jums jābūt customer insights administratoram [un](permissions.md#admin) jābūt "beztermiņa atslēgai" (sauktai par **Leadspace token**).
+Jums ir jābūt customer insights [administratoram](permissions.md#admin), un jums ir jābūt "pastāvīgajai atslēgai" (sauktai par **Leadspace marķieri**).
 
-1. Atlasiet **Pievienot savienojumu**, konfigurējot bagātināšanu, vai dodieties uz **Administrēšanas** > **savienojumiem** un atlasiet **Iestatīt** nosaukumā Leadspace.
+1. Atlasiet **Pievienot savienojumu**, konfigurējot bagātināšanu, vai dodieties uz **Administratoru** > **savienojumi** un leadspace elementā atlasiet **Iestatīt**.
 
    :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace savienojuma konfigurēšanas lapa.":::
 
-1. Ievadiet savienojuma nosaukumu un derīgu ievadtelpas marķieri.
+1. Ievadiet savienojuma nosaukumu un derīgu Leadspace marķieri.
 
 1. Pārskatiet un sniedziet savu piekrišanu [Datu konfidencialitātei un atbilstībai](#data-privacy-and-compliance), atlasot **Es piekrītu**.
 
-1. Atlasiet **Pārbaudīt**, lai validētu konfigurāciju, un pēc tam atlasiet **Saglabāt**.
+1. Atlasiet **Verificēt**, lai validētu konfigurāciju, un pēc tam atlasiet **Saglabāt**.
 
 ### <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
 
@@ -48,23 +48,23 @@ Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināš
 
 1. Dodieties uz **Dati** > **Bagātināšana** un atlasiet cilni **Atklāt**.
 
-1. Atlasiet **Bagātināt manus datus** uzņēmuma datos **no** Elementa LeadSpace.
+1. Atlasiet **Bagātināt manus datus** ar **uzņēmuma datiem** no elementa Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace mozaīkas ekrānuzņēmums.":::
 
 1. Pārskatiet pārskatu un pēc tam atlasiet **Tālāk**.
 
-1. Atlasiet savienojumu. Ja tāds nav pieejams, sazinieties ar administratoru.
+1. Atlasiet savienojumu. Sazinieties ar administratoru, ja tāds nav pieejams.
 
 1. Atlasiet **Tālāk**.
 
-1. Atlasiet klienta datu kopu **un** izvēlieties profilu vai segmentu, kuru vēlaties bagātināt ar uzņēmuma datiem no Leadspace. Klientu *uzņēmums* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā esošos klientu profilus.
+1. **Atlasiet klienta datu kopu** un izvēlieties profilu vai segmentu, kuru vēlaties bagātināt ar uzņēmuma datiem no Leadspace. Klienta *entītija* bagātina visus jūsu klientu profilus, savukārt segments bagātina tikai šajā segmentā ietvertos klientu profilus.
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Ekrānuzņēmums, izvēloties klientu datu kopu.":::
 
-1. Definējiet, kāda tipa laukus no vienotajiem profiliem izmantot saskaņošanai: primārā un/vai sekundārā adrese. Jūs varat norādīt lauka kartējumu abām adresēm un atsevišķi bagātināt abu adrešu profilus. Piemēram, mājas adresei un uzņēmuma adresei. Atlasiet **Tālāk**.
+1. Definējiet, kāda veida laukus no saviem vienotajiem profiliem izmantot saskaņošanai: primāro un/vai sekundāro adresi. Jūs varat norādīt lauka kartējumu abām adresēm un atsevišķi bagātināt abu adrešu profilus. Piemēram, mājas adresei un uzņēmuma adresei. Atlasiet **Tālāk**.
 
-1. Kartējiet savus laukus uz uzņēmuma datiem no LeadSpace. Lauks **Uzņēmuma nosaukums** ir obligāts. Lielākai atbilstībai varat pievienot līdz diviem citiem laukiem - **Uzņēmuma tīmekļa vietne** un **Uzņēmuma atrašanās vieta**.
+1. Kartējiet laukus uz uzņēmuma datiem no Leadspace. Lauks **Uzņēmuma nosaukums** ir obligāts. Lielākai atbilstībai varat pievienot līdz diviem citiem laukiem - **Uzņēmuma tīmekļa vietne** un **Uzņēmuma atrašanās vieta**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace lauku kartējuma rūts.":::
 
@@ -76,13 +76,13 @@ Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināš
 
 1. Atlasiet **Tālāk**.
 
-1. **Norādiet bagātināšanas nosaukumu** un entītijas **Izvade nosaukumu**.
+1. **Norādiet bagātināšanas nosaukumu** un izvades entītijas **nosaukumu**.
 
 1. Pēc izvēļu pārskatīšanas atlasiet **Saglabāt bagātināšanu**.
 
-1. Atlasiet **Palaist**, lai sāktu bagātināšanas procesu, vai tuvu, lai **atgrieztos lapā Bagātinājumi**.
+1. Atlasiet **Palaist**, lai sāktu bagātināšanas procesu, vai aizveriet, lai **atgrieztos bagātināšanas** lapā.
 
-## <a name="enrichment-results"></a>Bagātināšanas rezultāti
+## <a name="view-enrichment-results"></a>Bagātināšanas rezultātu skatīšana
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

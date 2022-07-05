@@ -1,5 +1,5 @@
 ---
-title: Klienta vai konta lauku apvienošana
+title: Klientu lauku apvienošana datu apvienošanai
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,45 +14,45 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740866"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082956"
 ---
-# <a name="unify-customer-fields"></a>Klientu lauku apvienošana
+# <a name="unify-customer-fields-for-data-unification"></a>Klientu lauku apvienošana datu apvienošanai
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Šajā apvienošanas procesa solī izvēlieties un izslēdziet atribūtus, ko sapludināt vienotajā profila entītijā. Piemēram, ja trim entītijām bija e-pasta dati, iespējams, vēlēsities paturēt visus trīs atsevišķos e-pasta laukus vai sapludināt tos vienā vienotā profila e-pasta laukā. Dažus atribūtus sistēma automātiski apvieno. Varat izveidot stabilus un unikālus klientu ID un grupēt saistītos profilus klasterī.
+Šajā apvienošanas procesa darbībā izvēlieties un izslēdziet atribūtus, ko sapludināt savā vienotajā profila entītijā. Piemēram, ja trim entītijām bija e-pasta dati, iespējams, vēlēsities saglabāt visus trīs atsevišķos e-pasta laukus vai sapludināt tos vienā e-pasta laukā vienotajam profilam. Dažus atribūtus sistēma automātiski apvieno. Varat izveidot stabilus un unikālus klientu ID un grupēt saistītus profilus klasterī.
 
 :::image type="content" source="media/m3_unify.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
 
-## <a name="review-and-update-the-customer-fields"></a>Pārskatiet un atjauniniet debitora laukus
+## <a name="review-and-update-the-customer-fields"></a>Klientu lauku pārskatīšana un atjaunināšana
 
-1. Pārskatiet lauku sarakstu, kas tiks vienoti **tabulas cilnē** Debitors. Ja nepieciešams, veiciet jebkādas izmaiņas.
+1. Pārskatiet to lauku sarakstu, kas tiks apvienoti **tabulas cilnē Klienta lauki**. Ja piemērojams, veiciet izmaiņas.
 
-   1. Jebkuram kombinētam laukam var:
+   1. Visiem apvienotajiem laukiem varat:
       - [Labot](#edit-a-merged-field)
       - [Pārdēvēt](#rename-fields)
       - [Atdalīt](#separate-merged-fields)
       - [Neiekļaut](#exclude-fields)
-      - [Pārvietoties uz augšu vai uz leju](#change-the-order-of-fields)
+      - [Pārvietošanās uz augšu vai uz leju](#change-the-order-of-fields)
 
    1. Jebkuram atsevišķam laukam varat:
       - [Lauku apvienošana](#combine-fields-manually)
-      - [Lauku grupas kombinēšana](#combine-a-group-of-fields)
+      - [Lauku grupas apvienošana](#combine-a-group-of-fields)
       - [Pārdēvēt](#rename-fields)
       - [Neiekļaut](#exclude-fields)
-      - [Pārvietoties uz augšu vai uz leju](#change-the-order-of-fields)
+      - [Pārvietošanās uz augšu vai uz leju](#change-the-order-of-fields)
 
-1. Pēc izvēles [ģenerējiet debitora ID konfigurāciju](#configure-customer-id-generation).
+1. Pēc izvēles [ģenerējiet klienta ID konfigurāciju](#configure-customer-id-generation).
 
-1. Pēc izvēles [grupu profili mājsaimniecībās vai kopās](#group-profiles-into-households-or-clusters).
+1. Pēc izvēles [grupu profili mājsaimniecībās vai klasteros](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
-> [Nākamais solis: pārskatiet apvienošanu](review-unification.md)
+> [Nākamais solis: Unifikācijas pārskatīšana](review-unification.md)
 
 ### <a name="edit-a-merged-field"></a>Rediģējiet sapludinātu lauku
 
@@ -81,7 +81,7 @@ Mainiet sapludināto vai atsevišķo lauku parādāmo nosaukumu. Izvades entīti
 
 1. Atlasiet lauku un izvēlieties **Pārdēvēt**.
 
-1. Ievadiet jauno parādāmo nosaukumu.
+1. Ievadiet jauno parādāmo vārdu.
 
 1. Atlasiet **Gatavs**.
 
@@ -89,13 +89,13 @@ Mainiet sapludināto vai atsevišķo lauku parādāmo nosaukumu. Izvades entīti
 
 Lai atdalītu sapludinātos laukus, atrodiet atribūtu tabulā. Atsevišķie lauki vienotā klienta profilā tiek rādīti kā atsevišķi datu punkti.
 
-1. Atlasiet sapludināto lauku un izvēlieties **Atdalīt laukus**.
+1. Atlasiet sapludināto lauku un izvēlieties **Atsevišķi lauki**.
 
 1. Apstipriniet atdali.
 
 ### <a name="exclude-fields"></a>Izslēgt laukus
 
-Izslēgt sapludinātu vai atsevišķu lauku no vienotā debitora profila. Ja lauks tiek izmantots citos procesos, piemēram, segmentā, pirms lauka izslēgšanas no klienta profila, noņemiet to no šiem procesiem.
+Izslēdziet sapludinātu vai atsevišķu lauku no vienotā klienta profila. Ja lauks tiek izmantots citos procesos, piemēram, segmentā, pirms lauka izslēgšanas no klienta profila, noņemiet to no šiem procesiem.
 
 1. Atlasiet lauku un izvēlieties **Izslēgt**.
 
@@ -109,9 +109,9 @@ Dažās entītijās ir detalizētāka informācija nekā citās. Ja entītijā i
 
 1. Atlasiet lauku.
   
-1. Izvēlieties **Pārvietot uz augšu/uz leju**, lai iestatītu pasūtījumu, vai velciet un nometiet to vēlamajā pozīcijā.
+1. Izvēlieties **Pārvietot augšup/lejup**, lai iestatītu secību vai vilktu un nomestu tos vēlamajā pozīcijā.
 
-### <a name="combine-fields-manually"></a>Lauku manuāla kombinēšana
+### <a name="combine-fields-manually"></a>Lauku manuāla apvienošana
 
 Apvienojiet atdalītos laukus, lai izveidotu sapludinātu atribūtu.
 
@@ -125,33 +125,33 @@ Apvienojiet atdalītos laukus, lai izveidotu sapludinātu atribūtu.
 
 1. Atlasiet **Labi**, lai piemērotu izmaiņas.
 
-### <a name="combine-a-group-of-fields"></a>Lauku grupas kombinēšana
+### <a name="combine-a-group-of-fields"></a>Lauku grupas apvienošana
 
-Lauku grupu uzskatīt par vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Adrese1, Adrese2, Pilsēta, Valsts un Zip, mēs nevēlamies apvienoties cita ieraksta adresē2, domājot, ka tas padarītu mūsu datus pilnīgākus.
+Apstrādājiet lauku grupu kā vienu vienību. Piemēram, ja mūsu ierakstos ir lauki Address1, Address2, City, State un Zip, mēs nevēlamies sapludināt cita ieraksta adresi2, domājot, ka tas padarīs mūsu datus pilnīgākus.
 
 1. Atlasiet **Apvienot** > **lauku** grupu.
 
-1. Norādiet sapludināšanas uzvarētāja politiku rangu **grupās pēc** nolaižamā saraksta.
+1. Norādiet sapludināšanas uzvarētāju politiku rindās **pēc nolaižamās izvēlnes**.
 
 1. Atlasiet **Pievienot** un izvēlieties, vai laukiem vēlaties pievienot papildu laukus vai grupas.
 
-1. Norādiet **nosaukumu** un izvades **nosaukumu** katram kombinētajam laukam.
+1. **Norādiet nosaukumu** un izvades **nosaukumu** katram apvienotajam laukam.
 
-1. Norādiet **lauku grupas nosaukumu**.
+1. **Norādiet lauku grupas nosaukumu**.
 
 1. Atlasiet **Labi**, lai piemērotu izmaiņas.
 
-## <a name="configure-customer-id-generation"></a>Konfigurēt debitora ID ģenerēšanu
+## <a name="configure-customer-id-generation"></a>Klienta ID ģenerēšanas konfigurēšana
 
-Definējiet, kā ģenerēt debitora ID vērtības, unikālos debitora profila identifikatorus. Datu apvienošanas procesa lauku apvienošanas solis unificē unikālo klienta profila identifikatoru. Identifikators ir *CustomerId* klienta *entītijā*, kas izriet no datu apvienošanas procesa.
+Definējiet, kā ģenerēt klienta ID vērtības, unikālos klienta profila identifikatorus. Unify lauku darbība datu apvienošanas procesā ģenerē unikālo klienta profila identifikatoru. Identifikators *ir Klienta entītijas* *ClientId*, kas izriet no datu apvienošanas procesa.
 
-*CustomerId* pamatā ir pirmatnējo atslēgu, kas nav null, pirmās vērtības jaukšana. Šīs atslēgas nāk no entītijām, kas tiek izmantotas datu apvienošanā, un tās ietekmē atbilstības secība.Tātad ģenerētais debitora ID var mainīties, mainoties atbilstības secības primārajai entītijai, mainās primārā atslēgas vērtība. Primārā atslēgas vērtība ne vienmēr pārstāv vienu un to pašu debitoru.
+CustomerId *·* pamatā ir pirmās vērtības jaucējkods no ne-null uzvarētāja primārajām atslēgām. Šīs atslēgas nāk no entītijām, kas tiek izmantotas datu apvienošanā, un tās ietekmē atbilstības secība.Tātad ģenerētais klienta ID var mainīties, ja atbilstības secības primārajā entītijā mainās primārās atslēgas vērtība. Primārā atslēgas vērtība, iespējams, ne vienmēr apzīmē vienu un to pašu klientu.
 
 Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 
 1. Atlasiet cilni **Atslēgas**.
 
-1. Novietojiet kursoru **rindā CustomerId** un atlasiet **Konfigurēt**.
+1. Virziet **kursoru uz CustomerId rindas** un atlasiet **Konfigurēt**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Vadīklu, lai pielāgotu ID ģenerēšanu.":::
 
 1. Atlasiet līdz pieciem laukiem, kuros būs unikāls klienta ID un kuri ir ar daudz lielāku stabilitāti. Ieraksti, kas neatbilst jūsu konfigurācijai, tā vietā izmanto sistēmas konfigurētu ID.  
@@ -160,9 +160,9 @@ Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Grupējiet profilus mājsaimniecībās vai klasteros
 
-Varat definēt kārtulas, lai saistītus profilus grupētu klasterī. Pašlaik ir pieejami divu veidu klasteri — mājsaimniecības un pielāgoti klasteri. Sistēma automātiski izvēlas barību ar iepriekš definētām kārtulām, ja *Klienta* entītija ietver semantiskos laukus *Person.LastName* un *Location.Address*. Klasteru var izveidot arī ar savām kārtulām un nosacījumiem, kas līdzīgi [atbilstības kārtulām](match-entities.md#define-rules-for-match-pairs).
+Varat definēt kārtulas, lai grupētu saistītos profilus klasterī. Pašlaik ir pieejami divu veidu klasteri — mājsaimniecības un pielāgoti klasteri. Sistēma automātiski izvēlas barību ar iepriekš definētām kārtulām, ja *Klienta* entītija ietver semantiskos laukus *Person.LastName* un *Location.Address*. Klasteru var izveidot arī ar savām kārtulām un nosacījumiem, kas līdzīgi [atbilstības kārtulām](match-entities.md#define-rules-for-match-pairs).
 
-1. Atlasiet **Detalizētās** > **izveides klasteris**.
+1. Atlasiet **Papildu** > **izveides klasteris**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Vadīkla, lai izveidotu jaunu klasteru.":::
 
@@ -174,9 +174,9 @@ Varat definēt kārtulas, lai saistītus profilus grupētu klasterī. Pašlaik i
 
 1. Norādiet kārtulas un nosacījumus, lai definētu klasteru.
 
-1. Atlasiet **Gatavs**. Klasteris tiek izveidots, kad apvienošanas process ir pabeigts. Klastera identifikatori entītijai *Klients* tiek pievienoti kā jauni lauki.
+1. Atlasiet **Gatavs**. Klasteris tiek izveidots, kad apvienošanās process ir pabeigts. Klastera identifikatori tiek pievienoti kā jauni lauki entītijai *Klients*.
 
 > [!div class="nextstepaction"]
-> [Nākamais solis: pārskatiet apvienošanu](review-unification.md)
+> [Nākamais solis: Unifikācijas pārskatīšana](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

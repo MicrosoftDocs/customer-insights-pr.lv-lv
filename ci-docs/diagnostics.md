@@ -1,6 +1,6 @@
 ---
-title: Revīzija Dynamics 365 Customer Insights ar Azure monitoru
-description: Uzziniet, kā nosūtīt žurnālus monitoram Microsoft Azure.
+title: Pieteikties pāradresācijai Dynamics 365 Customer Insights, izmantojot Azure monitoru (priekšskatījums)
+description: Uzziniet, kā nosūtīt žurnālus uz monitoru Microsoft Azure.
 ms.date: 12/14/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,55 +11,55 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807590"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052662"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikšanās pārsūtīšanai Dynamics 365 Customer Insights, izmantojot Azure Monitor (Preview)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikties pāradresācijai Dynamics 365 Customer Insights, izmantojot Azure monitoru (priekšskatījums)
 
-Dynamics 365 Customer Insights nodrošina tiešu integrāciju ar Azure Monitor. Azure Monitor resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) vai straumēt tos uz [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights nodrošina tiešu integrāciju ar Azure Monitor. Azure monitora resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz [Azure krātuvi](https://azure.microsoft.com/services/storage/), [Azure žurnālu analīzi](/azure/azure-monitor/logs/log-analytics-overview) vai straumēt tos uz [Azure notikumu centrmezgliem](https://azure.microsoft.com/services/event-hubs/).
 
-Customer Insights tiek nosūtīti šādi notikumu žurnāli:
+Customer Insights sūta šādus notikumu žurnālus:
 
-- **Audita notikumi**
-  - **APIEvent** - ļauj veikt izmaiņu izsekošanu, izmantojot lietotāja interfeisu Dynamics 365 Customer Insights.
+- **Revīzijas notikumi**
+  - **APIEvent** - ļauj veikt izmaiņu izsekošanu, Dynamics 365 Customer Insights izmantojot lietotāja saskarni.
 - **Operatīvie notikumi**
-  - **WorkflowEvent** — darbplūsma ļauj iestatīt [datu avotus](data-sources.md), [apvienot](data-unification.md), [bagātināt](enrichment-hub.md) un visbeidzot [eksportēt](export-destinations.md) datus citās sistēmās. Visas šīs darbības var veikt atsevišķi (piemēram, izraisīt vienu eksportu). Var arī palaist orķestrētu (piemēram, datu atsvaidzināšanu no datu avotiem, kas izraisa apvienošanās procesu, kas ievelk bagātinājumus un pēc tam eksportēs datus citā sistēmā). Papildinformāciju [skatiet WorkflowEvent Schema](#workflow-event-schema).
+  - **WorkflowEvent** - Darbplūsma ļauj iestatīt [datu avotus](data-sources.md), [apvienot](data-unification.md), [bagātināt](enrichment-hub.md) un visbeidzot [eksportēt](export-destinations.md) datus uz citām sistēmām. Visas šīs darbības var veikt atsevišķi (piemēram, aktivizēt vienu eksportu). Var arī palaist orķestrētu (piemēram, datu atsvaidzināšana no datu avotiem, kas aktivizē apvienošanas procesu, kas ievilks bagātinājumus un pēc tam eksportēs datus citā sistēmā). Papildinformāciju [skatiet workflowEvent shēmā](#workflow-event-schema).
   - **APIEvent** - visi API zvani uz klientu instanci uz Dynamics 365 Customer Insights. Papildinformāciju [skatiet APIEvent shēmā](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnostikas iestatījumu iestatīšana
 
 ### <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosacījumi:
+Lai konfigurētu diagnostiku programmā Customer Insights, ir jāizpilda šādi priekšnosacījumi:
 
 - Jums ir aktīvs [Azure abonements](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Jums ir [administratora](permissions.md#admin) atļaujas customer insights.
-- Mērķa resursā **Azure ir līdzstrādnieka** un **lietotāja piekļuves administratora** loma. Resurss var būt Azure Data Lake Storage konts, Azure Notikumu centrmezgls vai Azure Log Analytics darbvieta. Papildinformāciju skatiet rakstā [Azure lomu piešķires pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal). Šī atļauja ir nepieciešama, konfigurējot diagnostikas iestatījumus customer insights, to var mainīt pēc veiksmīgas iestatīšanas.
-- [Mērķa prasības](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Azure Storage, Azure Event Hub vai Azure Log Analytics izpildīts.
-- Resursu grupā, kurai pieder resurss **, ir vismaz lasītāja** loma.
+- Jums ir [administratora](permissions.md#admin) atļaujas programmā Customer Insights.
+- Jums ir līdzstrādnieka **un** **lietotāja piekļuves administratora** loma mērķa resursā pakalpojumā Azure. Resurss var būt Azure Data Lake Storage konts, Azure notikumu centrmezgls vai Azure žurnālu analīzes darbvieta. Papildinformāciju skatiet rakstā [Azure lomu piešķires pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal). Šī atļauja ir nepieciešama, konfigurējot diagnostikas iestatījumus programmā Customer Insights, to var mainīt pēc veiksmīgas iestatīšanas.
+- [Ir izpildītas azure krātuves, Azure notikumu centrmezgla vai Azure žurnāla analīzes galamērķa prasības](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
+- Jums ir vismaz **loma Lasītājs** tajā resursu grupā, kurai pieder resurss.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostikas iestatīšana, izmantojot Azure monitoru
 
-1. Sadaļā Customer Insights atlasiet **Sistēmas** > **diagnostika**, lai skatītu diagnostikas mērķus, kas konfigurēti šajā gadījumā.
+1. Programmā Customer Insights atlasiet **Sistēmas** > **diagnostika**, lai skatītu diagnostikas mērķus, kas konfigurēti šajā instancē.
 
-1. Atlasiet **Pievienot mērķi**.
+1. Atlasiet **Pievienot galamērķi**.
 
    > [!div class="mx-imgBorder"]
    > ![Diagnostikas savienojums](media/diagnostics-pane.png "Diagnostikas savienojums")
 
-1. Norādiet nosaukumu **laukā Diagnostikas mērķa** nosaukums.
+1. Laukā Nosaukums diagnostikas galamērķim **norādiet nosaukumu**.
 
-1. **Izvēlieties Azure abonementa nomnieku** ar mērķa resursu un atlasiet **Pieteikties**.
+1. **Izvēlieties Azure abonementa nomnieku** ar mērķa resursu un atlasiet **pieteikties**.
 
-1. Atlasiet resursa **tipu** (Krātuves konts, notikumu centrmezgls vai žurnāla analīze).
+1. Atlasiet veidu **Resurss**(krātuves konts, notikumu centrmezgls vai žurnālu analīze).
 
 1. **Atlasiet mērķa resursa abonementu**.
 
-1. **Atlasiet mērķa resursa resursu grupu**.
+1. Atlasiet mērķa resursa **grupu** Resursi.
 
 1. Atlasiet **resursu**.
 
@@ -71,71 +71,71 @@ Lai konfigurētu diagnostiku customer insights, ir jāizpilda šādi priekšnosa
 
 1. Dodieties uz **sistēmas** > **diagnostiku**.
 
-1. Sarakstā atlasiet diagnostikas mērķi.
+1. Sarakstā atlasiet diagnostikas galamērķi.
 
-1. Kolonnā **Darbības** atlasiet **ikonu Dzēst**.
+1. **Kolonnā Darbības** atlasiet **ikonu Dzēst**.
 
-1. Apstipriniet dzēšanu, lai apturētu žurnāla pārsūtīšanu. Azure abonementa resurss netiks dzēsts. Varat atlasīt saiti kolonnā Darbības **,** lai atlasītajam resursam atvērtu Azure portālu un izdzēstu to tur.
+1. Apstipriniet dzēšanu, lai apturētu žurnāla pārsūtīšanu. Azure abonementa resurss netiks dzēsts. Varat atlasīt saiti kolonnā Darbības **, lai atvērtu atlasītā** resursa Azure portālu un izdzēstu to tur.
 
-## <a name="log-categories-and-event-schemas"></a>Reģistrēt kategorijas un notikumu shēmas
+## <a name="log-categories-and-event-schemas"></a>Žurnālu kategorijas un notikumu shēmas
 
-Pašlaik [tiek atbalstīti API notikumi](apis.md) un darbplūsmas notikumi un tiek lietotas šādas kategorijas un shēmas.
-Žurnāla shēma atbilst [Azure Monitor parastajai shēmai](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+Pašlaik [tiek atbalstīti API notikumi](apis.md) un darbplūsmas notikumi, un tiek lietotas tālāk norādītās kategorijas un shēmas.
+Žurnāla shēma seko Azure Monitor kopējai [shēmai](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
 
 ### <a name="categories"></a>Kategorijas
 
 Customer Insights piedāvā divas kategorijas:
 
-- **Audita notikumi**: [API notikumi](#api-event-schema), lai izsekotu konfigurācijas izmaiņas pakalpojumā. `POST|PUT|DELETE|PATCH` darbības ietilpst šajā kategorijā.
-- **Operatīvie notikumi**: [API notikumi](#api-event-schema) vai [darbplūsmas notikumi](#workflow-event-schema), kas ģenerēti pakalpojuma lietošanas laikā.  Piemēram, `GET` darbplūsmas pieprasījumi vai izpildes notikumi.
+- **Audita notikumi**: [API notikumi](#api-event-schema), lai izsekotu konfigurācijas izmaiņām pakalpojumā. `POST|PUT|DELETE|PATCH` operācijas ietilpst šajā kategorijā.
+- **Darbības notikumi**: [API notikumi](#api-event-schema) vai [darbplūsmas notikumi](#workflow-event-schema), kas ģenerēti, izmantojot pakalpojumu.  Piemēram, `GET` darbplūsmas pieprasījumi vai izpildes notikumi.
 
 ## <a name="configuration-on-the-destination-resource"></a>Konfigurācija mērķa resursā
 
-Pamatojoties uz jūsu izvēlēto resursu tipu, automātiski tiks veiktas šādas darbības:
+Pamatojoties uz jūsu izvēlēto resursa veidu, automātiski tiks piemērotas šādas darbības:
 
 ### <a name="storage-account"></a>Krātuves konts
 
-Customer Insights pakalpojuma vadītājs saņem krātuves **konta līdzstrādnieka** atļauju atlasītajam resursam un atlasītajā nosaukumvietā izveido divus konteinerus:
+Customer Insights pakalpojuma vadītājs saņem krātuves **konta līdzstrādnieka** atļauju atlasītajam resursam un izveido divus konteinerus zem atlasītās nosaukumvietas:
 
-- `insight-logs-audit` kas satur **audita notikumus**
+- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
 - `insight-logs-operational` kas ietver **operatīvus notikumus**
 
 ### <a name="event-hub"></a>Notikumu centrmezgls
 
-Customer Insights pakalpojuma vadītājs resursā **saņem Azure Event Hubs datu īpašnieka** atļauju un atlasītajā nosaukumvietā izveidos divus notikumu centrmezglus:
+Customer Insights pakalpojuma vadītājs saņem **Azure Notikumu centrmezglu datu īpašnieka** atļauju resursā un izveidos divus notikumu centrmezglus zem atlasītās nosaukumvietas:
 
-- `insight-logs-audit` kas satur **audita notikumus**
+- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
 - `insight-logs-operational` kas ietver **operatīvus notikumus**
 
-### <a name="log-analytics"></a>Žurnāla analītika
+### <a name="log-analytics"></a>Žurnālu analīze
 
-Customer Insights pakalpojuma vadītājs saņem **Log Analytics līdzstrādnieka** atļauju resursā. Žurnāli būs pieejami atlasītajā žurnāla analīzes darbvietas sadaļā **Žurnālu tabulu** > **žurnāla pārvaldība** > **.** Izvērsiet **žurnāla pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
+Customer Insights pakalpojuma vadītājs saņem žurnālu **analīzes līdzstrādnieka** atļauju attiecībā uz resursu. Žurnāli būs pieejami sadaļā **Žurnālu** > **tabulu** > **žurnālu pārvaldība** atlasītajā žurnālu analīzes darbvietā. Izvērsiet žurnālu **pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
 
-- `CIEventsAudit` kas satur **audita notikumus**
+- `CIEventsAudit` kurā ietverti **revīzijas notikumi**
 - `CIEventsOperational` kas ietver **operatīvus notikumus**
 
-**Logā Vaicājumi izvērsiet** audita **risinājumu** un atrodiet vaicājumu piemērus, kas sniegti, meklējot `CIEvents`.
+**Logā Vaicājumi** izvērsiet audita **risinājumu** un atrodiet vaicājumu piemērus, kas tiek nodrošināti, meklējot `CIEvents`.
 
 ## <a name="event-schemas"></a>Notikumu shēmas
 
-API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta informācija, kur tie atšķiras, skatiet [API notikumu shēmu](#api-event-schema) vai [darbplūsmas notikumu shēmu](#workflow-event-schema).
+API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta informācija par to, kur tie atšķiras, skatiet API [notikumu shēmu](#api-event-schema) vai [darbplūsmas](#workflow-event-schema) notikumu shēmu.
 
 ### <a name="api-event-schema"></a>API notikumu shēma
 
-| Kolonna             | Datatype  | Obligāts/neobligāts | Apraksts       | Piemērs        |
+| Kolonna             | Datatype  | Obligāts/pēc izvēles | Apraksts       | Piemērs        |
 | ----------------- | --------- | ----------------- | --------------------- | ------------------------ |
 | `time`            | Laikspiedols | Obligāti          | Pasākuma laikspiedols (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
-| `resourceId`      | String    | Obligāti          | Notikuma izlaidušās instances ResourceId         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
-| `operationName`   | String    | Obligāti          | Operācijas nosaukums, ko attēlo šis notikums.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Obligāti          | Notikuma žurnāla kategorija. Vai nu `Operational`, vai `Audit`. Visi POST/PUT/PATCH/DELETE HTTP pieprasījumi ir atzīmēti ar `Audit`, viss pārējais ar`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
-| `resultType`      | String    | Obligāti          | Notikuma statuss. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
-| `resultSignature` | String    | Neobligāti          | Notikuma rezultāta statuss. Ja operācija atbilst REST API izsaukumam, tas ir HTTP statusa kods.        | `200`             |
-| `durationMs`      | Garš      | Neobligāti          | Operācijas ilgums milisekundēs.     | `133`     |
-| `callerIpAddress` | String    | Neobligāti          | Zvanītāja IP adrese, ja operācija atbilst API izsaukumam, kas nāk no publiski pieejamas IP adreses.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Neobligāti          | JSON objekts, kas apraksta tā lietotāja vai lietojumprogrammas identitāti, kurš veica operāciju.       | Skatīt [sadaļu Identitāte](#identity-schema).     |  
-| `properties`      | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētai notikumu kategorijai.      | Skatīt [sadaļu Rekvizīti](#api-properties-schema).    |
-| `level`           | String    | Obligāti          | Notikuma smaguma pakāpe.    | `Informational`, `Warning``Error` vai `Critical`.           |
-| `uri`             | String    | Neobligāti          | Absolūtais pieprasījuma URI.    |               |
+| `resourceId`      | String    | Obligāti          | Tās instances resurssId, kas izstaroja notikumu         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
+| `operationName`   | String    | Obligāti          | Šī notikuma pārstāvētās operācijas nosaukums.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
+| `category`        | String    | Obligāti          | Pasākuma žurnāla kategorija. Vai nu `Operational`, vai `Audit`. Visi POST/PUT/PATCH/DELETE HTTP pieprasījumi ir atzīmēti ar `Audit`, viss pārējais ar`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `resultType`      | String    | Obligāti          | Pasākuma statuss. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
+| `resultSignature` | String    | Neobligāti          | Notikuma rezultāta statuss. Ja darbība atbilst REST API zvanam, tas ir HTTP statusa kods.        | `200`             |
+| `durationMs`      | Garš      | Neobligāti          | Darbības ilgums milisekundēs.     | `133`     |
+| `callerIpAddress` | String    | Neobligāti          | Zvanītāja IP adrese, ja darbība atbilst API zvanam, kas nāk no publiski pieejamas IP adreses.                                                 | `144.318.99.233`         |
+| `identity`        | String    | Neobligāti          | JSON objekts, kas apraksta tā lietotāja vai lietojumprogrammas identitāti, kurš veica darbību.       | Skatiet [sadaļu Identitāte](#identity-schema).     |  
+| `properties`      | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētajai notikumu kategorijai.      | Skatiet [sadaļu Rekvizīti](#api-properties-schema).    |
+| `level`           | String    | Obligāti          | Notikuma smaguma pakāpe.    | `Informational`, `Warning`,, `Error`, vai `Critical`.           |
+| `uri`             | String    | Neobligāti          | Absolūtais pieprasījums URI.    |               |
 
 #### <a name="identity-schema"></a>Identitātes shēma
 
@@ -159,45 +159,45 @@ API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta i
 
 | Kolonna                         | Apraksts                                                                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `Authorization.UserRole`      | Lietotājam vai lietotnei piešķirtā loma. Papildinformāciju skatiet sadaļā [Lietotāju atļaujas](permissions.md).                                     |
-| `Authorization.RequiredRoles` | Nepieciešamās lomas, lai veiktu operāciju. `Admin` lomai ir atļauts veikt visas operācijas.                                                    |
-| `Claims`                      | Lietotāja vai lietotnes JSON tīmekļa marķiera (JWT) pretenzijas. Pretenziju rekvizīti atšķiras atkarībā no organizācijas un konfigurācijas Azure Active Directory. |
+| `Authorization.UserRole`      | Lietotājam vai lietotnei piešķirtā loma. Papildinformāciju skatiet rakstā [Lietotāju atļaujas](permissions.md).                                     |
+| `Authorization.RequiredRoles` | Nepieciešamās lomas, lai veiktu operāciju. `Admin` loma ir atļauta, lai veiktu visas operācijas.                                                    |
+| `Claims`                      | Apgalvojumi par lietotāju vai lietotnes JSON tīmekļa marķieri (JWT). Pretenziju rekvizīti atkarībā no organizācijas un konfigurācijas Azure Active Directory atšķiras. |
 
 #### <a name="api-properties-schema"></a>API rekvizītu shēma
 
-[API notikumiem](apis.md) ir šādas īpašības.
+[API notikumiem](apis.md) ir šādi rekvizīti.
 
 | Kolonna                        | Apraksts                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `properties.eventType`       | Vienmēr `ApiEvent`, atzīmējot žurnāla notikumu kā API notikumu.                                                                 |
-| `properties.userAgent`       | Pārlūkprogrammas aģents nosūta pieprasījumu vai `unknown`.                                                                        |
+| `properties.userAgent`       | Pārlūkprogrammas aģents, kas nosūta pieprasījumu vai `unknown`.                                                                        |
 | `properties.method`          | HTTP metode:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Pieprasījuma relatīvais ceļš.                                                                                          |
-| `properties.origin`          | URI, kas norāda, no kurienes nāk atnese vai `unknown`.                                                                  |
-| `properties.operationStatus` | `Success` HTTP statusa kodam < 400 <br> `ClientError` HTTP statusa kodam < 500 <br> `Error` HTTP statusam > = 500 |
+| `properties.origin`          | URI, kas norāda, no kurienes nāk atnesums vai `unknown`.                                                                  |
+| `properties.operationStatus` | `Success` HTTP statusa kodam < 400 <br> `ClientError` HTTP statusa kodam < 500 <br> `Error` HTTP statusam >= 500 |
 | `properties.tenantId`        | Organizācijas ID                                                                                                        |
 | `properties.tenantName`      | Organizācijas nosaukums.                                                                                              |
-| `properties.callerObjectId`  | Azure Active Directory Zvanītāja ObjectId.                                                                         |
-| `properties.instanceId`      | Klientu ieskati`instanceId`                                                                                         |
+| `properties.callerObjectId`  | Azure Active Directory Zvanītāja objektsId.                                                                         |
+| `properties.instanceId`      | Customer Insights`instanceId`                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Darbplūsmas notikumu shēma
 
-Darbplūsmā ir vairākas darbības. [Uzņemiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var veikt atsevišķi vai organizēt ar šādiem procesiem.
+Darbplūsmā ir vairākas darbības. [Iegūstiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var darboties atsevišķi vai orķestrētas ar sekojošiem procesiem.
 
-#### <a name="operation-types"></a>Operāciju tipi
+#### <a name="operation-types"></a>Darbības veidi
 
 | OperationType     | Grupēt                                     |
 | ----------------- | ----------------------------------------- |
 | Norīšana         | [Datu avoti](data-sources.md)           |
-| DataPreparation   | [Datu avoti](data-sources.md)           |
+| Datu sagatavošana   | [Datu avoti](data-sources.md)           |
 | Kartēt               | [Datu apvienošana](data-unification.md)   |
 | Saskaņot             | [Datu apvienošana](data-unification.md)   |
 | Sapludināšana             | [Datu apvienošana](data-unification.md)   |
 | ProfileStore      | [Klientu profili](customer-profiles.md) |
 | Meklējiet            | [Klientu profili](customer-profiles.md) |
 | Darbības          | [Darbības](activities.md)                  |
-| AttributeMeasures | [Segmenti un pasākumi](segments.md)      |
-| EntityMeasures    | [Segmenti un pasākumi](segments.md)      |
+| Atribūtu pasākumi | [Segmenti un pasākumi](segments.md)      |
+| Entītijas pasākumi    | [Segmenti un pasākumi](segments.md)      |
 | Mērījumi          | [Segmenti un pasākumi](segments.md)      |
 | Segmentēšana      | [Segmenti un pasākumi](segments.md)      |
 | Bagātināšana        | [Bagātināšana](enrichment-hub.md)                                          |
@@ -210,15 +210,15 @@ Darbplūsmā ir vairākas darbības. [Uzņemiet datu avotus](data-sources.md), [
 
 #### <a name="field-description"></a>Lauka apraksts
 
-| Kolonna           | Datatype  | Obligāts/neobligāts | Apraksts                                                                                                                                                   | Piemērs                                                                                                                                                                  |
+| Kolonna           | Datatype  | Obligāts/pēc izvēles | Apraksts                                                                                                                                                   | Piemērs                                                                                                                                                                  |
 | --------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `time`          | Laikspiedols | Obligāti          | Notikuma laikspiedols (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
-| `resourceId`    | String    | Obligāti          | Notikuma izstarotās instances ResourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
-| `operationName` | String    | Obligāti          | Operācijas nosaukums, ko attēlo šis notikums. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Atsaucei skatiet [operāciju tipus](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Obligāti          | Notikuma žurnāla kategorija. Vienmēr `Operational` darbplūsmas notikumiem                                                                                           | `Operational`                                                                                                                                                            |
-| `resultType`    | String    | Obligāti          | Notikuma statuss. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
-| `durationMs`    | Garš      | Neobligāti          | Operācijas ilgums milisekundēs.                                                                                                                    | `133`                                                                                                                                                                    |
-| `properties`    | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētai notikumu kategorijai.                                                                                        | Skatīt apakšsadaļu [Darbplūsmas rekvizīti](#workflow-properties-schema)                                                                                                       |
+| `time`          | Laikspiedols | Obligāti          | Pasākuma laika zīmogs (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `resourceId`    | String    | Obligāti          | ResurssId no instances, kas izstaroja notikumu.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
+| `operationName` | String    | Obligāti          | Šī notikuma pārstāvētās operācijas nosaukums. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Atsaucei skatiet [sadaļu Darbību veidi](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
+| `category`      | String    | Obligāti          | Pasākuma žurnāla kategorija. Vienmēr `Operational` darbplūsmas notikumiem                                                                                           | `Operational`                                                                                                                                                            |
+| `resultType`    | String    | Obligāti          | Pasākuma statuss. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
+| `durationMs`    | Garš      | Neobligāti          | Darbības ilgums milisekundēs.                                                                                                                    | `133`                                                                                                                                                                    |
+| `properties`    | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētajai notikumu kategorijai.                                                                                        | Skatīt apakšsadaļu [Darbplūsmas rekvizīti](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Obligāti          | Notikuma smaguma pakāpe.                                                                                                                                  | `Informational`, `Warning` vai `Error`.                                                                                                                                   |
 |                 |
 
@@ -229,21 +229,21 @@ Darbplūsmas notikumiem ir šādi rekvizīti.
 | Kolonna              | Workflow | Uzdevums | Apraksts            |
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Jā      | Jā  | Vienmēr `WorkflowEvent`, atzīmējot notikumu kā darbplūsmas notikumu.                                                                                                                                                                                                |
-| `properties.workflowJobId`                   | Jā      | Jā  | Darbplūsmas izpildes identifikators. Visiem darbplūsmas un uzdevumu notikumiem darbplūsmas izpildē ir viens un tas pats `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Jā      | Jā  | Operācijas identifikators, skatiet [operāciju tipus](#operation-types).                                                                                                                                                                               |
-| `properties.tasksCount`                      | Jā      | Nē.   | Tikai darbplūsma. Darbplūsmas izraisīto uzdevumu skaits.                                                                                                                                                                                                       |
-| `properties.submittedBy`                     | Jā      | Nē.   | Neobligāts. Tikai darbplūsmas notikumi. Tā Azure Active Directory [lietotāja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objectId, kurš aktivizēja darbplūsmu, skatiet arī `properties.workflowSubmissionKind`.                                   |
-| `properties.workflowType`                    | Jā      | Nē.   | `full` vai `incremental` atsvaidziniet.                                                                                                                                                                                                                            |
+| `properties.workflowJobId`                   | Jā      | Jā  | Darbplūsmas izpildes identifikators. Visiem darbplūsmas un uzdevumu notikumiem darbplūsmas izpildē ir vienāds `workflowJobId`.                                                                                                                                   |
+| `properties.operationType`                   | Jā      | Jā  | Operācijas identifikators, skatiet sadaļu [Darbību tipi](#operation-types).                                                                                                                                                                               |
+| `properties.tasksCount`                      | Jā      | Nē.   | Tikai darbplūsma. Uzdevumu skaits, ko aktivizē darbplūsma.                                                                                                                                                                                                       |
+| `properties.submittedBy`                     | Jā      | Nē.   | Neobligāts. Tikai darbplūsmas notikumi. Tā Azure Active Directory [lietotāja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objektsId, kurš aktivizēja darbplūsmu, skatiet arī `properties.workflowSubmissionKind`.                                   |
+| `properties.workflowType`                    | Jā      | Nē.   | `full` vai `incremental` atsvaidzināt.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Jā      | Nē.   | `OnDemand` vai `Scheduled`.                                                                                                                                                                                                                                  |
 | `properties.workflowStatus`                  | Jā      | Nē.   | `Running` vai `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Jā      | Jā  | UTC laikspiedols`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Jā      | Jā  | UTC laikspiedols`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Jā      | Jā  | UTC laikspiedols`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Jā      | Jā  | Klientu ieskati`instanceId`                                                                                                                                                                                                                              |  
-| `properties.identifier`                      | Nē.       | Jā  | - OperationType = `Export` identifikators ir eksporta konfigurācijas GUID. <br> - OperationType = `Enrichment`, tas ir bagātināšanas guid <br> - OperationType `Measures` un `Segmentation` identifikators ir entītijas nosaukums. |
-| `properties.friendlyName`                    | Nē.       | Jā  | Lietotājam draudzīgs eksporta vai apstrādājamās entītijas nosaukums.                                                                                                                                                                                           |
+| `properties.startTimestamp`                  | Jā      | Jā  | UTC laika zīmogs`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Jā      | Jā  | UTC laika zīmogs`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Jā      | Jā  | UTC laika zīmogs`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.instanceId`                      | Jā      | Jā  | Customer Insights`instanceId`                                                                                                                                                                                                                              |  
+| `properties.identifier`                      | Nē.       | Jā  | - OperationType = `Export`, identifikators ir eksporta konfigurācijas guid. <br> - OperācijaiType = `Enrichment`, tas ir bagātināšanas guid <br> - OperationType `Measures` un `Segmentation`, identifikators ir entītijas nosaukums. |
+| `properties.friendlyName`                    | Nē.       | Jā  | Lietotājdraudzīgs eksportēšanas vai apstrādātās entītijas nosaukums.                                                                                                                                                                                           |
 | `properties.error`                           | Nē.       | Jā  | Neobligāts. Kļūdas ziņojums ar papildinformāciju.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | Nē.       | Jā  | Neobligāts. Tikai OperationType `Export`. Identificē eksporta tipu. Plašāku informāciju skatiet [pārskatā par eksporta galamērķiem](export-destinations.md).                                                                                          |
-| `properties.additionalInfo.AffectedEntities` | Nē.       | Jā  | Neobligāts. Tikai OperationType `Export`. Satur eksportēto konfigurēto entītiju sarakstu.                                                                                                                                                            |
-| `properties.additionalInfo.MessageCode`      | Nē.       | Jā  | Neobligāts. Tikai OperationType `Export`. Detalizēts ziņojums par eksportu.                                                                                                                                                                                 |
-| `properties.additionalInfo.entityCount`      | Nē.       | Jā  | Neobligāts. Tikai OperationType `Segmentation`. Norāda segmenta dalībnieku kopskaitu.                                                                                                                                                    |
+| `properties.additionalInfo.Kind`             | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Export`. Identificē eksportēšanas veidu. Papildinformāciju skatiet rakstā [Pārskats par eksporta galamērķiem](export-destinations.md).                                                                                          |
+| `properties.additionalInfo.AffectedEntities` | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Export`. Satur eksportējamo entītiju sarakstu.                                                                                                                                                            |
+| `properties.additionalInfo.MessageCode`      | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Export`. Detalizēts ziņojums par eksportu.                                                                                                                                                                                 |
+| `properties.additionalInfo.entityCount`      | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Segmentation`. Norāda kopējo dalībnieku skaitu, kas ir segmentā.                                                                                                                                                    |

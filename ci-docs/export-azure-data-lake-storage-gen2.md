@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Azure Data Lake Storage Gen2
+title: Datu eksportēšana uz Azure Data Lake Storage Gen2 (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu ar Azure Data Lake Storage Gen2.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947239"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082662"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Data Lake Storage Gen2 (priekšskatījums)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Datu eksportēšana uz Azure Data Lake Storage Gen2 (priekšskatījums)
 
 Glabājiet Customer Insights datus pakalpojuma Azure Data Lake Storage Gen2 kontā vai izmantojiet to, lai pārsūtītu datus uz citām programmām.
 
@@ -61,6 +61,6 @@ Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-expo
 Eksportētie dati tiek glabāti jūsu konfigurētajā Azure Data Lake Gen 2 krātuves konteinerā.
 
 > [!TIP]
-> Eksportējot entītijas, kurās ir liels datu apjoms, katram eksportam vienā mapē var rasties vairāki CSV faili. Eksporta sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksporta pabeigšanai.
+> Eksportējot entītijas, kurās ir liels datu apjoms, katrā eksportā var rasties vairāki CSV faili vienā mapē. Eksportēšanas sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksportēšanas pabeigšanai.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

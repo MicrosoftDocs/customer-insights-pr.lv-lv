@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana uz Campaign Monitor
+title: Segmentu eksportēšana uz Campaign Monitor (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Campaign Monitor.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b351e491ee830b6360d4efe33d32a726c2e553ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643148"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082893"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentu eksportēšana uz Campaign Monitor (priekšskatījums)
 
@@ -22,7 +22,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Campaign Monitor un izmantoji
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
 -   Jums ir [Campaign Monitor konts](https://www.campaignmonitor.com/) un atbilstošie administratora akreditācijas dati.
--   Programmā Customer Insights ir [konfigurēti](segments.md) segmenti.
+-   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
 -   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi

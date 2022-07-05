@@ -1,5 +1,5 @@
 ---
-title: Customer Insights datu eksportēšana Azure Blob krātuvē
+title: Datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Blob krātuvi.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947147"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055499"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentu saraksta un citu datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Datu eksportēšana uz Azure Blob krātuvi (priekšskatījums)
 
 Glabājiet Customer Insights datus Blob krātuvē vai izmantojiet pakalpojumu, lai pārsūtītu datus uz citām programmām.
 
@@ -69,7 +69,7 @@ Eksportētie dati tiek glabāti jūsu konfigurētajā Blob Storage konteinerā. 
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
   
   > [!TIP]
-  > Eksportējot entītijas, kurās ir liels datu apjoms, katram eksportam vienā mapē var rasties vairāki CSV faili. Eksporta sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksporta pabeigšanai.
+  > Eksportējot entītijas, kurās ir liels datu apjoms, katrā eksportā var rasties vairāki CSV faili vienā mapē. Eksportēšanas sadalīšana notiek veiktspējas apsvērumu dēļ, lai samazinātu laiku, kas nepieciešams eksportēšanas pabeigšanai.
 
 - Eksportēto entītiju model.json būs %ExportDestinationName% līmenī.  
   - Piemērs: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
