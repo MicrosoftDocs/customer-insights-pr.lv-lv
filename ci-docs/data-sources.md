@@ -1,7 +1,7 @@
 ---
 title: Datu avotu pārskats
 description: Uzziniet, kā importēt vai uzņemt datus no dažādiem avotiem.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051462"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207100"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
 Dynamics 365 Customer Insights nodrošina savienojumus, lai iegūtu datus no plaša avotu kopuma. Pieslēgšanos datu avotam bieži vien dēvē par *datu uzņemšanas* procesu. Pēc datu uzņemšanas varat [apvienot](data-unification.md), ģenerēt ieskatus un aktivizēt datus personalizētas pieredzes veidošanai.
 
-## <a name="add-data-sources"></a>Pievienot datu avotus
+## <a name="add-or-edit-data-sources"></a>Datu avotu pievienošana vai rediģēšana
 
-Varat pievienot vai importēt datu avotus programmā Customer Insights. Tālāk norādītajās saitēs ir sniegti norādījumi par datu avotu pievienošanu.
+Varat pievienot vai importēt datu avotus programmā Customer Insights. Tālāk norādītajās saitēs ir sniegti norādījumi par datu avotu pievienošanu un rediģēšanu.
 
 **Pievienojiet datu avots**
 
@@ -50,13 +50,18 @@ Ja jūsu vide tika konfigurēta tā, lai izmantotu Customer Insights krātuvi, u
 
 Ja jūsu vide neizmanto Power Platform datu plūsmas, **lapā Datu avoti** ir tikai visu datu avotu saraksts. Sadaļas netiek rādītas.
 
-Dodieties uz **Datu** > **datu avoti**, lai skatītu katras uzņemtās datu avots nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti šim avotam. Datu avotu sarakstu var kārtot pēc katras kolonnas.
+## <a name="manage-existing-data-sources"></a>Esošo datu avotu pārvaldība
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Pievienotie datu avoti.":::
+Dodieties uz **Datu** > **datu avoti**, lai skatītu katras uzņemtās datu avots nosaukumu, tā statusu un pēdējo reizi, kad dati tika atsvaidzināti šim avotam. Datu avotu sarakstu var kārtot pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu datu avots, kuru vēlaties pārvaldīt.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Atlasiet datu avots, lai skatītu pieejamās darbības.
 
-Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas uzņemtos datus var pārskatīt no lapas **Entītijas**. Papildinformāciju skatiet rakstā [Entītijas](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Pievienotie datu avoti.":::
+
+- [**Rediģējiet**](#add-or-edit-data-sources) datu avots, lai mainītu tās rekvizītus.
+- [**Atsvaidziniet**](#refresh-data-sources) datu avots, lai iekļautu jaunākos datus.
+- [**Bagātiniet**](data-sources-enrichment.md) datu avots pirms apvienošanās.
+- **Dzēsiet** datu avots. Datu avots var dzēst tikai tad, ja dati netiek izmantoti nekādā apstrādē, piemēram, unifikācijā, ieskatos, aktivizēšanā vai eksportēšanā.
 
 ## <a name="refresh-data-sources"></a>Atsvaidzināt datu avotus
 
@@ -64,23 +69,12 @@ Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuā
 
 Dodieties uz **administrēšanas** > **sistēmas** > [**grafiku**](system.md#schedule-tab), lai konfigurētu sistēmas ieplānotos uzņemto datu avotu atsvaidzinājumus.
 
-Lai atsvaidzinātu datu avotu pēc pieprasījuma, veiciet šīs darbības:
+Lai atsvaidzinātu datu avots pēc pieprasījuma:
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-1. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties atsvaidzināt, un nolaižamajā sarakstā atlasiet **Atsvaidzināt**. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
+1. Atlasiet atsvaidzināmo datu avots un atlasiet **Atsvaidzināt**. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
 
-1. Atlasiet **Pārtraukt atsvaidzināšanu**, ja vēlaties atcelt esošu atsvaidzināšanu, un datu avots atgriezīsies pēdējās atsvaidzināšanas statusā.
-
-## <a name="delete-a-data-source"></a>Datu avota dzēšana
-
-Datu avots var dzēst tikai tad, ja dati netiek izmantoti nekādā apstrādē, piemēram, unifikācijā, ieskatos, aktivizēšanā vai eksportēšanā.
-
-1. Dodieties uz **Dati** > **Datu avoti**.
-
-2. Atlasiet vertikālo daudzpunkti (&vellip;) blakus datu avots, kuru vēlaties noņemt, un nolaižamajā izvēlnē atlasiet **Dzēst**.
-
-3. Apstipriniet dzēšanu.
-
+1. Atlasiet statusu, lai atvērtu progresa detalizētās **informācijas** rūti un skatītu norisi. Lai atceltu darbu, rūts apakšdaļā atlasiet **Atcelt darbu**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

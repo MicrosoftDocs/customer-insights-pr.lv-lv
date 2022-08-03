@@ -1,51 +1,54 @@
 ---
 title: Segmentu eksportēšana uz Microsoft Advertising (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 44217e7823ffbe14d232b3e33de1b4ea6ed69dcf
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082809"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196541"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentu eksportēšana uz Microsoft Advertising (priekšskatījums)
 
 Eksportēt Customer Insights segmentus uz Microsoft Advertising, lai izveidotu Customer Match auditorijas. Izmantojiet šīs mērķauditorijas savām reklāmu kampaņām.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
--   [Microsoft Advertising konts](https://ads.microsoft.com/) un atbilstošie administratora akreditācijas dati.
--   Jūs esat piekritis Customer Match lietošanas noteikumiem. 
--   [Konfigurētie segmenti](segments.md) programmā Customer Insights.
--   Eksportētajos segmentos vienoto klientu profilos ir lauks ar e-pasta adresi.
+- [Microsoft Advertising konts](https://ads.microsoft.com/) un atbilstošie administratora akreditācijas dati.
+- Microsoft reklamēšanas klienta ID un konta ID. Atrodiet klienta ID (`cid`) un konta ID (`aid`) vietrāža URL parametros, kad esat pieteicies programmā Microsoft Advertising.
+- Customer Match lietošanas noteikumi tiek pieņemti.
+- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Programmā Microsoft Advertising viena eksporta laikā var eksportēt līdz pat 500000 klientu profilu.
-- Eksportēšana uz Microsoft Advertising attiecas tikai uz segmentiem.
-- Līdz pat 250000 klientu profilu eksportēšana uz Microsoft Advertising var paiet līdz 10 minūtēm. 
+- Līdz 500 000 klientu profilu eksportēšanai uz Microsoft Advertising, kas var aizņemt līdz pat 10 minūtēm.
+- Tikai segmenti.
 
+## <a name="set-up-connection-to-microsoft-advertising"></a>Savienojuma ar Microsoft Advertising iestatīšana
 
-## <a name="set-up-the-connection-to-microsoft-advertising"></a>Iestatiet savienojumu ar Microsoft Advertising
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Microsoft Advertising**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **Microsoft Advertising**.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Noklusējums ir administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
+1. Ievadiet Microsoft reklamēšanas **klienta ID**.
 
-1. Lai uzsāktu savienojumu ar Microsoft Advertising, atlasiet **Savienot**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+
+1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
 
 1. Atlasiet **Autentificēties ar Microsoft Advertising** un norādiet savus Microsoft Advertising administratora akreditācijas datus.
 
@@ -55,29 +58,24 @@ Eksportēt Customer Insights segmentus uz Microsoft Advertising, lai izveidotu C
 
 ## <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+1. Atlasiet **Pievienot eksportēšanu**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Microsoft Advertising. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Microsoft Advertising. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
-1. Atlasiet eksportējamos segmentus. Klientu atbilstības auditorijas programmā Microsoft Advertising tiek automātiski izveidotas ar eksportēšanai atlasīto segmentu nosaukumu. Katrs segments radīs atsevišķu Customer Match auditoriju. 
+1. Ievadiet eksportēšanas nosaukumu.
 
-1. Ievadiet savu **Microsoft Advertising klienta ID un konta ID**. Vietrāža URL parametros varat atrast klienta ID (`cid`) un konta ID (`aid`), kad esat pieteicies Microsoft Advertising.
+1. Atlasiet eksportējamos segmentus. Klientu atbilstības auditorijas programmā Microsoft Advertising tiek automātiski izveidotas ar eksportēšanai atlasīto segmentu nosaukumu. Katrs segments radīs atsevišķu Customer Match auditoriju.
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Microsoft Advertising.
+1. Ievadiet savu **Microsoft Advertising klienta ID un konta ID**.
 
-1. Atlasiet vienumu **Saglabāt**.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+1. Atlasiet **Saglabāt**.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Iespējojot Dynamics 365 Customer Insights datu pārnesi uz Microsoft Advertising, jūs ļaujat datus pārnest ārpus Dynamics 365 Customer Insights atbilstības robežām, ieskaitot potenciāli sensitīvus datus, tostarp, personas datus. Microsoft šos datus pārvirzīs atbilstoši jūsu norādījumiem, taču jūs atbildat par to, ka Microsoft Advertising atbilst jebkādiem jūsu privātuma vai drošības nosacījumiem. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Lai pārtrauktu izmantot šo funkcionalitāti, jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

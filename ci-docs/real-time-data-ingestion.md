@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083187"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195667"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
@@ -28,7 +28,7 @@ Reāllaika funkcionalitāte nodrošina tūlītēju datu patēriņu, kamēr turpm
 
 Reāllaika atjauninājumiem ir derīguma laiks, pēc kura tie vairs nepārlabo vērtību no datu avota:
 
-- Profila atjauninājumi tiks saglabāti 4 stundas
+- Profila atjauninājumi tiks glabāti četras stundas
 - Darbības tiks saglabātas 30 dienas
 
 Šīs vērtības ir API izsaukuma parametri, kuras varat mainīt. To mērķis ir nodrošināt, lai avota dati paliktu jūsu patiesības avots. Ja vēlaties, lai reāllaika atjauninājumi tiktu iekļauti ilgāku laiku, tie ir jāpievieno datu avotam tā, lai tie tiktu vilkti nākamajā plānotajā atsvaidzināšanas laikā.

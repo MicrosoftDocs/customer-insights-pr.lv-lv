@@ -1,5 +1,5 @@
 ---
-title: Darbību čupiņa prognoze (satur video)
+title: Transakciju zuduma prognoze (satur video)
 description: Prognozējiet, vai pastāv risks, ka klients vairs neiegādāsies jūsu uzņēmuma produktus vai pakalpojumus.
 ms.date: 01/13/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643972"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171104"
 ---
 # <a name="transaction-churn-prediction"></a>Transakciju zuduma prognoze
 
@@ -24,7 +24,7 @@ Transakciju zudumu prognoze palīdz paredzēt, vai klients vairs nepirks jūsu p
 Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uzņēmuma transakciju procesu, kā arī uzņēmuma un cita līmeņa informācijas kombināciju, piemēram, produktu kategoriju. Pievienojot dimensiju, varat uzzināt, kāda ir iespēja, ka uzņēmums "Contoso" pārtrauks produktu kategorijas "biroja iekārtas" iegādi. Turklāt attiecībā uz uzņēmuma kontiem mēs varam izmantot arī AI, lai ģenerētu iespējamo iemeslu sarakstu, kāpēc uzņēmums, visticamāk, būs sekundāra līmeņa informācijas kategorijai.
 
 > [!TIP]
-> Izmēģiniet pamācību par transakcijas čurksti prognoze, izmantojot datu paraugu: [Transakcijas čupiņa prognoze parauga rokasgrāmata](sample-guide-predict-transactional-churn.md).
+> Izmēģiniet apmācību par transakciju zuduma prognoze, izmantojot parauga datus: [Transakciju zuduma prognoze parauga ceļvedis](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
@@ -100,7 +100,7 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Sadaļā Customer Insights dodieties uz **Informācija** > **Prognozes**.
 
-1. Atlasiet elementu Debitors **un** atlasiet **Izmantot šo modeli**.
+1. **Atlasiet elementu Customer churn modelis** un atlasiet **Izmantot šo modeli**.
 
 1. Rūtī **Klientu zuduma modelis** izvēlieties **Transakcija** un atlasiet **Sākt darbu**.
 
@@ -116,11 +116,11 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 ### <a name="define-customer-churn"></a>Definēt klientu zudumu
 
-1. **Iestatiet logu prognoze**. Piemēram, prognozētu kannas risku saviem klientiem nākamo 90 dienu laikā, lai pielīdzinātos jūsu mārketinga saglabāšanas pūliņiem. Prognozējot zudumu risku ilgākā vai īsākā laika periodā var apgrūtināt, lai risinātu faktorus jūsu zudumu riska profilu, bet tas ir atkarīgs no jūsu uzņēmuma specifiskajām prasībām.
+1. Iestatiet **prognoze logu**. Piemēram, prognozētu kannas risku saviem klientiem nākamo 90 dienu laikā, lai pielīdzinātos jūsu mārketinga saglabāšanas pūliņiem. Prognozējot zudumu risku ilgākā vai īsākā laika periodā var apgrūtināt, lai risinātu faktorus jūsu zudumu riska profilu, bet tas ir atkarīgs no jūsu uzņēmuma specifiskajām prasībām.
    >[!TIP]
-   > Varat atlasīt **Saglabāt melnrakstu** jebkurā laikā, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+   > Jebkurā laikā varat atlasīt **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
-1. Ievadiet dienu skaitu, lai definētu čurkstes **definīcijas laukā Churn definīcija**. Piemēram, ja klients nav veicis pirkumus pēdējo 30 dienu laikā, tie var tikt uzskatīti par zudušiem jūsu uzņēmumam. 
+1. Ievadiet dienu skaitu, lai definētu zuduma **definīciju laukā Churn definīcija**. Piemēram, ja klients nav veicis pirkumus pēdējo 30 dienu laikā, tie var tikt uzskatīti par zudušiem jūsu uzņēmumam. 
 
 1. Atlasiet **Tālāk**, lai turpinātu.
 
@@ -128,7 +128,7 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Atlasiet vienumu **Pievienot datus** un izvēlieties darbības tipu sānu rūtij, kurā ir nepieciešamā informācija par transakciju vai pirkumu vēsturi.
 
-1. Sadaļā **Atlasīt aktivitātes** izvēlieties konkrētas darbības no atlasītā aktivitātes tipa, uz kuru vēlaties koncentrēties aprēķinam.
+1. Sadaļā **Atlasīt aktivitātes** izvēlieties konkrētas darbības no atlasītā darbības veida, uz kuru vēlaties koncentrēties aprēķinam.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Sānu rūts, kurā redzama noteiktu darbību izvēle zem semantiskā tipa.":::
 
@@ -136,7 +136,7 @@ Attiecībā uz vidēm, kuru pamatā ir uzņēmuma konti, mēs varam paredzēt uz
 
 1. Kartējiet semantiskos atribūtus uz laukiem, kas nepieciešami modeļa palaišanai. Ja tālāk norādītie lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas attiecības ar *Klienta* entītiju. Atlasiet **Saglabāt**.
 
-1. **Darbībā Pievienot nepieciešamos datus** atlasiet **Tālāk**, lai turpinātu, ja nevēlaties pievienot papildu darbības.
+1. **Darbībā Pievienot obligātos datus** atlasiet **Tālāk**, lai turpinātu, ja nevēlaties pievienot papildu darbības.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
@@ -240,7 +240,7 @@ Pievienojiet biznesa klientu un uzņēmumu sarakstu, kurus vēlaties izmantot k�
    - **Prognoze nosaukums**: izveides brīdī paredzētās prognozes nosaukums.
    - **Prognoze tips**: prognozei izmantotā modeļa tips
    - **Izvades entītija**: entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.
-     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-new-segment) ar vēlamo slieksni.
+     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-segment) ar vēlamo slieksni.
      Ne visi klienti ir aktīvi. Iespējams, daži no viņiem nav bijuši aktīvi ilgāku laiku un jau tiek uzskatīti par zudušiem, pamatojoties uz jūsu zuduma definīciju. Zuduma riska prognoze klientiem, kas jau ir zuduši, nav lietderīga, jo tie nav ieinteresētā auditorija.
    - **Prognozētais lauks**: Šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tos neizmanto zudumu prognozē.
    - **Statuss**: Prognozes izpildes statuss.

@@ -1,51 +1,54 @@
 ---
 title: Segmentu sarakstu eksportēšana uz Snapchat (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Snapchat.
-ms.date: 06/08/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: abe04cd1464c3f7df969da3c769329382d603d7e
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 85443dcb54ebd58182997fbb56a738901f2a051f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051922"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195391"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentu sarakstu eksportēšana uz Snapchat (priekšskatījums)
 
-Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos reklāmā. 
+Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos reklāmā.
 
-## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
--   Jums ir [Snapchat Business konts](https://business.snapchat.com/), [Snapchat Ads konts](https://ads.snapchat.com/) un atbilstošie administratora akreditācijas dati. YOu ir jābūt vismaz organizācijas konta dalībniekam un konkrēta reklāmas konta datu pārvaldniekam. 
--   Jums ir vismaz viena auditorija Snapchat auditorijas pārvaldniekā, kas ir SAM tipa (Snap Audience Match). 
--   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
--   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
+- Snapchat [biznesa konts](https://business.snapchat.com/), [Snapchat Ads konts](https://ads.snapchat.com/) un atbilstošie administratora akreditācijas dati. Jums ir jābūt vismaz organizācijas konta dalībniekam un konkrēta reklāmas konta datu pārvaldniekam.
+- Vismaz viena auditorija Snapchat auditorijas menedžerī, kas ir SAM tipa (Snap Audience Match).
+- Snapchat segments [/ auditorijas ID](https://businesshelp.snapchat.com/s/article/custom-audiences). Auditorijas ID var atrast vietrādī URL pēc auditorijas atlasīšanas Snapchat Audience Manager.
+- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Eksportēšana uz Snapchat attiecas tikai uz segmentiem.
-- Līdz pat 1 miljonam klientu profilu eksportēšana uz Snapchat var aizņemt līdz 15 minūtēm. 
+- Līdz 1 miljonam klientu profilu, kuru pabeigšana var aizņemt līdz 15 minūtēm.
+- Tikai segmenti.
 
 ## <a name="set-up-connection-to-snapchat"></a>Savienojuma ar Snapchat iestatīšana
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **Snapchat**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **Snapchat**.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izvēlieties, kurš var izmantot šo savienojumu. Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Lai uzsāktu savienojumu ar Snapchat, atlasiet **Savienot**.
+1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
 
-1. Atlasiet **Autentificēt ar Snapchat** un norādiet savus Snapchat administratora akreditācijas datus. 
+1. Atlasiet **Autentificēt ar Snapchat** un norādiet savus Snapchat administratora akreditācijas datus.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -53,29 +56,24 @@ Eksportējiet vienoto klientu profilu segmentus uz Snapchat un izmantojiet tos r
 
 ## <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+1. Atlasiet **Pievienot eksportēšanu**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Snapchat. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Snapchat. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
-1. Ievadiet Snapchat segmenta [**/ auditorijas ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). Auditorijas ID var atrast vietrādī URL pēc auditorijas atlasīšanas Snapchat Audience Manager. 
+1. Ievadiet eksportēšanas nosaukumu.
 
-1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Segmenti ir obligāti jāeksportē uz Snapchat.
+1. Ievadiet Snapchat segmenta **/ auditorijas ID**.
 
-1. Atlasiet segmentus, kurus vēlaties eksportēt. 
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
-1. Atlasiet vienumu **Saglabāt**.
+1. Atlasiet segmentus, kurus vēlaties eksportēt.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+1. Atlasiet **Saglabāt**.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Iespējojiet Dynamics 365 Customer Insights datu pārnesi uz Snapchat, jūs ļaujat datus pārnest ārpus Dynamics 365 Customer Insights atbilstības robežām, ieskaitot potenciāli sensitīvus datus, tostarp, personas datus. Microsoft šos datus pārvirzīs atbilstoši jūsu norādījumiem, taču jūs atbildat par to, ka Snapchat atbilst jebkādiem jūsu privātuma vai drošības nosacījumiem. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

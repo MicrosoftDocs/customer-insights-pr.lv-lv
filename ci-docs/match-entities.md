@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082410"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139712"
 ---
 # <a name="match-conditions-for-data-unification"></a>Atbilstības nosacījumi datu apvienošanai
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Šis apvienošanas solis definē atbilstības secību un kārtulas vairāku entītiju atbilstībai. Šai darbībai ir nepieciešamas vismaz divas entītijas.
 
@@ -134,7 +132,7 @@ Varat norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir 
 
 |Iespēja  |Apraksts |Piemērs  |
 |---------|---------|---------|
-|Vienmēr atbilst     | Definē vērtības, kas vienmēr tiek saskaņotas.         |  Vienmēr atbilst *Maikam* un *Maikam*.       |
+|Vienmēr atbilst     | Definē vērtības, kas vienmēr tiek saskaņotas.         |  Vienmēr atbilst *Maikam* un *Maikam.*       |
 |Nekad neatbilst     | Definē vērtības, kas nekad nesakrīt.        | Nekad nesakrīt ar *Džonu* un *Džonatanu*.        |
 |Pielāgota apeja     | Definē vērtības, kuras sistēmai vienmēr ir jāignorē atbilstības fāzē. |  Spēles laikā ignorējiet vērtības *11111* un *Nezināms*.        |
 |Aizstājvārda kartējums    | Vērtību definēšana, kas sistēmai būtu jāuzskata par vienu un to pašu vērtību.         | Uzskatiet, ka *Džo ir līdzvērtīgs Džozefam* *.*        |
@@ -143,7 +141,7 @@ Varat norādīt nosacījumus, kas ignorē noklusējuma atbilstības loģiku. Ir 
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Poga Pielāgots":::
 
-1. Izvēlieties veidu Pielāgots **un atlasiet** Lejupielādēt veidni **.** Katrai atbilstības opcijai ir nepieciešama atsevišķa veidne.
+1. Izvēlieties veidu Pielāgots **un atlasiet** Lejupielādēt **veidni**. Katrai atbilstības opcijai ir nepieciešama atsevišķa veidne.
 
 1. Atveriet lejupielādēto veidnes failu un aizpildiet detalizētu informāciju. Veidnē ir ietverti lauki, kuros jānorāda entītija un entītijas primārās atslēgas vērtības, kas tiks izmantotas pielāgotajā atbilstībā. Piemēram, ja vēlaties, lai primārā atslēga *12345* no entītijas *Pārdošana* vienmēr atbilst primārajai atslēgai *34567* no entītijas *Kontaktinformācija*, aizpildiet veidni:
     - Entity1: Pārdošana

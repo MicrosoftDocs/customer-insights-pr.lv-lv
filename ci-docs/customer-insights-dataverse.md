@@ -1,7 +1,7 @@
 ---
 title: Darbs ar Customer Insights datiem programmā Microsoft Dataverse
-description: Uzziniet, kā savienot Customer Insights un Microsoft Dataverse izprast izvades entītijas, kas tiek eksportētas uz Dataverse.
-ms.date: 05/30/2022
+description: Uzziniet, kā izveidot savienojumu ar Customer Insights Microsoft Dataverse un izprast izvades entītijas, uz kurām tiek eksportētas Dataverse.
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,107 +11,119 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011537"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153413"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
-Customer Insights piedāvā iespēju padarīt izvades entītijas pieejamas kā [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Šī integrācija nodrošina ērtu datu koplietošanu un pielāgotu izstrādi, izmantojot zema koda/bez koda pieeju. Izvades [entītijas](#output-entities) ir pieejamas kā tabulas vidē Dataverse. Datus var izmantot jebkurai citai lietojumprogrammai, pamatojoties uz tabulām Dataverse. Šīs tabulas iespējo tādus scenārijus kā automatizētas darbplūsmas, izmantojot Power Automate vai veidojot programmas ar Power Apps.
+Customer Insights nodrošina iespēju izvades entītijas padarīt pieejamas kā [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Šī integrācija nodrošina vieglu datu koplietošanu un pielāgotu izstrādi, izmantojot zema koda / bez koda pieeju. Izvades [entītijas](#output-entities) ir pieejamas kā tabulas Dataverse vidē. Datus var izmantot jebkurai citai lietojumprogrammai, kuras pamatā Dataverse ir tabulas. Šajās tabulās ir iespējoti tādi scenāriji kā automatizētas darbplūsmas, izmantojot Power Automate vai veidojot programmas ar Power Apps.
 
-Dataverse Savienojums ar vidi ļauj arī uzņemt [datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](connect-power-query.md#add-data-from-on-premises-data-sources).
+Savienojuma izveide ar jūsu Dataverse vidi arī ļauj [uzņemt datus no lokāls datu avotiem, izmantojot Power Platform datu plūsmas un vārtejas](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Klientu ieskatiem un Dataverse vidēm jābūt viesotām vienā reģionā.
-- Vidē ir jābūt globāla administratora lomai Dataverse. Pārbaudiet, vai šī [Dataverse vide ir saistīta ar](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) noteiktām drošības grupām, un pārliecinieties, vai esat pievienots šīm drošības grupām.
-- Neviena cita Customer Insights vide jau nav saistīta ar vidi, Dataverse kuru vēlaties savienot. Uzziniet, [kā noņemt esošu savienojumu ar Dataverse vidi](#remove-an-existing-connection-to-a-dataverse-environment).
-- Vide Microsoft Dataverse var izveidot savienojumu tikai ar vienu krātuves kontu. Tas tiek lietots tikai tad, ja konfigurējat vidi, lai [tā izmantotu savu Azure Data Lake Storage](own-data-lake-storage.md).
+- Customer Insights un Dataverse vides ir jāmitina vienā un tajā pašā reģionā.
+- Jums ir jābūt globālai administratora lomai Dataverse vidē. Pārbaudiet, vai šī [Dataverse vide ir saistīta ar](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) noteiktām drošības grupām, un pārliecinieties, vai esat pievienots šīm drošības grupām.
+- Neviena cita Customer Insights vide jau nav saistīta ar vidi, Dataverse ar kuru vēlaties izveidot savienojumu. Uzziniet, [kā noņemt esošu savienojumu ar Dataverse vidi](#remove-an-existing-connection-to-a-dataverse-environment).
+- Vide Microsoft Dataverse var izveidot savienojumu tikai ar vienu krātuves kontu. Tas ir spēkā tikai tad, ja konfigurējat vidi, lai [izmantotu savu Azure Data Lake Storage](own-data-lake-storage.md).
 
-## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Vides savienošana ar Customer Insights
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse tiesības uz uzglabāšanas ietilpību
 
-Šī **Microsoft Dataverse** darbība ļauj savienot Customer Insights ar vidi Dataverse, vienlaikus [izveidojot Customer Insights vidi](create-environment.md).
+Customer Insights abonements dod jums papildu noslodzi jūsu organizācijas esošajai [Dataverse krātuves ietilpībai](/power-platform/admin/capacity-storage). Pievienotā noslodze ir atkarīga no profilu skaita, ko izmanto jūsu abonements.
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu kopīgošana ar Microsoft Dataverse automātiski iespējotu neto jaunām vidēm.":::
+**Piemērs:**
 
-Administratori var konfigurēt Customer Insights, lai izveidotu savienojumu ar esošu Dataverse vidi. Nodrošinot vietrādi URL Dataverse videi, tas tiek pievienots viņu jaunajai Customer Insights videi.
+Pieņemot, ka saņemat 15 GB datu bāzes krātuvi un 20 GB failu krātuvi uz 100 000 klientu profiliem. Ja jūsu abonementā ir iekļauti 300 000 klientu profilu, kopējā krātuves ietilpība būs 45 GB (3 x 15 GB) datu bāzes krātuve un 60 GB failu krātuve (3 x 20 GB). Līdzīgi, ja jums ir B2B abonements ar 30K kontiem, jūsu kopējā krātuves ietilpība būtu 45 GB (3 x 15 GB) datu bāzes krātuve un 60 GB failu krātuve (3 x 20 GB).
 
-Ja nevēlaties izmantot esošu Dataverse vidi, sistēma nomniekā izveido jaunu vidi Customer Insights datiem. [Power Platform administratori var kontrolēt, kas var izveidot vides](/power-platform/admin/control-environment-creation). Ja iestatāt jaunu Customer Insights vidi un administrators ir atspējojis vides izveidi Dataverse visiem, izņemot administratorus, iespējams, nevarēsit izveidot jaunu vidi.
+Žurnāla noslodze nav pakāpeniska un fiksēta jūsu organizācijai.
 
-**Iespējojiet datu kopīgošanu**, Dataverse atzīmējot izvēles rūtiņu Datu kopīgošana.
+Papildinformāciju par detalizētām noslodzes pilnvarām skatiet rakstā [Dynamics 365 licencēšanas rokasgrāmata](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-Ja izmantojat savu Datu ezera krātuves kontu, jums ir nepieciešams **arī atļauju identifikators**. Lai iegūtu papildinformāciju par to, kā iegūt atļaujas identifikatoru, pārskatiet šo sadaļu.
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Vides savienošana ar Dataverse Customer Insights
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Iespējot datu kopīgošanu ar Dataverse savu (Azure Data Lake Storage Priekšskatījums)
+Šī **Microsoft Dataverse** darbība ļauj savienot Customer Insights ar savu Dataverse vidi, vienlaikus [izveidojot Customer Insights vidi](create-environment.md).
 
-Lai iespējotu datu kopīgošanu ar Microsoft Dataverse laiku, kad vide [izmanto savu Azure Data Lake Storage kontu](own-data-lake-storage.md), ir nepieciešama papildu konfigurācija. Lietotājam, kas iestatījis Customer Insights vidi, jābūt vismaz **Krātuves** BLOB datu lasītāja *atļaujām konta konteinerā* CustomerInsights Azure Data Lake Storage.
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātiski iespējotu neto jaunām vidēm.":::
 
-1. Izveidojiet savā Azure abonementā divas drošības grupas - vienu **Reader** drošības grupu un vienu **līdzstrādnieku** drošības grupu un iestatiet Microsoft Dataverse pakalpojumu kā īpašnieku abām drošības grupām.
-2. Pārvaldiet piekļuves kontroles sarakstu (ACL) krātuves konta konteinerā CustomerInsights, izmantojot šīs drošības grupas. Microsoft Dataverse Pievienojiet pakalpojumu un visas Dataverse biznesa lietojumprogrammas, piemēram, Dynamics 365 Marketing **, drošības grupai Reader** ar **tikai** lasāmām atļaujām. Pievienojiet *līdzstrādnieku* drošības grupai tikai **Customer Insights lietojumprogrammu**, lai piešķirtu gan lasīšanas, gan **rakstīšanas** atļaujas profilu un ieskatu rakstīšanai.
+Administratori var konfigurēt Customer Insights, lai izveidotu savienojumu ar esošu Dataverse vidi. Nodrošinot vietrādi URL Dataverse vidē, tiek izveidots savienojums ar viņu jauno Customer Insights vidi. Pēc savienojuma izveidošanas starp Customer Insights un Dataverse, nemainiet vides organizācijas nosaukumu Dataverse. Organizācijas nosaukums tiek izmantots vietrādī URL, Dataverse un mainīts nosaukums pārtrauc savienojumu ar Customer Insights.
+
+Ja nevēlaties izmantot esošu Dataverse vidi, sistēma izveido jaunu vidi Customer Insights datiem jūsu nomniekā. [Power Platform administratori var kontrolēt, kurš var izveidot vides](/power-platform/admin/control-environment-creation). Iestatot jaunu Customer Insights vidi un administrators ir atspējojis vides izveidi Dataverse visiem, izņemot administratorus, iespējams, nevarēsit izveidot jaunu vidi.
+
+**Iespējojiet datu koplietošanu**, Dataverse atzīmējot izvēles rūtiņu Datu koplietošana.
+
+Ja izmantojat savu Data Lake Storage kontu, jums ir nepieciešams **arī atļauju identifikators**. Lai iegūtu papildinformāciju par atļaujas identifikatora iegūšanu, pārskatiet nākamo sadaļu.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Datu kopīgošanas iespējošana ar Dataverse savu Azure Data Lake Storage (Priekšskatījums)
+
+Datu kopīgošanas iespējošanai, Microsoft Dataverse ja jūsu vide [izmanto jūsu kontu Azure Data Lake Storage,](own-data-lake-storage.md) ir nepieciešama papildu konfigurācija. Lietotājam, kurš iestata Customer Insights vidi, ir jābūt vismaz **krātuves** Blob datu lasītāja *atļaujām klienta insights* konteinerā Azure Data Lake Storage kontā.
+
+1. Izveidojiet savā Azure abonementā divas drošības grupas — vienu **Reader** drošības grupu un vienu **līdzstrādnieku** drošības grupu un iestatiet Microsoft Dataverse pakalpojumu kā īpašnieku abām drošības grupām.
+2. Pārvaldiet piekļuves kontroles sarakstu (Access Control List — ACL) konteinerā CustomerInsights savā krātuves kontā, izmantojot šīs drošības grupas. Microsoft Dataverse Pievienojiet pakalpojumu un visas Dataverse biznesa lietojumprogrammas, piemēram, Dynamics 365 Marketing, **drošības grupai Reader**, izmantojot **tikai** lasīšanas atļaujas. Pievienojiet *tikai* lietojumprogrammu Customer Insights līdzstrādnieku **drošības** grupai, lai piešķirtu gan lasīšanas, gan **rakstīšanas** atļaujas profilu un ieskatu rakstīšanai.
 
 ### <a name="limitations"></a>Ierobežojumi
 
 Lietojot Dataverse ar savu Azure Data Lake Storage kontu, ir divi ierobežojumi:
 
-- Starp organizāciju un Dataverse kontu ir viens pret vienu kartējums Azure Data Lake Storage. Dataverse Kad organizācija ir izveidojusi savienojumu ar krātuves kontu, tā nevar izveidot savienojumu ar citu krātuves kontu. Šis ierobežojums neļauj a Dataverse aizpildīt vairākus krātuves kontus.
-- Datu kopīgošana nedarbosies, ja Azure Private Link iestatījums ir nepieciešams, lai piekļūtu jūsu Azure Data Lake Storage kontam, jo tas atrodas aiz ugunsmūra. Dataverse pašlaik neatbalsta savienojumu ar privātiem galapunktiem, izmantojot privāto saiti.
+- Pastāv individuāla kartēšana starp Dataverse organizāciju un Azure Data Lake Storage kontu. Kad organizācija ir Dataverse savienota ar krātuves kontu, tā nevar izveidot savienojumu ar citu krātuves kontu. Šis ierobežojums neļauj aizpildīt Dataverse vairākus krātuves kontus.
+- Datu kopīgošana nedarbosies, ja, lai piekļūtu jūsu Azure Data Lake Storage kontam, ir nepieciešama Azure privātās saites iestatīšana, jo tas atrodas aiz ugunsmūra. Dataverse pašlaik neatbalsta savienojumu ar privātiem galapunktiem, izmantojot Private Link.
 
 ### <a name="set-up-powershell"></a>PowerShell iestatīšana
 
-Lai izpildītu PowerShell skriptus, vispirms ir attiecīgi jāiestata PowerShell.
+Lai izpildītu PowerShell skriptus, vispirms attiecīgi jāiestata PowerShell.
 
 1. Instalējiet jaunāko PowerShell for Graph [Azure Active Directory versiju](/powershell/azure/active-directory/install-adv2).
    1. Datorā atlasiet tastatūras taustiņu Windows un meklējiet **Windows PowerShell** un atlasiet opciju **Palaist kā administratoram**.
    1. PowerShell logā, kas tiek atvērts, ievadiet `Install-Module AzureAD`.
-2. Importēt trīs moduļus.
-    1. PowerShell logā ievadiet `Install-Module -Name Az.Accounts` un izpildiet darbības.
-    1. `Install-Module -Name Az.Resources` Atkārtojiet un `Install-Module -Name Az.Storage`.
+2. Importējiet trīs moduļus.
+    1. PowerShell logā ievadiet `Install-Module -Name Az.Accounts` un izpildiet norādītās darbības.
+    1. Atkārtojiet par `Install-Module -Name Az.Resources` un `Install-Module -Name Az.Storage`.
 
 ### <a name="configuration-steps"></a>Konfigurēšanas darbības
 
-1. Lejupielādējiet divus PowerShell skriptus, kas jums jāpalaiž no mūsu inženiera [GitHub repo](https://github.com/trin-msft/byol).
+1. Lejupielādējiet divus PowerShell skriptus, kas jums jādarbina no mūsu inženiera [GitHub repo](https://github.com/trin-msft/byol).
     1. `CreateSecurityGroups.ps1`
-       - Lai palaistu šo PowerShell skriptu, ir nepieciešamas *nomnieka administratora* atļaujas.
-       - Šis PowerShell skripts jūsu Azure abonementā izveido divas drošības grupas. Viens lasītāju grupai un otrs līdzstrādnieku grupai un veiks Microsoft Dataverse pakalpojumu kā īpašnieks abām šīm drošības grupām.
-       - Izpildiet šo PowerShell skriptu sistēmā Windows PowerShell, norādot Azure abonementa ID, kurā ir jūsu Azure Data Lake Storage. Atveriet PowerShell skriptu redaktorā, lai pārskatītu papildinformāciju un ieviesto loģiku.
-       - Saglabāt abas drošības grupas ID vērtības, ko ģenerējis šis skripts, jo mēs tās izmantosim skriptā `ByolSetup.ps1`.
+       - Lai palaistu šo PowerShell skriptu, jums ir nepieciešamas *nomnieka administratora* atļaujas.
+       - Šis PowerShell skripts jūsu Azure abonementā izveido divas drošības grupas. Viens lasītāju grupai un otrs līdzstrādnieku grupai, un tas nodrošinās Microsoft Dataverse pakalpojumu kā īpašnieks abām šīm drošības grupām.
+       - Izpildiet šo PowerShell skriptu programmā Windows PowerShell, nodrošinot Azure abonementa ID, kas satur jūsu Azure Data Lake Storage. Redaktorā atveriet PowerShell skriptu, lai pārskatītu papildinformāciju un īstenoto loģiku.
+       - Saglabājiet abas drošības grupas ID vērtības, ko ģenerē šis skripts, jo mēs tās izmantosim skriptā `ByolSetup.ps1`.
 
         > [!NOTE]
-        > Drošības grupas izveidi nomniekam var atspējot. Šādā gadījumā būtu nepieciešama manuāla iestatīšana, un administratoram Azure AD būtu jāiespējo [drošības grupas izveide](/azure/active-directory/enterprise-users/groups-self-service-management).
+        > Nomniekā var atspējot drošības grupas izveidi. Tādā gadījumā būtu nepieciešama manuāla iestatīšana, un administratoram Azure AD būtu jāiespējo [drošības grupas izveide](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
-        - Lai palaistu šo skriptu, krātuves BLOB datu īpašnieka atļaujas ir nepieciešamas *krātuves BLOB datu īpašnieka* atļaujas krātuves konta/konteinera līmenī, vai arī šis skripts tādu izveidos jums. Lomas piešķiri var noņemt manuāli pēc veiksmīgas skripta palaišanas.
-        - Šis PowerShell skripts pievieno nepieciešamo tole bāzēto piekļuves kontroli (RBAC) pakalpojumam Microsoft Dataverse un visām Dataverse biznesa lietojumprogrammām. Tas arī atjaunina piekļuves kontroles sarakstu (ACL) konteinerā CustomerInsights drošības grupām, kas izveidotas ar skriptu `CreateSecurityGroups.ps1`. Līdzstrādnieku grupai būs *rwx* atļauja, un lasītāju grupai būs *tikai r-x* atļauja.
-        - Izpildiet šo PowerShell skriptu sistēmā Windows PowerShell, norādot Azure abonementa ID, kurā ir jūsu Azure Data Lake Storage, krātuves konta nosaukums, resursu grupas nosaukums un lasītāja un līdzstrādnieku drošības grupas ID vērtības. Atveriet PowerShell skriptu redaktorā, lai pārskatītu papildinformāciju un ieviesto loģiku.
-        - Kopējiet izvades virkni pēc veiksmīgas skripta palaišanas. Izvades virkne izskatās šādi: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        - Lai palaistu šo skriptu, jums ir nepieciešamas *krātuves Blob datu īpašnieka* atļaujas krātuves konta/konteinera līmenī, vai arī šis skripts to izveidos jūsu vietā. Pēc veiksmīgas skripta palaišanas jūsu lomas piešķiršanu var noņemt manuāli.
+        - Šis PowerShell skripts pievieno nepieciešamo uz lomām balstīto piekļuves kontroli pakalpojumam Microsoft Dataverse un visām Dataverse biznesa lietojumprogrammām. Tas arī atjaunina piekļuves kontroles sarakstu (Access Control List — ACL) konteinerā CustomerInsights drošības grupām, kas izveidotas, izmantojot skriptu `CreateSecurityGroups.ps1`. Līdzstrādnieku grupai būs *rwx* atļauja, un lasītāju grupai būs *tikai r-x* atļauja.
+        - Izpildiet šo PowerShell skriptu programmā Windows PowerShell, norādot Azure abonementa ID, kurā ir jūsu Azure Data Lake Storage krātuves konta nosaukums, resursu grupas nosaukums un Lasītāja un līdzstrādnieka drošības grupas ID vērtības. Redaktorā atveriet PowerShell skriptu, lai pārskatītu papildinformāciju un īstenoto loģiku.
+        - Pēc veiksmīgas skripta palaišanas kopējiet izvades virkni. Izvades virkne izskatās šādi: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
-2. Ievadiet izvades virkni, kas kopēta no augšas, **vides konfigurācijas soļa atļaujas identifikatora** laukā Microsoft Dataverse.
+2. Ievadiet izvades virkni, kas kopēta no augšas, **vides konfigurācijas darbības laukā Atļaujas identifikators** Microsoft Dataverse.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigurācijas opcijas, lai iespējotu datu kopīgošanu no sava ar Azure Data Lake Storage Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigurācijas opcijas, lai iespējotu datu koplietošanu no sava Azure Data Lake Storage ar Microsoft Dataverse.":::
 
-### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Esoša savienojuma Dataverse ar vidi noņemšana
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Esoša savienojuma ar Dataverse vidi noņemšana
 
-Veidojot savienojumu ar Dataverse vidi, kļūdas ziņojums **Šī CDS organizācija jau ir pievienota citai Customer Insights instancei**, nozīmē, ka Dataverse vide jau tiek izmantota Customer Insights vidē. Esošo savienojumu var noņemt kā vides globālo administratoru Dataverse. Izmaiņu aizpildīšana var aizņemt pāris stundas.
+Izveidojot savienojumu ar Dataverse vidi, kļūdas ziņojums **Šī CDS organizācija jau ir pievienota citai Customer Insights instancei**, nozīmē, ka Dataverse vide jau tiek izmantota Customer Insights vidē. Esošo savienojumu var noņemt kā globālu vides administratoru Dataverse. Izmaiņu aizpildīšana var aizņemt pāris stundas.
 
 1. Dodieties uz [Power Apps](https://make.powerapps.com).
 1. Atlasiet vidi no vides atlasītāja.
-1. Doties uz **risinājumiem**
-1. Atinstalējiet vai dzēsiet risinājumu ar nosaukumu **Dynamics 365 Customer Insights Klienta kartes pievienojumprogramma (Preview)**.
+1. Dodieties uz **sadaļu Risinājumi**
+1. Atinstalējiet vai dzēsiet risinājumu ar nosaukumu **Dynamics 365 Customer Insights Klienta kartes pievienojumprogramma (priekšskatījums)**.
 
 VAI
 
 1. Atveriet savu Dataverse vidi.
 1. Dodieties uz **Papildu iestatījumu** > **risinājumi**.
-1. Atinstalējiet **risinājumu CustomerInsightsCustomerCard**.
+1. Atinstalējiet **CustomerInsightsCustomerCard** risinājumu.
 
-Ja atkarības dēļ savienojuma noņemšana neizdodas, ir jānoņem arī atkarības. Papildinformāciju skatiet sadaļā [Atkarību](/power-platform/alm/removing-dependencies) noņemšana.
+Ja savienojuma noņemšana neizdodas atkarību dēļ, ir jānoņem arī atkarības. Papildinformāciju skatiet sadaļā [Atkarību](/power-platform/alm/removing-dependencies) noņemšana.
 
 ## <a name="output-entities"></a>Izvades entītijas
 
-Dažas Customer Insights izvades entītijas ir pieejamas kā tabulas programmā Dataverse. Tālāk minētās sadaļas apraksta šo tabulu paredzēto shēmu.
+Dažas Customer Insights izvades entītijas ir pieejamas kā tabulas .Dataverse Tālāk minētās sadaļas apraksta šo tabulu paredzēto shēmu.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -119,11 +131,11 @@ Dažas Customer Insights izvades entītijas ir pieejamas kā tabulas programmā 
 - [CustomerMeasure](#customermeasure)
 - [Bagātināšana](#enrichment)
 - [Prognoze](#prediction)
-- [Segmenta dalība](#segment-membership)
+- [Dalība segmentā](#segment-membership)
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Šajā tabulā ir iekļauts vienotais klienta profils no Customer Insights. Vienota klienta profila shēma ir atkarīga no entītijām un atribūtiem, kas izmantoti datu apvienošanas procesā. Klienta profila shēmā parasti ir atribūtu apakškopa no [CustomerProfile Common Data Model definīcijas](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Šajā tabulā ir iekļauts vienotais klienta profils no Customer Insights. Vienota klienta profila shēma ir atkarīga no entītijām un atribūtiem, kas tiek izmantoti datu apvienošanas procesā. Klienta profila shēmā parasti ir atribūtu apakškopa no [CustomerProfile Common Data Model definīcijas](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 
@@ -132,7 +144,7 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 |Kolonna  |Tips  |Apraksts  |
 |---------|---------|---------|
 |DataSourceName    |String         | Datu avota nosaukums. Piemērs: `datasource5`        |
-|EntityName        | String        | Entītijas nosaukums customer insights. Piemērs: `contact1`        |
+|EntityName        | String        | Entītijas nosaukums programmā Customer Insights. Piemērs: `contact1`        |
 |AlternateValue    |String         |Alternatīvais ID, kas tiek kartēts uz klienta ID. Piemērs: `cntid_1078`         |
 |KeyRing           | Vairākrindiņu teksts        | JSON vērtība  </br> Paraugs: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"taustiņi":[" cntid_1078"]}]       |
 |CustomerId         | Virkne        | Vienotā klienta profila ID.         |
@@ -196,18 +208,18 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 | msdynci_predictionid | GUID        | Noteicošais GUID, kas izveidots no msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
 
-### <a name="segment-membership"></a>Segmenta dalība
+### <a name="segment-membership"></a>Dalība segmentā
 
-Šajā tabulā ir ietverta informācija par segmenta dalību debitoru profilos.
+Šajā tabulā ir segmenta dalības informācija par klientu profiliem.
 
 | Column        | Tipi | Apraksts                        |
 |--------------------|--------------|-----------------------------|
 | CustomerId        | String       | Klienta profila ID        |
 | SegmentProvider      | String       | Lietotne, kas publicē segmentus.      |
-| SegmentamembershipType | String       | Šī segmenta dalības ieraksta debitora tips. Atbalsta vairākus tipus, piemēram, Klientu, Kontaktpersonu vai Uzņēmumu. Noklusējums: debitors  |
-| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kuros dalībnieks ir klienta profils      |
+| SegmentsMembershipType | String       | Ierakstiet klientu šis segmenta dalības ieraksts. Atbalsta vairākus veidus, piemēram, Klientu, Kontaktpersonu vai Kontu. Noklusējums: Klients  |
+| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kuros klienta profils ir dalībnieks      |
 | msdynci_identifier  | String   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministiska GUID, kas ģenerēta no`msdynci_identifier`          |
+| msdynci_segmentmembershipid | GUID      | Deterministisks GUID, kas ģenerēts no`msdynci_identifier`          |
 
 <!--
 ## FAQ: Update existing environments to use Microsoft Dataverse

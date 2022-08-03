@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083166"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121571"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>OData vaicājumu piemēri Customer Insights API
 
@@ -23,7 +23,7 @@ Atvērto datu protokols (Open Data Protocol — OData) ir datu piekļuves protok
 
 Ir jāmodificē vaicājumu paraugi, lai tie darbotos mērķa vidēs: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` kur {instanceId} atrodas Customer Insights vides GUID, kurā vēlaties veikt vaicājumu. Operācija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) ļauj jums atrast to, kam {InstanceId} jums ir piekļuve.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` kur {instanceId} atrodas Customer Insights vides GUID, kurā vēlaties veikt vaicājumu. Operācija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) ļauj jums atrast to, kam {InstanceId} jums ir piekļuve.
 - {CID}: vienota klienta ieraksta GUID. Piemērs: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Klienta ieraksta primārās atslēgas identifikators datu avots. Piemērs: `CNTID_1002`
 - {DSname}: Virkne ar entītijas nosaukumu datu avots, kas tiek uzņemta programmā Customer Insights. Piemērs: `Website_contacts`.
@@ -39,9 +39,10 @@ Tālāk esošajā tabulā ir iekļauta vaicājumu paraugu kopa entītijai *Klien
 |Alternatīvā atslēga    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Vienotajā klienta entītijā saglabājas alternatīvas atslēgas       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Iekš    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternatīvā atslēga + Iekšā   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Alternatīvā atslēga + Iekšā   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Meklējiet  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Atgriež meklēšanas virknes populārākos 10 rezultātus      |
 |Dalība segmentā  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Atgriež iepriekš iestatītu rindu skaitu no segmentācijas entītijas.      |
+|Segmenta dalība klientam | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Atgriež klienta profilu, ja klients ir attiecīgā segmenta dalībnieks     |
 
 ## <a name="unified-activity"></a>Vienota darbība
 

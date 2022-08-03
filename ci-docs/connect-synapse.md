@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse datu avots pievienošana (priekšskatījums)
 description: Izmantojiet datu bāzi Azure Synapse kā datu avots iekšā Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052708"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206916"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics datu avots pievienošana (priekšskatījums)
 
@@ -66,3 +66,9 @@ Papildinformāciju skatiet pārskatā [Azure Synapse](/azure/synapse-analytics/o
 1. Pēc izvēles izvēlieties datu elementus, kuros atļaut datu profilēšanu.
 
 1. Atlasiet **Saglabāt**, lai lietotu atlasi, un sāciet datu uzņemšanu no jaunizveidotās datu avots, kas saistītas ar ezera datu bāzes tabulām.Azure Synapse Analytics Tiek **atvērta lapa Datu avoti**, kurā redzams jaunais datu avots sadaļā **Atsvaidzināšanas** statuss.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos datus var pārskatīt lapā [**Entītijas**](entities.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

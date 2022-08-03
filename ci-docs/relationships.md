@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082578"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183575"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Attiecību izveide starp entītijām un entītiju ceļiem
 
 Attiecības savieno entītijas un definē datu grafiku, kad entītijas koplieto kopēju identifikatoru — ārēju atslēgu. Šī ārējā atslēga var tikt atsaukties no vienas entītijas uz citu. Savienotās entītijas ļauj definēt segmentus un pasākumus, par pamatu izmantojot vairākus datu avotus.
 
 Ir trīs attiecību tipi: 
-- Nerediģējamas sistēmas attiecības, ko sistēma izveidoja kā daļu no datu apvienošanas procesa
-- Nerediģējamas mantotas attiecības, kas tiek automātiski izveidotas, ietverot datu avotus 
-- Rediģējamas pielāgotas attiecības, ko izveido un konfigurē lietotāji
+- Nerediģējamas sistēmas relācijas sistēma izveido kā daļu no datu apvienošanas procesa
+- Nerediģējamas pārmantotas relācijas tiek veidotas automātiski no datu avotu uzņemšanas
+- Rediģējamas pielāgotas relācijas izveido un konfigurē lietotāji
 
 ## <a name="non-editable-system-relationships"></a>Nerediģējamas sistēmu attiecības
 
@@ -67,69 +67,66 @@ Attiecības sastāv no *avota entītijas*, kurā ir iekļaujošā atslēga un *m
    - **Apraksts**: Relācijas apraksts.
    - **Avota entītija**: entītija, kas attiecībās tiek izmantota kā relāciju avots. Piemērs: SupportCase.
    - **Mērķa entītija**: entītija, kas attiecībās tiek izmantota kā relāciju mērķis. Piemērs: klients.
-   - **Avota kardinalitāte**: norādiet avota entītijas kardinalitāti. Kardinalitāte apraksta iespējamo elementu skaitu kopā. Tā vienmēr ir saistīta ar mērķa kardinalitāti. Var izvēlēties starp **vienu** un **vairākiem**. Tiek atbalstītas tikai “daudzas pret vienu” un “viena pret vienu” relācijas.  
+   - **Avota kardinalitāte**: avota entītijas kardinalitāte. Kardinalitāte apraksta iespējamo elementu skaitu kopā. Tā vienmēr ir saistīta ar mērķa kardinalitāti. Var izvēlēties starp **vienu** un **vairākiem**. Tiek atbalstītas tikai “daudzas pret vienu” un “viena pret vienu” relācijas.  
      - Daudzi pret vienu: vairāki avota ieraksti var būt saistīti ar vienu mērķa ierakstu. Piemērs: vairāki atbalsta pieteikumi no viena klienta.
      - Viens pret vienu: viens avota ieraksts ir saistīts ar vienu mērķa ierakstu. Piemērs: viens atsevišķa klienta gaidīšanas ID.
 
      > [!NOTE]
      > Attiecības daudzi pret daudziem var izveidot, izmantojot divas attiecības daudzi pret vienu, un saistot entītiju, kas savieno avota entītiju un mērķa entītiju.
 
-   - **Mērķa kardinalitāte**: Atlasiet mērķa entītijas ierakstu kardinalitāti. 
-   - **Avota atslēgas lauks**: avota entītijas avota atslēgas lauks. Piemērs: SupportCase kā noslogotu galveno lauku var izmantot CaseID.
-   - **Mērķa atslēgas lauks**: Šis lauks norāda mērķa entītijas atslēgas lauku. Piemēram, klients var izmantot atslēgas lauku **CustomerID**.
+   - **Mērķa kardinalitāte**: mērķa entītijas ierakstu kardinalitāte.
+   - **Avota atslēgas lauks**: ārējās atslēgas lauks avota entītijā. Piemērs: SupportCase izmanto **CaseID** kā ārējās atslēgas lauku.
+   - **Mērķa atslēgas lauks**: mērķa entītijas atslēgas lauks. Piemērs: Klients izmanto **CustomerID** kā atslēgas lauku.
 
 4. Lai izveidotu pielāgotu relāciju, atlasiet **Saglabāt**.
 
 ## <a name="set-up-account-hierarchies"></a>Iestatīt konta hierarhijas
 
-Vides, kas ir konfigurētas, lai uzņēmumu kontus izmantotu kā primāro mērķa auditoriju, var konfigurēt kontu hierarhijas attiecīgajiem uzņēmumiem. Piemēram, uzņēmums, kam ir atsevišķas struktūrvienības. 
+Vides, kas ir konfigurētas, lai izmantotu biznesa kontus kā primāro mērķauditoriju, var konfigurēt kontu hierarhijas saistītiem biznesa kontiem. Piemēram, uzņēmums, kam ir atsevišķas struktūrvienības.
 
 Organizācijas veido uzņēmumu hierarhijas, lai labāk pārvaldītu uzņēmumus un to attiecības citam ar citu. Customer Insights atbalsta vecāku un bērnu kontu hierarhijas, kas jau pastāv uzņemtajos klientu datos. Piemēram, uzņēmumi no Dynamics 365 Sales. Šīs hierarhijas var konfigurēt **lapā Relācijas**.
 
 1. Dodieties uz **Dati** > **Attiecības**.
 1. Atlasiet cilni **Uzņēmuma hierarhija**.
-1. Atlasiet **Jauna uzņēmuma hierarhija**. 
-1. **Uzņēmumu hierarhijas** rūtī norādiet hierarhijas nosaukumu. Sistēma izveido izvades entītijas nosaukumu. Varat mainīt izvades nosaukuma entītijas nosaukumu.
+1. Atlasiet **Jauna uzņēmuma hierarhija**.
+1. **Uzņēmumu hierarhijas** rūtī norādiet hierarhijas nosaukumu. Sistēma izveido izvades entītijas nosaukumu, bet to var mainīt.
 1. Atlasiet entītiju, kurā ir iekļauta jūsu uzņēmumu hierarhija. Parasti tā atrodas tajā pašā entītijā, kurā ir uzņēmumi.
-1. Atlasiet no atlasītās entītijas **Uzņēmuma ID** un **Galvenā uzņēmuma ID** 
-1. Atlasiet **Saglabāt**, lai lietotu iestatījumus un pabeigtu uzņēmumu hierarhiju.
+1. Atlasītajā entītijā **atlasiet konta UID** un **vecāku UID**.
+1. Atlasiet **Saglabāt**, lai pabeigtu konta hierarhiju.
 
-## <a name="view-relationships"></a>Skatīt relācijas
+## <a name="manage-existing-relationships"></a>Pārvaldīt esošās relācijas
 
-Lapā Attiecības ir uzskaitītas visas izveidotās relācijas. Katra rinda ir attiecības, kurās ir iekļauta arī detalizēta informācija par avota entītiju, mērķa entītiju un jucību. 
+Dodieties uz **lapu Relācijas**, lai skatītu visas izveidotās relācijas, to avota entītiju, mērķa entītiju un kardinalitāti.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Attiecību un opciju saraksts attiecību lapas darbību joslā.":::
 
-Šajā lapā ir opciju kopa esošām un jaunām attiecībām: 
-- **Jaunas attiecības**: [Izveidot pielāgotas attiecības](#create-a-custom-relationship).
-- **Visualizētājs**: [izpētiet relāciju vizualizētāju](#explore-the-relationship-visualizer), lai redzētu esošo attiecību tīkla diagrammu un to kardinalitāti.
-- **Filtrēt pēc**: izvēlieties sarakstā rādīto attiecību tipu.
-- **Meklēšanas attiecības**: izmantojiet teksta meklēšanu, kas balstīta uz attiecību rekvizītiem.
+Izmantojiet **opcijas Filtrēt pēc** vai **Meklēt relācijas**, lai atrastu noteiktu relāciju. Lai skatītu tīkla diagrammu par esošajām relācijām un to kardinalitāti, atlasiet [**Vizualizētājs**](#explore-the-relationship-visualizer).
+
+Atlasiet relāciju, lai skatītu pieejamās darbības:
+- **Rediģēšana**: atjauniniet pielāgotu attiecību rekvizītus rediģēšanas rūtī un saglabājiet izmaiņas.
+- **Dzēšana**: dzēsiet pielāgotas attiecības.
+- **Skatīt**: skatiet sistēmas izveidotās un mantotās attiecības.
 
 ### <a name="explore-the-relationship-visualizer"></a>Izpētīt relāciju visualatoru
 
 Relāciju vizualizētājs parāda esošo attiecību tīkla diagrammu starp savienotajām entītijām un to kardinalitāti. Tā arī vizualizē attiecību ceļu.
 
-Lai pielāgotu skatu, lodziņu atrašanās vietu var mainīt, velkot tos uz pamatnes.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Relāciju visualizēšanas tīkla shēmas ekrānuzņēmumu ar savienojumiem starp saistītajām entītijām.":::
 
-Pieejamās opcijas: 
+Lai pielāgotu skatu, lodziņu atrašanās vietu var mainīt, velkot tos uz pamatnes. Citas iespējas ietver: 
 - **Eksportēt kā attēlu**: saglabāt pašreizējo skatu kā attēla failu.
 - **Mainīt uz horizontālo/vertikālo izkārtojumu**: mainiet entītiju un attiecību līdzinājumu.
 - **Rediģēšana**: atjauniniet pielāgotu attiecību rekvizītus rediģēšanas rūtī un saglabājiet izmaiņas.
 
 ## <a name="relationship-paths"></a>Attiecību ceļi
 
-Attiecību ceļš apraksta entītijas, kas saistītas ar avota entītijas un mērķa entītijas attiecībām. Tas tiek izmantots, izveidojot segmentu vai pasākumu, kurā ir ietvertas citas entītijas, nevis vienotā profila entītija, un ir vairākas iespējas, kā sasniegt vienotā profila entītiju. 
-
-Attiecību ceļš informē sistēmu, pār kurām attiecībām piekļūt vienotā profila entītijai. Dažādi attiecību ceļi var iegūt atšķirīgus rezultātus.
+Attiecību ceļš apraksta entītijas, kas saistītas ar avota entītijas un mērķa entītijas attiecībām. Tas tiek izmantots, veidojot segmentu vai mēru, kas ietver entītijas, kas nav vienotā profila entītija, un ir vairākas opcijas, lai sasniegtu vienoto profila entītiju. Dažādi attiecību ceļi var iegūt atšķirīgus rezultātus.
 
 Piemēram, entītijai *eCommerce_eCommercePurchases* ir šādas attiecības ar vienoto profila entītiju *Klients*:
 
 - eCommerce_eCommercePurchases > Klients
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klients
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klients 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klients
 
 Attiecību ceļš nosaka, kuras entītijas var izmantot, izveidojot kārtulas mērījumiem vai segmentiem. Izvēloties opciju ar garāko attiecību ceļu, iespējams, tiks iegūts mazāk rezultātu, jo atbilstības noteikšanas ierakstiem ir jābūt daļai no visām entītijām. Šajā piemērā klientam ir jāiegādājas preces, izmantojot e-tirdzniecības (eCommerce_eCommercePurchases), pārdošanas punktu (POS_posPurchases), un jāpiedalās mūsu lojalitātes programmā (loyaltyScheme_loyCustomers). Izvēloties pirmo opciju, iespējams, saņemsiet vairāk rezultātu, jo klientiem ir nepieciešama tikai viena papildu entītija.
 
@@ -155,7 +152,7 @@ Attiecības tiek klasificētas kā **netiešas attiecības**, ja avota entītija
 
 #### <a name="multi-hop-relationship"></a>Vairāklēcienu attiecības
 
-*Vairāklēcienu attiecības* ir *netiešas attiecības*, kas ļauj izveidot avota entītijas savienojumu ar mērķa entītiju, izmantojot vienu vai vairākas citas starpnieka entītijas.
+**Vairāklēcienu attiecības** ir *netiešas attiecības*, kas ļauj izveidot avota entītijas savienojumu ar mērķa entītiju, izmantojot vienu vai vairākas citas starpnieka entītijas.
 
 Piemēram, ja darbības entītija, saukta par *eCommerce_eCommercePurchasesWest*, izveido savienojumu ar entītiju *eCommerce_eCommercePurchasesEast* un pēc tam izveido savienojumu ar mērķa entītiju *eCommerce_eCommerceContacts*, tā ir vairāklēcienu attiecība.
 
@@ -168,16 +165,6 @@ Vairāklēcienu un vairākceļu attiecības var izmantot kopā, lai izveidotu **
 Piemēram, ja darbības entītija, saukta par *eCommerce_eCommercePurchasesWest*, izveido savienojumu ar entītiju *eCommerce_eCommercePurchasesEast* un pēc tam izveido savienojumu ar divām mērķa entītijām, gan *eCommerce_eCommerceContacts*, gan *loyaltyScheme_loyCustomers*, tā ir vairāklēcienu, vairākceļu attiecība.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Avota entītija izveido tiešu savienojumu ar vienu mērķa entītiju un izveido savienojumu ar citu mērķa entītiju, izmantojot starpnieka entītiju.":::
-
-## <a name="manage-existing-relationships"></a>Pārvaldīt esošās relācijas 
-
-Lapā Attiecības katra attiecība ir apzīmēta ar rindu. 
-
-Atlasiet relāciju un izvēlieties vienu no šīm opcijām: 
- 
-- **Rediģēšana**: atjauniniet pielāgotu attiecību rekvizītus rediģēšanas rūtī un saglabājiet izmaiņas.
-- **Dzēšana**: dzēsiet pielāgotas attiecības.
-- **Skatīt**: skatiet sistēmas izveidotās un mantotās attiecības. 
 
 ## <a name="next-step"></a>Nākamā darbība
 

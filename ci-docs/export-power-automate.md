@@ -1,19 +1,19 @@
 ---
 title: Power Automate savienotājs (priekšskatījums) | Microsoft dokumenti
 description: Plūsmu veidošana programmā Microsoft Power Automate no Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082452"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196127"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate savienotājs (priekšskatījums)
 
@@ -21,18 +21,18 @@ Aktivizējiet automatizētu konkrētu notikumu norisi datu izmaiņu gadījumā u
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūs varat veikt ne vairāk kā 100 zvanus 60 sekundēs. API galapunktu var izsaukt vairākas reizes, izmantojot parametru $skip. [Uzziniet vairāk par parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Ne vairāk kā 100 zvani uz 60 sekundēm. Izmantojiet [parametru](/connectors/customerinsights/#get-items-from-an-entity) $skip, lai vairākas reizes izsauktu API galapunktu.
 
 ## <a name="power-automate-triggers"></a>Power Automate trigeri
 
-Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana.
+Izmantojiet trigerus, kas ļauj izveidot mākoņa plūsma un automatizēt atkārtojošos uzdevumu, piemēram, paziņojumu vai papildu darbību automatizēšana. Izmantojiet trigerus, ja:
 
-- Trigeris, kad neizdodas atsvaidzināt datu avotu.
-- Trigeris, kad izdodas atsvaidzināt datu avotu.
-- Trigeris, kad slieksnis ir šķērsots segmentā. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
-- Trigeris, kad biznesa pasākumā tiek pārsniegts slieksnis. Tiek atbalstīti tikai uzņēmuma mērījumi bez dimensijas. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
-- Trigeris, kad tiek pabeigta pilnīga (datu avotu, segmentu, pasākumu, ...) atsvaidzināšana.
-- Aktivizējiet, kad ir pabeigta apvienošanas procesa atsvaidzināšana.
+- Neizdodas datu avots atsvaidzināt.
+- Izdodas datu avots atsvaidzināšana.
+- Segmentā tiek šķērsots slieksnis. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
+- Uzņēmējdarbības pasākumam tiek pārkāpts slieksnis. Tiek atbalstīti tikai uzņēmuma mērījumi bez dimensijas. Trigeris ir ierobežots, lai šķērsotu virs sliekšņa.
+- Ir pabeigta pilna ieplānotā atsvaidzināšana. Šis trigeris nedarbojas manuāli sāktai atsvaidzināšanai.
+- Ir pabeigta apvienošanās procesa atsvaidzināšana.
 
 [Konfigurējiet trigerus programmā Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Power Automate savienotājs nodrošina citas darbības, izņemot pieejamos trige
 
 ## <a name="create-a-power-automate-flow"></a>Izveidot Power Automate plūsmu
 
-1. Dodieties uz sadaļu **Administrators** > **Eksportēšanas galamērķi**.
+1. Dodieties uz **Administrators** > **Savienojumi**.
 
 1. Elementā **Power Automate** atlasiet **Iestatīt**.
 
@@ -53,7 +53,5 @@ Power Automate savienotājs nodrošina citas darbības, izņemot pieejamos trige
 Plūsmu izmantošanas piemēri: 
 - Publicē ziņojumu Microsoft Teams kanālā, ja neizdodas datu avota atsvaidzināšana. 
 - Nosūtiet e-pasta ziņojumu datu īpašniekiem, kad tiek pārsvītrota segmenta sliekšņa vērtība.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

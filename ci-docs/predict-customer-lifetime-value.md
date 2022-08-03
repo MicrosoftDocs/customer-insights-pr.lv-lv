@@ -1,7 +1,7 @@
 ---
 title: Klienta ilgtermiņa vērtības (CLV) prognoze
 description: Prognozējiet potenciālos ieņēmumus aktīvajiem klientiem nākotnē.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055223"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186449"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
 Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis līdzeklis var palīdzēt sasniegt dažādus mērķus:
+
 - Noteikt ļoti vērtīgus klientus un apstrādāt šo ieskatu
 - Veidojiet stratēģiskus klientu segmentus, balstoties uz to iespējamo vērtību, lai izpildītu personalizētas kampaņas, ar mērķtiecīgiem pārdošanas, mārketinga un atbalsta pasākumiem
 - Produktu izstrādes rokasgrāmata, koncentrējoties uz līdzekļiem, kas palielina klienta vērtību
 - Optimizējiet pārdošanas vai mārketinga stratēģiju un precīzāk novirziet budžetu klientam
-- Atpazīt un apbalvot ļoti vērtīgus klientus, izmantojot apbalvojumu programmas 
+- Atpazīt un apbalvot ļoti vērtīgus klientus, izmantojot apbalvojumu programmas
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -35,7 +36,7 @@ Pirms darba sākšanas atainojiet, ko CLV nozīmē jūsu uzņēmumam. Pašlaik m
 
 Tā kā CLV modeļa konfigurēšanai un izmantošanai nevajag daudz laika, apsveriet iespēju izveidot vairākus modeļus ar dažādām ievades preferencēm un salīdziniet modeļa rezultātus, lai uzzinātu, kurš modeļa scenārijs vislabāk atbilst jūsu uzņēmuma vajadzībām.
 
-###  <a name="data-requirements"></a>Datu prasības
+### <a name="data-requirements"></a>Datu prasības
 
 Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicami modeļa veiktspējas palielināšanai. Jo vairāk datu modelis var apstrādāt, jo precīzāka būs prognoze. Tādēļ iesakām ievadīt vairāk klientu darbību datu, ja iespējams.
 
@@ -52,11 +53,12 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
     - Tīmekļa darbības: vietnes apmeklējuma vēsture, e-pasta vēsture
     - Lojalitātes darbības: lojalitātes programmas punktu uzkrāšanas un izmantošanas vēsture
     - Klientu apkalpošana žurnāls, servisa izsaukumi vai atgriešanas vēsture
+    - Informācija par klienta profilu
 - (Neobligāti) Dati par klientu darbībām:
     - Darbības identifikatori, lai nodalītu tāda paša tipa darbības
     - Klientu identifikatori darbību kartēšanai jūsu klientiem
     - Darbības informācija, kas ietver darbības nosaukumu un datumu
-    - Darbību semantiskās datu shēmas ietver: 
+    - Darbību semantiskās datu shēmas ietver:
         - **Primārā atslēga**: unikāls darbības identifikators
         - **Laikspiedols**: notikuma datums un laiks, ko identificē primārā atslēga
         - **Notikums (darbības nosaukums)**: norādiet izmantojamā notikuma nosaukumu
@@ -66,7 +68,7 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
     - Pietiekami vēsturiski dati: vismaz viena gada transakciju dati. 2–3 gadus veci transakciju dati, lai prognozētu CLV uz vienu gadu.
     - Vairāki pirkumi katram klientam: ideālā gadījumā vismaz divas līdz trīs transakcijas katram klienta ID, vēlams vairākos datumos.
     - Klientu skaits: Vismaz 100 unikālo klientu, vēlams vairāk nekā 10 000 klientu. Ja būs mazāk par 100 klientiem un nepietiks datu, modelis būs kļūmīgs
-    - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem   
+    - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem
 
 > [!NOTE]
 > - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas/darījumu entītijas, varat tās Power Query apvienot pirms datu uzņemšanas.
@@ -122,11 +124,11 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
 
 1. Atlasiet **Tālāk**.
 
-### <a name="add-optional-data"></a>Pievienot papildu datus
+### <a name="add-optional-activity-data"></a>Neobligāto darbību datu pievienošana
 
-Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, klientu apkalpošana un notikumu žurnāli), transakciju ierakstiem pievieno kontekstu. Vairāk struktūru, kas atrastas klientu darbības datos, var uzlabot prognožu precizitāti. 
+Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, klientu apkalpošana un notikumu žurnāli), transakciju ierakstiem pievieno kontekstu. Vairāk struktūru, kas atrastas klientu darbības datos, var uzlabot prognožu precizitāti.
 
-1. Darbībā **Papildu dati (neobligāti)** atlasiet vienumu **Pievienot datus**. Izvēlieties klienta darbību entītiju, kas sniedz informāciju par klientu darbībām, kā aprakstīts [priekšnosacījumos](#prerequisites).
+1. **Darbībā Papildu dati (neobligāti)** atlasiet **Pievienot datus** sadaļā **Palielināt modeļa ieskatus ar papildu darbības datiem**. Izvēlieties klienta darbību entītiju, kas sniedz informāciju par klientu darbībām, kā aprakstīts [priekšnosacījumos](#prerequisites).
 
 1. Kartējiet semantiskos laukus uz atribūtiem jūsu klientu darbības entītijā un atlasiet **Tālāk**.
 
@@ -135,15 +137,34 @@ Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, kli
 1. Atlasiet darbības tipu, kas atbilst pievienojamās klienta darbības tipam. Izvēlieties no esošajiem darbību tipiem vai pievienojiet jaunu darbības tipu.
 
 1. Konfigurējiet klienta darbības entītijas attiecības ar *Klienta* entītiju.
-    
+
     1. Atlasiet vienumu Lauks, kas ir identificējis klientu pirkumu vēstures tabulā. To var tieši saistīt ar *Klienta* entītijas primāro klienta ID.
     1. Atlasiet *Klienta* entītiju, kas atbilst primārajai *Klienta* entītijai.
     1. Ievadiet nosaukumu, kas apraksta attiecību.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Konfigurācijas plūsmas soļa attēls, lai pievienotu papildu datus un konfigurētu darbību ar aizpildītiem piemēriem.":::
 
-1. Atlasiet vienumu **Saglabāt**.    
+1. Atlasiet vienumu **Saglabāt**.
     Pievienojiet papildu datus, ja vēlaties iekļaut citas klientu darbības.
+
+1. Pievienojiet neobligātos klienta datus vai atlasiet **Tālāk**.
+
+### <a name="add-optional-customer-data"></a>Neobligāto klientu datu pievienošana
+
+Atlasiet kādu no 18 bieži izmantotajiem klienta profila atribūtiem, ko iekļaut kā ievadi modelī. Šie atribūti var nodrošināt personalizētākus, atbilstošākus un praktiskākus modeļa rezultātus jūsu uzņēmuma lietošanas gadījumos.
+
+Piemēram: Contoso Coffee vēlas prognozēt klientu dzīves cikla vērtību, lai mērķētu uz augstvērtīgiem klientiem ar personalizētu piedāvājumu, kas saistīts ar viņu jaunā espresso automāta palaišanu. Contoso izmanto CLV modeli un pievieno visus 18 klientu profila atribūtus, lai redzētu, kuri faktori ietekmē viņu visaugstākās vērtības klientus. Viņi uzskata, ka klientu atrašanās vieta ir visietekmīgākais faktors šiem klientiem.
+Izmantojot šo informāciju, viņi organizē vietējo pasākumu espresso automāta palaišanai un sadarbojas ar vietējiem pārdevējiem, lai iegūtu personalizētus piedāvājumus un īpašu pieredzi pasākumā. Bez šīs informācijas Contoso, iespējams, būtu nosūtījuši tikai vispārīgus mārketinga e-pastus un palaiduši garām iespēju personalizēt šo savu augstvērtīgo klientu vietējo segmentu.
+
+1. **Darbībā Papildu dati (neobligāti)** atlasiet **Pievienot datus** sadaļā **Palielināt modeļa ieskatus vēl vairāk, izmantojot papildu klientu datus**.
+
+1. Entītijai **izvēlieties** **Klients: CustomerInsights**, lai atlasītu vienoto klienta profila tabulu, kas kartē klienta atribūtu datus. Klienta **ID** izvēlieties **System.Customer.CustomerId**.
+
+1. Kartējiet citus laukus, ja dati ir pieejami jūsu vienotajos klientu profilos.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Klienta profila datu kartēto lauku piemērs.":::
+
+1. Atlasiet **Saglabāt** pēc to atribūtu kartēšanas, kas modelim jāizmanto, lai palīdzētu prognozēt klienta mūža vērtību.
 
 1. Atlasiet **Tālāk**.
 

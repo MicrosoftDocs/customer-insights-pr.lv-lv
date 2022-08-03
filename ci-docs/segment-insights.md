@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051600"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171012"
 ---
 # <a name="segment-insights-preview"></a>Segmentu ieskati (priekšskatījums)
 
@@ -43,26 +43,25 @@ Varat arī analizēt pārklāšanās izmaiņas specifiskiem atribūtiem.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Pārklāšanās analīzes skatīšana un optimizēšana
 
-Pēc analīzes pabeigšanas atrodiet detalizētu informāciju par šo ieskatu sadaļā **Segmenti** > **Ieskati (priekšskatījums)**.
+1. Pēc analīzes pabeigšanas atrodiet detalizētu informāciju par šo ieskatu sadaļā **Segmenti** > **Ieskati (priekšskatījums)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalizētā informācija par segmenta pārklājuma ieskatu.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Detalizētā informācija par segmenta pārklājuma ieskatu.":::
 
-Atlasiet ieskatu, lai skatītu analīzes rezultātus:
+1. Atlasiet ieskatu, lai skatītu analīzes rezultātus:
 
-- To dalībnieku skaits, kas pārklājas analīzei atlasītajiem segmentos.
-- Dalībnieku skaits, kas ir iekļauti vienā no segmentiem, bet ne pārējos segmentos.
-- Ja atlasījāt laukus, konfigurējot pārklāšanās analīzi, tie ir atrodami atbilstošajās cilnēs. Filtra nolaižamo izvēlni var izmantot, lai atlasītu jebkuru interesējošo atribūtu līmeni, un tabulā, kas atrodas apakšā, tiks parādīti atbilstošie dati.
+   - To dalībnieku skaits, kas pārklājas analīzei atlasītajiem segmentos.
+   - Dalībnieku skaits, kas ir iekļauti vienā no segmentiem, bet ne pārējos segmentos.
+   - Ja atlasījāt laukus, konfigurējot pārklāšanās analīzi, tie ir atrodami atbilstošajās cilnēs. Filtra nolaižamo izvēlni var izmantot, lai atlasītu jebkuru interesējošo atribūtu līmeni, un tabulā, kas atrodas apakšā, tiks parādīti atbilstošie dati.
 
 ## <a name="segment-differentiators"></a>Segmentu diferencētājposmi
 
-Segmentu diferenciatori palīdz uzzināt, kas atšķir segmentu no pārējiem jūsu klientiem vai no cita segmenta. Jums tikai jāatlasa segments, un sistēma identificēs profila atribūtus un mērus, kas atšķir atlasīto segmentu.
+Segmentu diferenciatori palīdz uzzināt, kas atšķir segmentu no pārējiem jūsu klientiem vai no cita segmenta. Atlasiet segmentu, un sistēma identificē profila atribūtus un mērus, kas atšķir atlasīto segmentu.
 
 ### <a name="run-a-differentiator-analysis"></a>Diferenciatoru analīzes veikšana
 
 1. Atveriet sadaļu **Segmenti** un atlasiet cilni **Ieskati (priekšskatījums)**.
 
-1. Atlasiet **Jauns** un izvēlieties opciju **Pārklāšanās** rūtī **Izvēlēties ieskatu tipu**.
+1. Atlasiet **Jauns** un rūtī Izvēlēties ieskatu tipu **izvēlieties** opciju **Diferencētāji**.
 
 1. Izvēlieties analizējamo segmentu kā **Primārais segments**, un atlasiet **Tālāk**.
 
@@ -70,29 +69,29 @@ Segmentu diferenciatori palīdz uzzināt, kas atšķir segmentu no pārējiem j�
 
 1. Ja vēlaties, varat izvēlēties vienu vai vairākus interesējošos laukus, lai veiktu analīzi specifiskiem atribūtiem, un atlasiet **Tālāk**.
 
-1. Norādiet pārklāšanās analīzes nosaukumu, neobligāti parādāmo nosaukumu un aprakstu.
+1. Norādiet nosaukumu diferencēšanas analīzei, neobligātu parādāmo vārdu un aprakstu.
 
-1. Lai sāktu analīzi, atlasiet **Saglabāt**. Pārklāšanās analīze ir gatava, kad statuss tiek nomainīts no Atsvaidzināšana uz Veiksmīgi pabeigta.
+1. Lai sāktu analīzi, atlasiet **Saglabāt**. Diferencēšanas analīze ir gatava, kad statuss mainās no Atsvaidzināšanas uz Sekmīgs.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Diferenciatoru analīzes skatīšana un optimizēšana
 
-Pēc analīzes pabeigšanas atrodiet detalizētu informāciju par šo ieskatu sadaļā **Segmenti** > **Ieskati (priekšskatījums)**.
+1. Pēc analīzes pabeigšanas dodieties uz **Segmentu ieskati** > **(priekšskatījums)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalizētā informācija par segmenta diferenciatora ieskatu.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Detalizētā informācija par segmenta diferenciatora ieskatu.":::
 
-Atlasiet ieskatu, lai skatītu analīzes rezultātus. Diferenciatoru analīze ietver divas cilnes. Cilnē **Atribūti** ir norādīti profila atribūti, kas tiek uzskatīti par diferenciatoriem. Cilnē **Mēri** ir uzskaitīti diferenciatori. Katrā cilnē ir šāda informācija:
+1. Atlasiet ieskatu, lai skatītu analīzes rezultātus. Diferenciatoru analīze ietver divas cilnes. Cilnē **Atribūti** ir norādīti profila atribūti, kas tiek uzskatīti par diferenciatoriem. Cilnē **Mēri** ir uzskaitīti diferenciatori. Katrā cilnē ir šāda informācija:
 
-- Novērtētu diferenciatoru saraksts, kas sakārtots pēc atšķirības rezultāta.
-- Katras differentiatora **Atšķirības rezultāts**. Atšķirības rezultāts atspoguļo atribūta atšķirības pakāpi, salīdzinot divus segmentus. Jo lielāks ir atšķirības rezultāts, jo vairāk atribūtu atšķiras abos segmentos. Atlasiet rezultātu, lai atvērtu rūti **Atšķirības rezultāts** ar šī atribūta vērtību sadali.
+   - Novērtētu diferenciatoru saraksts, kas sakārtots pēc atšķirības rezultāta.
+   - Katras differentiatora **Atšķirības rezultāts**. Atšķirības rezultāts atspoguļo atribūta atšķirības pakāpi, salīdzinot divus segmentus. Jo lielāks ir atšķirības rezultāts, jo vairāk atribūtu atšķiras abos segmentos. Atlasiet rezultātu, lai atvērtu rūti **Atšķirības rezultāts** ar šī atribūta vērtību sadali.
 
 ## <a name="manage-segment-insights"></a>Segmentu ieskatu pārvaldība
 
-Varat izmantot tālāk norādītās iespējas jūsu ieskatiem, kuras ir pieejamas komandu joslā:
+Dodieties uz **Segmentu** > **ieskati (priekšskatījums),** lai skatītu segmenta ieskatus un pārvaldītu tos. Atlasiet segmenta ieskatu, lai skatītu pieejamās darbības.
 
-- **Atpakaļ**, lai atgrieztos pie ieskatu saraksta
-- **Atsvaidzināt**, lai vēlreiz veiktu analīzi
-- **Dzēst**, lai noņemtu šo ieskatu
-
+- **Ieskatu analīzes skatīšana**
+- **Rediģējiet** ieskatu, lai mainītu tā rekvizītus
+- **Atsvaidziniet** ieskatu, lai vēlreiz veiktu analīzi
+- **Pārdēvējiet** ieskatu
+- **Dzēst** ieskatu
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

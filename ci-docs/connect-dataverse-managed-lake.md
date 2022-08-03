@@ -1,7 +1,7 @@
 ---
 title: Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 description: Datu importēšana no Microsoft Dataverse pārvaldītā datu ezera.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082158"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206962"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
-Microsoft Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām entītijām pārvaldītā ezerā Microsoft Dataverse.
+Microsoft Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām entītijām pārvaldītā ezerā Microsoft Dataverse. Tikai vienas vides datu avots var vienlaikus izmantot to pašu Dataverse pārvaldīto ezeru.
 
 > [!NOTE]
 > Jums ir jābūt organizācijas administratoram, Dataverse lai turpinātu un skatītu pārvaldītajā ezerā pieejamo entītiju sarakstu.
 
-## <a name="important-considerations"></a>Svarīgi ieteikumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-1. Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot vai izveidojot savienojumu ar datiem, kas tiek glabāti tiešsaistes pakalpojumos, jūs piekrītat, ka datus var pārsūtīt uz un uzglabāt kopā ar Dynamics 365 Customer Insights. [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
-2. Ir redzamas tikai Dataverse tās entītijas, kurām [ir iespējota izmaiņu izsekošana](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šīs entītijas var eksportēt uz pārvaldīto Dataverse datu ezeru un izmantot programmā Customer Insights. Standarta tabulās Dataverse izmaiņu izsekošana ir iespējota pēc noklusējuma. Jums ir jāieslēdz izmaiņu izsekošana pielāgotām tabulām. Lai pārbaudītu, vai tabula ir iespējota Dataverse izmaiņu izsekošanai, dodieties uz [Power Apps](https://make.powerapps.com) > **Datu** > **tabulas**. Atrodiet sev interesējošo tabulu un atlasiet to. Dodieties uz **Papildu opciju** > **Iestatījumi** un pārskatiet **iestatījumu Izmaiņu reģistrēšana**.
+- Dati, kas tiek glabāti tiešsaistes pakalpojumos, piemēram, Azure Data Lake Storage, var tikt glabāti citā atrašanās vietā, nevis tajā, kur dati tiek apstrādāti vai glabāti programmā Dynamics 365 Customer Insights.Importējot vai izveidojot savienojumu ar datiem, kas tiek glabāti tiešsaistes pakalpojumos, jūs piekrītat, ka datus var pārsūtīt uz un uzglabāt kopā ar Dynamics 365 Customer Insights. [Uzziniet vairāk Microsoft drošības kontroles centrā](https://www.microsoft.com/trust-center).
+
+- Ir redzamas tikai Dataverse tās entītijas, kurām [ir iespējota izmaiņu izsekošana](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šīs entītijas var eksportēt uz pārvaldīto Dataverse datu ezeru un izmantot programmā Customer Insights. Standarta tabulās Dataverse izmaiņu izsekošana ir iespējota pēc noklusējuma. Jums ir jāieslēdz izmaiņu izsekošana pielāgotām tabulām. Lai pārbaudītu, vai tabula ir iespējota Dataverse izmaiņu izsekošanai, dodieties uz [Power Apps](https://make.powerapps.com) > **Datu** > **tabulas**. Atrodiet sev interesējošo tabulu un atlasiet to. Dodieties uz **Papildu opciju** > **Iestatījumi** un pārskatiet **iestatījumu Izmaiņu reģistrēšana**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Savienojuma izveide ar Dataverse pārvaldīto datu ezeru
 
@@ -51,7 +52,9 @@ Microsoft Dataverse lietotāji var ātri izveidot savienojumu ar analītiskām e
 
 1. Saglabājiet savu atlasi, lai sāktu atlasīto tabulu sinhronizēšanu no Dataverse. Tikko izveidotais savienojums ir atrodams lapā **Datu avoti**. Tā tiks ievietota rindā atsvaidzināšanai un rādīs entītiju skaitu kā 0, līdz visas atlasītās tabulas tiks sinhronizētas.
 
-Tikai vienas vides datu avots var vienlaikus izmantot to pašu Dataverse pārvaldīto ezeru.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos datus var pārskatīt lapā [**Entītijas**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Dataverse pārvaldītā datu ezera datu avota rediģēšana
 
@@ -62,4 +65,10 @@ Lai izveidotu savienojumu ar citu Dataverse datu ezeru, [izveidojiet jaunu datu 
 
 1. Blakus datu avots, kuru vēlaties atjaunināt, atlasiet **Rediģēt**.
 
-1. Pieejamo entītiju sarakstā atlasiet papildu entītijas un atlasiet **Saglabāt**.
+1. Atlasiet papildu entītijas no pieejamā entītiju saraksta.
+
+1. Noklikšķiniet uz **Saglabāt**, lai lietotu izmaiņas un atgrieztos **lapā Datu avoti**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

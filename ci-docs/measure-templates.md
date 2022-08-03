@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051692"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170782"
 ---
 # <a name="create-measures-from-templates"></a>Pasākumu izveide no veidnēm
 
-Lai tos izveidotu, varat izmantot iepriekš definētas bieži izmantoto [mēru](measures.md) veidnes. Detalizēti veidņu apraksti un vadība palīdzēs jums sekmīgi izveidot mērījumu. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
+Lai tos izveidotu, izmantojiet iepriekš definētas bieži izmantoto [mēru](measures.md) veidnes. Veidnes tiek veidotas uz kartētajiem datiem no *Vienotās darbības* entitījas. Tāpēc, pirms no veidnes izveidojat mērījumu, pārliecinieties, ka esat konfigurējuši [klientu darbības](activities.md).
 
-Lai izveidotu pielāgotus mērus, skatiet rakstu [Mēru veidotāja izmantošana, lai izveidotu mērus no nulles](measure-builder.md).
+Mēru veidnes tiek atbalstītas tikai vidēs, kas paredzētas atsevišķiem **klientiem**. Lai izveidotu pielāgotus mērus vai izveidotu mērus no B līdz B, skatiet rakstu [Mēru veidotāja izmantošana](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Atsevišķi patērētāji (B2C)](#tab/b2c)
-
-Pieejamās mērījumu veidnes: 
+Pieejamās mērījumu veidnes:
 - Vidējā transakcijas vērtība (ATV)
 - Kopējā transakciju vērtība
 - Vidējie ieņēmumi dienā
+- Vidējie mēneša ieņēmumi
 - Gada vidējie ieņēmumi
 - Transakciju skaits
 - Iegūtie lojalitātes punkti
@@ -57,21 +56,22 @@ Pieejamās mērījumu veidnes:
 
 1. Atlasiet **Gatavs**.
 
-1. Sadaļā **Iestatīt laikposmu** definējiet lietojamo datu laika periodu. Izvēlieties, vai jaunajam mērījumam jāaptver visa datu kopa, atlasot **Viss laiks**, vai vēlaties, lai mērījums koncentrētos uz **Noteiktu laika periodu**.
+1. **Sadaļā Laika perioda** iestatīšana definējiet datu laika periodu. Izvēlieties, vai jaunajam mērījumam jāaptver visa datu kopa, atlasot **Viss laiks**, vai vēlaties, lai mērījums koncentrētos uz **Noteiktu laika periodu**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrānuzņēmums, kurā redzama laika perioda sadaļa, kad mērījumu konfigurē no veidnes.":::
 
 1. Nākamajā sadaļā atlasiet **Pievienot datus**, lai izvēlētos darbībs un kartētu atbilstošos datus no savas *Vienotās darbības* entitījas.
 
-    1. 1. darbība no 2: Sadaļā **Darbības veids** izvēlieties entitījas veidu, kuru vēlaties lietot. **Darbībām** atlasiet entitījas, kuras vēlaties kartēt.
-    1. 2. darbība no 2: Atlasiet atribūtu no *Vienotās darbības* entitījas formulas prasītajam komponentam. Piemēram, vidējai transakcijas vērtībai tas ir komponents, kas apzīmē transakcijas vērtību. **Darbības laikspiedolam** atlasiet atribūtu no Vienotās darbības entitījas, kas apzīmē darbības datumu un laiku.
-   
-1. Kad datu kartēšana ir izdevusies, varat redzēt statusu kā **Pabeigts** un kartēto darbību un atribūtu nosaukumu.
+    1. 1. darbība no 2: Sadaļā **Darbības veids** izvēlieties entitījas veidu, kuru vēlaties lietot. Sadaļā **Darbības** atlasiet entītijas, kuras vēlaties kartēt, un pēc tam atlasiet **Tālāk**.
+    1. 2. darbība no 2: Atlasiet atribūtu no *Vienotās darbības* entitījas formulas prasītajam komponentam. Piemēram, vidējai transakcijas vērtībai tas ir komponents, kas apzīmē transakcijas vērtību. Sadaļā **Aktivitātes laikspiedols** izvēlieties atribūtu no vienotās *aktivitātes* entītijas, kas attēlo darbības datumu un laiku.
+    1. Atlasiet **Saglabāt**.
 
-1. Tagad varat atlasīt **Palaist**, lai aprēķinātu mērījuma rezultātus. Lai to precizētu vēlāk, atlasiet **Saglabāt melnrakstu**.
+    Kad datu kartēšana ir veiksmīga, statuss tiek rādīts **Pabeigts** un tiek parādīts kartēto darbību un atribūtu nosaukums.
 
-# <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
+1. Atlasiet **Palaist**, lai aprēķinātu mēra rezultātus. Atlasiet **Saglabāt melnrakstu**, ja vēlaties saglabāt pašreizējo konfigurāciju, un palaidiet mēru vēlāk. Tiek **parādīta lapa Mēri**.
 
-Šis līdzeklis ir pieejams tikai pasākumiem, kas izveidoti vidē, kurā kā primāro mērķauditoriju ir individuālie klienti.
+## <a name="next-step"></a>Nākamā darbība
 
----
+Izmantojiet esošos mērus, lai izveidotu [klientu segmentu](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

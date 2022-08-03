@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947377"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146704"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Datu subjektu tiesību (DSR) pieprasījumi saskaņā ar VDAR
 
@@ -29,20 +29,24 @@ Mēs gribam palīdzēt mūsu klientiem varētu izpildīt savas VDAR prasības. T
 
 #### <a name="manage-data-subject-delete-requests"></a>Datu subjekta dzēšanas pieprasījumu pārvaldība
 
-Customer Insights piedāvā šādu produkta pieredzi, lai dzēstu personas datus konkrētam klientam vai lietotājam:
+Customer Insights piedāvā šādas produktā esošās iespējas, lai dzēstu konkrēta klienta vai lietotāja personas datus:
 
-- **Klienta datu dzēšanas pieprasījumu pārvaldīšana**: klientu dati programmā Customer Insights tiek pieņemti no sākotnējiem datu avotiem ārpus programmas Customer Insights. Visi VDAR dzēšanas pieprasījumi ir jāizpilda sākotnējā datu avotā.
+- **Klienta datu dzēšanas pieprasījumu pārvaldīšana**: klientu dati programmā Customer Insights tiek pieņemti no sākotnējiem datu avotiem ārpus programmas Customer Insights. Vispirms veiciet VDAR dzēšanas pieprasījumus sākotnējā datu avots.
 - **Pārvaldiet dzēšanas pieprasījumus Customer Insights lietotāju datiem** : Dati lietotājiem tiek izveidoti, izmantojot Customer Insights. Visi VDAR dzēšanas pieprasījumi ir jāizpilda programmā Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Klienta datu dzēšanas pieprasījumu pārvaldīšana
 
-Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, kas bija dzēsti klientu datos:
+Customer Insights administrators var veikt šīs darbības, lai noņemtu klienta datus, kas tika izdzēsti datu avots. Pārliecinieties, vai dzēšanas pieprasījums ir izpildīts jūsu datu avots, pirms veicat tālāk norādītās darbības. 
 
 1. Pierakstieties programmā Dynamics 365 Customer Insights.
-2. Doties uz **datu datu** > **avotiem**
-3. Katram sarakstā iekļautajam datu avotam, kurā ir izdzēsti klienta dati:
+1. Dodieties uz **Datu** > **datu avoti**
+1. Katram sarakstā iekļautajam datu avotam, kurā ir izdzēsti klienta dati:
    1. Atlasiet vertikālo daudzpunkti (&vellip;) un pēc tam atlasiet **Atsvaidzināt**.
-   2. Skatiet datu avota statusu sadaļā **Statuss**. Atzīme nozīmē, ka atsvaidzināšana bija veiksmīga. Brīdinājuma trijstūris nozīmē, ka radās problēma. Ja tiek parādīts brīdinājuma trijstūris, sazinieties ar D365CI@microsoft.com.
+   1. Skatiet datu avota statusu sadaļā **Statuss**. Atzīme nozīmē, ka atsvaidzināšana bija veiksmīga. Brīdinājuma trijstūris nozīmē, ka radās problēma. Ja tiek parādīts brīdinājuma trijstūris, sazinieties ar D365CI@microsoft.com.
+1. Pēc veiksmīgas datu avotu atsvaidzināšanas palaidiet arī pakārtotos atsvaidzinājumus. Jo īpaši, ja jums nav ieplānota periodiska pilnīga Customer Insights atsvaidzināšana. 
+
+> [!IMPORTANT]
+> Statiskie segmenti netiek iekļauti pilnā atsvaidzināšanā vai lejupstraumes atsvaidzināšanā pēc dzēšanas pieprasījuma. Lai nodrošinātu, ka klientu dati tiek noņemti arī no statiskiem segmentiem, atkārtoti izveidojiet statiskos segmentus, izmantojot atsvaidzinātus avota datus.
 
 > [!div class="mx-imgBorder"]
 > ![Klienta datu VDAR dzēšanas pieprasījumu apstrāde.](media/gdpr-data-sources.png "Klienta datu VDAR dzēšanas pieprasījumu apstrāde")
@@ -52,13 +56,13 @@ Customer Insights administrators var veikt šīs darbības, lai noņemtu datus, 
 Customer Insights administrators var veikt tālāk norādītās darbības, lai dzēstu Customer Insights lietotāja datus:
 
 1. Pierakstieties programmā Dynamics 365 Customer Insights.
-2. Dodieties uz **administratora** > **drošības** > **atļaujām**.
+2. Dodieties uz **administratora** > **drošības** > **atļaujas**.
 3. Atzīmējiet tā lietotāja izvēles rūtiņu, kuru vēlaties dzēst.
 4. Atlasiet **Noņemt**.
 
 ### <a name="responding-to-gdpr-data-subject-export-requests"></a>Reaģēšana uz VDAR datu subjekta eksportēšanas pieprasījumiem
 
-Kā daļu no mūsu apņemšanās sadarboties ar jums ceļā uz Vispārīgo datu aizsardzības regulu (VDAR), mēs esam izstrādājuši dokumentāciju, lai palīdzētu jums atbildēt uz datu subjektu pieprasījumiem.
+Kā daļu no mūsu apņemšanās sadarboties ar jums ceļā uz Vispārīgo datu aizsardzības regulu (VDAR), mēs esam izstrādājuši dokumentāciju, kas palīdzēs jums atbildēt uz datu subjektu pieprasījumiem.
 
 #### <a name="manage-export-and-view-requests"></a>Eksportēšanas pārvaldīšana un pieprasījumu skatīšana
 
@@ -77,5 +81,10 @@ Lai eksportētu datus, nomnieka administrators var veikt tālāk norādītas dar
 1. Nosūtiet e-pasta ziņojumu uz e-pasta adresi D365CI@microsoft.com, norādot lietotāja e-pasta adresi pieprasījumā. Customer Insights komanda nosūtīs e-pasta ziņojumu uz reģistrēto nomnieka administratora e-pasta adresi, lūdzot apstiprinājumu datu eksportēšanai.
 2. Atzīstiet apstiprinājumu eksportēt pieprasītā lietotāja datus.
 3. Saņemiet eksportētos datus, izmantojot nomnieka administratora e-pasta adresi.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Datu dzēšanas apstrāde Dynamics 365 Customer Insights
+
+1. Dati tiks dzēsti (datu nodalījumi un datu momentuzņēmumi), ja datu nodalījumi un datu momentuzņēmumi būs neaktīvi ilgāk par 30 dienām, kas nozīmē, ka tie ir aizstāti ar jaunu datu nodalījumu un momentuzņēmumu, atsvaidzinot datu avotus.
+2. Ne visi dati un momentuzņēmumi tiek izdzēsti. Jaunākais datu nodalījums un datu momentuzņēmums pēc definīcijas ir aktīvs, jo tie tiek izmantoti programmā Customer Insights. Jaunākajiem datiem nav svarīgi, vai datu avoti nav atsvaidzināti pēdējo 30 dienu laikā.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

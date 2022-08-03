@@ -1,37 +1,41 @@
 ---
 title: Eksportējiet Customer Insights datus uz InMobi
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz InMobi.
-ms.date: 06/27/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8261c8adfe231792e70fc85432237cf73d5cd5a7
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ef486ad6786ef01be977f3d6bda69ce8a2b081c7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9059613"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195897"
 ---
-# <a name="export-segment-list-and-other-data-to-inmobi-preview"></a>Segmentu saraksta un citu datu eksportēšana uz InMobi (priekšskatījums)
+# <a name="export-customer-insights-data-to-inmobi-preview"></a>Customer Insights datu eksportēšana uz InMobi (priekšskatījums)
 
 Eksportējiet segmentu sarakstus vai citus datus no savas Customer Insights instances uz [InMobi](https://www.inmobi.com/).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-1. Jums ir [InMobi konts](https://www.inmobi.com/) un administratora akreditācijas dati.
-1. Jums ir Azure Blob krātuves konta nosaukums un atbilstošā konta atslēga. Papildinformāciju skatiet sadaļā [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage). Krātuves kontā ir konteiners, uz kuru eksportēt inMobi datus. Papildinformāciju skatiet sadaļā [Konteinera izveide](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-1. InMobi izveidos tiešu savienojumu ar jūsu Blob krātuvi un konfigurēs automātisku jūsu datu importēšanu inMobi. Sazinieties ar savu InMobi pārstāvi, lai uzsāktu procesu.
+- [InMobi konts](https://www.inmobi.com/) un administratora akreditācijas dati.
+- [Azure Blob krātuves konta](/azure/storage/blobs/create-data-lake-storage-account) nosaukums un konta atslēga. Lai atrastu nosaukumu un atslēgu, skatiet rakstu [Krātuves konta iestatījumu pārvaldība Azure portālā](/azure/storage/common/storage-account-manage).
+- Azure Blob krātuves [konteiners](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container) InMobi datu eksportēšanai uz.
+- InMobi izveidos tiešu savienojumu ar jūsu Blob krātuvi un konfigurēs automātisku jūsu datu importēšanu inMobi. Sazinieties ar savu InMobi pārstāvi, lai uzsāktu procesu.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-1. Azure Blob krātuvei varat izvēlēties starp [standarta veiktspēju un Premium veiktspējas līmeni](/azure/storage/blobs/storage-blob-performance-tiers). Ja izvēlaties Premium veiktspējas līmeni, atlasiet [premium bloka BLOB kā uzņēmuma tipu](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+- Azure Blob krātuvei izvēlieties starp standarta veiktspēju [un Premium veiktspējas līmeni](/azure/storage/blobs/storage-blob-performance-tiers). Ja izvēlaties Premium veiktspējas līmeni, atlasiet [premium bloka BLOB kā uzņēmuma tipu](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
-## <a name="set-up-the-connection-to-azure-blob-storage-and-configure-an-export"></a>Savienojuma iestatīšana ar Azure Blob krātuvi un eksportēšanas konfigurēšana
+## <a name="set-up-connection-to-azure-blob-storage"></a>Savienojuma ar Azure Blob krātuvi iestatīšana
 
-1. Izpildiet norādījumus, lai [iestatītu savienojumu ar Azure Blob krātuvi](export-azure-blob-storage.md).
-2. Izpildiet norādījumus, lai [konfigurētu eksportēšanu](export-azure-blob-storage.md#configure-an-export).
+[Iestatiet savienojumu ar Azure Blob krātuvi](export-azure-blob-storage.md).
+
+## <a name="configure-an-export"></a>Eksporta konfigurēšana
+
+[Konfigurējiet eksportēšanu](export-azure-blob-storage.md#configure-an-export).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

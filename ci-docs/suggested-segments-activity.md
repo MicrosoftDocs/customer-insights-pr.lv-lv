@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054349"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170598"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Uz darbībām balstīti segmenta ieteikumi (priekšskatījums)
+# <a name="suggested-segments-based-on-activity-preview"></a>Ieteiktie segmenti, kuru pamatā ir darbība (priekšskatījums)
 
 Atklājiet jūsu klientus interesējošos segmentus, balstoties uz klientu darbību datiem, kuri tiek lietoti ar Customer Insights. Darbību dati ir, piemēram, transakcijas, atbalsta sarunas ilgums, iegāde vai atgriešana. Lai ieteiktu segmentus, darbības dati tiek analizēti, lai noteiktu atkārtojamību, biežumu un naudas vērtību (vai ilgumu). Vai arī var ģenerēt [ieteiktos segmentus, lai uzlabotu pasākumu vai labāk saprastu atribūta ietekmi](suggested-segments.md).
 
@@ -35,29 +35,27 @@ Izmantojot [darbības datus](activities.md), kas pieejami programmā Customer In
 - klienti, kas bieži mijiedarbojas ar uzņēmumu  
 
 Ja jums ir mazumtirdzniecības uzņēmums, varat uzzināt, kuri klienti rada visvairāk ieņēmumu, un apbalvot viņus ar sīcēju. Varat arī identificēt gadījuma klientus un piedāvāt viņiem pievienoties apbalvojumu programmai, lai viņi biežāk apmeklētu jūsu uzņēmumu.
-Ja jūs esat veselības aprūpes uzņēmums, kas sniedz publisku veselības aprūpi un jūsu mērķis ir minimizēt atsevišķas sasācības izmaksas. Veids, kā to izdarīt, varētu būt samazināt periodisko vizīti, pēc iespējas nodrošinot pēc iespējas labāko rūpību pēc iespējas dažos apmeklējumos. Šajā gadījumā jūsu mērķis ir uzturēt zemu apmeklējuma biežumu un minimizēt periodiskās izmaksas attiecībā uz jutīgajām vietām. Vai arī varat identificēt ar klientiem saistītas problēmas, kam bieži ir tikšanās un augstas periodiskās izmaksas, un analizēt šos pieteikumus, lai uzlabotu indivīda uzlabošanos. 
+Ja jūs sniedzat valsts veselības aprūpi un jūsu mērķis ir samazināt izdevumus atsevišķiem pacientiem, jūs varētu mēģināt samazināt atkārtotus apmeklējumus, nodrošinot vislabāko iespējamo aprūpi pēc iespējas mazāk apmeklējumu. Šajā gadījumā jūsu mērķis ir uzturēt zemu apmeklējuma biežumu un minimizēt periodiskās izmaksas attiecībā uz jutīgajām vietām. Vai arī varat identificēt ar klientiem saistītas problēmas, kam bieži ir tikšanās un augstas periodiskās izmaksas, un analizēt šos pieteikumus, lai uzlabotu indivīda uzlabošanos.
 
 ## <a name="required-data"></a>Nepieciešamie dati
 
-Ieteikumi tiek ģenerēti, pamatojoties uz atlasītajiem ievades datiem. 
+Ieteikumi tiek ģenerēti, pamatojoties uz atlasītajiem ievades datiem.
 
-- Klientu profili: visi noteikta segmenta klienti vai dalībnieki. 
+- Klientu profili: visi noteikta segmenta klienti vai dalībnieki.
 
 - Laika periods: pagājušais mēnesis, pēdējais gads vai jebkurš pielāgots laika posms.
 
 - Darbības tips: pirkumi, mazumtirdzniecības transakcijas, tiešsaistes transakcijas, klientu atbalsta pieteikumi, abonementi utt.  
 
-- Entītija programmā Customer Insights, kurā ir darbības dati: noteiktas darbības entītija vai UnifiedActivity entītija. 
+- Entītija programmā Customer Insights, kurā ir darbības dati: noteiktas darbības entītija vai UnifiedActivity entītija.
 
 - Atkarībā no jūsu uzņēmējdarbības prasībām tajā iekļaujams: resns, biežums vai naudas izteiksmē.
 
 ## <a name="generate-suggested-segments"></a>Izveidot ieteiktos segmentus
 
-1. Ejiet uz **Segmenti**.
+1. Dodieties uz **Segmenti** un atlasiet **cilni Ieteikumi (priekšskatījums**).
 
-1. Atlasiet cilni **Ieteikumi (priekšskatījums)**.
-
-1. Atlasiet **Atrast jaunus ieteikumus** un izvēlieties **Skatīt vai paredzēt klientu uzvedību**. Atlasiet vienumu **Sākt**, lai palaistu vadīto pieredzi.
+1. Atlasiet **Atrast jaunus ieteikumus** un izvēlieties **Skatīt vai paredzēt klientu uzvedību**. Atlasiet **Sākums**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Konfigurēšanas vedņa pirmais solis ieteiktam segmentam, pamatojoties uz darbību.":::
 
@@ -69,32 +67,17 @@ Ieteikumi tiek ģenerēti, pamatojoties uz atlasītajiem ievades datiem.
 
 1. Pārskatiet savu ievadi un atlasiet opciju **Palaist**, lai palaistu modeli un ģenerētu ieteikumus.
 
-1. Atkarībā no klientu profilu un atlasīto darbību skaita pabeigšana var ilgt dažas minūtes. 
+Atkarībā no klientu profilu un atlasīto darbību skaita pabeigšana var ilgt dažas minūtes.
 
-Pēc ieteikumu ģenerēšanas tos varat filtrēt pēc kategoriju kategorijas vai vērtības, kas jūs interesē visvairāk. 
+Pēc ieteikumu ģenerēšanas tos varat filtrēt pēc kategoriju kategorijas vai vērtības, kas jūs interesē visvairāk.
 
-## <a name="view-details-of-a-suggested-segment"></a>Ieteicamā segmenta detalizētas informācijas skatīšana
+## <a name="manage-suggested-segments"></a>Ieteikto segmentu pārvaldība
 
-Kad ieteikumi ir ģenerēti, tie ir uzskaitīti sadaļā **Segmenti** > **Ieteikumi (priekšskatījums)** **Uz darbībām balstīti ieteikumi**.
+Dodieties uz **Segmenti** un atlasiet **cilni Ieteikumi (priekšskatījums**). **Sadaļā Uz darbībām balstīti ieteikumi** atlasiet ieteikto segmentu, lai skatītu pieejamās darbības.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Izvērsta sānu rūts, kurā ir detalizēti ieteiktā segmenta dati.":::
-
-Lai skatītu detalizētu informāciju par šo segmentu, atlasiet vienumu **Skatīt ierosinājumu** par ieteikto segmentu. Sānu rūtī ir sniegta detalizēta informācija, piemēram, cik lielā mērā katrs aspekts ir salīdzināts ar mērķa grupu. Turklāt tiek izcelts arī segmentā iespējamo dalībnieku skaits un atbilstošā klientu kopsummas procentuālā vērtība. Ja ierosinājumu vēlaties saglabāt kā segmentu, atlasiet opciju **Izveidot segmentu**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Ieteikuma saglabāšana par segmentu
-
-1. Dodieties uz **Segmenti** > **Ieteikumi (priekšskatījums)**.
-
-1. Atlasiet saglabājamo segmentu. 
-
-1. Sānu rūtī atlasiet **Izveidot segmentu**. 
-
-1. Pēc segmenta saglabāšanas tas tiks rādīts segmentu sarakstā cilnē **Visi segmenti**. Tagad to var [atsvaidzināt vai dzēst, piemēram, kā jebkuru citu segmentu](segments.md). Segmenta detalizēto informāciju nevar rediģēt. Tomēr varat mainīt ieteikumu ievades kritērijus un ģenerēt dažādus ieteikumus.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Ieteikumu kopas atsvaidzināšana vai rediģēšana
-
-1. Dodieties uz **Segmenti** > **Ieteikumi (priekšskatījums)** un meklējiet segmentu sadaļā **Uz darbībām balstīti ieteikumi**.
-
-1. Atlasiet **Atsvaidzināt ieteikumus**, lai atsvaidzinātu ieteikumus, saglabājot konfigurētos atribūtus. Vai atlasiet vienumu **Rediģēt ieteikumus**, lai modificētu konfigurētos atribūtus. Sistēma procesu no jauna palaidiet vēlreiz, ģenerējiet segmenta ieteikumus, pamatojoties uz jaunākajiem datiem, un aizstās pašreizējos ieteikumus.
+- **Skatiet ieteikumu skatīt šī** segmenta informāciju, piemēram, katras dimensijas apmēru salīdzinājumā ar mērķa grupu. Turklāt tiek izcelts arī segmentā iespējamo dalībnieku skaits un atbilstošā klientu kopsummas procentuālā vērtība.
+- **Izveidojiet segmentu**, lai ieteikto saglabātu kā segmentu. Tas tiek rādīts **cilnē Visi segmenti**, un to var [atsvaidzināt vai izdzēst](segments.md). Segmenta detalizēto informāciju nevar rediģēt. Tomēr varat mainīt ieteikumu ievades kritērijus un ģenerēt dažādus ieteikumus.
+- **Rediģējiet ieteikumus**, lai modificētu konfigurētos atribūtus, kas aizstās pašreizējos ieteikumus.
+- **Atsvaidziniet ieteikumus**, lai atsvaidzinātu ieteikumus, vienlaikus saglabājot konfigurētos atribūtus.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082263"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207008"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Izveidot savienojumu ar datiem programmā Azure Data Lake Storage
 
@@ -82,9 +82,9 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
    :::image type="content" source="media/ADLS_required.png" alt-text="dialoglodziņš, kurā redzams obligāts primārajai atslēgai":::
 
    > [!TIP]
-   > Lai rediģētu entītijas JSON rediģēšanas interfeisā, atlasiet **Rādīt vairāk** > **Rediģēt shēmas failu**. Veiciet izmaiņas un atlasiet **Saglabāt**.
+   > Lai rediģētu entītiju JSON rediģēšanas interfeisā, atlasiet entītiju un pēc tam **Rediģējiet shēmas failu**. Veiciet izmaiņas un atlasiet **Saglabāt**.
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -101,6 +101,10 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
    1. Atlasiet **Gatavs**.
 
 1. Atlasiet **Saglabāt**. Tiek **atvērta lapa Datu avoti**, kurā redzams jaunais datu avots sadaļā **Atsvaidzināšanas** statuss.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos datus var pārskatīt lapā [**Entītijas**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Jauna shēmas faila izveide
 
@@ -138,7 +142,7 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
 
    :::image type="content" source="media/ADLS_required.png" alt-text="dialoglodziņš, kurā redzams obligāts primārajai atslēgai":::
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -148,6 +152,9 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
 
 1. Atlasiet **Saglabāt**. Tiek **atvērta lapa Datu avoti**, kurā redzams jaunais datu avots sadaļā **Atsvaidzināšanas** statuss.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos datus var pārskatīt lapā [**Entītijas**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage datu avots rediģēšana
 
@@ -179,8 +186,16 @@ Varat atjaunināt opciju *Izveidot savienojumu ar krātuves kontu, izmantojot op
       > [!IMPORTANT]
       > Ja esošajā model.json vai manifest.json failā un entītiju kopā ir atkarības, tiks parādīts kļūdas ziņojums un nevarēs atlasīt citu model.json vai manifest.json failu. Pirms maināt model.json vai manifest.json failu, noņemiet šīs atkarības vai izveidojiet jaunu datu avotu ar model.json vai manifest.json failu, kuru vēlaties izmantot, lai izvairītos no atkarību noņemšanas.
    - Lai mainītu datu faila atrašanās vietu vai primāro atslēgu, atlasiet **Rediģēt**.
-   - Lai mainītu inkrementālās norīšanas datus, skatiet rakstu [Inkrementāla atsvaidzināšanas konfigurēšana Azure Datu ezera datu avotiem](incremental-refresh-data-sources.md)
+   - Lai mainītu inkrementālās norīšanas datus, skatiet rakstu [Pakāpeniskās atsvaidzināšanas konfigurēšana Azure Data Lake datu avotiem](incremental-refresh-data-sources.md).
+   - Mainiet entītijas nosaukumu tikai, lai tas atbilstu entītijas nosaukumam .json failā.
+
+     > [!NOTE]
+     > Pēc norīšanas vienmēr saglabājiet entītijas nosaukumu programmā Customer Insights tāpat kā entītijas nosaukumu failā model.json vai manifest.json. Customer Insights validē visus entītiju nosaukumus, izmantojot model.json vai manifest.json katras sistēmas atsvaidzināšanas laikā. Ja entītijas nosaukums tiek mainīts vai nu programmā Customer Insights, vai ārpus tās, rodas kļūda, jo Customer Insights nevar atrast jauno entītijas nosaukumu .json failā. Ja nejauši tika mainīts uzņemtās entītijas nosaukums, rediģējiet entītijas nosaukumu programmā Customer Insights, lai tas atbilstu nosaukumam .json failā.
 
 1. Atlasiet **Atribūti**, lai pievienotu vai mainītu atribūtus vai iespējotu datu profilēšanu. Tad atlasiet **Gatavs**.
 
 1. Noklikšķiniet uz **Saglabāt**, lai lietotu izmaiņas un atgrieztos **lapā Datu avoti**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

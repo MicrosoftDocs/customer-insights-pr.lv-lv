@@ -1,7 +1,7 @@
 ---
-title: 'Klientu profili: Meklēšanas un filtrēšanas indekss'
+title: Klientu profilu meklēšanas un filtrēšanas indeksa pārvaldība
 description: Ātri atrodiet informāciju par vienotajiem klientu profiliem un filtrējiet norādītos atribūtus.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050818"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187918"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Klientu profili: Meklēšanas un filtrēšanas indekss
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Klientu profilu meklēšanas un filtrēšanas indeksa pārvaldība
 
-Klientu datu apvienošanas rezultāts ir entītija Klientu profils, kas nodrošina vienotu skatu uz visu jūsu klientu bāzi. Lai ātri [atrastu informāciju par konkrētu klientu vai klientu grupu](customer-profiles.md), varat konfigurēt **meklēšanas** un **filtrēšanas** iespējas lapā **Klienti**. Tālāk uzzināsiet, kā administratori var rediģēt atribūtus lapā **Rādītāja meklēšana un filtrēšana**, ko lietotāji var izmantot meklēšanai un filtrēšanai.
+Klientu datu apvienošanas rezultāts ir klienta *entītija*, kas nodrošina vienotu skatu uz jūsu kopējo klientu bāzi. Lai lietotāji varētu ātri [atrast informāciju par konkrētu klientu vai klientu](customer-profiles.md) grupu, administratoram ir jākonfigurē **meklēšanas** un **filtrēšanas** **iespējas lapai Klienti**.
 
    :::image type="content" source="media/search-filter.png" alt-text="Meklēšanas rezultātu filtrs":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Meklējamu atribūtu un indeksētu lauku definēšana
 
-## <a name="add-fields-and-specify-attributes"></a>Lauku pievienošana un atribūtu norādīšana
+Ja šī ir pirmā reize, kad kā administrators definējat meklējamus atribūtus, vispirms definējiet indeksētos laukus. Ieteicams izvēlēties visus atribūtus, pēc kuriem lietotāji var meklēt un filtrēt klientus lapā **Klienti**. Var norādīt tikai tos atribūtus, kas pastāv Klienta *entītijā*, kas izveidoti datu apvienošanas procesa laikā.
 
-Ja šī ir pirmā reize, kad definējat meklējamos atribūtus kā administrators, vispirms ir jādefinē indeksētie lauki. Ieteicams izvēlēties visus atribūtus, pēc kuriem lietotāji var meklēt un filtrēt klientus lapā **Klienti**. Ir iespējams norādīt tikai tos atribūtus, kas pastāv entītijā Klienta profils, ko izveidojāt datu apvienošanas procesā.
+1. Dodieties uz **Klienti un atlasiet** Meklēt un filtrēt **indeksu**.
 
-1. Atveriet lapu **Klienti** un atlasiet **Meklēšanas un filtra indekss**.
+1. Atlasiet **+ Pievienot**.
 
-2. Atlasiet **+ Pievienot**, lai precizētu indeksētos laukus.
+1. Sarakstā atlasiet atribūtus, kurus vēlaties pievienot kā indeksētus laukus, un noklikšķiniet uz **Lietot**.
 
-3. Sarakstā atlasiet atribūtus, kurus vēlaties pievienot kā indeksētos laukus. Jūs jebkurā laikā varat pievienot papildu atribūtus, atlasot **Pievienot**. Varat arī noņemt jebkurus atlasītos atribūtus, atzīmējot **Noņemt** simbolu.
+1. Lai pievienotu papildu atribūtus, atlasiet **Pievienot**. Lai noņemtu atlasīto atribūtu, atlasiet atribūtu un pēc tam **dzēsiet**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Tabulas Indeksētie klienta lauki izpēte
+   :::image type="content" source="media/search-filter-index.png" alt-text="Meklēšanas un filtrēšanas indeksa lapa.":::
 
-Šajā tabulā ir pieejama tālāk norādītā informācija.
+1. Atlasiet **Palaist**, kad esat gatavs lietot meklēšanas un filtrēšanas iestatījumus. Kad izmaiņas ir apstrādātas, skatiet tās [klienta kartēs lapā](customer-profiles.md) Klients.
 
-- **Nosaukums**: norāda atribūta nosaukumu, kāds tas tiek rādīts entītija Klienta profils.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Filtrēšanas opciju definēšana noteiktam atribūtam
+
+Iestatiet laukus, kurus var izmantot klientu **filtrēšanai lapā Klienti**.
+
+1. Dodieties uz **Klienti un atlasiet** Meklēt un filtrēt **indeksu**.
+
+1. Atlasiet atribūtu un **Pievienojiet filtru**. Definējiet rezultātu skaitu un secību, kādā tie tiks organizēti. Atkarībā no atribūta datu tipa tiek parādīta viena no tālāk norādītajām rūtīm.
+
+   - Virknes tipa atribūti: norādiet vēlamo rezultātu **skaitu virknes filtra** rūtī un secības politiku, pēc kuras tie tiks organizēti.
+
+   - Skaitliski tipa atribūti: norādiet intervālus, kas iekļauti **rūtī Skaitļu filtrs**, un secības politiku, pēc kuras tie tiks organizēti.
+
+   - Datuma tipa atribūti: norādiet intervālus, **kas iekļauti rūtī Datuma filtrs**, un pasūtījumu politiku, pēc kuras tie tiks organizēti.
+
+1. Atlasiet **Labi**. Atkārtojiet to visiem atribūtiem, pēc kuriem vēlaties filtrēt.
+
+1. Atlasiet **Palaist**, kad esat gatavs lietot meklēšanas un filtrēšanas iestatījumus. Kad izmaiņas ir apstrādātas, skatiet tās [klienta kartēs lapā](customer-profiles.md) Klients.
+
+## <a name="view-indexed-customer-fields"></a>Indeksēto klientu lauku skatīšana
+
+Lapā **Meklēšanas un filtrēšanas indekss** tiek parādīta šāda informācija:
+
+- **Nosaukums**: attēlo atribūta nosaukumu, kāds tas tiek rādīts *klienta* entītijā.
 - **Datu tips**: norāda, vai datu tips ir virkne, skaitlis vai datums.
 - **Iekļauts meklēšanā**: norāda, vai šo atribūtu var izmantot, lai meklētu klientus lapā **Klienti**, izmantojot **meklēšanas** lauku.
 - **Pievienot filtru**: vadīkla, lai definētu, kā šo atribūtu var izmantot filtrēšanai lapā **Klienti**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Filtrēšanas opciju rediģēšana noteiktam atribūtam
-
-Lapas **Klienti** izvēlnē **Filtrēt** var būt ietverts atšķirīgs atribūtu līmeņu skaits (piemēram, dažādas vecuma grupas, pēc kurām filtrēt klientus).
-
-1. Atlasiet **Pievienot filtru** konkrētajam atribūtam lapā **Rādītāja meklēšana un filtrēšana**. Varat noteikt rezultātu skaitu un secību, kādā tie tiks sakārtoti. Atkarībā no atribūta datu tipa tiek rādīta viena no tālāk redzamajām rūtīm.
-
-- Virknes tipa atribūts: norādiet vēlamo rezultātu skaitu rūtī **Virknes filtrēšanas opcijas** un rezultātu rādīšanas secības politiku.
-
-- Skaitliska tipa atribūts: norādiet iekļaujamo intervālu rūtī **Skaitļa filtrēšanas opcijas** un rezultātu rādīšanas secības politiku.
-
-- Datuma tipa atribūts: norādiet iekļaujamo intervālu rūtī **Datuma filtrēšanas opcijas** un rezultātu rādīšanas secības politiku.
-
-2. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
-
-3. Kad būsiet gatavs lietot iestatījumus, atlasiet **Palaist**. Pēc izmaiņu apstrādes tās ir pieejamas [klientu kartēs lapā Klients](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Nākamās darbības
 
 Pārskatiet [vienoto profilu lapu](customer-profiles.md), lai meklētu profilus vai izmantotu indeksētos laukus, lai redzētu visu vienoto profilu apakškopu.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

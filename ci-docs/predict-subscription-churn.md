@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643812"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171058"
 ---
 # <a name="subscription-churn-prediction"></a>Abonementu zuduma prognoze
 
@@ -61,8 +61,8 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 
 ## <a name="create-a-subscription-churn-prediction"></a>Izveidot abonēšanas zuduma prognozi
 
-1. Dodieties uz **IntelligencePredictions** > **·**.
-1. **Atlasiet abonēšanas porcijas modeļa** elementu un atlasiet **Izmantot šo modeli**.
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
+1. **Atlasiet elementu Abonementa zuduma modelis** un atlasiet **Izmantot šo modeli**.
    > [!div class="mx-imgBorder"]
    > ![Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli.](media/subscription-churn-usethismodel.PNG "Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli")
 
@@ -76,7 +76,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Parasti šim periodam patīk biznesa darbības, piemēram, piedāvājumi vai citi mārketinga pasākumi, kas cenšas nepieļaut klientu zudumu.
 1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām. Atlasiet **Tālāk**, lai turpinātu
    >[!TIP]
-   > Varat atlasīt **Saglabāt melnrakstu** jebkurā laikā, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+   > Jebkurā laikā varat atlasīt **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
 
 ### <a name="add-required-data"></a>Nepieciešamo datu pievienošana
 
@@ -107,7 +107,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
 
 ### <a name="set-schedule-and-review-configuration"></a>Iestatiet grafiku un pārskatiet konfigurāciju
 
-1. Lai atkārtoti apmācītu modeli, iestatiet frekvenci. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo customer insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
+1. Lai atkārtoti apmācītu modeli, iestatiet frekvenci. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
 1. Atlasiet **Tālāk**.
 1. Pārskatīt konfigurāciju. Jūs varat atgriezties jebkurā prognozēšanas konfigurācijas daļā, zemāk parādītajā vērtībā atlasot **Rediģēt**. Vai arī varat atlasīt konfigurācijas soli no progresa rādītāja.
 1. Ja visas vērtības ir konfigurētas pareizi, atlasiet **Saglabāt un palaist**, lai sāktu prognozēšanas procesu. Cilnē **Manas prognozes** var redzēt savu prognožu statusu. Atkarībā no prognozēšanas laikā izmantojamā datu daudzuma process var aizņemt vairākas stundas.
@@ -121,7 +121,7 @@ Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients va
    - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
    - **Prognozes tips:** modeļa tips, ko izmanto prognozēšanai
    - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.    
-     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-new-segment) ar vēlamo slieksni.
+     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-segment) ar vēlamo slieksni.
    - **Prognozējamais lauks:** šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tās netiek izmantotas abonēšanas zuduma prognozēšanā.
    - **Statuss:** prognozes izpildes pašreizējais statuss.
         - **Rindā:** prognoze pašlaik gaida citu procesu palaišanu.

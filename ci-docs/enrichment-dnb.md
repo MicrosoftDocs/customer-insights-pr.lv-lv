@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082557"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196035"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Bagātiniet uzņēmuma profilus ar Dun & Bradstreet (priekšskatījums)
 
@@ -80,7 +80,7 @@ Pašlaik mēs atbalstām šādas valsts/reģiona opcijas: Kanāda (angļu valod�
 
 1. Pārskatiet pārskatu un pēc tam atlasiet **Tālāk**.
 
-1. Atlasiet savienojumu un apstipriniet. Sazinieties ar administratoru, ja tāds nav pieejams.
+1. Atlasiet savienojumu un apstipriniet. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
 1. Atlasiet **Tālāk**.
 
@@ -90,7 +90,7 @@ Pašlaik mēs atbalstām šādas valsts/reģiona opcijas: Kanāda (angļu valod�
 
 1. Atlasiet **Tālāk**
 
-1. Kartējiet savus laukus uz uzņēmuma datiem no Dun &Bradstreet. Ir nepieciešams vai nu **DUNS numurs**, vai **uzņēmuma nosaukums** un **valsts** lauki.
+1. Kartējiet savus laukus uz uzņēmuma datiem no Dun &Bradstreet. Ir nepieciešams vai nu **DUNS numurs**, vai **uzņēmuma** nosaukums un **valsts** lauki.
 
       :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun & Bradstreet lauku kartēšanas rūts.":::
 

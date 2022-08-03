@@ -1,34 +1,31 @@
 ---
 title: Teams bots Dynamics 365 Customer Insights (priekšskatījums)
 description: Ar bota palīdzību uzmeklējiet vienotos klientu profilus pakalpojumā Microsoft Teams.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d140ae72578b48091a41005c4acafe03bac540da
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082599"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195851"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams bots Dynamics 365 Customer Insights (priekšskatījums)
 
 Pievienojieties Microsoft Teams, lai ļautu botam uzmeklēt vienotos klientu profilus Teams kanālos.
 
-> [!div class="mx-imgBorder"]
-> ![Programmas Teams bots, kas rāda klienta ierakstu.](media/teams-bot.png "Programmas Teams bots rāda klienta ierakstu")
+:::image type="content" source="media/teams-bot.png" alt-text="Programmas Teams bots, kas rāda klienta ierakstu":::
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai iestatītu un konfigurētu botu, ir jāizpilda tālāk aprakstītie priekšnosacījumi:
-
-- Ir vismaz viens [pievienotais datu avots](data-sources.md).
+- Vismaz viens [datu avots pievienots](data-sources.md).
 - Ir pabeigts [apvienošanas process](data-unification.md).
-- Lauki tiek pievienoti [meklēšanas un filtru indeksam](search-filter-index.md).
+- Lauki tiek pievienoti [meklēšanas un filtrēšanas indeksam](search-filter-index.md).
 - Customer Insights un Teams ir vienā un tajā pašā organizācijā.
 - Jūsu vides primārā mērķauditorija ir iestatīta atsevišķiem klientiem. Biznesa konti netiek atbalstīti.
 
@@ -37,24 +34,23 @@ Lai iestatītu un konfigurētu botu, ir jāizpilda tālāk aprakstītie priekšn
 
 ## <a name="configure-the-bot"></a>Bota konfigurēšana
 
-1. Dodieties uz **Administratoru** > **eksporta galamērķi**.
+1. Dodieties uz **Administrators** > **Savienojumi**.
 1. Elementā Microsoft Teams atlasiet **Iestatīt**.
 1. Jūs tiksit pārvirzīts uz sadaļu **Programmas** programmā Teams. Varat arī atvērt Teams un atlasīt **Programmas** apakšējā kreisajā stūrī vai [iegūt to tieši no programmas AppSource](https://go.microsoft.com/fwlink/?linkid=2124104).
 1. Meklējiet **Customer Insights** un atlasiet programmu.
 1. Atlasīt **Pievienot**.
-1. Pēc pieteikšanās Customer Insights programmā Teams tiks parādīts sveiciena ziņojums, un jūs varat sākt darbu.
+1. Piesakieties programmā Customer Insights programmā Teams. Tiek parādīta sveiciena ziņa.
 
 ## <a name="things-you-can-do-with-the-bot"></a>Ko varat paveikt ar botu
 
 Bots nodrošina uzmeklēšanas iespējas vienotiem klientu profiliem.
 
-- Ievadiet **meklēt**, kam seko vārds, e-pasta adrese vai jebkurš cits vienotā klienta profila lauks, kurš tiek pievienots meklēšanas un filtra indeksam.
+- Ievadiet **meklēšanu**, kam seko vārds, e-pasta adrese vai jebkurš cits lauks vienotajā klienta profilā, kas tiek pievienots meklēšanas un filtrēšanas indeksam.
 
-  Jūs saņemsit kartīti ar līdz pat 15 laukiem no iegūtā klienta profila. Vairākas atbilstības atgriež rezultātu sarakstu, kurā varat atlasīt profilu. Lai uzmeklētu precīzu atbilstību, meklēšanas vaicājumu var pievienot pēdiņās.
+  Jūs saņemsit kartīti ar līdz pat 15 laukiem no iegūtā klienta profila. Vairākas atbilstības atgriež rezultātu sarakstu, kurā varat atlasīt profilu. Lai uzmeklētu precīzu atbilstību, pievienojiet meklējamo terminu dubultajās pēdiņās.
 
-- Ja jūsu organizācija uztur vairākas Customer Insights vides tajā pašā organizācijā, varat ievadīt **switchinstance**, lai izvēlētos, ar kuru vidi vēlaties savienot botu.
+- Ja jūsu organizācija uztur vairākas Customer Insights vides vienā organizācijā, ievadiet **switchinstance**, lai izvēlētos, kurā vidē vēlaties savienot robotprogrammatūru.
 
 - Ievadiet **palīdzība**, lai skatītu botam pieejamo komandu sarakstu.  
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

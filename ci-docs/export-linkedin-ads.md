@@ -1,52 +1,53 @@
 ---
 title: Segmentu eksportēšana uz LinkedIn Ads (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz LinkedIn Ads.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050865"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196817"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentu eksportēšana uz LinkedIn Ads (priekšskatījums)
 
 Eksportēt vienoto klientu profilu segmentus uz LinkedIn Ads, lai izveidotu Matched Audiences. Izmantojiet Matched Audiences, lai mērķētu uz uzņēmumu un sazinātos ar mērķauditorijas atlasi.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
--   Jums ir [LinkedIn Campaign Manager konts](https://business.linkedin.com/marketing-solutions/ads) un atbilstošie administratora akreditācijas dati.
--   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
--   Eksportēto segmentu klientu profilos ir lauks ar e-pasta adresi.
+- Konts [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) un atbilstošie administratora akreditācijas dati.
+- [LinkedIn Campaign Manager Konta ID](https://www.linkedin.com/help/lms/answer/a424270).
+- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Jūsu segmentā programmā Customer Insights ir jābūt vismaz 300 unikāliem profiliem. 
-- Programmā LinkedIn Ads viena eksporta laikā var eksportēt līdz pat 100000 klientu profilu.
-- Eksportēšana uz LinkedIn Ads attiecas tikai uz segmentiem.
-- Līdz pat 100000 klientu profilu eksportēšana uz LinkedIn Ads var aizņemt līdz 10 minūtēm. 
+- Līdz pat 100 000 klientu profilu eksportēšanai uz LinkedIn Reklāmām, un tā pabeigšana var aizņemt līdz pat 10 minūtēm.
+- Tikai segmenti. Segmentā jābūt vismaz 300 unikāliem profiliem.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>Savienojuma ar LinkedIn Ads krātuvi iestatīšana
+## <a name="set-up-connection-to-linkedin-ads"></a>Savienojuma ar LinkedIn reklāmām iestatīšana
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un atlasiet **LinkedIn Ads**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **LinkedIn reklāmas**.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izvēlieties, kurš var izmantot šo savienojumu. Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Norādiet sava [LinkedIn Campaign Manager konta ID](https://www.linkedin.com/help/lms/answer/a424270).
+1. Norādiet sava LinkedIn Campaign Manager konta ID.
 
-1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Lai uzsāktu savienojumu ar Campaign Monitor, atlasiet **Savienot**.
+1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
 
 1. Atlasiet **Autentificēties ar LinkedIn** un norādiet savus LinkedIn Campaign Manager administratora akreditācijas datus.
 
@@ -56,29 +57,26 @@ Eksportēt vienoto klientu profilu segmentus uz LinkedIn Ads, lai izveidotu Matc
 
 ## <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+1. Atlasiet **Pievienot eksportēšanu**.
 
-1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas LinkedIn Ads. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas LinkedIn Ads. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
-1. Izvēlieties, vai vēlaties eksportēt datus, lai sazinātos [ar mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting), [vai uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) LinkedIn. 
+1. Ievadiet eksportēšanas nosaukumu.
 
-1. Sadaļā **Datu atbilstība**, lai atlasītu kontaktpersonu, atlasiet vismaz vienu lauku, kurā ir norādīta klienta e-pasta adrese, Apple Ad ID, Google Ad ID, Google User ID vai vārds un uzvārds. Ja izvēlaties uzņēmuma mērķauditorijas atlasi, atlasiet vismaz vienu lauku, kas apzīmē uzņēmuma nosaukumu, e-pasta domēnu, LinkedIn lapas vietrādi URL, krājumu simbolu vai vietni. Papildu laukus var atlasīt, lai tālāk definētu eksportēšanu. 
+1. Izvēlieties, vai vēlaties eksportēt datus, lai sazinātos [ar mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting), [vai uzņēmuma mērķauditorijas atlasi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) LinkedIn.
 
-1. Atlasiet segmentus, kurus vēlaties eksportēt. Matched Audiences programmā LinkedIn Campaign Manager tiks automātiski izveidotas ar eksportējamo segmentu nosaukumu. Katrs segments radīs atsevišķu Matched Audience. 
+1. Sadaļā **Datu atbilstība**, lai atlasītu kontaktpersonu, atlasiet vismaz vienu lauku, kurā ir norādīta klienta e-pasta adrese, Apple Ad ID, Google Ad ID, Google User ID vai vārds un uzvārds. Ja izvēlaties uzņēmuma mērķauditorijas atlasi, atlasiet vismaz vienu lauku, kas apzīmē uzņēmuma nosaukumu, e-pasta domēnu, LinkedIn lapas vietrādi URL, krājumu simbolu vai vietni.
 
-1. Atlasiet vienumu **Saglabāt**.
+1. Pēc izvēles pievienojiet laukus, lai sīkāk definētu eksportēšanu. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+1. Atlasiet segmentus, kurus vēlaties eksportēt. Matched Audiences programmā LinkedIn Campaign Manager tiks automātiski izveidotas ar eksportējamo segmentu nosaukumu. Katrs segments radīs atsevišķu Matched Audience.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+1. Atlasiet **Saglabāt**.
 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Iespējojot Dynamics 365 Customer Insights datu pārnesi uz LinkedIn Ads, jūs ļaujat datus pārnest ārpus Dynamics 365 Customer Insights atbilstības robežām, ieskaitot potenciāli sensitīvus datus, tostarp, personas datus. Microsoft šos datus pārvirzīs atbilstoši jūsu norādījumiem, taču jūs atbildat par to, ka LinkedIn Ads atbilst jebkādiem jūsu privātuma vai drošības nosacījumiem. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Lai pārtrauktu izmantot šo funkcionalitāti, jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

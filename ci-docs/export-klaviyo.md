@@ -1,52 +1,54 @@
 ---
 title: Segmentu eksportēšana uz Klaviyo (priekšskatījums)
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz Klaviyo.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051324"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196771"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Segmentu eksportēšana uz Klaviyo (priekšskatījums)
 
 Eksportējiet vienoto klientu profilu segmentus uz Klaviyo un izmantojiet tos mārketinga darbībām.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
--   Jums ir [Klaviyo konts](https://www.klaviyo.com/) un atbilstošie administratora akreditācijas dati.
--   Jūs esat [konfigurējis segmentus](segments.md) programmā Customer Insights.
--   Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
+- [Klaviyo konts](https://www.klaviyo.com/) un atbilstošie administratora akreditācijas dati.
+- [Klaviyo API atslēga](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
+- Klaviyo [saraksta ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
+- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Programmā Klaviyo viena eksporta laikā var eksportēt līdz pat 100000 klientu profilu.
-- Eksportēšana uz Klaviyo attiecas tikai uz segmentiem.
-- Līdz pat 1 miljonam klientu profilu eksportēšana uz Klaviyo var aizņemt līdz 20 minūtēm. 
-- To klientu profilu skaits, kurus varat eksportēt uz Klaviyo, ir atkarīgs un ierobežots atkarībā no jūsu līguma ar Klaviyo.
+- Līdz 1 miljonam klientu profilu vienā eksportā uz Klaviyo, kas var aizņemt līdz pat 20 minūtēm. Klientu profilu skaits, ko varat eksportēt uz Klaviyo, ir atkarīgs no jūsu līguma ar Klaviyo.
+- Tikai segmenti.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Savienojuma ar Klaviyo iestatīšana
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet vienumu **Pievienot savienojumu** un izvēlieties **Klaviyo**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu** un izvēlieties **Klaviyo**.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
-1. Izvēlieties, kurš var izmantot šo savienojumu. Ja nesāksit nekādas darbības, noklusējums būs Administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izvēlieties, kurš var izmantot šo savienojumu. Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Norādiet savu [Galveno API atslēgu](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys), lai turpinātu pieteikties. 
+1. Norādiet savu Galveno API atslēgu, lai turpinātu pieteikties.
 
-1. Atlasiet **Piekrītu**, lai apstiprinātu **Datu konfidencialitāti un atbilstību**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Savienot**, lai uzsāktu savienojuma izveidi ar Klaviyo.
+1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
 
 1. Atlasiet vienumu **Autentificēties ar Klaviyo** un norādiet savus Klaviyo administratora akreditācijas datus.
 
@@ -56,27 +58,24 @@ Eksportējiet vienoto klientu profilu segmentus uz Klaviyo un izmantojiet tos m�
 
 ## <a name="configure-an-export"></a>Eksporta konfigurēšana
 
-Šo eksportu varat konfigurēt, ja jums ir piekļuve šā veida pieslēgumam. Papildinformāciju skatiet rakstā [Atļaujas, kas nepieciešamas eksporta konfigurēšanai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Lai izveidotu jaunu eksportu, atlasiet **Pievienot galamērķi**.
+1. Atlasiet **Pievienot eksportēšanu**.
 
-1. Laukam **Savienojums eksportēšanai** izvēlieties savienojumu no Klaviyo sadaļas. Ja šis sadaļas nosaukums nav redzams, šāda veida savienojumi jums nav pieejami.
+1. Laukam **Savienojums eksportēšanai** izvēlieties savienojumu no Klaviyo sadaļas. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
-1. Ievadiet savu [**Klaviyo saraksta ID**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
+1. Ievadiet eksportēšanas nosaukumu.
 
-3. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi. Tas ir nepieciešams, lai eksportētu segmentus uz Klaviyo.
+1. Ievadiet savu **Klaviyo saraksta ID**.
 
-1. Atlasiet vienumu **Saglabāt**.
+1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
-Eksporta saglabāšana automātiski nepalaiž eksportu.
+1. Atlasiet segmentus, kurus vēlaties eksportēt.
 
-Eksports tiek palaists ar katru [plānoto atsvaidzināšanu](system.md#schedule-tab). Varat arī [eksportēt datus pēc pieprasījuma](export-destinations.md#run-exports-on-demand). 
+1. Atlasiet **Saglabāt**.
 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-## <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Iespējojot Dynamics 365 Customer Insights datu pārsūtīšanai uz Klaviyo, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežas, kas paredzēta Dynamics 365 Customer Insights, ieskaitot potenciāli sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādījuma, bet jūs esat atbildīgs par to, lai Klaviyo atbilstu visām jūsu konfidencialitātes vai drošības saistībām. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo eksportēšanas galamērķi jebkurā laikā, lai pārtrauktu izmantot šo funkcionalitāti.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082137"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194932"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Klienta kartes pievienojumprogramma Dynamics 365 programmām (priekšskatījums)
 
@@ -26,23 +26,27 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Pievienojumprogramma darbojas tikai ar Dynamics 365 modeļa vadītām programmām, piemēram, Sales vai Customer Service versiju 9.0 un jaunāku versiju.
-- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai kontus), datu apvienošanas procesa kartes solī ir jāpārliecinās `contactid`, vai lauks (vai`accountid`) ir iestatīts kā [primārā atslēga šim datu avots](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Dynamics 365 modeļa vadītas programmas, piemēram, Sales vai klientu apkalpošana, versija 9.0 un jaunākas versijas.
+- Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai kontus), pārliecinieties `contactid`, vai lauks (vai`accountid`) ir iestatīts kā [primārā atslēga šim datu avots datu apvienošanas procesa laikā](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Lai skatītu datus, visiem Dynamics 365 pievienojumprogrammas Customer Card lietotājiem programmā Customer Insights ir jābūt [pievienotiem kā lietotājiem](permissions.md).
-- [Lai uzmeklētu datus un darbotos, programmā Customer Insights ir nepieciešamas konfigurētas meklēšanas un filtrēšanas iespējas](search-filter-index.md) programmā Customer Insights.
+- [Konfigurētās meklēšanas un filtrēšanas iespējas](search-filter-index.md) programmā Customer Insights.
 - Katra pievienojumprogrammas vadīkla balstās uz konkrētiem datiem programmā Customer Insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs jūs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
-  - **Mērvienību vadīkla**: ir nepieciešami [konfigurēti klienta atribūtu](measures.md) tipa pasākumi.
-  - **Informācijas vadīkla**: nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
-  - **Klienta detalizētās informācijas vadīkla**: visi šī profila lauki ir pieejami vienotā klienta profilā.
-  - **Bagātināšanas vadīkla**: Ir nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemērot klientu profiliem. Kartes pievienojumprogramma atbalsta šos bagātinājumus: [Microsoft nodrošinātie zīmoli](enrichment-microsoft.md), [Microsoft nodrošinātie intereses](enrichment-microsoft.md) un [Microsoft nodrošinātie Office iesaistes dati](enrichment-office.md).
-  - **Kontaktpersonu vadīkla**: nepieciešama kontaktpersonu tipa semantiskās entītijas definīcija.
-  - **Laika skalas vadīkla**: Nepieciešamas [konfigurētās darbības](activities.md).
+  - **Mērīšanas vadīklai** ir nepieciešami [konfigurēti klienta atribūtu mēri](measures.md).
+  - **Izlūkošanas kontrolei** ir nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
+  - **Klienta detalizētas informācijas vadīkla** parāda visus laukus no profila, kas pieejams vienotajā klienta profilā.
+  - **Bagātināšanas kontrolei** nepieciešama aktīva [bagātināšana](enrichment-hub.md), ko piemēro klientu profiliem. Kartes pievienojumprogramma atbalsta šos bagātinājumus: [Microsoft nodrošinātie zīmoli](enrichment-microsoft.md), [Microsoft nodrošinātie intereses](enrichment-microsoft.md) un [Microsoft nodrošinātie Office iesaistes dati](enrichment-office.md).
+  - **Kontaktpersonu kontrolei** ir nepieciešams kontakta semantiskās entītijas tips.
+  - **Laika grafika kontrolei** ir nepieciešamas [konfigurētas darbības](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Klienta kartes pievienojumprogrammas instalēšana
 
-Klienta kartes pievienojumprogramma ir risinājums klientu iesaistes programmām pakalpojumā Dynamics 365. Lai instalētu šo risinājumu, dodieties uz AppSource un meklējiet **Dynamics Customer Card**. Atlasiet [Klienta kartes pievienojumprogramma pakalpojumā AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) un atlasiet **Iegūt to tūlīt**.
+Klienta kartes pievienojumprogramma ir risinājums klientu iesaistes programmām pakalpojumā Dynamics 365. Lai instalētu risinājumu:
+
+1. Dodieties uz AppSource Dynamics klienta karti **un meklējiet to**.
+
+1. Atlasiet [Klienta kartes pievienojumprogramma pakalpojumā AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) un atlasiet **Iegūt to tūlīt**.
 
 Lai Dynamics 365 programma instalētu risinājumu, jums, iespējams, vajadzēs pieteikties ar saviem administratora akreditācijas datiem. Var paiet zināms laiks, līdz risinājums tiks instalēts jūsu vidē.
 

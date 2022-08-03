@@ -1,28 +1,56 @@
 ---
 title: Dynamics 365 Customer Insights jaunumi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054027"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114255"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
 Ar prieku paziņojam par mūsu jaunākajiem atjauninājumiem! Šajā rakstā ir apkopotas publiskā priekšskatījuma funkcijas, vispārējie pieejamības uzlabojumi un funkciju atjauninājumi. Lai skatītu informāciju par ilgtermiņa plāniem attiecībā uz funkcijām, skatiet [Dynamics 365 un Power Platform laidienu plānus](/dynamics365/release-plans/).
 
-Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģioni var agrāk skatīt funkcijas nekā citi. Ja vien nav norādīts citādi, neveiciet nekādu darbību, un programma automātiski atjauninās programmu bez jebkādas dīkstāves.
+Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģioni var agrāk skatīt funkcijas nekā citi. Ja vien nav norādīts citādi, jums nav jāveic nekādas darbības, mēs automātiski atjaunināsim lietotni bez dīkstāves.
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>2022. gada jūnija atjauninājumi
+
+2022. gada jūnija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Atjaunināta lietotāja pieredze datu avotos un datu uzņemšanā
+
+Datu importēšana no plaša datu avotu klāsta ir pamats klientu datu konsolidēšanai Dynamics 365 Customer Insights. Mēs esam pārskatījuši lietotāju pieredzi datu avotu importēšanai un savienošanai. Šī atjauninājuma mērķis ir atvieglot customer insights datu uzņemšanu.
+
+Papildinformāciju skatiet sadaļā [Datu avotu pārskats](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Eksports uz InMobi
+
+InMobi palīdz zīmoliem izprast, identificēt, iesaistīt un iegūt patērētājus. Segmentus un citus datus varat eksportēt uz pakalpojumu InMobi, izmantojot Azure Blob krātuves kontus.
+
+Papildinformāciju skatiet rakstā [Eksportēšana uz InMobi (priekšskatījums)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Lockbox atbalsts programmā Customer Insights
+
+Klientu bloķēšanas lodziņš nodrošina saskarni, lai pārskatītu un apstiprinātu (vai noraidītu) datu piekļuves pieprasījumus. Šie pieprasījumi rodas, ja ir nepieciešama piekļuve datiem klientu datiem, lai atrisinātu atbalsta pieteikumu.
+
+Papildinformāciju skatiet sadaļā [Droša piekļuve klientu datiem, izmantojot klientu bloķēšanas lodziņu (priekšskatījums)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Savienojuma izveide ar datiem, izmantojot Azure Private Link
+
+Azure Private Link ļauj Customer Insights izveidot savienojumu ar jūsu Azure Data Lake Storage kontu, izmantojot privātu galapunktu jūsu virtuālajā tīklā. Datiem krātuves kontā, kas nav atvērts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
+
+Papildinformāciju skatiet sadaļā [Privātās saites izmantošana programmā Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>2022. gada maija atjauninājumi
 
@@ -169,7 +197,7 @@ Pārejas periodā esošajiem priekšskatījuma dalībniekiem joprojām ir piekļ
 - Skatīt notikumus un notikumu rekvizītus 
 - Uzlabojiet vienotus profilus ar uzņemtiem un izsmalcinātiem notikumiem, lai gūtu labumu no klientu datu pilnas vērtības
   
-Pārejas periodā uzņemtie notikumi joprojām tiek straumēti uz savienoto Datu ezeru. Kad šī funkcionalitāte ir izslēgta, datu kopīgošana tiks pārtraukta un uz pievienoto krātuvi netiks nosūtīti jauni notikumi.
+Pārejas periodā uzņemtie notikumi joprojām tiek straumēti uz savienoto Datu ezeru. Kad šī funkcionalitāte ir izslēgta, datu kopīgošana tiks pārtraukta, un uz pievienoto krātuvi netiks nosūtīti jauni notikumi.
 Sazinieties tieši ar savu Microsoft konta komandu, ja jums ir jautājumi par iespēju priekšskatījuma beigām. Jūsu konta komanda informēs jūs par jaunumiem nākamajās palaišanas reizēs. 
 
 ## <a name="january-2022-updates"></a>2022. gada janvāra atjauninājumi
