@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170690"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246302"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
@@ -58,7 +58,7 @@ Atlasiet segmentu, lai skatītu pieejamās darbības.
 - **Rediģēt** segmentu, lai mainītu tā rekvizītus.
 - **Izveidot dublikātu** segmentam. Varat izvēlēties uzreiz rediģēt tā rekvizītus vai saglabāt dublikātu.
 - [**Atsvaidziniet**](#refresh-segments) segmentu, lai iekļautu jaunākos datus.
-- **Aktivizēt** vai **Deaktivizēt** segmentu. Neaktīvie segmenti netiks atsvaidzināti plānotās atsvaidzināšanas [laikā](system.md#schedule-tab), un statuss **tiks** norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana pat netika mēģināta. Aktīvie segmenti tiek atsvaidzināti, pamatojoties uz to veidu: statisks vai dinamisks.
+- **Aktivizēt** vai **Deaktivizēt** segmentu. Neaktīvie segmenti netiks atsvaidzināti plānotās atsvaidzināšanas [laikā](schedule-refresh.md), un statuss **tiks** norādīts kā **Izlaists**, kas norāda, ka atsvaidzināšana pat netika mēģināta. Aktīvie segmenti tiek atsvaidzināti, pamatojoties uz to veidu: statisks vai dinamisks.
 - **Padariet statisku** vai **Padariet dinamisku** par segmenta tipu. Statiskie segmenti ir jāatsvaidzina manuāli. Dinamiskie segmenti tiek automātiski atsvaidzināti sistēmas atsvaidzināšanas laikā.
 - [**Atrodiet līdzīgus klientus**](find-similar-customer-segments.md) no segmenta.
 - **Pārdēvēt** segmentu.
@@ -88,7 +88,7 @@ Apakšējā daļa ietver segmenta elementu sarakstu.
 
 Segmentus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. Lai manuāli atsvaidzinātu vienu vai vairākus segmentus, atlasiet tos un izvēlieties **Atsvaidzināt**.
 
-Lai [ieplānotu automātisku atsvaidzināšanu](system.md#schedule-tab), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**. Piemēro šādus noteikumus:
+Lai [ieplānotu automātisku atsvaidzināšanu](schedule-refresh.md), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**. Piemēro šādus noteikumus:
 
 - Visi segmenti ar tipu **Dynamic** vai **Expansion** tiks automātiski atsvaidzināti iestatītajā kadencē. Kad atsvaidzināšana ir pabeigta, statuss **norāda,** vai ir bijušas problēmas ar segmenta atsvaidzināšanu. Pēdējais **atsvaidzinātais** parāda pēdējās veiksmīgās atsvaidzināšanas laikspiedolu. Ja rodas kļūda, atlasiet kļūdu, lai skatītu detalizētu informāciju par notikušo.
 - Segmenti ar tipu **Static** *netiks* atsvaidzināti automātiski. Pēdējais **atsvaidzinātais** parāda laika zīmogu no pēdējās reizes, kad statiskais segments tika palaists vai atsvaidzināts manuāli.

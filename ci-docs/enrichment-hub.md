@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053889"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245888"
 ---
 # <a name="data-enrichment-preview-overview"></a>Datu bagātināšanas (priekšskatījuma) pārskats
 
@@ -76,7 +76,7 @@ Atlasiet bagātināšanu, lai skatītu pieejamās darbības.
 - **Skatiet** detalizēto informāciju par bagātināšanu ar bagātināto klientu profilu skaitu.
 - **Rediģējiet** bagātināšanas konfigurāciju.
 - [**Palaidiet**](#run-or-refresh-enrichments) bagātināšanu, lai atjauninātu klientu profilus ar jaunākajiem datiem. Palaidiet vairākus bagātinājumus vienlaikus, atlasot tos sarakstā.
-- **Aktivizējiet** vai **deaktivizējiet** bagātināšanu. Neaktīvie bagātinājumi netiks atsvaidzināti plānotās [atsvaidzināšanas](system.md#schedule-tab) laikā.
+- **Aktivizējiet** vai **deaktivizējiet** bagātināšanu. Neaktīvie bagātinājumi netiks atsvaidzināti plānotās [atsvaidzināšanas](schedule-refresh.md) laikā.
 - **Dzēst** bagātināšanu.
 
 Varat arī izveidot [segmentus vai](segments.md) mērus [no](measures.md) bagātināšanas.
@@ -85,7 +85,7 @@ Varat arī izveidot [segmentus vai](segments.md) mērus [no](measures.md) bagāt
 
 Pēc palaišanas bagātināšanu var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma.
 
-1. Lai manuāli atsvaidzinātu vienu vai vairākus bagātinājumus, atlasiet tos un izvēlieties **Palaist**. Lai [ieplānotu automātisku atsvaidzināšanu](system.md#schedule-tab), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**. Apstrādes laiks ir atkarīgs no klientu datu lieluma.
+1. Lai manuāli atsvaidzinātu vienu vai vairākus bagātinājumus, atlasiet tos un izvēlieties **Palaist**. Lai [ieplānotu automātisku atsvaidzināšanu](schedule-refresh.md), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**. Apstrādes laiks ir atkarīgs no klientu datu lieluma.
 
 1. Pēc izvēles [skatiet bagātināšanas procesa](#see-the-progress-of-the-enrichment-process) gaitu.
 
@@ -102,6 +102,8 @@ Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu 
 1. Detalizētas informācijas rūtī **Norise** izvērsiet sadaļu **Bagātinātjumi**.
 1. Sadaļā Bagātināšana, kuras norisi vēlaties redzēt, atlasiet **Skatīt informāciju**.
 1. **Uzdevumu detalizētās informācijas** rūtī atlasiet **Rādīt detalizētu informāciju**, lai skatītu procesus, kas saistīti ar bagātināšanas atjaunināšanu un to statusu.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Bagātināšanas rezultātu skatīšana
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196403"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259853"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Datu eksportēšana uz Azure Synapse Analytics (priekšskatījums)
 
@@ -24,7 +24,7 @@ Azure Synapse ir analīzes pakalpojums, kas paātrina laiku, lai gūtu ieskatu d
 > [!NOTE]
 > Noteikti iestatiet visas **lomu piešķires**, kā aprakstīts.
 
-- Programmā Customer Insights jūsu Azure Active Directory (AD) lietotāja kontam ir jābūt administratora [lomai](permissions.md#assign-roles-and-permissions).
+- Programmā Customer Insights jūsu Azure Active Directory (AD) lietotāja kontam ir jābūt administratora [lomai](permissions.md#add-users).
 
 Azure:
 
@@ -39,6 +39,8 @@ Azure:
 - Darbvietas pārvaldītajai identitātei *[Azure Synapse ir](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* krātuves Blob datu līdzstrādnieka **atļaujas** Gen2 kontā, kur dati atrodas un ir saistīti ar darbvietu Azure Data Lake Storage Azure Synapse. Uzziniet vairāk par [Azure portāla izmantošanas iespēju, lai piešķirtu Azure lomu piekļuvei BLOB un rindas datiem](/azure/storage/common/storage-auth-aad-rbac-portal) un [Krātuves Blob datu līdzdalības atļaujām](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Darbvietā Azure Synapse *Customer Insights* pakalpojumu vadītājam ir **piešķirta** Synapse administratora [loma](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Ja jūsu Customer Insights vidē dati [tiek glabāti atsevišķi Azure Data Lake Storage](own-data-lake-storage.md), lietotājam, kurš iestata savienojumu, Azure Synapse Analytics ir nepieciešama vismaz iebūvētā **lasītāja** loma Data Lake Krātuves kontā. Papildinformāciju skatiet sadaļā [Azure lomu piešķiršana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Savienojuma iestatīšana uz Azure Synapse
 

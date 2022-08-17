@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800429"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245812"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
 
 > [!NOTE]
-> Atbalsts algoritmiskā mācīšanās Studio (klasika) noslēgsies 2024. gada 31. augustā. Līdz šim datumam ieteicams pāriet uz [Azure algoritmiskā mācīšanās](/azure/machine-learning/overview-what-is-azure-machine-learning).
+> Atbalsts algoritmiskā mācīšanās Studio (klasika) beigsies 2024. gada 31. augustā. Līdz šim datumam ieteicams pāriet uz [Azure algoritmiskā mācīšanās](/azure/machine-learning/overview-what-is-azure-machine-learning).
 >
-> Sākot ar 2021. gada 1. decembri, jūs nevarēsiet izveidot jaunus algoritmiskā mācīšanās Studio (klasiskos) resursus. Līdz 2024. gada 31. augustam varat turpināt izmantot esošos algoritmiskā mācīšanās Studio (klasiskos) resursus. Plašāku informāciju skatiet [Migrate to Azure algoritmiskā mācīšanās](/azure/machine-learning/migrate-overview).
+> Sākot ar 2021. gada 1. decembri, jūs nevarēsit izveidot jaunus algoritmiskā mācīšanās Studio (klasisko) resursus. Līdz 2024. gada 31. augustam varat turpināt izmantot esošos algoritmiskā mācīšanās Studio (klasisko) resursus. Papildinformāciju skatiet sadaļā [Migrēšana uz Azure algoritmiskā mācīšanās](/azure/machine-learning/migrate-overview).
 
 
 **Informācija** > **Pielāgotie modeļi** ļauj pārvaldīt darbplūsmas, pamatojoties uz Azure algoritmiskās mācīšanās modeļiem. Darbplūsmas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartēt rezultātus vienotajos klientu datos. Papildinformāciju par pielāgotu algoritmiskās mācīšanās modeļu būvēšanu skatiet tēmā [Azure algoritmiskās mācīšanās modeļu izmantošana](azure-machine-learning-experiments.md).
@@ -60,7 +60,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 1. Atlasiet **Darbvietas**, kas saistītas ar jūsu tīmekļa pakalpojumu. 
 
-1. Tīmekļa pakalpojumā, kurā atrodas modeļa **nolaižamais** saraksts, izvēlieties Azure algoritmiskā mācīšanās konveijeru. Pēc tam atlasiet **Tālāk**.    
+1. Web pakalpojumā izvēlieties Azure algoritmiskā mācīšanās konveijeru **, kurā ir nolaižamā modeļa** izvēlne. Pēc tam atlasiet **Tālāk**.    
    Informācija, kā [publicēt konveijeru Azure algoritmiskajās mācībās, izmantojot noformētāju](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) vai [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsu konveijers ir jāpublicē zem [konveijera galapunkta](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Katrai **tīmekļa pakalpojuma ievadei** atlasiet atbilstošo **entītiju** no Customer Insights un atlasiet **Tālāk**.
@@ -84,7 +84,7 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
    > ![Rezultātu saistīšana ar rūti Klienta dati.](media/intelligence-screen4-relatetocustomer.png "Rezultātu saistīšana ar rūti Klienta dati")
 
 1. Jūs redzēsiet **Darbplūsma saglabāta** ekrānu ar detalizētu informāciju par darbplūsmu.    
-   Ja konfigurējāt Azure algoritmiskā mācīšanās konveijera darbplūsmu, Customer Insights tiek pievienots darbvietai, kurā atrodas konveijers. Customer Insights saņems līdzstrādnieka **lomu** Azure darbvietā.
+   Ja konfigurējāt darbplūsmu Azure algoritmiskā mācīšanās konveijeram, Customer Insights tiek pievienots darbvietai, kurā ir konveijers. Customer Insights iegūs līdzstrādnieka **lomu** Azure darbvietā.
 
 1. Atlasiet **Gatavs**.
 
@@ -92,11 +92,11 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 ## <a name="edit-a-workflow"></a>Darbplūsmas rediģēšana
 
-1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti () kolonnā Darbības&vellip; blakus iepriekš izveidotajai darbplūsmai atlasiet vertikālo daudzpunkti (**)** un atlasiet **Rediģēt**.
+1. **Lapā Pielāgotie modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai un atlasiet **Rediģēt**.
 
 1. Darbplūsmas atpazīstamo nosaukumu var atjaunināt laukā **Parādāmais nosaukums**, taču konfigurēto tīmekļa pakalpojumu vai konveijeru nevar mainīt. Atlasiet **Tālāk**.
 
-1. Katrai **tīmekļa pakalpojuma ievadei** varat atjaunināt atbilstošo **entītiju** no Customer Insights. Pēc tam atlasiet **Tālāk**.
+1. Katrai **Tīmekļa pakalpojuma ievadei** varat atjaunināt atbilstošo entītiju **no** Customer Insights. Pēc tam atlasiet **Tālāk**.
 
 1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
       1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto konveijera izvades rezultāti.
@@ -108,15 +108,15 @@ Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, 
 
 ## <a name="run-a-workflow"></a>Darbplūsmas palaišana
 
-1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotajai darbplūsmai.
+1. **Lapā Pielāgotie modeļi** atlasiet vertikālo elipsi (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai.
 
 1. Atlasiet **Izpildīt**.
 
-Jūsu darbplūsma arī tiek palaista automātiski ar katru plānoto atsvaidzināšanu. Papildinformācija par [ieplānotas atsvaidzināšanas iestatīšanu](system.md#schedule-tab).
+Jūsu darbplūsma arī tiek palaista automātiski ar katru plānoto atsvaidzināšanu. Papildinformācija par [ieplānotas atsvaidzināšanas iestatīšanu](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Dzēst darbplūsmu
 
-1. Lapā Pielāgotie **modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotajai darbplūsmai.
+1. **Lapā Pielāgotie modeļi** atlasiet vertikālo elipsi (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai.
 
 1. Atlasiet **Dzēst** un apstipriniet dzēšanu.
 

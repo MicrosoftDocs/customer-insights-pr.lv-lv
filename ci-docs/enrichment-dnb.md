@@ -1,7 +1,7 @@
 ---
 title: Bagātiniet uzņēmuma profilus ar Dun & Bradstreet (priekšskatījums)
 description: Vispārīga informācija par Dun & Bradstreet trešās puses bagātināšanu.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196035"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237913"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Bagātiniet uzņēmuma profilus ar Dun & Bradstreet (priekšskatījums)
 
@@ -55,16 +55,11 @@ Jums ir jābūt Customer Insights [administratoram](permissions.md#admin), un ju
 
 1. Norādiet derīgus Dun &Bradstreet akreditācijas datus un Dun &Bradstreet projekta informāciju reģions *, mapes nomešanas ceļš un mapes nosaukums* nomešana. Jūs [saņemat šo informāciju](#set-up-your-dun--bradstreet-project) no Dun & Bradstreet projekta.
 
-1. Pārskatiet un sniedziet savu piekrišanu [Datu konfidencialitātei un atbilstībai](#data-privacy-and-compliance), atlasot **Es piekrītu**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
 1. Atlasiet **Verificēt**, lai validētu konfigurāciju, un pēc tam atlasiet **Saglabāt**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun &Bradstreet savienojuma konfigurācijas lapa.":::
-
-### <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Kad jūs iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz Dun &Bradstreet, jūs atļaujat pārsūtīt datus ārpus atbilstības robežas, tostarp potenciāli sensitīvus Dynamics 365 Customer Insights datus, piemēram, personas datus. Microsoft pārsūtīs šādus datus pēc jūsu norādījumiem, taču jūs esat atbildīgs par to, lai Dun &Bradstreet izpildītu visas jūsu iespējamās konfidencialitātes vai drošības saistības. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu šīs funkcijas izmantošanu.
 
 ## <a name="supported-countries-or-regions"></a>Atbalstītās valstis vai reģioni
 
@@ -90,7 +85,7 @@ Pašlaik mēs atbalstām šādas valsts/reģiona opcijas: Kanāda (angļu valod�
 
 1. Atlasiet **Tālāk**
 
-1. Kartējiet savus laukus uz uzņēmuma datiem no Dun &Bradstreet. Ir nepieciešams vai nu **DUNS numurs**, vai **uzņēmuma** nosaukums un **valsts** lauki.
+1. Kartējiet savus laukus uz uzņēmuma datiem no Dun &Bradstreet. Ir nepieciešams vai nu **DUNS numurs**, vai **uzņēmuma nosaukums** un **valsts** lauki.
 
       :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun & Bradstreet lauku kartēšanas rūts.":::
 

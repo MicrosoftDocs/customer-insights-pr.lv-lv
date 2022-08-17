@@ -1,76 +1,75 @@
 ---
-title: Drošības iestatījumi customer insights
-description: Uzziniet par drošības iestatījumiem programmā Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+title: Drošības iestatījumu konfigurēšana
+description: Uzziniet par drošības iestatījumiem sadaļā Dynamics 365 Customer Insights.
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947424"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246071"
 ---
-# <a name="security-settings-in-customer-insights"></a>Drošības iestatījumi customer insights
+# <a name="configure-security-settings"></a>Drošības iestatījumu konfigurēšana
 
-Lapā Drošība **ir** uzskaitītas opcijas, lai konfigurētu lietotāju atļaujas un līdzekļus, kas palīdz padarīt Dynamics 365 Customer Insights drošākus. Šai lapai var piekļūt tikai administratori.
+Pārvaldiet API atslēgas, piekļūstiet klientu datiem un iestatiet Azure privāto saiti.
 
-Lai konfigurētu iestatījumus, dodieties uz **Administrēšanas** > **drošība**.
+## <a name="manage-api-keys"></a>PĀRVALDIET API atslēgas
 
-Lapā **Drošība** ir šādas cilnes:
+Skatiet un pārvaldiet atslēgas, lai izmantotu [Customer Insights API](apis.md) ar datiem savā vidē.
 
-- [Lietotāji](#users-tab)
-- [API](#apis-tab)
-- [Privātas saites](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Droša piekļuve klientu datiem, izmantojot customer Lockbox (Preview)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Dodieties uz Sistēmas drošība un atlasiet **cilni API** > **.** **·**
 
-## <a name="users-tab"></a>Cilne Lietotāji
+1. Ja API piekļuve videi nav iestatīta, atlasiet **Iespējot**. Vai arī, lai bloķētu API piekļuvi videi, atlasiet **Atspējot** un apstiprināt.
 
-Piekļuve Customer Insights ir atļauta tikai lietotājiem jūsu organizācijā, kurus lietojumprogrammai pievienoja administrators. Cilne **Lietotāji** ļauj pārvaldīt lietotāju piekļuvi un viņa atļaujas. Papildinformāciju skatiet sadaļā [Lietotāja atļaujas](permissions.md).
+1. Pārvaldiet primārās un sekundārās API atslēgas:
 
-## <a name="apis-tab"></a>Cilne API
+   1. Lai parādītu primāro vai sekundāro API atslēgu, atlasiet **simbolu Rādīt**.
 
-Skatiet un pārvaldiet atslēgas, lai izmantotu [Customer Insights API](apis.md) ar vides datiem.
+   1. Lai kopētu primāro vai sekundāro API atslēgu, atlasiet **simbolu Kopēt**.
 
-Varat izveidot jaunas primārās un sekundārās atslēgas, atlasot **Atkārtoti ģenerēt primāro** vai **Atkārtoti ģenerēt sekundāro**. 
+   1. Lai izveidotu jaunas primārās vai sekundārās API atslēgas, atlasiet **Atjaunot primāro** vai **Atjaunot sekundāro**.
 
-Lai bloķētu API piekļuvi videi, atlasiet **Atspējot**. Ja API ir atspējoti, varat atlasīt **Iespējot**, lai vēlreiz piešķirtu piekļuvi.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Droša piekļuve klientu datiem, izmantojot klientu bloķēšanas lodziņu (priekšskatījums)
 
-## <a name="private-links-tab"></a>Cilne Privātās saites
+Customer Insights izmanto Power Platform Customer Lockbox iespēju. Klientu bloķēšanas lodziņš nodrošina saskarni, lai pārskatītu un apstiprinātu (vai noraidītu) datu piekļuves pieprasījumus. Šie pieprasījumi rodas, ja ir nepieciešama piekļuve datiem klientu datiem, lai atrisinātu atbalsta pieteikumu. Lai izmantotu šo līdzekli, programmā Customer Insights ir jābūt esošam savienojumam ar nomnieka Microsoft Dataverse vidi.
 
-[Azure Private Link](/azure/private-link/private-link-overview) izveidosim savienojumu ar jūsu Azure Data Lake Storage kontu, izmantojot privātu galapunktu jūsu virtuālajā tīklā. Attiecībā uz datiem krātuves kontā, kas nav pakļauts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
+Lai iegūtu papildinformāciju [par klientu bloķēšanas lodziņu, skatiet klientu bloķēšanas](/power-platform/admin/about-lockbox#summary) lodziņa kopsavilkumu Power Platform. Rakstā ir aprakstīta [arī darbplūsma](/power-platform/admin/about-lockbox#workflow) un nepieciešamie [iestatījumi](/power-platform/admin/about-lockbox#enable-the-lockbox-policy), lai iespējotu klientu bloķēšanas lodziņu.
 
 > [!IMPORTANT]
-> Minimālās lomas prasība, lai iestatītu Private Link savienojumu:
+> Globālie administratori Power Platform vai Power Platform administratori var apstiprināt Customer Lockbox pieprasījumus, kas izsniegti customer insights.
+
+## <a name="set-up-an-azure-private-link"></a>Azure privātās saites iestatīšana
+
+[Azure Private Link](/azure/private-link/private-link-overview) ļauj Customer Insights izveidot savienojumu ar jūsu Azure Data Lake Storage kontu, izmantojot privātu galapunktu jūsu virtuālajā tīklā. Datiem krātuves kontā, kas nav atvērts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
+
+> [!IMPORTANT]
+> Minimālās lomas prasības, lai izveidotu privātās saites savienojumu:
 >
-> - Klientu ieskati: administrators
+> - Customer Insights: administrators
 > - Azure iebūvētā loma: [Krātuves konta līdzstrādnieks](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
-> - Pielāgotas Azure lomas atļaujas: [Microsoft.Storage/storageAccounts/read un Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
+> - Atļaujas pielāgotai Azure lomai: [Microsoft.Storage/storageAccounts/read un Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
 
-Privātās saites iestatīšana customer insights ir divpakāpju process. Vispirms jūs uzsākat privātas saites izveidi no **administrēšanas** > **drošības** > **privātajām saitēm** customer insights. Rūtī **Pievienot privāto saiti** ir uzskaitīti nomnieka krātuves konti, kurus jums ir atļaujas skatīt. Atlasiet krātuves kontu un sniedziet piekrišanu privātās saites izveidei.
+1. Programmā Customer Insights dodieties uz **Administratora** > **drošība** un atlasiet **cilni Privātās saites**.
 
-Pēc tam jums jāapstiprina privātā saite datu ezera krātuves konta pusē. Atveriet ekrānā parādīto saiti, lai apstiprinātu jauno privāto saiti.
+1. Atlasiet **Pievienot privātu saiti**.
 
-## <a name="key-vault-tab"></a>Cilne Atslēgas seifs
+   Rūtī Pievienot **privātu saiti** ir uzskaitīti nomnieka krātuves konti, kurus jums ir atļauts skatīt.
 
-Cilne **Key Vault** ļauj saistīt un pārvaldīt savu [Azure atslēgas glabātuvi](/azure/key-vault/general/basic-concepts) ar vidi.
-Īpašo atslēgas akreditācijas datu glabātuvi var izmantot, lai izveidotu un izmantotu slepeno informāciju organizācijas ierobežojošajā robežu ietvaros. Customer Insights var izmantot Azure Key Seifu noslēpumus, lai [iestatītu savienojumus](connections.md) ar trešo pušu sistēmām.
+1. Atlasiet abonementu, resursu grupu un krātuves kontu.
 
-Papildinformāciju skatiet [Ievadiet savu Azure Key Vault](use-azure-key-vault.md).
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Droša piekļuve klientu datiem, izmantojot customer Lockbox (Preview)
+1. Atlasiet **Saglabāt**.
 
-Customer Insights izmanto Power Platform customer Lockbox iespēju. Customer Lockbox nodrošina interfeisu, lai pārskatītu un apstiprinātu (vai noraidītu) datu piekļuves pieprasījumus. Šie pieprasījumi rodas, ja atbalsta pieteikuma atrisināšanai ir nepieciešama piekļuve klientu datiem. Lai izmantotu šo līdzekli, Customer Insights ir jābūt esošam savienojumam ar nomnieka Microsoft Dataverse vidi.
+1. Dodieties uz savu Data Lake Storage kontu un atveriet ekrānā redzamo saiti.
 
-Papildinformāciju par customer Lockbox skatiet customer lockbox [kopsavilkumā](/power-platform/admin/about-lockbox#summary)Power Platform. Rakstā aprakstīta [arī darbplūsma](/power-platform/admin/about-lockbox#workflow) un nepieciešamie [iestatījumi](/power-platform/admin/about-lockbox#enable-the-lockbox-policy), lai iespējotu klientu bloķēšanas lodziņu.
+1. Apstipriniet privāto saiti.
 
-> [!IMPORTANT]
-> Globālie administratori Power Platform vai Power Platform administratori var apstiprināt Customer Lockbox pieprasījumus, kas izsniegti Customer Insights.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

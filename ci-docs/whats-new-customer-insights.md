@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights jaunumi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114255"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246020"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -23,6 +23,28 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>2022. gada jūlija atjauninājumi
+
+2022. gada jūlija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="export-to-moengage"></a>Eksports uz MoEngage
+
+Eksportējiet vienotu klientu profilu segmentus uz MoEngage un izmantojiet tos e-pasta mārketingam MoEngage.
+
+Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH atbalsts uz SFTP balstītai eksportēšanai
+
+Izvēlieties, vai vēlaties autentificēties, izmantojot SSH vai lietotājvārdu/paroli, lai izveidotu savienojumus ar SFTP eksportēšanas galamērķiem.
+
+Papildinformāciju skatiet sadaļā [Datu eksportēšana uz SFTP resursdatoriem](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizējiet pieredzi ar datiem par zināmiem un nezināmiem lietotājiem
+
+Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
+
+Papildinformāciju skatiet rakstā [Pieredzes personalizēšana, izmantojot datus par zināmiem un nezināmiem lietotājiem](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>2022. gada jūnija atjauninājumi
 
@@ -50,7 +72,7 @@ Papildinformāciju skatiet sadaļā [Droša piekļuve klientu datiem, izmantojot
 
 Azure Private Link ļauj Customer Insights izveidot savienojumu ar jūsu Azure Data Lake Storage kontu, izmantojot privātu galapunktu jūsu virtuālajā tīklā. Datiem krātuves kontā, kas nav atvērts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
 
-Papildinformāciju skatiet sadaļā [Privātās saites izmantošana programmā Customer Insights](security-overview.md#private-links-tab).
+Papildinformāciju skatiet sadaļā [Privātās saites izmantošana programmā Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>2022. gada maija atjauninājumi
 

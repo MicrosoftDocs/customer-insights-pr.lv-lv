@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170830"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245382"
 ---
 # <a name="measures-overview"></a>Pasākumu pārskats
 
@@ -53,7 +53,7 @@ Atlasiet blakus mēram, lai skatītu pieejamās darbības. Atlasiet mēra nosauk
 - **Rediģējiet** mēru, lai mainītu tā rekvizītus.
 - **Atsvaidziniet** mēru, lai iekļautu jaunākos datus.
 - **Pārdēvējiet** mēru.
-- **Aktivizējiet** vai **deaktivizējiet** mēru. Neaktīvie mēri netiks atsvaidzināti ieplānotas [atsvaidzināšanas](system.md#schedule-tab) laikā, un statuss **tiks** norādīts kā **izlaists**, kas norāda, ka atsvaidzināšana pat netika mēģināta.
+- **Aktivizējiet** vai **deaktivizējiet** mēru. Neaktīvie mēri netiks atsvaidzināti ieplānotas [atsvaidzināšanas](schedule-refresh.md) laikā, un statuss **tiks** norādīts kā **izlaists**, kas norāda, ka atsvaidzināšana pat netika mēģināta.
 - **Atzīmējiet** tagus, lai [pārvaldītu pasākuma tagus](work-with-tags-columns.md#manage-tags).
 - **Dzēsiet** mēru.
 - **Kolonnas**, lai [pielāgotu parādītās kolonnas](work-with-tags-columns.md#customize-columns).
@@ -62,7 +62,7 @@ Atlasiet blakus mēram, lai skatītu pieejamās darbības. Atlasiet mēra nosauk
 
 ## <a name="refresh-measures"></a>Atsvaidzināšanas pasākumi
 
-Mērus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. Lai manuāli atsvaidzinātu vienu vai vairākus mērus, atlasiet tos un izvēlieties **Atsvaidzināt**. Lai [ieplānotu automātisku atsvaidzināšanu](system.md#schedule-tab), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**.
+Mērus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. Lai manuāli atsvaidzinātu vienu vai vairākus mērus, atlasiet tos un izvēlieties **Atsvaidzināt**. Lai [ieplānotu automātisku atsvaidzināšanu](schedule-refresh.md), dodieties uz **administrēšanas** > **sistēmas** > **grafiku**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

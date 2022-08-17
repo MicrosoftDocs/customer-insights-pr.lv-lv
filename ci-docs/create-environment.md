@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142828"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245566"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kā: izveidot jaunu vidi
 
@@ -48,7 +48,7 @@ Lai izveidotu vai pārvaldītu vides, programmā Customer Insights ir nepiecieš
 
 Sniedziet šādu informāciju:
 
-- **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt.
+- **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt. Ja jums ir vairāk nekā viena darba vide, piešķiriet katram viegli identificējamu vārdu.
 - **Izvēlieties savu biznesu**: izvēlieties jaunās vides primāro auditoriju. Jūs varat strādāt ar individuāliem klientiem (B2C) vai [biznesa uzņēmumiem](work-with-business-accounts.md) (B2B). Ja jūsu organizācija galvenokārt veic darījumus ar privātpersonām, piemēram, mazumtirgotāju vai kafejnīcu, izvēlieties individuālus patērētājus. Ja jūsu galvenā auditorija ir citi uzņēmumi, piemēram, automašīnu ražotājs vai papīra uzņēmums, izvēlieties uzņēmuma kontus.
 - **Veids**: Atlasiet, vai vēlaties veidot ražošanas vai smilškastes vidi. Smilškastes vidēs nevar veikt plānotu datu atsvaidzināšanu, un tās ir paredzētas iepriekšējai ieviešanai un testēšanai. Smilškastes vides izmanto to pašu primāro mērķauditoriju, kas ir pašlaik atlasītā ražošanas vide.
 - **Reģions**: Reģions, kurā tiek izvietots un viesots pakalpojums. Lai [izmantotu savu Azure Data Lake Storage kontu](own-data-lake-storage.md) vai [izveidotu savienojumu ar esošu Microsoft Dataverse organizāciju](customer-insights-dataverse.md), Customer Insights videi ir jāatrodas tajā pašā reģionā.
@@ -108,7 +108,7 @@ Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 - Darbības
 - Meklēšanas un filtrēšanas rādītājs
 - Eksportēšanas darbības
-- Grafika atsvaidzināšana
+- Atsvaidzināt grafiku
 - Bagātinājumi
 - Prognoze modeļi
 - Lomu piešķiršana

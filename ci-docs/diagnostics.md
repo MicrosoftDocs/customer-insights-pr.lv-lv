@@ -1,7 +1,7 @@
 ---
-title: Pieteikties pāradresācijai Dynamics 365 Customer Insights, izmantojot Azure monitoru (priekšskatījums)
+title: Diagnostikas žurnālu eksportēšana (priekšskatījums)
 description: Uzziniet, kā nosūtīt žurnālus uz monitoru Microsoft Azure.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052662"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245934"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Pieteikties pāradresācijai Dynamics 365 Customer Insights, izmantojot Azure monitoru (priekšskatījums)
+# <a name="export-diagnostic-logs-preview"></a>Diagnostikas žurnālu eksportēšana (priekšskatījums)
 
-Dynamics 365 Customer Insights nodrošina tiešu integrāciju ar Azure Monitor. Azure monitora resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz [Azure krātuvi](https://azure.microsoft.com/services/storage/), [Azure žurnālu analīzi](/azure/azure-monitor/logs/log-analytics-overview) vai straumēt tos uz [Azure notikumu centrmezgliem](https://azure.microsoft.com/services/event-hubs/).
+Pārsūtiet žurnālus no Customer Insights, izmantojot Azure monitoru. Azure monitora resursu žurnāli ļauj pārraudzīt un nosūtīt žurnālus uz [Azure krātuvi](https://azure.microsoft.com/services/storage/), [Azure žurnālu analīzi](/azure/azure-monitor/logs/log-analytics-overview) vai straumēt tos uz [Azure notikumu centrmezgliem](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights sūta šādus notikumu žurnālus:
 
 - **Revīzijas notikumi**
-  - **APIEvent** - ļauj veikt izmaiņu izsekošanu, Dynamics 365 Customer Insights izmantojot lietotāja saskarni.
+  - **APIEvent** - iespējo izmaiņu izsekošanu, Dynamics 365 Customer Insights izmantojot lietotāja saskarni.
 - **Operatīvie notikumi**
-  - **WorkflowEvent** - Darbplūsma ļauj iestatīt [datu avotus](data-sources.md), [apvienot](data-unification.md), [bagātināt](enrichment-hub.md) un visbeidzot [eksportēt](export-destinations.md) datus uz citām sistēmām. Visas šīs darbības var veikt atsevišķi (piemēram, aktivizēt vienu eksportu). Var arī palaist orķestrētu (piemēram, datu atsvaidzināšana no datu avotiem, kas aktivizē apvienošanas procesu, kas ievilks bagātinājumus un pēc tam eksportēs datus citā sistēmā). Papildinformāciju [skatiet workflowEvent shēmā](#workflow-event-schema).
-  - **APIEvent** - visi API zvani uz klientu instanci uz Dynamics 365 Customer Insights. Papildinformāciju [skatiet APIEvent shēmā](#api-event-schema).
+  - **WorkflowEvent** - ļauj iestatīt [datu avotus](data-sources.md), [apvienot](data-unification.md), [bagātināt](enrichment-hub.md) un [eksportēt](export-destinations.md) datus uz citām sistēmām. Šīs darbības var veikt individuāli (piemēram, aktivizēt vienu eksportēšanu). Viņi var arī palaist orķestrētus (piemēram, datu atsvaidzināšana no datu avotiem, kas aktivizē apvienošanas procesu, kas piesaistīs bagātinājumus un eksportēs datus uz citu sistēmu). Papildinformāciju [skatiet workflowEvent shēmā](#workflow-event-schema).
+  - **APIEvent** - nosūta visus klientu instances API zvanus uz Dynamics 365 Customer Insights. Papildinformāciju [skatiet APIEvent shēmā](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnostikas iestatījumu iestatīšana
 
 ### <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai konfigurētu diagnostiku programmā Customer Insights, ir jāizpilda šādi priekšnosacījumi:
-
-- Jums ir aktīvs [Azure abonements](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Jums ir [administratora](permissions.md#admin) atļaujas programmā Customer Insights.
-- Jums ir līdzstrādnieka **un** **lietotāja piekļuves administratora** loma mērķa resursā pakalpojumā Azure. Resurss var būt Azure Data Lake Storage konts, Azure notikumu centrmezgls vai Azure žurnālu analīzes darbvieta. Papildinformāciju skatiet rakstā [Azure lomu piešķires pievienošana vai noņemšana, izmantojot Azure portālu](/azure/role-based-access-control/role-assignments-portal). Šī atļauja ir nepieciešama, konfigurējot diagnostikas iestatījumus programmā Customer Insights, to var mainīt pēc veiksmīgas iestatīšanas.
-- [Ir izpildītas azure krātuves, Azure notikumu centrmezgla vai Azure žurnāla analīzes galamērķa prasības](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
-- Jums ir vismaz **loma Lasītājs** tajā resursu grupā, kurai pieder resurss.
+- Aktīvs [Azure abonements](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [Administratora](permissions.md#admin) atļaujas programmā Customer Insights.
+- [Līdzstrādnieka un lietotāja piekļuves administratora loma](/azure/role-based-access-control/role-assignments-portal) galamērķa resursā pakalpojumā Azure. Resurss var būt Azure Data Lake Storage konts, Azure notikumu centrmezgls vai Azure žurnālu analīzes darbvieta. Šī atļauja ir nepieciešama, konfigurējot diagnostikas iestatījumus programmā Customer Insights, taču pēc veiksmīgas iestatīšanas to var mainīt.
+- [Ir izpildītas galamērķa prasības](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Azure krātuvei, Azure notikumu centrmezglam vai Azure žurnālu analīzei.
+- Vismaz lasītāja **loma** resursu grupā, kurai pieder resurss.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostikas iestatīšana, izmantojot Azure monitoru
 
-1. Programmā Customer Insights atlasiet **Sistēmas** > **diagnostika**, lai skatītu diagnostikas mērķus, kas konfigurēti šajā instancē.
+1. Programmā Customer Insights dodieties uz **Administrēšanas** > **sistēma** un atlasiet **cilni Diagnostika**.
 
 1. Atlasiet **Pievienot galamērķi**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Diagnostikas savienojums](media/diagnostics-pane.png "Diagnostikas savienojums")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Diagnostikas savienojums.":::
 
 1. Laukā Nosaukums diagnostikas galamērķim **norādiet nosaukumu**.
 
-1. **Izvēlieties Azure abonementa nomnieku** ar mērķa resursu un atlasiet **pieteikties**.
-
 1. Atlasiet veidu **Resurss**(krātuves konts, notikumu centrmezgls vai žurnālu analīze).
 
-1. **Atlasiet mērķa resursa abonementu**.
+1. Atlasiet mērķa resursa **abonementu** **, resursu grupu** un **resursu**. Skatiet rakstu [Konfigurācija mērķa resursā](#configuration-on-the-destination-resource), lai iegūtu atļauju un žurnāla informāciju.
 
-1. Atlasiet mērķa resursa **grupu** Resursi.
-
-1. Atlasiet **resursu**.
-
-1. Apstipriniet paziņojumu par **datu konfidencialitāti un atbilstību**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
 1. Atlasiet **Izveidot savienojumu ar sistēmu**, lai izveidotu savienojumu ar mērķa resursu. Žurnāli sāk parādīties galamērķī pēc 15 minūtēm, ja API tiek izmantots un ģenerē notikumus.
 
-### <a name="remove-a-destination"></a>Mērķa noņemšana
+## <a name="configuration-on-the-destination-resource"></a>Konfigurācija mērķa resursā
 
-1. Dodieties uz **sistēmas** > **diagnostiku**.
+Pamatojoties uz jūsu izvēlēto resursa veidu, automātiski tiek veiktas tālāk norādītās izmaiņas.
+
+### <a name="storage-account"></a>Krātuves konts
+
+Customer Insights pakalpojuma vadītājs saņem krātuves **konta līdzstrādnieka** atļauju atlasītajam resursam un izveido divus konteinerus zem atlasītās nosaukumvietas:
+
+- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
+- `insight-logs-operational` kas ietver **operatīvus notikumus**
+
+### <a name="event-hub"></a>Notikumu centrmezgls
+
+Customer Insights pakalpojuma vadītājs saņem **Azure Notikumu centrmezglu datu īpašnieka** atļauju resursā un izveido divus notikumu centrmezglus zem atlasītās nosaukumvietas:
+
+- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
+- `insight-logs-operational` kas ietver **operatīvus notikumus**
+
+### <a name="log-analytics"></a>Žurnālu analīze
+
+Customer Insights pakalpojuma vadītājs saņem žurnālu **analīzes līdzstrādnieka** atļauju attiecībā uz resursu. Žurnāli ir pieejami sadaļā **Žurnālu** > **tabulu** > **žurnālu pārvaldība** atlasītajā žurnālu analīzes darbvietā. Izvērsiet žurnālu **pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
+
+- `CIEventsAudit` kurā ietverti **revīzijas notikumi**
+- `CIEventsOperational` kas ietver **operatīvus notikumus**
+
+**Logā Vaicājumi** izvērsiet audita **risinājumu** un atrodiet vaicājumu piemērus, kas tiek nodrošināti, meklējot `CIEvents`.
+
+## <a name="remove-a-diagnostics-destination"></a>Diagnostikas mērķa noņemšana
+
+1. Dodieties uz administrēšanas sistēma un atlasiet **cilni Diagnostika** > **.** **·**
 
 1. Sarakstā atlasiet diagnostikas galamērķi.
 
+   > [!TIP]
+   > Noņemot mērķi, tiek apturēta žurnāla pārsūtīšana, bet netiek dzēsts resurss Azure abonementā. Lai izdzēstu resursu pakalpojumā Azure, atlasiet saiti **kolonnā Darbības**, lai atlasītajam resursam atvērtu Azure portālu un izdzēstu to tur. Pēc tam izdzēsiet diagnostikas mērķi.
+
 1. **Kolonnā Darbības** atlasiet **ikonu Dzēst**.
 
-1. Apstipriniet dzēšanu, lai apturētu žurnāla pārsūtīšanu. Azure abonementa resurss netiks dzēsts. Varat atlasīt saiti kolonnā Darbības **, lai atvērtu atlasītā** resursa Azure portālu un izdzēstu to tur.
+1. Apstipriniet dzēšanu, lai noņemtu galamērķi, un pārtrauciet žurnāla pārsūtīšanu.
 
 ## <a name="log-categories-and-event-schemas"></a>Žurnālu kategorijas un notikumu shēmas
 
@@ -89,36 +110,9 @@ Customer Insights piedāvā divas kategorijas:
 - **Audita notikumi**: [API notikumi](#api-event-schema), lai izsekotu konfigurācijas izmaiņām pakalpojumā. `POST|PUT|DELETE|PATCH` operācijas ietilpst šajā kategorijā.
 - **Darbības notikumi**: [API notikumi](#api-event-schema) vai [darbplūsmas notikumi](#workflow-event-schema), kas ģenerēti, izmantojot pakalpojumu.  Piemēram, `GET` darbplūsmas pieprasījumi vai izpildes notikumi.
 
-## <a name="configuration-on-the-destination-resource"></a>Konfigurācija mērķa resursā
-
-Pamatojoties uz jūsu izvēlēto resursa veidu, automātiski tiks piemērotas šādas darbības:
-
-### <a name="storage-account"></a>Krātuves konts
-
-Customer Insights pakalpojuma vadītājs saņem krātuves **konta līdzstrādnieka** atļauju atlasītajam resursam un izveido divus konteinerus zem atlasītās nosaukumvietas:
-
-- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
-- `insight-logs-operational` kas ietver **operatīvus notikumus**
-
-### <a name="event-hub"></a>Notikumu centrmezgls
-
-Customer Insights pakalpojuma vadītājs saņem **Azure Notikumu centrmezglu datu īpašnieka** atļauju resursā un izveidos divus notikumu centrmezglus zem atlasītās nosaukumvietas:
-
-- `insight-logs-audit` kurā ietverti **revīzijas notikumi**
-- `insight-logs-operational` kas ietver **operatīvus notikumus**
-
-### <a name="log-analytics"></a>Žurnālu analīze
-
-Customer Insights pakalpojuma vadītājs saņem žurnālu **analīzes līdzstrādnieka** atļauju attiecībā uz resursu. Žurnāli būs pieejami sadaļā **Žurnālu** > **tabulu** > **žurnālu pārvaldība** atlasītajā žurnālu analīzes darbvietā. Izvērsiet žurnālu **pārvaldības** risinājumu un atrodiet `CIEventsAudit` tabulas un `CIEventsOperational` tabulas.
-
-- `CIEventsAudit` kurā ietverti **revīzijas notikumi**
-- `CIEventsOperational` kas ietver **operatīvus notikumus**
-
-**Logā Vaicājumi** izvērsiet audita **risinājumu** un atrodiet vaicājumu piemērus, kas tiek nodrošināti, meklējot `CIEvents`.
-
 ## <a name="event-schemas"></a>Notikumu shēmas
 
-API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta informācija par to, kur tie atšķiras, skatiet API [notikumu shēmu](#api-event-schema) vai [darbplūsmas](#workflow-event-schema) notikumu shēmu.
+API notikumiem un darbplūsmas notikumiem ir kopīga struktūra, taču ar dažām atšķirībām. Papildinformāciju skatiet sadaļā [API notikumu shēma](#api-event-schema) vai [darbplūsmas](#workflow-event-schema) notikumu shēma.
 
 ### <a name="api-event-schema"></a>API notikumu shēma
 
@@ -182,7 +176,7 @@ API notikumiem un darbplūsmas notikumiem ir kopīga struktūra un detalizēta i
 
 ### <a name="workflow-event-schema"></a>Darbplūsmas notikumu shēma
 
-Darbplūsmā ir vairākas darbības. [Iegūstiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var darboties atsevišķi vai orķestrētas ar sekojošiem procesiem.
+Darbplūsmā ir vairākas darbības. [Iegūstiet datu avotus](data-sources.md), [apvienojiet](data-unification.md), [bagātiniet](enrichment-hub.md) un [eksportējiet](export-destinations.md) datus. Visas šīs darbības var darboties atsevišķi vai organizēt ar šādiem procesiem.
 
 #### <a name="operation-types"></a>Darbības veidi
 
@@ -220,7 +214,6 @@ Darbplūsmā ir vairākas darbības. [Iegūstiet datu avotus](data-sources.md), 
 | `durationMs`    | Garš      | Neobligāti          | Darbības ilgums milisekundēs.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Neobligāti          | JSON objekts ar vairāk rekvizītiem konkrētajai notikumu kategorijai.                                                                                        | Skatīt apakšsadaļu [Darbplūsmas rekvizīti](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Obligāti          | Notikuma smaguma pakāpe.                                                                                                                                  | `Informational`, `Warning` vai `Error`.                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Darbplūsmas rekvizītu shēma
 
@@ -247,3 +240,5 @@ Darbplūsmas notikumiem ir šādi rekvizīti.
 | `properties.additionalInfo.AffectedEntities` | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Export`. Satur eksportējamo entītiju sarakstu.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Export`. Detalizēts ziņojums par eksportu.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | Nē.       | Jā  | Neobligāts. Tikai OperācijaiType `Segmentation`. Norāda kopējo dalībnieku skaitu, kas ir segmentā.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

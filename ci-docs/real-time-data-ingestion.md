@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195667"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246117"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
 Teju reāllaika funkcionalitāte ļauj sekunžu laikā redzēt pēdējo mijiedarbību, kura jūsu klientiem ir bijusi ar jūsu precēm vai pakalpojumiem.
 
-[Plānotā atjaunināšana](system.md#schedule-tab) ietver lielu skaitu ierakstu un vairākas sarežģītas operācijas. Vispirms dati tiek izvilkti no datu avota. Pēc tam dati ir apvienoti un bagātināti ar papildinformāciju. Katra šī procesa palaišana var aizņemt vairākas minūtes vai stundas.
+[Plānotā atjaunināšana](schedule-refresh.md) ietver lielu skaitu ierakstu un vairākas sarežģītas operācijas. Vispirms dati tiek izvilkti no datu avota. Pēc tam dati ir apvienoti un bagātināti ar papildinformāciju. Katra šī procesa palaišana var aizņemt vairākas minūtes vai stundas.
 
 Reāllaika funkcionalitāte nodrošina tūlītēju datu patēriņu, kamēr turpmāk plānotā atsvaidzināšana izrauj šos datus no datu avota.
 
@@ -85,7 +85,7 @@ Detalizēta informācija par šo API, ieskaitot parametrus un atbildes, ir atrod
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Reāllaika lietojuma izprašana, izmantojot telemetriju
 
-Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat piekļūt [reāllaika telemetrijai](system.md#api-usage-tab). 
+Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat piekļūt [reāllaika telemetrijai](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

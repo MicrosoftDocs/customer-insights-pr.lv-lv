@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139620"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245603"
 ---
 # <a name="update-the-unification-settings"></a>Apvienošanas iestatījumu atjaunināšana
 
@@ -42,7 +42,7 @@ Lai pārskatītu vai mainītu apvienošanas iestatījumus, kad ir izveidots vien
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Data Unify ar iezīmētām opcijām Unify.":::
 
    - [Palaidiet atbilstošus nosacījumus](#run-matching-conditions), lai ātri novērtētu atbilstošo nosacījumu kvalitāti (centības un atbilstības kārtulas), neatjauninot vienoto profilu. Opcija **Izpildīt tikai** atbilstošos nosacījumus netiek rādīta vienai entītijai.
-   - [Apvienojiet klientu profilus](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
+   - [Apvienojiet klientu profilus](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
    - [Apvienojiet klientu profilus un atkarības](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju un visas atkarības (piemēram, bagātinājumus, segmentus vai mērus). Visi procesi tiek atkārtoti palaisti automātiski.
 
 ## <a name="edit-source-fields"></a>Avota lauku rediģēšana
@@ -154,7 +154,7 @@ Izpildīt atbilstošus nosacījumus, tiek palaisti tikai deduplikācijas un atbi
 
 1. **Lapā Data** > **Unify** atlasiet:
 
-   - **Unificējiet klientu profilus**: tiek izpildīti atbilstoši nosacījumi un atjaunināta vienotā klienta profila entītija, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](system.md#schedule-tab).
+   - **Unificējiet klientu profilus**: tiek izpildīti atbilstoši nosacījumi un atjaunināta vienotā klienta profila entītija, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
 
    - **Apvienojiet klientu profilus un atkarības**: izpilda atbilstošus nosacījumus un atjaunina vienoto profilu un visas atkarības. Visi procesi tiek atkārtoti palaisti automātiski. Kad visi pakārtotie procesi ir pabeigti, klienta profils atspoguļo atjauninātos datus.
 

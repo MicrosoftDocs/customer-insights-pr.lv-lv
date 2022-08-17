@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administrēšana
   items:
-    - name: Sistēmas konfigurācijas iestatīšana
-      href: system.md
-    - name: Drošības iestatījumu konfigurēšana
-      href: security-overview.md
     - name: Lietotāju atļauju piešķiršana
       href: permissions.md
     - name: Ievadiet savu Key Vault
       href: use-azure-key-vault.md
+    - name: Drošības iestatījumu konfigurēšana
+      href: security-overview.md
     - name: Diagnostikas žurnālu eksportēšana
       href: diagnostics.md
-    - name: Savienojumu pārskats
+    - name: Pārvaldīt savienojumus
       href: connections.md
+    - name: Ieplānojiet sistēmas atsvaidzināšanu
+      href: schedule-refresh.md
+    - name: Skatīt sistēmas konfigurāciju
+      href: system.md
 - name: API
   items:
     - name: Darbs ar API

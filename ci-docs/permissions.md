@@ -1,7 +1,7 @@
 ---
-title: Lietotāju atļauju pārvaldīšana
+title: Lietotāju atļauju piešķiršana
 description: Uzziniet vairāk par lietotāju lomām un atļaujām
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054884"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245428"
 ---
-# <a name="manage-user-permissions"></a>Lietotāju atļauju pārvaldīšana
+# <a name="assign-user-permissions"></a>Lietotāju atļauju piešķiršana
 
-Atļauju **lapā** varat iestatīt lomas un atļaujas Customer Insights izmantošanai.
-
-Lai skatītu šo lapu, jums ir nepieciešamas administratora atļaujas. Lai piekļūtu atļauju lapai, dodieties uz **Administratoru** > **drošības** > **lietotāji**.
-
-Pastāv trīs lomu tipi:
+Piekļuve Customer Insights ir atļauta tikai tiem lietotājiem jūsu organizācijā, kurus lietojumprogrammai ir pievienojis administrators. Administrators var pievienot, rediģēt vai noņemt lietotājus. Lietotājs var būt viens lietotājs, grupa vai lietojumprogramma. Lietotājam var būt trīs veidu lomas:
 
 ## <a name="viewer"></a>Skatītājs
 
@@ -41,18 +37,18 @@ Pastāv trīs lomu tipi:
 
 - Visas skatītājam pieejamās atļaujas.
 - Ielādējiet un pārveidojiet datus, izmantojot lapu **Datu avoti**.
-- Pilnīga ***Datu apvienošana**, kuras rezultātā tiek izveidota vienota klienta profila entītija.
+- Pilnīga **datu apvienošana**, kuras rezultātā tiek izveidota vienota klienta profila entītija.
 - Definējiet **relācijas** un **darbības**.
 - Izveidojiet segmentus, izmantojot lapu **Segmenti**.
 - Izveidojiet mērus, izmantojot lapu **Mēri**.
 - Pārvaldiet konfigurāciju un bagātiniet klientu profilus no **Bagātināšanas** lapas (tikai pirmās puses bagātināšanai).
-- Pārvaldiet un izveidojiet eksportus, balstoties ar līdzstrādniekiem izveidotajos savienojumos. [Papildinformācija par to, kā administratori atļauj līdzstrādniekiem izmantot savienojumu eksportēšanai](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Pārvaldiet un izveidojiet eksportēšanu, pamatojoties uz [savienojumiem, kas kopīgoti ar līdzstrādniekiem](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Admin.
 
 - Visas līdzstrādniekam pieejamās atļaujas.
-- Mainiet iestatījumus lapā **Sistēmas**, tostarp darba valodu un atsvaidziniet sistēmas procesu grafikus.
-- Skatiet un pievienojiet atļaujas, izmantojot lapu **Atļaujas**.
+- Mainiet iestatījumus **lapā Sistēma**, tostarp darba valodu, sistēmas procesu atsvaidzināšanas grafikus un diagnostikas žurnālu eksportēšanu.
+- Mainiet iestatījumus **drošības** lapā, tostarp lietotājus, API atslēgas, privātās saites un atslēgu glabātuvi.
 - Iestatiet meklēšanas un filtrēšanas definīcijas lapai Klienti, izmantojot lapu **Meklēšana un filtrēšana** (pieejama no lapas **Klienti**).
 - Pārvaldiet savienojumus un atļaujiet tos citām lietotāju lomām lapā **Savienojumi**.
 - Pārvaldiet konfigurāciju un bagātiniet klientu profilus no **Bagātināšanas** lapas (visām bagātināšanām).
@@ -67,24 +63,27 @@ Pastāv trīs lomu tipi:
 - Visas administratoram pieejamās atļaujas.
 - [Atiestatiet un izdzēsiet](manage-environments.md#reset-an-existing-environment-preview) vidi.
 
-## <a name="assign-roles-and-permissions"></a>Lomu un atļauju piešķiršana
+## <a name="add-users"></a>Lietotāju pievienošana
 
-1. Dodieties uz **administratoru** > **drošības** > **Lietotāji***.
+1. Dodieties uz **Administratora** > **drošība** un atlasiet **cilni Lietotāji**.
 
 1. Atlasiet vienumu **Pievienot lietotājus**, lai atvērtu rūti **Pievienot/Rediģēt atļaujas**.
 
-1. Izmantojiet **Meklēšanas** lauku, lai atrastu Azure Active Directory lietotāju vai grupu, kuras atļaujas vēlaties pielāgot. Atlasiet **Lomu**, kas jāpiešķir šim lietotājam vai grupai.
+1. Izmantojiet **lauku Meklēšana**, lai atrastu Azure Active Directory lietotāju vai grupu, kuru vēlaties pievienot. Atlasiet **Lomu**, kas jāpiešķir šim lietotājam vai grupai.
 
-1. Atlasiet vienumu **Saglabāt**. Pašreizējā vide tiek automātiski kopīgota ar lietotāju vai grupas dalībniekiem, kuru atļaujas esat mainījis. Lietotāji var piekļūt Customer Insights programmai un strādāt, vadoties pēc to noteiktās lomas.
+1. Atlasiet **Saglabāt**. Pašreizējā vide tiek automātiski kopīgota ar lietotāju vai grupas dalībniekiem. Lietotāji var piekļūt Customer Insights programmai un strādāt, vadoties pēc to noteiktās lomas.
 
 ## <a name="view-current-permissions"></a>Pašreizējo atļauju skatīšana
 
-Dodieties uz **Administratoru** > **drošības** > **lietotāji**, lai uzzinātu, kādas lomu piešķires pašlaik ir aktīvas.
+Dodieties uz **Administratora** > **drošība** un atlasiet **cilni Lietotāji**, lai skatītu aktīvo lietotāju un viņu lomu piešķiršanas sarakstu. Varat kārtot lietotāju sarakstu pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu konkrētu lietotāju.
 
-- Kolonnā **Tips** ir norādīts atsevišķs lietotājs, grupa vai lietojumprogramma. Sistēma atbalsta atsevišķus lietotājus un grupas.
-- Lomas ir norādītas kolonnā **Loma**.
-- Atlasiet jebkuru kolonnas virsrakstu, lai rezultātus kārtotu pēc šīs kolonnas vērtības.
-- Izmantojiet lapas augšdaļā esošo lauku **Meklēt**, lai atrastu konkrētus lietotājus.
+## <a name="manage-current-users"></a>Pašreizējo lietotāju pārvaldība
 
+Dodieties uz **Administratora** > **drošība** un atlasiet **cilni Lietotāji** . Varat kārtot lietotāju sarakstu pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu lietotāju, kuru vēlaties pārvaldīt.
+
+Atlasiet lietotāju, lai skatītu pieejamās darbības.
+
+- **Rediģējiet**, lai rediģētu lietotāja lomu programmā Customer Insights. Atlasiet **Saglabāt**, lai apstiprinātu izmaiņas.
+- **Noņemiet**, lai noņemtu lietotāju no piekļuves Customer Insights. Lai apstiprinātu dzēšanu, atlasiet **Dzēst**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

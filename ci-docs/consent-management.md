@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188057"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245704"
 ---
 # <a name="use-customer-consent"></a>Izmantojiet klienta piekrišanu
 
@@ -70,6 +70,6 @@ Ir svarīgi, lai jūsu klientiem tiktu atjaunināts piekrišanas statuss. Progra
 
 Citiem vārdiem sakot, pārliecinieties, vai avota datos, kas tiek importēti programmā Customer Insights, vienmēr ir jaunākā informācija.
 
-Papildinformāciju skatiet sadaļā [Segmentu](segments.md#refresh-segments) manuāla atsvaidzināšana vai [ieplānotas atsvaidzināšanas](system.md#schedule-tab) konfigurēšana.
+Papildinformāciju skatiet sadaļā [Segmentu](segments.md#refresh-segments) manuāla atsvaidzināšana vai [ieplānotas atsvaidzināšanas](schedule-refresh.md) konfigurēšana.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

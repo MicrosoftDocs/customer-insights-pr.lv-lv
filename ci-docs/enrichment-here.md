@@ -1,19 +1,19 @@
 ---
 title: Bagātiniet klientu profilus, izmantojot HERE Technologies (priekšskatījums)
 description: Vispārēja informācija par HERE Technologies trešās puses bagātināšanu.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196265"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237867"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Bagātiniet klientu profilus, izmantojot HERE Technologies (priekšskatījums)
 
@@ -33,16 +33,11 @@ Jums ir jābūt Customer Insights [administratoram](permissions.md#admin), un ju
 
 1. Ievadiet savienojuma nosaukumu un derīgu HERE Technologies API atslēgu.
 
-1. Pārskatiet un sniedziet savu piekrišanu [Datu konfidencialitātei un atbilstībai](#data-privacy-and-compliance), atlasot **Es piekrītu**.
+1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
 1. Atlasiet **Verificēt**, lai validētu konfigurāciju, un pēc tam atlasiet **Saglabāt**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="HERE Technologies savienojuma konfigurēšanas lapa.":::
-
-### <a name="data-privacy-and-compliance"></a>Datu konfidencialitāte un atbilstība
-
-Ja iespējojat Dynamics 365 Customer Insights datu pārsūtīšanu uz HERE Technologies, jūs atļaujat datu pārsūtīšanu ārpus atbilstības robežām Dynamics 365 Customer Insights, ieskaitot iespējami sensitīvus datus, piemēram, personas datus. Microsoft šos datus pārsūtīs pēc jūsu norādēm, bet jūs esat atbildīgs par to, lai HERE Technologies atbilstu visām jūsu konfidencialitātes vai drošības saistībām. Papildinformāciju skatiet rakstā [Microsoft Privātuma paziņojums](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsu Dynamics 365 Customer Insights administrators var noņemt šo bagātināšanas funkciju jebkurā laikā, lai pārtrauktu šīs funkcijas izmantošanu.
 
 ## <a name="configure-the-enrichment"></a>Bagātināto datu konfigurēšana
 

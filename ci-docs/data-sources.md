@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207100"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245658"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -67,7 +67,7 @@ Atlasiet datu avots, lai skatītu pieejamās darbības.
 
 Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. [Lokālie datu avoti](connect-power-query.md#add-data-from-on-premises-data-sources) atsvaidzina savus grafikus, kas tiek iestatīti datu uzņemšanas laikā. Attiecībā uz pievienotajiem datu avotiem datu uzņemšana patērē jaunākos datus, kas pieejami no šīs datu avots.
 
-Dodieties uz **administrēšanas** > **sistēmas** > [**grafiku**](system.md#schedule-tab), lai konfigurētu sistēmas ieplānotos uzņemto datu avotu atsvaidzinājumus.
+Dodieties uz **administrēšanas** > **sistēmas** > [**grafiku**](schedule-refresh.md), lai konfigurētu sistēmas ieplānotos uzņemto datu avotu atsvaidzinājumus.
 
 Lai atsvaidzinātu datu avots pēc pieprasījuma:
 

@@ -2,7 +2,7 @@
 title: Dublikātu noņemšana pirms datu apvienošanas
 description: Otrais apvienošanās procesa solis ir izvēlēties, kuru ierakstu saglabāt, kad tiek atrasti dublikāti.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139438"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213636"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Dublikātu noņemšana pirms datu apvienošanas
 
-Šī apvienošanas darbība pēc izvēles ļauj iestatīt kārtulas ierakstu dublikātu apstrādei entītijā. *Deduplikation* identificē ierakstu dublikātus un sapludina tos vienā ierakstā. Avota ieraksti tiek saistīti ar sapludināto ierakstu, izmantojot alternatīvus ID. Ja kārtulas nav konfigurētas, tiek lietotas sistēmas definētas kārtulas.
+Šī neobligātā apvienošanas darbība ļauj iestatīt kārtulas ierakstu **dublikātu likvidēšanai entītijā**. Deduplikation identificē vairākus ierakstus klientam un atlasa labāko ierakstu, kas jāsaglabā (pamatojoties uz pamata sapludināšanas preferencēm), vai sapludina ierakstus vienā (pamatojoties uz papildu sapludināšanas preferencēm). Avota ieraksti tiek saistīti ar sapludināto ierakstu, izmantojot alternatīvus ID. Ja kārtulas nav konfigurētas, tiek lietotas sistēmas definētas kārtulas.
+
+## <a name="default-deduplication"></a>Noklusējuma deduplikācija
+
+Sistēmas definētie noteikumi tiek piemēroti, ja nav pievienoti deduplikācijas noteikumi.
+
+- Primārā atslēga ir deduplicēta.
+  Visiem ierakstiem ar to pašu primāro atslēgu uzvarētājs **ir visvairāk aizpildītais ieraksts** (tas, kuram ir vismazākās nulles vērtības).
+- Entītijai tiek piemēroti visi starppasauļu atbilstības kārtulas.
+  Piemēram: ja atbilstības darbībā entītija A tiek saskaņota ar entītiju B FullName un DateofBirth *, tad entītija A tiek dedublēta arī ar* FullName *un* DateofBirth *.* *·* Tā kā *FullName* un *DateofBirth* ir derīgas atslēgas klienta identificēšanai entītijā A, šīs atslēgas ir derīgas arī, lai identificētu dublētus klientus entītijā A.
 
 ## <a name="include-enriched-entities-preview"></a>Iekļaut bagātinātas entītijas (priekšskatījums)
 

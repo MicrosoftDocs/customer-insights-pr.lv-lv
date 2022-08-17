@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139666"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213591"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Klientu lauku apvienošana datu apvienošanai
 
@@ -58,6 +58,9 @@ ms.locfileid: "9139666"
 
 1. Norādiet, kā laukus apvienot vai sapludināt no vienas no trim opcijām:
     - **Nozīme**: Norāda kā uzvarētāja vērtību, pamatojoties uz iesaistītajā laukā norādīto rangu. Tā ir noklusējuma sapludināšanas opcija. Atlasiet **Pārvietot uz augšu/uz leju**, lai iestatītu svarīguma reitingu.
+
+      > [!NOTE]
+      > Customer Insights izmanto pirmo vērtību, kas nav null. Piemēram, dotās entītijas A, B un C, kas sarindotas šādā secībā, ja A.Name un B.Name ir null, tad tiek izmantota vērtība no C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Svarīguma opcija sapludināšanas lauku dialoglodziņā.":::
 

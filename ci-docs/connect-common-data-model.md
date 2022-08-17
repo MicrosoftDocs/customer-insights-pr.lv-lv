@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207008"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245842"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Izveidot savienojumu ar datiem programmā Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
 
 1. Izvēlieties vienu no tālāk norādītajām opcijām krātuves savienošanai **, izmantojot**. Papildinformāciju skatiet sadaļā [Customer Insights Azure Data Lake Storage savienošana ar Gen2 kontu, izmantojot Azure pakalpojumu principālu](connect-service-principal.md).
 
-   - **Azure resurss**: ievadiet resursa **ID**. Ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti, atlasiet **Iespējot privāto saiti**. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#private-links-tab).
-   - **Azure abonements**: atlasiet **abonementu** un pēc tam **grupu** Resursi un **Krātuves kontu**. Ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti, atlasiet **Iespējot privāto saiti**. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#private-links-tab).
+   - **Azure resurss**: ievadiet resursa **ID**. Ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti, atlasiet **Iespējot privāto saiti**. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#set-up-an-azure-private-link).
+   - **Azure abonements**: atlasiet **abonementu** un pēc tam **grupu** Resursi un **Krātuves kontu**. Ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti, atlasiet **Iespējot privāto saiti**. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Lai izveidotu datu avots, konteineram vai krātuves kontam ir nepieciešama viena no šīm lomām:
@@ -84,7 +84,7 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
    > [!TIP]
    > Lai rediģētu entītiju JSON rediģēšanas interfeisā, atlasiet entītiju un pēc tam **Rediģējiet shēmas failu**. Veiciet izmaiņas un atlasiet **Saglabāt**.
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -142,7 +142,7 @@ Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos 
 
    :::image type="content" source="media/ADLS_required.png" alt-text="dialoglodziņš, kurā redzams obligāts primārajai atslēgai":::
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -176,7 +176,7 @@ Varat atjaunināt opciju *Izveidot savienojumu ar krātuves kontu, izmantojot op
         > - Krātuves Blob datu īpašnieks
         > - Krātuves Blob datu ieguldītājs
 
-   - **Iespējojiet privāto saiti**, ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#private-links-tab).
+   - **Iespējojiet privāto saiti**, ja vēlaties uzņemt datus no krātuves konta, izmantojot Azure privāto saiti. Papildinformāciju skatiet sadaļā [Privātās saites](security-overview.md#set-up-an-azure-private-link).
 
 1. Atlasiet **Tālāk**.
 1. Mainiet kādu no šīm darbībām:

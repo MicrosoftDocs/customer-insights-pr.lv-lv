@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173820"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224304"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalizējiet savu pieredzi ar datiem par zināmiem un nezināmiem lietotājiem
 
-Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās. Konsolidētie nezināmie un zināmie profili sniedz organizācijām pilnīgu priekšstatu par jaunākajiem profiliem un to vēsturiskajām transakcijām, uzvedību un demogrāfiskajiem datiem. Tas pat iet soli tālāk, nodrošinot identitātes izšķirtspēju, kas ļauj apvienot klientu aktivitātes vairākos kanālos, tostarp jūsu vietnē, pirkumos veikalā, lojalitātes programmās utt.
+Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās. Nezināmu un zināmu profilu konsolidēšana sniedz organizācijām pilnīgu priekšstatu par jaunākajiem profiliem un to vēsturiskajām transakcijām, uzvedību un demogrāfiskajiem datiem. Tas pat iet soli tālāk, nodrošinot identitātes izšķirtspēju, kas ļauj apvienot klientu aktivitātes vairākos kanālos, tostarp jūsu vietnē, pirkumos veikalā, lojalitātes programmās utt.
 
 ## <a name="sample-scenario"></a>Scenārija paraugs
 

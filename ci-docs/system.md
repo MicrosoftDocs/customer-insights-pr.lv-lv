@@ -1,7 +1,7 @@
 ---
-title: Sistēmas konfigurācija
+title: Skatīt sistēmas konfigurāciju
 description: Informācija par sistēmas iestatījumiem pakalpojumā Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,40 +10,78 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050680"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246256"
 ---
-# <a name="system-configuration"></a>Sistēmas konfigurācija
+# <a name="view-system-configuration"></a>Skatīt sistēmas konfigurāciju
 
-Lai piekļūtu sistēmas konfigurācijām, dodieties uz **administrēšanas** > **sistēma**, lai skatītu sistēmas uzdevumu un procesu sarakstu.
+Skatiet sistēmas informāciju, sistēmas statusu un API lietojumu.
 
-Lapā **Sistēma** ir šādas cilnes:
-- [Statuss](#status-tab)
-- [Plānot](#schedule-tab)
-- [API lietojums](#api-usage-tab)
-- [Par](#about-tab)
-- [VispārīgI](#general-tab)
+## <a name="view-api-usage"></a>Skatīt API lietojumu
 
-:::image type="content" source="media/system-tabs.png" alt-text="Iestatījumu cilnes sistēmas lapā.":::
+Skatiet detalizētu informāciju par reāllaika API lietojumu un uzziniet, kuri notikumi ir notikuši noteiktā laika posmā.
 
-## <a name="status-tab"></a>Cilne Statuss
+1. Dodieties uz administrēšanas sistēma un atlasiet **cilni API lietojums** > **.** **·**
 
-Cilnē **Statuss** varat izsekot uzdevumu norakstīšanai, datu norīšanai, datu eksportēšanai un vairākiem citiem svarīgiem produktu procesiem. Pārskatiet šajā cilnē sniegto informāciju, lai pārliecinātos par aktīvo uzdevumu un procesu pilnīgumu.
+1. **Atlasiet skatāmo laika posmu**.
 
-Šajā cilnē ir iekļautas tabulas ar statusu un dažādu procesu apstrādes informāciju. Katrā tabulā tiek izsekots uzdevuma **Nosaukums** un tā atbilstošā entītija, tā pēdējās izpildes **Statuss** un **Pēdējā atjaunināšana**. Pēdējo vairāku izrāžu detaļas varat skatīt, atlasot uzdevumu vai procesa nosaukumu. 
+   **API lietojuma** lapā ir trīs sadaļas:
 
-Atlasiet statusu blakus uzdevumam vai procesam **kolonnā Statuss**, lai atvērtu detalizētas **informācijas** rūti Progress.
+   - **API izsaukumi** — diagramma, kas atlasītajā laika posmā vizualizē apkopoto izsaukumu skaitu uz API.
+   - **Datu pārsūtīšana** — diagramma, kurā redzams datu daudzums, kas atlasītajā laika posmā tika pārsūtīts, izmantojot API.
+   - **Darbības** — tabula ar rindām katrai pieejamai API operācijai un detalizēta informācija par operāciju izmantošanu. Atlasiet operācijas nosaukumu, lai pārietu [uz API atsauci](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operācijas, kurās tiek izmantota [reāllaika datu norīšana](real-time-data-ingestion.md), satur binokulāru simbolu, lai skatītu reāllaika API lietojumu.
+
+   1. Atlasiet binokli, lai atvērtu reāllaika **API lietošanas** rūti, kurā ir detalizēta informācija par operācijas lietojumu.
+   1. **Atlasiet skatāmo laika posmu**.
+   1. Izmantojiet **lodziņu Grupēt pēc**, lai izvēlētos, kā vislabāk parādīt reāllaika mijiedarbību. Grupēt datus pēc API **metodes**, **juridiskās personas kvalificēta nosaukuma** (pieņemtās juridiskās personas), **Izveidotā (** notikuma avota), **rezultāta** (veiksmes vai neveiksmes) vai **kļūdu kodiem**. Dati ir pieejami kā vēstures diagramma un kā tabula.
+
+## <a name="view-system-information"></a>Skatīt sistēmas informāciju
+
+Skatiet vides parādāmo nosaukumu, ID, reģionu, veidu un sesijas ID.
+
+1. Dodieties uz **administrēšanas** > **sistēma** un atlasiet **cilni Par**.
+
+1. Lai skatītu valodu un valsti/reģionu, atlasiet **cilni Vispārīgi**.
+
+### <a name="update-preferred-language-or-countryregion"></a>Vēlamās valodas vai valsts/reģiona atjaunināšana
+
+Customer Insights [atbalsta daudzas valodas](/dynamics365/get-started/availability). Lietotne izmanto Jūsu valodas preferenci, lai rādītu elementus, piemēram, izvēlni, informācijas paneļa apzīmējumu tekstu un ziņojumus vēlamajā valodā.
+
+Manuāli ievadītie importētie dati un informācija netiek tulkota.
+
+1. Dodieties uz **administrēšanas** > **sistēma** un atlasiet **cilni Vispārīgi**.
+
+1. Lai mainītu vēlamo valodu, nolaižamajā izvēlnē izvēlieties **Valodu**.
+
+1. Lai mainītu datumu, laika un skaitļu vēlamo formatējumu, izmantojiet nolaižamo izvēlni **Valsts/reģiona formāts**. Tiek parādīts formatēšanas priekšskatījums. Sistēma automātiski iesaka atlasi, kad izvēlaties jaunu valodu.
+
+1. Atlasiet **Saglabāt**.
+
+## <a name="view-system-status"></a>Skatīt sistēmas statusu
+
+Sekojiet līdzi uzdevumu norīšanas, datu norīšanas, datu eksportēšanas un vairāku citu svarīgu produktu procesu norisei. Pārskatiet informāciju, lai pārliecinātos par savu aktīvo uzdevumu un procesu pilnīgumu.
+
+1. Dodieties uz **administrēšanas** > **sistēma** un atlasiet **cilni Statuss**.
+
+   Statuss un informācijas apstrāde dažādiem procesiem. **Skatiet uzdevuma nosaukumu**, **tā pēdējās izpildes statusu** un to, kad tas pēdējo reizi tika **atjaunināts**.
+
+1. Lai skatītu detalizētu informāciju par pēdējām vairākām reizēm, atlasiet uzdevumu vai procesa nosaukumu.
+
+1. Lai skatītu detalizētu informāciju par uzdevuma norisi, atlasiet statusu. Tiek **parādīta progresa detalizētās informācijas** rūts.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Detalizētas informācijas par sistēmas progresu rūts":::
+
+1. Lai skatītu detalizētu informāciju par visu uzdevumu norisi, atlasiet **Visa darbplūsma**.
 
 ### <a name="status-definitions"></a>Statusa definīcijas
 
@@ -51,19 +89,19 @@ Sistēma uzdevumiem un procesiem izmanto šādus statusus:
 
 |Statuss  |Definīcija  |
 |---------|---------|
-|Atcelta |Lietotājs atcēla apstrādi, pirms tā tika pabeigta.   |
-|Neizdevās   |Veicot datu uzņemšanu, radās kļūdas.         |
-|Kļūme  |Apstrāde ir izgāzusies.  |
-|Nav sākts   |Datu avots nesatur datus, kas ir uzņemti vai vēl ir melnraksta režīmā.         |
+|Atcelta |Lietotājs atcēla uzdevumu vai procesu, pirms tas tika pabeigts.   |
+|Neizdevās   |Uzdevumā vai procesā radās kļūdas.         |
+|Kļūme  |Uzdevums vai process nav izdevies.  |
+|Nav sākts   |Datu avots vēl nav uzņemti dati vai uzdevums joprojām ir melnraksta režīmā.         |
 |Apstrāde  |Notiek uzdevums vai process.  |
-|Notiek atsvaidzināšana    |Notiek datu uzņemšana. Šo darbību varat atcelt, kolonnā **Darbības** atlasot **Apturēt atsvaidzināšanu**. Apturot datu avota atsvaidzināšanu, tas atkal kļūs tāds pats kā pēdējās atsvaidzināšanas brīdī.       |
+|Notiek atsvaidzināšana    |Notiek uzdevums vai process. Lai atceltu šo darbību, atlasiet **Atsvaidzināt** un **atcelt darbu**. Pārtraucot uzdevuma vai procesa atsvaidzināšanu, tas tiks atgriezts pēdējā atsvaidzināšanas stāvoklī.       |
 |Izlaista  |Uzdevums vai process tika izlaists. Viens vai vairāki pakārtotie procesi, no kuriem atkarīgs šis uzdevums, neizdodas vai tiek izlaisti.|
 |Sekmīgs  |Uzdevums vai process veiksmīgi pabeigts. Datu avotiem norāda, ka dati ir veiksmīgi norīti, ja kolonnā Atsvaidzināts **ir minēts** laiks.|
 |Ievietota rindā | Apstrāde ir rindas kārtībā un sāksies, kad būs pabeigti visi augšupējie uzdevumi un procesi. Papildinformāciju skatiet sadaļā [Atsvaidzināšanas procesi](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Atsvaidzināšanas procesi
 
-Uzdevumu un procesu atsvaidzināšana tiek izpildīta saskaņā ar konfigurēto [grafiku](#schedule-tab). 
+Uzdevumu un procesu atsvaidzināšana tiek izpildīta saskaņā ar konfigurēto [grafiku](schedule-refresh.md).
 
 |Process  |Apraksts  |
 |---------|---------|
@@ -86,58 +124,6 @@ Uzdevumu un procesu atsvaidzināšana tiek izpildīta saskaņā ar konfigurēto 
 |User  |Darbojas manuāli (vienreizēja atsvaidzināšana). Atkarīgs no entītijām.  |
 
 Atlasiet procesa statusu, lai skatītu detalizētu informāciju par visa tā darba norisi, kurā tas bija. Iepriekš minētie atsvaidzināšanas procesi var palīdzēt saprast, ko varat darīt, lai risinātu izlaistu **vai** **rindas** uzdevumu vai procesu.
-
-## <a name="schedule-tab"></a>Plānošanas cilne
-
-Izmantojiet cilni **Grafiks**, lai plānotu visu jūsu uzņemto [datu avotu automātisko atsvaidzināšanu](data-sources.md). Automātiskā atsvaidzināšana palīdz nodrošināt, ka jūsu datu avotu atjauninājumi tiek atspoguļoti vienotajos klientu profilos.
-
-> [!NOTE]
-> Jūsu pārvaldītie datu avoti tiek atsvaidzināti pēc saviem grafikiem. Lai ieplānotu jūsu pārvaldīto datu avotu atsvaidzināšanu, konfigurējiet atsvaidzināšanas iestatījumus konkrētajā datu avots lapā **Datu avoti**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Dataflow atsvaidzināšanas iestatījumi.":::
-
-1. Dodieties uz administrēšanas sistēma un atlasiet cilni **Grafiks** > **.** **·**
-
-2. Plānotās atsvaidzināšanas noklusējuma stāvoklis ir **Izslēgts**. Lai iespējotu plānoto atsvaidzināšanu, ekrāna augšdaļā mainiet slēdža pozīciju uz **Ieslēgta**.
-
-3. Izvēlieties starp **Katru nedēļu** (noklusējuma) un **Katru dienu**. Ja plānojat iknedēļas atsvaidzināšanu, atlasiet vienu vai vairākas dienas, kurās vēlaties izpildīt atsvaidzināšanu.
-
-4. Iestatiet **Laika joslu**, tad izmantojiet **Laika** nolaižamo sarakstu, lai iestatītu atsvaidzināšanas laiku. Kad esat pabeidzis, atlasiet **Iestatīt**. Ja vēlaties ieplānot vairākas atsvaidzināšanas vienā dienā, atlasiet **Pievienot citu laiku**.
-
-5. Lai veiktās izmaiņas stātos spēkā, atlasiet **Saglabāt**.
-
-## <a name="about-tab"></a>Cilne Par
-
-Cilnē **Par** ir norādīts jūsu organizācijas **Parādāmais nosaukums**, aktīvais **Vides ID**, **Reģions** un **Sesijas ID**. Ja jums ir vairāk nekā viena darba vide, katrai videi vajadzētu piešķirt viegli identificējamu parādāmo nosaukumu.
-
-## <a name="general-tab"></a>Cilne Vispārīgi
-
-Cilnē **Vispārīgi** varat mainīt valodu un valsts/reģiona formātu.
-
-Customer Insights [atbalsta daudzas valodas](/dynamics365/get-started/availability). Lietotne izmanto Jūsu valodas preferenci, lai rādītu elementus, piemēram, izvēlni, informācijas paneļa apzīmējumu tekstu un ziņojumus vēlamajā valodā.
-
-Manuāli ievadītie importētie dati un informācija netiek tulkota.
-
-### <a name="update-the-settings"></a>Atjaunināt iestatījumus
-
-Lai mainītu vēlamo valodu, nolaižamajā izvēlnē izvēlieties **Valodu**.
-
-Lai mainītu datumu, laika un skaitļu vēlamo formatējumu, izmantojiet nolaižamo izvēlni **Valsts/reģiona formāts**. Šajā laukā tiek rādīts formatēšanas priekšskatījums. Ja izvēlēsities jaunu valodu, sistēma automātiski piedāvās atlasi.
-
-Atlasiet **Saglabāt**, lai apstiprinātu atlases.
-
-## <a name="api-usage-tab"></a>API lietošanas cilne
-
-Skatiet detalizētu informāciju par reāllaika API lietošanu un skatiet, kuri notikumi notika konkrētajā laika posmā. Nolaižamajā izvēlnē izvēlieties laika periodu opcijai **Atlasīt laika periodu**. 
-
-**API lietojumā** ir trīs sadaļas: 
-- **API izsaukumi** — diagramma, kas atlasītajā laika posmā vizualizē apkopoto izsaukumu skaitu uz API.
-
-- **Datu pārsūtīšana** — diagramma, kurā redzams datu daudzums, kas atlasītajā laika posmā tika pārsūtīts, izmantojot API.
-
--  **Darbības** — tabula ar rindām katrai pieejamai API operācijai un detalizēta informācija par operāciju izmantošanu. Varat atlasīt operācijas nosaukumu, lai pārietu [uz API atsauci](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operācijās, kurās tiek izmantota [reāllaika datu norīšana](real-time-data-ingestion.md), ir poga ar binokulāro simbolu, lai skatītu reāllaika API lietojumu. Atlasiet pogu, lai atvērtu sānu rūti, kurā ir detalizēta lietošanas instrukcija par reāllaika API izmantošanu pašreizējā vidē.   
-   Lai izvēlētos, kā vislabāk sniegt reāllaika mijiedarbības, izmantojiet **Grupēt pēc** lodziņu rūtī **Reāllaika API lietojums**. Grupējiet datus pēc API metodes, entītijas nosaukums (izveidotā entītija), izveidoja (notikuma avots), rezultāts (veiksmīgi vai kļūme) vai kļūdu kodi. Dati ir pieejami kā vēstures diagramma un kā tabula.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
