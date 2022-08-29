@@ -1,7 +1,7 @@
 ---
 title: Sarežģītu segmentu izveide, izmantojot segmentu veidotāju
 description: Izmantojiet segmentu veidotāju, lai izveidotu sarežģītus klientu segmentus, grupējot tos, pamatojoties uz dažādiem atribūtiem.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170644"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304758"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Sarežģītu segmentu izveide, izmantojot segmentu veidotāju
 
-Definēt sarežģītus filtrus vienotā klienta entītijā unsaistītajās entītijās. Katrs segments pēc apstrādes izveido klientu ierakstu kopu, ko var eksportēt un ar kurām veikt darbības.
+Definējiet sarežģītus filtrus ap vienoto klientu vai vienoto kontaktpersonu, un tā ir saistīta entītija. Katrs segments pēc apstrādes izveido klientu vai kontaktpersonu ierakstu kopu, ko varat eksportēt un ar kuru var veikt darbības.
 
 > [!TIP]
-> Segmentos, kas balstīti uz **atsevišķiem klientiem**, automātiski tiek iekļauta segmenta dalībniekiem pieejamā kontaktinformācija. **Uzņēmumu kontu** vidēs segmenti ir balstīti uz uzņēmumiem (uzņēmumiem vai meitasuzņēmumiem). Lai segmentā iekļautu kontaktinformāciju, izmantojiet **Projekta atribūtu** funkcionalitāti segmenta veidotājā. Pārliecinieties, vai kontaktpersonu datu avoti tiek [semantiski kartēti uz ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entītiju.
+> Segmentos, kas balstīti uz **atsevišķiem klientiem**, automātiski tiek iekļauta segmenta dalībniekiem pieejamā kontaktinformācija. Ja **biznesa kontos** vienojat [gan](data-unification.md) kontus, gan kontaktpersonas, izvēlieties, vai segmenta pamatā ir konti vai darba kontaktpersonas. Lai eksportētu uz galamērķi, kas sagaida kontaktinformāciju, izmantojiet kontaktpersonu segmentu. Lai eksportētu uz galamērķi, kas sagaida konta informāciju, izmantojiet kontu segmentu.
 
 ## <a name="segment-builder"></a>Segmentu veidotājs
 
@@ -57,6 +57,11 @@ Iepriekš sniegtajā piemērā parādīta segmentācijas iespēja. Mēs definēj
 
 1. Atlasiet **Jauns** > **Izveidot savu**. Segmenta veidošanas lapā jūs definējat vai rakstāt kārtulas. Kārtula sastāv no viena vai vairākiem nosacījumiem, kas definē klientu kopu.
 
+   > [!NOTE]
+   > Vidēm, kuru pamatā ir biznesa konti, atlasiet **Jauns** > **kontu** segments vai **Kontaktpersonu segments (priekšskatījums),** pamatojoties uz tā segmenta tipu, kuru vēlaties izveidot. [Ja ir definēta kontu hierarhija](relationships.md#set-up-account-hierarchies) un vēlaties izveidot kārtulas, lai filtrētu datus, pamatojoties uz bērnelementa un vecāku attiecībām, atlasiet **Lietot hierarhiju? (priekšskatījums)**, atlasiet hierarhiju un pēc tam **Lietot**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Segments atlasa kontu hierarhijas rūti.":::
+
 1. Atlasiet **Rediģēt detalizētu informāciju** blakus segmentam Bez nosaukuma. Norādiet segmenta nosaukumu un atjauniniet segmentam ieteikto **Izvades entītijas nosaukumu**. Pēc izvēles segmentam pievienojiet aprakstu un [atzīmes](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoglodziņš Detalizētas informācijas rediģēšana.":::
@@ -65,11 +70,11 @@ Iepriekš sniegtajā piemērā parādīta segmentācijas iespēja. Mēs definēj
    - Rūtī **Pievienot kārtulai** pārskatiet pieejamo entītiju un atribūtu sarakstu un atlasiet ikonu **+** pie pievienojamā atribūta. Izvēlieties, vai atribūtu vēlaties pievienot esošai kārtulai vai izmantot to, lai izveidotu jaunu kārtulu.
    - Lai skatītu atbilstošos ieteikumus, ierakstiet atribūta nosaukumu kārtulu sadaļā.
 
-1. Izvēlieties operatorus, lai norādītu atbilstošās nosacījuma vērtības. Atribūtam kā vērtība var būt viens no četriem datu tipiem: skaitlisks, virkne, datums vai Būla vērtība. Atkarībā no atribūta datu tipa ir pieejami dažādi operatori, lai norādītu nosacījumu. Segmentiem ar biznesa uzņēmumiem ir pieejami divi īpaši operatori, lai iekļautu potenciālās hierarhijas starp noslogotajiem uzņēmumiem. Lai iekļautu saistītus uzņēmumus, izmantojiet *atvasināto* un *primāro* operatoru.
+1. Izvēlieties operatorus, lai norādītu atbilstošās nosacījuma vērtības. Atribūtam kā vērtība var būt viens no četriem datu tipiem: skaitlisks, virkne, datums vai Būla vērtība. Atkarībā no atribūta datu tipa ir pieejami dažādi operatori, lai norādītu nosacījumu.
 
 1. Atlasiet **Pievienot nosacījumu**, lai kārtulai pievienotu papildu nosacījumus. Lai zem pašreizējās kārtulas izveidotu kārtulu, atlasiet **Pievienot apakškārtulu**.
 
-1. Ja kārtula izmanto citas entītijas, nevis entītiju *Klients, atlasiet* Iestatīt relācijas ceļu **, lai kartētu atlasīto entītiju uz vienoto** klienta entītiju. Ja ir tikai viens iespējamais relāciju ceļš, sistēma to atlasa automātiski. Dažādi [attiecību ceļi var dot atšķirīgus](relationships.md#relationship-paths) rezultātus. Katrai kārtulai var būt savas attiecību ceļš.
+1. Ja kārtula izmanto citas entītijas, nevis *Klienta* entītiju (vai *ContactProfile* entītiju B-to-B), atlasiet **Iestatīt relācijas ceļu**, lai atlasīto entītiju kartētu uz vienoto klienta entītiju. Ja ir tikai viens iespējamais relāciju ceļš, sistēma to atlasa automātiski. Dažādi [attiecību ceļi var dot atšķirīgus](relationships.md#relationship-paths) rezultātus. Katrai kārtulai var būt savas attiecību ceļš.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potenciālo attiecību ceļš, izveidojot kārtulu, pamatojoties uz entītiju, kas kartēta uz vienoto klienta entītiju.":::
 
@@ -92,24 +97,22 @@ Iepriekš sniegtajā piemērā parādīta segmentācijas iespēja. Mēs definēj
       - **Izveidot krustpunktu** pārklāj divas grupas. Vienotā grupā paliek tikai dati, kas *ir kopīgi* abām grupām.
       - **Izņemot** apvieno divas grupas. Tiek saglabāti tikai A grupas dati, kas *nav kopīgi* B grupas datiem.
 
-1. Pēc noklusējuma izvades entītija automātiski satur visus klientu profilu atribūtus, kas atbilst definētajiem filtriem. Ja segmenta pamatā ir citas entītijas, nevis entītija *Klients, atlasiet* Projekta atribūti **, lai izvades entītijai pievienotu vairāk atribūtu no** šīm entītijām.
-
-   > [!IMPORTANT]
-   > Segmentiem, kuru pamatā ir uzņēmuma konti, segmentā ir jāiekļauj detalizēta informācija par vienu vai vairākām kontaktpersonām no *uzņēmuma ContactProfile*, lai šo segmentu varētu aktivizēt vai eksportēt uz galamērķiem, kuriem nepieciešama kontaktinformācija. Papildinformāciju par *ContactProfile* entītiju skatiet [Semantiski kartējumi](semantic-mappings.md).
-   > Piemēram, segmenta izvades paraugs, balstoties uz biznesa uzņēmumiem ar plānotajiem kontaktpersonu atribūtiem, var izskatīties šādi:
-   >
-   > |ID  |Konta nosaukums  |Ieņēmumi  |Kontaktpersonas nosaukums  | Kontaktpersonas loma|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100K | [Ebija Mosa, Rūta Soto]  | [CEO, Iepirkumu vadītāja]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Izvades entītijai pievienojamā sānu rūtī atlasīto prognozēto atribūtu piemērs.":::
-  
+1. Pēc noklusējuma izvades entītija automātiski satur visus klientu profilu atribūtus, kas atbilst definētajiem filtriem. Izmantojot funkciju ContactProfile *, B-to-B*, konta ID tiek automātiski iekļauts. Ja segmenta pamatā ir citas entītijas, nevis *klienta entītija*, vai lai iekļautu vairāk atribūtu no *ContactProfile*, atlasiet **Projekta atribūti**, lai izvades entītijai pievienotu vairāk atribūtu no šīm entītijām.
+ 
    Piemēram: segments tiek veidots, pamatojoties uz entītiju, kurā ir ietverti ar *Klienta* entītiju saistīti pirkuma dati. Šis segments meklē visus klientus no Spānijā, kas iegādājušies preces pašreizējā gadā. Varat izvēlēties pievienot atribūtus, piemēram, preču cenu vai pirkšanas datumu, visiem atbilstošajiem debitoru ierakstiem izvades entītijā. Šī informācija var būt noderīga, lai analizētu sezonas pretsaderību attiecībā pret kopējiem izdevumiem.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Izvades entītijai pievienojamā sānu rūtī atlasīto prognozēto atribūtu piemērs.":::
+ 
+   Piemēram, segmenta izvades paraugs, balstoties uz biznesa uzņēmumiem ar plānotajiem kontaktpersonu atribūtiem, var izskatīties šādi:
+
+   |ID  |Konta nosaukums  |Ieņēmumi  |Kontaktpersonas nosaukums  | Kontaktpersonas loma|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100K | [Ebija Mosa, Rūta Soto]  | [CEO, Iepirkumu vadītāja]
+
    > [!NOTE]
-   > - **Projekta atribūti** darbojas tikai entītijām, kurām ir attiecības viens pret daudziem ar klienta entītiju. Piemēram, vienam klientam var būt vairāki abonementi.
-   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat.
-   > - Ja atribūts, ko vēlaties plānot, ir vairāk nekā viens objekts prom no entītijas *Klients*, kā to definē attiecības, šis atribūts ir jāizmanto katrā tā segmenta vaicājuma kārtulā, ko veidojat.
+   > - **Projekta atribūti** darbojas tikai entītijām, kurām ir relācija viens pret daudziem ar entītiju *Klients* vai *ContactProfile*. Piemēram, vienam klientam var būt vairāki abonementi.
+   > - Ja atribūts, kuru vēlaties projicēt, ir vairāk nekā viena lēciena attālumā no *klienta* vai *contactprofile entītijas*, kā to definē relācija, šis atribūts ir jāizmanto katrā jūsu veidotā segmenta vaicājuma kārtulā.
+   > - Ja atribūts, kuru vēlaties projicēt, ir tikai viena lēciena attālumā no *entītijas Klients* vai *ContactProfile*, šim atribūtam nav jābūt katrā veidojamā segmenta vaicājuma kārtulā.
    > - **Plānotie atribūti** tiek faktorizēti, izmantojot kopas operatorus.
 
 1. Atlasiet **Palaist**, lai izveidotu segmentu. Atlasiet **Saglabāt**, ja vēlaties saglabāt pašreizējo konfigurāciju un palaist segmentu vēlāk. Tiek **parādīta lapa Segmenti**.

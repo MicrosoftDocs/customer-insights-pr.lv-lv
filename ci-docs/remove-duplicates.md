@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213636"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304482"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Dublikātu noņemšana pirms datu apvienošanas
 
@@ -47,7 +47,7 @@ Ja esat bagātinājis entītijas datu avots līmenī, lai palīdzētu uzlabot ap
 
 1. **Lapā Ierakstu** dublēšana atlasiet entītiju un atlasiet **Pievienot kārtulu**, lai definētu deduplikācijas kārtulas.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Ekrānuzņēmums, kurā redzamas ierakstu dublēšanas lapas ar iezīmētu opciju Rādīt vairāk":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Dublēt ierakstus ar iezīmētu entītiju un parādītu kārtulu pievienošana"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. **Rūtī Kārtulu** pievienošana ievadiet šādu informāciju:
       - **Atlasīt lauku**: izvēlieties no pieejamo lauku saraksta entītiju, kurai vēlaties pārbaudīt dublikātus. Izvēlieties laukus, kas, visticamāk, ir unikāli katram atsevišķam klientam. Piemēram, e-pasta adrese vai vārda, pilsētas un tālruņa numura kombinācija.
@@ -80,9 +80,9 @@ Ja esat bagātinājis entītijas datu avots līmenī, lai palīdzētu uzlabot ap
       - **Lielākā daļa** : tiek identificēts ieraksts, kuram ir visvairāk aizpildīto atribūtu lauku kā uzvarētāju ieraksts. Tā ir noklusējuma sapludināšanas opcija.
       - **Visjaunākais** : Nosaka uzvarētāju, balstoties uz augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
       - **Visvecākais** : Nosaka uzvarētāju, balstoties uz visvecāko augšupielādes datumu. Ir nepieciešams datums vai skaitlisks lauks, lai definētu augšupielādes datumu.
-      
+
       Neizšķirta gadījumā uzvarētāja ieraksts ir tas, kuram ir MAX(PK) vai lielāka primārās atslēgas vērtība.
-      
+
    1. Ja vēlaties, lai definētu sapludināšanas preferences atsevišķiem entītijas atribūtiem, rūts apakšdaļā atlasiet **Papildu**. Piemēram, varat izvēlēties saglabāt jaunāko e-pasta ziņojumu UN vispilnīgāko adresi no dažādiem ierakstiem. Izvērsiet entītiju, lai skatītu visus tās atribūtus un definētu, kuru opciju izmantot atsevišķiem atribūtiem. Ja izvēlaties opciju, kuras pamatā ir rekurence, ir jānorāda arī datuma/laika lauks, kas definē atkārtojamību.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Papildu sapludināšanas preferenču rūts, kurā redzama pēdējā e-pasta adrese un pilna adrese":::
@@ -96,18 +96,5 @@ Ja esat bagātinājis entītijas datu avots līmenī, lai palīdzētu uzlabot ap
 
 > [!div class="nextstepaction"]
 > [Nākamais solis vairākām entītijām: atbilstoši nosacījumi](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Dedublikācijas izvade kā entītija
-
-Deduplikācijas process izveido jaunu decentralizētu entītiju katrai avota entītijai. Šīs entītijas var atrast kopā ar **ConflationMatchPairs:CustomerInsights** sadaļā **Sistēma** lapā **Entītijas** ar nosaukumu **Deduplication_DataSource_Entity**.
-
-Dedublikācijas izvades entītija ietver šādu informāciju:
-
-- ID/ Atslēgas
-  - Primārās atslēgas un alternatīvā ID lauki. Alternatīvais ID lauks sastāv no visiem alternatīvajiem ID, kas identificēti ierakstam.
-  - Deduplication_GroupId lauks rāda grupu vai klasteru, kas identificēts entītijā, kas grupē visus līdzīgos ierakstus, pamatojoties uz norādītajiem dedublikācijas laukiem. To izmanto sistēmas apstrādes nolūkiem. Ja nav norādītas manuālas dedublikācijas kārtulas un tiek lietotas sistēmas definētās dedublikācijas kārtulas, varat neatrast šo lauku dedublikācijas izvades entītijā.
-  - Deduplication_WinnerId: šajā laukā ir norādīts identificēto grupu vai klasteru uzvarētāja ID. Ja Deduplication_WinnerId vērtība ir tāda pati kā ieraksta primārās atslēgas vērtība, tas nozīmē, ka ieraksts ir uzvarētāja ieraksts.
-- Lauki, ko lieto dedublikācijas kārtulu definēšanai.
-- Kārtulu un punktu skaita lauki, lai apzīmētu, kuras no dedublikācijas kārtulām tika lietotas, un punktu skaitu, kas tika atgriezts, veicot atbilstošu aizstāšanu.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

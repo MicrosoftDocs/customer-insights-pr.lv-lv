@@ -1,7 +1,7 @@
 ---
 title: Segmentu pārskats
 description: Segmentu pārskats un to izveide un pārvaldība.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246302"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304804"
 ---
 # <a name="segments-overview"></a>Segmentu pārskats
 
 Segmenti jums ļauj sagrupēt klientus, pamatojoties uz demogrāfiskajiem, transakciju vai uzvedības atribūtiem. Lai sasniegtu uzņēmuma mērķus, var izmantot segmentus, lai mērķētu reklāmas kampaņas, pārdošanas darbības un klientu atbalsta darbības.
 
-Klientu profili, kas atbilst segmenta definīcijas filtriem, *tiek saukti par segmenta dalībniekiem*. Ir [spēkā noteikti pakalpojuma ierobežojumi](/dynamics365/customer-insights/service-limits).
+Klientu vai kontaktpersonu profili, kas atbilst segmenta definīcijas filtriem, tiek saukti par *segmenta dalībniekiem*. Ir [spēkā noteikti pakalpojuma ierobežojumi](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Segmenta izveide
 
@@ -41,13 +41,19 @@ Izvēlieties, kā izveidot segmentu, pamatojoties uz savu mērķauditoriju.
 
 # <a name="business-accounts-b-to-b"></a>[Uzņēmumu konti (B2B)](#tab/b2b)
 
-- Vienkārši vai sarežģīti segmenti ar segmentu veidotāju: [izveidojiet savu](segment-builder.md)
+Kontu vai kontaktpersonu segmenta segments (priekšskatījums), izmantojot segmentu veidotāju: [izveidojiet savu](segment-builder.md)
+
+> [!NOTE]
+> Lielākajai daļai eksporta galamērķu ir nepieciešama kontaktinformācija mārketinga nolūkos. Tāpēc izveidojiet kontaktpersonu segmentus, ko izmantot šai eksportēšanai.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Esošo segmentu pārvaldība
 
-Dodieties uz **lapu Segmenti**, lai skatītu izveidotos segmentus, to statusu un stāvokli, dalībnieku skaitu un pēdējo reizi, kad dati tika atsvaidzināti. Segmentu sarakstu var kārtot pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu segmentu, kuru vēlaties pārvaldīt.
+Dodieties uz **lapu Segmenti**, lai skatītu izveidotos segmentus, to statusu un stāvokli, kā arī pēdējo reizi, kad dati tika atsvaidzināti. Segmentu sarakstu var kārtot pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu segmentu, kuru vēlaties pārvaldīt.
+
+> [!TIP]
+> B-to-B vidē kolonnā Auditorijas tips **ir norādīts,** vai segmenta pamatā ir konti vai kontaktpersonas.
 
 Atlasiet segmentu, lai skatītu pieejamās darbības.
 
@@ -82,7 +88,7 @@ Apakšējā daļa ietver segmenta elementu sarakstu.
 > [!NOTE]
 > Šajā sarakstā parādītie lauki tiek balstīti uz segmenta entītiju atribūtiem.
 >
->Saraksts ir atbilstošo segmenta dalībnieku priekšskatījums un parāda jūsu segmenta pirmos 100 ierakstus, lai to varētu ātri novērtēt un vajadzības gadījumā pārskatīt tā definīcijas. Lai skatītu visus atbilstošos ierakstus, [eksportējiet segmentu](export-destinations.md).
+> Saraksts ir atbilstošo segmenta dalībnieku priekšskatījums un parāda jūsu segmenta pirmos 100 ierakstus, lai to varētu ātri novērtēt un vajadzības gadījumā pārskatīt tā definīcijas. Lai skatītu visus atbilstošos ierakstus, atlasiet **Skatīt vairāk**, kas atver [**lapu Entītijas**](entities.md), vai [eksportējiet segmentu](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Atsvaidzināt segmentus
 

@@ -4,21 +4,21 @@ description: Uzziniet par biznesa kontiem kā galveno mērķauditoriju sadaļā 
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053122"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303925"
 ---
 # <a name="work-with-business-accounts"></a>Darbs ar uzņēmuma kontiem
 
@@ -30,7 +30,7 @@ Administratori var [izveidot vidi esošā organizācijā](create-environment.md)
 
 Pēc tam varat [izgūt datus](data-sources.md) uzņēmumu kontiem un saistītajām kontaktpersonām kā datu avotus no visiem atbalstītajiem avotiem.
 
-Pēc datu vienošanas [norādiet uzņēmumu hierarhijas](relationships.md#set-up-account-hierarchies) kā daļu no attiecību konfigurācijas. Varat arī [konfigurēt semantiskos kartējumus](semantic-mappings.md), lai izveidotu kontaktpersonu un uzņēmumu entītiju savienojumu. 
+ [Apvienojiet](data-unification.md) sava konta datus, kam seko jūsu kontaktinformācija, lai savienotu kontaktpersonu un konta entītijas.
 
 ## <a name="switch-between-primary-target-audience"></a>Pārslēgties starp primāro mērķa auditoriju
 
@@ -43,11 +43,12 @@ Ja jūsu organizācija uztur vidi atsevišķiem klientiem un biznesa uzņēmumie
 - [Darbības](activities.md): atbalsts uzņēmumiem un saistītām kontaktpersonām, lai izveidotu darbības un rādītu tās laika skalā.
 - [Attiecības](relationships.md): darbību vednis palīdz izveidot attiecības starp entītijām, lai uzņēmuma skatā varētu tikt parādītas visas kontaktpersonu darbības. Kontaktpersonas var rakties kontakta skatā, un hierarhijas var tikt izmantotas uzņēmuma darbību apkopošanai.
 - [Pasākumi](measures.md): atbalsta pasākumus, kas izveidoti no pasākumu veidotāja ar vienu aprēķinu. Ja iestatījums nav obligāts, veicot pasākumu izveidi, tiek atļauts apkopot pakārtotos uzņēmumus.
-- [Segmenti](segments.md): atbalsta segmentus, kas izveidoti no tukšas veidlapas ar segmentu veidotāju. Veidojot segmentus, jauni operatori atļauj kontu hierarhiju.
+- [Segmenti](segments.md): atbalsta segmentus, kas izveidoti no tukšas veidlapas ar segmentu veidotāju. Segmentu pamatā var būt konti vai kontaktpersonas.
 - [Datu izgūšana](data-sources.md): visi līdzekļi šajā apgabalā uzņēmumu kontiem un atsevišķiem klientiem ir vienādi.
-- [Datu apvienošana](data-unification.md): visi līdzekļi šajā apgabalā uzņēmumu kontiem un atsevišķiem klientiem ir vienādi.
+- B-to-B datu apvienošana ir ļoti līdzīga B-to-C datu apvienošanai, taču tai ir papildu darbība, lai apvienotu kontaktus pēc konta apvienošanas. Skatiet sadaļu [Uzņēmumu konti (no B līdz B)](data-unification.md).
 - [Bagātināšana](enrichment-hub.md): daži bagātināšanas tipi ir pieejami tikai atsevišķiem klientu scenārijiem, bet pārējie ir pieejami tikai biznesa uzņēmumiem.
 - [Atbalsta meklētājs un iepriekš pieejami modeļi](predictions-overview.md): transakciju prognoze ietver papildu darbības uzņēmuma kontiem. Citas prognozes iespējas ir pieejamas tikai atsevišķiem klientiem.
 - [Aktivizēšana un eksports](export-destinations.md): eksports ir pieejams uzņēmumu kontiem un atsevišķiem klientiem. Dažiem eksportiem ir nepieciešama papildu konfigurācija un kontaktinformācija, kas ir derīga uzņēmuma kontiem.
 - [Sistēmas iestatījumi](system.md) un [lietotāju pārvaldība](permissions.md): visi līdzekļi šajā apgabalā uzņēmumu kontiem un atsevišķiem klientiem ir vienādi.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

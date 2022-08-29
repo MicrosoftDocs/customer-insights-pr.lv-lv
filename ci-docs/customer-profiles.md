@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188102"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303792"
 ---
 # <a name="view-customer-profiles"></a>Klientu profilu skatīšana
 
@@ -78,7 +78,7 @@ Detalizēta informācija par klientu:
 **Klienta profila elementā** tiek rādītas no vienotās *klienta* entītijas atšķirīgas vērtības. Ja laukam nav atlasītā klienta profila vērtības, tas netiks rādīts, izņemot adreses lauku. Elements ir strukturēts sadaļās:
 
 - Pirmajā sadaļā ir redzama iepriekš definēta lauku kopa, kam seko visi lauki, kas veido daļu no meklēšanas un filtra indeksa. Visi ar adresēm saistītie lauki tiek apvienoti vienā rindā, kas tiek rādīta pat tad, ja profilā nav adreses informācijas.
-- **Kontaktpersonas šim klientam** tiek rādītas vidēs biznesa kontiem. Katra kontaktpersona tiek parādīta ar to laukiem. Tukši lauki ir paslēpti.
+- **Kontaktpersonas šim klientam** tiek rādītas biznesa kontu vidēs (no B līdz B). Katra kontaktpersona tiek parādīta ar to laukiem. Tukši lauki ir paslēpti.
 - **Papildu laukos** tiek rādīti atlasītā klienta atlikušie lauki, izņemot ID.
 - **ID ir** uzskaitīti visi ID ar atbilstošo entītijas nosaukumu. Lauki tiek identificēti kā ID pēc to semantikas.
 

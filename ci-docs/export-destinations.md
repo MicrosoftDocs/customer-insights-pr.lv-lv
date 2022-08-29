@@ -1,7 +1,7 @@
 ---
 title: Eksportēšanas (priekšskatījuma) pārskats
 description: Pārvaldiet eksportēšanu, lai kopīgotu datus.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245336"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304068"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245336"
 
 Ir divi galvenie eksporta veidi:  
 
-- **Datu izņemšanas eksports**: eksportējiet jebkura veida entītiju, kas pieejama programmā Customer Insights. Eksportēšanai atlasītās entītijas tiek eksportētas, izmantojot visus datu laukus, metadatus, shēmas un detalizētu kartēšanas informāciju.
-- **Segmenta eksportēšana**: eksportējiet segmenta entītijas no Customer Insights. Segmenti apzīmē klientu profilu sarakstu. Konfigurējot eksportēšanu, jūs atlasāt iekļautos datu laukus atkarībā no mērķa sistēmas, uz kuru eksportējat datus.
+- **Eksportējot datus**, varat eksportēt jebkura veida entītijas, kas pieejamas programmā Customer Insights. Eksportēšanai atlasītās entītijas tiek eksportētas, izmantojot visus datu laukus, metadatus, shēmas un detalizētu kartēšanas informāciju.
+- **Segmentu eksportēšana** ļauj eksportēt segmenta entītijas no Customer Insights. Individuāliem patērētājiem (no B-līdz C) segmenti ir klientu profilu saraksts. Uzņēmumiem (no B līdz B [) segmenti var būt kontu vai kontaktpersonu saraksts](segment-builder.md#create-a-new-segment-with-segment-builder). Konfigurējot eksportēšanu, jūs atlasāt iekļautos datu laukus atkarībā no mērķa sistēmas, uz kuru eksportējat datus.
 
 ### <a name="export-segments"></a>Segmentu eksportēšana
 
@@ -38,14 +38,15 @@ Lielākā daļa eksportēšanas opciju atbalsta abu veidu vides. Segmentu ekspor
 **Segmenta eksportēšana vidē atsevišķiem klientiem (B2C)**  
 - Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *vienotā klientu profila* entītijas. Katrs segments, kas atbilst mērķa sistēmu prasībām (piemēram, e-pasta adrese), var tikt eksportēts.
 
-**Segments eksportē vidi uzņēmuma uzņēmumiem (B2B)**  
-- Segmenti biznesa uzņēmumu vides kontekstā ir veidoti uz *uzņēmuma* entītijas. Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties **uzņēmuma** opciju.
-- Visām pārējām mērķa sistēmām nepieciešami kontaktpersonas entītijas lauki. Lai nodrošinātu, ka uzņēmuma segmenti var izgūt datus no saistītajām kontaktpersonām, segmenta definīcijai ir jāmācās ar kontaktpersonas entītijas atribūtiem. Papildinformācija par [segmentu un projekta atribūtu konfigurēšanu](segment-builder.md).
+**Segmenta eksports vidēs uzņēmumu kontiem (no B līdz B)**  
+- Segmenti biznesa kontu vides kontekstā tiek veidoti uz konta entītijas *vai kontaktpersonas* entītijas *.* Lai eksportētu arī uzņēmumu segmentus, mērķa sistēmai ir nepieciešams atbalstīt tikai uzņēmumu segmentus. Tas attiecas uz [LinkedIn](export-linkedin-ads.md), kad, definējot eksportēšanu, izvēlaties **uzņēmuma** opciju.
+- Visām pārējām mērķa sistēmām nepieciešami kontaktpersonas entītijas lauki.
+- Izmantojot divus segmentu tipus (kontaktpersonas un kontus), Customer Insights automātiski identificē, kāda veida segmenti ir piemēroti eksportēšanai, pamatojoties uz mērķa sistēmu. Piemēram, uz kontaktpersonu orientētai mērķa sistēmai, piemēram, Mailchimp, Customer Insights ļauj tikai izvēlēties kontaktpersonu segmentus, ko eksportēt.
 
 **Segmenta eksportēšanas ierobežojumi**  
 - Trešo pušu mērķa sistēmas var ierobežot eksportējamā klientu profilu skaitu. 
-- Kad atlasāt eksportēšanai segmentu, atsevišķiem klientiem tiek parādīts faktiskais segmenta dalībnieku skaits. Ja segments ir pārāk liels, tiks parādīts brīdinājums. 
-- Attiecībā uz biznesa uzņēmumiem segmentā tiek parādīts uzņēmumu skaits; tomēr netiek rādīts, cik kontaktpersonas, iespējams, tiks prognozētas. Dažos gadījumos tas var novest pie eksportētā segmenta, kurā faktiski ir vairāk klientu profilu, nekā to pieņem mērķa sistēma. Ja mērķa sistēmas robežas ir pārsniegtas, eksports tiek izlaists.
+- Kad atlasāt eksportēšanai segmentu, atsevišķiem klientiem tiek parādīts faktiskais segmenta dalībnieku skaits. Jūs saņemsiet brīdinājumu, ja segments ir pārāk liels. 
+- Uzņēmumu kontos redzēsit kontu vai kontaktpersonu skaitu atkarībā no segmenta. Jūs saņemsiet brīdinājumu, ja segments ir pārāk liels. Pārsniedzot mērķa sistēmu ierobežojumus, eksportēšana tiks izlaista.
 
 ## <a name="set-up-a-new-export"></a>Jauna eksporta iestatīšana
 
@@ -110,6 +111,20 @@ Lai datus eksportētu, negaidot uz plānoto atsvaidzināšanu, dodieties uz **Da
 
 - Lai palaistu visus eksportus, komandjoslā atlasiet **Palaist visus**. Tiek veikta tikai eksportēšana, kurai ir aktīvs grafiks. Lai palaistu eksportēšanu, kas nav aktīva, palaidiet vienu eksportēšanu.
 - Lai izpildītu vienu eksportēšanas darbību, atlasiet to sarakstā un komandjoslā atlasiet **Izpildīt**.
+
+## <a name="troubleshooting"></a>Problēmu novēršana
+
+### <a name="segment-not-eligible-for-export"></a>Segments, kas nav piemērots eksportam
+
+**Problēma** Uzņēmējdarbības kontu vidē jūsu eksports neizdodas ar kļūdas ziņojumu: "Šim eksportēšanas galamērķim nav piemērots šāds segments: "{segmenta} nosaukums". Lūdzu, izvēlieties tikai segmentus, kuru tips ir ContactProfile, un mēģiniet vēlreiz.
+
+**Resolution** Customer Insights vides biznesa kontiem tika atjauninātas, lai atbalstītu kontaktpersonu segmentus papildus kontu segmentiem. Šo izmaiņu dēļ eksportēšana, kurai nepieciešama kontaktinformācija, darbojas tikai ar segmentiem, kuru pamatā ir kontaktpersonas.
+
+1. [Izveidojiet segmentu, pamatojoties uz kontaktpersonām](segment-builder.md), kas atbilst jūsu iepriekš izmantotajam segmentam.
+
+1. Kad šis kontaktpersonu segments ir palaists, rediģējiet attiecīgo eksportu un atlasiet jauno segmentu.
+
+1. Atlasiet **Saglabāt**, lai saglabātu konfigurāciju, vai **Saglabāt un palaist**, lai uzreiz pārbaudītu šo eksportēšanu.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

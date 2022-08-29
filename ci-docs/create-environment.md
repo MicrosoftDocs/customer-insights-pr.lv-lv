@@ -1,7 +1,7 @@
 ---
-title: 'Kā: izveidot jaunu vidi'
+title: Jaunas vides izveide
 description: Soļi, lai radītu vidi Dynamics 365 Customer Insights.
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,25 +12,25 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: 0a45e2fd2bdb7b85883a536f8b42ee650e54db7e
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245566"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304253"
 ---
-# <a name="how-to-create-a-new-environment"></a>Kā: izveidot jaunu vidi
+# <a name="create-a-new-environment"></a>Jaunas vides izveide
 
-Pēc [abonēšanas licences iegādes Dynamics 365 Customer Insights](paid-license.md) nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā viņi tiek aicināti izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). Šādā gadījumā varat pāriet tieši uz [1. darbību: Sniedziet pamatinformāciju](#step-1-provide-basic-information).
+Pēc [abonēšanas licences iegādes Dynamics 365 Customer Insights](paid-license.md) nomnieka globālais administrators Microsoft 365 saņem e-pasta ziņojumu, kurā viņi tiek aicināti izveidot vidi. Lai sāktu, dodieties uz [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). Šādā gadījumā sāciet ar [1. darbību: Sniedziet pamatinformāciju](#step-1-provide-basic-information).
 
-Kad ir izveidota pirmā vide, nomnieka globālais administrators Microsoft 365 var [pievienot lietotājus no savas organizācijas kā administratorus](permissions.md). Virzoties uz priekšu, šie administratori var pārvaldīt lietotājus un vides. Ja jūsu organizācija iegādājas vairāk nekā vienu Customer Insights licenci, [sazinieties ar mūsu atbalsta komandu](https://go.microsoft.com/fwlink/?linkid=2079641), lai palielinātu pieejamo vides skaitu. Lai iegūtu papildinformāciju par noslodzi un pievienojumprogrammu noslodzi, pārskatiet [Dynamics 365 licencēšanas rokasgrāmatu](https://go.microsoft.com/fwlink/?LinkId=866544).
+Kad ir izveidota pirmā vide, nomnieka globālais administrators Microsoft 365 var [pievienot lietotājus no savas organizācijas kā administratorus](permissions.md). Pēc tam šie administratori var pārvaldīt lietotājus un vides. Ja jūsu organizācija iegādājas vairāk nekā vienu Customer Insights licenci, [sazinieties ar mūsu atbalsta komandu](https://go.microsoft.com/fwlink/?linkid=2079641), lai palielinātu pieejamo vides skaitu. Lai iegūtu papildinformāciju par noslodzi un pievienojumprogrammu noslodzi, pārskatiet [Dynamics 365 licencēšanas rokasgrāmatu](https://go.microsoft.com/fwlink/?LinkId=866544). Kad esat ieguvis iespēju izveidot papildu vides, dodieties uz [Sadaļu Sākt vides izveides procesu](#start-the-environment-creation-process).
 
 > [!TIP]
 > Ja vēlaties izmēģināt pakalpojumu, skatiet sadaļu [Izmēģinājumversijas iestatīšana](trial-signup.md).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-Lai izveidotu vai pārvaldītu vides, programmā Customer Insights ir nepieciešamas [administratora atļaujas](permissions.md).
+[Administratora atļaujas](permissions.md) programmā Customer Insights
 
 ## <a name="start-the-environment-creation-process"></a>Sāciet vides veidošanas procesu
 
@@ -38,47 +38,49 @@ Lai izveidotu vai pārvaldītu vides, programmā Customer Insights ir nepiecieš
   
    :::image type="content" source="media/environment-picker.png" alt-text="Vides atlasītāja atlase.":::
 
-1. Izpildiet turpmākajās sadaļās aprakstītos norādījumus, lai sniegtu visu nepieciešamo informāciju jaunai videi. Ja iepriekš konfigurējāt vidi, varat arī [kopēt konfigurāciju](#copy-the-environment-configuration).
+1. Izpildiet turpmākajās sadaļās aprakstītos norādījumus, lai sniegtu visu nepieciešamo informāciju jaunai videi.
 
 ## <a name="step-1-provide-basic-information"></a>1. darbība: sniedziet pamatinformāciju
 
-**Pamatinformācijas** solī izvēlieties, vai vēlaties veidot vidi, izmantojot slāpējumu, vai [kopēt datus no citas vides](#copy-the-environment-configuration).
+1. Izvēlieties, vai vēlaties izveidot vidi no nulles vai kopēt datus no citas vides. [Lai kopētu datus no citas vides,](#copy-the-environment-configuration) ir jāveic papildu darbības.
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dialoglodziņš jauna savienojuma izveidei ar Customer Insights.":::
 
-Sniedziet šādu informāciju:
+1. Sniedziet šādu informāciju:
 
-- **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt. Ja jums ir vairāk nekā viena darba vide, piešķiriet katram viegli identificējamu vārdu.
-- **Izvēlieties savu biznesu**: izvēlieties jaunās vides primāro auditoriju. Jūs varat strādāt ar individuāliem klientiem (B2C) vai [biznesa uzņēmumiem](work-with-business-accounts.md) (B2B). Ja jūsu organizācija galvenokārt veic darījumus ar privātpersonām, piemēram, mazumtirgotāju vai kafejnīcu, izvēlieties individuālus patērētājus. Ja jūsu galvenā auditorija ir citi uzņēmumi, piemēram, automašīnu ražotājs vai papīra uzņēmums, izvēlieties uzņēmuma kontus.
-- **Veids**: Atlasiet, vai vēlaties veidot ražošanas vai smilškastes vidi. Smilškastes vidēs nevar veikt plānotu datu atsvaidzināšanu, un tās ir paredzētas iepriekšējai ieviešanai un testēšanai. Smilškastes vides izmanto to pašu primāro mērķauditoriju, kas ir pašlaik atlasītā ražošanas vide.
-- **Reģions**: Reģions, kurā tiek izvietots un viesots pakalpojums. Lai [izmantotu savu Azure Data Lake Storage kontu](own-data-lake-storage.md) vai [izveidotu savienojumu ar esošu Microsoft Dataverse organizāciju](customer-insights-dataverse.md), Customer Insights videi ir jāatrodas tajā pašā reģionā.
+   - **Nosaukums**: Šīs vides nosaukums. Šis lauks jau ir aizpildīts, ja esat kopējis no esošas vides, bet varat to mainīt.
+   - **Izvēlieties savu uzņēmumu**: galvenā jaunā vides mērķauditorija: individuālie patērētāji (no B-līdz C) vai [uzņēmuma konti](work-with-business-accounts.md) (no B līdz B). Ja jūsu organizācija galvenokārt veic darījumus ar privātpersonām, piemēram, mazumtirgotāju vai kafejnīcu, izvēlieties individuālus patērētājus. Ja jūsu galvenā mērķauditorija ir citi uzņēmumi, piemēram, automašīnu ražotājs vai papīra ražošanas uzņēmums, izvēlieties uzņēmuma kontus.
+   - **Veids**: Vides veids: ražošana vai smilšu kaste. Smilškastes vidēs nevar veikt plānotu datu atsvaidzināšanu, un tās ir paredzētas iepriekšējai ieviešanai un testēšanai. Smilškastes vides izmanto to pašu primāro mērķauditoriju, kas ir pašlaik atlasītā ražošanas vide.
+   - **Reģions**: reģions, kurā pakalpojums tiek izvietots un mitināts. Lai [izmantotu savu Azure Data Lake Storage kontu](own-data-lake-storage.md) vai [izveidotu savienojumu ar esošu Microsoft Dataverse organizāciju](customer-insights-dataverse.md), Customer Insights videi ir jāatrodas tajā pašā reģionā.
+
+1. Atlasiet **Tālāk**.
 
 ## <a name="step-2-configure-data-storage"></a>2. darbība. Datu krātuves konfigurēšana
 
-**Darbībā Datu glabāšana** izvēlieties, kur saglabāt Customer Insights datus.
+1. Izvēlieties, kur saglabāt Customer Insights datus:
 
-Ir divas iespējas, no kurām varat izvēlēties:
+   - **Customer Insights krātuve**: datu krātuve tiek pārvaldīta automātiski. Tā ir noklusējuma opcija, un, ja vien nav īpašu prasību par datu glabāšanu savā krātuves kontā, ieteicams izmantot šo opciju.
+   - **Azure Data Lake Storage**: Jūsu konts Azure Data Lake Storage datu glabāšanai, lai jūs varētu pilnībā kontrolēt, kur dati tiek glabāti. Izpildiet sadaļā [Sava konta Azure Data Lake Storage izmantošana](own-data-lake-storage.md) norādītās darbības.
 
-- **Customer Insights krātuve**: datu krātuvi pārvalda Customer Insights darba grupa. Tā ir noklusējuma opcija, un, ja vien nav īpašu prasību par datu glabāšanu savā krātuves kontā, ieteicams izmantot šo opciju.
-- **Azure Data Lake Storage**: Norādiet savu Azure Data Lake Storage kontu datu glabāšanai, lai jums būtu pilnīga kontrole pār to, kur dati tiek glabāti. Papildinformāciju skatiet rakstā [Sava Azure Data Lake Storage konta izmantošana](own-data-lake-storage.md).
+   :::image type="content" source="media/data-storage-environment.png" alt-text="Izvēlieties vēlamo opciju datu glabāšanai.":::
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Izvēlieties vēlamo opciju datu glabāšanai.":::
+1. Atlasiet **Tālāk**.
 
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>3. darbība. Izveidojiet savienojumu ar Microsoft Dataverse
 
-Šī **Microsoft Dataverse** darbība ļauj izveidot Customer Insights savienojumu ar savu Dataverse vidi. Kopīgojiet datus, lai Dataverse tos izmantotu ar biznesa lietojumprogrammām, kuru pamatā Dataverse ir, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas .Power Apps
+Ja jums ir Dataverse vide, savienojiet programmu Customer Insights. Kopīgojiet datus, lai Dataverse tos izmantotu ar biznesa lietojumprogrammām, kuru pamatā Dataverse ir, piemēram, Dynamics 365 Marketing vai modeļa vadītas lietojumprogrammas .Power Apps
 
-Atstājiet šo lauku tukšu, ja jums nav savas Dataverse vides, un mēs to izveidosim jums.
+1. Izpildiet darbības, kas norādītas rakstā [Darbs ar Customer Insights datiem sadaļā Microsoft Dataverse](customer-insights-dataverse.md).
 
-Papildinformāciju skatiet rakstā [Darbs ar Customer Insights datiem sadaļā Microsoft Dataverse](customer-insights-dataverse.md).
+   :::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātiski iespējotu neto jaunām vidēm.":::
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="datu koplietošana ar Microsoft Dataverse automātiski iespējotu neto jaunām vidēm.":::
+1. Atlasiet **Tālāk**.
 
-### <a name="step-4-finalize-the-settings"></a>4. darbība. Iestatījumu pabeigšana
+## <a name="step-4-finalize-the-settings"></a>4. darbība. Iestatījumu pabeigšana
 
-Pārskatīšanas **solī** veiciet visus norādītos iestatījumus. Kad viss izskatās pabeigts, atlasiet opciju **Izveidot**, lai iestatītu vidi.
+Pārskatiet norādītos iestatījumus. Kad viss izskatās pabeigts, atlasiet opciju **Izveidot**, lai iestatītu vidi.
 
-Vēlāk varat mainīt dažus iestatījumus. Papildinformācijai skatiet [Vižu pārvaldība](manage-environments.md).
+Lai vēlāk mainītu dažus iestatījumus, skatiet sadaļu [Vides](manage-environments.md) pārvaldība.
 
 ## <a name="work-with-your-new-environment"></a>Darbs ar jauno vidi
 
@@ -92,11 +94,9 @@ Lai palīdzētu sākt Customer Insights konfigurēšanu, pārskatiet šos rakstu
 
 ## <a name="copy-the-environment-configuration"></a>Izveidojiet vides konfigurācijas kopiju
 
-Kā administrators varat izvēlēties kopēt konfigurāciju no esošas vides, kad izveidojat jaunu vidi.
+Ja kā administrators izvēlējāties kopēt konfigurāciju no esošas vides, atlasiet no visu organizācijā pieejamo vides saraksta.
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Vides iestatījumos redzamo iestatījumu opciju ekrānuzņēmums.":::
-
-Jūs redzēsiet sarakstu, kurā ir visas jūsu organizācijā pieejamās vides, no kurām varat kopēt datus.
 
 Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 
@@ -113,25 +113,25 @@ Tiek kopēti tālāk norādītie konfigurācijas iestatījumi.
 - Prognoze modeļi
 - Lomu piešķiršana
 
-## <a name="set-up-a-copied-environment"></a>Kopētas vides iestatīšana
+### <a name="set-up-a-copied-environment"></a>Kopētas vides iestatīšana
 
-Kopējot vides konfigurāciju, jums jāveic dažas papildu darbības, lai apstiprinātu akreditācijas datus:
+Kopējot vides konfigurāciju, tiek parādīts apstiprinājuma ziņojums, kad ir izveidota kopētā vide. Veiciet tālāk norādītās darbības, lai apstiprinātu akreditācijas datus.
 
-- Klientu profili. Vispirms autentificējiet un norijiet savus datu avotus un palaidiet datu apvienošanu, lai atkārtoti izveidotu klientu profilus.
-- Datu avota akreditācijas dati. Jums ir jāsniedz akreditācijas dati katrai datu avots, lai autentificētu un atsvaidzinātu datu avotus manuāli.
-- Datu avoti no mapes Common Data Model un Dataverse. Šie datu avoti ir jāizveido manuāli ar tādu pašu nosaukumu kā avota vidē.
-- Savienojuma noslēpumi, kas tiek izmantoti eksportam un bagātināšanai. Jums ir atkārtoti jāapstiprina savienojumi un pēc tam no jauna jāaktivizē bagātināšana un eksports.
+1. Atlasiet **Doties uz datu avotiem**, lai skatītu datu avotu sarakstu. Visos datu avotos tiek rādīts **statuss Obligāts** akreditācijas dati.
 
-Kad būs izveidota kopētā vide, tiks parādīts apstiprinājuma ziņojums. Atlasiet **Doties uz datu avotiem**, lai skatītu datu avotu sarakstu.
+   :::image type="content" source="media/data-sources-copied.png" alt-text="Kopēto un autentifikācijai nepieciešamo datu avotu saraksts.":::
 
-Visiem datu avotiem būs redzams statuss **Nepieciešami akreditācijas dati**. Rediģējiet datu avotus un ievadiet akreditācijas datus, lai tos atsvaidzinātu.
+1. Rediģējiet datu avotus un ievadiet akreditācijas datus, lai tos atsvaidzinātu. Datu avoti no mapes Common Data Model, un Dataverse tie ir jāizveido manuāli ar tādu pašu nosaukumu kā avota vidē.
 
-:::image type="content" source="media/data-sources-copied.png" alt-text="Kopēto un autentifikācijai nepieciešamo datu avotu saraksts.":::
+1. Pēc datu avotu atsvaidzināšanas dodieties uz **Dati** > **Apvienot**. Šeit atradīsit avota vides iestatījumus. Rediģējiet tos pēc vajadzības vai atlasiet **Unify** > **Unify Unify klientu profilus un atkarības**, lai sāktu datu apvienošanas procesu un izveidotu vienotu klienta entītiju.
 
-Pēc datu avotu atsvaidzināšanas dodieties uz **Dati** > **Apvienot**. Šeit atradīsit avota vides iestatījumus. Rediģējiet tos pēc nepieciešamības vai atlasiet **Izpildīt**, lai sāktu datu unificēšanas procesu un izveidotu unificētu klienta entītiju.
+   > [!TIP]
+   > Kontiem un kontaktpersonām atlasiet **Unify kontu** > **unificēt profilus un atkarības**.
 
-Kad datu unificēšana ir pabeigta, dodieties uz **Pasākumi** un **Segmenti**, lai atsvaidzinātu arī tos.
+1. Kad datu apvienošana ir pabeigta, dodieties uz **Mēri** un **segmenti, lai tos** atsvaidzinātu.
 
-Pirms eksportēšanas un bagātināšanas atkārtotas aktivizēšanas dodieties uz **Administratoru** > **savienojumi**, lai atkārtoti autentificētu savienojumus jaunajā vidē.
+1. Dodieties uz **Administratoru** > **savienojumi**, lai atkārtoti autentificētu savienojumus jaunajā vidē.
+
+1. Dodieties uz **sadaļu Datu** > **bagātināšana** un **datu** > **eksportēšana**, lai tos atkārtoti aktivizētu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

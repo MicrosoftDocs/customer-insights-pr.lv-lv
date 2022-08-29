@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245888"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304528"
 ---
 # <a name="data-enrichment-preview-overview"></a>Datu bagātināšanas (priekšskatījuma) pārskats
 
@@ -95,7 +95,7 @@ Pēc palaišanas bagātināšanu var atsvaidzināt pēc automātiska grafika vai
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Bagātinātā procesa norises gaita
 
-Atsvaidzinot vai pēc atsvaidzināšanas pabeigšanas, varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tā statusu un iespējamām problēmām. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
+Varat atrast detalizētu informāciju par bagātināšanas apstrādi, tostarp tās statusu un iespējamām problēmām, kamēr tā ir atsvaidzināta vai pēc atsvaidzināšanas pabeigšanas. Izpratne par to, kuri procesi ir saistīti ar bagātinātā procesa atsvaidzināšanu un to, cik ilgs laiks bija nepieciešams šo procesu palaišanai. Bagātināšanas statuss tiek atbalstīts līdz ar Experian, Leadspace, HERE Technologies, SFTP importēšanu un Azure Maps.
 
 1. Dodieties uz **Dati** > **Bagātināšana**.
 1. **Cilnē Mani bagātinātāji** atlasiet bagātināšanas statusu, lai atvērtu sānu rūti.

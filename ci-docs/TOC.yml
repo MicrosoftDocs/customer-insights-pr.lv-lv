@@ -76,7 +76,9 @@
       href: merge-entities.md
     - name: Datu apvienošanas pārskatīšana
       href: review-unification.md
-    - name: Apvienošanas iestatījumu atjaunināšana
+    - name: Vienota kontaktpersonas profila izveide
+      href: data-unification-contacts.md
+    - name: Unifikācijas iestatījumu atjaunināšana
       href: data-unification-update.md
 - name: Datu bagātināšana
   items:

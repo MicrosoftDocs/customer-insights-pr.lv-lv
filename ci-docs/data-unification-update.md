@@ -1,11 +1,11 @@
 ---
-title: Apvienošanas iestatījumu atjaunināšana
-description: Atjauniniet kārtulu dublikātus, atbilstības kārtulas vai vienotos laukus apvienošanas iestatījumos.
-ms.date: 06/01/2022
+title: Klientu, uzņēmumu vai kontaktpersonu apvienošanas iestatījumu atjaunināšana
+description: Atjauniniet kārtulu dublikātus, atbilstības kārtulas vai vienotos laukus klienta vai konta apvienošanas iestatījumos.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245603"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304344"
 ---
-# <a name="update-the-unification-settings"></a>Apvienošanas iestatījumu atjaunināšana
+# <a name="update-unification-settings"></a>Unifikācijas iestatījumu atjaunināšana
 
 Lai pārskatītu vai mainītu apvienošanas iestatījumus, kad ir izveidots vienots profils, veiciet tālāk norādītās darbības.
 
 1. Dodieties uz **Data** > **Unify**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Data Unify pēc datu apvienošanas.":::
+   Atsevišķiem klientiem (no B-līdz C) **lapā Unify** tiek parādīts vienoto klientu profilu un elementu skaits katrai apvienošanas darbībai.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Data Unify pēc datu apvienošanas." lightbox="media/m3_unified.png":::
+
+   Uzņēmumu kontiem (B-to-B) **lapā Unify** tiek parādīts vienoto kontu profilu un elementu skaits katrai konta apvienošanas darbībai. Ja kontaktpersonas bija vienotas, tiek parādīts vienoto kontaktpersonu profilu un elementu skaits katrai kontaktpersonu apvienošanas darbībai. Izvēlieties atbilstošo elementu sadaļā **Unify Konti** vai **Kontaktpersonu apvienošana (priekšskatījums)** atkarībā no tā, ko vēlaties atjaunināt.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Data Unify pēc tam, kad konta un kontaktpersonu dati ir vienoti." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > Elements **Atbilstības nosacījumi** tiek rādīts tikai tad, ja ir atlasītas vairākas entītijas.
@@ -36,14 +42,14 @@ Lai pārskatītu vai mainītu apvienošanas iestatījumus, kad ir izveidots vien
    - [Dublēt ierakstus](#manage-deduplication-rules), lai pārvaldītu decentralizācijas kārtulas vai sapludināšanas preferences.
    - [Atbilstoši nosacījumi](#manage-match-rules), lai atjauninātu atbilstības kārtulas divām vai vairākām entītijām.
    - [Vienoti klientu lauki](#manage-unified-fields) lauku apvienošanai vai izslēgšanai. Varat arī grupēt saistītos profilus klasteros.
+   - [Semantiskie lauki](#manage-semantic-fields-for-unified-contacts), lai pārvaldītu semantiskos tipus vienotiem kontaktu laukiem.
+   - [Relācijas](#manage-contact-and-account-relationships), lai pārvaldītu relāciju starp kontaktpersonu un kontu.
 
 1. Pēc izmaiņu veikšanas izvēlieties nākamo opciju:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Data Unify ar iezīmētām opcijām Unify.":::
-
    - [Palaidiet atbilstošus nosacījumus](#run-matching-conditions), lai ātri novērtētu atbilstošo nosacījumu kvalitāti (centības un atbilstības kārtulas), neatjauninot vienoto profilu. Opcija **Izpildīt tikai** atbilstošos nosacījumus netiek rādīta vienai entītijai.
-   - [Apvienojiet klientu profilus](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
-   - [Apvienojiet klientu profilus un atkarības](#run-updates-to-the-unified-customer-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienoto klienta profila entītiju un visas atkarības (piemēram, bagātinājumus, segmentus vai mērus). Visi procesi tiek atkārtoti palaisti automātiski.
+   - [Apvienojiet profilus](#run-updates-to-the-unified-profile), lai palaistu atbilstošus nosacījumus un atjauninātu vienotā profila entītiju, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
+   - [Apvienojiet profilus un atkarības](#run-updates-to-the-unified-profile), lai palaistu atbilstības nosacījumus, atjauninātu vienoto profila entītiju un atjauninātu visas atkarības (piemēram, bagātinājumus, segmentus vai mērus). Visi procesi tiek atkārtoti palaisti automātiski. B-to-B apvienošana tiek veikta gan konta, gan kontaktpersonu entītijām, kas atjaunina vienotos profilus.
 
 ## <a name="edit-source-fields"></a>Avota lauku rediģēšana
 
@@ -55,11 +61,11 @@ Atribūtu vai entītiju nevar noņemt, ja tās jau ir apvienotas.
 
    Tiek parādīts kartēto un atmaskoto lauku skaits.
 
-1. Atlasiet **Atlasīt entītijas un laukus**, lai pievienotu citus atribūtus vai entītijas. Izmantojiet meklēšanu vai ritiniet, lai atrastu un atlasītu interesējošos atribūtus un entītijas. Atlasiet vienumu **Piemērot**.
+1. Lai pievienotu citus atribūtus vai entītijas, atlasiet **Atlasīt entītijas un laukus**.
 
-1. Pēc izvēles varat mainīt entītijas primāro atslēgu, atribūtu tipus un ieslēgt **vai izslēgt viedo kartēšanu**. Papildinformāciju skatiet sadaļā [Primārās atslēgas un semantiskā tipa atlasīšana atribūtiem](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Pēc izvēles varat mainīt entītijas primāro atslēgu, atribūtu tipus un ieslēgt **vai izslēgt viedo kartēšanu**. Papildinformāciju skatiet sadaļā [Avota lauku](map-entities.md) atlasīšana.
 
-1. Atlasiet **Tālāk**, lai veiktu izmaiņas deduplikācijas kārtulās, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināt apvienošanas iestatījumus](#update-the-unification-settings).
+1. Atlasiet **Tālāk**, lai veiktu izmaiņas deduplikācijas kārtulās, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Decentralizācijas kārtulu pārvaldība
 
@@ -69,7 +75,7 @@ Atribūtu vai entītiju nevar noņemt, ja tās jau ir apvienotas.
 
    Atrasto ierakstu dublikātu skaits tiek parādīts sadaļā **Dublikāti**. Kolonnā **Ieraksti ir parādīts**, kurām entītijām ir dublēti ieraksti, un dublēto ierakstu procentuālā daļa.
 
-1. Ja pievienojāt bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet sadaļā [Bagātināšana datu avotiem](data-sources-enrichment.md).
+1. Lai izmantotu bagātinātu entītiju, atlasiet **Izmantot bagātinātas entītijas**. Papildinformāciju skatiet sadaļā [Bagātināšana datu avotiem](data-sources-enrichment.md).
 
 1. Lai pārvaldītu decentralizācijas kārtulas, izvēlieties kādu no šīm opcijām:
    - **Izveidojiet jaunu kārtulu**: atlasiet **Pievienot kārtulu** zem atbilstošās entītijas. Papildinformāciju skatiet sadaļā [Decentralizācijas kārtulu](remove-duplicates.md#define-deduplication-rules) definēšana.
@@ -83,11 +89,9 @@ Atribūtu vai entītiju nevar noņemt, ja tās jau ir apvienotas.
    1. Atlasiet **Rediģēt sapludināšanas preferences** un mainiet opciju **Ierakstīt paturēšanai**.
    1. Lai mainītu sapludināšanas preferences atsevišķiem entītijas atribūtiem, atlasiet **Papildu** un veiciet nepieciešamās izmaiņas.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Ekrānuzņēmums, kurā redzamas papildu sapludināšanas preferences, kurās redzams jaunākais e-pasts un vispilnīgākā adrese":::
-
    1. Atlasiet **Gatavs**.
 
-1. Atlasiet **Tālāk**, lai veiktu izmaiņas atbilstošos nosacījumos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināt apvienošanas iestatījumus](#update-the-unification-settings).
+1. Atlasiet **Tālāk**, lai veiktu izmaiņas atbilstošajos nosacījumos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings).
 
 ## <a name="manage-match-rules"></a>Atbilstības kārtulu pārvaldība
 
@@ -98,13 +102,13 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
    :::image type="content" source="media/m3_match_edit.png" alt-text="Ekrānuzņēmums, kurā redzama lapa Atbilstības noteikumi un nosacījumi ar statistiku." lightbox="media/m3_match_edit.png":::
 
    Lapā tiek parādīta atbilstības secība un definētie noteikumi, kā arī šāda statistika:
-   - **Unikālie avota ieraksti** norāda atsevišķu avota ierakstu skaitu, kas tika apstrādāti pēdējās saskaņošanas izpildes laikā.
-   - **Saskaņotie un nesaskaņotie ieraksti** uzsver, cik daudz unikālu ierakstu saglabājas pēc atbilstības kārtulu apstrādes.
-   - **Tikai saskaņotie ieraksti** parāda tikai atbilstību skaitu visos jūsu atbilstības pāros.
+   - **Unikālie avota ieraksti** parāda to atsevišķo avota ierakstu skaitu, kas tika apstrādāti pēdējās atbilstības sērijā.
+   - **Atbilstošie un neatbilstošie ieraksti** parāda, cik daudz unikālu ierakstu ir palicis pēc atbilstības kārtulu apstrādes.
+   - **Atbilstošie ieraksti parāda tikai** spēļu skaitu visos jūsu atbilstības pāros.
 
 1. Lai skatītu visu kārtulu rezultātus un to rezultātus, atlasiet **Skatīt pēdējo reizi**. Tiek parādīti rezultāti, tostarp alternatīvie kontaktpersonu ID. Jūs varat lejupielādēt rezultātus.
 
-1. Lai skatītu noteiktas kārtulas rezultātus un rezultātus, atlasiet kārtulu un pēc tam **priekšskatiet**. Tiek parādīti rezultāti. Jūs varat lejupielādēt rezultātus.
+1. Lai skatītu noteiktas kārtulas rezultātus un rezultātus, atlasiet kārtulu un pēc tam **priekšskatiet**. Rezultāti tiek parādīti. Jūs varat lejupielādēt rezultātus.
 
 1. Lai skatītu kārtulas noteikta nosacījuma rezultātus, atlasiet kārtulu un pēc tam **rediģējiet**. Rediģēšanas rūtī atlasiet **Priekšskatījums** ar nosacījumu. Jūs varat lejupielādēt rezultātus.
 
@@ -120,7 +124,7 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
    - **Dublēt kārtulu**: atlasiet kārtulu un pēc tam **dublējiet,** lai izveidotu līdzīgu kārtulu ar izmaiņām.
    - **Dzēst kārtulu**: atlasiet kārtulu un pēc tam **izdzēsiet**.
 
-1. Atlasiet **Tālāk**, lai veiktu izmaiņas vienotajos laukos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināt apvienošanas iestatījumus](#update-the-unification-settings).
+1. Atlasiet **Tālāk**, lai veiktu izmaiņas vienotos laukos, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Vienotu lauku pārvaldība
 
@@ -130,7 +134,28 @@ Varat pārkonfigurēt un pielāgot lielāko daļu atbilstības parametru. Entīt
 
 1. Pārskatiet apvienotos un izslēgtos laukus un pēc vajadzības veiciet izmaiņas. Pievienojiet vai rediģējiet CustomerID atslēgu vai grupu profilus klasteros. Papildinformāciju skatiet sadaļā [Klientu lauku](merge-entities.md) apvienošana.
 
-1. Atlasiet **Tālāk**, lai pārskatītu apvienošanas iestatījumus un [atjauninātu vienoto profilu un atkarības](#run-updates-to-the-unified-customer-profile), vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināt apvienošanas iestatījumus](#update-the-unification-settings), lai veiktu papildu izmaiņas.
+1. Klientiem vai kontiem atlasiet **Tālāk**, lai pārskatītu un [atjauninātu vienoto profilu un atkarības](#run-updates-to-the-unified-profile). Vai arī atlasiet **Saglabāt un aizvērt** un atgriezties sadaļā [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings), lai veiktu papildu izmaiņas.
+
+   Kontaktpersonām atlasiet **Tālāk**, lai pārvaldītu semantiskos laukus. Vai arī atlasiet **Saglabāt un aizvērt** un atgriezties sadaļā [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings), lai veiktu papildu izmaiņas.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Vienotu kontaktpersonu semantisko lauku pārvaldība
+
+1. Semantisko lauku **elementā** atlasiet **Rediģēt**.
+
+1. Lai mainītu vienota lauka semantisko tipu, atlasiet jaunu tipu. Papildinformāciju skatiet sadaļā [Semantisko lauku definēšana vienotām kontaktpersonām](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
+
+1. Atlasiet **Tālāk**, lai pārvaldītu konta un kontaktpersonu relāciju, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings), lai veiktu papildu izmaiņas.
+
+## <a name="manage-contact-and-account-relationships"></a>Kontaktpersonu un kontu relāciju pārvaldība
+
+1. Elementa Relācijas **atlasiet** **Rediģēt**.
+
+1. Lai mainītu kontaktpersonu un konta relāciju, mainiet kādu no šīm ziņām:
+
+   - **Ārējā atslēga no kontaktpersonas entītijas**: izvēlieties atribūtu, kas savieno jūsu kontaktpersonas entītiju ar kontu.
+   - **Uz konta entītiju**: izvēlieties ar kontaktpersonu saistīto konta entītiju.
+
+1. Atlasiet **Tālāk**, lai pārskatītu apvienošanas iestatījumus un [atjauninātu vienoto profilu un atkarības](#run-updates-to-the-unified-profile), vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings), lai veiktu papildu izmaiņas.
 
 ## <a name="run-matching-conditions"></a>Skrējiens atbilstošiem nosacījumiem
 
@@ -148,18 +173,15 @@ Izpildīt atbilstošus nosacījumus, tiek palaisti tikai deduplikācijas un atbi
 
 1. Lai veiktu izmaiņas, skatiet rakstu [Decentralizācijas kārtulu](#manage-deduplication-rules) pārvaldība vai [Atbilstības kārtulu](#manage-match-rules) pārvaldība.
 
-1. Vēlreiz palaidiet atbilstības procesu vai [palaidiet klienta profila](#run-updates-to-the-unified-customer-profile) atjauninājumus.
+1. Vēlreiz palaidiet atbilstības procesu vai [palaidiet profila](#run-updates-to-the-unified-profile) atjauninājumus.
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Vienotā klienta profila atjauninājumu palaišana
+## <a name="run-updates-to-the-unified-profile"></a>Vienotā profila atjauninājumu palaišana
 
-1. **Lapā Data** > **Unify** atlasiet:
+- Lai palaistu atbilstības nosacījumus un atjauninātu vienotā profila entītiju, *neietekmējot* atkarības (piemēram, klientu kartes, bagātinājumus, segmentus vai mērus), atlasiet **Unify klientu profilus**. Kontiem atlasiet **Unify kontu** > **unificēt profilus**. Kontaktpersonām atlasiet **Unify contacts (preview)** > **Unify profilus**. Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
+- Lai palaistu atbilstošus nosacījumus, atjauninātu vienoto profilu un palaistu visas atkarības, atlasiet **Unify klientu profilus un atkarības**. Visi procesi tiek atkārtoti palaisti automātiski. Kontiem un kontaktpersonām atlasiet **Unify kontu** > **unificēt profilus un atkarības**. Atbilstības nosacījumi tiek izpildīti gan kontiem, gan kontaktpersonām, kas atjaunina gan vienotos profilus, gan visas pārējās atkarības.
 
-   - **Unificējiet klientu profilus**: tiek izpildīti atbilstoši nosacījumi un atjaunināta vienotā klienta profila entītija, neietekmējot atkarības (piemēram, bagātinājumus, segmentus vai mērus). Atkarīgie procesi netiek palaisti, bet tiks atsvaidzināti, kā [definēts atsvaidzināšanas grafikā](schedule-refresh.md).
+Visi elementi, izņemot **avota laukus**, tiek rādīti **rindā vai** **atsvaidzinoši**.
 
-   - **Apvienojiet klientu profilus un atkarības**: izpilda atbilstošus nosacījumus un atjaunina vienoto profilu un visas atkarības. Visi procesi tiek atkārtoti palaisti automātiski. Kad visi pakārtotie procesi ir pabeigti, klienta profils atspoguļo atjauninātos datus.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   Elementos **Dublēt ierakstus**, **Atbilstības nosacījumos** un **Vienotajos klientu laukos** tiek rādīts **statuss Rinda** vai **Atsvaidzināšana**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Veiksmīgas palaišanas rezultāti tiek parādīti lapā Unify **,** parādot vienotu klientu profilu skaitu.
+Veiksmīgas palaišanas rezultāti tiek parādīti lapā Unify **,** parādot vienoto profilu skaitu.

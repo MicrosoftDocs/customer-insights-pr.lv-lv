@@ -1,9 +1,9 @@
 ---
-title: Klienta darbības
-description: Definējiet klientu darbības un apskatiet tās laika skalā pēc klientu profiliem.
-ms.date: 07/22/2022
+title: Klientu vai biznesa kontaktu aktivitātes
+description: Definējiet klientu vai biznesa kontaktu darbības un skatiet tās laika skalā klientu profilos.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188148"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304114"
 ---
-# <a name="customer-activities"></a>Klientu darbības
+# <a name="customer-or-business-contact-activities"></a>Klientu vai biznesa kontaktu aktivitātes
 
-Klientu aktivitātes ir darbības vai pasākumi, ko veic klienti. Piemēram, transakcijas, atbalsta zvana ilgums, atsauksmes par tīmekļa vietni, pirkumi vai atgriešana. Šīs darbības ir ietvertas vienā vai vairākos datu avotos. Izmantojot Customer Insights, konsolidējiet savas klientu aktivitātes no šiem [datu avotiem](data-sources.md) un saistiet tos ar klientu profiliem. Šīs darbības tiek parādītas hronoloģiski klienta profila laika skalā. Iekļaujiet laika skalu Dynamics 365 programmās, izmantojot [customer card pievienojumprogrammas](customer-card-add-in.md) risinājumu.
+Klientu darbības ir darbības vai pasākumi, ko veic klienti vai biznesa kontakti. Piemēram, transakcijas, atbalsta zvana ilgums, atsauksmes par tīmekļa vietni, pirkumi vai atgriešana. Šīs darbības ir ietvertas vienā vai vairākos datu avotos. Izmantojot Customer Insights, konsolidējiet savas klientu aktivitātes no šiem [datu avotiem](data-sources.md) un saistiet tos ar klientu profiliem. Šīs darbības tiek parādītas hronoloģiski klienta profila laika skalā. Iekļaujiet laika skalu Dynamics 365 programmās, izmantojot [customer card pievienojumprogrammas](customer-card-add-in.md) risinājumu.
 
-## <a name="define-an-activity"></a>Darbības definēšana
+## <a name="define-a-customer-activity"></a>Klientu darbības definēšana
 
 Entītijai ir jābūt vismaz vienam atribūtam ar tipu **Datums**, lai to iekļautu klienta laika skalā. Ja netiek atrasta šāda entitīja, vadīkla **Pievienot darbību** tiek atspējota.
 
@@ -38,9 +38,9 @@ Entītijai ir jābūt vismaz vienam atribūtam ar tipu **Datums**, lai to iekļa
 
 1. Darbībās **dati** ievadiet šādu informāciju:
 
-   - **Aktivitātes nosaukums**: jūsu darbības nosaukums.
-   - **Darbības entītija**: entītija, kas ietver transakciju vai darbību datus.
-   - **Primārā atslēga**: lauks, kas unikāli identificē ierakstu. Tajā nedrīkst ietvert dublētas vērtības, tukšas vērtības vai trūkstošas vērtības.
+   - **Darbības nosaukums**: Atlasiet savas darbības nosaukumu.
+   - **Darbības entītija**: atlasiet entītiju, kas ietver transakciju vai darbību datus.
+   - **Primārā atslēga**: Atlasīt lauku, kas unikāli identificē ierakstu. Tajā nedrīkst ietvert dublētas vērtības, tukšas vērtības vai trūkstošas vērtības.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Iestatiet darbības datus ar nosaukumu, entītiju un primāro atslēgu.":::
 
@@ -48,9 +48,9 @@ Entītijai ir jābūt vismaz vienam atribūtam ar tipu **Datums**, lai to iekļa
 
 1. Darbībā Relācija **atlasiet** **Pievienot relāciju**, lai saistītu savus darbības datus ar atbilstošo klienta ierakstu. Šajā darbībā tiek vizualizēts entītiju savienojums.  
 
-   - **Ārējā atslēga no entītijas**: lauks jūsu darbības entītijā, kas tiks izmantots, lai izveidotu relāciju ar citu entītiju.
+   - **Ārējā atslēga**: ārējais lauks jūsu darbības vienībā, kas tiks izmantots, lai izveidotu attiecības ar citu entītiju.
    - **Uz entītijas nosaukumu**: atbilstošā avota klienta entītija, ar kuru jūsu darbības entītija būs saistīta. Ir iespējams izveidot relāciju tikai ar avota klientu entitījām, kuras tiek izmantotas datu apvienošanas procesā.
-   - **Relācijas nosaukums**: nosaukums, kas identificē attiecības starp entītijām. Ja relācija starp šo darbības entītiju un atlasīto avota klienta entītiju jau pastāv, relācijas nosaukums ir tikai lasāms.
+   - **Relācijas nosaukums**: ja relācija starp šo darbības entītiju un atlasīto avota klienta entītiju jau pastāv, relācijas nosaukums būs tikai lasīšanas režīmā. Ja šāda relācija nepastāv, tiks izveidota jauna relācija ar šajā lodziņā sniegto nosaukumu.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Entītiju relācijas definēšana.":::
 
@@ -90,7 +90,7 @@ Entītijai ir jābūt vismaz vienam atribūtam ar tipu **Datums**, lai to iekļa
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Esošo darbību pārvaldība
+## <a name="manage-existing-customer-activities"></a>Esošo klientu darbību pārvaldība
 
 Dodieties uz **Datu** > **darbības**, lai skatītu savas saglabātās darbības, to avota entītiju, darbības veidu un to, vai tās ir iekļautas klientu laika skalā. Darbību sarakstu var kārtot pēc jebkuras kolonnas vai izmantot meklēšanas lodziņu, lai atrastu darbību, kuru vēlaties pārvaldīt.
 
@@ -116,9 +116,43 @@ Atlasiet darbību, lai skatītu pieejamās darbības.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtrēšanas nosacījumu konfigurēšanai izmantojiet filtrēšanas paneli.":::
 
-1. Lai noņemtu filtrus, atlasiet **Notīrīt filtrus** vai atlasiet **Filtrs** un notīriet filtra izvēles rūtiņu.
-
 > [!NOTE]
 > Darbību filtri tiek noņemti, kad atstājat klienta profilu. Jums tie ir jāpiemēro katru reizi, kad atverat klienta profilu.
+
+## <a name="define-a-contact-activity"></a>Kontaktpersonas darbības definēšana
+
+Biznesa kontiem (no B līdz B) izmantojiet entītiju *ContactProfile*, lai tvertu kontaktpersonu darbības. Konta darbību laika grafikā varat redzēt, kura kontaktpersona bija atbildīga par katru darbību. Lielākā daļa darbību tiek veiktas, veicot klientu darbību kartēšanas konfigurāciju.
+
+   > [!NOTE]
+   > Lai definētu kontaktpersonas līmeņa darbību, *ir jāizveido ContactProfile entītija* vai nu kā vienots [kontaktpersonas profils](data-unification-contacts.md), vai izmantojot [semantisko kartēšanu](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Katram ierakstam jūsu darbības datos ir jābūt gan **atribūtiem AccountID**, gan **ContactID**.
+  
+1. Dodieties uz **datu** > **aktivitātes**.
+
+1. Atlasiet **Pievienot aktivitāti**.
+
+1. Piešķiriet darbībai nosaukumu, atlasiet avota darbības entītiju un atlasiet darbības entītijas primāro atslēgu.
+
+1. **Darbībā Relācijas** izveidojiet netiešu relāciju starp saviem darbības avota datiem un kontiem, izmantojot savus kontaktdatus kā starpniekuzņēmumu. Papildinformāciju skatiet tiešo [un netiešo attiecību ceļos](relationships.md#relationship-paths).
+   - Relācijas piemērs darbībai ar nosaukumu *Pirkumi*:
+      - **Iegādājas avota darbības datu** > **kontaktinformāciju** atribūtā **ContactID**
+      - **·** > **Kontaktinformācijas konta dati** atribūtā **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Relāciju iestatīšanas piemērs.":::
+
+1. Pēc relāciju iestatīšanas atlasiet **Tālāk** un pabeidziet darbību kartēšanas konfigurēšanu. Detalizētas darbības par darbību izveidi skatiet rakstā [Klienta darbības](#define-a-customer-activity) definēšana.
+
+1. Palaidiet savu darbību kartēšanu.
+
+1. Jūsu kontaktpersonas līmeņa darbības tagad būs redzamas jūsu klientu laika skalā.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Galīgais rezultāts pēc kontakta darbību konfigurēšanas":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Kontaktpersonu līmeņa darbību laika grafika filtrēšana
+
+Pēc kontaktpersonas līmeņa darbību kartēšanas konfigurēšanas un tās palaišanas jūsu klientu darbību laika grafiks tiks atjaunināts. Tas ietver viņu ID vai vārdus, atkarībā no jūsu *ContactProfile* konfigurācijas, darbībām, ar kurām viņi rīkojās. Laika skalā varat filtrēt kontaktpersonu darbības, lai skatītu konkrētas jūs interesējošas kontaktpersonas. Turklāt visas darbības, kas nav piešķirtas konkrētai kontaktpersonai, varat skatīt, atlasot **Darbības, kas nav kartētas uz kontaktpersonu**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filtrēšanas opcijas, kas pieejamas kontaktpersonu līmeņa darbībām.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

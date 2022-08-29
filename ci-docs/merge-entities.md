@@ -2,7 +2,7 @@
 title: Klientu lauku apvienošana datu apvienošanai
 description: Sapludiniet entītijas, lai izveidotu vienotus klientu profilus.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213591"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304022"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Klientu lauku apvienošana datu apvienošanai
+# <a name="unify-customer-fields"></a>Klientu lauku apvienošana
 
-Šajā apvienošanas procesa darbībā izvēlieties un izslēdziet atribūtus, ko sapludināt savā vienotajā profila entītijā. Piemēram, ja trim entītijām bija e-pasta dati, iespējams, vēlēsities saglabāt visus trīs atsevišķos e-pasta laukus vai sapludināt tos vienā e-pasta laukā vienotajam profilam. Dažus atribūtus sistēma automātiski apvieno. Varat izveidot stabilus un unikālus klientu ID un grupēt saistītus profilus klasterī.
+Šajā apvienošanas procesa darbībā izvēlieties un izslēdziet atribūtus, ko sapludināt savā vienotajā profila entītijā. Piemēram, ja trim entītijām bija e-pasta dati, iespējams, vēlēsities saglabāt visus trīs atsevišķos e-pasta laukus vai sapludināt tos vienā e-pasta laukā vienotajam profilam. Dažus atribūtus sistēma automātiski apvieno. Varat izveidot stabilus un unikālus klientu ID. Atsevišķiem klientiem varat grupēt saistītos profilus klasterī.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Datu apvienošanas procesa sapludināšanas lapa, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Datu apvienošanas procesā apvienojiet klientu lauku lapu, kurā redzama tabula ar sapludinātiem laukiem, kas definē vienoto klienta profilu.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Klientu lauku pārskatīšana un atjaunināšana
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213591"
 
 1. Pēc izvēles [ģenerējiet klienta ID konfigurāciju](#configure-customer-id-generation).
 
-1. Pēc izvēles [grupu profili mājsaimniecībās vai klasteros](#group-profiles-into-households-or-clusters).
+1. Pēc izvēles B-to-C grupu [profili mājsaimniecībās vai klasteros](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Nākamais solis: Unifikācijas pārskatīšana](review-unification.md)
@@ -161,7 +161,7 @@ Konfigurējot stabilu klienta ID, varat izvairīties no šādas uzvedības.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Grupējiet profilus mājsaimniecībās vai klasteros
 
-Varat definēt kārtulas, lai grupētu saistītos profilus klasterī. Pašlaik ir pieejami divu veidu klasteri — mājsaimniecības un pielāgoti klasteri. Sistēma automātiski izvēlas barību ar iepriekš definētām kārtulām, ja *Klienta* entītija ietver semantiskos laukus *Person.LastName* un *Location.Address*. Klasteru var izveidot arī ar savām kārtulām un nosacījumiem, kas līdzīgi [atbilstības kārtulām](match-entities.md#define-rules-for-match-pairs).
+Atsevišķiem klientiem varat definēt kārtulas, lai grupētu saistītos profilus klasterī. Pašlaik ir pieejami divu veidu klasteri — mājsaimniecības un pielāgoti klasteri. Sistēma automātiski izvēlas barību ar iepriekš definētām kārtulām, ja *Klienta* entītija ietver semantiskos laukus *Person.LastName* un *Location.Address*. Klasteru var izveidot arī ar savām kārtulām un nosacījumiem, kas līdzīgi [atbilstības kārtulām](match-entities.md#define-rules-for-match-pairs).
 
 1. Atlasiet **Papildu** > **izveides klasteris**.
 
