@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights jaunumi
 description: Informācija par jaunajiem līdzekļiem, uzlabojumiem un kļūdu labojumiem.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246020"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387303"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -23,6 +23,24 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>2022. gada augusta atjauninājumi
+
+2022. gada augusta atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktu apvienošana B-to-B vidē
+
+B-to-B vides programmā Customer Insights tagad atbalsta uzlabotu datu apvienošanas pieredzi.
+
+Tagad varat apvienot kontaktpersonas papildus kontiem, lai iegūtu pilnu pārskatu par savām biznesa kontaktpersonām. Vienotās kontaktpersonas ir saistītas ar vienotiem kontiem un tagad ir norādītas klientu kartītēs. 
+
+Papildinformāciju skatiet sadaļā [Vienota kontaktpersonas profila izveide](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Segmentu izveide un eksportēšana, pamatojoties uz vienotām kontaktpersonām
+
+Pateicoties jaunajai kontaktpersonu apvienošanai, varat izveidot kontaktpersonu segmentus, izmantojot kritērijus no kontaktpersonām, kontiem vai abiem. Šos segmentus var eksportēt aktivizēšanai citos pakalpojumos.
+
+Papildinformāciju skatiet rakstā [Pārskats par eksportu](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>2022. gada jūlija atjauninājumi
 
@@ -42,7 +60,7 @@ Papildinformāciju skatiet sadaļā [Datu eksportēšana uz SFTP resursdatoriem]
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizējiet pieredzi ar datiem par zināmiem un nezināmiem lietotājiem
 
-Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
+Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāks, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem, ko piedāvā zīmoli. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja nav pierakstījies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
 
 Papildinformāciju skatiet rakstā [Pieredzes personalizēšana, izmantojot datus par zināmiem un nezināmiem lietotājiem](unknown-to-known.md).
 
@@ -52,7 +70,7 @@ Papildinformāciju skatiet rakstā [Pieredzes personalizēšana, izmantojot datu
 
 ### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Atjaunināta lietotāja pieredze datu avotos un datu uzņemšanā
 
-Datu importēšana no plaša datu avotu klāsta ir pamats klientu datu konsolidēšanai Dynamics 365 Customer Insights. Mēs esam pārskatījuši lietotāju pieredzi datu avotu importēšanai un savienošanai. Šī atjauninājuma mērķis ir atvieglot customer insights datu uzņemšanu.
+Datu importēšana no plaša datu avotu klāsta ir pamats klientu datu konsolidēšanai .Dynamics 365 Customer Insights Mēs esam pārskatījuši lietotāju pieredzi datu avotu importēšanai un savienošanai. Šī atjauninājuma mērķis ir atvieglot customer insights datu uzņemšanu.
 
 Papildinformāciju skatiet sadaļā [Datu avotu pārskats](data-sources.md).
 
@@ -178,7 +196,7 @@ Papildinformāciju skatiet sadaļā [Prognozes pārskats](predictions-overview.m
 
 Azure Synapse Analytics ir uzņēmuma analīzes pakalpojums, kas paātrina laiku līdz ieskatiem datu noliktavās un lielo datu sistēmās.
 
-Organizācijas, kas jau izmanto Azure Synapse Analytics, var nodot šos datus programmā Customer Insights. 
+Organizācijas, kas jau izmanto Azure Synapse Analytics , var nodot šos datus programmā Customer Insights. 
 
 Papildinformāciju skatiet sadaļā [datu avots savienošana (priekšskatījums)Azure Synapse.](connect-synapse.md)
 
@@ -190,7 +208,7 @@ Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana, izmantojot 
 
 ### <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 
-Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. Datu avots bagātināšana palīdz radīt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad esat apvienojis savus datus.
+Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. datu avots bagātināšana palīdz radīt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad esat apvienojis savus datus.
 
 Papildinformāciju skatiet sadaļā [Datu avotu bagātināšana (Priekšskatījums)](data-sources-enrichment.md).
 

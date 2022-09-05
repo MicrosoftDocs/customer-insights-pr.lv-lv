@@ -1,27 +1,27 @@
 ---
 title: OData vaicājumu piemēri Customer Insights API
 description: Bieži lietoti atvērto datu protokola (OData) piemēri, lai veiktu vaicājumus Customer Insights API, lai pārskatītu datus.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121571"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387211"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>OData vaicājumu piemēri Customer Insights API
 
 Atvērto datu protokols (Open Data Protocol — OData) ir datu piekļuves protokols, kura pamatā ir pamata protokoli, piemēram, HTTP. Tas izmanto vispārpieņemtas metodoloģijas, piemēram, REST tīmeklim. Ir dažāda veida bibliotēkas un rīki, kurus var izmantot, lai patērētu OData pakalpojumus.
 
-Šajā rakstā ir uzskaitīti daži bieži pieprasītie vaicājumu piemēri, kas palīdzēs jums izveidot savus ieviešanas gadījumus, [pamatojoties uz Customer Insights API](apis.md).
+Lai palīdzētu jums izveidot savus ieviešanas gadījumus, [pamatojoties uz Customer Insights API](apis.md), pārskatiet dažus bieži pieprasītos piemēru vaicājumus.
 
-Ir jāmodificē vaicājumu paraugi, lai tie darbotos mērķa vidēs: 
+Modificējiet vaicājumu paraugus, lai tie darbotos mērķa vidēs:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` kur {instanceId} atrodas Customer Insights vides GUID, kurā vēlaties veikt vaicājumu. Operācija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) ļauj jums atrast to, kam {InstanceId} jums ir piekļuve.
 - {CID}: vienota klienta ieraksta GUID. Piemērs: `ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Ir jāmodificē vaicājumu paraugi, lai tie darbotos mērķa vidēs:
 
 ## <a name="customer"></a>klient
 
-Tālāk esošajā tabulā ir iekļauta vaicājumu paraugu kopa entītijai *Klients*.
+Vaicājumu paraugi entītijai *Klients* .
 
 |Vaicājuma tips |Piemērs  | Note  |
 |---------|---------|---------|
 |Viena klienta ID     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Alternatīvā atslēga    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Vienotajā klienta entītijā saglabājas alternatīvas atslēgas       |
+|alternatīvā atslēga    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Vienotajā klienta entītijā saglabājas alternatīvas atslēgas       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Iekš    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternatīvā atslēga + Iekšā   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|alternatīvā atslēga + Iekšā   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Meklējiet  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Atgriež meklēšanas virknes populārākos 10 rezultātus      |
 |Dalība segmentā  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Atgriež iepriekš iestatītu rindu skaitu no segmentācijas entītijas.      |
 |Segmenta dalība klientam | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Atgriež klienta profilu, ja klients ir attiecīgā segmenta dalībnieks     |
 
 ## <a name="unified-activity"></a>Vienota darbība
 
-Tālāk esošajā tabulā ir iekļauta parauga vaicājumu kopa entītijai *UnifiedActivity*.
+Vaicājumu paraugi entītijai *UnifiedActivity* .
 
 |Vaicājuma tips |Piemērs  | Note  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Tālāk esošajā tabulā ir iekļauta parauga vaicājumu kopa entītijai *Unifi
 
 ## <a name="other-examples"></a>Citi piemēri
 
-Šajā tabulā ir iekļauta vaicājumu paraugu kopa citām entītijām.
+Vaicājumu paraugi citām entītijām.
 
 |Vaicājuma tips |Piemērs  | Note  |
 |---------|---------|---------|
@@ -73,7 +73,7 @@ Tālāk esošajā tabulā ir iekļauta parauga vaicājumu kopa entītijai *Unifi
 Customer Insights neatbalsta tālāk norādītos vaicājumus.
 
 - `$filter` par uzņemtajām avota vienībām. Varat izpildīt tikai $filter vaicājumus par Sistēmas entītijām, ko izveido Customer Insights.
-- `$expand` no vaicājuma`$search`. Piemērs: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` no vaicājuma `$search` . Piemērs: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
 - `$expand` no `$select` tā, vai ir atlasīta tikai atribūtu apakškopa. Piemērs: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
 - `$expand` bagātināts zīmols vai interešu radniecība konkrētam klientam. Piemērs: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
 - Vaicājums prognoze modeļa izvades entītijas, izmantojot alternatīvā atslēga. Piemērs: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`
