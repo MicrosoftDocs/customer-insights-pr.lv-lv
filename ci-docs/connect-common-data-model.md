@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245842"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396095"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Izveidot savienojumu ar datiem programmā Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
   - Krātuves Blob datu lasītājs
   - Krātuves Blob datu īpašnieks
   - Krātuves Blob datu ieguldītājs
+
+- Lietotājam, kurš iestata datu avots savienojumu, ir nepieciešamas vismazāk krātuves Blob data contributor atļaujas krātuves kontā.
 
 - Datu ezera krātuvē esošajiem datiem datu glabāšanai ir jāatbilst common data model standartam, un tiem ir jābūt kopējam datu modeļa manifestam, kas attēlo datu failu shēmu (*.csv vai *.parkets). Manifestā ir jāsniedz detalizēta informācija par entītijām, piemēram, entītiju kolonnām un datu tipiem, kā arī datu faila atrašanās vietu un faila tipu. Papildinformāciju skatiet sadaļā [Kopējā datu modeļa manifests](/common-data-model/sdk/manifest). Ja manifesta nav, administratori, kuriem ir piekļuve krātuves Blob datu īpašniekam vai krātuves Blob datu līdzstrādniekam, var definēt shēmu, norijot datus.
 
@@ -62,7 +64,7 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
    > [!NOTE]
    > Lai izveidotu datu avots, konteineram vai krātuves kontam ir nepieciešama viena no šīm lomām:
    >
-   >  - Krātuves Blob datu lasītājs ir pietiekams, lai lasītu no krātuves konta un nodotu datus Customer Insights. 
+   >  - Krātuves Blob datu lasītājs ir pietiekams, lai lasītu no krātuves konta un nodotu datus Customer Insights.
    >  - Krātuves Blob data contributor vai Owner ir nepieciešama, ja vēlaties rediģēt manifesta failus tieši programmā Customer Insights.  
   
 1. Izvēlieties tā konteinera **nosaukumu**, kurā ir dati un shēma (fails model.json vai manifest.json), no kura importēt datus, un atlasiet **Tālāk**.

@@ -1,7 +1,7 @@
 ---
 title: Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 description: Uzziniet, kā izveidot savienojumu ar Customer Insights Microsoft Dataverse un izprast izvades entītijas, uz kurām tiek eksportētas Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303838"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424318"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Darbs ar Customer Insights datiem programmā Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Ja savienojuma noņemšana neizdodas atkarību dēļ, ir jānoņem arī atkarīb
 Dažas Customer Insights izvades entītijas ir pieejamas kā tabulas .Dataverse Tālāk minētās sadaļas apraksta šo tabulu paredzēto shēmu.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Dažas Customer Insights izvades entītijas ir pieejamas kā tabulas .Dataverse 
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Šajā tabulā ir iekļauts vienotais klienta profils no Customer Insights. Vienota klienta profila shēma ir atkarīga no entītijām un atribūtiem, kas tiek izmantoti datu apvienošanas procesā. Klienta profila shēmā parasti ir atribūtu apakškopa no [CustomerProfile Common Data Model definīcijas](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Šajā tabulā ir iekļauts vienotais klienta profils no Customer Insights. Vienota klienta profila shēma ir atkarīga no entītijām un atribūtiem, kas tiek izmantoti datu apvienošanas procesā. Klienta profila shēmā parasti ir atribūtu apakškopa no [CustomerProfile Common Data Model definīcijas](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). B-to-B scenārijam klienta profils satur vienotus kontus, un shēmā parasti ir ietverta atribūtu apakškopa no [konta](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account) definīcijas Common Data Model.
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile satur vienotu informāciju par kontaktpersonu. Kontaktpersonas ir [personas, kas tiek kartētas uz kontu](data-unification-contacts.md) B-to-B scenārijā.
+
+| Column                       | Tipi                | Apraksts     |
+| ---------------------------- | ------------------- | --------------- |
+|  Birthdate            | DateTime       |  Kontaktpersonas dzimšanas datums               |
+|  Pilsēta                 | Īsziņu |  Kontaktpersonas adreses pilsēta               |
+|  ContactId            | Īsziņu |  Kontaktpersonas profila ID               |
+|  ContactProfileId     | Unikālais identifikators   |  Kontaktpersonas GUID               |
+|  Valsts vaireģions      | Īsziņu |  Kontaktadreses valsts/reģions               |
+|  CustomerId           | Īsziņu |  Tā konta ID, uz kuru kontaktpersona ir kartēta               |
+|  EntityName           | Īsziņu |  Uzņēmums, no kura iegūti dati                |
+|  FirstName            | Īsziņu |  Kontakta vārds               |
+|  Dzimums               | Īsziņu |  Kontaktpersonas dzimums               |
+|  ID                   | Īsziņu |  Deterministisks GUID, pamatojoties uz`Identifier`               |
+|  Identifikators           | Īsziņu |  Kontaktpersonas profila iekšējais ID: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Īsziņu |  Kontaktpersonas amata nosaukums               |
+|  LastName             | Īsziņu |  Kontaktpersonas uzvārds               |
+|  PostalCode           | Īsziņu |  Kontaktpersonas adreses pasta indekss               |
+|  PrimaryEmail         | Īsziņu |  Kontaktpersonas e-pasta adrese               |
+|  Primārais tālrunis         | Īsziņu |  Kontaktpersonas tālruņa numurs               |
+|  Štats vai novads      | Īsziņu |  Kontaktadreses štats vai province               |
+|  StreetAddress        | Īsziņu |  Kontaktadreses iela               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvienošanas procesā.
 
-|Kolonna  |Tips  |Apraksts  |
+|Column  |Tipi  |Apraksts  |
 |---------|---------|---------|
-|DataSourceName    |String         | Datu avota nosaukums. Piemērs: `datasource5`        |
-|EntityName        | String        | Entītijas nosaukums programmā Customer Insights. Piemērs: `contact1`        |
-|AlternateValue    |String         |Alternatīvais ID, kas tiek kartēts uz klienta ID. Piemērs: `cntid_1078`         |
-|KeyRing           | Vairākrindiņu teksts        | JSON vērtība  </br> Paraugs: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"taustiņi":[" cntid_1078"]}]       |
-|CustomerId         | Virkne        | Vienotā klienta profila ID.         |
-|AlternateKeyId     | GUID         |  AlternateKey noteicošais GUID, balstoties uz msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Paraugs: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Īsziņu         | Datu avota nosaukums. Piemērs: `datasource5`        |
+|EntityName        | Īsziņu        | Entītijas nosaukums programmā Customer Insights. Piemērs: `contact1`        |
+|AlternateValue    |Īsziņu         |Alternatīvais ID, kas tiek kartēts uz klienta ID. Piemērs: `cntid_1078`         |
+|KeyRing           | Īsziņu        | JSON vērtība  </br> Paraugs: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"taustiņi":[" cntid_1078"]}]       |
+|CustomerId         | Īsziņu        | Vienotā klienta profila ID.         |
+|AlternateKeyId     | Unikālais identifikators        |  AlternateKey deterministisks GUID, pamatojoties uz`Identifier`      |
+|Identifikators |   Īsziņu      |   `DataSourceName|EntityName|AlternateValue`  </br> Paraugs: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 
 | Column            | Tipi        | Apraksts                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | Klienta profila ID                                                                      |
-| ActivityId        | String      | Klienta darbības iekšējais ID (primārā atslēga)                                       |
-| SourceEntityName  | Virkne      | Avota entītijas nosaukums                                                                |
-| SourceActivityId  | Virkne      | Avota entītijas primārā atslēga                                                       |
-| ActivityType      | Virkne      | Semantiskās darbības tips vai pielāgotas darbības nosaukums                                        |
-| ActivityTimeStamp | DATETIME    | Aktivitātes laika zīmogs                                                                      |
-| Amats             | String      | Darbības pārraudzības nosaukums                                                               |
-| Apraksts       | Virkne      | Darbības apraksts                                                                     |
-| Vietrādis URL               | Virkne      | Saite uz ārēju URL, kas raksturīgs darbībai                                         |
-| SemanticData      | JSON virkne | Ietver sarakstu ar galvenajiem vērtību pāriem semantiskās kartēšanas laukiem, kas raksturīgi darbības tipam |
-| RangeIndex        | String      | Unix laikspiedols, kas tiek izmantots darbību laika skalas un efektīva diapazona vaicājumu kārtošanai |
-| mydynci_unifiedactivityid   | GUID | Klienta darbības iekšējais ID (ActivityId) |
+| CustomerId        | Īsziņu      | Klienta profila ID                                                                      |
+| ActivityId        | Īsziņu      | Klienta darbības iekšējais ID (primārā atslēga)                                       |
+| SourceEntityName  | Īsziņu      | Avota entītijas nosaukums                                                                |
+| SourceActivityId  | Īsziņu      | Avota entītijas primārā atslēga                                                       |
+| ActivityType      | Īsziņu      | Semantiskās darbības tips vai pielāgotas darbības nosaukums                                        |
+| ActivityTimeStamp | DateTime    | Aktivitātes laika zīmogs                                                                      |
+| Amats             | Īsziņu      | Darbības pārraudzības nosaukums                                                               |
+| Apraksts       | Īsziņu      | Darbības apraksts                                                                     |
+| Vietrādis URL               | Īsziņu      | Saite uz ārēju URL, kas raksturīgs darbībai                                         |
+| SemanticData      | Īsziņu | Ietver sarakstu ar galvenajiem vērtību pāriem semantiskās kartēšanas laukiem, kas raksturīgi darbības tipam |
+| RangeIndex        | Īsziņu      | Unix laikspiedols, kas tiek izmantots darbību laika skalas un efektīva diapazona vaicājumu kārtošanai |
+| UnifiedActivityId   | Unikālais identifikators | Klienta darbības iekšējais ID (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Šajā tabulā ir ietverti uz klienta atribūtiem balstītu pasākumu izvades dati.
 
-| Kolonna             | Tips             | Apraksts                 |
+| Column             | Tipi             | Apraksts                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Virkne           | Klienta profila ID        |
-| Mērījumi           | JSON virkne      | Ietver sarakstu ar konkrētā klienta nosaukuma un vērtību mērvienību pamatvērtību pāriem | 
-| msdynci_identifier | Virkne           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | Klienta profila ID |
-
+| CustomerId         | Īsziņu           | Klienta profila ID        |
+| Mērījumi           | Īsziņu      | Ietver sarakstu ar konkrētā klienta nosaukuma un vērtību mērvienību pamatvērtību pāriem |
+| Identifikators | Īsziņu           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Unikālais identifikators     | Klienta profila ID |
 
 ### <a name="enrichment"></a>Bagātināšana
 
 Šajā tabulā ir ietverta bagātināšanas procesa izvade.
 
-| Kolonna               | Tips             |  Apraksts                                          |
+| Column               | Tipi             |  Apraksts                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Virkne           | Klienta profila ID                                 |
-| EnrichmentProvider   | Virkne           | Bagātinājuma nodrošinātāja nosaukums                                  |
-| EnrichmentType       | Virkne           | Bagātinājuma tips                                      |
-| Vērtības               | JSON virkne      | Bagātinātā procesa radītais atribūtu saraksts |
-| msdynci_enrichmentid | GUID             | Noteicošais GUID, kas izveidots no msdynci_identifier |
-| msdynci_identifier   | Virkne           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Īsziņu           | Klienta profila ID                                 |
+| EnrichmentProvider   | Īsziņu           | Bagātinājuma nodrošinātāja nosaukums                                  |
+| EnrichmentType       | Īsziņu           | Bagātinājuma tips                                      |
+| Vērtības               | Īsziņu      | Bagātinātā procesa radītais atribūtu saraksts |
+| EnrichmentId | Unikālais identifikators            | Deterministisks GUID, kas ģenerēts no`Identifier` |
+| Identifikators   | Īsziņu           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prognoze
 
@@ -211,12 +236,12 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 
 | Column               | Tipi        | Apraksts                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | Klienta profila ID                                  |
-| ModelProvider        | String      | Modeļa nodrošinātāja nosaukums                                      |
-| Modelis                | Virkne      | Modeļa nosaukums                                                |
-| Vērtības               | JSON virkne | Modeļa radītais atribūtu saraksts |
-| msdynci_predictionid | GUID        | Noteicošais GUID, kas izveidots no msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Īsziņu      | Klienta profila ID                                  |
+| ModelProvider        | Īsziņu      | Modeļa nodrošinātāja nosaukums                                      |
+| Modelis                | Īsziņu      | Modeļa nosaukums                                                |
+| Vērtības               | Īsziņu | Modeļa radītais atribūtu saraksts |
+| PredictionId | Unikālais identifikators       | Deterministisks GUID, kas ģenerēts no`Identifier` |
+| Identifikators   | Īsziņu      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Dalība segmentā
 
@@ -224,12 +249,11 @@ AlternateKey tabulā ir ietvertas entītiju atslēgas, kas piedalījās apvieno�
 
 | Column        | Tipi | Apraksts                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Klienta profila ID        |
-| SegmentProvider      | String       | Lietotne, kas publicē segmentus.      |
-| SegmentsMembershipType | String       | Klienta tips šim segmenta dalības ierakstam. Atbalsta vairākus veidus, piemēram, Klientu, Kontaktpersonu vai Kontu. Noklusējums: Klients  |
-| Segmenti       | JSON virkne  | Unikālo segmentu saraksts, kuros klienta profils ir dalībnieks      |
-| msdynci_identifier  | String   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministisks GUID, kas ģenerēts no`msdynci_identifier`          |
-
+| CustomerId        | Īsziņu       | Klienta profila ID        |
+| SegmentProvider      | Īsziņu       | Lietotne, kas publicē segmentus.      |
+| SegmentsMembershipType | Īsziņu       | Klienta tips šim segmenta dalības ierakstam. Atbalsta vairākus veidus, piemēram, Klientu, Kontaktpersonu vai Kontu. Noklusējums: Klients  |
+| Segmenti       | Īsziņu  | Unikālo segmentu saraksts, kuros klienta profils ir dalībnieks      |
+| Identifikators  | Īsziņu   | Segmenta dalības ieraksta unikālais identifikators. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Unikālais identifikators      | Deterministisks GUID, kas ģenerēts no`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
           href: custom-models.md
-        - name: Daļēji trūkstošu datu pabeigšana
-          href: predictions.md
     - name: Norādījumu paraugi
       items:
         - name: CLV datu parauga prognoze

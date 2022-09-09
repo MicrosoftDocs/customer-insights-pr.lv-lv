@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246117"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396070"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reāllaika datu uzņemšana (priekšskatījums)
 
@@ -82,10 +82,5 @@ Varat izmantot reāllaika iespējas, veidojot savu konveijeru un izveidojot savi
 Darbību varat publicēt savas avotsistēmas formātā vai UnifiedActivity formātā. Iegūstiet formātu, veicot API izsaukumu uz /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Detalizēta informācija par šo API, ieskaitot parametrus un atbildes, ir atrodama **EntityData** sadaļā [Customer Insights API atsauce](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Papildinformāciju skatiet tēmā [Darbs ar Customer Insights API](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Reāllaika lietojuma izprašana, izmantojot telemetriju
-
-Iegūstiet pārskatu par reāllaika API pieprasījumu apjomu un informāciju par problēmām, kas sistēmai var rasties. Varat piekļūt [reāllaika telemetrijai](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

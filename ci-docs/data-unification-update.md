@@ -1,7 +1,7 @@
 ---
 title: Klientu, uzņēmumu vai kontaktpersonu apvienošanas iestatījumu atjaunināšana
 description: Atjauniniet kārtulu dublikātus, atbilstības kārtulas vai vienotos laukus klienta vai konta apvienošanas iestatījumos.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304344"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392480"
 ---
 # <a name="update-unification-settings"></a>Unifikācijas iestatījumu atjaunināšana
 
@@ -38,7 +38,7 @@ Lai pārskatītu vai mainītu apvienošanas iestatījumus, kad ir izveidots vien
    > Elements **Atbilstības nosacījumi** tiek rādīts tikai tad, ja ir atlasītas vairākas entītijas.
 
 1. Izvēlieties, ko vēlaties atjaunināt:
-   - [Avota lauki](#edit-source-fields), lai pievienotu entītijas vai atribūtus vai mainītu atribūtu tipus.
+   - [Avota lauki](#edit-source-fields), lai pievienotu atribūtus vai entītijas vai mainītu atribūtu tipus. Lai noņemtu atribūtu, skatiet rakstu [Vienota lauka](#remove-a-unified-field) noņemšana. Lai noņemtu entītiju, skatiet rakstu [Vienotas entītijas](#remove-a-unified-entity) noņemšana.
    - [Dublēt ierakstus](#manage-deduplication-rules), lai pārvaldītu decentralizācijas kārtulas vai sapludināšanas preferences.
    - [Atbilstoši nosacījumi](#manage-match-rules), lai atjauninātu atbilstības kārtulas divām vai vairākām entītijām.
    - [Vienoti klientu lauki](#manage-unified-fields) lauku apvienošanai vai izslēgšanai. Varat arī grupēt saistītos profilus klasteros.
@@ -53,8 +53,6 @@ Lai pārskatītu vai mainītu apvienošanas iestatījumus, kad ir izveidots vien
 
 ## <a name="edit-source-fields"></a>Avota lauku rediģēšana
 
-Atribūtu vai entītiju nevar noņemt, ja tās jau ir apvienotas.
-
 1. Atlasiet **Rediģēt** elementā **Avota lauki**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Ekrānuzņēmums, kurā redzama avota lauku lapa, kurā redzams primāro atslēgu, kartēto un atkailināto lauku skaits":::
@@ -66,6 +64,80 @@ Atribūtu vai entītiju nevar noņemt, ja tās jau ir apvienotas.
 1. Pēc izvēles varat mainīt entītijas primāro atslēgu, atribūtu tipus un ieslēgt **vai izslēgt viedo kartēšanu**. Papildinformāciju skatiet sadaļā [Avota lauku](map-entities.md) atlasīšana.
 
 1. Atlasiet **Tālāk**, lai veiktu izmaiņas deduplikācijas kārtulās, vai atlasiet **Saglabāt un aizvērt** un atgriezties pie [Atjaunināšanas apvienošanas iestatījumi](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Vienota lauka noņemšana
+
+Lai noņemtu lauku, kas ir vienots, lauks ir jānoņem no visām atkarībām, piemēram, segmentiem, mēriem, bagātinājumiem vai relācijām.
+
+1. Kad visas lauka atkarības ir noņemtas, dodieties uz **Data** > **Unify**.
+
+1. Atlasiet **Rediģēt** vienotajā **klientu lauku elementā**.
+
+1. Atlasiet visus lauka gadījumus un pēc tam atlasiet **Izslēgt**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Vienoto lauku lapas, kurā redzami atlasītie lauki un poga Izslēgt, ekrānuzņēmums":::
+
+1. Atlasiet **Gatavs**, lai apstiprinātu, un pēc tam atlasiet **Saglabāt un aizvērt**.
+
+   > [!TIP]
+   > Ja redzat ziņojumu "Nevarēja saglabāt unificēt. Norādīto resursu nevar modificēt vai izdzēst pakārtoto atkarību dēļ", tad lauks joprojām tiek izmantots pakārtotā atkarībā.
+
+1. Ja lauks kārtulā tiek izmantots ierakstu dublikātiem vai atbilstošiem nosacījumiem, veiciet tālāk norādītās darbības. Pretējā gadījumā pārejiet pie nākamās darbības.
+   1. Atlasiet **Rediģēt** elementā **Dublēt ierakstus**.
+   1. Noņemiet lauku no visām kārtulām, kurās tas tiek izmantots, ja tāds ir, un pēc tam atlasiet **Tālāk**.
+   1. **Lapā Atbilstības nosacījumi** noņemiet lauku no visiem kārtulām, kurās tas tiek izmantots, ja tādi ir, un pēc tam atlasiet **Saglabāt un aizvērt**.
+   1. Atlasiet **Unify** > **Unify klientu profilus un atkarības**. Pagaidiet, līdz apvienošanās tiks pabeigta, pirms pāriet uz nākamo soli.
+
+1. Atlasiet **Rediģēt** elementā **Avota lauki**.
+
+1. Atlasiet **Atlasīt entītijas un laukus** un notīriet izvēles rūtiņu blakus katram lauka gadījumam.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Ekrānuzņēmums, kurā redzams dialoglodziņš Entītiju un lauku atlasīšana, kurā redzamas notīrītas izvēles rūtiņas":::
+
+1. Atlasiet vienumu **Piemērot**.
+
+1. Atlasiet **Saglabāt un aizvērt**.
+
+1. Atlasiet **Unify** > **Unify klientu profilus un atkarības**, lai atjauninātu vienoto profilu.
+
+### <a name="remove-a-unified-entity"></a>Vienotas entītijas noņemšana
+
+Lai noņemtu vienotu entītiju, entītija ir jānoņem no visām atkarībām, piemēram, segmentiem, mēriem, bagātinājumiem vai relācijām.
+
+1. Kad visas entītijas atkarības ir noņemtas, dodieties uz **Data** > **Unify**.
+
+1. Atlasiet **Rediģēt** vienotajā **klientu lauku elementā**.
+
+1. Atlasiet visus entītijas laukus un pēc tam atlasiet **Izslēgt**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Vienoti lauki ar atlasītiem visiem entītijas laukiem un izslēgšanas pogu":::
+
+1. Atlasiet **Gatavs**, lai apstiprinātu, un pēc tam atlasiet **Saglabāt un aizvērt**.
+
+   > [!TIP]
+   > Ja redzat ziņojumu "Nevarēja saglabāt unificēt. Norādīto resursu nevar modificēt vai dzēst pakārtoto atkarību dēļ", tad entītija joprojām tiek izmantota pakārtotā atkarībā.
+
+1. Atlasiet **Rediģēt** elementā **Dublēt ierakstus**.
+
+1. Noņemiet no entītijas visas kārtulas, ja tādas ir, un pēc tam atlasiet **Tālāk**.
+
+1. **Lapā Atbilstības nosacījumi** atlasiet entītiju un pēc tam atlasiet **Dzēst**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Ekrānuzņēmums, kurā redzami nosacījumu saskaņošana ar atlasītu entītiju un pogu Dzēst":::
+
+1. Atlasiet **Saglabāt un aizvērt**.
+
+1. Atlasiet **Rediģēt** elementā **Avota lauki**.
+
+1. Atlasiet **Atlasīt entītijas un laukus** un notīriet izvēles rūtiņu blakus entītijai.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Ekrānuzņēmums, kurā redzams dialoglodziņš Entītiju un lauku atlasīšana ar notīrītu izvēles rūtiņu Entītija":::
+
+1. Atlasiet vienumu **Piemērot**.
+
+1. Atlasiet **Saglabāt un aizvērt**.
+
+1. Atlasiet **Unify** > **Unify klientu profilus un atkarības**, lai atjauninātu vienoto profilu.
 
 ## <a name="manage-deduplication-rules"></a>Decentralizācijas kārtulu pārvaldība
 

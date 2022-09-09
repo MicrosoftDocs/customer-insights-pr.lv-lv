@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246256"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396010"
 ---
 # <a name="view-system-configuration"></a>Skatīt sistēmas konfigurāciju
 
@@ -38,12 +38,6 @@ Skatiet detalizētu informāciju par reāllaika API lietojumu un uzziniet, kuri 
    - **API izsaukumi** — diagramma, kas atlasītajā laika posmā vizualizē apkopoto izsaukumu skaitu uz API.
    - **Datu pārsūtīšana** — diagramma, kurā redzams datu daudzums, kas atlasītajā laika posmā tika pārsūtīts, izmantojot API.
    - **Darbības** — tabula ar rindām katrai pieejamai API operācijai un detalizēta informācija par operāciju izmantošanu. Atlasiet operācijas nosaukumu, lai pārietu [uz API atsauci](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operācijas, kurās tiek izmantota [reāllaika datu norīšana](real-time-data-ingestion.md), satur binokulāru simbolu, lai skatītu reāllaika API lietojumu.
-
-   1. Atlasiet binokli, lai atvērtu reāllaika **API lietošanas** rūti, kurā ir detalizēta informācija par operācijas lietojumu.
-   1. **Atlasiet skatāmo laika posmu**.
-   1. Izmantojiet **lodziņu Grupēt pēc**, lai izvēlētos, kā vislabāk parādīt reāllaika mijiedarbību. Grupēt datus pēc API **metodes**, **juridiskās personas kvalificēta nosaukuma** (pieņemtās juridiskās personas), **Izveidotā (** notikuma avota), **rezultāta** (veiksmes vai neveiksmes) vai **kļūdu kodiem**. Dati ir pieejami kā vēstures diagramma un kā tabula.
 
 ## <a name="view-system-information"></a>Skatīt sistēmas informāciju
 

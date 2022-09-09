@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083103"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411840"
 ---
 # <a name="predictions-overview"></a>Prognožu pārskats
 
@@ -39,14 +39,11 @@ Visvienkāršākais veids, kā sākt ar datu prognozēšanu, ir iepriekš defin�
 
 > [!TIP]
 > Mēs iesakām regulāri atsvaidzināt gatavus modeļus ar atjauninātiem datiem, lai nodrošinātu, ka tie precīzi informē jūsu uzņēmuma lietošanas gadījumu. Dati tiek atsvaidzināti ad-hoc, kad sistēma uzņem jaunus vai atjauninātus datu avotus. Tomēr šajā gadījumā modeļi tikai pārfrāzēsies un turpinās izmantot esošos apmācības datus.
-> 
+>
 > Atjaunināšanas **grafiku** var konfigurēt, iestatot modeļa pārkvalifikācijas grafiku konfigurācijas pieredzē. Modelis pārkvalificēsies un pārzīmēs šo grafiku, kuru jūs varat mainīt jebkurā laikā.
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure algoritmiskās mācīšanās integrēšana
 
 Ja organizācija jau izmanto algoritmiskās mācīšanās scenārijus, kuru pamatā algoritmiskā mācīšanās Azure eksperimenti, pielāgoto modeļu līdzeklis programmā Customer Insights palīdz savienot punktus. Izveidojiet darbplūsmas, kas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartējiet rezultātus uz vienotajiem klientu profiliem. Papildinformācijai skatiet [Pielāgoti algoritmiskās mācīšanās modeļi](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder prognoze
-
-Dažreiz datu kopas ir nepilnīgas un trūkst dažu vērtību. Customer Insights var palīdzēt prognozēt trūkstošās vērtības klienta entītijai un segmentiem. Papildinformāciju skatiet rakstā [Daļējo datu pabeigšana ar prognozēm](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

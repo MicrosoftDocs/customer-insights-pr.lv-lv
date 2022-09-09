@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e8134fa66ce47cdf8aeab144b8405104fb257f6c
-  ms.sourcegitcommit: 6108152b3d28a2ec140eae32a61dbf4317baa37b
+  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
+  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
   ms.translationtype: MT
   ms.contentlocale: lv-LV
-  ms.lasthandoff: 05/19/2022
-  ms.locfileid: "8781373"
+  ms.lasthandoff: 09/07/2022
+  ms.locfileid: "9411787"
 title: Dynamics 365 Customer Insights dokumentācija
 summary: Atrodiet noderīgus resursus, lai sāktu darbu un uzzinātu par Customer Insights līdzekļiem un iespējām.
 landingContent:
@@ -35,7 +35,7 @@ landingContent:
     links:
     - text: Reģistrēšanās izmēģinājuma versijai
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Sākt ar izmēģinājumversiju
+    - text: Sāciet ar izmēģinājumversiju
       url: trial-signup.md
     - text: Darba sākšana ar pakalpojumu Customer Insights
       url: get-started.md
@@ -49,13 +49,13 @@ landingContent:
     links:
     - text: Datu avotu pārskats
       url: data-sources.md
-    - text: Izveidot savienojumu, izmantojot Power Query
+    - text: Izveidojiet savienojumu, izmantojot Power Query
       url: connect-power-query.md
     - text: Izveidot savienojumu ar Microsoft Dataverse
       url: connect-dataverse-managed-lake.md
   - linkListType: learn
     links:
-    - text: Ievadiet datus Customer Insights
+    - text: Datu pārvēršana programmā Customer Insights
       url: /learn/modules/ingest-data-customer-insights/
 - title: Datu apvienošana
   linkLists:
@@ -65,7 +65,7 @@ landingContent:
       url: data-unification.md
     - text: Entītiju izprašana
       url: entities.md
-    - text: Pārskatīt vienotos profilus
+    - text: Vienoto profilu pārskatīšana
       url: customer-profiles.md
   - linkListType: learn
     links:
@@ -79,13 +79,13 @@ landingContent:
       url: enrichment-hub.md
     - text: Relāciju konfigurēšana
       url: relationships.md
-    - text: Pabeigt datus, izmantojot prognozes
-      url: predictions.md
+    - text: Prognozēt datus
+      url: predictions-overview.md
   - linkListType: learn
     links:
     - text: Datu bagātināšana un prognozēšana
       url: /learn/modules/enrich-data/
-- title: Datu pamatā
+- title: Izmantojiet savus datus
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -93,7 +93,7 @@ landingContent:
       url: segments.md
     - text: Izveidot pasākumus
       url: measures.md
-    - text: Definēt debitoru aktivitātes
+    - text: Definējiet klientu aktivitātes
       url: activities.md
   - linkListType: learn
     links:

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387303"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409366"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -42,6 +42,14 @@ Pateicoties jaunajai kontaktpersonu apvienošanai, varat izveidot kontaktpersonu
 
 Papildinformāciju skatiet rakstā [Pārskats par eksportu](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Izvietošanas reģioni, kas saskaņoti ar Microsoft Dataverse
+
+Veidojot jaunu Customer Insights vidi, varat atlasīt reģionu, kurā vēlaties, lai pakalpojums tiktu izvietots un viesots. Mēs esam atjauninājuši reģiona izvēli, lai saskaņotu ar Microsoft Dataverse un Power Platform.
+
+Tagad varat viegli atlasīt to pašu reģionu, kurā atrodas jūsu esošā Microsoft Dataverse vide vai Azure Data Lake krātuves konts (ja izvēlaties šo opciju), atkarībā no Customer Insights pieejamības šajā reģionā.
+
+Papildinformāciju skatiet sadaļā [Jaunas vides](create-environment.md) izveide un [Produktu pieejamība pēc ģeogrāfiskās atrašanās vietas](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>2022. gada jūlija atjauninājumi
 
 2022. gada jūlija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
@@ -60,7 +68,7 @@ Papildinformāciju skatiet sadaļā [Datu eksportēšana uz SFTP resursdatoriem]
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizējiet pieredzi ar datiem par zināmiem un nezināmiem lietotājiem
 
-Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāks, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem, ko piedāvā zīmoli. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja nav pierakstījies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
+Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
 
 Papildinformāciju skatiet rakstā [Pieredzes personalizēšana, izmantojot datus par zināmiem un nezināmiem lietotājiem](unknown-to-known.md).
 
@@ -132,7 +140,7 @@ Papildinformāciju skatiet sadaļā [Kā: izveidot jaunu vidi](create-environmen
 
 Dun & Bradstreet nodrošina komerciālus datus, analītiku un ieskatus uzņēmumiem. Tā nodrošina klientiem vienotus klientu profilus, lai uzņēmumi bagātinātu datus. Bagātināšana ietver tādus atribūtus kā DUNS numurs, uzņēmuma lielums, atrašanās vieta, nozare un citi.
 
-Papildinformāciju skatiet sadaļā [Uzņēmuma profilu bagātināšana ar Dun & Bradstreet (priekšskatījums)](enrichment-dnb.md).
+Papildinformāciju skatiet sadaļā [Uzņēmuma profilu bagātināšana, izmantojot Dun &Bradstreet (priekšskatījums)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Mēra tipa definēšana, veidojot jaunu mēru
 
@@ -196,9 +204,9 @@ Papildinformāciju skatiet sadaļā [Prognozes pārskats](predictions-overview.m
 
 Azure Synapse Analytics ir uzņēmuma analīzes pakalpojums, kas paātrina laiku līdz ieskatiem datu noliktavās un lielo datu sistēmās.
 
-Organizācijas, kas jau izmanto Azure Synapse Analytics , var nodot šos datus programmā Customer Insights. 
+Organizācijas, kas jau izmanto Azure Synapse Analytics, var nodot šos datus programmā Customer Insights. 
 
-Papildinformāciju skatiet sadaļā [datu avots savienošana (priekšskatījums)Azure Synapse.](connect-synapse.md)
+Papildinformāciju [skatiet sadaļā Azure Synapse datu avots savienošana (priekšskatījums)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp bagātināšana (priekšskatījums)
 
@@ -208,15 +216,15 @@ Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana, izmantojot 
 
 ### <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 
-Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. datu avots bagātināšana palīdz radīt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad esat apvienojis savus datus.
+Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. Datu avots bagātināšana palīdz radīt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad esat apvienojis savus datus.
 
-Papildinformāciju skatiet sadaļā [Datu avotu bagātināšana (Priekšskatījums)](data-sources-enrichment.md).
+Papildinformāciju skatiet sadaļā [Datu avotu bagātināšana (priekšskatījums)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Mainīt vides īpašnieku
 
 Lai gan vairākiem lietotājiem var būt administratora atļaujas programmā Customer Insights, tikai viens lietotājs ir vides īpašnieks. Uzlabota pieredze ļauj mainīt vides īpašniekus un pieprasīt īpašumtiesības, ja bijušais īpašnieks pameta organizāciju. 
 
-Papildinformāciju skatiet sadaļā [Vides](manage-environments.md#change-the-owner-of-an-environment) īpašnieka maiņa.
+Papildinformāciju skatiet sadaļā [Vides īpašnieka maiņa](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Datu sagatavošanas procesā ir norādīts bojātu ierakstu korupcijas iemesls
 
