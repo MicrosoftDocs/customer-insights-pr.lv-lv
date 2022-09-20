@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304068"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460199"
 ---
 # <a name="exports-preview-overview"></a>Eksportēšanas (priekšskatījuma) pārskats
 
@@ -81,6 +81,11 @@ Atlasiet eksportēšanu, lai skatītu pieejamās darbības.
 ## <a name="schedule-and-run-exports"></a>Eksportēšanas darbību ieplānošana un palaišana
 
 Katrai konfigurētai eksportēšanai ir atsvaidzināšanas grafiks. Atsvaidzināšanas laikā sistēma meklē jaunus vai atjauninātus datus, ko iekļaut eksportā. Pēc noklusējuma eksportēšana tiek izpildīta kā daļa no katras [plānotās sistēmas atsvaidzināšanas](schedule-refresh.md). Varat pielāgot atsvaidzināšanas grafiku vai izslēgt to, lai palaistu eksportu manuāli.
+
+> [!TIP]
+> Samaziniet segmenta eksporta apstrādes laiku, izmantojot tālāk norādīto paraugpraksi.
+> - Sadaliet segmenta entītijas dažādos izvedumos.
+> - Izvairieties no visu eksportēšanas ieplānošanas vienlaikus. Atstājiet 30 minūtes vai vienu stundu starp katra eksporta plānoto laiku.
 
 Eksportēšanas grafiki ir atkarīgi no vides stāvokļa. Ja laikā, kad būtu jāsāk plānotā atjaunināšana, notiek [atkarību](system.md#refresh-processes) atjaunināšana, sistēma vispirms pabeigs atjaunināšanu un pēc tam veiks eksportēšanu. Atsvaidzinātajā **kolonnā tiek rādīts**, kad eksportēšana pēdējo reizi tika atsvaidzināta.
 

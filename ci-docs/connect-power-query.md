@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207054"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463274"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avots
 
@@ -63,7 +63,9 @@ Pievienojot datu avotus, kuru pamatā Power Query ir savienotāji, parasti tiek 
 Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos datus var pārskatīt lapā [**Entītijas**](entities.md).
 
 > [!CAUTION]
-> Datu avots, kura pamatā Power Query ir datu plūsma, izveido [datu plūsmu .Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) Nemainiet datu plūsmas nosaukumu administrēšanas centrā, Power Platform kas tiek izmantots programmā Customer Insights. Datu plūsmas pārdēvēšana rada problēmas ar atsaucēm starp Customer Insights datu avots un Dataverse datu plūsmu.
+>
+> - Datu avots, kura pamatā Power Query ir datu plūsma, izveido [datu plūsmu .Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) Nemainiet datu plūsmas nosaukumu administrēšanas centrā, Power Platform kas tiek izmantots programmā Customer Insights. Datu plūsmas pārdēvēšana rada problēmas ar atsaucēm starp Customer Insights datu avots un Dataverse datu plūsmu.
+> - Vienlaicīgai Power Query datu avotu novērtēšanai programmā Customer Insights ir tādi paši [atsvaidzināšanas ierobežojumi kā Dataflows PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Ja datu atsvaidzināšana neizdodas, jo tā ir sasniegusi novērtēšanas ierobežojumu, ieteicams pielāgot atsvaidzināšanas grafiku katrai datu plūsmai, lai nodrošinātu, ka datu avoti netiek apstrādāti vienlaikus.
 
 ### <a name="available-power-query-data-sources"></a>Pieejamie Power Query datu avoti
 
@@ -77,12 +79,12 @@ Datu uzņemšana no lokāls datu avotiem tiek atbalstīta, pamatojoties uz Micro
 
 Datu avoti, kas tiek izveidoti pēc vides saistīšanas Dataverse ar Customer Insights, pēc noklusējuma izmanto [Power Platform datu plūsmas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datu plūsmas atbalsta lokālo savienojamību, izmantojot datu vārtejas. Varat noņemt un atkārtoti izveidot datu avotus, kas pastāvēja pirms Dataverse vides saistīšanas, [izmantojot lokāls datu vārtejas](/data-integration/gateway/service-gateway-app).
 
-Datu vārtejas no esošas Power BI vides vai Power Apps vides būs redzamas, un tās varēsit atkārtoti izmantot programmā Customer Insights. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
+Datu vārtejas no esošas Power BI vai Power Apps vides būs redzamas, un tās varēsit atkārtoti izmantot programmā Customer Insights, ja datu vārteja un Customer Insights vide atrodas vienā Azure reģionā. Datu avotu lapā ir redzamas saites, kas ļauj pāriet uz Microsoft Power Platform vidi, kurā varat skatīt un konfigurēt lokālās datu vārtejas.
 
 > [!IMPORTANT]
 > Pārliecinieties, vai vārtejas ir atjauninātas uz jaunāko versiju. Varat instalēt atjauninājumu un pārkonfigurēt vārteju no uzvednes, kas parādīta vārtejas ekrānā tieši, vai [lejupielādēt jaunāko versiju](https://powerapps.microsoft.com/downloads/). Ja neizmantojat jaunāko vārtejas versiju, datu plūsmas atsvaidzināšana neizdodas ar tādiem kļūdu ziņojumiem kā **Atslēgvārds netiek atbalstīts: konfigurācijas rekvizīti. Parametra nosaukums: atslēgvārds**.
 >
-> Kļūdas, kas saistītas ar lokāls datu vārtejām programmā Customer Insights, bieži izraisa konfigurācijas problēmas. Papildinformāciju par datu vārteju problēmu novēršanu skatiet sadaļā [Lokāls datu vārtejas problēmu novēršana](/data-integration/gateway/service-gateway-tshoot).
+> Kļūdas, kas saistītas ar lokāls datu vārtejām programmā Customer Insights, bieži izraisa konfigurācijas problēmas. Papildinformāciju par datu vārteju problēmu novēršanu skatiet sadaļā [Lokāls datu vārtejas](/data-integration/gateway/service-gateway-tshoot) problēmu novēršana.
 
 ## <a name="edit-power-query-data-sources"></a>Datu avotu rediģēšana Power Query
 

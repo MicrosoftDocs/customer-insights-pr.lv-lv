@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411749"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463228"
 ---
 # <a name="service-limits-in-customer-insights"></a>Pakalpojumu ierobežojumi programmā Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411749"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmenti, mēri un prognozes | 300  | Kopējais segmentu [,](segments.md) mēru [un](measures.md) [prognožu](predictions-overview.md) skaits kopā nedrīkst pārsniegt 300.  |
 | Attiecības | 20 līmeņi ar padziļinātu informāciju par attiecībām entītiju ceļā. | Veidojot [segmentus](segments.md) vai [pasākumus](measures.md), izmantojot būvētāja interfeisu, entītiju ceļiem starp sākuma entītiju un mērķa entītiju var būt līdz 20 attiecībām.  |
+|Datu pieņemšana| Datu avotu vienlaicīgie Power Query novērtējumi ir ierobežoti. | Customer Insights ir tādi paši [atsvaidzināšanas ierobežojumi kā Dataflows PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Taisnīga darba vietu plānošana
 

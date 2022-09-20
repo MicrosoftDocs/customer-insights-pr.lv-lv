@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194932"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473651"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Klienta kartes pievienojumprogramma Dynamics 365 programmām (priekšskatījums)
 
@@ -32,7 +32,8 @@ Iegūstiet pilnu ainu par saviem klientiem tieši risinājuma Dynamics 365 progr
 - Lai jūsu Dynamics 365 dati tiktu kartēti uz Customer Insights klientu profiliem, ieteicams tos [uzņemt no Dynamics 365 programmas, izmantojot savienotāju Microsoft Dataverse](connect-power-query.md). Ja izmantojat citu metodi, lai uzņemtu Dynamics 365 kontaktpersonas (vai kontus), pārliecinieties `contactid`, vai lauks (vai`accountid`) ir iestatīts kā [primārā atslēga šim datu avots datu apvienošanas procesa laikā](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Lai skatītu datus, visiem Dynamics 365 pievienojumprogrammas Customer Card lietotājiem programmā Customer Insights ir jābūt [pievienotiem kā lietotājiem](permissions.md).
 - [Konfigurētās meklēšanas un filtrēšanas iespējas](search-filter-index.md) programmā Customer Insights.
-- Katra pievienojumprogrammas vadīkla balstās uz konkrētiem datiem programmā Customer Insights. Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs jūs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
+- Daži dati un vadīklas ir pieejamas tikai īpašu tipu vidēs. Pievienojumprogrammas konfigurācija informēs jūs, ja vadīkla nav pieejama atlasītā vides tipa dēļ. Šī kļūda tiks parādīta vadīklā, to atveidojot. Uzziniet vairāk par [vides izmantošanas gadījumiem](work-with-business-accounts.md).
+- Katra pievienojumprogrammas vadīkla balstās uz konkrētiem datiem programmā Customer Insights.
   - **Mērīšanas vadīklai** ir nepieciešami [konfigurēti klienta atribūtu mēri](measures.md).
   - **Izlūkošanas kontrolei** ir nepieciešami dati, kas ģenerēti, izmantojot [prognozes vai pielāgotus modeļus](predictions-overview.md).
   - **Klienta detalizētas informācijas vadīkla** parāda visus laukus no profila, kas pieejams vienotajā klienta profilā.
