@@ -7,21 +7,21 @@
 - name: Mācību katalogs
   items:
     - name: Sertifikācija kā Microsoft klientu datu platformas speciālists
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Darba sākšana ar pakalpojumu Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Datu uzņemšana
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Vienotais klienta profila izveide
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Darbs ar Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Datu bagātināšana un prognožu veikšana
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Ārējo savienojumu pārvaldība
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Administrējiet pakalpojumu Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Bezmaksas izmēģinājumversija
   items:
     - name: Reģistrēšanās bezmaksas izmēģinājumversijai
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Tīmekļa datu izmantošana personalizēšanai
       href: unknown-to-known.md
+    - name: Nezināmu klientu profilu pārvaldība
+      href: manage-unknown-profiles.md
 - name: Segmenti
   items:
     - name: Segmentu pārskats
