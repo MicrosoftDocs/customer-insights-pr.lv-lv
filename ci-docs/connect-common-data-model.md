@@ -1,7 +1,7 @@
 ---
 title: Izveidojiet savienojumu ar Common Data Model mapi, izmantojot Azure Data Lake kontu
 description: Darbs ar Common Data Model datiem, izmantojot programmu Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396095"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609951"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Izveidot savienojumu ar datiem programmā Azure Data Lake Storage
 
@@ -43,6 +43,10 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
 - Lietotājam, kurš iestata datu avots savienojumu, ir nepieciešamas vismazāk krātuves Blob data contributor atļaujas krātuves kontā.
 
 - Datu ezera krātuvē esošajiem datiem datu glabāšanai ir jāatbilst common data model standartam, un tiem ir jābūt kopējam datu modeļa manifestam, kas attēlo datu failu shēmu (*.csv vai *.parkets). Manifestā ir jāsniedz detalizēta informācija par entītijām, piemēram, entītiju kolonnām un datu tipiem, kā arī datu faila atrašanās vietu un faila tipu. Papildinformāciju skatiet sadaļā [Kopējā datu modeļa manifests](/common-data-model/sdk/manifest). Ja manifesta nav, administratori, kuriem ir piekļuve krātuves Blob datu īpašniekam vai krātuves Blob datu līdzstrādniekam, var definēt shēmu, norijot datus.
+
+## <a name="recommendations"></a>Ieteikumi
+
+Lai nodrošinātu optimālu veiktspēju, Customer Insights iesaka, ka nodalījuma lielums ir 1 GB vai mazāks, un nodalījuma failu skaits mapē nedrīkst pārsniegt 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Savienojuma izveide ar Azure Data Lake Storage
 
@@ -86,7 +90,7 @@ Nododiet datus, Dynamics 365 Customer Insights lai izmantotu savu Azure Data Lak
    > [!TIP]
    > Lai rediģētu entītiju JSON rediģēšanas interfeisā, atlasiet entītiju un pēc tam **Rediģējiet shēmas failu**. Veiciet izmaiņas un atlasiet **Saglabāt**.
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -144,7 +148,7 @@ Datu ielāde var aizņemt laiku. Pēc veiksmīgas atsvaidzināšanas pieņemtos 
 
    :::image type="content" source="media/ADLS_required.png" alt-text="dialoglodziņš, kurā redzams obligāts primārajai atslēgai":::
 
-1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana **tiek parādītas obligātās** vērtības. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
+1. Atlasītajām entītijām, kurām nepieciešama inkrementāla norīšana, **sadaļā** Pakāpeniska atsvaidzināšana tiek parādītas obligātās **vērtības**. Par katru no šīm entītijām skatiet rakstu [Inkrementāla atsvaidzinājuma konfigurēšana Azure datu ezera datu avotiem](incremental-refresh-data-sources.md).
 
 1. Atlasītajām entītijām, kurām primārā atslēga nav definēta, **sadaļā Primārā atslēga** tiek parādīta sadaļa **Obligāts**. Attiecībā uz katru no šīm vienībām:
    1. Atlasiet **Obligāts**. Tiek parādīts **entītijas** rediģēšanas panelis.
@@ -199,5 +203,101 @@ Varat atjaunināt opciju *Izveidot savienojumu ar krātuves kontu, izmantojot op
 1. Noklikšķiniet uz **Saglabāt**, lai lietotu izmaiņas un atgrieztos **lapā Datu avoti**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Bieži sastopami norīšanas kļūdu vai bojātu datu iemesli
+
+Datu uzņemšanas laikā daži no visbiežāk sastopamajiem iemesliem, kāpēc ieraksts var tikt uzskatīts par bojātu, ir šādi:
+
+- Datu tipi un lauku vērtības nesakrīt starp avota failu un shēmu
+- Kolonnu skaits avota failā neatbilst shēmai
+- Laukos ir rakstzīmes, kas izraisa kolonnu šķībību salīdzinājumā ar paredzamo shēmu. Piemēram: nepareizi formatēti citāti, neierakstīti citāti, jaunas rindiņas rakstzīmes vai rakstzīmes ar cilnēm.
+- Trūkst nodalījuma failu
+- Ja ir kolonnas datetime/datetime/datetimeoffset, to formāts ir jānorāda shēmā, ja tas neatbilst standarta formātam.
+
+### <a name="schema-or-data-type-mismatch"></a>Shēmas vai datu tipa neatbilstība
+
+Ja dati neatbilst shēmai, norīšanas process tiek pabeigts ar kļūdām. Izlabojiet vai nu avota datus, vai shēmu un atkārtoti uzņemiet datus.
+
+### <a name="partition-files-are-missing"></a>Trūkst nodalījuma failu
+
+- Ja norīšana bija veiksmīga bez bojātiem ierakstiem, bet jūs neredzat nekādus datus, rediģējiet failu model.json vai manifest.json, lai pārliecinātos, vai nodalījumi ir norādīti. Pēc tam [atsvaidziniet datu avots](data-sources.md#refresh-data-sources).
+
+- Ja datu norīšana notiek vienlaikus ar datu avotu atsvaidzināšanu automātiskās grafika atsvaidzināšanas laikā, nodalījuma faili var būt tukši vai nav pieejami Customer Insights apstrādei. Lai pielāgotos augšupējās atsvaidzināšanas grafikam, mainiet [sistēmas atsvaidzināšanas grafiku](schedule-refresh.md) vai datu avots atsvaidzināšanas grafiku. Izlīdziniet laiku tā, lai atsvaidzināšana nenotiktu uzreiz, un nodrošina jaunākos datus, kas jāapstrādā programmā Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datuma laika lauki nepareizā formātā
+
+Entītijas datuma laika lauki nav ISO 8601 vai en-US formātos. Customer Insights noklusējuma datuma laika formāts ir en-US formāts. Visiem entītijas datuma laika laukiem jābūt vienā formātā. Customer Insights atbalsta citus formātus ar nosacījumu, ka modeļa vai manifest.json avota vai entītijas līmenī tiek veidotas anotācijas vai iezīmes. Piemēram:
+
+**Modelis.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json gadījumā datuma laika formātu var norādīt entītijas līmenī vai atribūtu līmenī. Entītijas līmenī izmantojiet "exhibitsTraits" entītijā *.manifest.cdm.json, lai definētu datuma laika formātu. Atribūtu līmenī atribūta atribūtā izmantojiet "appliedTraits" entityname.cdm.json.
+
+**Manifest.json entītijas līmenī**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atribūtu līmenī**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

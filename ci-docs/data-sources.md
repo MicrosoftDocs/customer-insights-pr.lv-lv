@@ -1,7 +1,7 @@
 ---
 title: Datu avotu pārskats
 description: Uzziniet, kā importēt vai uzņemt datus no dažādiem avotiem.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245658"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610061"
 ---
 # <a name="data-sources-overview"></a>Datu avotu pārskats
 
@@ -65,7 +65,9 @@ Atlasiet datu avots, lai skatītu pieejamās darbības.
 
 ## <a name="refresh-data-sources"></a>Atsvaidzināt datu avotus
 
-Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. [Lokālie datu avoti](connect-power-query.md#add-data-from-on-premises-data-sources) atsvaidzina savus grafikus, kas tiek iestatīti datu uzņemšanas laikā. Attiecībā uz pievienotajiem datu avotiem datu uzņemšana patērē jaunākos datus, kas pieejami no šīs datu avots.
+Datu avotus var atsvaidzināt pēc automātiska grafika vai atsvaidzināt manuāli pēc pieprasījuma. [Lokālie datu avoti](connect-power-query.md#add-data-from-on-premises-data-sources) atsvaidzina savus grafikus, kas tiek iestatīti datu uzņemšanas laikā. Padomus par problēmu novēršanu skatiet rakstā [Uz PPDF Power Query balstītas datu avots atsvaidzināšanas problēmu novēršana](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Attiecībā uz pievienotajiem datu avotiem datu uzņemšana patērē jaunākos datus, kas pieejami no šīs datu avots.
 
 Dodieties uz **administrēšanas** > **sistēmas** > [**grafiku**](schedule-refresh.md), lai konfigurētu sistēmas ieplānotos uzņemto datu avotu atsvaidzinājumus.
 
@@ -73,8 +75,40 @@ Lai atsvaidzinātu datu avots pēc pieprasījuma:
 
 1. Dodieties uz **Dati** > **Datu avoti**.
 
-1. Atlasiet atsvaidzināmo datu avots un atlasiet **Atsvaidzināt**. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
+1. Atlasiet datu avots, kuru vēlaties atsvaidzināt, un atlasiet **Atsvaidzināt**. Datu avots tagad tiek iespējots manuālai atsvaidzināšanai. Datu avota atsvaidzināšana atjauninās gan entitījas shēmu, gan datus visām entitījām, kuras ir norādītas datu avotā.
 
 1. Atlasiet statusu, lai atvērtu progresa detalizētās **informācijas** rūti un skatītu norisi. Lai atceltu darbu, rūts apakšdaļā atlasiet **Atcelt darbu**.
+
+## <a name="corrupt-data-sources"></a>Bojāti datu avoti
+
+Norijot datus, var būt bojāti ieraksti, kas var izraisīt datu norīšanas procesa pabeigšanu ar kļūdām vai brīdinājumiem.
+
+> [!NOTE]
+> Ja datu norīšana tiek pabeigta ar kļūdām, turpmākā apstrāde (piemēram, apvienošana vai darbību izveide), kas izmanto šo datu avots, tiks izlaista. Ja norīšana ir pabeigta ar brīdinājumiem, turpmāka apstrāde turpinās, bet daži ieraksti var netikt iekļauti.
+
+Šīs kļūdas var redzēt uzdevuma detaļās.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detalizēta informācija par uzdevumu, kurā redzama kļūda bojāti dati.":::
+
+Bojāti ieraksti tiek rādīti sistēmas izveidotās entītijās.
+
+### <a name="fix-corrupt-data"></a>Bojātu datu labošana
+
+1. Lai skatītu bojātos datus, dodieties uz **Datu entītijas** > **un sadaļā Sistēma** meklējiet bojātās **entītijas**. Korumpētu vienību nosaukšanas shēma: "DataSourceName_EntityName_corrupt".
+
+1. Atlasiet bojātu entītiju un pēc tam cilni **Dati**.
+
+1. Identificējiet bojātos laukus ierakstā un iemeslu.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Korupcijas iemesls." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Datu** > **entītijas** rāda tikai daļu no bojātajiem ierakstiem. Lai skatītu visus bojātos ierakstus, eksportējiet failus uz krātuves konta konteineru, [izmantojot Customer Insights eksportēšanas procesu](export-destinations.md). Ja izmantojāt savu krātuves kontu, varat arī apskatīt sava krātuves konta mapi Customer Insights.
+
+1. Labojiet bojātos datus. Piemēram, Azure Data Lake datu avotiem [labojiet datus datu ezera krātuvē vai atjauniniet datu tipus manifest/model.json failā](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Datu Power Query avotiem izlabojiet datus avota failā un [izlabojiet datu tipa transformācijas darbību](connect-power-query.md#data-type-does-not-match-data)**Power Query lapā - Rediģēt vaicājumus**.
+
+Pēc nākamās datu avotu atsvaidzināšanas labotie ieraksti tiek lietoti programmā Customer Insights un nodoti lejupstraumes procesiem.
+
+Piemēram, kolonnas 'dzimšanas diena' datu tips ir iestatīts kā 'datums'. Klienta ieraksta dzimšanas diena ir ievadīta kā '01/01/19777'. Sistēma šo ierakstu atzīmē kā bojātu. Mainiet dzimšanas dienu avota sistēmā uz "1977". Pēc datu avotu automātiskās atsvaidzināšanas laukam tagad ir derīgs formāts, un ieraksts tiek noņemts no bojātās entītijas.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

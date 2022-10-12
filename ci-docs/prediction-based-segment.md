@@ -1,23 +1,23 @@
 ---
 title: Segmenta izveide, pamatojoties uz prognoze modeli
 description: Izveidojiet segmentus, balstoties prognozes modeļa izvades entitījā.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082431"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610429"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Segmenta izveide, balstoties prognozes modelī (priekšskatījums)
 
-Prognožu rezultāti reizēm attiecas tikai uz jūsu klientu apakškopu. Palieliniet ieteikumu personalizāciju, izveidojot segmentus no prognozes modeļu rezultātiem. Piemēram, iespējams, vēlēsities sniegt konkrētus ieteikumus klientiem, kuri dod priekšroku noteikta veida pakalpojumam. 
+Prognožu rezultāti reizēm attiecas tikai uz jūsu klientu apakškopu. Palieliniet ieteikumu personalizāciju, izveidojot segmentus no prognozes modeļu rezultātiem. Piemēram, iespējams, vēlēsities sniegt konkrētus ieteikumus klientiem, kuri dod priekšroku noteikta veida pakalpojumam.
 
 ## <a name="prerequisites"></a>Priekšnosacījumi
 
@@ -34,10 +34,15 @@ Prognožu rezultāti reizēm attiecas tikai uz jūsu klientu apakškopu. Palieli
 
 1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
 
-1. Atlasiet vertikālo daudzpunkti blakus modelim, kuru vēlaties pārskatīt, un atlasiet **Skatīt**.
+1. Atlasiet modeli, kuru vēlaties pārskatīt, un atlasiet **Skats**.
 
 1. Rezultātu lapā atlasiet **Izveidot segmentu**. Lai iegūtu papildu informāciju par rezultātu lapu, pārskatiet rakstu par modeli.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Ekrānuzņēmums prognožu rezultātu lapai ar izceltu Segmenta izveides darbību.":::
 
-1. Izveidojiet jaunu segmentu, balstoties atlasītā modeļa izvades entitījā. Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
+1. Izveidojiet jaunu segmentu, izmantojot atribūtus no atlasītā modeļa izvades entītijas. Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
+
+> [!TIP]
+> Segmentu prognoze modelim var izveidot arī lapā Segmenti **,** atlasot **Jauns** un izvēloties **Izveidot no** > **informācijas**. Papildinformāciju skatiet sadaļā [Jauna segmenta izveide ar ātriem segmentiem](segment-quick.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

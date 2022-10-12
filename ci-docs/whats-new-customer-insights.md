@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409366"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609601"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -228,9 +228,9 @@ Papildinformāciju skatiet sadaļā [Vides īpašnieka maiņa](manage-environmen
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Datu sagatavošanas procesā ir norādīts bojātu ierakstu korupcijas iemesls
 
-Datu sagatavošana tagad parāda korupcijas iemeslu visiem laukiem ar bojātiem datiem. Informācija tiek sniegta individuālā ieraksta līmenī, lai to varētu viegli identificēt. 
+Datu sagatavošana tagad parāda korupcijas iemeslu visiem laukiem ar bojātiem datiem. Informācija tiek sniegta individuālā ieraksta līmenī, lai to varētu viegli identificēt.
 
-Papildinformāciju skatiet sadaļā [Bojāti datu avoti](entities.md#corrupted-data-sources).
+Papildinformāciju skatiet sadaļā [Datu avotu bojājumi](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Priekšskatījuma beigas atskaišu veidošanas līdzekļiem iesaistes ieskatu iespējā
 

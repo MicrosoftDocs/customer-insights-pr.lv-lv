@@ -1,7 +1,7 @@
 ---
 title: Produktu ieteikumu prognozes rokasgrāmatas paraugs
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta produktu ieteikumu prognozes modeli.
-ms.date: 05/16/2022
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,37 +12,36 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
-ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
+ms.openlocfilehash: 2b42a89e3f4ec8cf4f0769128b8536973365f1cb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/16/2022
-ms.locfileid: "8762695"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610153"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Produktu ieteikumu prognozes rokasgrāmatas paraugs
 
-Mēs paskaidrosim, kā izbeigt produktu ieteikumu prognozi, izmantojot tālāk sniegto datu paraugu.
+Šajā ceļvedī ir sniegts visaptverošs piemērs par produktu ieteikumu prognoze datu paraugu izmantošanu. Mēs iesakām izmēģināt šo prognoze [jaunā vidē](manage-environments.md).
 
-## <a name="scenario"></a>Scenārijs
+## <a name="scenario"></a>Situācija
 
-Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. Šo mērķis ir saprast, kādus produktus viņiem ieteikt periodiskajiem klientiem. Zinot, kādi klienti **varētu nopirkt**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz konkrētiem produktiem.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus. Viņi pārdod produktus, izmantojot savu Contoso kafijas vietni. Šo mērķis ir saprast, kādus produktus viņiem ieteikt periodiskajiem klientiem. Zinot, ko klienti **, visticamāk, iegādāsies**, var palīdzēt viņiem ietaupīt mārketinga pasākumus, koncentrējoties uz konkrētām precēm.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
 - Vismaz [Līdzautora atļaujas](permissions.md) Customer Insights.
-- Ieteicams ieviest tālāk norādītos soļus [jaunā vidē](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>1.uzdevums - Datu uzņemšana
 
-Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā.
+Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [savienojuma izveidi ar Power Query datu avots](connect-power-query.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar datu uzņemšanu kopumā.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Uzņemt klientu datus no e-komercijas platformas
 
-1. Izveidojiet datu avotu ar nosaukumu **e-komercija**, izvēlieties importēšanas opciju un atlasiet **Tekstu/CSV** savienotāju.
+1. Izveidojiet Power Query datu avots ar nosaukumu **e-komercija un** atlasiet **teksta/CSV savienotāju**.
 
-1. Ievadiet e-komercijas kontaktpersonu URL: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
+1. Ievadiet e-komercijas kontaktpersonu vietrādi URL:https://aka.ms/ciadclasscontacts.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
    - **DateOfBirth**: Datums
@@ -50,7 +49,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pārveidojiet dzimšanas datumu uz datumu.":::
 
-1. Labās puses rūts laukā "Nosaukums" pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
+1. Labās **puses rūts laukā Nosaukums** pārdēvējiet savu datu avots par **e-komercijaskontaktiem**.
 
 1. **Saglabājiet** datu avotu.
 
@@ -58,106 +57,109 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 1. Pievienojiet citas datu kopas tiem pašiem **e-komercijas** datu avotiem. Vēlreiz izvēlieties **Tekstu/CSV** savienotāju.
 
-1. Ievadiet tiešsaistes pirkumu **datu URL**[https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
+1. Ievadiet tiešsaistes pirkumu datu https://aka.ms/ciadclassonline vietrādi URL.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
    - **PurchasedOn**: Datums/Laiks
    - **TotalPrice**: Valūta
 
-1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommercePurchases**.
+1. **Sānu rūts laukā Nosaukums** pārdēvējiet savu datu avots par **e-komercijas iepirkumiem**.
 
 1. **Saglabājiet** datu avotu.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Klienta datu uzņemšana no lojalitātes shēmas
 
-1. Izveidojiet datu avotu ar nosaukumu **LoyaltyScheme**, izvēlieties importēšanas opciju un atlasiet **Tekstu/CSV** savienotāju.
+1. Izveidojiet datu avots ar nosaukumu **LoyaltyScheme** un atlasiet **teksta/CSV** savienotāju.
 
-1. Ievadiet e-komercijas kontaktpersonu URL [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
+1. Ievadiet lojālo klientu vietrādi URL https://aka.ms/ciadclasscustomerloyalty.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
    - **DateOfBirth**: Datums
    - **RewardsPoints**: Vesels skaitlis
    - **CreatedOn**: Datums/Laiks
 
-1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
+1. Labās **puses rūts laukā Nosaukums** pārdēvējiet savu datu avots par **loyCustomers**.
 
 1. **Saglabājiet** datu avotu.
 
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
+Pārskatiet rakstu [par datu apvienošanu](data-unification.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar datu apvienošanu kopumā.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-product-recommendation-prediction"></a>3. uzdevums — konfigurējiet produktu ieteikumu prognozi
+## <a name="task-3---create-transaction-history-activity"></a>3. uzdevums — darījumu vēstures darbības izveide
 
-Ar vienotiem klientu profiliem mēs tagad varam palaist produktu ieteikumu prognoze.
+Pārskatiet rakstu [par klientu darbībām](activities.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar darbību izveidi kopumā.
 
-1. Dodieties uz **Informācija** > **Prognoze**, izvēlieties **Produktu ieteikums**.
+1. Izveidojiet darbību, ko sauc par **e-komercijas iepirkumiem**, izmantojot *e-komercijas iepirkumu:e-komercijas* entītiju un tās primāro atslēgu **PurchaseId**.
+
+1. Izveidojiet relāciju starp *e-komercijas iepirkumiem:e-komercija* un *e-komercijaskontakti:e-komercija* **Ar ContactID** kā ārējo atslēgu, lai savienotu abas entītijas.
+
+1. Atlasiet **TotalPrice** priekš **EventActivity** un **PurchasedOn** for the **TimeStamp**.
+
+1. Aktivitātes **tipam** atlasiet **SalesOrderLine** un semantiski kartējiet aktivitātes datus.
+
+1. Palaidiet aktivitāti.
+
+## <a name="task-4---configure-product-recommendation-prediction"></a>4. uzdevums — konfigurējiet produktu ieteikumu prognozi
+
+Kad ir ieviesti vienoti klientu profili un izveidota darbība, palaidiet produkta ieteikumu prognoze.
+
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
+
+1. Cilnē **Izveide** atlasiet **Izmantot modeli** elementā **Produkta ieteikumi (priekšskatījums).**
 
 1. Atlasiet **Sākt darbu**.
 
 1. Nosauciet modeļa **OOB produktu ieteikumu modeļa prognozi** un izvades entītiju **OOBProductRecommendationMoproductPrediction**.
 
-1. Definējiet trīs modeļa nosacījumus:
+1. Atlasiet **Tālāk**.
 
-   - **Produktu skaits**: iestatiet šo vērtību uz **5**. Šis iestatījums nosaka, cik daudz produktu klientiem vēlaties ieteikt.
-
-   - **Atkārtojiet paredzamos pirkumus**: atlasiet **Jā**, lai norādītu, ka vēlaties iekļaut produktus ieteikumā, ko klienti ir iegādājušies iepriekš.
-
-   - **Atskata logs**: atlasiet vismaz **365 dienas**. Šis iestatījums nosaka, cik tālu modelis atskatīsies uz klienta darbībām, lai izmantotu tās kā ieteikumu ievadi.
+1. Definējiet modeļa preferences:
+   - **Produktu** skaits: **5**, lai definētu, cik daudz produktu vēlaties ieteikt saviem klientiem.
+   - **Paredzamie** atkārtotie pirkumi: **jā**, lai ieteikumā iekļautu iepriekš iegādātos produktus.
+   - **Atskatīšanās logs:** **365 dienas**, lai definētu, cik tālu modelis atskatīsies atpakaļ, pirms atkal ieteiks produktu.
 
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Modeļa preferences produktu ieteikumu modelim.":::
 
-1. **Darbībā Pievienot nepieciešamos datus** atlasiet **Pievienot datus**.
+1. Atlasiet **Tālāk**.
 
-1. **Rūtī Datu pievienošana** izvēlieties **SalesOrderLine** kā pirkšanas vēstures entītiju. Šajā brīdī tas, visticamāk, vēl nav konfigurēts. Rūtī atveriet saiti, lai izveidotu darbību, veicot šādas darbības:
-   1. **Ievadiet aktivitātes nosaukumu** un izvēlieties *eCommercePurchases:eCommerce* kā **darbību entītiju**. Primārā **atslēga** ir *PurchaseId*.
-   1. Definējiet un nosauciet saistību ar entītiju *eCommerceContacts*:eCommerce un izvēlieties **ContactId** kā ārējo atslēgu.
-   1. Aktivitāšu apvienošanai iestatiet **notikuma aktivitāti** kā *TotalPrice* un Timestamp uz *PurchasedOn*. Varat norādīt citus laukus, kā norādīts [klientu darbībās](activities.md).
-   1. Tipam **Aktivitāte** izvēlieties *SalesOrderLine*. Kartējiet šādus aktivitāšu laukus:
-      - Pasūtījuma rindas ID: PurchaseId
-      - Pasūtījuma ID: PurchaseId
-      - Pasūtījuma dati: PurchasedOn
-      - Produkta ID: ProductId
-      - Summa: Kopējā cena
-   1. Pārskatiet un pabeidziet darbību pirms atgriešanās modeļa konfigurācijā.
+1. Darbībā Pievienot **pirkumu vēsturi** atlasiet **Pievienot datus**.
 
-1. **Atpakaļ solī Atlasīt aktivitātes** izvēlieties jaunizveidoto darbību **sadaļā Aktivitātes**. Atlasiet **Tālāk**, un atribūtu kartējums jau ir aizpildīts. Atlasiet **Saglabāt**.
+1. Atlasiet **SalesOrderLine** un entītiju e-komercijas pirkumi un atlasiet **Tālāk**. Nepieciešamie dati tiek automātiski aizpildīti no darbības. Atlasiet **Saglabāt** un pēc tam **Tālāk**.
 
-1. Šajā parauga rokasgrāmatā mēs izlaižam kopu **Pievienot informāciju par** produktu un **produktu filtriem**, jo mums nav informācijas par produktu datu.
+1. **Izlaidiet darbības Pievienot informāciju par** produktu un **Produktu filtri**, jo mums nav informācijas par produktu.
 
-1. **Solī Datu atjauninājumi** iestatiet modeļa grafiku.
+1. **Darbībā Datu atjauninājumi** modeļa grafikam atlasiet **Katru mēnesi**.
 
-   Modelis ir regulāri jāapmāca, lai apgūtu jaunus rakstus, kad tiek uzņemti jauni dati. Šajā piemērā atlasiet **Reizi mēnesī**.
+1. Atlasiet **Tālāk**.
 
-1. Pēc visas detalizētās informācijas pārskatīšanas atlasiet **Saglabāt un palaist**. Modeļa palaišanai pirmo reizi būs nepieciešamas dažas minūtes.
+1. Pēc visas detalizētās informācijas pārskatīšanas atlasiet **Saglabāt un palaist**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>4.uzdevums — pārskatīt modeļa rezultātus un paskaidrojumus
+## <a name="task-5---review-model-results-and-explanations"></a>5. uzdevums - modeļa rezultātu un skaidrojumu pārskatīšana
 
-Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Tagad jūs varat pārskatīt produktu ieteikumu modeļa paskaidrojumus. Papildinformāciju skatiet rakstā [Prognozes statusa un rezultātu pārskatīšana](predict-transactional-churn.md#review-a-prediction-status-and-results).
+Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Pārskatiet [produkta ieteikumu modeļa skaidrojumus](predict-transactional-churn.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-purchased-products"></a>5. uzdevums — izveidot augstas vērtības iegādātu produktu segmentu
+## <a name="task-6---create-a-segment-of-high-purchased-products"></a>6. uzdevums — izveidot augstas vērtības iegādātu produktu segmentu
 
-Palaižot ražošanas modeli, tiek izveidota jauna entītija, ko var redzēt vienumā **Dati** > **Entītijas**.
+Izpildot modeli, tiek izveidota jauna entītija, kas tiek iekļauta sarakstā **Dati** > **Entītijas**. Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju.
 
-Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju.
+1. Rezultātu lapā atlasiet **Izveidot segmentu**.
 
-1. Ejiet uz **Segmenti**. Atlasiet **Jauns** un izvēlieties **Izveidot no informācijas**.
+1. Izveidojiet kārtulu, izmantojot entītiju **OOBProductRecommendationModelPrediction**, un definējiet segmentu:
+   - **Lauks**: Produkta ID
+   - **Vērtība**: atlasiet trīs labākos produktu ID
 
-   ![Izveidot segmentu ar modeļa izvadi.](media/segment-intelligence.png)
+1. Atlasiet **Saglabāt** un **palaist** segmentu.
 
-1. Atlasiet **OOBProductRecommendationModelPrediction** galapunktu un definējiet segmentu:
+Tagad jums ir dinamiski atjaunināts segments, kas identificē klientus, kuri varētu būt ieinteresēti iegādāties piecus visvairāk ieteiktos produktus. Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
 
-   - Lauks: ProductID
-   - Vērtība: atlasiet trīs populārāko produktu ID
-
-   :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Izveidojiet segmentu no modeļa rezultātiem.":::
-
-Tagad jums ir segments, kas ir dinamiski atjaunināts, kas identificē klientus, kuri varētu būt ieinteresēti iegādāties trīs ieteiktākos produktus.
-
-Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
+> [!TIP]
+> Segmentu prognoze modelim var izveidot arī lapā Segmenti **,** atlasot **Jauns** un izvēloties **Izveidot no** > **informācijas**. Papildinformāciju skatiet sadaļā [Jauna segmenta izveide ar ātriem segmentiem](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

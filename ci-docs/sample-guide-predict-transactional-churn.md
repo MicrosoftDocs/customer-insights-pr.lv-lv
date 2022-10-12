@@ -1,44 +1,43 @@
 ---
 title: Transakciju zudumu prognozes parauga ceļvedis
 description: Izmantojiet šo parauga ceļvedi, lai izmēģinātu nestandarta transakciju zudumu prognozes modeli.
-ms.date: 05/11/2022
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0ccc32b6e5e96adf6f2fa8c6d52960a07d1513f3
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741328"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609693"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Transakciju zudumu prognozes parauga ceļvedis
 
-Mēs jums paskaidrosim, kā izbeigt transakciju zudumu prognozi programmā Customer Insights, izmantojot tālāk sniegtos datus. Visi šajā rokasgrāmatā izmantotie dati nav īsti klientu dati, un tie ir daļa no Contoso datu kopas, kas ir atrodama vidē *Demo* jūsu Customer Insights abonementā.
+Šajā ceļvedī jums tiks izskaidrots visaptverošs piemērs par transakciju zuduma prognoze, izmantojot datu paraugus. Mēs iesakām izmēģināt šo prognoze [jaunā vidē](manage-environments.md).
 
-## <a name="scenario"></a>Scenārijs
+## <a name="scenario"></a>Situācija
 
-Contoso ir uzņēmums, kas ražo kvalitatīvu kafiju un kafijas automātus, ko viņi pārdod, izmantojot savu Contoso Coffee mājaslapu. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
+Contoso ir uzņēmums, kas ražo augstas kvalitātes kafijas un kafijas automātus. Viņi pārdod produktus, izmantojot savu Contoso kafijas vietni. To mērķis ir noskaidrot, kuri klienti, kas parasti iegādājas viņu produktus, pārtrauks aktivitāti nākamajās 60 dienās. Zinot, kurš no saviem klientiem varētu **zust**, var palīdzēt ietaupīt mārketinga pasākumus, koncentrējoties uz to saglabāšanu.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Vismaz [Līdzautora atļaujas](permissions.md) Customer Insights.
-- Ieteicams ieviest tālāk norādītos soļus [jaunā vidē](manage-environments.md).
+- Vismaz [Līdzdalībnieka atļaujas](permissions.md).
 
 ## <a name="task-1---ingest-data"></a>1.uzdevums - Datu uzņemšana
 
-Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu importēšanu, izmantojot Power Query savienotājus](connect-power-query.md). Tālāk sniegtajā informācijā tiek pieņemts, ka esat iepazinies ar datu uzņemšanu kopumā. 
+Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [savienojuma izveidi ar Power Query datu avots](connect-power-query.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar datu uzņemšanu kopumā.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Uzņemt klientu datus no e-komercijas platformas
 
-1. Izveidojiet datu avotu ar nosaukumu **e-komercija**, izvēlieties importēšanas opciju un atlasiet **Tekstu/CSV** savienotāju.
+1. Izveidojiet datu avots ar nosaukumu **e-komercija** un atlasiet **teksta/CSV** savienotāju.
 
 1. Ievadiet URL e-komercijas kontaktpersonām https://aka.ms/ciadclasscontacts.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
 
@@ -47,7 +46,7 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pārveidot DoB par Datumu.":::
 
-1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommerceContacts**
+1. Labās **puses rūts laukā Nosaukums** pārdēvējiet savu datu avots par **e-komercijaskontaktiem**
 
 1. Saglabājiet datu avotu.
 
@@ -55,26 +54,26 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
 
 1. Pievienojiet citas datu kopas tiem pašiem **e-komercijas** datu avotiem. Vēlreiz izvēlieties **Tekstu/CSV** savienotāju.
 
-1. Ievadiet **Tiešsaistes pirkumu** datu URL https://aka.ms/ciadclassonline.
+1. Ievadiet tiešsaistes pirkumu datu https://aka.ms/ciadclassonline vietrādi URL.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
 
    - **PurchasedOn**: Datums/Laiks
    - **TotalPrice**: Valūta
-   
-1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **eCommercePurchases**.
+
+1. Labās **puses rūts laukā Nosaukums** pārdēvējiet savu datu avots par **e-komercijas iepirkumiem**.
 
 1. Saglabājiet datu avotu.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Klienta datu uzņemšana no lojalitātes shēmas
 
-1. Izveidojiet datu avotu ar nosaukumu **LoyaltyScheme**, izvēlieties importēšanas opciju un atlasiet **Tekstu/CSV** savienotāju.
+1. Izveidojiet datu avots ar nosaukumu **LoyaltyScheme** un atlasiet **teksta/CSV** savienotāju.
 
 1. Ievadiet URL e-komercijas kontaktpersonām https://aka.ms/ciadclasscustomerloyalty.
 
-1. Rediģējot datus, atlasiet **Pārveidot** un pēc tam **Izmantot pirmajā rindā kā galvenes**.
+1. Rediģējot datus, atlasiet **Pārveidot un pēc tam** izmantot pirmo rindu kā **galvenes**.
 
 1. Atjauniniet tālāk uzskaitīto kolonnu datu tipu:
 
@@ -82,68 +81,86 @@ Pārskatiet rakstus [par datu uzņemšanu](data-sources.md) un [datu avotu impor
    - **RewardsPoints**: Vesels skaitlis
    - **CreatedOn**: Datums/Laiks
 
-1. Labās puses rūts laukā **Nosaukums** pārdēvējiet savu datu avotu no **Vaicājuma** uz **loyCustomers**.
+1. Labās **puses rūts laukā Nosaukums** pārdēvējiet savu datu avots par **loyCustomers**.
 
 1. Saglabājiet datu avotu.
 
 ## <a name="task-2---data-unification"></a>2.uzdevums — Datu apvienošana
 
+Pārskatiet rakstu [par datu apvienošanu](data-unification.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar datu apvienošanu kopumā.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-transaction-churn-prediction"></a>3.uzdevums — konfigurēt transakciju zudumu prognozi
+## <a name="task-3---create-transaction-history-activity"></a>3. uzdevums — darījumu vēstures darbības izveide
 
-Ja ir ieviesti vienotie klientu profili, mēs tagad varam palaist transakcijas prognoze. Detalizētus soļus skatiet rakstā Transakcijas [čurkste prognoze](predict-transactional-churn.md). 
+Pārskatiet rakstu [par klientu darbībām](activities.md). Tālāk sniegtā informācija pieņem, ka esat iepazinies ar darbību izveidi kopumā.
 
-1. Atveriet **Informācija** > **Atklāt** un atlasiet, lai izmantotu **Klientu zudumu modeli**.
+1. Izveidojiet darbību, ko sauc par **e-komercijas iepirkumiem**, izmantojot *e-komercijas iepirkumu:e-komercijas* entītiju un tās primāro atslēgu **PurchaseId**.
 
-1. Atlasiet opciju **Abonēšana** un atlasiet **Sākt darbu**.
+1. Izveidojiet relāciju starp *e-komercijas iepirkumiem:e-komercija* un *e-komercijaskontakti:e-komercija* **Ar ContactID** kā ārējo atslēgu, lai savienotu abas entītijas.
+
+1. Atlasiet **TotalPrice** priekš **EventActivity** un **PurchasedOn** for the **TimeStamp**.
+
+1. Aktivitātes **tipam** atlasiet **SalesOrderLine** un semantiski kartējiet aktivitātes datus.
+
+1. Palaidiet aktivitāti.
+
+## <a name="task-4---configure-transaction-churn-prediction"></a>4. uzdevums - konfigurējiet transakciju prognoze
+
+Kad ir ieviesti un tiek veikti vienoti klientu profili, palaidiet transakciju prognoze.
+
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
+
+1. **Cilnē Izveide** atlasiet **Izmantot modeli** **klienta zuduma modelī**.
+
+1. Atlasiet **Transakcijas**, lai noteiktu zuduma veidu, un pēc tam **sākt darbu**.
 
 1. Nosauciet modeli **OOB Abonementu zudumu prognoze** un izvades entītiju **OOBSubscriptionChurnPrediction**.
 
-1. Definējiet divus zuduma modeļa nosacījumus:
+1. Atlasiet **Tālāk**.
 
-   * **Prognozes logs**: **vismaz 60** dienas. Šis iestatījums nosaka, cik tālā nākotnē mēs vēlamies prognozēt klientu zudumu.
+1. Definējiet modeļa preferences:
 
-   * **Zuduma definīcija**: **vismaz 60** dienas. Ilgums bez pirkuma, pēc kura klients tiek uzskatīts par zudušu.
+   - **prognoze logs**: **60** dienas, lai definētu, cik tālu nākotnē mēs vēlamies paredzēt klientu aizplūšanu.
 
-     :::image type="content" source="media/model-levers.PNG" alt-text="Atlasiet modeļa sviras Prognozes logs un Zuduma definīcija.":::
+   - **Zuduma definīcija**: **60** dienas, lai norādītu ilgumu bez pirkuma, pēc kura klients tiek uzskatīts par sačakarētu.
+
+     :::image type="content" source="media/model-levers.PNG" alt-text="Atlasiet modeļa preferences prognoze Logu un Zuduma definīciju.":::
+
+1. Atlasiet **Tālāk**.
 
 1. Atlasiet **Pirkuma vēsturi (obligāti)** un atlasiet **Pievienot datus** pirkumu vēsturei.
 
-1. Pievienojiet **eCommercePurchases : e-komercija** entītiju un kartējiet laukus no e-komercijas uz atbilstošiem modelī vajadzīgajiem laukiem.
-
-1. Apvienojiet **eCommercePurchases: e-komercijas** entītiju ar **ECommerceContacts: e-komerciju**.
+1. Atlasiet **SalesOrderLine** un entītiju e-komercijas pirkumi un atlasiet **Tālāk**. Nepieciešamie dati tiek automātiski aizpildīti no darbības. Atlasiet **Saglabāt** un pēc tam **Tālāk**.
 
    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Pievienojieties e-komercijas entītijām.":::
 
-1. Lai iestatītu modeļa grafiku, atlasiet **Tālāk**.
+1. Izlaidiet **darbību Papildu dati (neobligāti).**
 
-   Modelis ir regulāri jāapmāca, lai apgūtu jaunus rakstus, kad tiek uzņemti jauni dati. Šajā piemērā atlasiet **Reizi mēnesī**.
+1. **Darbībā Datu atjauninājumi** modeļa grafikam atlasiet **Katru mēnesi**.
 
 1. Pēc visas detalizētās informācijas pārskatīšanas atlasiet **Saglabāt un palaist**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>4.uzdevums — pārskatīt modeļa rezultātus un paskaidrojumus
+## <a name="task-5---review-model-results-and-explanations"></a>5. uzdevums - modeļa rezultātu un skaidrojumu pārskatīšana
 
-Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Tagad varat pārskatīt čurkstes modeļa skaidrojumus. Papildinformāciju skatiet rakstā [Prognozes statusa un rezultātu pārskatīšana](predict-transactional-churn.md#review-a-prediction-status-and-results).
+Ļaujiet modelim pabeigt datu apmācīšanu un skaitīšanu. Pārskatiet zuduma modeļa skaidrojumus. Papildinformāciju skatiet sadaļā [prognoze rezultātu](predict-transactional-churn.md#view-prediction-results) skatīšana.
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>5.uzdevums — Izveidot augsta zudumu riska klientu segmentu
+## <a name="task-6---create-a-segment-of-high-churn-risk-customers"></a>6. uzdevums - Izveidot augsta zuduma riska klientu segmentu
 
-Palaižot ražošanas modeli, tiek izveidota jauna entītija, ko var redzēt vienumā **Dati** > **Entītijas**.   
+Palaižot ražošanas modeli, tiek izveidota jauna entītija, kas ir norādīta sadaļā **Datu** > **elementi**. Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju.
 
-Varat izveidot jaunu segmentu, par pamatu izmantojot modelī izveidotu entītiju.
+1. Rezultātu lapā atlasiet **Izveidot segmentu**.
 
-1.  Ejiet uz **Segmenti**. Atlasiet vienumu **Jauns** un izvēlieties **Izveidot no** > **Informācija**. 
+1. Izveidojiet kārtulu, **izmantojot entītiju OOBeCommerceChurnPrediction**, un definējiet segmentu:
+   - **Lauks**: ChurnScore
+   - **Operators**: lielāks par
+   - **Vērtība**: 0,6
 
-   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Izveidot segmentu ar modeļa izvadi.":::
+1. Atlasiet **Saglabāt** un **palaist** segmentu.
 
-1. **Atlasiet OOBeCommerceChurnPrediction** galapunktu un definējiet segmentu: 
-   - Lauks: ChurnScore
-   - Operators: ir lielāks nekā
-   - Vērtība: 0.6
+Tagad jums ir segments, kas ir dinamiski atjaunināts un kas identificē augsta zuduma riska klientus. Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
 
-Tagad jums ir segments, kas ir dinamiski atjaunināts un kas identificē klientus ar augstu čurkstes risku.
-
-Papildinformācijai skatiet [Segmentu izveide un pārvaldība](segments.md).
-
+> [!TIP]
+> Segmentu prognoze modelim var izveidot arī lapā Segmenti **,** atlasot **Jauns** un izvēloties **Izveidot no** > **informācijas**. Papildinformāciju skatiet sadaļā [Jauna segmenta izveide ar ātriem segmentiem](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

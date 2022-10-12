@@ -1,7 +1,7 @@
 ---
 title: Pielāgoti algoritmiskās mācīšanās modeļi | Microsoft Docs
 description: Darbs ar pielāgotiem modeļiem no Azure algoritmiskās mācīšanās pakalpojumā Dynamics 365 Customer Insights.
-ms.date: 12/01/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 89553b511d249fd586e36a1c4944a977513b0643
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245812"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609755"
 ---
 # <a name="custom-machine-learning-models"></a>Pielāgoti algoritmiskās mācīšanās modeļi
 
@@ -25,106 +25,100 @@ ms.locfileid: "9245812"
 >
 > Sākot ar 2021. gada 1. decembri, jūs nevarēsit izveidot jaunus algoritmiskā mācīšanās Studio (klasisko) resursus. Līdz 2024. gada 31. augustam varat turpināt izmantot esošos algoritmiskā mācīšanās Studio (klasisko) resursus. Papildinformāciju skatiet sadaļā [Migrēšana uz Azure algoritmiskā mācīšanās](/azure/machine-learning/migrate-overview).
 
-
-**Informācija** > **Pielāgotie modeļi** ļauj pārvaldīt darbplūsmas, pamatojoties uz Azure algoritmiskās mācīšanās modeļiem. Darbplūsmas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartēt rezultātus vienotajos klientu datos. Papildinformāciju par pielāgotu algoritmiskās mācīšanās modeļu būvēšanu skatiet tēmā [Azure algoritmiskās mācīšanās modeļu izmantošana](azure-machine-learning-experiments.md).
-
-## <a name="responsible-ai"></a>Atbildīgais AI
-
-Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, uzlabot biznesa iespējas un ieņēmumu plūsmas. Stingri ieteicams sabalansēt prognoze vērtību pret tās ietekmi un aizspriedumiem, ko var ieviest ētiskā veidā. Uzziniet vairāk par to, kā Microsoft [aplūko atbildīgu AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Jūs varat uzzināt arī par [attiecīgo algoritmiskās mācīšanās tehniku un procesiem](/azure/machine-learning/concept-responsible-ml), kas ir raksturīgi Azure algoritmiskajai mācīšanās.
+Pielāgotie modeļi ļauj pārvaldīt darbplūsmas, kuru pamatā ir Azure algoritmiskā mācīšanās modeļi. Darbplūsmas palīdz izvēlēties datus, no kuriem vēlaties ģenerēt ieskatus, un kartēt rezultātus vienotajos klientu datos. Papildinformāciju par pielāgotu algoritmiskās mācīšanās modeļu būvēšanu skatiet tēmā [Azure algoritmiskās mācīšanās modeļu izmantošana](azure-machine-learning-experiments.md).
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Šis līdzeklis atbalsta tīmekļa pakalpojumus, kas publicēti, izmantojot [Azure algoritmiskā mācīšanās pakešu konveijerus](/azure/machine-learning/concept-ml-pipelines).
+- Tīmekļa pakalpojumi, kas publicēti, izmantojot [Azure, algoritmiskā mācīšanās pakešu konveijerus](/azure/machine-learning/concept-ml-pipelines).
+- Konveijers ir jāpublicē zem konveijera [galapunkta](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+- Azure Data Lake Gen2 krātuves [konts,](/azure/storage/blobs/data-lake-storage-quickstart-create-account) kas saistīts ar jūsu Azure Studio instanci.
+- Azure algoritmiskā mācīšanās darbvietas ar konveijeriem, īpašnieka vai lietotāja piekļuves administratora atļaujas Azure algoritmiskā mācīšanās Workspace.
 
-- Lai izmantotu šo līdzekli, ir nepieciešams Azure Data Lake Gen2 krātuves konts, kas saistīts ar jūsu Azure Studio instanci. Papildinformāciju skatiet [Azure Data Lake Storage Gen2 krātuves konta izveide](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
-
-- Lai nodrošinātu algoritmisko mācīšanos darbvietām ar konveijeriem, ir nepieciešamas īpašnieka vai lietotāja piekļuves administratora atļaujas Azure algoritmiskās mācīšanās darbvietai.
-
-   > [!NOTE]
-   > Dati tiek pārsūtīti starp Customer Insights instancēm un darbplūsmā atlasītajiem Azure tīmekļa pakalpojumiem vai konveijeriem. Kad pārsūtāt datus uz pakalpojumu Azure, gādājiet, lai pakalpojums ir konfigurēts tā, ka dati tiek apstrādāti tādā veidā un vietā, kas atbilst jūsu organizācijai noteiktajām juridiskajām vai regulatīvajām prasībām attiecībā uz šiem datiem.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+  > [!NOTE]
+  > Dati tiek pārsūtīti starp Customer Insights instancēm un darbplūsmā atlasītajiem Azure tīmekļa pakalpojumiem vai konveijeriem. Kad pārsūtāt datus uz pakalpojumu Azure, gādājiet, lai pakalpojums ir konfigurēts tā, ka dati tiek apstrādāti tādā veidā un vietā, kas atbilst jūsu organizācijai noteiktajām juridiskajām vai regulatīvajām prasībām attiecībā uz šiem datiem.
 
 ## <a name="add-a-new-workflow"></a>Pievienojiet jaunu darbplūsmu
 
 1. Dodieties uz **Informācija** > **Pielāgotie modeļi** un atlasiet **Jauna darbplūsma**.
 
-1. Piešķiriet jūsu pielāgotajam modelim atpazīstamu nosaukumu laukā **Nosaukums**.
+1. Norādiet atpazīstamu **Vārdu**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Jaunās darbplūsmas rūts ekrānuzņēmums.](media/new-workflowv2.png "Jaunās darbplūsmas rūts ekrānuzņēmums")
+   :::image type="content" source="media/new-workflowv2.png" alt-text="Jaunās darbplūsmas rūts ekrānuzņēmums.":::
 
 1. Atlasiet organizāciju, kurā ir iekļauts tīmekļa pakalpojums opcijā **Nomnieks, kas ietver jūsu tīmekļa servisu**.
 
 1. Ja jūsu Azure algoritmiskās mācīšanās abonements ir citā nomnieka, nekā Customer Insights, atlasiet **Pieteikties** ar saviem akreditācijas datiem atlasītajai organizācijai.
 
-1. Atlasiet **Darbvietas**, kas saistītas ar jūsu tīmekļa pakalpojumu. 
+1. Atlasiet **Darbvietas**, kas saistītas ar jūsu tīmekļa pakalpojumu.
 
-1. Web pakalpojumā izvēlieties Azure algoritmiskā mācīšanās konveijeru **, kurā ir nolaižamā modeļa** izvēlne. Pēc tam atlasiet **Tālāk**.    
-   Informācija, kā [publicēt konveijeru Azure algoritmiskajās mācībās, izmantojot noformētāju](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) vai [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsu konveijers ir jāpublicē zem [konveijera galapunkta](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Web pakalpojumā izvēlieties Azure algoritmiskā mācīšanās konveijeru **, kurā ir nolaižamā modeļa** izvēlne. Pēc tam atlasiet **Tālāk**.
+   Informācija, kā [publicēt konveijeru Azure algoritmiskajās mācībās, izmantojot noformētāju](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) vai [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk).
 
-1. Katrai **tīmekļa pakalpojuma ievadei** atlasiet atbilstošo **entītiju** no Customer Insights un atlasiet **Tālāk**.
+1. Katrai **tīmekļa pakalpojuma ievadei** atlasiet atbilstošo **entītiju** no Customer Insights. Pēc tam atlasiet **Tālāk**.
    > [!NOTE]
    > Pielāgotā modeļa darbplūsma lietos heiristiku, lai tīmekļa pakalpojuma ievades laukus kartētu uz entītijas atribūtiem, pamatojoties uz lauka nosaukumu un datu tipu. Ja tīmekļa pakalpojuma lauku nevar kartēt ar entītiju, tiks parādīts kļūdas ziņojums.
 
-   > [!div class="mx-imgBorder"]
-   > ![Konfigurēt darbplūsmu.](media/intelligence-screen2-updated.png "Konfigurēt darbplūsmu")
+   :::image type="content" source="media/intelligence-screen2-updated.png" alt-text="Konfigurēt darbplūsmu.":::
 
-1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
-      1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto konveijera izvades rezultāti.
-      1. Atlasiet nolaižamajā sarakstā jūsu paketes konveijera **Izvades datu krātuves parametra nosaukumu**.
-      1. Atlasiet nolaižamajā sarakstā jūsu paketes konveijera **Izvades ceļa parametra nosaukumu**.
+1. Modeļa **izvades parametriem** iestatiet šādus rekvizītus:
+   - **Konveijera izvades rezultātu entītijas nosaukums**
+   - **Pakešu konveijera izvades datu krātuve parametra nosaukums**
+   - **Izvades ceļa parametra nosaukums** pakešveijeram
 
-      > [!div class="mx-imgBorder"]
-      > ![Modeļa izvades parametra rūts.](media/intelligence-screen3-outputparameters.png "Modeļa izvades parametrs rūts")
+   :::image type="content" source="media/intelligence-screen3-outputparameters.png" alt-text="Modeļa izvades parametra rūts.":::
 
-1. Atlasiet atbilstošo atribūtu **Klienta ID rezultātu** nolaižamajā sarakstā, kurā tiek identificēti klienti un atlasiet **Saglabāt**.
+1. Rezultātos atlasiet atbilstošo atribūtu no **Klienta ID**, kas identificē klientus, un atlasiet **Saglabāt**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Rezultātu saistīšana ar rūti Klienta dati.](media/intelligence-screen4-relatetocustomer.png "Rezultātu saistīšana ar rūti Klienta dati")
+   :::image type="content" source="media/intelligence-screen4-relatetocustomer.png" alt-text="Rezultātu saistīšana ar rūti Klienta dati.":::
 
-1. Jūs redzēsiet **Darbplūsma saglabāta** ekrānu ar detalizētu informāciju par darbplūsmu.    
-   Ja konfigurējāt darbplūsmu Azure algoritmiskā mācīšanās konveijeram, Customer Insights tiek pievienots darbvietai, kurā ir konveijers. Customer Insights iegūs līdzstrādnieka **lomu** Azure darbvietā.
+   Ekrānā Darbplūsmas **saglabāšana** tiek parādīta detalizēta informācija par darbplūsmu. Ja konfigurējāt darbplūsmu Azure algoritmiskā mācīšanās konveijeram, Customer Insights tiek pievienots darbvietai, kurā ir konveijers. Customer Insights iegūs līdzstrādnieka **lomu** Azure darbvietā.
 
-1. Atlasiet **Gatavs**.
+1. Atlasiet **Gatavs**. Tiek **parādīta lapa Pielāgotie modeļi**.
 
-1. Tagad darbplūsmu var palaist no lapas **Pielāgotie modeļi**.
+1. Atlasiet darbplūsmas vertikālo elipsi (&vellip;) un atlasiet **Palaist**. Darbplūsma tiek izpildīta arī automātiski ar katru [ieplānoto atsvaidzināšanu](schedule-refresh.md).
 
-## <a name="edit-a-workflow"></a>Darbplūsmas rediģēšana
+## <a name="manage-an-existing-workflow"></a>Esošas darbplūsmas pārvaldība
 
-1. **Lapā Pielāgotie modeļi** atlasiet vertikālo daudzpunkti (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai un atlasiet **Rediģēt**.
+Dodieties uz **Intelligence** > **Custom modeļiem**, lai skatītu izveidotās darbplūsmas.
 
-1. Darbplūsmas atpazīstamo nosaukumu var atjaunināt laukā **Parādāmais nosaukums**, taču konfigurēto tīmekļa pakalpojumu vai konveijeru nevar mainīt. Atlasiet **Tālāk**.
+Atlasiet darbplūsmu, lai skatītu pieejamās darbības.
 
-1. Katrai **Tīmekļa pakalpojuma ievadei** varat atjaunināt atbilstošo entītiju **no** Customer Insights. Pēc tam atlasiet **Tālāk**.
+- **Darbplūsmas rediģēšana**
+- **Darbplūsmas palaišana**
+- [**Darbplūsmas dzēšana**](#delete-a-workflow)
 
-1. Iestatiet tālāk norādītos rekvizītus solī **Modeļa izvades parametri**:
-      1. Ievadiet izvades **Entītijas nosaukumu**, kurā jāievieto konveijera izvades rezultāti.
-      1. Atlasiet **Izvades datu krātuves parametra nosaukumu** savam testa konveijeram.
-      1. Atlasiet **Izvades ceļa parametra nosaukumu** savam testa konveijeram.
+### <a name="edit-a-workflow"></a>Darbplūsmas rediģēšana
 
-1. Atlasiet atbilstošo atribūtu **Klienta ID rezultātu** nolaižamajā sarakstā, kurā tiek identificēti klienti un atlasiet **Saglabāt**.
-   Izvēlieties atribūtu no izvedumapmācību izvades ar vērtībām, kas līdzinās Klienta entītijas kolonnai Klienta ID. Ja datu komplektā nav šādas kolonnas, izvēlieties atribūtu, kas unikāli identificē rindu.
+1. Dodieties uz **Sadaļu Inteliģences** > **pielāgotie modeļi**.
 
-## <a name="run-a-workflow"></a>Darbplūsmas palaišana
+1. Blakus darbplūsmai, kuru vēlaties atjaunināt, atlasiet vertikālo daudzpunkti (&vellip;) un atlasiet **Rediģēt**.
 
-1. **Lapā Pielāgotie modeļi** atlasiet vertikālo elipsi (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai.
+1. Ja nepieciešams, mainiet **parādāmo vārdu** un atlasiet **Tālāk**.
 
-1. Atlasiet **Izpildīt**.
+1. **Katrai Tīmekļa pakalpojuma ievadei**, ja nepieciešams, atjauniniet atbilstošo **entītiju** no Customer Insights. Pēc tam atlasiet **Tālāk**.
 
-Jūsu darbplūsma arī tiek palaista automātiski ar katru plānoto atsvaidzināšanu. Papildinformācija par [ieplānotas atsvaidzināšanas iestatīšanu](schedule-refresh.md).
+1. Modeļa **izvades parametriem** mainiet kādu no šīm darbībām:
+   - **Konveijera izvades rezultātu entītijas nosaukums**
+   - **Pakešu konveijera izvades datu krātuve parametra nosaukums**
+   - **Izvades ceļa parametra nosaukums** pakešveijeram
 
-## <a name="delete-a-workflow"></a>Dzēst darbplūsmu
+1. Rezultātos **mainiet atbilstošo atribūtu no** Klienta ID, lai identificētu klientus. Izvēlieties atribūtu no izvedumapmācību izvades ar vērtībām, kas līdzinās Klienta entītijas kolonnai Klienta ID. Ja datu kopā nav šādas kolonnas, izvēlieties atribūtu, kas unikāli identificē rindu.
 
-1. **Lapā Pielāgotie modeļi** atlasiet vertikālo elipsi (&vellip;) **kolonnā Darbības** blakus iepriekš izveidotai darbplūsmai.
+1. Atlasiet vienumu **Saglabāt**
 
-1. Atlasiet **Dzēst** un apstipriniet dzēšanu.
+### <a name="delete-a-workflow"></a>Dzēst darbplūsmu
 
-Jūsu darbplūsma tiks izdzēsta. [Entītija](entities.md), kas tika izveidota darbplūsmas izveides laikā, joprojām pastāv un to var skatīt lapā **Entītijas**.
+1. Dodieties uz **Sadaļu Inteliģences** > **pielāgotie modeļi**.
 
-## <a name="results"></a>Rezultāti
+1. Blakus darbplūsmai, kuru vēlaties dzēst, atlasiet vertikālo daudzpunkti (&vellip;) un atlasiet **Dzēst**.
 
-Darbplūsmas rezultāti tiek glabāti entītijā, kas ir konfigurēta modeļa izvades parametra posmā. Varat piekļūt šiem datiem no [entītiju lapas](entities.md) vai ar [API piekļuvi](apis.md).
+1. Apstipriniet dzēšanu.
+
+Jūsu darbplūsma tiks izdzēsta. Entītija [, kas tika izveidota, izveidojot darbplūsmu, saglabājas, un to var skatīt no](entities.md) lapas Datu **elementi** > **.**
+
+## <a name="view-the-results"></a>Skatīt rezultātus
+
+Darbplūsmas rezultāti tiek saglabāti entītijas nosaukumā, kas definēts modeļa **izvades parametriem**. Piekļūstiet šiem datiem no [**lapas** > **Datu** elementi](entities.md) vai ar [API piekļuvi](apis.md).
 
 ### <a name="api-access"></a>AP piekļuve
 
@@ -132,18 +126,27 @@ Lai iegūtu datus no pielāgotas modeļa entītijas, noteiktam OData vaicājumam
 
 `https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
 
-1. Aizstājiet `<your instance id>` ar savas Customer Insights vides ID, kas ir atrodams pārlūkprogrammas adreses joslā, piekļūstot Customer Insights.
+1. Aizstājiet `<your instance id>` ar savas Customer Insights vides ID, kas, piekļūstot Customer Insights, tiek rādīta pārlūkprogrammas adreses joslā.
 
-1. Aizstājiet `<custom model output entity>` ar entītijas nosaukumu, ko nodrošinājāt pielāgotā modeļa konfigurācijas modeļa izvades parametru darbībā.
+1. Aizstājiet `<custom model output entity>` ar entītijas nosaukumu, ko norādījāt **modeļa izvades parametriem**.
 
-1. Aizstājiet `<guid value>` ar tā klienta ID, kura ierakstam vēlaties piekļūt. Šo ID parasti var atrast [klientu profilu lapas](customer-profiles.md) laukā CustomerID .
+1. Aizstājiet `<guid value>` ar tā klienta ID, kuram vēlaties piekļūt. Šis ID tiek parādīts [klienta profilu lapā](customer-profiles.md) laukā CustomerID.
 
-## <a name="frequently-asked-questions"></a>Bieži uzdotie jautājumi
+## <a name="frequently-asked-questions"></a>Biežāk uzdotie jautājumi
 
-- Kāpēc, iestatot pielāgotu modeļa darbplūsmu, es neredzu savu konveijeru?    
+- Kāpēc, iestatot pielāgotu modeļa darbplūsmu, es neredzu savu konveijeru?
   Šo problēmu bieži izraisa konveijera konfigurācijas problēma. Nodrošiniet, ka [ievades parametrs ir konfigurēts](azure-machine-learning-experiments.md#dataset-configuration) un tiek konfigurēti arī [izvades datu krātuves un ceļa parametri](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights).
 
-- Ko nozīmē kļūda "Nevarēja saglabāt informācijas darbplūsmu"?    
+- Ko nozīmē kļūda "Nevarēja saglabāt informācijas darbplūsmu"? 
   Lietotāji parasti redz šo kļūdas ziņojumu, ja viņiem darbvietā nav īpašnieka vai lietotāja piekļuves administratora atļauju. Lai Customer Insights darbplūsmu apstrādātu kā servisu, lietotājam ir nepieciešams augstāks atļauju līmenis, nevis lietotāja akreditācijas datu izmantošana turpmākajām darbplūsmas izpildēm.
+
+- Vai tiek atbalstīta privāta galapunkta/privāta saite manai pielāgotā modeļa darbplūsmai?
+  Customer Insights pašlaik neatbalsta privāto galapunktu pielāgotiem modeļiem, kas nav piemēroti, taču ir pieejams manuāls risinājums. Lūdzu, sazinieties ar atbalsta dienestu, lai iegūtu sīkāku informāciju.
+
+## <a name="responsible-ai"></a>Atbildīgais AI
+
+Prognozes piedāvā iespējas, kas ļauj izveidot labākas iespējas klientiem, uzlabot biznesa iespējas un ieņēmumu plūsmas. Stingri ieteicams sabalansēt prognoze vērtību pret tās ietekmi un aizspriedumiem, ko var ieviest ētiskā veidā. Uzziniet vairāk par to, kā Microsoft [aplūko atbildīgu AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Jūs varat uzzināt arī par [attiecīgo algoritmiskās mācīšanās tehniku un procesiem](/azure/machine-learning/concept-responsible-ml), kas ir raksturīgi Azure algoritmiskajai mācīšanās.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

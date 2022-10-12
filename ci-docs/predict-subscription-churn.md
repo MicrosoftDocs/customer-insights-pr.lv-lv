@@ -1,156 +1,141 @@
 ---
-title: Abonēšanas prognoze (satur video)
+title: Prognozējiet abonēšanas zudumu (satur video)
 description: Paredziet, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus.
-ms.date: 08/19/2020
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7464707864c418bfcc625ddfd245622131434b33
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171058"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610245"
 ---
-# <a name="subscription-churn-prediction"></a>Abonementu zuduma prognoze
+# <a name="predict-subscription-churn"></a>Paredzēt abonēšanas mainību
 
-Abonēšanas zuduma prognoze palīdz paredzēt, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus. Jūs varat izveidot jaunas abonēšanas zuduma prognozes lapā **Informācija** > **Prognozes**. Atlasiet **Manas prognozes**, lai skatītu citas jūsu izveidotās prognozes.
+Paredziet, vai pastāv risks, ka klients vairs neizmantos jūsu uzņēmuma abonēšanas produktus vai pakalpojumus. Abonēšanas dati ietver aktīvos un neaktīvos abonementus katram klientam, tāpēc katram klienta ID ir vairāki ieraksti.
+
+Jums ir jābūt biznesa zināšanām, lai saprastu, ko jūsu biznesam nozīmē churn. Mēs atbalstām uz laiku balstītas zuduma definīcijas, kas nozīmē, ka tiek uzskatīts, ka klients ir noguris kādu laika periodu pēc abonēšanas beigām.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
-> Izmēģiniet pamācību par abonēšanas zudumu prognozi, izmantojot datu paraugu: [Abonēšanas zudumu prognožu parauga rokasgrāmata](sample-guide-predict-subscription-churn.md).
+> Izmēģiniet abonēšanas fragmentu prognoze, izmantojot datu paraugus: [abonēšanas zuduma prognoze parauga ceļvedis](sample-guide-predict-subscription-churn.md).
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+## <a name="prerequisites"></a>Priekšnoteikumi
 
 - Vismaz [Līdzdalībnieka atļaujas](permissions.md).
-- Biznesa zināšanas, lai saprastu, ko zudums nozīmē jūsu uzņēmumam. Mēs atbalstām uz laiku balstītas zuduma definīcijas, kas nozīmē, ka tiek uzskatīts, ka klients ir izvēlējies laika periodu pēc tam, kad beidzas viņu abonements.
-- Jūsu abonementu un to vēstures dati:
-    - Abonementa identifikatori, lai atšķirtu abonementus.
-    - Klientu identifikatori, lai tie atbilstu klientu abonementiem.
-    - Abonementa notikuma datumi, kuros ir definēti sākuma datumi, beigu datumi un datumi, kuros ir notikuši abonementa notikumi.
-    - Abonementa informācija, lai definētu, vai tas ir periodisks abonements un cik bieži tas atjauno.
-    - Abonementa semantiskajai datu shēmai ir nepieciešama šāda informācija:
-        - **Abonementa ID:** unikāls abonementa identifikators.
-        - **Abonementa beigu datums:** abonementa derīguma termiņš klientam.
-        - **Abonementa sākuma datums:** abonementa sākuma datums klientam.
-        - **Darbības datums:** datums, kad notikušas izmaiņas abonementā. Piemēram, klientam, kas pērk vai atceļ abonementu.
-        - **Vai tas ir periodisks abonements:** būla patiess/aplams lauks, kas nosaka, vai abonements tiks atjaunots ar to pašu abonementa ID bez klienta iejaukšanās
-        - **Atkārtošanās biežums (mēnešos):** periodiskiem abonementiem tas ir laiks, uz kādu abonements tiks atjaunots. Tas ir attēlots mēnešos. Piemēram, gada abonements, kas klientam katru gadu automātiski atjaunojas uz vēl vienu gadu, vērtība ir 12.
-        - (Neobligāti) **Abonementa summa:** naudas summa, ko klients maksā par abonementa atjaunošanu. Tas var palīdzēt identificēt dažādu abonementu līmeņu shēmas.
-- Dati par klientu darbībām:
-    - Darbības identifikatori, lai nodalītu tāda paša tipa darbības.
-    - Klientu identifikatori darbību kartēšanai jūsu klientiem.
-    - Darbības informācija, kas ietver darbības nosaukumu un datumu.
-    - Klienta darbību semantisko datu shēma ietver:
-        - **Primārā atslēga:** unikāls darbības identifikators. Piemēram, tīmekļa vietnes apmeklējums vai lietojuma ieraksts, kas norāda klienta skatīto TV pārraides epizodi.
-        - **Laikspiedols:** notikuma datums un laiks, ko identificē primārā atslēga.
-        - **Notikums:** norādiet notikuma nosaukumu, kuru vēlaties izmantot. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "UserAction" var būt vērtība "Apskatīts".
-        - **Detalizēti:** detalizēta informācija par notikumu. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "ShowTitle" var būt tāda videoklipa vērtība, kuru klients ir skatījies.
-- Ieteicamie datu raksturlielumi:
-    - Pietiekami vēsturiskie dati: Abonēšanas dati par laiku, kas vismaz divreiz pārsniedz atlasīto laika logu. Vēlams, lai būtu abonēšanas dati par diviem vai trim gadiem.
-    - Abonementa statuss: Dati ietver katra klienta aktīvos un neaktīvos abonementus, tāpēc katram klienta ID ir vairāki ieraksti.
-    - Klientu skaits: Vismaz 10 klientu profilu, vēlams vairāk nekā 1000 unikālo klientu. Ja būs mazāk par 10 klientiem un nepietiks datu, modelis būs kļūmīgs.
-    - Datu pilnīgums: Vairāk nekā 20% trūkstošo vērtību sniegtās entītijas datu laukā.
-   
-   > [!NOTE]
-   > Jums nepieciešami vismaz divi darbību ieraksti attiecībā uz 50% klientiem, par kuriem vēlaties aprēķināt klientu zudumu.
+- Vismaz 10 klientu profili, vēlams vairāk nekā 1,000 unikālu klientu.
+- Klienta identifikators — unikāls identifikators, kas saskaņo abonementus ar jūsu klientiem.
+- Abonēšanas dati vismaz divreiz pārsniedz atlasīto laika logu. Vēlams, lai būtu abonēšanas dati par diviem vai trim gadiem. Abonementu vēsturē jāiekļauj:
+  - **Abonēšanas ID:** abonementa unikālais identifikators.
+  - **Abonēšanas beigu datums:** datums, kad klientam beidzas abonementa derīguma termiņš.
+  - **Abonēšanas sākuma datums:** datums, kad klientam tiek sākts abonements.
+  - **Transakcijas datums:** datums, kad notikusi abonementa maiņa. Piemēram, klientam, kas pērk vai atceļ abonementu.
+  - **Vai tas ir periodisks abonements:** Būla patiess/aplams lauks, kas nosaka, vai abonements tiks atjaunots ar to pašu abonēšanas ID bez klienta iejaukšanās.
+  - **Atkārtošanās biežums (mēnešos):** periodisku abonementu gadījumā — mēnesis, kurā abonements tiks atjaunots. Piemēram, gada abonements, kas klientam katru gadu automātiski atjaunojas uz vēl vienu gadu, vērtība ir 12.
+  - **Abonēšanas summa**: valūtas summa, ko klients maksā par abonēšanas atjaunošanu. Tas var palīdzēt identificēt dažādu abonementu līmeņu shēmas.
+- Vismaz divi darbību ieraksti par 50% klientu, par kuriem vēlaties aprēķināt zudumu. Klientu aktivitātēm jāietver:
+  - **Primārā atslēga:** unikāls identifikators darbībai. Piemēram, tīmekļa vietnes apmeklējums vai lietojuma ieraksts, kas norāda klienta skatīto TV pārraides epizodi.
+  - **Laikspiedols:** notikuma datums un laiks, kas identificēts ar primāro atslēgu.
+  - **Notikums:** tā notikuma nosaukums, kuru vēlaties izmantot. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "UserAction" var būt vērtība "Apskatīts".
+  - **Detalizēti:** detalizēta informācija par notikumu. Piemēram, straumēšanas video pakalpojuma laukā ar nosaukumu "ShowTitle" var būt tāda videoklipa vērtība, kuru klients ir skatījies.
+- Mazāk nekā 20% trūkstošo vērtību norādītās entītijas datu laukā.
 
 ## <a name="create-a-subscription-churn-prediction"></a>Izveidot abonēšanas zuduma prognozi
 
+Jebkurā laikā atlasiet **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Melnraksts prognoze tiek parādīts **cilnē Manas prognozes**.
+
 1. Dodieties uz **izlūkošanas** > **prognozēm**.
-1. **Atlasiet elementu Abonementa zuduma modelis** un atlasiet **Izmantot šo modeli**.
-   > [!div class="mx-imgBorder"]
-   > ![Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli.](media/subscription-churn-usethismodel.PNG "Abonēšanas zuduma modeļa elements ar pogu Lietot šo modeli")
 
-### <a name="name-model"></a>Nosaukuma piešķiršana modelim
+1. **Cilnē Izveide** atlasiet **Izmantot modeli** elementā **Customer churn modelis**.
 
-1. Norādiet modeļa nosaukumu, kas atšķir to no citiem modeļiem.
-1. Norādiet izvades entītijas nosaukumu, izmantojot tikai burtus un ciparus, bez tukšzīmēm. Tas ir nosaukums, ko izmantos modeļa entītija. Pēc tam atlasiet **Tālāk**.
+1. Atlasiet **Abonēšana**, lai noteiktu zuduma veidu, un pēc tam **sāciet darbu**.
+
+1. **Nosauciet šo modeli** un **Izvades entītijas nosaukumu**, lai nošķirtu tos no citiem modeļiem vai entītijām.
+
+1. Atlasiet **Tālāk**.
 
 ### <a name="define-customer-churn"></a>Definēt klientu zudumu
 
-1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Parasti šim periodam patīk biznesa darbības, piemēram, piedāvājumi vai citi mārketinga pasākumi, kas cenšas nepieļaut klientu zudumu.
-1. Lai iestatītu periodu, kurā paredzēt klientu zudumu, ierakstiet skaitu **Dienu skaits nākotnē mainības prognozēšanai**. Piemēram, prognozēt klientu zuduma risku turpmāko 90 dienu laikā, lai pielāgotu mārketinga saglabāšanas aktivitātes. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām. Atlasiet **Tālāk**, lai turpinātu
-   >[!TIP]
-   > Jebkurā laikā varat atlasīt **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Lai turpinātu darbu, cilnē **Manas prognozes** ir atrodama melnraksta prognoze.
+1. Ievadiet **Dienu skaits, kopš abonements beidzies**, ko jūsu uzņēmums uzskata par klientu zuduma stāvokli. Šis periods parasti ir saistīts ar uzņēmējdarbības aktivitātēm, piemēram, piedāvājumiem vai citiem mārketinga pasākumiem, kuru mērķis ir novērst klienta zaudēšanu.
 
-### <a name="add-required-data"></a>Nepieciešamo datu pievienošana
+1. Ievadiet dienu skaitu **, lai izpētītu nākotni, lai prognozētu zudumu**. Piemēram, prognozētu kannas risku saviem klientiem nākamo 90 dienu laikā, lai pielīdzinātos jūsu mārketinga saglabāšanas pūliņiem. Zuduma riska prognozēšana ilgākiem vai garākiem laikposmiem var apgrūtināt jūsu zuduma risku profila faktoru atrisināšanu atkarībā no jūsu konkrētā biznesa prasībām.
 
-1. Atlasiet **Pievienot datus** **Abonēšanas vēsturei** un izvēlieties entītiju, kas nodrošina abonementu vēstures informāciju, kā aprakstīts [priekšnosacījumos](#prerequisites).
-1. Ja tālāk norādītie lauki nav aizpildīti, konfigurējiet savas abonementa vēstures entītijas attiecības ar Klienta entītiju.
-    1. Atlasiet **Abonementu vēstures entītija**.
-    1. Atlasiet **Lauku**, kas norāda klientu abonementa vēstures entītijā. Tam ir jāattiecas uz jūsu Klienta entītijas primāro klienta ID.
-    1. Atlasiet **Klienta entītiju**, kas atbilst primārajai klienta entītijai.
-    1. Ievadiet nosaukumu, kas apraksta attiecību.
-       > [!div class="mx-imgBorder"]
-       > ![Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Abonementa vēstures lapa, kurā parādīta attiecību izveide ar klientu")
-1. Atlasiet **Tālāk**.
-1. Kartējiet semantiskos laukus uz atribūtiem jūsu abonementa vēstures entītijā un atlasiet **Saglabāt**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem.](media/subscription-churn-subscriptionhistorymapping.PNG "Abonēšanas vēstures lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās abonementa vēstures entītijas laukiem")
-1. Atlasiet **Pievienot datus** **Klientu darbībām** un izvēlieties entītiju, kas nodrošina klientu darbības informāciju, kā aprakstīts priekšnosacījumos.
-1. Atlasiet darbības tipu, kas atbilst konfigurētā klienta darbības tipam.  Atlasiet **Izveidot jaunu** un norādiet nosaukumu, ja nav redzama opcija, kas atbilst nepieciešamajam darbības tipam.
-1. Jums ir jākonfigurē attiecības no klienta darbības entītijas uz Klienta entītiju.
-    1. Atlasiet lauku, kas klientu identificē klientu darbības tabulā, kas var būt tieši saistīta ar Klienta entītijas primāro klienta ID.
-    1. Atlasiet Klienta entītiju, kas atbilst primārajai Klienta entītijai
-    1. Ievadiet nosaukumu, kas apraksta attiecību.
-1. Atlasiet **Tālāk**.
-1. Kartējiet semantiskos laukus uz atribūtiem jūsu klientu darbības entītijā un atlasiet **Saglabāt**. Attiecībā uz lauku aprakstiem apskatiet [priekšnosacījumus](#prerequisites).
-1. (Izvēles) Ja jums ir citas klientu darbības, ko vēlaties iekļaut, atkārtojiet iepriekš aprakstītās darbības.
-   > [!div class="mx-imgBorder"]
-   > ![Entītiju relācijas definēšana.](media/subscription-churn-customeractivitiesmapping.PNG "Klientu darbību lapa, kurā parādīti semantiski atribūti, kas ir kartēti uz atlasītās klientu darbību entītijas laukiem")
 1. Atlasiet **Tālāk**.
 
-### <a name="set-schedule-and-review-configuration"></a>Iestatiet grafiku un pārskatiet konfigurāciju
+### <a name="add-required-data"></a>Pievienot nepieciešamos datus
 
-1. Lai atkārtoti apmācītu modeli, iestatiet frekvenci. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
+1. Atlasiet **Pievienot datus** abonementu **vēsturei**.
+
+1. Atlasiet semantiskās darbības veidu **Abonements**, kurā ir nepieciešamā informācija par abonementu vēsturi. Ja darbība nav iestatīta, atlasiet **šeit** un izveidojiet to.
+
+1. Sadaļā **Darbības**, ja aktivitātes izveides laikā aktivitātes atribūti tika semantiski kartēti izvēlieties konkrētus atribūtus vai entītiju, uz kuru vēlaties koncentrēties aprēķinam. Ja semantiskā kartēšana nenotika, atlasiet **Rediģēt** un kartējiet savus datus.
+  
+   :::image type="content" source="media/subscription-churn-required.png" alt-text="Nepieciešamo datu pievienošana abonementa zuduma modelim":::
+
+1. Atlasiet **Tālāk** un pārskatiet šim modelim nepieciešamos atribūtus.
+
+1. Atlasiet **Saglabāt**.
+
+1. Atlasiet **Pievienot datus** klientu **darbībām**.
+
+1. Atlasiet semantiskās darbības veidu, kas sniedz informāciju par klientu darbībām. Ja darbība nav iestatīta, atlasiet **šeit** un izveidojiet to.
+
+1. Sadaļā **Darbības**, ja aktivitātes izveides laikā aktivitātes atribūti tika semantiski kartēti izvēlieties konkrētus atribūtus vai entītiju, uz kuru vēlaties koncentrēties aprēķinam. Ja semantiskā kartēšana nenotika, atlasiet **Rediģēt** un kartējiet savus datus.
+
+1. Atlasiet **Tālāk** un pārskatiet šim modelim nepieciešamos atribūtus.
+
+1. Atlasiet **Saglabāt**.
+
+1. Pievienojiet papildu aktivitātes vai atlasiet **Tālāk**.
+
+### <a name="set-update-schedule"></a>Iestatīt grafika atjaunināšanu
+
+1. Izvēlieties frekvenci, lai pārkvalificētu savu modeli. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
+
 1. Atlasiet **Tālāk**.
-1. Pārskatīt konfigurāciju. Jūs varat atgriezties jebkurā prognozēšanas konfigurācijas daļā, zemāk parādītajā vērtībā atlasot **Rediģēt**. Vai arī varat atlasīt konfigurācijas soli no progresa rādītāja.
-1. Ja visas vērtības ir konfigurētas pareizi, atlasiet **Saglabāt un palaist**, lai sāktu prognozēšanas procesu. Cilnē **Manas prognozes** var redzēt savu prognožu statusu. Atkarībā no prognozēšanas laikā izmantojamā datu daudzuma process var aizņemt vairākas stundas.
 
-## <a name="review-a-prediction-status-and-results"></a>Prognozēšanas statusa un rezultātu pārskatīšana
+### <a name="review-and-run-the-model-configuration"></a>Modeļa konfigurācijas pārskatīšana un palaišana
 
-1. Dodieties uz cilni **Manas prognozes** **Informācija** > **Prognozes**.
-   > [!div class="mx-imgBorder"]
-   > ![Skats lapā Manas prognozes.](media/subscription-churn-mypredictions.PNG "Skats lapā Manas prognozes")
-1. Atlasiet prognozes, kuras vēlaties pārskatīt.
-   - **Prognozējamais nosaukums:** izveides laikā nodrošinātais prognozes nosaukums.
-   - **Prognozes tips:** modeļa tips, ko izmanto prognozēšanai
-   - **Izvades entītija:** entītijas nosaukums, kurā saglabāt prognozes izvadi. Entītiju ar šo nosaukumu var atrast **Dati** > **Entītijas**.    
-     Izvades entitījā *ChurnScore* ir prognozētā zuduma iespējamība un *IsChurn* ir binārā etiķete, kas balstās *ChurnScore* ar slieksni 0.5. Noklusējuma slieksnis jūsu scenārijā varētu nedarboties. [Izveidojiet jaunu segmentu](segments.md#create-a-segment) ar vēlamo slieksni.
-   - **Prognozējamais lauks:** šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tās netiek izmantotas abonēšanas zuduma prognozēšanā.
-   - **Statuss:** prognozes izpildes pašreizējais statuss.
-        - **Rindā:** prognoze pašlaik gaida citu procesu palaišanu.
-        - **Atsvaidzināšana:** prognoze šobrīd darbojas apstrādes "rezultātu" posmā, lai iegūtu rezultātus, kas ieplūdīs izvades entītijā.
-        - **Neizdevās:** prognozēšana nav izdevusies. Lai iegūtu detalizētu informāciju, atlasiet **Žurnāli**.
-        - **Izdevās:** prognozēšana ir izdevusies. Lai pārskatītu prognozi, zem vertikālajām elipsēm atlasiet **Skatīt**
-   - **Rediģēts:** Datums, kad tika mainīta prognozes konfigurācija.
-   - **Pēdējā atsvaidzināšana:** Datums, kad atsvaidzinātais rezultāts ir redzams izvades entītijā.
-1. Atlasiet vertikālās elipses, kas atrodas blakus prognozei, kurā vēlaties pārskatīt rezultātus, un atlasiet **Skatīt**.
-   > [!div class="mx-imgBorder"]
-   > ![Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu.](media/subscription-churn-verticalellipses.PNG "Opciju skats, kas atrodas izvēlnē vertikālās elipses prognozēšanai, ieskaitot rediģēšanu, atsvaidzināšanu, skatīšanu, žurnālus un dzēšanu")
-1. Rezultātu lapā ir trīs primāro sadaļu dati:
-    1. **Apmācības modeļa veiktspēja:** iespējamie rezultāti ir A, B vai C. Šis rezultāts norāda uz prognozes izpildi un var palīdzēt pieņemt lēmumu izmantot izvades entītijā glabātos rezultātus.
-        - Rezultātus nosaka, par pamatu izmantojot tālāk norādītās kārtulas:
-            - **A** Ja modelis precīzi prognozēja vismaz 50% no visām prognozēm, un ja precīzo prognožu īpatsvars zudušajiem klientiem ir lielāks par vēsturisko vidējo zušanas rādītāju par vismaz 10% no vēsturiskā zuduma rādītāja.
-            - **B** Ja modelis precīzi prognozēja vismaz 50% no visām prognozēm, un ja precīzo prognožu īpatsvars zudušajiem klientiem ir lielāks par vēsturisko vidējo zušanas rādītāju līdz 10% no vēsturiskā zuduma rādītāja.
-            - **C** Ja modelis precīzi prognozēja mazāk nekā 50% no kopējām prognozēm vai ja precīzo prognožu īpatsvars zaudētajiem klientiem ir mazāks nekā vēsturiskais vidējais zuduma rādītājs.
-               > [!div class="mx-imgBorder"]
-               > ![Modeļa veiktspējas rezultāta skats.](media/subscription-churn-modelperformance.PNG "Modeļa veiktspējas rezultāta skats")
-    1. **Zuduma varbūtība (klientu skaits):** klientu grupas, pamatojoties uz to prognozējamo zuduma risku. Šie dati var palīdzēt vēlāk, ja vēlaties izveidot klientu segmentu ar augstu zuduma risku. Šādi segmenti palīdz saprast, kur vajadzētu būt dalībai segmentā.
-       > [!div class="mx-imgBorder"]
-       > ![Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%")
-    1. **Ietekmīgākie faktori:** ir daudzi faktori, kas tiek ņemti vērā, veidojot jūsu prognozi. Katram no šiem faktoriem ir aprēķinātā nozīme modeļa izveidotajām apkopotajām prognozēm. Šos faktorus var izmantot, lai atvieglotu jūsu prognozes rezultātu validēšanu. Šo informāciju var izmantot arī vēlāk, lai [izveidotu segmentus](segments.md), kas varētu palīdzēt ietekmēt zuduma risku attiecībā uz klientiem.
-       > [!div class="mx-imgBorder"]
-       > ![Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus.](media/subscription-churn-influentialfactors.PNG "Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus")
+Darbībā Pārskatīšana **un izpilde** tiek rādīts konfigurācijas kopsavilkums, un tā nodrošina iespēju veikt izmaiņas pirms prognoze izveides.
 
-## <a name="manage-predictions"></a>Pārvaldīt prognozes
+1. Atlasiet **Rediģēt**, veicot kādu no darbībām, lai pārskatītu un veiktu izmaiņas.
 
-Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
+1. Ja esat apmierināts ar atlasi, atlasiet **Saglabāt un palaist**, lai sāktu modeļa darbību. Atlasiet **Gatavs**. Cilne **Manas prognozes** tiek rādīta, kamēr tiek veidota prognoze. Atkarībā no prognozēšanas laikā izmantojamā datu daudzuma process var aizņemt vairākas stundas.
 
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
+
+## <a name="view-prediction-results"></a>Prognoze rezultātu skatīšana
+
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
+
+1. **Cilnē Manas prognozes** atlasiet prognoze, kuru vēlaties skatīt.
+
+Rezultātu lapā ir trīs primāro sadaļu dati:
+
+- **Apmācības modeļa veiktspēja**: A, B vai C pakāpe norāda prognoze veiktspēju un var palīdzēt pieņemt lēmumu izmantot izvades entītijā saglabātos rezultātus.
+  
+  :::image type="content" source="media/subscription-churn-modelperformance.PNG" alt-text="Modeļa rezultātu informācijas lodziņa attēls ar atzīmi A.":::
+
+  Kategorijas tiek noteiktas, pamatojoties uz šādām kārtulām:
+  - **A** kad modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un kad precīzu prognožu procents klientiem, kuri sačakarēja, ir lielāks par vēsturisko vidējo zuduma līmeni vismaz par 10%.
+  - **B**, kad modelis precīzi prognozēja vismaz 50% no kopējām prognozēm un kad precīzu prognožu procents klientiem, kuri sačakarēja, ir līdz pat 10% lielāks nekā vēsturiskais vidējais zuduma ātrums.
+  - **C**, ja modelis precīzi prognozēja mazāk nekā 50% no kopējām prognozēm vai ja precīzu prognožu procentuālais daudzums klientiem, kuri izplūda, ir mazāks par vēsturisko vidējo zuduma ātrumu.
+  
+- **Zuduma varbūtība (klientu skaits)**: klientu grupas, pamatojoties uz to prognozējamo zuduma risku. Pēc izvēles izveidojiet [klientu](prediction-based-segment.md) segmentus ar augstu zuduma risku. Šādi segmenti palīdz saprast, kur vajadzētu būt dalībai segmentā.  
+
+  :::image type="content" source="media/subscription-churn-resultdistribution.PNG" alt-text="Grafiks, kurā tiek rādīts zuduma rezultātu sadalījums, sadalīts diapazonos no 0-100%":::
+
+- **Ietekmīgākie faktori:** ir daudzi faktori, kas tiek ņemti vērā, veidojot jūsu prognozi. Katram faktoram ir nozīme, kas aprēķināta modeļa izveidotajos apkopotajās prognozēs. Izmantojiet šos faktorus, lai palīdzētu apstiprināt prognoze rezultātus. Vai arī izmantojiet šo informāciju vēlāk, lai [izveidotu segmentus](.//prediction-based-segment.md), kas varētu palīdzēt ietekmēt zuduma risku klientiem.
+
+  :::image type="content" source="media/subscription-churn-influentialfactors.PNG" alt-text="Saraksts rāda svarīgākos faktorus un to nozīmi, prognozējot zuduma rezultātus.":::
+
+> [!NOTE]
+> Šī modeļa izvades vienībā ChurnScore *ir prognozētā zuduma varbūtība, un* IsChurn *ir bināra etiķete,* kuras pamatā *ir ChurnScore* ar 0,5 slieksni. Ja šis noklusējuma slieksnis nedarbojas jūsu scenārijam, [izveidojiet jaunu segmentu](segments.md) ar vēlamo slieksni. Lai skatītu zuduma rezultātu, dodieties uz **Datu** > **entītijas** un skatiet datu cilni izvades entītijai, kuru definējāt šim modelim.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
-title: Klienta ilgtermiņa vērtības (CLV) prognoze
+title: Klienta ilgtermiņa vērtības prognozēšana (CLV)
 description: Prognozējiet potenciālos ieņēmumus aktīvajiem klientiem nākotnē.
-ms.date: 07/21/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,74 +13,63 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
-ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
+ms.openlocfilehash: f27462ac327027e50e23387ac9f75a671db9a86d
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9186449"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610383"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
+# <a name="predict-customer-lifetime-value-clv"></a>Klienta ilgtermiņa vērtības prognozēšana (CLV)
 
-Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis līdzeklis var palīdzēt sasniegt dažādus mērķus:
+Prognozējiet potenciālo vērtību (ieņēmumus), ko jūsu uzņēmumam dos atsevišķi aktīvie klienti definētā nākotnes laika periodā. Šis prognoze jums palīdz:
 
-- Noteikt ļoti vērtīgus klientus un apstrādāt šo ieskatu
-- Veidojiet stratēģiskus klientu segmentus, balstoties uz to iespējamo vērtību, lai izpildītu personalizētas kampaņas, ar mērķtiecīgiem pārdošanas, mārketinga un atbalsta pasākumiem
-- Produktu izstrādes rokasgrāmata, koncentrējoties uz līdzekļiem, kas palielina klienta vērtību
-- Optimizējiet pārdošanas vai mārketinga stratēģiju un precīzāk novirziet budžetu klientam
-- Atpazīt un apbalvot ļoti vērtīgus klientus, izmantojot apbalvojumu programmas
+- Identificējiet augstvērtīgus klientus un apstrādājiet šo ieskatu.
+- Izveidojiet stratēģiskus klientu segmentus, pamatojoties uz to potenciālo vērtību, lai palaistu personalizētas kampaņas ar mērķtiecīgiem pārdošanas, mārketinga un atbalsta pasākumiem.
+- Virziet produktu izstrādi, koncentrējoties uz funkcijām, kas palielina klientu vērtību.
+- Optimizējiet pārdošanas vai mārketinga stratēģiju un precīzāk piešķiriet budžetu klientu informēšanai.
+- Atpazīsti un atalgo augstus klientus, izmantojot lojalitātes vai atlīdzības programmas.
 
-## <a name="prerequisites"></a>Priekšnosacījumi
+Nosakiet, ko CLV nozīmē jūsu uzņēmumam. Mēs atbalstām uz darījumiem balstītuS CLV prognoze. Klienta paredzamā vērtība ir balstīta uz biznesa darījumu vēsturi. Apsveriet iespēju izveidot vairākus modeļus ar dažādām ievades preferencēm un salīdzināt modeļa rezultātus, lai redzētu, kurš modeļa scenārijs vislabāk atbilst jūsu uzņēmuma vajadzībām.
 
-Pirms darba sākšanas atainojiet, ko CLV nozīmē jūsu uzņēmumam. Pašlaik mēs atbalstītu uz transakcijām balstītu CLV prognoze. Klienta prognozētā vērtība ir balstīta uz biznesa transakciju vēsturi. Lai izveidotu prognoze, ir nepieciešamas vismaz [Līdzdalībnieku](permissions.md) atļaujas.
+> [!TIP]
+> Izmēģiniet CLV prognoze, izmantojot parauga datus: [klienta mūža vērtība (CLV) prognoze parauga ceļvedi](sample-guide-predict-clv.md).
 
-Tā kā CLV modeļa konfigurēšanai un izmantošanai nevajag daudz laika, apsveriet iespēju izveidot vairākus modeļus ar dažādām ievades preferencēm un salīdziniet modeļa rezultātus, lai uzzinātu, kurš modeļa scenārijs vislabāk atbilst jūsu uzņēmuma vajadzībām.
+## <a name="prerequisites"></a>Priekšnoteikumi
 
-### <a name="data-requirements"></a>Datu prasības
-
-Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicami modeļa veiktspējas palielināšanai. Jo vairāk datu modelis var apstrādāt, jo precīzāka būs prognoze. Tādēļ iesakām ievadīt vairāk klientu darbību datu, ja iespējams.
-
-- Klienta identifikators: unikālais identifikators, kas savieno konkrētu klientu ar transakcijām
-
-- Transakciju vēsture: vēsturisko transakciju žurnāls ar zemāk norādītu semantisko datu shēmu
-    - **Transakcijas ID**: Unikāls katras transakcijas identifikators
-    - **Transakcijas datums**: datums, vēlams, laikspiedols katrai transakcijai
-    - **Transakcijas summa**: katra transakcijas vērtība naudas izteiksmē (piemēram, ieņēmumi vai peļņas norma)
-    - **Atgriešanai piešķirtā etiķete** (neobligāti): Būla vērtība, kas norāda, vai transakcija ir atgriešana 
-    - **Produkta ID** (neobligāti): transakcijā iesaistītā produkta ID
-
-- Papildu dati (neobligāti), piemēram
-    - Tīmekļa darbības: vietnes apmeklējuma vēsture, e-pasta vēsture
-    - Lojalitātes darbības: lojalitātes programmas punktu uzkrāšanas un izmantošanas vēsture
-    - Klientu apkalpošana žurnāls, servisa izsaukumi vai atgriešanas vēsture
-    - Informācija par klienta profilu
-- (Neobligāti) Dati par klientu darbībām:
-    - Darbības identifikatori, lai nodalītu tāda paša tipa darbības
-    - Klientu identifikatori darbību kartēšanai jūsu klientiem
-    - Darbības informācija, kas ietver darbības nosaukumu un datumu
-    - Darbību semantiskās datu shēmas ietver:
-        - **Primārā atslēga**: unikāls darbības identifikators
-        - **Laikspiedols**: notikuma datums un laiks, ko identificē primārā atslēga
-        - **Notikums (darbības nosaukums)**: norādiet izmantojamā notikuma nosaukumu
-        - **Detalizēta informācija (summa vai vērtība)**: detalizēta informācija par klienta darbību
-
-- Ieteicamie datu raksturlielumi:
-    - Pietiekami vēsturiski dati: vismaz viena gada transakciju dati. 2–3 gadus veci transakciju dati, lai prognozētu CLV uz vienu gadu.
-    - Vairāki pirkumi katram klientam: ideālā gadījumā vismaz divas līdz trīs transakcijas katram klienta ID, vēlams vairākos datumos.
-    - Klientu skaits: Vismaz 100 unikālo klientu, vēlams vairāk nekā 10 000 klientu. Ja būs mazāk par 100 klientiem un nepietiks datu, modelis būs kļūmīgs
-    - Datu pilnīgums: ievades datos trūkst mazāk nekā 20% trūkstošo vērtību obligātajiem laukiem
+- Vismaz [līdzstrādnieku](permissions.md) atļaujas
+- Vismaz 100 unikāli klienti, vēlams vairāk nekā 10 000 klientu
+- Klienta identifikators — unikāls identifikators, lai saskaņotu transakcijas ar atsevišķu klientu
+- Vismaz viens gads darījumu vēsturē, vēlams divi līdz trīs gadi. Ideālā gadījumā vismaz divas līdz trīs transakcijas uz vienu klienta ID, vēlams vairākos datumos. Darījumu vēsturē jāiekļauj:
+  - **Transakcijas ID**: Unikāls katras transakcijas identifikators
+  - **Transakcijas datums**: katras transakcijas datums vai laika zīmogs
+  - **Transakcijas summa**: katra transakcijas vērtība naudas izteiksmē (piemēram, ieņēmumi vai peļņas norma)
+  - **Atgriešanai** piešķirtā etiķete: Būla patiesā/aplamā vērtība, kas norāda, vai transakcija ir atgriešanās
+  - **Produkta ID**: darījumā iesaistītā produkta PRODUKTA ID
+- Dati par klientu darbībām:
+  - **Primārā atslēga**: unikāls identifikators darbībai
+  - **Laikspiedols**: notikuma datums un laiks, ko identificē ar primāro atslēgu
+  - **Notikums (aktivitātes nosaukums)**: notikuma nosaukums, kuru vēlaties izmantot
+  - **Detalizēta informācija (summa vai vērtība)**: detalizēta informācija par klienta darbību
+- Papildu dati, piemēram:
+  - Aktivitātes tīmeklī: Tīmekļa vietnes apmeklējumu vēsture vai e-pasta vēsture
+  - Lojalitātes aktivitātes: lojalitātes atlīdzības punktu uzkrāšanas un izpirkšanas vēsture
+  - Klientu apkalpošana žurnāls: pakalpojuma zvans, sūdzība vai atgriešanas vēsture
+  - Informācija par klienta profilu
+- Mazāk nekā 20% trūkstošo vērtību obligātajos laukos
 
 > [!NOTE]
-> - Modelim ir nepieciešama jūsu klientu darījumu vēsture. Pašlaik ir iespējams konfigurēt tikai vienu transakcijas vēstures entitīju. Ja ir vairākas pirkšanas/darījumu entītijas, varat tās Power Query apvienot pirms datu uzņemšanas.
-> - Taču papildu klientu darbības datiem (neobligāti) var pievienot tik klientu darbību entītiju, cik vēlaties, lai tās izskatītu pēc modeļa.
+> Var konfigurēt tikai vienu transakciju vēstures entītiju. Ja ir vairāki pirkšanas vai darījumu entītijas, apvienojiet tos Power Query pirms datu uzņemšanas.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Klienta ilgtermiņa vērtības (CLV) prognoze
 
+Jebkurā laikā atlasiet **Saglabāt melnrakstu**, lai saglabātu prognoze kā melnrakstu. Melnraksts prognoze tiek parādīts **cilnē Manas prognozes**.
+
 1. Dodieties uz **izlūkošanas** > **prognozēm**.
 
-1. Atlasiet elementu **Klienta ilgtermiņa** vērtība un atlasiet vienumu **Lietot modeli**. 
+1. Cilnē Izveide elementā **Klienta mūža vērtība** atlasiet **Lietot modeli** **.**
 
-1. **Klienta mūža vērtību** rūtī atlasiet **Sākt darbu**.
+1. Atlasiet **Sākt darbu**.
 
 1. **Nosauciet šo modeli** un **Izvades entītijas nosaukumu**, lai nošķirtu tos no citiem modeļiem vai entītijām.
 
@@ -88,66 +77,56 @@ Ir nepieciešami šādi dati, un, ja tie ir atzīmēti kā neobligāti, ieteicam
 
 ### <a name="define-model-preferences"></a>Definējiet modeļa preferences
 
-1. Iestatiet **Prognozes periodu**, lai definētu, cik tālu nākotnē vēlaties prognozēt CLV.    
-   Pēc noklusējuma mērvienība tiek iestatīta kā mēneši. To var mainīt uz gadiem, lai turpmāk meklētu plašāku informāciju.
+1. Iestatiet **Prognozes periodu**, lai definētu, cik tālu nākotnē vēlaties prognozēt CLV. Pēc noklusējuma mērvienība tiek iestatīta kā mēneši.
 
    > [!TIP]
-   > Lai precīzi prognozētu CLV jūsu iestatītajā laika periodā, ir nepieciešams salīdzināms vēsturisko datu periods. Piemēram, ja vēlaties paredzēt CLV nākamajiem 12 mēnešiem, ieteicams izmantot vēsturiskos datus vismaz 18–24 mēnešu laikā.
+   > Lai precīzi prognozētu CLV iestatītajam laika periodam, ir nepieciešams salīdzināms vēsturisko datu periods. Piemēram, ja vēlaties prognozēt CLV nākamajiem 12 mēnešiem, izmantojiet vismaz 18–24 mēnešu vēsturiskos datus.
 
-1. Norādiet, ko **Aktīvie klienti** nozīmē jūsu uzņēmumam. Iestatiet laika periodu, kurā klientam ir jābūt vismaz vienai transakcijai, lai to uzskatītu par aktīvu. Modelis prognozēs CLV tikai aktīvajiem klientiem. 
-   - **Ļaujiet modelim aprēķināt iegādes intervālu (ieteicams)**: modelis analizē datus un nosaka laika periodu, pamatojoties uz vēsturiskiem pirkumiem.
-   - **Iestatiet intervālu manuāli**: ja jums ir noteikta aktīva klienta biznesa definīcija, izvēlieties šo opciju un atbilstoši iestatiet laika periodu.
+1. Iestatiet laika periodu, kurā klientam ir jābūt vismaz vienai transakcijai, lai to uzskatītu par aktīvu. Modelis paredz tikai CLV **Active klientiem**.
+   - **Ļaujiet modelim aprēķināt pirkšanas intervālu (ieteicams)**: modelis analizē jūsu datus un nosaka laika periodu, pamatojoties uz vēsturiskajiem pirkumiem.
+   - **Iestatiet intervālu manuāli**: laika periods aktīva klienta definīcijai.
 
-1. Definējiet **Augstas vērtības klienta** procentili, lai modelis varētu sniegt jūsu uzņēmuma definīcijai piemērotus rezultātus.
-    - **Modeļa aprēķins (ieteicams)**: modelis analizē datus un nosaka, kāda varētu būt jūsu uzņēmuma augsta vērtība, pamatojoties uz klientu transakciju vēsturi. Modelis izmanto heiristisku kārtulu (pamatā ir 80/20 kārtula vai pareto principu), lai atrastu vērtīgāku klientu statistiku. To klientu procentuālais daudzums, kuri vēstures periodā jūsu uzņēmumam prognozēja 80% kumulatīvo ieņēmumu, tiek uzskatīti par augstas vērtības klientiem. Parasti mazāk nekā 30-40% klientu sekmē 80% kumulatīvos ieņēmumus. Tomēr šis skaitlis var atšķirties atkarībā no uzņēmuma un nozares.    
-    - **Procenti no populārākajiem aktīvajiem klientiem**: definējiet vērtīgiem klientiem jūsu uzņēmumam kā populārāko aktīvo klientu procentile. Piemēram, šo opciju var izmantot, lai definētu augstas vērtības klientus kā populārākos 20% no nākamajiem klientiem.
+1. Definējiet augstvērtīga **klienta** procentili.
+    - **Modeļa aprēķins (ieteicams)**: Modelis izmanto 80/20 kārtulu. To klientu procentuālais daudzums, kuri vēstures periodā jūsu uzņēmumam prognozēja 80% kumulatīvo ieņēmumu, tiek uzskatīti par augstas vērtības klientiem. Parasti mazāk nekā 30-40% klientu sekmē 80% kumulatīvos ieņēmumus. Tomēr šis skaitlis var atšķirties atkarībā no uzņēmuma un nozares.
+    - **Procenti no labākajiem aktīvajiem klientiem**: Īpaša procentile augstvērtīgam klientam. Piemēram, ievadiet **25**, lai definētu augstvērtīgus klientus kā 25% no nākamajiem maksājošajiem klientiem.
 
     Ja jūsu uzņēmums citādi definē augstas vērtības klientus, [informējiet, jo mēs labprāt vēlētos zināt](https://go.microsoft.com/fwlink/?linkid=2074172).
 
-1. Atlasiet **Tālāk**, lai pārietu uz nākamo darbību.
+1. Atlasiet **Tālāk**.
 
 ### <a name="add-required-data"></a>Pievienot nepieciešamos datus
 
-1. Darbībā **Nepieciešamie dati** atlasiet opciju **Pievienot datus** **Klientu transakciju vēsturei** un izvēlieties entītiju, kas nodrošina transakciju vēstures informāciju, kā aprakstīts [priekšnosacījumos](#prerequisites).
+1. Atlasiet **Pievienot datus** klientu darījumu **vēsturei**.
 
-1. Kartējiet semantiskos laukus uz atribūtiem jūsu pirkumu vēstures entītijā un atlasiet **Tālāk**.
+1. Atlasiet semantiskās darbības veidu **SalesOrder** vai **SalesOrderLine**, kas satur transakciju vēsturi. Ja darbība nav iestatīta, atlasiet **šeit** un izveidojiet to.
 
-   :::image type="content" source="media/clv-add-customer-data-mapping.png" alt-text="Konfigurācijas darbības attēls, lai kartētu nepieciešamo datu datu atribūtus.":::
- 
-1. Ja tālāk norādītie lauki nav aizpildīti, konfigurējiet savas pirkumu vēstures entītijas relācijas ar *Klienta* entītiju un atlasiet **Saglabāt**.
-    1. Atlasiet transakciju vēstures entītiju.
-    1. Atlasiet lauku, kas identificē klientu pirkumu vēstures entītijā. Tam ir jāattiecas uz jūsu Klienta entītijas primāro klienta ID.
-    1. Atlasiet entītiju, kas atbilst primārā klienta entītijai.
-    1. Ievadiet nosaukumu, kas apraksta attiecību.
+1. Sadaļā **Darbības**, ja aktivitātes izveides laikā aktivitātes atribūti tika semantiski kartēti izvēlieties konkrētus atribūtus vai entītiju, uz kuru vēlaties koncentrēties aprēķinam. Ja semantiskā kartēšana nenotika, atlasiet **Rediģēt** un kartējiet savus datus.
+  
+   :::image type="content" source="media/CLV-add-required.PNG" alt-text="Nepieciešamo datu pievienošana CLV modelim":::
 
-      :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Konfigurācijas soļa attēls, lai definētu attiecības ar klienta entītiju.":::
+1. Atlasiet **Tālāk** un pārskatiet šim modelim nepieciešamos atribūtus.
 
-1. Atlasiet **Tālāk**.
+1. Atlasiet **Saglabāt**.
+
+1. Pievienojiet papildu aktivitātes vai atlasiet **Tālāk**.
 
 ### <a name="add-optional-activity-data"></a>Neobligāto darbību datu pievienošana
 
 Dati, kas atspoguļo galvenās klientu mijiedarbības (piemēram, tīmeklis, klientu apkalpošana un notikumu žurnāli), transakciju ierakstiem pievieno kontekstu. Vairāk struktūru, kas atrastas klientu darbības datos, var uzlabot prognožu precizitāti.
 
-1. **Darbībā Papildu dati (neobligāti)** atlasiet **Pievienot datus** sadaļā **Palielināt modeļa ieskatus ar papildu darbības datiem**. Izvēlieties klienta darbību entītiju, kas sniedz informāciju par klientu darbībām, kā aprakstīts [priekšnosacījumos](#prerequisites).
+1. Atlasiet **Pievienot datus sadaļā** Boost model insights with additional activity data (Pielāgot modeļa **ieskatus ar papildu darbību datiem**).
 
-1. Kartējiet semantiskos laukus uz atribūtiem jūsu klientu darbības entītijā un atlasiet **Tālāk**.
+1. Atlasiet darbības tipu, kas atbilst pievienojamās klienta darbības tipam. Ja darbība nav iestatīta, atlasiet **šeit** un izveidojiet to.
 
-   :::image type="content" source="media/clv-additional-data-mapping.png" alt-text="Konfigurācijas darbības attēls, lai kartētu papildu datu laukus.":::
+1. Sadaļā **Darbības**, ja aktivitātes atribūti tika kartēti, kad darbība tika izveidota, izvēlieties konkrētos atribūtus vai entītiju, uz kuru vēlaties koncentrēties aprēķinam. Ja kartēšana nenotika, atlasiet **Rediģēt** un kartēt savus datus.
 
-1. Atlasiet darbības tipu, kas atbilst pievienojamās klienta darbības tipam. Izvēlieties no esošajiem darbību tipiem vai pievienojiet jaunu darbības tipu.
+1. Atlasiet **Tālāk** un pārskatiet šim modelim nepieciešamos atribūtus.
 
-1. Konfigurējiet klienta darbības entītijas attiecības ar *Klienta* entītiju.
+1. Atlasiet **Saglabāt**.
 
-    1. Atlasiet vienumu Lauks, kas ir identificējis klientu pirkumu vēstures tabulā. To var tieši saistīt ar *Klienta* entītijas primāro klienta ID.
-    1. Atlasiet *Klienta* entītiju, kas atbilst primārajai *Klienta* entītijai.
-    1. Ievadiet nosaukumu, kas apraksta attiecību.
+1. Atlasiet **Tālāk**.
 
-   :::image type="content" source="media/clv-additional-data.png" alt-text="Konfigurācijas plūsmas soļa attēls, lai pievienotu papildu datus un konfigurētu darbību ar aizpildītiem piemēriem.":::
-
-1. Atlasiet vienumu **Saglabāt**.
-    Pievienojiet papildu datus, ja vēlaties iekļaut citas klientu darbības.
-
-1. Pievienojiet neobligātos klienta datus vai atlasiet **Tālāk**.
+1. [Pievienojiet neobligātos klientu datus](#add-optional-customer-data) vai atlasiet **Tālāk** un dodieties uz [Iestatīt atjaunināšanas grafiku](#set-update-schedule).
 
 ### <a name="add-optional-customer-data"></a>Neobligāto klientu datu pievienošana
 
@@ -156,91 +135,79 @@ Atlasiet kādu no 18 bieži izmantotajiem klienta profila atribūtiem, ko iekļa
 Piemēram: Contoso Coffee vēlas prognozēt klientu dzīves cikla vērtību, lai mērķētu uz augstvērtīgiem klientiem ar personalizētu piedāvājumu, kas saistīts ar viņu jaunā espresso automāta palaišanu. Contoso izmanto CLV modeli un pievieno visus 18 klientu profila atribūtus, lai redzētu, kuri faktori ietekmē viņu visaugstākās vērtības klientus. Viņi uzskata, ka klientu atrašanās vieta ir visietekmīgākais faktors šiem klientiem.
 Izmantojot šo informāciju, viņi organizē vietējo pasākumu espresso automāta palaišanai un sadarbojas ar vietējiem pārdevējiem, lai iegūtu personalizētus piedāvājumus un īpašu pieredzi pasākumā. Bez šīs informācijas Contoso, iespējams, būtu nosūtījuši tikai vispārīgus mārketinga e-pastus un palaiduši garām iespēju personalizēt šo savu augstvērtīgo klientu vietējo segmentu.
 
-1. **Darbībā Papildu dati (neobligāti)** atlasiet **Pievienot datus** sadaļā **Palielināt modeļa ieskatus vēl vairāk, izmantojot papildu klientu datus**.
+1. Atlasiet **Pievienot datus** sadaļā **Boost modeļa ieskati vēl vairāk, izmantojot papildu klientu datus**.
 
-1. Entītijai **izvēlieties** **Klients: CustomerInsights**, lai atlasītu vienoto klienta profila tabulu, kas kartē klienta atribūtu datus. Klienta **ID** izvēlieties **System.Customer.CustomerId**.
+1. Uzņēmumam **izvēlieties** Klients: CustomerInsights **, lai atlasītu vienoto klienta profilu, kas kartē klienta** atribūtu datus. Klienta **ID** izvēlieties **System.Customer.CustomerId**.
 
 1. Kartējiet citus laukus, ja dati ir pieejami jūsu vienotajos klientu profilos.
 
    :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Klienta profila datu kartēto lauku piemērs.":::
 
-1. Atlasiet **Saglabāt** pēc to atribūtu kartēšanas, kas modelim jāizmanto, lai palīdzētu prognozēt klienta mūža vērtību.
+1. Atlasiet **Saglabāt**.
 
 1. Atlasiet **Tālāk**.
 
 ### <a name="set-update-schedule"></a>Iestatīt grafika atjaunināšanu
 
-1. **Datu atjaunināšanas grafika** darbībā izvēlieties, cik bieži modelis atkārtoti jāplāno, pamatojoties uz jaunākajiem datiem. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek uzņemti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
+1. Izvēlieties frekvenci, lai pārkvalificētu savu modeli, pamatojoties uz jaunākajiem datiem. Šis iestatījums ir svarīgs, lai atjauninātu prognožu precizitāti, jo programmā Customer Insights tiek iekļauti jauni dati. Lielākā daļa uzņēmumu var pārkvalificēties reizi mēnesī un iegūt labu precizitāti to prognozēšanai.
 
 1. Atlasiet **Tālāk**.
 
 ### <a name="review-and-run-the-model-configuration"></a>Modeļa konfigurācijas pārskatīšana un palaišana
 
-1. Darbībā **Modeļa detalizētās informācijas pārskatīšana** validējiet konfigurācijas prognozi. Jūs varat atgriezties jebkurā prognozēšanas konfigurācijas daļā, zemāk parādītajā vērtībā atlasot **Rediģēt**. No norises indikatora var atlasīt arī konfigurācijas soli.
+Darbībā Pārskatīšana **un izpilde** tiek rādīts konfigurācijas kopsavilkums, un tā nodrošina iespēju veikt izmaiņas pirms prognoze izveides.
 
-1. Ja visas vērtības ir pareizi konfigurētas, atlasiet **Saglabāt un palaist**, lai palaisu modeli. Cilnē **Manas prognozes** varat redzēt šī procesa prognozes statusu. Atkarībā no prognozēšanas laikā izmantojamā datu daudzuma process var aizņemt vairākas stundas.
+1. Atlasiet **Rediģēt**, veicot kādu no darbībām, lai pārskatītu un veiktu izmaiņas.
 
-## <a name="review-prediction-status-and-results"></a>Prognozes statusa un rezultātu pārskatīšana
+1. Ja esat apmierināts ar atlasi, atlasiet **Saglabāt un palaist**, lai sāktu modeļa darbību. Atlasiet **Gatavs**. Cilne **Manas prognozes** tiek rādīta, kamēr tiek veidota prognoze. Atkarībā no prognozēšanas laikā izmantojamā datu daudzuma process var aizņemt vairākas stundas.
 
-### <a name="review-prediction-status"></a>Prognozes statusa pārskatīšana
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1.  Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-2.  Atlasiet prognozes, kuras vēlaties pārskatīt.
+## <a name="view-prediction-results"></a>Prognoze rezultātu skatīšana
 
-- **Prognoze nosaukums**: izveides brīdī paredzētās prognozes nosaukums.
-- **Prognoze tips**: prognozei izmantotā modeļa tips
-- **Izvades entītija**: entītijas nosaukums, kurā saglabāt prognozes izvadi. Dodieties uz **Dati** > **Entītijas**, lai atrastu entītiju ar šo nosaukumu.
-- **Prognozētais lauks**: šis lauks tiek aizpildīts tikai dažu veidu prognozēm, un tos neizmanto klienta ilgtermiņa vērtības prognozē.
-- **Statuss**: Prognozes izpildes statuss.
-    - **Ierindots**: prognoze gaida citu procesu izpildi.
-    - **Atsvaidzināšana**: prognoze pašlaik darbojas, lai iegūtu rezultātus, kas ieplūst izvades entītijā.
-    - **Neizdevās**: neizdevās palaist prognozi. Lai iegūtu detalizētu informāciju, [skatiet žurnālfailus](manage-predictions.md#troubleshoot-a-failed-prediction).
-    - **Veiksmīgi**: prognoze ir veiksmīga. Atlasiet **Skats** vertikālās daudzpunktes sadaļā, lai pārskatītu prognozes rezultātus.
-- **Rediģēts**: datums, kad tika mainīta prognozes konfigurācija.
-- **Pēdējā atsvaidzināšana**: datums, kad prognozes atsvaidzinātais rezultāts ir redzams izvades entītijā.
+1. Dodieties uz **izlūkošanas** > **prognozēm**.
 
-### <a name="review-prediction-results"></a>Prognozes rezultātu pārskatīšana
-
-1. Atveriet  **Informācija** > **Prognozes** un atlasiet cilni **Manas prognozes**.
-
-1. Atlasiet prognozi, kuras rezultātus vēlaties pārskatīt.
+1. **Cilnē Manas prognozes** atlasiet prognoze, kuru vēlaties skatīt.
 
 Rezutātu lapā ir trīs primārās datu sadaļas.
 
-- **Apmācības modeļa veiktspēja**: iespējamās kategorijas ir A, B vai C. Šī kategorija norāda prognozes veiktspēju un var palīdzēt pieņemt lēmumu izmantot izvades entītijā saglabātos rezultātus. Atlasiet **Uzzināt par šo rezultātu**, lai labāk izprastu pamatā esošā modeļa veiktspējas metriku un to, kā ir atvasināta galīgā modeļa veiktspējas kategorija.
+- **Apmācības modeļa veiktspēja**: A, B vai C pakāpe norāda prognoze veiktspēju un var palīdzēt pieņemt lēmumu izmantot izvades entītijā saglabātos rezultātus.
   
   :::image type="content" source="media/clv-model-score.png" alt-text="Modeļa rezultātu informācijas lodziņa attēls ar atzīmi A.":::
 
-  Konfigurējot prognozi, izmantojot augstas vērtības klientu definīciju, sistēma novērtē, kā AI modelis tiek izpildīts, prognozējot augstas vērtības klientus salīdzinājumā ar bāzlīnijas modeli.    
+  Customer Insights novērtē, kā AI modelis darbojās, prognozējot augstvērtīgus klientus salīdzinājumā ar bāzlīnijas modeli.
 
   Kategorijas tiek noteiktas, pamatojoties uz šādām kārtulām:
   - **A**, kad modelis precīzi prognozēja vismaz par 5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
   - **B** kad modelis precīzi prognozēja vismaz 0-5% vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
   - **C** kad modelis precīzi prognozēja vismaz vairāk augstas vērtības klientu salīdzinājumā ar bāzlīnijas modeli.
-
-  Rūtī **Modeļa novērtējums** ir redzama papildinformācija par mākslīgā intelekta modeļa veiktspēju un bāzlīnijas modeli. Bāzlīnijas modelis izmanto pieeju, kuras pamatā nav mākslīgais intelekts, lai aprēķinātu klientu veiktās sākotnējās vērtības, primāri pamatojoties uz klientu veiktajiem iepriekšējiem pirkumiem.     
-  Standarta formula, ko izmanto CLV aprēķinam pēc bāzlīnijas modeļa:    
-
-  _**CLV katram klientam** = klienta veiktais vidējais mēneša pirkums aktīvā klienta logā * Mēnešu skaits CLV prognozes periodā * Kopējais saglabāšanas līmenis visiem klientiem*_
-
-  Mākslīgā intelekta modelis tiek salīdzināts ar bāzlīnijas modeli, pamatojoties uz diviem modeļa veiktspējas rādītājiem.
   
-  - **Augstas vērtības klientu sekmīgas prognozēšanas rādītājs**
+  Atlasiet [**Uzzināt par šo rezultātu**](#learn-about-the-score), lai atvērtu **modeļa vērtēšanas** rūti, kurā tiek rādīta papildinformācija par AI modeļa veiktspēju un bāzlīnijas modeli. Tas palīdzēs jums labāk izprast pamatā esošos modeļa veiktspējas rādītājus un to, kā tika iegūta galīgā modeļa veiktspējas pakāpe. Bāzlīnijas modelis izmanto pieeju, kuras pamatā nav mākslīgais intelekts, lai aprēķinātu klientu veiktās sākotnējās vērtības, primāri pamatojoties uz klientu veiktajiem iepriekšējiem pirkumiem.
 
-    Skatiet atšķirību, prognozējot augstas vērtības klientus, kuri izmanto mākslīgā intelekta modeli, salīdzinot ar bāzlīnijas modeli. Piemēram, 84% panākumu līmenis nozīmē, ka no visiem vērtīgiem klientiem mācību datos mākslīgā intelekta modelis spēja precīzi tvert 84%. Pēc tam šos sekmīgos panākumus mēs salīdzinām ar bāzlīnijas modeļa sekmīgo likmi, lai ziņotu par relatīvajām izmaiņām. Šī vērtība tiek izmantota, lai modelim piešķirtu kategoriju.
+- **Klientu vērtība pēc procentiles**: diagrammā tiek parādīti mazvērtīgi un augstvērtīgi klienti. Virziet kursoru virs histogrammas joslām, lai redzētu katras grupas klientu skaitu un šīs grupas vidējo CLV. Pēc izvēles izveidojiet klientu [segmentus,](prediction-based-segment.md) pamatojoties uz viņu CLV prognozēm.
+  
+   :::image type="content" source="media/CLV-value-percent.png" alt-text="Klientu vērtība pēc procentiles CLV modelim":::
 
-  - **Kļūdu metrikas**
-    
-    Cita metrika ļauj pārskatīt modeļa vispārējo veiktspēju attiecībā uz kļūdu nākotnes vērtību prognozēšanas ziņā. Lai novērtētu šo kļūdu, mēs izmantojam kopējo saknes vidējā kvadrāta kļūdas (RMSE) metriku. RMSE ir standarta veids, kā mērīt modeļa kļūdu, prognozējot kvantitatīvus datus. Mākslīgā intelekta modeļa RMSE vērtību salīdzina ar bāzlīnjas modeļa RMSE, un tiek ziņots par relatīvo starpību.
+- **Vairums ietekmējošo faktoru**: veidojot savu CLV prognozi, tiek izskatīti dažādi faktori, pamatojoties uz mākslīgā intelekta modelim nodrošinātajiem ievades datiem. Katram no šiem faktoriem ir aprēķinātā nozīme modeļa izveidotajām apkopotajām prognozēm. Izmantojiet šos faktorus, lai palīdzētu apstiprināt prognoze rezultātus. Šie faktori sniedz arī plašāku ieskatu par visietekmējošākajiem faktoriem, kas veicina CLV prognozēšanu visos klientos.
+  
+   :::image type="content" source="media/CLV-influence-factors.png" alt-text="Visietekmīgākie faktori CLV modelim":::
 
-  Mākslīgā intelekta modelis nosaka precīzu klientu rangu pēc vērtības, ko tie sniedz jūsu uzņēmumam. Tātad tikai labākās vērtības klientu prognozēšanas sekmīgais rādītājs tiek izmantots, lai atvasinātu galīgo modeļa kategoriju. RMSE dati ir jutīgi pret novirzēm. Scenārijos, kuros ir mazs procentuālais klientu skaits ar pārāk lielām iegādes vērtībām, kopējā RMSE metrika var nedot pilnīgu priekšstatu par modeļa veiktspēju.   
+### <a name="learn-about-the-score"></a>Uzziniet par rezultātu
 
-- **Klientu vērtība pēc percentiles**: izmantojot vērtīgu klientu definīciju, klienti tiek grupēti zemās un augstās vērtībās, pamatojoties uz viņu CLV prognozēm, un atainoti diagrammā. Kursējot pa histogrammas joslām, var redzēt klientu skaitu katrā grupā un šīs grupas vidējo CLV. Šie dati var palīdzēt, ja vēlaties [izveidot klientu segmentus](segments.md), pamatojoties uz viņu CLV prognozi.
+Standarta formula, ko izmanto CLV aprēķinam pēc bāzlīnijas modeļa:
 
-- **Vairums ietekmējošo faktoru**: veidojot savu CLV prognozi, tiek izskatīti dažādi faktori, pamatojoties uz mākslīgā intelekta modelim nodrošinātajiem ievades datiem. Katram no šiem faktoriem ir aprēķinātā nozīme modeļa izveidotajām apkopotajām prognozēm. Šos faktorus var izmantot, lai atvieglotu jūsu prognozes rezultātu validēšanu. Šie faktori sniedz arī plašāku ieskatu par visietekmējošākajiem faktoriem, kas veicina CLV prognozēšanu visos klientos.
+ _**CLV katram klientam** = Klienta vidējais mēneša pirkums aktīvajā klientu logā * Mēnešu skaits CLV prognoze periodā * Visu klientu kopējais saglabāšanas līmenis_
 
-## <a name="manage-predictions"></a>Pārvaldīt prognozes
+Mākslīgā intelekta modelis tiek salīdzināts ar bāzlīnijas modeli, pamatojoties uz diviem modeļa veiktspējas rādītājiem.
+  
+- **Augstas vērtības klientu sekmīgas prognozēšanas rādītājs**
 
-Ir iespējams optimizēt, novērst problēmas, atsvaidzināt vai dzēst prognozes. Pārskatiet ievades datu lietojamības ziņojumu, lai uzzinātu, kā padarīt prognozi ātrāku un uzticamāku. Papildinformāciju skatiet šeit: [Prognožu pārvaldība](manage-predictions.md).
+  Skatiet atšķirību, prognozējot augstas vērtības klientus, kuri izmanto mākslīgā intelekta modeli, salīdzinot ar bāzlīnijas modeli. Piemēram, 84% panākumu līmenis nozīmē, ka no visiem vērtīgiem klientiem mācību datos mākslīgā intelekta modelis spēja precīzi tvert 84%. Pēc tam šos sekmīgos panākumus mēs salīdzinām ar bāzlīnijas modeļa sekmīgo likmi, lai ziņotu par relatīvajām izmaiņām. Šī vērtība tiek izmantota, lai modelim piešķirtu kategoriju.
+
+- **Kļūdu metrikas**
+
+  Skatiet modeļa vispārējo veiktspēju kļūdu ziņā, prognozējot nākotnes vērtības. Lai novērtētu šo kļūdu, mēs izmantojam kopējo saknes vidējā kvadrāta kļūdas (RMSE) metriku. RMSE ir standarta veids, kā mērīt modeļa kļūdu, prognozējot kvantitatīvus datus. Mākslīgā intelekta modeļa RMSE vērtību salīdzina ar bāzlīnjas modeļa RMSE, un tiek ziņots par relatīvo starpību.
+
+Mākslīgā intelekta modelis nosaka precīzu klientu rangu pēc vērtības, ko tie sniedz jūsu uzņēmumam. Tātad tikai labākās vērtības klientu prognozēšanas sekmīgais rādītājs tiek izmantots, lai atvasinātu galīgo modeļa kategoriju. RMSE dati ir jutīgi pret novirzēm. Scenārijos, kuros ir mazs procentuālais klientu skaits ar pārāk lielām iegādes vērtībām, kopējā RMSE metrika var nedot pilnīgu priekšstatu par modeļa veiktspēju.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

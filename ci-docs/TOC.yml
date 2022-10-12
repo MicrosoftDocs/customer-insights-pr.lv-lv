@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Pielāgotu modeļu izmantošana no Azure algoritmiskās mācīšanās
           href: custom-models.md
+        - name: 'Segmentu izveide, pamatojoties uz prognozēm'
+          href: prediction-based-segment.md
     - name: Norādījumu paraugi
       items:
         - name: CLV datu parauga prognoze
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Eksperimenti ar Azure algoritmisko mācīšanos
           href: azure-machine-learning-experiments.md
-    - name: Pārvaldīt prognozes
-      href: manage-predictions.md
-    - name: 'Segmentu izveide, pamatojoties uz prognozēm'
-      href: prediction-based-segment.md
 - name: Eksportēšanas opcijas
   items:
     - name: Eksportēšanas darbības

@@ -1,7 +1,7 @@
 ---
 title: Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 description: Datu importēšana no Microsoft Dataverse pārvaldītā datu ezera.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206962"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609804"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Savienojuma izveide ar datiem Microsoft Dataverse pārvaldītā datu ezerā
 
@@ -70,5 +70,93 @@ Lai izveidotu savienojumu ar citu Dataverse datu ezeru, [izveidojiet jaunu datu 
 1. Noklikšķiniet uz **Saglabāt**, lai lietotu izmaiņas un atgrieztos **lapā Datu avoti**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Bieži sastopami norīšanas kļūdu vai bojātu datu iemesli
+
+Šādi ievadītie dati pārbauda, vai tiek rādīti bojāti ieraksti:
+
+- Lauka vērtība neatbilst tā kolonnas datu tipam.
+- Laukos ir rakstzīmes, kas liek kolonnai neatbilst gaidītajai shēmai. Piemēram: nepareizi formatēti piedāvājumi, nebeidzami piedāvājumi vai jaunas rindas rakstzīmes.
+- Ja ir kolonnas datetime/date/datetimeoffset, to formāts ir jānorāda modelī, ja tas neatbilst standarta ISO formātam.
+
+### <a name="schema-or-data-type-mismatch"></a>Shēmas vai datu tipa neatbilstība
+
+Ja dati neatbilst shēmai, ieraksti tiek klasificēti kā bojāti. Izlabojiet vai nu avota datus, vai shēmu un atkārtoti uzņemiet datus.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datuma laika lauki nepareizā formātā
+
+Entītijas datuma laika lauki nav ISO vai en-US formātā. Customer Insights noklusējuma datuma laika formāts ir en-US formāts. Visiem entītijas datuma laika laukiem jābūt vienā formātā. Customer Insights atbalsta citus formātus ar nosacījumu, ka modeļa vai manifest.json avota vai entītijas līmenī tiek veidotas anotācijas vai iezīmes. Piemēram:
+
+**Modelis.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json gadījumā datuma laika formātu var norādīt entītijas līmenī vai atribūtu līmenī. Entītijas līmenī izmantojiet "exhibitsTraits" entītijā *.manifest.cdm.json, lai definētu datu laika formātu. Atribūtu līmenī atribūta atribūtā izmantojiet "appliedTraits" entityname.cdm.json.
+
+**Manifest.json entītijas līmenī**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atribūtu līmenī**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

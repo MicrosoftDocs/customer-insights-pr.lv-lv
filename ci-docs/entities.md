@@ -1,7 +1,7 @@
 ---
 title: Entitījas risinājumā Customer Insights.
 description: Datu skatīšana Entītiju lapā.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183574"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610107"
 ---
 # <a name="entities-in-customer-insights"></a>Entitījas risinājumā Customer Insights.
 
@@ -61,27 +61,5 @@ Dodieties uz **Datu** > **entītijas**, lai skatītu entītiju sarakstu. Tālāk
   - **Izveidots**: entītijas izveides datums un laiks.
   - **Rediģēja**: tās personas vārds, kura modificēja entītiju.
   - **Rediģēts**: entītijas modificēšanas datums un laiks.
-
-## <a name="entity-specific-information"></a>Noteiktas entītijas informācija
-
-Nākamajā sadaļā ir sniegta informācija par dažām sistēmas izveidotām entītijām.
-
-### <a name="corrupted-data-sources"></a>Bojāti datu avoti
-
-Uzņemtu datu avotu lauki var saturēt bojātus datus. Ieraksti ar bojātiem laukiem tiek rādīti sistēmas izveidotās entītijās. Pārzināšana par bojātiem ierakstiem palīdz noteikt, kurus datus pārskatīt un atjaunināt avota sistēmā. Pēc nākamās datu avotu atsvaidzināšanas labotie ieraksti tiek lietoti programmā Customer Insights un nodoti lejupstraumes procesiem. 
-
-Piemēram, kolonnas 'dzimšanas diena' datu tips ir iestatīts kā 'datums'. Klienta ieraksta dzimšanas diena ir ievadīta kā '01/01/19777'. Sistēma atzīmēs, ka šis ieraksts ir bojāts. Kāds tagad avota sistēmā var mainīt dzimšanas dienu uz '1977'. Pēc automātiskas datu avotu atsvaidzināšanas šim laukam tagad ir derīgs formāts, un ieraksts tiks noņemts no bojātās entītijas.
-
-Pārejiet uz **Dati** > **Entītijas** un sadaļā **Sistēma** meklējiet bojātās entītijas. Bojātās entītijas nosaukumu shēma: "DataSourceName_EntityName_corrupt". Atlasiet bojātu entītiju, lai identificētu bojātos laukus un iemeslu atsevišķa ieraksta līmenī.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Korupcijas iemesls.":::
-
-Customer Insights joprojām apstrādā bojātos ierakstus. Tomēr, strādājot ar vienotajiem datiem, tie var radīt problēmas.
-
-Šādi ievadītie dati pārbauda, vai tiek rādīti bojāti ieraksti:
-
-- Lauka vērtība neatbilst tā kolonnas datu tipam.
-- Laukos ir rakstzīmes, kas liek kolonnai neatbilst gaidītajai shēmai. Piemēram: nepareizi formatēti piedāvājumi, nebeidzami piedāvājumi vai jaunas rindas rakstzīmes.
-- Ja ir kolonnas datetime/datetime/datetimeoffset, to formāts ir jānorāda modelī, ja tas neatbilst standarta ISO formātam.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

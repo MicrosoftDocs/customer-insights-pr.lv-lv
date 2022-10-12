@@ -1,7 +1,7 @@
 ---
 title: Savienojuma izveide ar Power Query datu avots (satur video)
 description: Datu uzņemšana, izmantojot savienotāju Power Query (satur video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463274"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609899"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Savienojuma izveide ar Power Query datu avots
 
@@ -43,16 +43,17 @@ Pievienojot datu avotus, kuru pamatā Power Query ir savienotāji, parasti tiek 
 
 1. Atlasiet **Pārveidot datus**.
 
-1. Dialoglodziņš **Power Query - vaicājumu** rediģēšana ļauj pārskatīt un precizēt datus. Entītijas, kuras sistēma identificēja jūsu atlasītajā datu avotā, tiek rādītas kreisajā rūtī.
+1. Pārskatiet un precizējiet savus datus **Power Query lapā - Vaicājumu** rediģēšana. Entītijas, kuras sistēma identificēja jūsu atlasītajā datu avotā, tiek rādītas kreisajā rūtī.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Vaicājumu rediģēšanas dialoglodziņš":::
 
-1. Varat arī transformēt savus datus. Atlasiet entītiju, ko vēlaties rediģēt vai transformēt. Izmantojiet logā esošās opcijas, Power Query lai lietotu transformācijas. Katra transformācija ir norādīta sadaļā **Lietotās darbības**. Power Query nodrošina daudzas [iepriekš izveidotas transformācijas](/power-query/power-query-what-is-power-query#transformations) iespējas.
+1. Pārveidojiet savus datus. Atlasiet entītiju, ko vēlaties rediģēt vai transformēt. Izmantojiet logā esošās opcijas, Power Query lai lietotu transformācijas. Katra transformācija ir norādīta sadaļā **Lietotās darbības**. Power Query nodrošina daudzas [iepriekš izveidotas transformācijas](/power-query/power-query-what-is-power-query#transformations) iespējas.
 
-   Mēs iesakām izmantot šādas transformācijas:
-
-   - Ja uzņemat datus no CSV faila, pirmajā rindā bieži vien ir galvenes. Dodieties uz **Transformācija** un atlasiet **Izmantot pirmo rindu kā galvenes**.
-   - Pārliecinieties, ka datu veids ir iestatīts atbilstoši. Piemēram, datuma laukiem atlasiet datuma tipu.
+   > [!IMPORTANT]
+   > Mēs iesakām izmantot šādas transformācijas:
+   >
+   > - Ja uzņemat datus no CSV faila, pirmajā rindā bieži vien ir galvenes. Dodieties uz **Transformācija** un atlasiet **Izmantot pirmo rindu kā galvenes**.
+   > - Pārliecinieties, vai datu tips ir iestatīts atbilstoši un atbilst datiem. Piemēram, datuma laukiem atlasiet datuma tipu.
 
 1. Lai pievienotu papildu entītijas savai datu avots dialoglodziņā Vaicājumu **rediģēšana, dodieties uz** Sākums **un atlasiet** Iegūt datus **.** Atkārtojiet 5.–10. darbību, līdz esat pievienojis visas šīs datu avots entītijas. Ja jums ir datu bāze, kurā ir ietvertas vairākas datu kopas, katra datu kopa ir entītija.
 
@@ -102,5 +103,51 @@ Datu vārtejas no esošas Power BI vai Power Apps vides būs redzamas, un tās v
 1. Atlasiet **Saglabāt**, lai lietotu izmaiņas un atgrieztos **lapā Datu avoti**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Bieži sastopami norīšanas kļūdu vai bojātu datu iemesli
+
+### <a name="data-type-does-not-match-data"></a>Datu tips neatbilst datiem
+
+Visbiežāk sastopamā datu tipu neatbilstība rodas, ja datuma laukam nav iestatīts pareizais datuma formāts.
+
+Datus var fiksēt avotā un atkārtoti uzņemt. Vai arī izlabojiet transformāciju programmā Customer Insights. Lai fiksētu transformāciju:
+
+1. Dodieties uz **Dati** > **Datu avoti**.
+
+1. Blakus datu avots ar bojātajiem datiem atlasiet **Rediģēt**.
+
+1. Atlasiet **Tālāk**.
+
+1. Atlasiet katru vaicājumu un meklējiet nepareizas transformācijas, kas tiek lietotas sadaļā "Lietotās darbības", vai datumu kolonnas, kas nav pārveidotas ar datuma formātu.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Rediģēt, parādot nepareizu datuma formātu":::
+
+1. Mainiet datu tipu, lai tas pareizi atbilstu datiem.
+
+1. Atlasiet **Saglabāt**. Šī datu avots ir atsvaidzināta.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Uz PPDF Power Query balstītas datu avots atsvaidzināšanas problēmu novēršana
+
+Ja dati ir novecojuši vai pēc datu avots atsvaidzināšanas tiek parādītas kļūdas, veiciet tālāk norādītās darbības.
+
+1. Dodieties uz [Power Platform](https://make.powerapps.com).
+
+1. Atlasiet instanci **Customer Insights vide**.
+
+1. Naviģējiet uz **Dataflows**.
+
+1. Datu plūsmai, kas atbilst Customer Insights datu avots, atlasiet vertikālo daudzpunkti (&vellip;) un pēc tam atlasiet **Rādīt atsvaidzināšanas vēsturi**.
+
+1. **Ja datu plūsmas statuss** ir **Veiksme**, iespējams, ir mainījušās īpašumtiesības uz Power Query datu avots, kuru pamatā ir:
+
+   1. Pārskatiet atsvaidzināšanas grafiku no atsvaidzināšanas vēstures.
+   1. Iestatiet jaunā īpašnieka grafiku un saglabājiet iestatījumus.
+
+1. **Ja datu plūsmas statuss** nav **izdevies**:
+
+   1. Lejupielādējiet atsvaidzināšanas vēstures failu.
+   1. Pārskatiet lejupielādēto failu kļūmes iemesla dēļ.
+   1. Ja kļūdu nevar novērst, atlasiet **?** , lai atvērtu atbalsta biļeti. Iekļaujiet lejupielādēto atsvaidzināšanas vēstures failu.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
