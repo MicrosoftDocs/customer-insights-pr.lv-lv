@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609601"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638360"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights jaunumi
 
@@ -24,239 +24,261 @@ Atjauninājumi tiek ieviesti katrā reģionā atsevišķi. Tāpēc noteikti reģ
 > [!TIP]
 > Lai iesniegtu funkciju pieprasījumus un produktu ieteikumus, kā arī balsotu par tiem, dodieties uz [Dynamics 365 programmas ideju portālu](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="september-2022-updates"></a>2022. gada septembra atjauninājumi
+
+2022. gada septembra atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
+
+### <a name="export-data-to-hubspot"></a>Datu eksportēšana uz HubSpot
+
+Eksportējiet vienoto klientu profilu segmentus uz HubSpot un izmantojiet tos e-pasta mārketingam.
+
+Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Vienota lauka vai entītijas noņemšana no datu apvienošanas
+
+Laukus un entītijas var noņemt no datu apvienošanas procesa.
+
+Papildinformāciju skatiet sadaļā [Vienota lauka noņemšana](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Nezināmu klientu profilu pārvaldība
+
+Neaizmirstama personalizēšana ir atkarīga no jūsu klientu datu bagātības un pilnīguma, un Customer Insights palīdz sasniegt šos mērķus. Varat pārvaldīt to lietotāju klientu profilus, par kuriem jums nav citas informācijas kā vien ID.
+
+Papildinformāciju skatiet sadaļā [Nezināmu profilu pārvaldība, izmantojot Customer Insights](manage-unknown-profiles.md).
+
 ## <a name="august-2022-updates"></a>2022. gada augusta atjauninājumi
 
-2022. gada augusta atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada augusta atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
-### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktu apvienošana B-to-B vidē
+### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktu apvienošana B-to-B vidēs
 
 B-to-B vides programmā Customer Insights tagad atbalsta uzlabotu datu apvienošanas pieredzi.
 
-Tagad varat apvienot kontaktpersonas papildus kontiem, lai iegūtu pilnu pārskatu par savām biznesa kontaktpersonām. Vienotās kontaktpersonas ir saistītas ar vienotiem kontiem un tagad ir norādītas klientu kartītēs. 
+Tagad varat apvienot kontaktpersonas papildus kontiem, lai iegūtu pilnu priekšstatu par savām darba kontaktpersonām. Vienotās kontaktpersonas ir saistītas ar vienotiem kontiem un tagad ir norādītas klientu kartēs. 
 
-Papildinformāciju skatiet sadaļā [Vienota kontaktpersonas profila izveide](data-unification-contacts.md).
+Papildinformāciju skatiet sadaļā [Vienota kontaktpersonu profila izveide](data-unification-contacts.md).
 
 ### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Segmentu izveide un eksportēšana, pamatojoties uz vienotām kontaktpersonām
 
-Pateicoties jaunajai kontaktpersonu apvienošanai, varat izveidot kontaktpersonu segmentus, izmantojot kritērijus no kontaktpersonām, kontiem vai abiem. Šos segmentus var eksportēt aktivizēšanai citos pakalpojumos.
+Pateicoties jaunajai kontaktpersonu apvienošanai, varat izveidot kontaktpersonu segmentus, izmantojot kontaktpersonu, uzņēmumu vai abu pušu kritērijus. Šos segmentus var eksportēt aktivizēšanai citos pakalpojumos.
 
-Papildinformāciju skatiet rakstā [Pārskats par eksportu](export-destinations.md).
+Papildinformāciju skatiet sadaļā [Pārskats](export-destinations.md) par eksportēšanu.
 
 ### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Izvietošanas reģioni, kas saskaņoti ar Microsoft Dataverse
 
-Veidojot jaunu Customer Insights vidi, varat atlasīt reģionu, kurā vēlaties, lai pakalpojums tiktu izvietots un viesots. Mēs esam atjauninājuši reģiona izvēli, lai saskaņotu ar Microsoft Dataverse un Power Platform.
+Veidojot jaunu Customer Insights vidi, varat atlasīt reģionu, kurā vēlaties izvietot un viesot pakalpojumu. Mēs esam atjauninājuši reģiona izvēli, lai tas atbilstu Microsoft Dataverse un .Power Platform
 
 Tagad varat viegli atlasīt to pašu reģionu, kurā atrodas jūsu esošā Microsoft Dataverse vide vai Azure Data Lake krātuves konts (ja izvēlaties šo opciju), atkarībā no Customer Insights pieejamības šajā reģionā.
 
-Papildinformāciju skatiet sadaļā [Jaunas vides](create-environment.md) izveide un [Produktu pieejamība pēc ģeogrāfiskās atrašanās vietas](https://dynamics.microsoft.com/availability-reports/).
+Papildinformāciju skatiet sadaļā Jaunas vides [izveide un](create-environment.md) Produktu pieejamība pēc ģeogrāfiskās atrašanās vietas [.](https://dynamics.microsoft.com/availability-reports/)
 
 ## <a name="july-2022-updates"></a>2022. gada jūlija atjauninājumi
 
-2022. gada jūlija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada jūlija atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
-### <a name="export-to-moengage"></a>Eksports uz MoEngage
+### <a name="export-to-moengage"></a>Eksportēt uz MoEngage
 
-Eksportējiet vienotu klientu profilu segmentus uz MoEngage un izmantojiet tos e-pasta mārketingam MoEngage.
+Eksportējiet vienoto klientu profilu segmentus uz MoEngage un izmantojiet tos e-pasta mārketingam pakalpojumā MoEngage.
 
 Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz MoEngage](export-moengage.md).
 
-### <a name="ssh-support-for-sftp-based-exports"></a>SSH atbalsts uz SFTP balstītai eksportēšanai
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH atbalsts SFTP eksportam
 
-Izvēlieties, vai vēlaties autentificēties, izmantojot SSH vai lietotājvārdu/paroli, lai izveidotu savienojumus ar SFTP eksportēšanas galamērķiem.
+Izvēlieties, vai vēlaties autentificēties, izmantojot SSH vai lietotājvārdu/paroli savienojumiem ar SFTP eksporta galamērķiem.
 
 Papildinformāciju skatiet sadaļā [Datu eksportēšana uz SFTP resursdatoriem](export-sftp.md).
 
-### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizējiet pieredzi ar datiem par zināmiem un nezināmiem lietotājiem
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Lietošanas iespēju personalizēšana, izmantojot datus par zināmiem un nezināmiem lietotājiem
 
-Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāk, jo lietotāji pārvietojas pa dažādiem digitālo kanālu zīmoliem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā kanālā, ja tas nav pieteicies. Bieži problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu jēgpilnus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm jūsu avota sistēmās.
+Klientu datu pārvaldība nav jauns izaicinājums, taču tas kļūst arvien grūtāks, jo lietotāji pārvietojas pa dažādiem digitālo kanālu piedāvājumiem. Lietotājs, kurš ir zināms (autentificēts) vienā kanālā, kļūst nezināms (neautentificēts) citā, ja nav pieteicies. Bieži vien problēma ir tā, ka neautentificētiem (nezināmiem) lietotājiem nav kopēja ID. To var izmantot, lai saistītu nozīmīgus profilu atribūtus un ģenerētu vienotus klientu profilus. Customer Insights palīdz atrisināt šo problēmu, uzņemot datus no izsekošanas metodēm avota sistēmās.
 
 Papildinformāciju skatiet rakstā [Pieredzes personalizēšana, izmantojot datus par zināmiem un nezināmiem lietotājiem](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>2022. gada jūnija atjauninājumi
 
-2022. gada jūnija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada jūnija atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
-### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Atjaunināta lietotāja pieredze datu avotos un datu uzņemšanā
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Atjaunināta lietotāja pieredze datu avotiem un datu uzņemšanai
 
-Datu importēšana no plaša datu avotu klāsta ir pamats klientu datu konsolidēšanai .Dynamics 365 Customer Insights Mēs esam pārskatījuši lietotāju pieredzi datu avotu importēšanai un savienošanai. Šī atjauninājuma mērķis ir atvieglot customer insights datu uzņemšanu.
+Datu importēšana no plaša datu avotu klāsta ir pamats klientu datu konsolidēšanai pakalpojumā Dynamics 365 Customer Insights. Mēs esam pārskatījuši lietotāja pieredzi datu avotu importēšanai un savienošanai. Šī atjauninājuma mērķis ir atvieglot datu uzņemšanu Customer Insights.
 
 Papildinformāciju skatiet sadaļā [Datu avotu pārskats](data-sources.md).
 
-### <a name="export-to-inmobi"></a>Eksports uz InMobi
+### <a name="export-to-inmobi"></a>Eksportēt uz InMobi
 
-InMobi palīdz zīmoliem izprast, identificēt, iesaistīt un iegūt patērētājus. Segmentus un citus datus varat eksportēt uz pakalpojumu InMobi, izmantojot Azure Blob krātuves kontus.
+InMobi palīdz zīmoliem saprast, identificēt, iesaistīt un iegūt patērētājus. Varat eksportēt segmentus un citus datus uz pakalpojumu InMobi, izmantojot Azure Blob krātuves kontus.
 
-Papildinformāciju skatiet rakstā [Eksportēšana uz InMobi (priekšskatījums)](export-inmobi.md)
+Papildinformāciju skatiet sadaļā [Eksportēšana uz InMobi (priekšskatījums)](export-inmobi.md)
 
 ### <a name="lockbox-support-in-customer-insights"></a>Lockbox atbalsts programmā Customer Insights
 
-Klientu bloķēšanas lodziņš nodrošina saskarni, lai pārskatītu un apstiprinātu (vai noraidītu) datu piekļuves pieprasījumus. Šie pieprasījumi rodas, ja ir nepieciešama piekļuve datiem klientu datiem, lai atrisinātu atbalsta pieteikumu.
+Customer Lockbox nodrošina interfeisu datu piekļuves pieprasījumu pārskatīšanai un apstiprināšanai (vai noraidīšanai). Šie pieprasījumi rodas, ja ir nepieciešama piekļuve klientu datiem, lai atrisinātu atbalsta pieteikumu.
 
 Papildinformāciju skatiet sadaļā [Droša piekļuve klientu datiem, izmantojot klientu bloķēšanas lodziņu (priekšskatījums)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
-### <a name="connect-to-your-data-using-azure-private-link"></a>Savienojuma izveide ar datiem, izmantojot Azure Private Link
+### <a name="connect-to-your-data-using-azure-private-link"></a>Savienojuma izveide ar datiem, izmantojot Azure privāto saiti
 
-Azure Private Link ļauj Customer Insights izveidot savienojumu ar jūsu Azure Data Lake Storage kontu, izmantojot privātu galapunktu jūsu virtuālajā tīklā. Datiem krātuves kontā, kas nav atvērts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
+Azure Private Link ļauj Customer Insights izveidot savienojumu ar jūsu kontu, izmantojot privātu galapunktu jūsu Azure Data Lake Storage virtuālajā tīklā. Datiem krātuves kontā, kas nav eksponēts publiskajam internetam, Private Link iespējo savienojumu ar šo ierobežoto tīklu.
 
-Papildinformāciju skatiet sadaļā [Privātās saites izmantošana programmā Customer Insights](security-overview.md#set-up-an-azure-private-link).
+Papildinformāciju skatiet sadaļā [Private Link izmantošana programmā Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>2022. gada maija atjauninājumi
 
-2022. gada maija atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada maija atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
 ### <a name="updated-data-unification-experience"></a>Atjaunināta datu apvienošanas pieredze
 
- Datu apvienošana ļauj apvienot vienreiz atšķirīgus datu avotus vienā datu pamatkopā, kas nodrošina vienotu skatu uz šiem datiem. Datus var apvienot vienā entītijā vai vairākās entītijās. Vispirms atlasiet [entītijas un avota laukus](map-entities.md), [noņemiet ierakstu](remove-duplicates.md) dublikātus, norādiet kārtulas atbilstošiem nosacījumiem [un](match-entities.md) definējiet, kurus [laukus iekļaut vienotajos klientu profilos](merge-entities.md).
+ Datu apvienošana ļauj apvienot vienreiz atdalītus datu avotus vienā pamatdatu kopā, kas nodrošina vienotu šo datu skatu. Datus var apvienot vienā entītijā vai vairākās entītijās. Vispirms atlasiet [entītijas un avota laukus, noņemiet ierakstu](map-entities.md) dublikātus, norādiet atbilstošo nosacījumu [kārtulas](remove-duplicates.md) un definējiet, kurus [laukus](match-entities.md)[iekļaut vienotajos klientu profilos](merge-entities.md).
 
 Papildinformāciju skatiet sadaļā [Datu apvienošanas pārskats](data-unification.md).
 
 ### <a name="refreshed-home-page-in-customer-insights"></a>Atsvaidzināta sākumlapa programmā Customer Insights
 
-**Sākums** palīdz veikt galveno līdzekļu konfigurācijas procesu un sniedz pārskatu par segmentiem, mēriem un bagātināšanas datiem. Mēs esam atsvaidzinājuši pieredzi, lai acumirklī sniegtu atbilstošāku informāciju.
+**Sākums** palīdz veikt galveno līdzekļu konfigurācijas procesu un sniedz pārskatu par segmentiem, pasākumiem un bagātināšanas datiem. Mēs esam atsvaidzinājuši pieredzi, lai acumirklī sniegtu atbilstošāku informāciju.
 
-Papildinformāciju skatiet sadaļā [Klientu ieskatu izpēte](home.md).
+Papildinformāciju skatiet sadaļā [Customer Insights izpēte](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Segmenta lietojuma izsekošana
 
-Tagad [varat izsekot segmenta](segments.md#track-usage-of-a-segment) lietojumam programmās, kuru pamatā Dataverse ir organizācija, kas ir saistīta ar Customer Insights. Customer [Insights segmentiem, kas tiek izmantoti Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) automatizētajās kampaņās, sistēma informē jūs par šī segmenta lietojumu.
+Tagad [varat izsekot segmenta](segments.md#track-usage-of-a-segment) lietojumu programmās, kuru pamatā ir organizācija, Dataverse kas ir saistīta ar Customer Insights. Customer [Insights segmentiem, kas tiek izmantoti Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) automatizētajās kampaņās, sistēma informē jūs par šī segmenta lietojumu.
 
-### <a name="export-to-criteo"></a>Eksports uz Criteo
+### <a name="export-to-criteo"></a>Eksportēt uz Criteo
 
 Criteo ir tiešsaistes platforma, kas palīdz lietotājiem pārvaldīt digitālo reklāmu. Tagad varat eksportēt vienotu klientu profilu segmentus, lai ģenerētu kampaņas, nodrošinātu e-pasta mārketingu un izmantotu noteiktas klientu grupas ar Criteo.
 
 Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz Criteo (priekšskatījums)](export-criteo.md).
 
-### <a name="refined-documentation-structure-for-environment-creation"></a>Uzlabota dokumentācijas struktūra vides izveidei
+### <a name="refined-documentation-structure-for-environment-creation"></a>Pilnveidota dokumentācijas struktūra vides radīšanai
 
-Mēs esam pārskatījuši palīdzības dokumentus, kas saistīti ar vides izveidi un pārvaldību programmā Customer Insights. Raksti tagad ir sagrupēti zem satura rādītāja mezgla Vides. Pārstrukturētie panti sniedz vairāk norādījumu par dažādiem veidiem, kā izveidot vidi un kam ir skaidrāka struktūra. Ja jums ir atsauksmes, ar kurām dalīties, informējiet mūs, izmantojot vadīklas palīdzības rakstu beigās.
+Mēs esam atkārtoti pārskatījuši palīdzības dokumentus, kas saistīti ar vides izveidi un pārvaldību programmā Customer Insights. Raksti tagad ir sagrupēti zem satura rādītāja mezgla Vides. Pārstrukturētie raksti sniedz vairāk norādījumu par dažādiem veidiem, kā iestatīt vidi, un tiem ir skaidrāka struktūra. Ja jums ir atsauksmes, ar kurām dalīties, informējiet mūs, izmantojot vadīklas palīdzības rakstu beigās.
 
-Papildinformāciju skatiet sadaļā [Kā: izveidot jaunu vidi](create-environment.md).
+Papildinformāciju skatiet sadaļā [Kā: jaunas vides](create-environment.md) izveide.
 
 ## <a name="april-2022-updates"></a>2022. gada aprīļa atjauninājumi
 
-2022. gada aprīļa atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada aprīļa atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
 ### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet bagātināšana (priekšskatījums)
 
 Dun & Bradstreet nodrošina komerciālus datus, analītiku un ieskatus uzņēmumiem. Tā nodrošina klientiem vienotus klientu profilus, lai uzņēmumi bagātinātu datus. Bagātināšana ietver tādus atribūtus kā DUNS numurs, uzņēmuma lielums, atrašanās vieta, nozare un citi.
 
-Papildinformāciju skatiet sadaļā [Uzņēmuma profilu bagātināšana, izmantojot Dun &Bradstreet (priekšskatījums)](enrichment-dnb.md).
+Papildinformāciju skatiet sadaļā [Uzņēmuma profilu bagātināšana, izmantojot Dun & Bradstreet (priekšskatījums)](enrichment-dnb.md).
 
-### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Mēra tipa definēšana, veidojot jaunu mēru
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definējiet mēra tipu, veidojot jaunu mēru
 
-Tagad varat atšķirt pasākumus atsevišķiem profiliem un mēriem visā jūsu uzņēmumā. Lai gan biznesa pasākumi tiek rādīti Customer Insights sākumlapā, klientu mēri tiek parādīti detalizētos klientu skatos.
+Tagad varat atšķirt atsevišķu profilu mērus un mērus visā uzņēmumā. Lai gan biznesa pasākumi tiek rādīti Customer Insights sākumlapā, klientu mērījumi tiek parādīti detalizētos klientu skatos.
 
-Papildinformāciju skatiet sadaļā [Mēru veidotāja izmantošana, lai izveidotu mērus no nulles](measure-builder.md).
+Papildinformāciju skatiet sadaļā [Pasākumu veidotāja izmantošana, lai izveidotu mērus no nulles](measure-builder.md).
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Customer Insights dokumentācijas konsolidācija
 
-Mēs esam pārskatījuši savus dokumentācijas rakstus un noņēmuši pieminējumus par iesaistes ieskatiem un auditorijas ieskatu iespējām. Virzoties uz priekšu, mēs konsekventi atsauksimies uz produkta nosaukumu Customer Insights, kad rakstīsim par lietojumprogrammas pamatfunkcijām. Šīs izmaiņas arī noved pie būtiska satura rādītāja, URL struktūras un failu ceļu pārstrukturēšanas pamatā esošajā dokumentācijas repozitorijā. Visas jūsu grāmatzīmes vai esošās saites turpina darboties un novirzīt uz atjauninātajiem vietrāžiem URL.
+Mēs esam pārskatījuši savus dokumentācijas rakstus un noņēmuši pieminējumus par iesaistes ieskatiem un auditorijas ieskatu iespējām. Virzoties uz priekšu, rakstot par lietojumprogrammas pamatfunkcijām, mēs konsekventi atsauksimies uz produkta nosaukumu Customer Insights. Šīs izmaiņas arī izraisa būtisku satura rādītāja, URL struktūras un pamatā esošā dokumentācijas repozitorija failu ceļu pārstrukturēšanu. Visas jūsu grāmatzīmes vai esošās saites turpina darboties un novirza uz atjauninātajiem vietrāžiem URL.
 
 Ja vēlaties mūs informēt par to, kā jūs uztverat šīs izmaiņas, vai pamanāt, ka kaut kas nedarbojas, kā paredzēts, pastāstiet mums [, iesniedzot atsauksmes par šo lapu](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Atjauninājumi 2022. gada martā
 
-2022. gada marta atjauninājumi ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
+2022. gada marta atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
 ### <a name="liveramp-abilitec-enrichment-preview"></a>LiveRamp AbiliTec bagātināšana (priekšskatījums)
 
-LiveRamp nodrošina identitātes izšķirtspēju un klientu datu konsolidāciju. Jūs varat kartēt personiskos identifikatorus savos klientu datos uz AbiliTec identitātes diagrammu un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu savus klientu datus.
+LiveRamp nodrošina identitātes atrisināšanu un klientu datu konsolidāciju. Jūs varat kartēt personiskos identifikatorus savos klientu datos uz AbiliTec identitātes diagrammu un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu klientu datus.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana, izmantojot identitātes datus no LiveRamp (priekšskatījums)](enrichment-liveramp.md).
+Papildinformāciju skatiet sadaļā [Klientu profilu bagātināšana ar identitātes datiem no LiveRamp (priekšskatījums)](enrichment-liveramp.md).
 
-### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentu un mēru kārtošana, izmantojot atzīmes un filtrus
+### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentu un pasākumu organizēšana, izmantojot tagus un filtrus
 
-Ja jūsu organizācija uztur daudz segmentu vai pasākumu, pareizā atrašana dažreiz var šķist sarežģīta. Šis jaunais līdzeklis ļauj kārtot sarakstus, izmantojot atzīmes un kolonnas. Tas palīdz ātri un viegli atrast datus un pielāgot skatus.
+Ja jūsu organizācija uztur daudz segmentu vai pasākumu, dažreiz var būt grūti atrast pareizo segmentu. Šis jaunais līdzeklis ļauj kārtot sarakstus, izmantojot tagus un kolonnas. Tas palīdz ātri un viegli atrast datus un pielāgot skatus.
 
-Papildinformāciju skatiet rakstā [Darbs ar tagiem un kolonnām](work-with-tags-columns.md).
+Papildinformāciju skatiet sadaļā [Darbs ar atzīmēm un kolonnām](work-with-tags-columns.md).
 
-### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Datu koplietošanas iespējošana, Dataverse izmantojot savu krātuves kontu
+### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Datu kopīgošanas Dataverse iespējošana, izmantojot savu krātuves kontu
 
-Ja jūsu vide tiek izmantota Azure Data Lake Storage Customer Insights datu glabāšanai, datu kopīgošanai ar Microsoft Dataverse papildu konfigurāciju ir nepieciešama papildu konfigurācija.
-Agrāk jūs varējāt iespējot datu kopīgošanu tikai ar Dataverse laiku, kad jūsu dati tika glabāti mūsu pārvaldīto datu ezerā.
+Ja jūsu vide tiek izmantota Azure Data Lake Storage Customer Insights datu glabāšanai, datu Microsoft Dataverse kopīgošanai ir nepieciešama papildu konfigurācija.
+Iepriekš jūs varējāt iespējot datu kopīgošanu tikai tad Dataverse, kad jūsu dati tika glabāti mūsu pārvaldītajā datu ezerā.
 
-Papildinformāciju skatiet sadaļā [Datu koplietošanas iespējošana ar Dataverse savu Azure Data Lake Storage (Priekšskatījums)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Papildinformāciju skatiet sadaļā [Datu kopīgošanas iespējošana ar Dataverse savu (Azure Data Lake Storage priekšskatījums)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Jauni eksporta galamērķi: Iterable un Braze
 
 Mēs turpinām paplašināt savu eksporta galamērķu ekosistēmu ar jauniem savienojumiem. Tagad varat eksportēt segmentus uz Iterable un Braze, lai izmantotu to aktivizācijas pakalpojumus.
 
-Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz iterable (priekšskatījums)](export-iterable.md) un [Segmentu eksportēšana uz Braze (priekšskatījums)](export-braze.md).
+Papildinformāciju skatiet sadaļā [Segmentu eksportēšana uz iterable (priekšskatījums) un](export-iterable.md) Segmentu eksportēšana uz Braze (priekšskatījums) [...](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Marketo un Google Ads eksporta uzlabojumi
 
-Mainot API saistītajos pakalpojumos, tiek atjaunināti savienotāji, lai tie darbotos uzticami un nevainojami. Esam izlaiduši dažus atjauninājumus eksportēšanai uz Marketo un Google Ads pakalpojumiem.
+Mainot API saistītajos pakalpojumos, tiek nodrošināti atjauninājumi, lai savienotāji darbotos droši un nevainojami. Esam izlaiduši dažus atjauninājumus eksportēšanai uz Marketo un Google Ads pakalpojumiem.
 
-- Google Ads: Google Ads eksportēšanas savienotāja jaunā versija vienkāršo autentifikācijas iespējas un tagad ļauj automātiski izveidot jaunas Google Ads mērķauditorijas. 
-- Marketo: Jaunā Marketo eksporta savienotāja versija nodrošina Atbalstu Marketo ID, ļaujot izvairīties no datu dublēšanās, atjaunināt esošos ierakstus un izveidot jaunus ierakstus Marketo. 
+- Google Ads: jaunā Google Ads eksporta savienotāja versija vienkāršo autentifikācijas pieredzi un tagad ļauj automātiski izveidot jaunas Google Ads mērķauditorijas. 
+- Marketo: jaunā Marketo eksporta savienotāja versija nodrošina Marketo ID atbalstu, ļaujot izvairīties no datu dublēšanās, atjaunināt esošos ierakstus un izveidot jaunus ierakstus programmā Marketo. 
 
 ## <a name="february-2022-updates"></a>2022. gada februāra atjauninājumi
 
-2022. gada februāra atjauninājumi ietver jaunus līdzekļus, veiktspējas jauninājumus un kļūdu labojumus.
+2022. gada februāra atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
 ### <a name="general-availability-for-prediction-models"></a>Vispārēja pieejamība prognoze modeļiem
 
-Iebūvētie prognoze modeļi, tostarp **abonēšanas zuduma**, **transakciju zuduma** un **klienta mūža vērtības (CLV),** kļūst vispārēji pieejami kā daļa no Customer Insights. 
+Standarta komplektācijā iekļautie prognoze modeļi, tostarp **abonēšanas zudums**, **transakciju zudums** un **klientu mūža vērtība (CLV),** kļūst vispārēji pieejami kā daļa no Customer Insights. 
 
-Papildinformāciju skatiet sadaļā [Prognozes pārskats](predictions-overview.md).
+Papildinformāciju skatiet sadaļā [Prognožu pārskats](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Jauns datu avots: integrācija ar Azure Synapse Analytics (Priekšskatījums)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Jauna datu avots: integrācija ar Azure Synapse Analytics (priekšskatījums)
 
 Azure Synapse Analytics ir uzņēmuma analīzes pakalpojums, kas paātrina laiku līdz ieskatiem datu noliktavās un lielo datu sistēmās.
 
-Organizācijas, kas jau izmanto Azure Synapse Analytics, var nodot šos datus programmā Customer Insights. 
+Organizācijas, kas jau izmanto Azure Synapse Analytics, var nodot šos datus programmai Customer Insights. 
 
-Papildinformāciju [skatiet sadaļā Azure Synapse datu avots savienošana (priekšskatījums)](connect-synapse.md).
+Papildinformāciju skatiet sadaļā [datu avots pievienošana Azure Synapse (priekšskatījums)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp bagātināšana (priekšskatījums)
 
-LiveRamp nodrošina identitātes izšķirtspēju un klientu datu konsolidāciju. Jūs varat kartēt personiskos identifikatorus savos klientu datos uz AbiliTec identitātes diagrammu un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu savus klientu datus.
+LiveRamp nodrošina identitātes atrisināšanu un klientu datu konsolidāciju. Jūs varat kartēt personiskos identifikatorus savos klientu datos uz AbiliTec identitātes diagrammu un saņemt AbiliTec ID. Pēc tam varat izmantot šos ID, lai labāk apvienotu klientu datus.
 
-Papildinformāciju skatiet rakstā [Klientu profilu bagātināšana, izmantojot identitātes datus no LiveRamp (priekšskatījums)](enrichment-liveramp.md).
+Papildinformāciju skatiet sadaļā [Klientu profilu bagātināšana ar identitātes datiem no LiveRamp (priekšskatījums)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Datu avotu bagātināšana (priekšskatījums)
 
-Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. Datu avots bagātināšana palīdz radīt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus, kad esat apvienojis savus datus.
+Izmantojiet datus no tādiem avotiem kā Microsoft un citi partneri, lai bagātinātu klientu datus pirms datu apvienošanas. Datu avots bagātināšana palīdz nodrošināt augstāku datu pilnīgumu un kvalitāti, kas var palīdzēt sasniegt labākus rezultātus pēc datu apvienošanas.
 
 Papildinformāciju skatiet sadaļā [Datu avotu bagātināšana (priekšskatījums)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Mainīt vides īpašnieku
 
-Lai gan vairākiem lietotājiem var būt administratora atļaujas programmā Customer Insights, tikai viens lietotājs ir vides īpašnieks. Uzlabota pieredze ļauj mainīt vides īpašniekus un pieprasīt īpašumtiesības, ja bijušais īpašnieks pameta organizāciju. 
+Lai gan vairākiem lietotājiem programmā Customer Insights var būt administratora atļaujas, tikai viens lietotājs ir vides īpašnieks. Uzlabota pieredze ļauj mainīt vides īpašniekus un pieprasīt īpašumtiesības, ja bijušais īpašnieks pamet organizāciju. 
 
-Papildinformāciju skatiet sadaļā [Vides īpašnieka maiņa](manage-environments.md#change-the-owner-of-an-environment).
+Papildinformāciju skatiet sadaļā [Vides](manage-environments.md#change-the-owner-of-an-environment) īpašnieka maiņa.
 
-### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Datu sagatavošanas procesā ir norādīts bojātu ierakstu korupcijas iemesls
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Datu sagatavošanas procesā tiek uzskaitīts bojājuma iemesls bojātiem ierakstiem
 
-Datu sagatavošana tagad parāda korupcijas iemeslu visiem laukiem ar bojātiem datiem. Informācija tiek sniegta individuālā ieraksta līmenī, lai to varētu viegli identificēt.
+Datu sagatavošana tagad parāda bojājuma iemeslu visiem laukiem ar bojātiem datiem. Informācija tiek sniegta individuālā ieraksta līmenī, lai to varētu viegli identificēt.
 
-Papildinformāciju skatiet sadaļā [Datu avotu bojājumi](data-sources.md#corrupt-data-sources).
+Papildinformāciju skatiet sadaļā [Datu avotu](data-sources.md#corrupt-data-sources) bojāšana.
 
-### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Priekšskatījuma beigas atskaišu veidošanas līdzekļiem iesaistes ieskatu iespējā
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Iesaistes ieskatu iespējas pārskatu līdzekļu priekšskatījuma beigas
 
 Iesaistes Dynamics 365 Customer Insights ieskatu iespēju priekšskatījums beidzās 2022. gada 15. februārī.  
-Šīs izmaiņas nozīmē, ka Customer Insights izmēģinājumversijas pieredze vairs neietver iespēju izveidot piltuves vai citu atskaišu veidošanas funkcionalitāti.
+Šīs izmaiņas nozīmē, ka Customer Insights izmēģinājumversijā vairs nav iekļauta iespēja izveidot piltuves, kā arī nav iekļauta cita pārskatu veidošanas funkcionalitāte.
 
-Mēs aicinām jūs izpētīt un novērtēt daudzus citus Customer Insights [līdzekļus](https://dynamics.microsoft.com/ai/customer-insights/), kas ir Microsoft klientu datu platforma (CDP).    
+Mēs aicinām jūs izpētīt un novērtēt daudzus citus Customer Insights [līdzekļus](https://dynamics.microsoft.com/ai/customer-insights/), Microsoft klientu datu platformu (CDP).    
  
-Pārejas periodā esošajiem priekšskatījuma dalībniekiem joprojām ir piekļuve dažām priekšskatījuma iespējām un funkcionalitātei:
+Pārejas periodā esošajiem priekšskatījuma versijas dalībniekiem joprojām ir piekļuve dažām priekšskatījuma iespējām un funkcionalitātei:
 
 - Iegūstiet kodu, lai rīkotos tīmekļa vietnē vai mobilajā programma 
-- Skatīt notikumus un notikumu rekvizītus 
+- Notikumu un notikumu rekvizītu skatīšana 
 - Uzlabojiet vienotus profilus ar uzņemtiem un izsmalcinātiem notikumiem, lai gūtu labumu no klientu datu pilnas vērtības
   
-Pārejas periodā uzņemtie notikumi joprojām tiek straumēti uz savienoto Datu ezeru. Kad šī funkcionalitāte ir izslēgta, datu kopīgošana tiks pārtraukta, un uz pievienoto krātuvi netiks nosūtīti jauni notikumi.
-Sazinieties tieši ar savu Microsoft konta komandu, ja jums ir jautājumi par iespēju priekšskatījuma beigām. Jūsu konta komanda informēs jūs par jaunumiem nākamajās palaišanas reizēs. 
+Pārejas periodā tvertie notikumi joprojām tiek straumēti uz savienoto Datu ezeru. Kad šī funkcionalitāte būs izslēgta, datu kopīgošana tiks pārtraukta un uz pievienoto krātuvi netiks sūtīti jauni notikumi.
+Sazinieties tieši ar Microsoft konta darba grupu, ja jums ir jautājumi par iespēju priekšskatījuma beigām. Jūsu konta komanda jūs informēs par nākamajiem darbības uzsākšanas gadījumiem. 
 
 ## <a name="january-2022-updates"></a>2022. gada janvāra atjauninājumi
 
-2022. gada janvāra atjauninājumi ietver jaunus līdzekļus, veiktspējas uzlabojumus un kļūdu labojumus.
+2022. gada janvāra atjauninājumi ietver jaunas funkcijas, veiktspējas jauninājumus un kļūdu labojumus.
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Klienta atsauksmju noskaņojuma analīze
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsu klienta atsauksmju noskaņojuma analīze
 
-Customer Insights nodrošina jaunu AI darbinātu funkciju, lai sintezētu klientu noskaņojumu un identificētu konkrētus biznesa aspektus kā mērķtiecīgu uzlabojumu iespējas. Analizējot klientu rakstiskās atsauksmes, jūs varat gūt precīzus ieskatus par zemām izmaksām. Noskaņojuma analīze, ko nodrošina dabiskās valodas apstrādes (NLP) modeļi, kas ģenerē divus atvasinātus ieskatus katram klienta ID. Noskaņojuma rādītājs (no –5 līdz 5) un piemērojamo uzņēmējdarbības aspektu saraksts. 
+Customer Insights nodrošina jaunu AI darbinātu funkciju, lai sintezētu klientu noskaņojumu un identificētu konkrētus biznesa aspektus kā mērķtiecīgu uzlabojumu iespējas. Analizējot klientu rakstiskās atsauksmes, jūs varat iegūt precīzus ieskatus par zemām izmaksām. Noskaņojuma analīze, ko nodrošina dabiskās valodas apstrādes (NLP) modeļi, kas ģenerē divus atvasinātus ieskatus par katru klienta ID. Noskaņojuma rādītājs (no –5 līdz 5) un piemērojamo biznesa aspektu saraksts. 
 
-Papildinformāciju skatiet rakstā [Noskaņojuma analīze klientu atsauksmēs (Priekšskatījums)](sentiment-analysis.md).
+Papildinformāciju skatiet sadaļā [Klientu atsauksmju analīze (priekšskatījums)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
