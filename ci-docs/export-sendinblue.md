@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196955"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724903"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentu eksportēšana uz Sendinblue (priekšskatījums)
 
@@ -21,15 +21,16 @@ Eksportējiet vienotos klienta profila segmentus, lai ģenerētu kampaņas, nodr
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- [Sendinblue konts](https://www.sendinblue.com/) un atbilstošie administratora akreditācijas dati.
-- [SendinBlue API atslēga](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
-- Sendinblue esošie saraksti un atbilstošie ID.
-- [Konfigurētie segmenti](segments.md).
+- Sendinblue [konts](https://www.sendinblue.com/) un atbilstošie administratora akreditācijas dati.
+- SendinBlue [API atslēga](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
+- Esošie Sendinblue saraksti un atbilstošie ID.
+- [Konfigurēti segmenti](segments.md).
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 miljonam klientu profilu eksportēšanai uz Sendinblue, kas var aizņemt līdz pat 90 minūtēm. Klientu profilu skaits, ko varat eksportēt uz Sendinblue, ir atkarīgs no jūsu līguma ar Sendinblue.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 1 miljonam klientu profilu vienā eksporta reizē uz Sendinblue, kas var aizņemt līdz 90 minūtēm. Klientu profilu skaits, ko varat eksportēt uz Sendinblue, ir atkarīgs no jūsu līguma ar Sendinblue.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Savienojuma ar Sendinblue iestatīšana
@@ -46,9 +47,9 @@ Eksportējiet vienotos klienta profila segmentus, lai ģenerētu kampaņas, nodr
 
 1. Ievadiet savu **SendinBlue API atslēgu**.
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -60,13 +61,13 @@ Eksportējiet vienotos klienta profila segmentus, lai ģenerētu kampaņas, nodr
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukam **Savienojums eksportēšanai** izvēlieties savienojumu no Sendinblue sadaļas. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
 1. Ievadiet eksportēšanas nosaukumu.
 
-1. Ievadiet savu **Sendinblue saraksta ID**.
+1. Ievadiet savu **Sendinblue saraksta ID.**
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 

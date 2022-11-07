@@ -1,5 +1,5 @@
 ---
-title: Eksportējiet Customer Insights datus uz HubSpot
+title: Customer Insights datu eksportēšana uz HubSpot
 description: Uzziniet, kā konfigurēt savienojumu un eksportēt uz HubSpot.
 ms.date: 09/23/2022
 ms.reviewer: mhart
@@ -8,26 +8,27 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588932"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725363"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Segmentu eksportēšana uz HubSpot (priekšskatījums)
 
-Eksportējiet vienotu klientu profilu segmentus uz HubSpot un izmantojiet tos e-pasta mārketingam.
+Eksportējiet vienoto klientu profilu segmentus uz HubSpot un izmantojiet tos e-pasta mārketingam.
 
 ## <a name="prerequisites-for-a-connection"></a>Savienojuma priekšnosacījumi
 
-- [HubSpot konts](https://www.hubspot.com/) un atbilstošie administratora akreditācijas dati.
+- HubSpot [konts](https://www.hubspot.com/) un atbilstošie administratora akreditācijas dati.
 - [API atslēga](https://knowledge.hubspot.com/Integrations/How-do-I-get-my-HubSpot-API-key) no HubSpot.
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 100'000 klientu profiliem eksportēšanai uz HubSpot, kas var aizņemt līdz pat 15 minūtēm. Klientu profilu skaits, ko varat eksportēt hubSpot, ir atkarīgs un ierobežots no jūsu līguma ar HubSpot.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 100'000 klientu profiliem vienā eksportā uz HubSpot, kas var aizņemt līdz pat 15 minūtēm. Klientu profilu skaits, ko varat eksportēt uz HubSpot, ir atkarīgs un ierobežots no jūsu līguma ar HubSpot.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-hubspot"></a>Savienojuma ar HubSpot iestatīšana
@@ -36,7 +37,7 @@ Eksportējiet vienotu klientu profilu segmentus uz HubSpot un izmantojiet tos e-
 
 1. Dodieties uz **Administrators** > **Savienojumi**.
 
-1. Atlasiet **Pievienot savienojumu** un izvēlieties **HubSpot**, lai konfigurētu savienojumu.
+1. Atlasiet **Pievienot savienojumu un izvēlieties** HubSpot **, lai konfigurētu savienojumu**.
 
 1. Laukā **Parādāmais nosaukums** piešķiriet savienojumam atpazīstamu nosaukumu. Parādāmais nosaukums un nosaukuma veids raksturo šo savienojumu. Ir ieteicams izvēlēties nosaukumu, kas paskaidro savienojuma nolūku.
 
@@ -44,9 +45,9 @@ Eksportējiet vienotu klientu profilu segmentus uz HubSpot un izmantojiet tos e-
 
 1. Kad tiek prasīts, ievadiet savus HubSpot akreditācijas datus.
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu ar HubSpot.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu** ar HubSpot.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 

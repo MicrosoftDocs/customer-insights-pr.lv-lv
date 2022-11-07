@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196495"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724510"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentu eksportēšana uz Constant Contact (priekšskatījums)
 
@@ -21,14 +21,15 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- Pastāvīgs [kontaktpersonas konts](https://www.constantcontact.com/account-home) un atbilstošie administratora akreditācijas dati.
-- Pastāvīgs [kontaktpersonu saraksta ID](https://app.constantcontact.com/pages/contacts/ui#lists). Constant Contact atveriet sarakstu, lai URL vietrādī atrastu saraksta ID.
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Pastāvīgas kontaktpersonas [konts](https://www.constantcontact.com/account-home) un atbilstošie administratora akreditācijas dati.
+- Pastāvīga [kontaktpersonu saraksta ID](https://app.constantcontact.com/pages/contacts/ui#lists). Constant Contact atveriet sarakstu, lai URL vietrādī atrastu saraksta ID.
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 miljonam klientu profilu eksportēšanai uz Constant Contact, kas var aizņemt līdz pat vienai stundai. Klientu profilu skaits, ko varat eksportēt uz pastāvīgu kontaktu, ir atkarīgs no jūsu līguma ar pastāvīgu kontaktu.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 1 miljonam klientu profilu vienā eksportēšanā uz Constant Contact, kuru pabeigšana var aizņemt līdz pat vienai stundai. Klientu profilu skaits, ko varat eksportēt uz Constant Contact, ir atkarīgs no jūsu līguma ar Constant Contact.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Savienojuma ar Constant Contact izveide
@@ -43,9 +44,9 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet vienumu **Autentificēties ar pastāvīgo kontaktpersonu** un norādiet savus administratora akreditācijas datus.
 
@@ -59,13 +60,13 @@ Eksportējiet vienoto klientu profilu segmentus uz Constant Contact un izmantoji
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Constant Contact. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
 1. Ievadiet eksportēšanas nosaukumu.
 
-1. Ievadiet savu **pastāvīgā kontaktpersonu saraksta ID**.
+1. Ievadiet pastāvīgā **kontaktpersonu saraksta ID.**
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 

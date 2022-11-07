@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196081"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724995"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentu eksportēšana uz DotDigital (priekšskatījums)
 
@@ -21,14 +21,15 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- [DotDigital konts](https://dotdigital.com/) un [API lietotājs](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
-- DotDigital ID no jaunas [vai esošas](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) adrešu grāmatas DotDigital. ID var atrast URL, kad atlasāt un atverat adrešu grāmatu.
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- DotDigital [konts](https://dotdigital.com/) un [API lietotājs](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
+- DotDigital ID no jaunas [vai esošas](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) DotDigital adrešu grāmatas. ID var atrast URL, kad atlasāt un atverat adrešu grāmatu.
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 miljonam klientu profilu vienam eksportam uz DotDigital, kura pabeigšana var ilgt līdz trim stundām, jo pakalpojumu sniedzēja pusē ir ierobežojumi. Klientu profilu skaits, ko varat eksportēt uz DotDigital, ir atkarīgs no jūsu līguma ar DotDigital.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 1 miljonam klientu profilu vienā eksportā uz DotDigital, kas pakalpojumu sniedzēja puses ierobežojumu dēļ var aizņemt līdz trim stundām. Klientu profilu skaits, ko varat eksportēt uz DotDigital, ir atkarīgs no jūsu līguma ar DotDigital.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Savienojuma ar DotDigital iestatīšana
@@ -45,11 +46,11 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 1. Ievadiet savu **DotDigital API lietotājvārdu un paroli**.
 
-1. Ievadiet savu **DotDigital adrešu grāmatas ID**.
+1. Ievadiet savu **DotDigital adrešu grāmatas ID.**
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -61,7 +62,7 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas DotDigital. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
@@ -69,7 +70,7 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
-1. Pēc izvēles eksportējiet **vārds**, **uzvārds**, **pilnu vārdu**, **dzimumu** un **pasta indeksu**.
+1. Pēc izvēles eksportējiet vārds, uzvārds **,** **Pilns vārds**, **Dzimums un** Pasta **indekss**.**·**
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt.
 
@@ -77,6 +78,6 @@ Eksportējiet vienoto klientu profilu segmentus uz DotDigital adrešu grāmatām
 
 [!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-DotDigital atrodiet savus segmentus [DotDigital adrešu grāmatās](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Pakalpojumā DotDigital atrodiet savus segmentus DotDigital [adrešu grāmatās](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

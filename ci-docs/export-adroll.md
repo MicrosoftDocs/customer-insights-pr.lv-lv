@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195759"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724721"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentu eksportēšana uz AdRoll (priekšskatījums)
 
@@ -21,14 +21,15 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- [AdRoll konts](https://www.adroll.com/) un atbilstošie administratora akreditācijas dati.
-- [AdRoll reklāmdevēja ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- AdRoll [konts](https://www.adroll.com/) un atbilstošie administratora akreditācijas dati.
+- AdRoll [reklāmdevēja ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 250 000 klientu profilu eksportēšanai uz AdRoll, kas var aizņemt līdz pat 10 minūtēm. Klientu profilu skaits, ko varat eksportēt uz AdRoll, ir atkarīgs no jūsu līguma ar AdRoll.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 250 000 klientu profilu eksportēšanai uz AdRoll, kuru pabeigšana var aizņemt līdz 10 minūtēm. Klientu profilu skaits, ko varat eksportēt pakalpojumā AdRoll, ir atkarīgs no jūsu līguma ar AdRoll.
 - Tikai segmenti. Segmentā jābūt vismaz 100 klientu profiliem.
 
 ## <a name="set-up-connection-to-adroll"></a>Savienojuma ar AdRoll iestatīšana
@@ -43,9 +44,9 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 1. Izvēlieties, kurš var izmantot šo savienojumu. Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet **Autentificēties ar AdRoll** un sniedziet savus administratora akreditācijas datus AdRoll.
 
@@ -59,7 +60,7 @@ Eksportējiet vienoto klientu profilu segmentus uz AdRoll un izmantojiet tos rek
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas AdRoll. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195621"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725134"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentu eksportēšana uz RollWorks (priekšskatījums)
 
@@ -21,14 +21,15 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- [RollWorks konts](https://www.rollworks.com/) un atbilstošie administratora akreditācijas dati.
+- RollWorks [konts](https://www.rollworks.com/) un atbilstošie administratora akreditācijas dati.
 - [RollWorks reklāmdevēja ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 250 000 klientu profilu eksportēšanai uz RollWorks, kas var aizņemt līdz 10 minūtēm. Klientu profilu skaits, ko varat eksportēt uz RollWorks, ir atkarīgs no jūsu līguma ar RollWorks.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 250 000 klientu profilu eksportēšanai uz RollWorks, kuru pabeigšana var aizņemt līdz 10 minūtēm. Klientu profilu skaits, ko varat eksportēt pakalpojumā RollWorks, ir atkarīgs no jūsu līguma ar RollWorks.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-rollworks"></a>Savienojuma ar RollWorks iestatīšana
@@ -43,9 +44,9 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 
 1. Izvēlieties, kurš var izmantot šo savienojumu.  Pēc noklusējuma tie ir tikai administratori. Papildinformāciju skatiet rakstā [Atļaut līdzstrādniekiem izmantot savienojumu eksportam](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet **Autentificēt ar RollWorks** un norādiet savus RollWorks administratora akreditācijas datus.
 
@@ -59,13 +60,13 @@ Eksportējiet vienoto klientu profilu segmentus uz RollWorks un izmantojiet tos 
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas RollWorks. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
 1. Ievadiet eksportēšanas nosaukumu.
 
-1. Ievadiet savu **RollWorks reklāmdevēja ID**.
+1. Ievadiet savu **RollWorks reklāmdevēja ID.**
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 

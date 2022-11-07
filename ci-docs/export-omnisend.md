@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lv-LV
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196173"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725179"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentu eksportēšana uz Omnisend (priekšskatījums)
 
@@ -21,14 +21,15 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 ## <a name="prerequisites"></a>Priekšnoteikumi
 
-- [Omnisend konts](https://www.omnisend.com/) un atbilstošie administratora akreditācijas dati.
-- [Omnisend API atslēga](https://support.omnisend.com/en/articles/1061890-generating-api-key).
-- [Konfigurētie segmenti](segments.md) programmā Customer Insights.
+- Omnisend [konts](https://www.omnisend.com/) un atbilstošie administratora akreditācijas dati.
+- Omnisend [API atslēga](https://support.omnisend.com/en/articles/1061890-generating-api-key).
+- [Konfigurēti segmenti](segments.md) programmā Customer Insights.
 - Eksportētajos segmentos vienotajiem klientu profiliem ir lauks, kas norāda e-pasta adresi.
 
 ## <a name="known-limitations"></a>Zināmie ierobežojumi
 
-- Līdz 1 miljonam klientu profilu eksportēšanai uz Omnisend, kas var aizņemt līdz pat četrām stundām. To klientu profilu skaits, ko var eksportēt uz Omnisend, ir atkarīgs no jūsu līguma ar Omnisend.
+- Privātā saite kombinācijā ar krātuvi Bring your own storage (BYOS) netiek atbalstīta.
+- Līdz 1 miljonam klientu profilu vienā eksportā uz Omnisend, kura pabeigšana var aizņemt līdz četrām stundām. To klientu profilu skaits, ko var eksportēt uz Omnisend, ir atkarīgs no jūsu līguma ar Omnisend.
 - Tikai segmenti.
 
 ## <a name="set-up-connection-to-omnisend"></a>Savienojuma ar Omnisend iestatīšana
@@ -45,9 +46,9 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 1. Ievadiet savu Omnisend API atslēgu.
 
-1. Pārskatiet datu privātumu [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
+1. Pārskatiet datu konfidencialitāti [un atbilstību](connections.md#data-privacy-and-compliance) un atlasiet **Es piekrītu**.
 
-1. Atlasiet **Izveidot savienojumu**, lai inicializētu savienojumu.
+1. Atlasiet **Izveidot savienojumu, lai inicializētu savienojumu**.
 
 1. Atlasiet opciju **Pievienot sevi kā eksporta lietotāju** un sniedziet savus Customer Insights akreditācijas datus.
 
@@ -59,7 +60,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 1. Pārejiet uz **Dati** > **Eksportēšana**.
 
-1. Atlasiet **Pievienot eksportēšanu**.
+1. Atlasiet **Pievienot eksportu**.
 
 1. Laukā **Savienošana eksportam** atlasiet savienojumu no sadaļas Omnisend. Ja nav pieejamu savienojumu, sazinieties ar administratoru.
 
@@ -67,7 +68,7 @@ Eksportējiet vienoto klientu profilu segmentus uz Omnisend un izmantojiet tos m
 
 1. **Datu atbilstības noteikšanas** sadaļas laukā **E-pasts** atlasiet lauku, kas norāda klienta e-pasta adresi.
 
-1. Pēc izvēles eksportējiet vārds, uzvārds, adresi **,** **valsti/reģionu**, **štatu**, **pilsētu** un **pasta indeksu**, lai izveidotu personalizētākus e-pasta ziņojumus.**·** **·** Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
+1. Pēc izvēles eksportējiet **vārds**, uzvārds **, adresi**, valsti/reģionu **,** **štatu**, pilsētu **un** pasta indeksu **,** **lai** izveidotu personalizētākus e-pasta ziņojumus. Atlasiet **Pievienot atribūtu**, lai kartētu šos laukus.
 
 1. Atlasiet segmentus, kurus vēlaties eksportēt.
 
